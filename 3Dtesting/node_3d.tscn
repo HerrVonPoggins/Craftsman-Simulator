@@ -44,3 +44,4 @@ offset_right = 600.0
 offset_bottom = 348.0
 texture = ExtResource("3_d3pfc")
 expand_mode = 1
+metadata/_edit_use_anchors_ = true
