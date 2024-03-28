@@ -8,7 +8,7 @@ const JUMP_VELOCITY = 4.5
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @onready var neck = $Neck
-@onready var camera = $"../Neck/Camera3D"
+@onready var camera = $Neck/Camera3D
 @onready var raycast = $Neck/Camera3D/RayCast3D
 @onready var hold = $Neck/Camera3D/Hold
 var hold_object: Object
@@ -16,11 +16,11 @@ var hold_object: Object
 
 func _unhandled_input(event):
 
-	#if event is InputEventMouseMotion:
-		#neck.rotate_y(-event.relative.x * 0.01)
-		#camera.rotate_x(-event.relative.y * 0.01)
-		#camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(60))
-	pass
+	if event is InputEventMouseMotion:
+		neck.rotate_y(-event.relative.x * 0.01)
+		camera.rotate_x(-event.relative.y * 0.01)
+		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(60))
+
 
 func _physics_process(delta):
 
@@ -55,7 +55,3 @@ func _physics_process(delta):
 			velocity = Vector3.ZERO
 
 	move_and_slide()
-
-
-
-

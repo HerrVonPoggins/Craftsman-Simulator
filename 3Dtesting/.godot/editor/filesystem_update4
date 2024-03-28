@@ -1,4 +1,6 @@
-res://PnCcontrols.gd
+res://PnC+First Person.tscn
 res://node_3d.tscn
 res://area.tscn
-res://Pnc Prototype.tscn
+res://Pnc+TopDown.tscn
+res://PnC+Iso.tscn
+res://PnC+TP.tscn
