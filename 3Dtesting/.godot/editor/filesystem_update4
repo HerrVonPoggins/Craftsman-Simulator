@@ -1,6 +1,19 @@
-res://PnC+First Person.tscn
-res://node_3d.tscn
-res://area.tscn
 res://Pnc+TopDown.tscn
 res://PnC+Iso.tscn
+res://PnC+First Person.tscn
 res://PnC+TP.tscn
+res://Text + FP.tscn
+res://Text +  TopDown.tscn
+res://Text + Iso.tscn
+res://Text + TP.tscn
+res://node_3d.tscn
+res://area.tscn
+res://Prototypes/Pnc+TopDown.tscn
+res://Prototypes/PnC+Iso.tscn
+res://Prototypes/PnC+First Person.tscn
+res://Prototypes/PnC+TP.tscn
+res://Prototypes/Text + FP.tscn
+res://Prototypes/Text +  TopDown.tscn
+res://Prototypes/Text + Iso.tscn
+res://Prototypes/Text + TP.tscn
+res://Prototypes/Textcontrol.gd
