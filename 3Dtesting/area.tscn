@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://b46vxk3egej7y"]
+[gd_scene load_steps=15 format=3 uid="uid://b46vxk3egej7y"]
 
 [ext_resource type="PackedScene" uid="uid://cxv4g3lrd0p6b" path="res://node_3d.tscn" id="1_60ppl"]
 [ext_resource type="ArrayMesh" uid="uid://dj0uc6jfc4h7w" path="res://low_poly_cat.obj" id="2_k0xb4"]
+[ext_resource type="PackedScene" uid="uid://c6ub5x3yfjwfq" path="res://mechanics/wall.tscn" id="3_jmq2i"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qb8bt"]
 sky_top_color = Color(0.196078, 0.356863, 1, 1)
@@ -38,6 +39,12 @@ size = Vector3(0.25, 0.25, 0.25)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7y5rs"]
 points = PackedVector3Array(0.388212, 0.19177, -0.488275, -0.378282, -1.21174, -0.59172, 0.378569, -1.22172, -0.596277, 0.104369, 0.40336, 2.13534, -0.107788, 0.615496, -2.39274, -0.320125, 1.0405, 1.7812, -0.461683, -1.43628, 0.79101, 0.458263, -1.43628, 0.79101, 0.316706, 1.0405, 1.7812, -0.408166, -0.0417173, -0.941405, 0.104369, 0.474153, -2.39274, -0.320125, 0.474153, 1.92303, 0.415347, -0.229768, -0.9626, 0.0335899, 0.686289, -2.39274, 0.316706, 0.474153, 1.92303, 0.104369, 0.615496, -2.39274, -0.0370089, 0.40336, -2.39274, 0.393231, 0.257777, 0.903781, -0.416062, -0.166226, 0.954528, -0.107788, 0.40336, 2.13534, -0.344636, 0.331884, -0.876589, 0.343623, 0.3356, -0.881836, -0.418221, -0.229726, -0.961511, -0.320125, 1.0405, 1.6398, 0.316706, 1.0405, 1.6398, -0.107788, 0.474153, -2.39274, 0.381862, -1.17155, -0.659464, -0.381099, -1.16094, -0.653677, -0.393789, 0.254476, 0.896301, 0.407751, -0.0405631, -0.947411, 0.413092, -0.166192, 0.955704, -0.0370089, 0.686289, -2.39274)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ve86v"]
+size = Vector3(0.5, 0.2, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3e7jv"]
+points = PackedVector3Array(-0.239277, -0.1, -0.471748, 0.265873, 0.114264, 0.507937, 0.247213, -0.1, 0.471748, -0.257937, 0.114264, 0.507937, 0.265873, 0.114264, -0.507937, -0.257937, 0.114264, -0.507937, 0.247213, -0.1, -0.471748, -0.239277, -0.1, 0.471748)
 
 [node name="Node3D" type="Node3D"]
 
@@ -82,3 +89,35 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D2"]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_7y5rs")
+
+[node name="Node3D2" parent="." instance=ExtResource("3_jmq2i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01145, 0.757148, 1.04083)
+
+[node name="RigidBody3D3" type="RigidBody3D" parent="." groups=["brick", "grab"]]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="RigidBody3D3"]
+mesh = SubResource("BoxMesh_ve86v")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D3"]
+shape = SubResource("ConvexPolygonShape3D_3e7jv")
+
+[node name="RigidBody3D4" type="RigidBody3D" parent="." groups=["brick", "grab"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6831, 0, 0.0524132)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="RigidBody3D4"]
+mesh = SubResource("BoxMesh_ve86v")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D4"]
+shape = SubResource("ConvexPolygonShape3D_3e7jv")
+
+[node name="RigidBody3D5" type="RigidBody3D" parent="." groups=["brick", "grab"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82569, 0, -0.0956516)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="RigidBody3D5"]
+mesh = SubResource("BoxMesh_ve86v")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D5"]
+shape = SubResource("ConvexPolygonShape3D_3e7jv")

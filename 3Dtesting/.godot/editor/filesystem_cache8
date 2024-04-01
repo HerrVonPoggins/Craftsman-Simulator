@@ -1,21 +1,23 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1711708644
-area.tscn::PackedScene::4487209558357755132::1711708601::0::1::::<><>::uid://cxv4g3lrd0p6b::::res://node_3d.tscn<>uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj
-icon.svg::CompressedTexture2D::6932903814583341055::1711550488::1711550488::1::::<><>::
-low_poly_cat.obj::Mesh::7843790641474321114::1711550488::1711550488::1::::<><>::
-node_3d.tscn::PackedScene::6432309699873923891::1711708601::0::1::::<><>::res://Player.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
-Player.gd::GDScript::-1::1711550488::0::1::::<>CharacterBody3D<>::
-PnC+First Person.tscn::PackedScene::2307755686324146078::1711708668::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>res://PnCcontrolsFP.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
-PnC+Iso.tscn::PackedScene::1575395324966017256::1711708668::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>res://PnCcontrols.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
-Pnc+TopDown.tscn::PackedScene::8591814051902701515::1711708668::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>res://PnCcontrols.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
-PnC+TP.tscn::PackedScene::871087304696428628::1711708668::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>res://PnCcontrolsFP.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
-PnCcontrols.gd::GDScript::-1::1711705362::0::1::::<>CharacterBody3D<>::
-PnCcontrolsFP.gd::GDScript::-1::1711611476::0::1::::<>CharacterBody3D<>::
-RayCast3D.gd::GDScript::-1::1711550488::0::1::::<>RayCast3D<>::
-Sprite-0001.png::CompressedTexture2D::1837275663270596470::1711550488::1711550488::1::::<><>::
-Text +  TopDown.tscn::PackedScene::557496288059948283::1711708668::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>res://Textcontrol.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
-Text + FP.tscn::PackedScene::5690061750290966257::1711708668::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>res://Textcontrol.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
-Text + Iso.tscn::PackedScene::2426334669002527147::1711708668::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>res://Textcontrol.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
-Text + TP.tscn::PackedScene::1170809510888540463::1711708668::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>res://Textcontrol.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
-Textcontrol.gd::GDScript::-1::1711708600::0::1::::<>CharacterBody3D<>::
-::res://Prototypes/::1711708644
+::res://::1711965529
+area.tscn::PackedScene::4487209558357755132::1711712723::0::1::::<><>::uid://cxv4g3lrd0p6b::::res://node_3d.tscn<>uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj
+icon.svg::CompressedTexture2D::6932903814583341055::1711554088::1711554088::1::::<><>::
+low_poly_cat.obj::Mesh::7843790641474321114::1711554088::1711554088::1::::<><>::
+node_3d.tscn::PackedScene::6432309699873923891::1711712723::0::1::::<><>::res://Player.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
+Player.gd::GDScript::-1::1711554088::0::1::::<>CharacterBody3D<>::
+RayCast3D.gd::GDScript::-1::1711554088::0::1::::<>RayCast3D<>::
+wall.gd::GDScript::-1::1711965676::0::1::::<>Node3D<>::
+Sprite-0001.png::CompressedTexture2D::1837275663270596470::1711554088::1711554088::1::::<><>::
+::res://mechanics/::1711965529
+::res://Prototypes/::1711712737
+PnC+First Person.tscn::PackedScene::2307755686324146078::1711712723::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>res://Prototypes/PnCcontrolsFP.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
+PnC+Iso.tscn::PackedScene::1575395324966017256::1711712723::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>res://Prototypes/PnCcontrols.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
+Pnc+TopDown.tscn::PackedScene::8591814051902701515::1711712723::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>res://Prototypes/PnCcontrols.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
+PnC+TP.tscn::PackedScene::871087304696428628::1711712723::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>res://Prototypes/PnCcontrolsFP.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
+PnCcontrols.gd::GDScript::-1::1711708962::0::1::::<>CharacterBody3D<>::
+PnCcontrolsFP.gd::GDScript::-1::1711615076::0::1::::<>CharacterBody3D<>::
+Text +  TopDown.tscn::PackedScene::557496288059948283::1711712723::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>res://Prototypes/Textcontrol.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
+Text + FP.tscn::PackedScene::5690061750290966257::1711712737::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>res://Prototypes/Textcontrol.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
+Text + Iso.tscn::PackedScene::2426334669002527147::1711712723::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>res://Prototypes/Textcontrol.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
+Text + TP.tscn::PackedScene::1170809510888540463::1711712723::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>res://Prototypes/Textcontrol.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
+Textcontrol.gd::GDScript::-1::1711712683::0::1::::<>CharacterBody3D<>::
