@@ -1,9 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1711540732
-area.tscn::PackedScene::4487209558357755132::1711540239::0::1::::<><>::uid://cxv4g3lrd0p6b::::res://node_3d.tscn<>uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj
-icon.svg::CompressedTexture2D::6932903814583341055::1711540239::1711540733::1::::<><>::
-low_poly_cat.obj::Mesh::7843790641474321114::1711540239::1711540733::1::::<><>::
-node_3d.tscn::PackedScene::6432309699873923891::1711540239::0::1::::<><>::res://Player.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
-Player.gd::GDScript::-1::1711540239::0::1::::<>CharacterBody3D<>::
-RayCast3D.gd::GDScript::-1::1711540239::0::1::::<>RayCast3D<>::
-Sprite-0001.png::CompressedTexture2D::1837275663270596470::1711540239::1711540733::1::::<><>::
+::res://::1712115643
+::res://player/::1712115643
+mixamo_base.glb::PackedScene::2547535781052645771::1711550612::1712115640::1::::<><>::
+node_3d.tscn::PackedScene::848282797916280112::1712115640::0::1::::<><>::uid://bckbsoxi4e0wl::::res://player/mixamo_base.glb

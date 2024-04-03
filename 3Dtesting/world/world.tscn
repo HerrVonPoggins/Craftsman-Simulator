@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://do4vmjnp1fv47"]
+
+[ext_resource type="PackedScene" uid="uid://mc6dgmuf4lj1" path="res://player/player.tscn" id="1_illle"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qg4ea"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f11q4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_72bpd"]
+metallic = 1.0
+
+[node name="world" type="Node3D"]
+
+[node name="map" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.526481, 0)
+material_override = SubResource("StandardMaterial3D_qg4ea")
+material_overlay = SubResource("StandardMaterial3D_f11q4")
+use_collision = true
+size = Vector3(1000, 1, 1000)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.420424, -2.83967)
+material_override = SubResource("StandardMaterial3D_72bpd")
+use_collision = true
+
+[node name="player" parent="." instance=ExtResource("1_illle")]

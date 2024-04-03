@@ -1,2 +1,4 @@
-res://area.tscn
-res://Player.gd
+res://node_3d.tscn
+res://player/player.tscn
+res://world/world.tscn
+res://player/player.gd
