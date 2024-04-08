@@ -1,4 +1,3 @@
-res://mechanics/wall.gd
-res://mechanics/wall.tscn
-res://area.tscn
 res://node_3d.tscn
+res://Prototypes/PnCcontrols.gd
+res://area.tscn

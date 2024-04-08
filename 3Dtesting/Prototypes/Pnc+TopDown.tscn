@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://dun66manbyq56"]
 
 [ext_resource type="ArrayMesh" uid="uid://dj0uc6jfc4h7w" path="res://low_poly_cat.obj" id="1_d770u"]
-[ext_resource type="Script" path="res://Prototypes/PnCcontrols.gd" id="2_2n1vl"]
+[ext_resource type="Script" path="res://Prototypes/PnCmovement.gd" id="2_qyugd"]
 [ext_resource type="Script" path="res://RayCast3D.gd" id="3_dc6sq"]
 [ext_resource type="Texture2D" uid="uid://1f8wq8hkrxny" path="res://Sprite-0001.png" id="4_hyrac"]
 
@@ -89,7 +89,7 @@ shape = SubResource("ConvexPolygonShape3D_uv2tc")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0665251, 0.622514, 0.18428)
-script = ExtResource("2_2n1vl")
+script = ExtResource("2_qyugd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
 transform = Transform3D(-0.5, 0, 7.54979e-08, 0, 0.5, 0, -7.54979e-08, 0, -0.5, -0.00937235, 0.448456, -0.236481)

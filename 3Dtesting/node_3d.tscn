@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cxv4g3lrd0p6b"]
 
-[ext_resource type="Script" path="res://Player.gd" id="1_wti6w"]
+[ext_resource type="Script" path="res://PlayerControls.gd" id="1_vfefy"]
 [ext_resource type="Script" path="res://RayCast3D.gd" id="2_esgj4"]
 [ext_resource type="Texture2D" uid="uid://1f8wq8hkrxny" path="res://Sprite-0001.png" id="3_d3pfc"]
 
@@ -13,7 +13,7 @@ points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607,
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0665251, 1.23322, 0.18428)
-script = ExtResource("1_wti6w")
+script = ExtResource("1_vfefy")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
 transform = Transform3D(-0.5, 0, 4.37114e-08, 0, 0.5, 0, -4.37114e-08, 0, -0.5, -0.00937235, 0.448456, -0.236481)
