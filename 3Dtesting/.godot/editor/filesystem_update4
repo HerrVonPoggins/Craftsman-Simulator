@@ -1,3 +1,9 @@
+res://UI/titlescreen.gd
+res://UI/titlescreen.tscn
 res://node_3d.tscn
-res://Prototypes/PnCcontrols.gd
 res://area.tscn
+res://UI/credits.tscn
+res://UI/credits.gd
+res://world.gd
+res://UI/endscreen.gd
+res://UI/endscreen.tscn

@@ -11,8 +11,10 @@ func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
 		if $"Neck ISO/Camera3D ISO".current == true:
 			$"Neck ISO/Camera3D ISO".current = false
+			$"CharacterBody3D/Neck FP/Camera3D FP/TextureRect".visible = true
 		else:
 			$"Neck ISO/Camera3D ISO".current = true
+			$"CharacterBody3D/Neck FP/Camera3D FP/TextureRect".visible = false
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		
 

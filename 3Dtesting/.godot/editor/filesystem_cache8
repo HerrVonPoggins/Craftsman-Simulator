@@ -1,24 +1,26 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1712565090
-area.tscn::PackedScene::4487209558357755132::1712564728::0::1::::<><>::res://world.gd<>uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>uid://c6ub5x3yfjwfq::::res://mechanics/wall.tscn<>res://RayCast3D.gd<>res://Prototypes/PnCcontrols.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png<>uid://c51l6bli4rw12::::res://icon.svg
+::res://::1712678183
+area.tscn::PackedScene::4487209558357755132::1712678183::0::1::::<><>::res://world.gd<>uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>uid://c6ub5x3yfjwfq::::res://mechanics/wall.tscn<>res://RayCast3D.gd<>res://Prototypes/PnCcontrols.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png<>uid://c51l6bli4rw12::::res://icon.svg
 icon.svg::CompressedTexture2D::6932903814583341055::1711554088::1711554088::1::::<><>::
 low_poly_cat.obj::Mesh::7843790641474321114::1711554088::1711554088::1::::<><>::
-node_3d.tscn::PackedScene::6432309699873923891::1712564711::0::1::::<><>::res://PlayerControls.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
+node_3d.tscn::PackedScene::6432309699873923891::1712678175::0::1::::<><>::res://PlayerControls.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
 Player.gd::GDScript::-1::1712311843::0::1::::<>CharacterBody3D<>::
 PlayerControls.gd::GDScript::-1::1712310799::0::1::::<>CharacterBody3D<>::
 RayCast3D.gd::GDScript::-1::1712323328::0::1::::<>RayCast3D<>::
+global.gd::GDScript::-1::1712677086::0::1::::<>Node<>::
+endscreen.gd::GDScript::-1::1712678605::0::1::::<>Node2D<>::
 Sprite-0001.png::CompressedTexture2D::1837275663270596470::1711554088::1711554088::1::::<><>::
-world.gd::GDScript::-1::1712483074::0::1::::<>Node3D<>::
+world.gd::GDScript::-1::1712678175::0::1::::<>Node3D<>::
 ::res://mechanics/::1712323261
 wall.gd::GDScript::-1::1711966817::0::1::::<>Node3D<>::
 wall.tscn::PackedScene::6990098618445403050::1712323261::0::1::::<><>::res://mechanics/wall.gd
-::res://Prototypes/::1712564711
+::res://Prototypes/::1712566075
 CharacterFP+WASD.gd::GDScript::-1::1712486560::0::1::::<>CharacterBody3D<>::
 PnC+First Person.tscn::PackedScene::2307755686324146078::1712486571::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>res://Prototypes/CharacterFP+WASD.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
 PnC+Iso.tscn::PackedScene::1575395324966017256::1712486783::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>res://Prototypes/PnCmovement.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
 Pnc+TopDown.tscn::PackedScene::8591814051902701515::1712486814::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>res://Prototypes/PnCmovement.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
 PnC+TP.tscn::PackedScene::871087304696428628::1712486830::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>res://Prototypes/PnCcontrolsFP.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
-PnCcontrols.gd::GDScript::-1::1712564711::0::1::::<>CharacterBody3D<>::
+PnCcontrols.gd::GDScript::-1::1712566075::0::1::::<>CharacterBody3D<>::
 PnCcontrolsFP.gd::GDScript::-1::1711615076::0::1::::<>CharacterBody3D<>::
 PnCmovement.gd::GDScript::-1::1712486779::0::1::::<>CharacterBody3D<>::
 Text +  TopDown.tscn::PackedScene::557496288059948283::1712486851::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>res://Prototypes/Textcontrol.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
@@ -26,3 +28,8 @@ Text + FP.tscn::PackedScene::5690061750290966257::1711712737::0::1::::<><>::uid:
 Text + Iso.tscn::PackedScene::2426334669002527147::1711712723::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>res://Prototypes/Textcontrol.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
 Text + TP.tscn::PackedScene::1170809510888540463::1711712723::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://low_poly_cat.obj<>res://Prototypes/Textcontrol.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://Sprite-0001.png
 Textcontrol.gd::GDScript::-1::1711712683::0::1::::<>CharacterBody3D<>::
+::res://UI/::1712678175
+credits.tscn::PackedScene::5998865402096403978::1712678175::0::1::::<><>::res://UI/credits.gd
+credits.gd::GDScript::-1::1712676851::0::1::::<>Node2D<>::
+titlescreen.gd::GDScript::-1::1712676881::0::1::::<>Node2D<>::
+titlescreen.tscn::PackedScene::299591778937143882::1712678175::0::1::::<><>::res://UI/titlescreen.gd

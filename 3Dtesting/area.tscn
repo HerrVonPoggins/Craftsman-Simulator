@@ -102,6 +102,7 @@ shape = SubResource("BoxShape3D_32g8g")
 mesh = SubResource("BoxMesh_iibjc")
 
 [node name="RigidBody3D3" type="RigidBody3D" parent="." groups=["brick", "grab"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.149758, 0)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="RigidBody3D3"]
 mesh = SubResource("BoxMesh_ve86v")
@@ -111,7 +112,7 @@ skeleton = NodePath("../..")
 shape = SubResource("ConvexPolygonShape3D_3e7jv")
 
 [node name="RigidBody3D4" type="RigidBody3D" parent="." groups=["brick", "grab"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6831, 0, 0.0524132)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6831, 0.13732, 0.0524132)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="RigidBody3D4"]
 mesh = SubResource("BoxMesh_ve86v")
@@ -121,7 +122,7 @@ skeleton = NodePath("../..")
 shape = SubResource("ConvexPolygonShape3D_3e7jv")
 
 [node name="RigidBody3D5" type="RigidBody3D" parent="." groups=["brick", "grab"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82569, 0, -0.0956516)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82569, 0.1427, -0.0956516)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="RigidBody3D5"]
 mesh = SubResource("BoxMesh_ve86v")
@@ -171,6 +172,7 @@ script = ExtResource("5_rbmnb")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.76978)
 
 [node name="TextureRect" type="TextureRect" parent="CharacterBody3D/Neck FP/Camera3D FP"]
+visible = false
 offset_left = 576.0
 offset_top = 324.0
 offset_right = 600.0
