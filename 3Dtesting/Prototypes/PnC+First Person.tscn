@@ -1,9 +1,9 @@
 [gd_scene load_steps=21 format=3 uid="uid://745nth061a83"]
 
-[ext_resource type="ArrayMesh" uid="uid://dj0uc6jfc4h7w" path="res://low_poly_cat.obj" id="1_wlg1r"]
+[ext_resource type="ArrayMesh" uid="uid://dj0uc6jfc4h7w" path="res://art/low_poly_cat.obj" id="1_wlg1r"]
 [ext_resource type="Script" path="res://Prototypes/CharacterFP+WASD.gd" id="2_8662d"]
 [ext_resource type="Script" path="res://RayCast3D.gd" id="3_y622x"]
-[ext_resource type="Texture2D" uid="uid://1f8wq8hkrxny" path="res://Sprite-0001.png" id="4_fmxak"]
+[ext_resource type="Texture2D" uid="uid://1f8wq8hkrxny" path="res://art/Sprite-0001.png" id="4_fmxak"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bbm8h"]
 sky_top_color = Color(0.196078, 0.356863, 1, 1)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d4kw51ts71iln"]
+[gd_scene load_steps=3 format=3 uid="uid://d4kw51ts71iln"]
 
 [ext_resource type="Script" path="res://UI/endscreen.gd" id="1_qv50l"]
+[ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://UI/transition.tscn" id="2_l025x"]
 
 [node name="endscreen" type="Node2D"]
 script = ExtResource("1_qv50l")
@@ -11,5 +12,7 @@ offset_top = 16.0
 offset_right = 1136.0
 offset_bottom = 32.0
 text = "titlescreen"
+
+[node name="transition" parent="." instance=ExtResource("2_l025x")]
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

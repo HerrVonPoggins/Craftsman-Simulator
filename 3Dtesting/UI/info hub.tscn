@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=3 uid="uid://cc4eoydeq1jwv"]
+
+[ext_resource type="Script" path="res://UI/TabContainer.gd" id="1_keone"]
+
+[node name="Info Hub" type="CanvasLayer"]
+
+[node name="TabContainer" type="TabContainer" parent="."]
+offset_left = 166.0
+offset_top = 106.0
+offset_right = 994.0
+offset_bottom = 505.0
+current_tab = 1
+all_tabs_in_front = true
+drag_to_rearrange_enabled = true
+script = ExtResource("1_keone")
+
+[node name="1" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+tab_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "test"
+
+[node name="2" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+tab_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="TabContainer/2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.001
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.172
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "ddddddddddddddddd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ddddddddd"

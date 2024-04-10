@@ -1,21 +1,15 @@
 extends Node3D
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
+#eine area3d die wenn ein körper aus der gruppe brick entered das object entfernt und einen ziegel sichtbar macht
 
 func _on_area_3d_body_entered(body):
 	if body.is_in_group("brick") == true:
 		body.queue_free()
 		if $MeshInstance3D.visible == false:
 			$MeshInstance3D.visible = true
+			$Area3D/MeshInstance3D6.visible = false
 		elif$MeshInstance3D2.visible == false:
 			$MeshInstance3D2.visible = true
 		elif$MeshInstance3D3.visible == false:
