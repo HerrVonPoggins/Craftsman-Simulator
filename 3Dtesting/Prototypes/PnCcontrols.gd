@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 
-const SPEED = 5.0
+const SPEED = 4
 const JUMP_VELOCITY = 4.5
 
 
@@ -33,9 +33,12 @@ func _unhandled_input(event):
 			neck.rotate_y(-event.relative.x * 0.01)
 			cameraFP.rotate_x(-event.relative.y * 0.01)
 			cameraFP.rotation.x = clamp(cameraFP.rotation.x, deg_to_rad(-60), deg_to_rad(60))
+			$".".rotate_y(-event.relative.x * 0.01)
 
 func faceTo(direction):
-	look_at(Vector3(direction.x,global_position.y, direction.z),Vector3.UP)
+	if $"Neck FP/Camera3D FP".current == false:
+		look_at(Vector3(direction.x,global_position.y, direction.z),Vector3.UP)
+	
 
 func _physics_process(delta):
 	#gravity

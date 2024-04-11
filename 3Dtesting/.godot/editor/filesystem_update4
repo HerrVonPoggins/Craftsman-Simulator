@@ -1,4 +1,3 @@
-res://Prototypes/animationtest.tscn
 res://UI/titlescreen.tscn
 res://area.tscn
 res://UI/endscreen.tscn
@@ -7,9 +6,14 @@ res://mechanics/wall.tscn
 res://addons/dialogue_manager/example_balloon/example_balloon.tscn
 res://UI/transition.tscn
 res://UI/info hub.tscn
-res://Prototypes/animationtest.gd
-res://Prototypes/PnCcontrols.gd
-res://world.gd
-res://mechanics/wall.gd
-res://UI/Checklist.gd
+res://Prototypes/animationtest.tscn
 res://UI/node_2d.tscn
+res://CorePlayable/CorePlayable.tscn
+res://mechanics/zementmischer.tscn
+res://UI/checklist.tscn
+res://UI/TabContainer.gd
+res://UI/Checklist.gd
+res://Prototypes/PnCcontrols.gd
+res://RayCast3D.gd
+res://global.gd
+res://world.gd

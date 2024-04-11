@@ -10,7 +10,7 @@ var obj = null
 #das objekt wird am hold punkt gehalten
 func _process(delta):
 
-	if Input.is_action_just_pressed("leftclick"):
+	if Input.is_action_just_pressed("leftclick") and Global.perspective == 1:
 		if obj == null:
 			var collider = get_collider()
 			if collider != null:

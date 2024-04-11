@@ -16,12 +16,12 @@ sky_energy_multiplier = 1.7
 ground_bottom_color = Color(0.345098, 0, 0.113725, 1)
 ground_horizon_color = Color(0.635294, 0.589216, 0.778431, 1)
 
-[sub_resource type="Sky" id="Sky_16gdb"]
+[sub_resource type="Sky" id="Sky_5ptpr"]
 sky_material = SubResource("ProceduralSkyMaterial_qb8bt")
 
 [sub_resource type="Environment" id="Environment_h2obv"]
 background_mode = 2
-sky = SubResource("Sky_16gdb")
+sky = SubResource("Sky_5ptpr")
 tonemap_mode = 2
 glow_enabled = true
 
@@ -81,11 +81,12 @@ script = ExtResource("1_mt32x")
 environment = SubResource("Environment_h2obv")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.111469, -0.657191, 0.745436, 0, 0.750111, 0.661312, -0.993768, 0.0737158, -0.0836141, 0, 0, 0)
+transform = Transform3D(-0.111469, -0.657191, 0.745436, 0, 0.750111, 0.661312, -0.993768, 0.0737158, -0.0836141, 0.0212464, -0.0189624, 0.00245523)
 light_energy = 2.4
 shadow_enabled = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0212464, -0.0189624, 0.00245523)
 material_override = SubResource("StandardMaterial3D_4nwgv")
 transparency = 0.25
 mesh = SubResource("PlaneMesh_of5us")
@@ -196,7 +197,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="CharacterBody3D"]
 transform = Transform3D(0.3, 0, 0, 0, 0.00412585, 0.299972, 0, -0.299972, 0.00412585, 0, 0.70469, -0.318745)
-visible = false
 mesh = SubResource("CapsuleMesh_5xgqh")
 
 [node name="Node3D" parent="." instance=ExtResource("3_jmq2i")]

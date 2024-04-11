@@ -1,14 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://cc4eoydeq1jwv"]
+[gd_scene load_steps=3 format=3 uid="uid://cc4eoydeq1jwv"]
 
 [ext_resource type="Script" path="res://UI/TabContainer.gd" id="1_keone"]
+[ext_resource type="PackedScene" uid="uid://biv5si5cbepod" path="res://UI/checklist.tscn" id="2_leu6n"]
 
 [node name="Info Hub" type="CanvasLayer"]
 
 [node name="TabContainer" type="TabContainer" parent="."]
-offset_left = 166.0
-offset_top = 106.0
-offset_right = 994.0
-offset_bottom = 505.0
+offset_left = 134.0
+offset_top = 88.0
+offset_right = 968.0
+offset_bottom = 516.0
 current_tab = 1
 all_tabs_in_front = true
 drag_to_rearrange_enabled = true
@@ -69,3 +70,5 @@ text = "ddddddddddddddddd
 
 
 ddddddddd"
+
+[node name="checklist" parent="." instance=ExtResource("2_leu6n")]

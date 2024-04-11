@@ -383,7 +383,6 @@ tracks/52/keys = PackedFloat32Array(0, 1, 0.335241, -1.75598e-23, -1.14521e-07, 
 [sub_resource type="Animation" id="Animation_iivfm"]
 resource_name = "mixamo_com"
 length = 0.966667
-loop_mode = 1
 tracks/0/type = "position_3d"
 tracks/0/imported = true
 tracks/0/enabled = true
