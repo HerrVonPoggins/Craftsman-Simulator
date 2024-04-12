@@ -12,6 +12,11 @@ res://Prototypes/animationtest.tscn
 res://CorePlayable/CorePlayable.tscn
 res://mechanics/zementmischer.tscn
 res://node_3d.tscn
+res://Prototypes/animationtest.gd
+res://UI/credits.gd
+res://UI/endscreen.gd
+res://global.gd
+res://PlayerControls.gd
+res://Prototypes/CharacterFP+WASD.gd
 res://RayCast3D.gd
-res://mechanics/zementmischer.gd
-res://world.gd
+res://UI/TabContainer.gd

@@ -16,6 +16,7 @@ func _ready():
 	
 	
 	#häkchen und text der checkboxen ändern wenn benötigt
+	
 	#$checklist.check1state = false
 	#$checklist.check2state = true
 	#$checklist.check3state = false

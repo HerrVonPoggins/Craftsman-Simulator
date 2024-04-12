@@ -14,13 +14,13 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var hold_object: Object
 
 
-func _unhandled_input(event):
+#func _unhandled_input(event):
 
-	#if event is InputEventMouseMotion:
+	#if event is InputEventMouseMotion:-
 		#neck.rotate_y(-event.relative.x * 0.01)
 		#camera.rotate_x(-event.relative.y * 0.01)
 		#camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(60))
-	pass
+	#pass
 
 func _physics_process(delta):
 

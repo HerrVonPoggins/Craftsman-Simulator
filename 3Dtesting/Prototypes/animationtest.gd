@@ -30,6 +30,7 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
+		#animation beim laufen abspielen
 	$AnimationTree.set("parameters/conditions/idle", input_dir == Vector2.ZERO)
 	$AnimationTree.set("parameters/conditions/walk", input_dir != Vector2.ZERO )
 	

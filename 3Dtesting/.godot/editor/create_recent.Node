@@ -1,5 +1,7 @@
-Area3D
 MeshInstance3D
+StaticBody3D
+VideoStreamPlayer
+Area3D
 RigidBody3D
 Button
 AnimationPlayer
@@ -10,5 +12,3 @@ CheckBox
 CollisionShape3D
 CheckButton
 Label
-VBoxContainer
-Panel

@@ -16,6 +16,14 @@ func _process(delta):
 			if collider != null:
 				if collider.is_in_group("grab"):
 					obj = collider
+	#wenn man E drückt und der Raycast auf ein object der gruppe npc zeigt startet der Dialog
+	if Input.is_action_just_pressed("interagieren"):
+		if obj == null:
+			var collider = get_collider()
+			if collider != null:
+				if collider.is_in_group("npc"):
+					Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/test.dialogue"))
 
 
 
@@ -24,6 +32,7 @@ func _process(delta):
 		obj.position = point.global_position
 		if obj.is_class("RigidBody3D"):
 			obj.linear_velocity = Vector3.ZERO
+
 
 	else:
 		if obj != null:
