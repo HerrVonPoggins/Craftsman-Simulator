@@ -1,6 +1,9 @@
 extends Node2D
 
 
+
+func _ready():
+	$AnimationPlayer.play("fade_in")
 #wechselt die szene zurück zum titlescreen
 
 func _on_button_pressed():

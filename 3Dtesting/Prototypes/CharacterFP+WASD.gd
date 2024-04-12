@@ -27,29 +27,26 @@ func _unhandled_input(event):
 		neck.rotate_y(-event.relative.x * 0.01)
 		camera.rotate_x(-event.relative.y * 0.01)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(60))
-
-
+		$MeshInstance3D.rotate_y(-event.relative.x * 0.01)
 func _physics_process(delta):
 
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
 
-	if Input.is_action_pressed("leftclick"):
-
-		var mousePos = get_viewport().get_mouse_position()
-
-		var raylength = 100
-		var from = camera.project_ray_origin(mousePos)
-		var to = from + camera.project_ray_normal(mousePos) * raylength
-		var space = get_world_3d().direct_space_state
-		var rayQuery = PhysicsRayQueryParameters3D.new()
-		rayQuery.from = from
-		rayQuery.to = to
-		rayQuery.collide_with_areas = true
-		var result = space.intersect_ray(rayQuery)
-		if result.size()<1:
-			return
+	#if Input.is_action_pressed("leftclick"):
+		#var mousePos = get_viewport().get_mouse_position()
+		#var raylength = 100
+		#var from = camera.project_ray_origin(mousePos)
+		#var to = from + camera.project_ray_normal(mousePos) * raylength
+		#var space = get_world_3d().direct_space_state
+		#var rayQuery = PhysicsRayQueryParameters3D.new()
+		#rayQuery.from = from
+		#rayQuery.to = to
+		#rayQuery.collide_with_areas = true
+		#var result = space.intersect_ray(rayQuery)
+		#if result.size()<1:
+			#return
 
 
 

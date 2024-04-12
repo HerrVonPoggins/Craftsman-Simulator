@@ -1,6 +1,6 @@
 3acdcc5cb6df755358dde907981ccea8
-::res://::1712916998
-area.tscn::PackedScene::4487209558357755132::1712912267::0::1::::<><>::res://world.gd<>uid://dj0uc6jfc4h7w::::res://art/low_poly_cat.obj<>uid://c6ub5x3yfjwfq::::res://mechanics/wall.tscn<>res://RayCast3D.gd<>res://Prototypes/PnCcontrols.gd<>uid://1f8wq8hkrxny::::res://art/Sprite-0001.png<>uid://c51l6bli4rw12::::res://art/icon.svg<>uid://b5xc761o388md::::res://Prototypes/animationtest.tscn
+::res://::1712921706
+area.tscn::PackedScene::4487209558357755132::1712921706::0::1::::<><>::res://world.gd<>uid://dj0uc6jfc4h7w::::res://art/low_poly_cat.obj<>uid://c6ub5x3yfjwfq::::res://mechanics/wall.tscn<>res://RayCast3D.gd<>res://Prototypes/PnCcontrols.gd<>uid://1f8wq8hkrxny::::res://art/Sprite-0001.png<>uid://c51l6bli4rw12::::res://art/icon.svg<>uid://b5xc761o388md::::res://Prototypes/animationtest.tscn
 global.gd::GDScript::-1::1712827841::0::1::::<>Node<>::
 node_3d.tscn::PackedScene::6432309699873923891::1712747782::0::1::::<><>::res://PlayerControls.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://art/Sprite-0001.png
 Player.gd::GDScript::-1::1712311843::0::1::::<>CharacterBody3D<>::
@@ -51,9 +51,9 @@ title_list.gd::GDScript::-1::1712740798::0::1::::<>VBoxContainer<>::
 title_list.tscn::PackedScene::6134415340044566558::1712740798::0::1::::<><>::res://addons/dialogue_manager/components/title_list.gd
 update_button.gd::GDScript::-1::1712740798::0::1::::<>Button<>::
 update_button.tscn::PackedScene::5825087957514786930::1712740798::0::1::::<><>::res://addons/dialogue_manager/components/update_button.gd<>uid://qdxrxv3c3hxk::::res://addons/dialogue_manager/components/download_update_panel.tscn
-::res://addons/dialogue_manager/example_balloon/::1712912267
+::res://addons/dialogue_manager/example_balloon/::1712921706
 example_balloon.gd::GDScript::-1::1712740799::0::1::::<>CanvasLayer<>::
-example_balloon.tscn::PackedScene::2304415056852043862::1712912267::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>res://addons/dialogue_manager/dialogue_reponses_menu.gd
+example_balloon.tscn::PackedScene::2304415056852043862::1712921706::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>res://addons/dialogue_manager/dialogue_reponses_menu.gd
 small_example_balloon.tscn::PackedScene::1883859960814163368::1712740799::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn<>res://addons/dialogue_manager/dialogue_reponses_menu.gd
 ::res://addons/dialogue_manager/l10n/::1712740799
 en.mo::Translation::-1::1712740799::0::1::::<><>::
@@ -68,29 +68,30 @@ main_view.gd::GDScript::-1::1712740800::0::1::::<>Control<>::
 main_view.tscn::PackedScene::4884668666408697448::1712740800::0::1::::<><>::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u::::res://addons/dialogue_manager/components/code_edit.tscn<>uid://dnufpcdrreva3::::res://addons/dialogue_manager/components/files_list.tscn<>uid://ctns6ouwwd68i::::res://addons/dialogue_manager/components/title_list.tscn<>uid://co8yl23idiwbi::::res://addons/dialogue_manager/components/update_button.tscn<>uid://gr8nakpbrhby::::res://addons/dialogue_manager/components/search_and_replace.tscn<>uid://cs8pwrxr5vxix::::res://addons/dialogue_manager/components/errors_panel.tscn<>res://addons/dialogue_manager/components/code_edit_syntax_highlighter.gd<>uid://cpg4lg1r3ff6m::::res://addons/dialogue_manager/views/settings_view.tscn<>uid://0n7hwviyyly4::::res://addons/dialogue_manager/components/find_in_files.tscn
 settings_view.gd::GDScript::-1::1712740800::0::1::::<>TabContainer<>::
 settings_view.tscn::PackedScene::5839841081119266502::1712740800::0::1::::<><>::res://addons/dialogue_manager/views/settings_view.gd
-::res://art/::1712748915
+::res://art/::1712922898
 icon.svg::CompressedTexture2D::6932903814583341055::1711554088::1712747782::1::::<><>::
+little_island.fbx::PackedScene::2046458472099249108::1712922898::1712922932::1::::<><>::
 low_poly_cat.obj::Mesh::7843790641474321114::1711554088::1712747782::1::::<><>::
 Sprite-0001.png::CompressedTexture2D::1837275663270596470::1711554088::1712747782::1::::<><>::
 Walking.fbx::PackedScene::5083419326559626444::1712748913::1712748915::1::::<><>::
-::res://CorePlayable/::1712912268
-CorePlayable.tscn::PackedScene::367638352014426829::1712912268::0::1::::<><>::uid://c6ub5x3yfjwfq::::res://mechanics/wall.tscn<>res://world.gd<>res://RayCast3D.gd<>res://Prototypes/PnCcontrols.gd<>uid://1f8wq8hkrxny::::res://art/Sprite-0001.png<>uid://0he1lqnqyqvf::::res://mechanics/zementmischer.tscn<>uid://cc4eoydeq1jwv::::res://UI/info hub.tscn
+::res://CorePlayable/::1712921769
+CorePlayable.tscn::PackedScene::367638352014426829::1712921769::0::1::::<><>::uid://c6ub5x3yfjwfq::::res://mechanics/wall.tscn<>res://world.gd<>res://RayCast3D.gd<>res://Prototypes/PnCcontrols.gd<>uid://1f8wq8hkrxny::::res://art/Sprite-0001.png<>uid://0he1lqnqyqvf::::res://mechanics/zementmischer.tscn<>uid://cc4eoydeq1jwv::::res://UI/info hub.tscn
 ::res://dialoguefiles/::1712741394
 test.dialogue::Resource::8352994675498894795::1712741394::1712741394::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
-::res://mechanics/::1712912268
+::res://mechanics/::1712921706
 wall.gd::GDScript::-1::1712768256::0::1::::<>Node3D<>::
-wall.tscn::PackedScene::6990098618445403050::1712912267::0::1::::<><>::res://mechanics/wall.gd
+wall.tscn::PackedScene::6990098618445403050::1712921706::0::1::::<><>::res://mechanics/wall.gd
 zementmischer.gd::GDScript::-1::1712769420::0::1::::<>Node3D<>::
-zementmischer.tscn::PackedScene::1769461636928547823::1712912268::0::1::::<><>::res://mechanics/zementmischer.gd
-::res://Prototypes/::1712912267
+zementmischer.tscn::PackedScene::1769461636928547823::1712921706::0::1::::<><>::res://mechanics/zementmischer.gd
+::res://Prototypes/::1712921752
 animationtest.gd::GDScript::-1::1712754690::0::1::::<>CharacterBody3D<>::
-animationtest.tscn::PackedScene::4539746929631555239::1712912267::0::1::::<><>::uid://ceopf5xvnxi7e::::res://art/Walking.fbx<>res://Prototypes/animationtest.gd
+animationtest.tscn::PackedScene::4539746929631555239::1712921706::0::1::::<><>::uid://ceopf5xvnxi7e::::res://art/Walking.fbx<>res://Prototypes/animationtest.gd
 CharacterFP+WASD.gd::GDScript::-1::1712486560::0::1::::<>CharacterBody3D<>::
 PnC+First Person.tscn::PackedScene::2307755686324146078::1712747782::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://art/low_poly_cat.obj<>res://Prototypes/CharacterFP+WASD.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://art/Sprite-0001.png
 PnC+Iso.tscn::PackedScene::1575395324966017256::1712747782::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://art/low_poly_cat.obj<>res://Prototypes/PnCmovement.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://art/Sprite-0001.png
 Pnc+TopDown.tscn::PackedScene::8591814051902701515::1712747782::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://art/low_poly_cat.obj<>res://Prototypes/PnCmovement.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://art/Sprite-0001.png
 PnC+TP.tscn::PackedScene::871087304696428628::1712747782::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://art/low_poly_cat.obj<>res://Prototypes/PnCcontrolsFP.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://art/Sprite-0001.png
-PnCcontrols.gd::GDScript::-1::1712904952::0::1::::<>CharacterBody3D<>::
+PnCcontrols.gd::GDScript::-1::1712921752::0::1::::<>CharacterBody3D<>::
 PnCcontrolsFP.gd::GDScript::-1::1711615076::0::1::::<>CharacterBody3D<>::
 PnCmovement.gd::GDScript::-1::1712486779::0::1::::<>CharacterBody3D<>::
 Text +  TopDown.tscn::PackedScene::557496288059948283::1712747782::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://art/low_poly_cat.obj<>res://Prototypes/Textcontrol.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://art/Sprite-0001.png
@@ -98,16 +99,16 @@ Text + FP.tscn::PackedScene::5690061750290966257::1712747782::0::1::::<><>::uid:
 Text + Iso.tscn::PackedScene::2426334669002527147::1712747782::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://art/low_poly_cat.obj<>res://Prototypes/Textcontrol.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://art/Sprite-0001.png
 Text + TP.tscn::PackedScene::1170809510888540463::1712747782::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://art/low_poly_cat.obj<>res://Prototypes/Textcontrol.gd<>res://RayCast3D.gd<>uid://1f8wq8hkrxny::::res://art/Sprite-0001.png
 Textcontrol.gd::GDScript::-1::1711712683::0::1::::<>CharacterBody3D<>::
-::res://UI/::1712912267
+::res://UI/::1712921706
 Checklist.gd::GDScript::-1::1712851023::0::1::::<>Node2D<>::
-checklist.tscn::PackedScene::2993137486329213323::1712912267::0::1::::<><>::res://UI/Checklist.gd
+checklist.tscn::PackedScene::2993137486329213323::1712921706::0::1::::<><>::res://UI/Checklist.gd
 credits.gd::GDScript::-1::1712744906::0::1::::<>Node2D<>::
-credits.tscn::PackedScene::5998865402096403978::1712912267::0::1::::<><>::res://UI/credits.gd<>uid://cdpolkwg0t10a::::res://UI/transition.tscn
+credits.tscn::PackedScene::5998865402096403978::1712921706::0::1::::<><>::res://UI/credits.gd<>uid://cdpolkwg0t10a::::res://UI/transition.tscn
 endscreen.gd::GDScript::-1::1712744883::0::1::::<>Node2D<>::
-endscreen.tscn::PackedScene::9216773037600868723::1712912267::0::1::::<><>::res://UI/endscreen.gd<>uid://cdpolkwg0t10a::::res://UI/transition.tscn
-info hub.tscn::PackedScene::4973355144014707637::1712912267::0::1::::<><>::res://UI/TabContainer.gd<>uid://biv5si5cbepod::::res://UI/checklist.tscn
-TabContainer.gd::GDScript::-1::1712851907::0::1::::<>Control<>::
-titlescreen.gd::GDScript::-1::1712905926::0::1::::<>Node2D<>::
-titlescreen.tscn::PackedScene::299591778937143882::1712912267::0::1::::<><>::res://UI/titlescreen.gd<>uid://cdpolkwg0t10a::::res://UI/transition.tscn
+endscreen.tscn::PackedScene::9216773037600868723::1712921706::0::1::::<><>::res://UI/endscreen.gd<>uid://cdpolkwg0t10a::::res://UI/transition.tscn
+info hub.tscn::PackedScene::4973355144014707637::1712921706::0::1::::<><>::res://UI/TabContainer.gd<>uid://biv5si5cbepod::::res://UI/checklist.tscn
+TabContainer.gd::GDScript::-1::1712919215::0::1::::<>Control<>::
+titlescreen.gd::GDScript::-1::1712920601::0::1::::<>Node2D<>::
+titlescreen.tscn::PackedScene::299591778937143882::1712921706::0::1::::<><>::res://UI/titlescreen.gd<>uid://cdpolkwg0t10a::::res://UI/transition.tscn
 transition.gd::GDScript::-1::1712906219::0::1::::<>CanvasLayer<>::
-transition.tscn::PackedScene::5015243805768877474::1712912267::0::1::::<><>::res://UI/transition.gd
+transition.tscn::PackedScene::5015243805768877474::1712921706::0::1::::<><>::res://UI/transition.gd

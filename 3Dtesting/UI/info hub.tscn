@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://biv5si5cbepod" path="res://UI/checklist.tscn" id="2_leu6n"]
 
 [node name="Control" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -12,12 +13,22 @@ script = ExtResource("1_keone")
 
 [node name="Button" type="Button" parent="."]
 process_mode = 3
+visible = false
 layout_mode = 0
-offset_left = 902.0
+offset_left = 828.0
 offset_top = 25.0
-offset_right = 971.0
+offset_right = 975.0
 offset_bottom = 56.0
-text = "infohub"
+text = "Infohub schließen"
+
+[node name="Button2" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 983.0
+offset_top = 26.0
+offset_right = 1151.0
+offset_bottom = 57.0
+text = "Checkliste "
 
 [node name="TabContainer" type="TabContainer" parent="."]
 process_mode = 3
@@ -87,5 +98,7 @@ text = "ddddddddddddddddd
 ddddddddd"
 
 [node name="checklist" parent="." instance=ExtResource("2_leu6n")]
+position = Vector2(-2, 0)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

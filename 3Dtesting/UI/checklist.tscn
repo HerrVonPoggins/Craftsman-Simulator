@@ -6,13 +6,6 @@
 process_mode = 3
 script = ExtResource("1_7vdvc")
 
-[node name="Button" type="Button" parent="."]
-offset_left = 988.0
-offset_top = 25.0
-offset_right = 1131.0
-offset_bottom = 51.0
-text = "Checklist"
-
 [node name="Panel" type="Panel" parent="."]
 offset_left = 985.0
 offset_top = 67.0
@@ -92,5 +85,3 @@ layout_mode = 2
 [node name="Label10" type="Label" parent="Panel/VBoxContainer"]
 visible = false
 layout_mode = 2
-
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

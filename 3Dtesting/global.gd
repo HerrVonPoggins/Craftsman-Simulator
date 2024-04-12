@@ -1,6 +1,6 @@
 extends Node
 
-
+var previousScene 
 #globalscript
 
 var perspective = 0

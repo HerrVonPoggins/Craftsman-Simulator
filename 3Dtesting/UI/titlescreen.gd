@@ -1,11 +1,14 @@
 extends Node2D
 
-var level = preload("res://area.tscn")
+
 #knöpfe für den titlescreen
+
+func _ready():
+	$AnimationPlayer.play("fade_in")
 
 
 func _on_button_pressed():
-	$transition.change_scene(level)
+	$transition.change_scene("res://CorePlayable/CorePlayable.tscn")
 
 
 func _on_button_2_pressed():

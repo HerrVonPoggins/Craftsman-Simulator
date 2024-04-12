@@ -44,10 +44,3 @@ func check2on(check2state):
 func check3on(check2state):
 	check3.button_pressed = check2state
 
-func _on_button_pressed():
-	if $Panel.visible == false:
-		$Panel.visible = true
-
-	else:
-		$Panel.visible = false
-		

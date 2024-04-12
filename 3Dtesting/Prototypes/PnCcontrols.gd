@@ -24,16 +24,16 @@ func _process(delta):
 	#wenn der mausknopf in Firstperson geklickt wird verschwidet der Mauszeiger und bei escape erscheint er wieder
 func _unhandled_input(event):
 	if $"Neck FP/Camera3D FP".current == true:
-		if event is InputEventMouseButton:
+	#bei mausbewegung und rechtsklickgedrückthalten dreht sich die kamera und wird oben und unten beschränkt
+		if Input.is_action_pressed("rightclick"):
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		elif event.is_action_pressed("ui_cancel"):
+			if event is InputEventMouseMotion:
+				neck.rotate_y(-event.relative.x * 0.01)
+				cameraFP.rotate_x(-event.relative.y * 0.01)
+				cameraFP.rotation.x = clamp(cameraFP.rotation.x, deg_to_rad(-60), deg_to_rad(60))
+				$".".rotate_y(-event.relative.x * 0.01)
+		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	#bei mausbewegung dreht sich die kamera und wird oben und unten beschränkt
-		if event is InputEventMouseMotion:
-			neck.rotate_y(-event.relative.x * 0.01)
-			cameraFP.rotate_x(-event.relative.y * 0.01)
-			cameraFP.rotation.x = clamp(cameraFP.rotation.x, deg_to_rad(-60), deg_to_rad(60))
-			$".".rotate_y(-event.relative.x * 0.01)
 
 
 		
