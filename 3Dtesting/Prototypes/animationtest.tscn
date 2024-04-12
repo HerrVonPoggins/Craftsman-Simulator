@@ -786,7 +786,7 @@ states/mixamo_com/node = SubResource("AnimationNodeAnimation_aakd4")
 states/mixamo_com/position = Vector2(510, 31)
 transitions = ["Start", "Take 001", SubResource("AnimationNodeStateMachineTransition_cwv2j"), "Take 001", "mixamo_com", SubResource("AnimationNodeStateMachineTransition_0jkgt"), "mixamo_com", "Take 001", SubResource("AnimationNodeStateMachineTransition_pedfk")]
 
-[node name="Node3D" type="CharacterBody3D"]
+[node name="Node3D2" type="CharacterBody3D"]
 script = ExtResource("1_b2uue")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

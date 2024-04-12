@@ -1,8 +1,9 @@
+RayCast3D
+AnimationPlayer
 Area3D
 MeshInstance3D
 RigidBody3D
 Button
-AnimationPlayer
 ColorRect
 CanvasLayer
 Control
