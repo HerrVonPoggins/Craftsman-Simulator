@@ -1,4 +1,5 @@
 MeshInstance3D
+CollisionShape3D
 StaticBody3D
 VideoStreamPlayer
 Area3D
@@ -9,6 +10,5 @@ ColorRect
 CanvasLayer
 Control
 CheckBox
-CollisionShape3D
 CheckButton
 Label

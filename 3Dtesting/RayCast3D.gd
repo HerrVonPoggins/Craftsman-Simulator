@@ -1,10 +1,10 @@
 extends RayCast3D
 
-
 var last = Vector3.ZERO
 var obj = null
 
 @onready var point = $"../Hold"
+@onready var player = $"../../../.."
 
 #methoden um sachen aufzuheben -> raycast laser mit begrenzter reichweite trifft auf ein objekt und wenn es in der grupp grab ist kann es aufgehoebn werden
 #das objekt wird am hold punkt gehalten
@@ -24,6 +24,8 @@ func _process(delta):
 				if collider.is_in_group("npc"):
 					Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/test.dialogue"))
+				if collider.is_in_group("cement_mixer"):
+					player.emit_signal("start_mixer")
 
 
 

@@ -231,8 +231,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_junql")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D6"]
 shape = SubResource("ConvexPolygonShape3D_8ihqv")
 
-[node name="Node3D2" parent="." instance=ExtResource("6_nji7o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.57858, 1.60533, 76.1417)
+[node name="Node3D2" parent="." groups=["cement_mixer"] instance=ExtResource("6_nji7o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.56488, 1.5919, 76.1457)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="." groups=["concrete", "grab"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5317, 0.831722, 57)
@@ -463,6 +463,7 @@ shape = SubResource("ConcavePolygonShape3D_g5o1c")
 
 [connection signal="closed" from="CanvasLayer/Control" to="." method="_on_control_closed"]
 [connection signal="opened" from="CanvasLayer/Control" to="." method="_on_control_opened"]
+[connection signal="start_mixer" from="Node3D3" to="Node3D2" method="_on_node_3d_3_start_mixer"]
 [connection signal="body_entered" from="ConcreteBucket" to="." method="_on_rigid_body_3d_7_body_entered"]
 
 [editable path="Root Scene"]

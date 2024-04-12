@@ -13,3 +13,5 @@ res://mechanics/zementmischer.tscn
 res://node_3d.tscn
 res://art/brick.tres
 res://mechanics/zementmischer.gd
+res://RayCast3D.gd
+res://player_signals.gd
