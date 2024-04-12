@@ -35,9 +35,12 @@ func _unhandled_input(event):
 			cameraFP.rotation.x = clamp(cameraFP.rotation.x, deg_to_rad(-60), deg_to_rad(60))
 			$".".rotate_y(-event.relative.x * 0.01)
 
+
+		
 func faceTo(direction):
 	if $"Neck FP/Camera3D FP".current == false:
 		look_at(Vector3(direction.x,global_position.y, direction.z),Vector3.UP)
+
 	
 
 func _physics_process(delta):
@@ -65,7 +68,8 @@ func _physics_process(delta):
 			if result.size()<1:
 				return
 
-
+			if $"Neck FP/Camera3D FP".current == false:
+				$"Neck FP".look_at(result.position)
 #bewegt den character zum angeklickten punkt
 			
 			destination = result.position

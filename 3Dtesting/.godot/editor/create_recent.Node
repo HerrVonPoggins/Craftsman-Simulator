@@ -1,3 +1,8 @@
+AnimationPlayer
+ColorRect
+CanvasLayer
+Control
+Button
 CheckBox
 MeshInstance3D
 RigidBody3D
@@ -6,9 +11,5 @@ Area3D
 CheckButton
 Label
 VBoxContainer
-Button
 Panel
 Node3D
-ShapeCast3D
-AnimationTree
-CharacterBody3D

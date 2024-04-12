@@ -17,7 +17,8 @@ extends Node2D
 #functions um häkchen und text zu bestimmen in anderen szenen
 
 func _ready():
-	
+	pass
+func _process(delta):
 	check1on(check1state)
 	check2on(check2state)
 	check3on(check3state)

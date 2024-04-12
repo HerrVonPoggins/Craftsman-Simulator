@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://fic7kev01djp"]
+[gd_scene load_steps=23 format=3 uid="uid://fic7kev01djp"]
 
 [ext_resource type="PackedScene" uid="uid://c6ub5x3yfjwfq" path="res://mechanics/wall.tscn" id="1_40xi4"]
 [ext_resource type="Script" path="res://world.gd" id="1_nfcwb"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Prototypes/PnCcontrols.gd" id="3_m28db"]
 [ext_resource type="Texture2D" uid="uid://1f8wq8hkrxny" path="res://art/Sprite-0001.png" id="4_hs27v"]
 [ext_resource type="PackedScene" uid="uid://0he1lqnqyqvf" path="res://mechanics/zementmischer.tscn" id="6_nji7o"]
+[ext_resource type="PackedScene" uid="uid://cc4eoydeq1jwv" path="res://UI/info hub.tscn" id="7_j1gd4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ahgiv"]
 sky_top_color = Color(0.196078, 0.356863, 1, 1)
@@ -215,3 +216,10 @@ mesh = SubResource("CylinderMesh_th8la")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2595, 0)
 shape = SubResource("ConvexPolygonShape3D_ersao")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("7_j1gd4")]
+
+[connection signal="closed" from="CanvasLayer/Control" to="." method="_on_control_closed"]
+[connection signal="opened" from="CanvasLayer/Control" to="." method="_on_control_opened"]

@@ -3,9 +3,25 @@
 [ext_resource type="Script" path="res://UI/TabContainer.gd" id="1_keone"]
 [ext_resource type="PackedScene" uid="uid://biv5si5cbepod" path="res://UI/checklist.tscn" id="2_leu6n"]
 
-[node name="Info Hub" type="CanvasLayer"]
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_keone")
+
+[node name="Button" type="Button" parent="."]
+process_mode = 3
+layout_mode = 0
+offset_left = 902.0
+offset_top = 25.0
+offset_right = 971.0
+offset_bottom = 56.0
+text = "infohub"
 
 [node name="TabContainer" type="TabContainer" parent="."]
+process_mode = 3
+layout_mode = 0
 offset_left = 134.0
 offset_top = 88.0
 offset_right = 968.0
@@ -13,7 +29,6 @@ offset_bottom = 516.0
 current_tab = 1
 all_tabs_in_front = true
 drag_to_rearrange_enabled = true
-script = ExtResource("1_keone")
 
 [node name="1" type="TabBar" parent="TabContainer"]
 visible = false
@@ -72,3 +87,5 @@ text = "ddddddddddddddddd
 ddddddddd"
 
 [node name="checklist" parent="." instance=ExtResource("2_leu6n")]
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

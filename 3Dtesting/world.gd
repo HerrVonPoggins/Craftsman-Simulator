@@ -1,6 +1,7 @@
 extends Node3D
 
-
+func _ready():
+	$AnimationPlayer.play("fade_in")
 
 
 #kamera switch zwischen iso cam und Firstperson cam und macht das fadenkreuz unsichtbar wenn in iso 
@@ -27,3 +28,11 @@ func _on_rigid_body_3d_2_mouse_entered():
 
 func _on_rigid_body_3d_2_mouse_exited():
 	$RigidBody3D2/CollisionShape3D/MeshInstance3D.visible = false
+
+
+func _on_control_opened():
+	get_tree().paused = true
+
+
+func _on_control_closed():
+	get_tree().paused = false
