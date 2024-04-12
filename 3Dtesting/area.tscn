@@ -110,7 +110,7 @@ _data = {
 "fade_in": SubResource("Animation_23qvj")
 }
 
-[node name="Node3D2" type="Node3D"]
+[node name="Node3D" type="Node3D"]
 script = ExtResource("1_mt32x")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
