@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 
-const SPEED = 5.0
+var SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -33,7 +33,10 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
-
+	if Input.is_action_pressed("sprint"):
+		SPEED = 8
+	else:
+		SPEED = 5
 	#if Input.is_action_pressed("leftclick"):
 		#var mousePos = get_viewport().get_mouse_position()
 		#var raylength = 100

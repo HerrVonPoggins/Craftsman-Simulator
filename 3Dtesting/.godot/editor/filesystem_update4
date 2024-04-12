@@ -1,4 +1,5 @@
 res://UI/titlescreen.tscn
+res://art/brick.tres
 res://area.tscn
 res://UI/endscreen.tscn
 res://UI/credits.tscn
@@ -10,14 +11,7 @@ res://UI/checklist.tscn
 res://Prototypes/animationtest.tscn
 res://CorePlayable/CorePlayable.tscn
 res://mechanics/zementmischer.tscn
-res://Prototypes/PnCcontrols.gd
 res://node_3d.tscn
-res://Prototypes/CharacterFP+WASD.gd
 res://RayCast3D.gd
-res://UI/TabContainer.gd
-res://UI/Checklist.gd
-res://UI/titlescreen.gd
-res://UI/credits.gd
-res://UI/endscreen.gd
-res://global.gd
-res://UI/transition.gd
+res://mechanics/zementmischer.gd
+res://world.gd

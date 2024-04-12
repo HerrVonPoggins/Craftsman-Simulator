@@ -18,7 +18,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0665251, 1.23322, 0.18428)
 script = ExtResource("1_qk5km")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
-transform = Transform3D(-0.3, 0, 4.52987e-08, 0, 0.3, 0, -4.52987e-08, 0, -0.3, -0.00937235, 0.448456, -0.236481)
+transform = Transform3D(-1.5, 0, 2.26494e-07, 0, 1.5, 0, -2.26494e-07, 0, -1.5, -0.00937235, 0.448456, -0.236481)
 mesh = SubResource("CapsuleMesh_16dfd")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="CharacterBody3D/MeshInstance3D"]
@@ -28,22 +28,22 @@ mesh = SubResource("CapsuleMesh_vkejq")
 skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-transform = Transform3D(-0.3, 0, 4.52987e-08, 0, 0.3, 0, -4.52987e-08, 0, -0.3, -0.00937235, 0.448456, -0.236481)
+transform = Transform3D(-1.5, 0, 2.26494e-07, 0, 1.5, 0, -2.26494e-07, 0, -1.5, -0.00937235, 0.448456, -0.236481)
 shape = SubResource("ConvexPolygonShape3D_d8pds")
 
 [node name="Neck" type="Node3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0665251, 1.11712, -0.18428)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0665251, 4.22224, -0.18428)
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Neck"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.181925)
 
 [node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/Neck/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.060594, 0)
-target_position = Vector3(0, 0, -3)
+target_position = Vector3(0, 0, -10)
 script = ExtResource("2_esgj4")
 
 [node name="Hold" type="Node3D" parent="CharacterBody3D/Neck/Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.76978)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.51267)
 
 [node name="TextureRect" type="TextureRect" parent="CharacterBody3D/Neck/Camera3D"]
 offset_left = 576.0

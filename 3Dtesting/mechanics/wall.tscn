@@ -1,39 +1,41 @@
-[gd_scene load_steps=12 format=3 uid="uid://c6ub5x3yfjwfq"]
+[gd_scene load_steps=13 format=3 uid="uid://c6ub5x3yfjwfq"]
 
 [ext_resource type="Script" path="res://mechanics/wall.gd" id="1_abxoj"]
+[ext_resource type="ArrayMesh" uid="uid://dfk7y7w5dvc35" path="res://art/brick_outline_prototyp(1).obj" id="2_cjfxh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2unk7"]
 size = Vector3(2.96777, 0.711914, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_pub54"]
-size = Vector3(0.5, 0.2, 1)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n528f"]
-albedo_color = Color(1, 1, 0, 1)
+transparency = 1
+albedo_color = Color(1, 1, 0, 0.196078)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yy5ov"]
-albedo_color = Color(1, 1, 0, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m3e3m"]
+transparency = 1
+albedo_color = Color(1, 1, 0, 0.196078)
 
-[sub_resource type="BoxMesh" id="BoxMesh_o5iut"]
-material = SubResource("StandardMaterial3D_yy5ov")
-size = Vector3(0.5, 0.2, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_abtpv"]
+transparency = 1
+albedo_color = Color(1, 1, 0, 0.188235)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65wex"]
-albedo_color = Color(1, 1, 0, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_83ymg"]
-material = SubResource("StandardMaterial3D_65wex")
-size = Vector3(0.5, 0.2, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fdd07"]
-albedo_color = Color(1, 1, 0, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_qu80y"]
-material = SubResource("StandardMaterial3D_fdd07")
-size = Vector3(0.5, 0.2, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2qvjk"]
+transparency = 1
+albedo_color = Color(1, 1, 0, 0.196078)
 
 [sub_resource type="BoxMesh" id="BoxMesh_16lfi"]
-size = Vector3(0.5, 0.2, 1)
+size = Vector3(0.35, 0.2, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ycph0"]
+albedo_color = Color(0.227451, 0.0627451, 0.207843, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tfamd"]
+albedo_color = Color(0.227451, 0.0627451, 0.207843, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lt66c"]
+albedo_color = Color(0.227451, 0.0627451, 0.207843, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8nyv3"]
+albedo_color = Color(0.227451, 0.0627451, 0.207843, 1)
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_abxoj")
@@ -41,52 +43,58 @@ script = ExtResource("1_abxoj")
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.418457, -0.144043, 0)
-visible = false
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.717859, -0.144043, 0)
 shape = SubResource("BoxShape3D_2unk7")
 
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53445, -0.232541, -0.166675)
-mesh = SubResource("BoxMesh_pub54")
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.195, -0.197, -0.058)
+mesh = ExtResource("2_cjfxh")
 skeleton = NodePath("../../MeshInstance3D")
 surface_material_override/0 = SubResource("StandardMaterial3D_n528f")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.793, -0.25, -0.167)
+transform = Transform3D(-0.000994845, 0, 1, 0, 1, 0, -1, 0, -0.000994845, -0.188588, -0.197, -0.058)
 visible = false
-mesh = SubResource("BoxMesh_o5iut")
+mesh = ExtResource("2_cjfxh")
 skeleton = NodePath("../../MeshInstance3D2")
+surface_material_override/0 = SubResource("StandardMaterial3D_m3e3m")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125584, -0.259095, -0.0913144)
+transform = Transform3D(-0.00614358, 0, 0.999981, 0, 1, 0, -0.999981, 0, -0.00614358, 1.84652, -0.197, -0.058)
 visible = false
-mesh = SubResource("BoxMesh_83ymg")
+mesh = ExtResource("2_cjfxh")
 skeleton = NodePath("../../MeshInstance3D3")
+surface_material_override/0 = SubResource("StandardMaterial3D_abtpv")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.643726, -0.290221, -0.0535192)
+transform = Transform3D(-0.00766191, 0, 0.999971, 0, 1, 0, -0.999971, 0, -0.00766191, 3.87034, -0.197, -0.058)
 visible = false
-mesh = SubResource("BoxMesh_qu80y")
+mesh = ExtResource("2_cjfxh")
 skeleton = NodePath("../../MeshInstance3D4")
+surface_material_override/0 = SubResource("StandardMaterial3D_2qvjk")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.534, -0.233, -0.167)
+transform = Transform3D(3.82137e-15, 8.74228e-08, 2, 2, -8.74228e-08, 0, 8.74228e-08, 2, -8.74228e-08, -2.193, -0.204, -0.058)
 visible = false
 mesh = SubResource("BoxMesh_16lfi")
+surface_material_override/0 = SubResource("StandardMaterial3D_ycph0")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.793078, -0.249701, -0.130476)
+transform = Transform3D(3.82137e-15, 8.74228e-08, 2, 2, -8.74228e-08, 0, 8.74228e-08, 2, -8.74228e-08, -0.176588, -0.197, -0.058)
 visible = false
 mesh = SubResource("BoxMesh_16lfi")
+surface_material_override/0 = SubResource("StandardMaterial3D_tfamd")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125584, -0.259095, -0.0913144)
+transform = Transform3D(3.82137e-15, 8.74228e-08, 2, 2, -8.74228e-08, 0, 8.74228e-08, 2, -8.74228e-08, 1.84652, -0.197, -0.058)
 visible = false
 mesh = SubResource("BoxMesh_16lfi")
+surface_material_override/0 = SubResource("StandardMaterial3D_lt66c")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.643719, -0.285244, -0.0532674)
+transform = Transform3D(3.82137e-15, 8.74228e-08, 2, 2, -8.74228e-08, 0, 8.74228e-08, 2, -8.74228e-08, 3.86634, -0.197, -0.058)
 visible = false
 mesh = SubResource("BoxMesh_16lfi")
+surface_material_override/0 = SubResource("StandardMaterial3D_8nyv3")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

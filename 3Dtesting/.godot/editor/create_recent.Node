@@ -1,13 +1,13 @@
+Area3D
 MeshInstance3D
+RigidBody3D
 Button
 AnimationPlayer
 ColorRect
 CanvasLayer
 Control
 CheckBox
-RigidBody3D
 CollisionShape3D
-Area3D
 CheckButton
 Label
 VBoxContainer

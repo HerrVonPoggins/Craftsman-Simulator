@@ -1,5 +1,9 @@
 extends Node3D
 
+
+var beton = false
+
+
 func _ready():
 	$AnimationPlayer.play("fade_in")
 
@@ -36,3 +40,8 @@ func _on_control_opened():
 
 func _on_control_closed():
 	get_tree().paused = false
+
+
+func _on_rigid_body_3d_7_body_entered(body):
+	if body.is_in_group("tool"):
+		beton = true
