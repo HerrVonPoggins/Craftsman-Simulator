@@ -1,10 +1,9 @@
-MeshInstance3D
-StaticBody3D
-VideoStreamPlayer
+RayCast3D
+AnimationPlayer
 Area3D
+MeshInstance3D
 RigidBody3D
 Button
-AnimationPlayer
 ColorRect
 CanvasLayer
 Control
@@ -12,3 +11,5 @@ CheckBox
 CollisionShape3D
 CheckButton
 Label
+VBoxContainer
+Panel
