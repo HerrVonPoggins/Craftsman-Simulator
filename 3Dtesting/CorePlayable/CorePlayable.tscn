@@ -278,6 +278,17 @@ metadata/_edit_use_anchors_ = true
 [node name="Node3D3" parent="." instance=ExtResource("5_s55pf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9865, 0.73041, 68.8503)
 
+[node name="ConcreteBucketObj" type="RigidBody3D" parent="." groups=["grab", "trowel"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0937, 0.25035, 76.4295)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ConcreteBucketObj"]
+transform = Transform3D(8.15576, 0, 0, 0, 2.92306, 0, 0, 0, 7.88397, 0, 1.2595, 0)
+mesh = SubResource("CylinderMesh_th8la")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ConcreteBucketObj"]
+transform = Transform3D(8.96108, 0, 0, 0, 3.51965, 0, 0, 0, 9.74278, 0, 1.2595, 0)
+shape = SubResource("ConvexPolygonShape3D_ersao")
+
 [node name="ConcreteBucket" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4974, 1.00945, 71.9753)
 visible = false
