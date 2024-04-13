@@ -1,4 +1,5 @@
 res://UI/titlescreen.tscn
+res://art/brick.tres
 res://area.tscn
 res://UI/endscreen.tscn
 res://UI/credits.tscn
@@ -7,11 +8,7 @@ res://addons/dialogue_manager/example_balloon/example_balloon.tscn
 res://UI/transition.tscn
 res://UI/info hub.tscn
 res://UI/checklist.tscn
-res://Prototypes/animationtest.tscn
 res://CorePlayable/CorePlayable.tscn
 res://mechanics/zementmischer.tscn
 res://node_3d.tscn
-res://art/brick.tres
-res://mechanics/zementmischer.gd
 res://RayCast3D.gd
-res://player_signals.gd

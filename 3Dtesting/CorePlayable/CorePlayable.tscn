@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c6ub5x3yfjwfq" path="res://mechanics/wall.tscn" id="1_40xi4"]
 [ext_resource type="Script" path="res://world.gd" id="1_nfcwb"]
 [ext_resource type="PackedScene" uid="uid://cxv4g3lrd0p6b" path="res://node_3d.tscn" id="5_s55pf"]
-[ext_resource type="PackedScene" path="res://art/world_prototyp_sscalefbx(1).fbx" id="6_hs38s"]
+[ext_resource type="PackedScene" uid="uid://chngep0i8imsf" path="res://art/world_prototyp_sscalefbx(1).fbx" id="6_hs38s"]
 [ext_resource type="PackedScene" uid="uid://0he1lqnqyqvf" path="res://mechanics/zementmischer.tscn" id="6_nji7o"]
 [ext_resource type="ArrayMesh" uid="uid://mn8gki6fgcn" path="res://art/brick.tres" id="7_3djfr"]
 [ext_resource type="PackedScene" uid="uid://cc4eoydeq1jwv" path="res://UI/info hub.tscn" id="7_j1gd4"]
@@ -234,25 +234,25 @@ shape = SubResource("ConvexPolygonShape3D_8ihqv")
 [node name="Node3D2" parent="." groups=["cement_mixer"] instance=ExtResource("6_nji7o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.56488, 1.5919, 76.1457)
 
-[node name="RigidBody3D" type="RigidBody3D" parent="." groups=["concrete", "grab"]]
+[node name="Concrete" type="RigidBody3D" parent="." groups=["concrete", "grab"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5317, 0.831722, 57)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Concrete"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.518095, 0)
 mesh = SubResource("CapsuleMesh_moaiu")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Concrete"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.518095, 0)
 shape = SubResource("ConvexPolygonShape3D_klcas")
 
-[node name="RigidBody3D2" type="RigidBody3D" parent="." groups=["grab", "water"]]
+[node name="Water" type="RigidBody3D" parent="." groups=["grab", "water"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0974, 0.0769538, 57)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D2"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Water"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2595, 0)
 mesh = SubResource("CylinderMesh_th8la")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Water"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2595, 0)
 shape = SubResource("ConvexPolygonShape3D_ersao")
 
@@ -460,6 +460,17 @@ mesh = SubResource("CylinderMesh_cibw3")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(0.995154, 0, 0.0983298, 0, 1, 0, -0.0983298, 0, 0.995154, -16.6953, 3.32442, 77.3533)
 shape = SubResource("ConcavePolygonShape3D_g5o1c")
+
+[node name="Trowel" type="RigidBody3D" parent="." groups=["grab", "trowel"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3561, 2.37089, 65.4379)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Trowel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2595, 0)
+mesh = SubResource("CylinderMesh_th8la")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Trowel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2595, 0)
+shape = SubResource("ConvexPolygonShape3D_ersao")
 
 [connection signal="closed" from="CanvasLayer/Control" to="." method="_on_control_closed"]
 [connection signal="opened" from="CanvasLayer/Control" to="." method="_on_control_opened"]
