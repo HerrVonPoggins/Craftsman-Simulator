@@ -9,8 +9,5 @@ res://UI/transition.tscn
 res://UI/info hub.tscn
 res://UI/checklist.tscn
 res://CorePlayable/CorePlayable.tscn
-res://mechanics/zementmischer.tscn
-res://node_3d.tscn
-res://RayCast3D.gd
 res://mechanics/cement-mixing/zementmischer.tscn
-res://mechanics/cement-mixing/zementmischer.gd
+res://node_3d.tscn

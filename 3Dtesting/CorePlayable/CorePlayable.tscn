@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://fic7kev01djp"]
+[gd_scene load_steps=45 format=3 uid="uid://fic7kev01djp"]
 
 [ext_resource type="PackedScene" uid="uid://c6ub5x3yfjwfq" path="res://mechanics/wall.tscn" id="1_40xi4"]
 [ext_resource type="Script" path="res://world.gd" id="1_nfcwb"]
@@ -104,9 +104,6 @@ _data = {
 "RESET": SubResource("Animation_axmk6"),
 "fade_in": SubResource("Animation_23qvj")
 }
-
-[sub_resource type="BoxMesh" id="BoxMesh_nuwmf"]
-size = Vector3(4, 1, 2)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_i42k8"]
 data = PackedVector3Array(-2, 0.5, 1, 2, 0.5, 1, -2, -0.5, 1, 2, 0.5, 1, 2, -0.5, 1, -2, -0.5, 1, 2, 0.5, -1, -2, 0.5, -1, 2, -0.5, -1, -2, 0.5, -1, -2, -0.5, -1, 2, -0.5, -1, 2, 0.5, 1, 2, 0.5, -1, 2, -0.5, 1, 2, 0.5, -1, 2, -0.5, -1, 2, -0.5, 1, -2, 0.5, -1, -2, 0.5, 1, -2, -0.5, -1, -2, 0.5, 1, -2, -0.5, 1, -2, -0.5, -1, 2, 0.5, 1, -2, 0.5, 1, 2, 0.5, -1, -2, 0.5, 1, -2, 0.5, -1, 2, 0.5, -1, -2, -0.5, 1, 2, -0.5, 1, -2, -0.5, -1, 2, -0.5, 1, 2, -0.5, -1, -2, -0.5, -1)
@@ -280,6 +277,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9865, 0.73041, 68.8503)
 
 [node name="ConcreteBucketObj" type="RigidBody3D" parent="." groups=["grab", "trowel"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0937, 0.25035, 76.4295)
+visible = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="ConcreteBucketObj"]
 transform = Transform3D(8.15576, 0, 0, 0, 2.92306, 0, 0, 0, 7.88397, 0, 1.2595, 0)
@@ -289,16 +287,11 @@ mesh = SubResource("CylinderMesh_th8la")
 transform = Transform3D(8.96108, 0, 0, 0, 3.51965, 0, 0, 0, 9.74278, 0, 1.2595, 0)
 shape = SubResource("ConvexPolygonShape3D_ersao")
 
-[node name="ConcreteBucket" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4974, 1.00945, 71.9753)
-visible = false
+[node name="ConcreteBucket" type="Area3D" parent="ConcreteBucketObj"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5963, 0.7591, -4.45419)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="ConcreteBucket"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.76411, 0, 3.90359)
-mesh = SubResource("BoxMesh_nuwmf")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ConcreteBucket"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.76411, 0, 3.90359)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ConcreteBucketObj/ConcreteBucket"]
+transform = Transform3D(0.41714, 0, 0, 0, 2.51106, 0, 0, 0, 0.760388, -0.589067, 0, 4.42439)
 shape = SubResource("ConcavePolygonShape3D_i42k8")
 
 [node name="Root Scene" parent="." instance=ExtResource("6_hs38s")]
@@ -486,6 +479,6 @@ shape = SubResource("ConvexPolygonShape3D_ersao")
 [connection signal="closed" from="CanvasLayer/Control" to="." method="_on_control_closed"]
 [connection signal="opened" from="CanvasLayer/Control" to="." method="_on_control_opened"]
 [connection signal="start_mixer" from="Node3D3" to="Node3D2" method="_on_node_3d_3_start_mixer"]
-[connection signal="body_entered" from="ConcreteBucket" to="." method="_on_rigid_body_3d_7_body_entered"]
+[connection signal="body_entered" from="ConcreteBucketObj/ConcreteBucket" to="." method="_on_rigid_body_3d_7_body_entered"]
 
 [editable path="Root Scene"]
