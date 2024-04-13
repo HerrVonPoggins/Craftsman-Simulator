@@ -1,9 +1,9 @@
 MeshInstance3D
+RigidBody3D
+Area3D
 CollisionShape3D
 StaticBody3D
 VideoStreamPlayer
-Area3D
-RigidBody3D
 Button
 AnimationPlayer
 ColorRect

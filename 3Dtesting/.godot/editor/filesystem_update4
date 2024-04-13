@@ -11,3 +11,6 @@ res://UI/checklist.tscn
 res://CorePlayable/CorePlayable.tscn
 res://mechanics/cement-mixing/zementmischer.tscn
 res://node_3d.tscn
+res://world.gd
+res://mechanics/cutbrick.tscn
+res://mechanics/wall.gd

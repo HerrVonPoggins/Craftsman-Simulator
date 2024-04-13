@@ -45,3 +45,10 @@ func _on_control_closed():
 func _on_rigid_body_3d_7_body_entered(body):
 	if body.is_in_group("tool"):
 		beton = true
+
+
+func _on_säge_body_entered(body):
+	if body.is_in_group("cut"):
+		$RigidBodycut.scale = Vector3(1,1,0.5)
+		$RigidBodycut/MeshInstance3D2.scale = Vector3(1,1,0.5)
+		$RigidBodycut/CollisionShape3D.scale = Vector3(1,1,0.5)

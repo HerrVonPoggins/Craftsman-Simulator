@@ -52,6 +52,13 @@ mesh = ExtResource("2_cjfxh")
 skeleton = NodePath("../../MeshInstance3D")
 surface_material_override/0 = SubResource("StandardMaterial3D_n528f")
 
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(-4.37114e-08, 0, 0.5, 0, 1, 0, -1, 0, -2.18557e-08, -2.6876, 0.548366, -0.058)
+visible = false
+mesh = ExtResource("2_cjfxh")
+skeleton = NodePath("../../MeshInstance3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_n528f")
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
 transform = Transform3D(-0.000994845, 0, 1, 0, 1, 0, -1, 0, -0.000994845, -0.188588, -0.197, -0.058)
 visible = false
@@ -75,6 +82,12 @@ surface_material_override/0 = SubResource("StandardMaterial3D_2qvjk")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(3.82137e-15, 8.74228e-08, 2, 2, -8.74228e-08, 0, 8.74228e-08, 2, -8.74228e-08, -2.193, -0.204, -0.058)
+visible = false
+mesh = SubResource("BoxMesh_16lfi")
+surface_material_override/0 = SubResource("StandardMaterial3D_ycph0")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.82137e-15, 8.74228e-08, 1, 2, -8.74228e-08, 1.27055e-21, 8.74228e-08, 2, -4.37114e-08, -2.68374, 0.565892, -0.058)
 visible = false
 mesh = SubResource("BoxMesh_16lfi")
 surface_material_override/0 = SubResource("StandardMaterial3D_ycph0")
