@@ -12,3 +12,4 @@ res://CorePlayable/CorePlayable.tscn
 res://mechanics/zementmischer.tscn
 res://node_3d.tscn
 res://RayCast3D.gd
+res://mechanics/cement-mixing/zementmischer.tscn

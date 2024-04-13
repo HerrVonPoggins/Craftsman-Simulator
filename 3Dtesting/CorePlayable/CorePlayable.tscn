@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://world.gd" id="1_nfcwb"]
 [ext_resource type="PackedScene" uid="uid://cxv4g3lrd0p6b" path="res://node_3d.tscn" id="5_s55pf"]
 [ext_resource type="PackedScene" uid="uid://chngep0i8imsf" path="res://art/world_prototyp_sscalefbx(1).fbx" id="6_hs38s"]
-[ext_resource type="PackedScene" uid="uid://0he1lqnqyqvf" path="res://mechanics/zementmischer.tscn" id="6_nji7o"]
+[ext_resource type="PackedScene" uid="uid://0he1lqnqyqvf" path="res://mechanics/cement-mixing/zementmischer.tscn" id="6_nji7o"]
 [ext_resource type="ArrayMesh" uid="uid://mn8gki6fgcn" path="res://art/brick.tres" id="7_3djfr"]
 [ext_resource type="PackedScene" uid="uid://cc4eoydeq1jwv" path="res://UI/info hub.tscn" id="7_j1gd4"]
 
@@ -462,7 +462,7 @@ transform = Transform3D(0.995154, 0, 0.0983298, 0, 1, 0, -0.0983298, 0, 0.995154
 shape = SubResource("ConcavePolygonShape3D_g5o1c")
 
 [node name="Trowel" type="RigidBody3D" parent="." groups=["grab", "trowel"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3561, 2.37089, 65.4379)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3479, 2.42161, 65.5301)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Trowel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2595, 0)

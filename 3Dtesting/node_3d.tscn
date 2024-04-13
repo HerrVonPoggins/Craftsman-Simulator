@@ -48,10 +48,10 @@ script = ExtResource("2_esgj4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.51267)
 
 [node name="TextureRect" type="TextureRect" parent="CharacterBody3D/Neck/Camera3D"]
-offset_left = 576.0
-offset_top = 324.0
-offset_right = 600.0
-offset_bottom = 348.0
+offset_left = 562.0
+offset_top = 310.0
+offset_right = 586.0
+offset_bottom = 334.0
 texture = ExtResource("3_d3pfc")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://0he1lqnqyqvf"]
 
-[ext_resource type="Script" path="res://mechanics/zementmischer.gd" id="1_lhu2x"]
+[ext_resource type="Script" path="res://mechanics/cement-mixing/zementmischer.gd" id="1_lhu2x"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_280gd"]
 radius = 2.805
