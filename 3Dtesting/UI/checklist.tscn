@@ -7,10 +7,10 @@ process_mode = 3
 script = ExtResource("1_7vdvc")
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 1682.03
-offset_top = 196.877
-offset_right = 1850.03
-offset_bottom = 474.877
+offset_left = 985.0
+offset_top = 67.0
+offset_right = 1153.0
+offset_bottom = 345.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 layout_mode = 0

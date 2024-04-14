@@ -2,6 +2,7 @@ extends Node3D
 var water = false
 var concrete = false
 @onready var concrete_bucket_obj = $"../ConcreteBucketObj"
+@onready var bucket_collision_shape_3d = $"../ConcreteBucketObj/CollisionShape3D"
 
 
 
@@ -18,5 +19,7 @@ func _on_node_3d_3_start_mixer():
 	if water == true and concrete == true:
 		#animation starten, sobald verfügbar
 		concrete_bucket_obj.visible = true
+		concrete_bucket_obj.freeze = false
+		bucket_collision_shape_3d.disabled = false
 		water = false
 		concrete = false
