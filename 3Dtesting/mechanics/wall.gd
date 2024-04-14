@@ -31,3 +31,4 @@ func _on_area_3d_body_entered(body):
 			body.queue_free()
 			$MeshInstance3D5.visible = true
 			$Area3D/MeshInstance3D7.visible = false
+

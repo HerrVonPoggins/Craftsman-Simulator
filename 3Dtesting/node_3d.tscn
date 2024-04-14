@@ -61,3 +61,5 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_d3pfc")
 expand_mode = 1
+
+[connection signal="bucket_pos_reached" from="." to="CharacterBody3D/Neck/Camera3D/RayCast3D" method="_on_player_bucket_pos_reached"]

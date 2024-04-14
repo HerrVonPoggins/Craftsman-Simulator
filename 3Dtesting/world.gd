@@ -2,6 +2,7 @@ extends Node3D
 
 
 var beton = false
+@onready var bucket_spawn = $ConcreteBucketPos/BucketSpawn
 
 
 func _ready():
@@ -52,3 +53,8 @@ func _on_säge_body_entered(body):
 		$RigidBodycut.scale = Vector3(1,1,0.5)
 		$RigidBodycut/MeshInstance3D2.scale = Vector3(1,1,0.5)
 		$RigidBodycut/CollisionShape3D.scale = Vector3(1,1,0.5)
+
+
+func _on_concrete_bucket_pos_body_entered(body):
+	if body.is_in_group("concretebucket"):
+		body.position = bucket_spawn.global_position
