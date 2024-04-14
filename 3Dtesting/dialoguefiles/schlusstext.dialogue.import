@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dv34rwoaj6hjo"
+path="res://.godot/imported/schlusstext.dialogue-8e1c5eded72d1b93cc0e22c979a1f927.tres"
+
+[deps]
+
+source_file="res://dialoguefiles/schlusstext.dialogue"
+dest_files=["res://.godot/imported/schlusstext.dialogue-8e1c5eded72d1b93cc0e22c979a1f927.tres"]
+
+[params]
+
+defaults=true

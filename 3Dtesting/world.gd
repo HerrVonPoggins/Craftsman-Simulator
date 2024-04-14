@@ -52,3 +52,4 @@ func _on_säge_body_entered(body):
 		$RigidBodycut.scale = Vector3(1,1,0.5)
 		$RigidBodycut/MeshInstance3D2.scale = Vector3(1,1,0.5)
 		$RigidBodycut/CollisionShape3D.scale = Vector3(1,1,0.5)
+		Global.brick_sawed = true

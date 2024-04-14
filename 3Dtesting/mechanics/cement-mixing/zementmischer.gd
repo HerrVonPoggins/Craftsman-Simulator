@@ -20,3 +20,4 @@ func _on_node_3d_3_start_mixer():
 		concrete_bucket_obj.visible = true
 		water = false
 		concrete = false
+		Global.concrete_mixed = true

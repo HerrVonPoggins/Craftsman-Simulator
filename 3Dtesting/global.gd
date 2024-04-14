@@ -1,6 +1,8 @@
 extends Node
 
-
+var wall_finished = false
+var concrete_mixed = false
+var brick_sawed = false
 
 
 # Called when the node enters the scene tree for the first time.

@@ -44,13 +44,14 @@ _data = {
 script = ExtResource("1_erga7")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 mouse_filter = 2
 color = Color(0.160784, 0.160784, 0.160784, 1)
 
 [node name="Button" type="Button" parent="."]
 process_mode = 3
+custom_minimum_size = Vector2(500, 0)
 offset_left = 128.0
 offset_top = 267.0
 offset_right = 333.0
@@ -60,6 +61,7 @@ text = "start"
 
 [node name="Button2" type="Button" parent="."]
 process_mode = 3
+custom_minimum_size = Vector2(500, 0)
 offset_left = 128.0
 offset_top = 318.0
 offset_right = 336.0
@@ -69,6 +71,7 @@ text = "credits
 
 [node name="Button3" type="Button" parent="."]
 process_mode = 3
+custom_minimum_size = Vector2(500, 0)
 offset_left = 130.0
 offset_top = 370.0
 offset_right = 336.0

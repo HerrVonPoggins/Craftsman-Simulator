@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_1wary"]
+
+[resource]
+script = ExtResource("1_1wary")
+using_states = PackedStringArray()
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray("Bauleiter")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": &"title"
+},
+"3": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "5",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Hey du hast es geschafft !",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hey du hast es geschafft !",
+"type": &"dialogue"
+},
+"5": {
+"id": "5",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+}
+}
+raw_text = "~ this_is_a_node_title
+
+Bauleiter: Hey du hast es geschafft !
+
+=> END"
+metadata/dialogue_manager_version = "2.38.0"

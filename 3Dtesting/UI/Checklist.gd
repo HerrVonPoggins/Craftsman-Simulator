@@ -9,9 +9,9 @@ extends Node2D
 @export var check1state = false
 @export var check2state = false
 @export var check3state = false
-@export var label1text = "mauer bauen"
-@export var label2text = "zement mischen"
-@export var label3text = "test"
+@export var label1text = "Ziegel sägen"
+@export var label2text = "zement mischen mit wasser und zement"
+@export var label3text = "mauer bauen"
 
 
 #functions um häkchen und text zu bestimmen in anderen szenen

@@ -53,7 +53,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "test"
 
 [node name="2" type="TabBar" parent="TabContainer"]
 layout_mode = 2
@@ -69,33 +68,6 @@ offset_left = 0.172
 offset_right = -2.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "ddddddddddddddddd
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-ddddddddd"
 
 [node name="checklist" parent="." instance=ExtResource("2_leu6n")]
 position = Vector2(20, -76)

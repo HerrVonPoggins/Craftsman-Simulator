@@ -23,6 +23,17 @@ func _ready():
 	#$checklist.label1text = "test"
 
 func _process(delta):
+	
+	if Global.wall_finished == true:
+		$checklist.check3state = true
+	if Global.concrete_mixed == true:
+		$checklist.check2state = true
+	if Global.brick_sawed == true:
+		$checklist.check1state = true
+	
+	
+	
+	
 	if Input.is_action_just_pressed("escape"):
 		if isOpen == true:
 			close()
@@ -50,6 +61,7 @@ func _on_button_pressed():
 	if isOpen == true:
 		close()
 		$Button.visible = false
+		$Button2.visible = false
 	else:
 		open()
 
