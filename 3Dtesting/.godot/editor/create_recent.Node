@@ -1,6 +1,6 @@
+RigidBody3D
 CollisionShape3D
 Area3D
-RigidBody3D
 HBoxContainer
 AnimationPlayer
 Marker3D

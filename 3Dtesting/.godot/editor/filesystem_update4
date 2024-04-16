@@ -7,3 +7,7 @@ res://UI/credits.tscn
 res://UI/endscreen.tscn
 res://UI/info hub.tscn
 res://UI/transition.tscn
+res://mechanics/wall.tscn
+res://mechanics/wall.gd
+res://scripts/world.gd
+res://scripts/global.gd

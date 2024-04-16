@@ -10,7 +10,7 @@ content_margin_top = 1.0
 content_margin_right = 1.0
 content_margin_bottom = 1.0
 texture = ExtResource("2_u0elq")
-modulate_color = Color(1, 1, 1, 0.141176)
+modulate_color = Color(1, 1, 1, 0.4)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a48ki"]
 content_margin_left = 0.0
@@ -18,7 +18,7 @@ texture = ExtResource("2_u0elq")
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 region_rect = Rect2(0, 0, 480, 402)
-modulate_color = Color(0.560784, 0.560784, 0.560784, 0.0823529)
+modulate_color = Color(0.560784, 0.560784, 0.560784, 0.278431)
 
 [sub_resource type="Theme" id="Theme_n4dvj"]
 Panel/styles/panel = SubResource("StyleBoxTexture_cvin2")

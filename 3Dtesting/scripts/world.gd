@@ -9,7 +9,11 @@ func _ready():
 	$AnimationPlayer.play("fade_in")
 
 
-
+func _process(delta):
+	if Global.wall_finished == true:
+		$bricks.visible = true
+		$AnimationPlayer2.play("brick_build")
+		Global.wall_finished = false
 
 
 
@@ -63,3 +67,4 @@ func _on_area_3d_body_entered(body):
 			counter = 2
 		elif $Haus_Grundriss_002.visible == true and counter == 2:
 			$Haus_Grundriss_003.visible = true
+			Global.isolation = true
