@@ -1,7 +1,41 @@
-[gd_scene load_steps=6 format=3 uid="uid://ejeh6fcxpdcs"]
+[gd_scene load_steps=17 format=3 uid="uid://ejeh6fcxpdcs"]
 
 [ext_resource type="Script" path="res://UI/titlescreen.gd" id="1_erga7"]
+[ext_resource type="Texture2D" uid="uid://ddnesutfxiy8a" path="res://assets/textures/metalPanel_blueCorner.png" id="2_ajpxx"]
 [ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://UI/transition.tscn" id="2_f7fqr"]
+[ext_resource type="StyleBox" uid="uid://c8y6ncw8xv1vl" path="res://assets/textures/button texture.tres" id="3_dcg8v"]
+[ext_resource type="Texture2D" uid="uid://de5v31r3d4wdo" path="res://assets/textures/glassPanel_projection.png" id="3_nso2c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vp2bl"]
+texture = ExtResource("2_ajpxx")
+
+[sub_resource type="Theme" id="Theme_o2eg2"]
+Panel/styles/panel = SubResource("StyleBoxTexture_vp2bl")
+
+[sub_resource type="LabelSettings" id="LabelSettings_137km"]
+font_size = 90
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_0eiux"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 90
+Button/styles/normal = ExtResource("3_dcg8v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lb38a"]
+texture = ExtResource("3_nso2c")
+
+[sub_resource type="Theme" id="Theme_w5ugh"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 80
+Button/styles/normal = SubResource("StyleBoxTexture_lb38a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0tmye"]
+texture = ExtResource("3_nso2c")
+
+[sub_resource type="Theme" id="Theme_nxc8r"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 80
+Button/styles/normal = SubResource("StyleBoxTexture_0tmye")
 
 [sub_resource type="Animation" id="Animation_axmk6"]
 length = 0.001
@@ -43,39 +77,50 @@ _data = {
 [node name="Titlescreen" type="Node2D"]
 script = ExtResource("1_erga7")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="Panel" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
 mouse_filter = 2
-color = Color(0.160784, 0.160784, 0.160784, 1)
+theme = SubResource("Theme_o2eg2")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 968.0
+offset_bottom = 320.0
+text = "Titlescreen"
+label_settings = SubResource("LabelSettings_137km")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Button" type="Button" parent="."]
 process_mode = 3
 custom_minimum_size = Vector2(500, 0)
-offset_left = 128.0
-offset_top = 267.0
-offset_right = 333.0
-offset_bottom = 298.0
+offset_left = 135.0
+offset_top = 418.0
+offset_right = 789.0
+offset_bottom = 542.0
 size_flags_horizontal = 4
+theme = SubResource("Theme_0eiux")
 text = "start"
 
 [node name="Button2" type="Button" parent="."]
 process_mode = 3
 custom_minimum_size = Vector2(500, 0)
-offset_left = 128.0
-offset_top = 318.0
-offset_right = 336.0
-offset_bottom = 349.0
+offset_left = 137.0
+offset_top = 587.0
+offset_right = 791.0
+offset_bottom = 720.0
+theme = SubResource("Theme_w5ugh")
 text = "credits
 "
 
 [node name="Button3" type="Button" parent="."]
 process_mode = 3
 custom_minimum_size = Vector2(500, 0)
-offset_left = 130.0
-offset_top = 370.0
-offset_right = 336.0
-offset_bottom = 401.0
+offset_left = 136.0
+offset_top = 758.0
+offset_right = 794.0
+offset_bottom = 907.0
+theme = SubResource("Theme_nxc8r")
 text = "quit"
 
 [node name="transition" parent="." instance=ExtResource("2_f7fqr")]
@@ -86,6 +131,7 @@ libraries = {
 }
 
 [node name="ColorRect2" type="ColorRect" parent="AnimationPlayer"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

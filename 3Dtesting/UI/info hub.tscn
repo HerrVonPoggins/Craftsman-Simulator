@@ -37,12 +37,10 @@ offset_left = 134.0
 offset_top = 88.0
 offset_right = 1644.0
 offset_bottom = 938.0
-current_tab = 1
 all_tabs_in_front = true
 drag_to_rearrange_enabled = true
 
 [node name="1" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 tab_alignment = 1
 
@@ -55,6 +53,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="2" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 tab_alignment = 1
 

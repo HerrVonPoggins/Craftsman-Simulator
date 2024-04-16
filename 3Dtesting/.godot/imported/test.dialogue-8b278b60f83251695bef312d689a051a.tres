@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_d15ts"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_j6jg8"]
 
 [resource]
-script = ExtResource("1_d15ts")
+script = ExtResource("1_j6jg8")
 using_states = PackedStringArray()
 titles = {
 "this_is_a_node_title": "3"
@@ -17,28 +17,118 @@ lines = {
 "text": "this_is_a_node_title",
 "type": &"title"
 },
+"10": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Viel Glück.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Viel Glück.",
+"type": &"dialogue"
+},
+"11": {
+"id": "11",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
 "3": {
 "character": "Bauleiter",
 "character_replacements": Array[Dictionary]([]),
 "id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Wilkommen auf der Baustelle!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wilkommen auf der Baustelle!",
+"type": &"dialogue"
+},
+"4": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
 "next_id": "5",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "test.",
+"text": "Deine erste Aufgabe wird es sein eine Wand zu Maurern.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "test.",
+"translation_key": "Deine erste Aufgabe wird es sein eine Wand zu Maurern.",
 "type": &"dialogue"
 },
 "5": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
 "id": "5",
-"is_snippet": false,
-"next_id": "end",
-"type": &"goto"
+"next_id": "6",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Füll den Zementmischer erst mit Wasser und einem Sack Mörtel.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Füll den Zementmischer erst mit Wasser und einem Sack Mörtel.",
+"type": &"dialogue"
+},
+"6": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "als nächstes schalte den Zementmischer (E drücken) an.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "als nächstes schalte den Zementmischer (E drücken) an.",
+"type": &"dialogue"
+},
+"7": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "nimm die Kelle um Mörtel auf die markierte stelle zu setzen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "nimm die Kelle um Mörtel auf die markierte stelle zu setzen.",
+"type": &"dialogue"
+},
+"8": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "platziere abwechselnd Mörtel und Ziegel.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "platziere abwechselnd Mörtel und Ziegel.",
+"type": &"dialogue"
+},
+"9": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "10",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Achtung einer der Ziegel muss an der Tischsäge kleiner geschnitten werden. ein Ziegel liegt bereit neben der Tischsäge.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Achtung einer der Ziegel muss an der Tischsäge kleiner geschnitten werden. ein Ziegel liegt bereit neben der Tischsäge.",
+"type": &"dialogue"
 }
 }
 raw_text = "~ this_is_a_node_title
 
-Bauleiter: test.
-
+Bauleiter: Wilkommen auf der Baustelle!
+Bauleiter: Deine erste Aufgabe wird es sein eine Wand zu Maurern.
+Bauleiter: Füll den Zementmischer erst mit Wasser und einem Sack Mörtel.
+Bauleiter: als nächstes schalte den Zementmischer (E drücken) an.
+Bauleiter: nimm die Kelle um Mörtel auf die markierte stelle zu setzen.
+Bauleiter: platziere abwechselnd Mörtel und Ziegel.
+Bauleiter: Achtung einer der Ziegel muss an der Tischsäge kleiner geschnitten werden. ein Ziegel liegt bereit neben der Tischsäge.
+Bauleiter: Viel Glück.
 => END"
 metadata/dialogue_manager_version = "2.38.0"
