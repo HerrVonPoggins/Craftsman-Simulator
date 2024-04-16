@@ -3,6 +3,7 @@ extends Node3D
 
 var beton = false
 var saw_is_on = false
+var counter = 0
 
 func _ready():
 	$AnimationPlayer.play("fade_in")
@@ -47,3 +48,18 @@ func _on_concrete_bucket_body_entered(body):
 		Global.concrete = true
 
 
+
+
+func _on_area_3d_body_entered(body):
+	
+	if body.is_in_group("isolation"):
+		body.queue_free()
+		
+		if $Haus_Grundriss_001.visible == false and counter == 0:
+			$Haus_Grundriss_001.visible = true
+			counter = 1
+		elif $Haus_Grundriss_001.visible == true and counter == 1:
+			$Haus_Grundriss_002.visible = true
+			counter = 2
+		elif $Haus_Grundriss_002.visible == true and counter == 2:
+			$Haus_Grundriss_003.visible = true

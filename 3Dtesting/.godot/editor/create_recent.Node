@@ -1,12 +1,12 @@
+CollisionShape3D
+Area3D
+RigidBody3D
 HBoxContainer
 AnimationPlayer
 Marker3D
-CollisionShape3D
-Area3D
 Label
 Panel
 MeshInstance3D
-RigidBody3D
 StaticBody3D
 VideoStreamPlayer
 Button
