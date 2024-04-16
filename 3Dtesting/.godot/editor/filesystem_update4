@@ -11,3 +11,5 @@ res://UI/checklist.tscn
 res://scenes/CorePlayable/CorePlayable.tscn
 res://mechanics/cement-mixing/zementmischer.tscn
 res://mechanics/node_3d.tscn
+res://mechanics/cement-mixing/zementmischer.gd
+res://scripts/world.gd

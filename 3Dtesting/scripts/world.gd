@@ -45,3 +45,6 @@ func _on_säge_body_entered(body):
 func _on_concrete_bucket_body_entered(body):
 	if body.is_in_group("trowel"):
 		Global.concrete = true
+
+
+
