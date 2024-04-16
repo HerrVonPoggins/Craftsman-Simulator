@@ -1,15 +1,2 @@
 res://scenes/CorePlayable/CorePlayable.tscn
 res://assets/brick.tres
-res://UI/endscreen.tscn
-res://UI/titlescreen.tscn
-res://UI/credits.tscn
-res://mechanics/wall.tscn
-res://addons/dialogue_manager/example_balloon/example_balloon.tscn
-res://UI/transition.tscn
-res://UI/info hub.tscn
-res://mechanics/cement-mixing/zementmischer.tscn
-res://UI/checklist.tscn
-res://mechanics/node_3d.tscn
-res://scripts/world.gd
-res://UI/titlescreen.gd
-res://scripts/RayCast3D.gd

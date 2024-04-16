@@ -1,7 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://cc4eoydeq1jwv"]
+[gd_scene load_steps=8 format=3 uid="uid://cc4eoydeq1jwv"]
 
 [ext_resource type="Script" path="res://UI/TabContainer.gd" id="1_keone"]
 [ext_resource type="PackedScene" uid="uid://biv5si5cbepod" path="res://UI/checklist.tscn" id="2_leu6n"]
+[ext_resource type="Texture2D" uid="uid://dr813mjfqn5n4" path="res://assets/warning_sample.jpg" id="2_u0elq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cvin2"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+texture = ExtResource("2_u0elq")
+modulate_color = Color(1, 1, 1, 0.141176)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a48ki"]
+content_margin_left = 0.0
+texture = ExtResource("2_u0elq")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 480, 402)
+modulate_color = Color(0.560784, 0.560784, 0.560784, 0.0823529)
+
+[sub_resource type="Theme" id="Theme_n4dvj"]
+Panel/styles/panel = SubResource("StyleBoxTexture_cvin2")
+TabContainer/styles/panel = SubResource("StyleBoxTexture_a48ki")
+
+[sub_resource type="Theme" id="Theme_7en1x"]
+Panel/styles/panel = SubResource("StyleBoxTexture_cvin2")
 
 [node name="Control" type="Control"]
 process_mode = 3
@@ -37,11 +61,13 @@ offset_left = 134.0
 offset_top = 88.0
 offset_right = 1644.0
 offset_bottom = 938.0
+theme = SubResource("Theme_n4dvj")
 all_tabs_in_front = true
 drag_to_rearrange_enabled = true
 
 [node name="1" type="TabBar" parent="TabContainer"]
 layout_mode = 2
+theme = SubResource("Theme_7en1x")
 tab_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/1"]

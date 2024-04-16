@@ -1,0 +1,110 @@
+[gd_scene load_steps=7 format=3 uid="uid://biv5si5cbepod"]
+
+[ext_resource type="Script" path="res://UI/Checklist.gd" id="1_7vdvc"]
+[ext_resource type="Texture2D" uid="uid://dr813mjfqn5n4" path="res://assets/warning_sample.jpg" id="2_gqhmb"]
+[ext_resource type="FontFile" uid="uid://ccolb6uftch63" path="res://assets/fonts/AldotheApache.ttf" id="3_al7ba"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cvin2"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+texture = ExtResource("2_gqhmb")
+modulate_color = Color(1, 1, 1, 0.141176)
+
+[sub_resource type="Theme" id="Theme_2h17n"]
+Panel/styles/panel = SubResource("StyleBoxTexture_cvin2")
+
+[sub_resource type="Theme" id="Theme_klv7l"]
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0.658824, 0.572549, 0, 1)
+Label/constants/outline_size = 4
+Label/fonts/font = ExtResource("3_al7ba")
+
+[node name="checklist" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_7vdvc")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 1682.03
+offset_top = 196.877
+offset_right = 1850.03
+offset_bottom = 474.877
+theme = SubResource("Theme_2h17n")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 277.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(168, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_klv7l")
+text = "MAUER BAUEN"
+
+[node name="CheckBox" type="CheckBox" parent="Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+button_mask = 0
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="Panel/VBoxContainer"]
+layout_mode = 2
+button_mask = 0
+
+[node name="Label3" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "ZEMENT MISCHEN"
+autowrap_mode = 2
+
+[node name="Label4" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "TEST"
+
+[node name="CheckBox" type="CheckBox" parent="Panel/VBoxContainer/Label5"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.003
+anchor_top = 0.5
+anchor_right = 1.175
+anchor_bottom = 1.0
+offset_left = 24.61
+offset_top = -9.37701
+offset_right = 27.97
+offset_bottom = 3.12299
+grow_horizontal = 0
+grow_vertical = 2
+button_mask = 0
+
+[node name="Label6" type="Label" parent="Panel/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label7" type="Label" parent="Panel/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label8" type="Label" parent="Panel/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label9" type="Label" parent="Panel/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label10" type="Label" parent="Panel/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="CheckButton" type="CheckBox" parent="Panel/VBoxContainer"]
+layout_mode = 2
+action_mode = 0
+button_mask = 0

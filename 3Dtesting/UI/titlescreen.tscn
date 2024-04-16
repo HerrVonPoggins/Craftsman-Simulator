@@ -1,41 +1,32 @@
-[gd_scene load_steps=17 format=3 uid="uid://ejeh6fcxpdcs"]
+[gd_scene load_steps=13 format=3 uid="uid://ejeh6fcxpdcs"]
 
 [ext_resource type="Script" path="res://UI/titlescreen.gd" id="1_erga7"]
-[ext_resource type="Texture2D" uid="uid://ddnesutfxiy8a" path="res://assets/textures/metalPanel_blueCorner.png" id="2_ajpxx"]
 [ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://UI/transition.tscn" id="2_f7fqr"]
+[ext_resource type="Texture2D" uid="uid://dr813mjfqn5n4" path="res://assets/warning_sample.jpg" id="2_ltah8"]
 [ext_resource type="StyleBox" uid="uid://c8y6ncw8xv1vl" path="res://assets/textures/button texture.tres" id="3_dcg8v"]
-[ext_resource type="Texture2D" uid="uid://de5v31r3d4wdo" path="res://assets/textures/glassPanel_projection.png" id="3_nso2c"]
+[ext_resource type="FontFile" uid="uid://ccolb6uftch63" path="res://assets/fonts/AldotheApache.ttf" id="3_g4wl5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vp2bl"]
-texture = ExtResource("2_ajpxx")
+texture = ExtResource("2_ltah8")
+modulate_color = Color(0.0784314, 0.0784314, 0.0784314, 0.756863)
 
 [sub_resource type="Theme" id="Theme_o2eg2"]
 Panel/styles/panel = SubResource("StyleBoxTexture_vp2bl")
 
 [sub_resource type="LabelSettings" id="LabelSettings_137km"]
-font_size = 90
-font_color = Color(0, 0, 0, 1)
+font = ExtResource("3_g4wl5")
+font_size = 180
+outline_size = 100
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Theme" id="Theme_0eiux"]
 Button/colors/font_color = Color(0, 0, 0, 1)
-Button/font_sizes/font_size = 90
+Button/colors/font_hover_color = Color(1, 0.760784, 0.254902, 1)
+Button/colors/font_outline_color = Color(1, 0.760784, 0.254902, 1)
+Button/constants/outline_size = 41
+Button/font_sizes/font_size = 100
+Button/fonts/font = ExtResource("3_g4wl5")
 Button/styles/normal = ExtResource("3_dcg8v")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lb38a"]
-texture = ExtResource("3_nso2c")
-
-[sub_resource type="Theme" id="Theme_w5ugh"]
-Button/colors/font_color = Color(0, 0, 0, 1)
-Button/font_sizes/font_size = 80
-Button/styles/normal = SubResource("StyleBoxTexture_lb38a")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0tmye"]
-texture = ExtResource("3_nso2c")
-
-[sub_resource type="Theme" id="Theme_nxc8r"]
-Button/colors/font_color = Color(0, 0, 0, 1)
-Button/font_sizes/font_size = 80
-Button/styles/normal = SubResource("StyleBoxTexture_0tmye")
 
 [sub_resource type="Animation" id="Animation_axmk6"]
 length = 0.001
@@ -84,12 +75,16 @@ mouse_filter = 2
 theme = SubResource("Theme_o2eg2")
 
 [node name="Label" type="Label" parent="."]
-offset_right = 968.0
-offset_bottom = 320.0
-text = "Titlescreen"
+offset_left = 950.0
+offset_top = 66.0
+offset_right = 1918.0
+offset_bottom = 386.0
+text = "CRAFTSMAN
+SIMULATOR"
 label_settings = SubResource("LabelSettings_137km")
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="."]
 process_mode = 3
@@ -100,7 +95,9 @@ offset_right = 789.0
 offset_bottom = 542.0
 size_flags_horizontal = 4
 theme = SubResource("Theme_0eiux")
+theme_override_fonts/font = ExtResource("3_g4wl5")
 text = "start"
+metadata/_edit_use_anchors_ = true
 
 [node name="Button2" type="Button" parent="."]
 process_mode = 3
@@ -109,9 +106,10 @@ offset_left = 137.0
 offset_top = 587.0
 offset_right = 791.0
 offset_bottom = 720.0
-theme = SubResource("Theme_w5ugh")
+theme = SubResource("Theme_0eiux")
 text = "credits
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="Button3" type="Button" parent="."]
 process_mode = 3
@@ -120,8 +118,9 @@ offset_left = 136.0
 offset_top = 758.0
 offset_right = 794.0
 offset_bottom = 907.0
-theme = SubResource("Theme_nxc8r")
+theme = SubResource("Theme_0eiux")
 text = "quit"
+metadata/_edit_use_anchors_ = true
 
 [node name="transition" parent="." instance=ExtResource("2_f7fqr")]
 

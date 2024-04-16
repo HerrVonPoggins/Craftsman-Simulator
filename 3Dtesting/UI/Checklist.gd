@@ -1,17 +1,30 @@
 extends Node2D
 
-@onready var label1 = $Panel/VBoxContainer/Label
-@onready var label2 = $Panel/VBoxContainer/Label3
-@onready var label3 = $Panel/VBoxContainer/Label5
-@onready var check1 = $Panel/VBoxContainer/Label/CheckButton
-@onready var check2 = $Panel/VBoxContainer/Label3/CheckBox
-@onready var check3 = $Panel/VBoxContainer/Label5/CheckBox
-@export var check1state = false
+@onready var label1 = $Panel/VBoxContainer/HBoxContainer/Label
+@onready var label2 = $Panel/VBoxContainer/HBoxContainer2/Label
+@onready var label3 = $Panel/VBoxContainer/HBoxContainer3/Label
+@onready var label4 = $Panel/VBoxContainer/HBoxContainer4/Label
+@onready var label5 = $Panel/VBoxContainer/HBoxContainer5/Label
+
+@onready var check1 = $Panel/VBoxContainer/HBoxContainer/CheckButton
+@onready var check2 = $Panel/VBoxContainer/HBoxContainer2/CheckButton
+@onready var check3 = $Panel/VBoxContainer/HBoxContainer3/CheckButton
+@onready var check4 = $Panel/VBoxContainer/HBoxContainer4/CheckButton
+@onready var check5 = $Panel/VBoxContainer/HBoxContainer5/CheckButton
+
+
+@export var check1state = true
 @export var check2state = false
 @export var check3state = false
-@export var label1text = "Ziegel sägen"
-@export var label2text = "zement mischen mit wasser und zement"
-@export var label3text = "mauer bauen"
+@export var check4state = false
+@export var check5state = false
+
+@export var label1text = "Ziegel saegen"
+@export var label2text = "Zement mischen"
+@export var label3text = "Mauer bauen"
+@export var label4text = "Platzhalter"
+@export var label5text = "Platzhalter"
+
 
 
 #functions um häkchen und text zu bestimmen in anderen szenen
