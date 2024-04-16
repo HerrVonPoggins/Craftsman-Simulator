@@ -1,5 +1,6 @@
-res://UI/endscreen.tscn
+res://scenes/CorePlayable/CorePlayable.tscn
 res://assets/brick.tres
+res://UI/endscreen.tscn
 res://UI/titlescreen.tscn
 res://UI/credits.tscn
 res://mechanics/wall.tscn
@@ -8,5 +9,6 @@ res://UI/transition.tscn
 res://UI/info hub.tscn
 res://mechanics/cement-mixing/zementmischer.tscn
 res://UI/checklist.tscn
-res://scenes/CorePlayable/CorePlayable.tscn
 res://mechanics/node_3d.tscn
+res://scripts/world.gd
+res://UI/titlescreen.gd

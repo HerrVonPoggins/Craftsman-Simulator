@@ -8,7 +8,7 @@ func _ready():
 
 
 func _on_button_pressed():
-	$transition.change_scene("res://CorePlayable/CorePlayable.tscn")
+	$transition.change_scene("res://scenes/CorePlayable/CorePlayable.tscn")
 
 
 func _on_button_2_pressed():
