@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://c6ub5x3yfjwfq"]
 
 [ext_resource type="Script" path="res://mechanics/wall.gd" id="1_abxoj"]
-[ext_resource type="ArrayMesh" path="res://assets/brick_outline_prototyp(1).obj" id="2_cjfxh"]
+[ext_resource type="ArrayMesh" uid="uid://dfk7y7w5dvc35" path="res://assets/brick_outline_prototyp(1).obj" id="2_cjfxh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2unk7"]
 size = Vector3(2.96777, 0.711914, 1)

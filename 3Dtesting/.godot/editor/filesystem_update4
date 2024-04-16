@@ -1,17 +1,12 @@
-res://UI/titlescreen.tscn
-res://assets/brick.tres
-res://scenes/Prototypes/area.tscn
 res://UI/endscreen.tscn
+res://assets/brick.tres
+res://UI/titlescreen.tscn
 res://UI/credits.tscn
 res://mechanics/wall.tscn
 res://addons/dialogue_manager/example_balloon/example_balloon.tscn
 res://UI/transition.tscn
 res://UI/info hub.tscn
+res://mechanics/cement-mixing/zementmischer.tscn
 res://UI/checklist.tscn
 res://scenes/CorePlayable/CorePlayable.tscn
-res://mechanics/cement-mixing/zementmischer.tscn
 res://mechanics/node_3d.tscn
-res://mechanics/cement-mixing/zementmischer.gd
-res://scripts/world.gd
-res://scripts/player_signals.gd
-res://scripts/RayCast3D.gd
