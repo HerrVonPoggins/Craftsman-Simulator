@@ -1,2 +1,4 @@
 res://scenes/CorePlayable/CorePlayable.tscn
 res://assets/brick.tres
+res://UI/titlescreen.tscn
+res://scripts/world.gd
