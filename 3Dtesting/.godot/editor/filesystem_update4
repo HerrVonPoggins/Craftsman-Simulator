@@ -10,3 +10,6 @@ res://mechanics/cement-mixing/zementmischer.tscn
 res://UI/checklist.tscn
 res://scenes/CorePlayable/CorePlayable.tscn
 res://mechanics/node_3d.tscn
+res://scenes/Prototypes/PnC+Iso.tscn
+res://UI/Checklist.gd
+res://assets/textures/button texture.tres
