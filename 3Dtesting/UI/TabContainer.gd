@@ -45,6 +45,7 @@ func _process(delta):
 			$Button.visible = true
 			$Button2.visible = true
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
 func open():
 	$TabContainer.visible = true
 	isOpen = true

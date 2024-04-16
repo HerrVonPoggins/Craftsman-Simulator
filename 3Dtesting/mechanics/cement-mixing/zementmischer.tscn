@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://mechanics/cement-mixing/zementmischer.gd" id="1_lhu2x"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_280gd"]
-radius = 2.805
-
 [sub_resource type="SphereMesh" id="SphereMesh_w8w5o"]
 radius = 1.49
 height = 2.785
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_280gd"]
+radius = 2.805
 
 [sub_resource type="BoxMesh" id="BoxMesh_7yn7y"]
 
@@ -19,13 +19,13 @@ script = ExtResource("1_lhu2x")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." groups=["cement_mixer"]]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.261729, 0)
-shape = SubResource("SphereShape3D_280gd")
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.606437, 0)
 mesh = SubResource("SphereMesh_w8w5o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.261729, 0)
+shape = SubResource("SphereShape3D_280gd")
 
 [node name="Area3D" type="Area3D" parent="."]
 

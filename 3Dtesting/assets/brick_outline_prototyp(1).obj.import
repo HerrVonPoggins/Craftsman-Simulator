@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dfk7y7w5dvc35"
+path="res://.godot/imported/brick_outline_prototyp(1).obj-d74e9b0b0a07e9e9bdc8bca21c43347b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/brick_outline_prototyp(1).obj-d74e9b0b0a07e9e9bdc8bca21c43347b.mesh"]
+
+source_file="res://assets/brick_outline_prototyp(1).obj"
+dest_files=["res://.godot/imported/brick_outline_prototyp(1).obj-d74e9b0b0a07e9e9bdc8bca21c43347b.mesh", "res://.godot/imported/brick_outline_prototyp(1).obj-d74e9b0b0a07e9e9bdc8bca21c43347b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
