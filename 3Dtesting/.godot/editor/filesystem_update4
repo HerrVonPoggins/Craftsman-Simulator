@@ -12,3 +12,4 @@ res://UI/checklist.tscn
 res://mechanics/node_3d.tscn
 res://scripts/world.gd
 res://UI/titlescreen.gd
+res://scripts/RayCast3D.gd

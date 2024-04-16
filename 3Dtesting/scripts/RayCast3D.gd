@@ -19,13 +19,13 @@ func _process(delta):
 
 	#The Raycast shoots a laser for a fixed range, on collision with something we can get the object and check if it is in group "npc"
 	#if we press interact(E) while focused on the npc the mouse pointer becomes visible again and a dialogue will bes started
-	if Input.is_action_just_pressed("interagieren"):
-		if obj == null:
-			var collider = get_collider()
-			if collider != null:
-				if collider.is_in_group("npc"):
-					Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/test.dialogue"))
+	#if Input.is_action_just_pressed("interagieren"):
+		#if obj == null:
+			#var collider = get_collider()
+			#if collider != null:
+				#if collider.is_in_group("npc"):
+					#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+					#DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/test.dialogue"))
 
 				if collider.is_in_group("cement_mixer"):
 					player.emit_signal("start_mixer")
