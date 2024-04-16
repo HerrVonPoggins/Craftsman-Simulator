@@ -1,4 +1,4 @@
-[gd_resource type="ArrayMesh" load_steps=3 format=3 uid="uid://mn8gki6fgcn"]
+[gd_resource type="ArrayMesh" load_steps=3 format=3 uid="uid://lmfs5wxtkku7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rs57d"]
 resource_name = "brick_basic"

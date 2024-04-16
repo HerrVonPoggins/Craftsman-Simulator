@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/player_signals.gd" id="1_l3e41"]
 [ext_resource type="Script" path="res://scenes/Prototypes/CharacterFP+WASD.gd" id="1_qk5km"]
 [ext_resource type="Script" path="res://scripts/RayCast3D.gd" id="2_esgj4"]
-[ext_resource type="Texture2D" uid="uid://1f8wq8hkrxny" path="res://assets/Sprite-0001.png" id="3_d3pfc"]
+[ext_resource type="Texture2D" path="res://assets/Sprite-0001.png" id="3_d3pfc"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_16dfd"]
 
@@ -61,3 +61,5 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_d3pfc")
 expand_mode = 1
+
+[connection signal="concrete_bucket_pos_reached" from="." to="CharacterBody3D/Neck/Camera3D/RayCast3D" method="_on_player_concrete_bucket_pos_reached"]

@@ -47,4 +47,3 @@ func _on_concrete_bucket_body_entered(body):
 		Global.concrete = true
 
 
-

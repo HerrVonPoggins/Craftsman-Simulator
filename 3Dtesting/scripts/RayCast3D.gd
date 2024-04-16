@@ -49,3 +49,7 @@ func _process(delta):
 #bei rechtsklick wird das objekt wieder losgelassen
 	if Input.is_action_pressed("rightclick"):
 		obj = null
+
+
+func _on_player_concrete_bucket_pos_reached():
+	obj = null
