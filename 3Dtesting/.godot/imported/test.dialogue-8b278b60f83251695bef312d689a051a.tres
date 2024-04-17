@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_jxc4f"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_iuq01"]
 
 [resource]
-script = ExtResource("1_jxc4f")
+script = ExtResource("1_iuq01")
 using_states = PackedStringArray()
 titles = {
 "this_is_a_node_title": "3"
@@ -24,13 +24,25 @@ lines = {
 "next_id": "11",
 "notes": "",
 "tags": PackedStringArray(),
+"text": "Achtung einer der Ziegel muss an der Tischsäge kleiner geschnitten werden. ein Ziegel liegt bereit neben der Tischsäge.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Achtung einer der Ziegel muss an der Tischsäge kleiner geschnitten werden. ein Ziegel liegt bereit neben der Tischsäge.",
+"type": &"dialogue"
+},
+"11": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "12",
+"notes": "",
+"tags": PackedStringArray(),
 "text": "Viel Glück.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Viel Glück.",
 "type": &"dialogue"
 },
-"11": {
-"id": "11",
+"12": {
+"id": "12",
 "is_snippet": false,
 "next_id": "end",
 "type": &"goto"
@@ -66,9 +78,9 @@ lines = {
 "next_id": "6",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Füll den Zementmischer erst mit Wasser und einem Sack Mörtel.",
+"text": "Setzte die gelben Dämmblöcke in die leeren Plätze.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Füll den Zementmischer erst mit Wasser und einem Sack Mörtel.",
+"translation_key": "Setzte die gelben Dämmblöcke in die leeren Plätze.",
 "type": &"dialogue"
 },
 "6": {
@@ -78,9 +90,9 @@ lines = {
 "next_id": "7",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "als nächstes schalte den Zementmischer (E drücken) an.",
+"text": "Füll den Zementmischer erst mit Wasser und einem Sack Mörtel.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "als nächstes schalte den Zementmischer (E drücken) an.",
+"translation_key": "Füll den Zementmischer erst mit Wasser und einem Sack Mörtel.",
 "type": &"dialogue"
 },
 "7": {
@@ -90,9 +102,9 @@ lines = {
 "next_id": "8",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "nimm die Kelle um Mörtel auf die markierte stelle zu setzen.",
+"text": "als nächstes schalte den Zementmischer (E drücken) an.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "nimm die Kelle um Mörtel auf die markierte stelle zu setzen.",
+"translation_key": "als nächstes schalte den Zementmischer (E drücken) an.",
 "type": &"dialogue"
 },
 "8": {
@@ -102,9 +114,9 @@ lines = {
 "next_id": "9",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "platziere abwechselnd Mörtel und Ziegel.",
+"text": "nimm die Kelle um Mörtel auf die markierte stelle zu setzen.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "platziere abwechselnd Mörtel und Ziegel.",
+"translation_key": "nimm die Kelle um Mörtel auf die markierte stelle zu setzen.",
 "type": &"dialogue"
 },
 "9": {
@@ -114,9 +126,9 @@ lines = {
 "next_id": "10",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Achtung einer der Ziegel muss an der Tischsäge kleiner geschnitten werden. ein Ziegel liegt bereit neben der Tischsäge.",
+"text": "platziere abwechselnd Mörtel und Ziegel.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Achtung einer der Ziegel muss an der Tischsäge kleiner geschnitten werden. ein Ziegel liegt bereit neben der Tischsäge.",
+"translation_key": "platziere abwechselnd Mörtel und Ziegel.",
 "type": &"dialogue"
 }
 }
@@ -124,6 +136,7 @@ raw_text = "~ this_is_a_node_title
 
 Bauleiter: Wilkommen auf der Baustelle!
 Bauleiter: Deine erste Aufgabe wird es sein eine Wand zu Maurern.
+Bauleiter: Setzte die gelben Dämmblöcke in die leeren Plätze.
 Bauleiter: Füll den Zementmischer erst mit Wasser und einem Sack Mörtel.
 Bauleiter: als nächstes schalte den Zementmischer (E drücken) an.
 Bauleiter: nimm die Kelle um Mörtel auf die markierte stelle zu setzen.

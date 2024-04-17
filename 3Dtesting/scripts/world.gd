@@ -10,10 +10,12 @@ func _ready():
 
 
 func _process(delta):
-	if Global.wall_finished == true:
+	var played = false
+	if Global.wall_finished == true and played == false:
 		$bricks.visible = true
 		$AnimationPlayer2.play("brick_build")
-		Global.wall_finished = false
+		played = true
+		
 
 
 
@@ -68,3 +70,16 @@ func _on_area_3d_body_entered(body):
 		elif $Haus_Grundriss_002.visible == true and counter == 2:
 			$Haus_Grundriss_003.visible = true
 			Global.isolation = true
+
+
+
+
+#func _on_rigid_body_3d_4_body_entered(body):
+	#if body.is_in_group("brick"):
+		#print("yes")
+		#var joint = PinJoint2D.new()
+		#joint.node_a = self
+		#joint.node_b = body
+		#joint.anchor_a = Vector2.ZERO
+		#joint.anchor_b = Vector2.ZERO
+		#get_parent().add_child(joint)
