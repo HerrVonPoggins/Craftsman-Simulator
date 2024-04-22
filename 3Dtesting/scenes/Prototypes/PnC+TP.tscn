@@ -1,9 +1,9 @@
 [gd_scene load_steps=16 format=3 uid="uid://mn7xe2568pey"]
 
-[ext_resource type="ArrayMesh" uid="uid://dj0uc6jfc4h7w" path="res://assets/low_poly_cat.obj" id="1_occtp"]
+[ext_resource type="ArrayMesh" uid="uid://dj0uc6jfc4h7w" path="res://assets/models/low_poly_cat.obj" id="1_occtp"]
 [ext_resource type="Script" path="res://scenes/Prototypes/PnCcontrolsFP.gd" id="2_a5pbe"]
-[ext_resource type="Script" path="res://scripts/RayCast3D.gd" id="3_ytjr7"]
-[ext_resource type="Texture2D" uid="uid://1f8wq8hkrxny" path="res://assets/Sprite-0001.png" id="4_p43b4"]
+[ext_resource type="Script" path="res://mechanics/Player/RayCast3D.gd" id="3_ytjr7"]
+[ext_resource type="Texture2D" uid="uid://1f8wq8hkrxny" path="res://assets/textures/Sprite-0001.png" id="4_p43b4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rv61y"]
 sky_top_color = Color(0.196078, 0.356863, 1, 1)

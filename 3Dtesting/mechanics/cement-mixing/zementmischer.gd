@@ -1,12 +1,12 @@
 extends Node3D
 var water = false
 var concrete = false
-@onready var concrete_bucket_obj = $"../ConcreteBucketObj"
-@onready var collision_shape_3d = $"../ConcreteBucketObj/CollisionShape3D"
+@onready var concrete_bucket_obj = $"../Props/ConcreteBucketObj"
+@onready var collision_shape_3d = $"../Props/ConcreteBucketObj/CollisionShape3D"
 
 
-
-func _on_area_3d_body_entered(body):
+	#mechanic to fill water and concretebag into the mixer
+func _on_range_body_entered(body):
 	if body.is_in_group("water"):
 		body.queue_free()
 		water = true
@@ -15,9 +15,9 @@ func _on_area_3d_body_entered(body):
 		concrete = true
 
 
-func _on_node_3d_3_start_mixer():
+func _on_player_start_mixer():
 	if water == true and concrete == true:
-		#animation starten, sobald verfügbar
+		#if mixer is turned on the concrete bucket becomes visible 
 		concrete_bucket_obj.visible = true
 		concrete_bucket_obj.freeze = false
 		collision_shape_3d.disabled = false

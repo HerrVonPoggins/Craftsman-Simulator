@@ -1,9 +1,9 @@
 [gd_scene load_steps=21 format=3 uid="uid://batlm3nrtyc0b"]
 
-[ext_resource type="ArrayMesh" uid="uid://dj0uc6jfc4h7w" path="res://assets/low_poly_cat.obj" id="1_m3jn5"]
+[ext_resource type="ArrayMesh" uid="uid://dj0uc6jfc4h7w" path="res://assets/models/low_poly_cat.obj" id="1_m3jn5"]
 [ext_resource type="Script" path="res://scenes/Prototypes/Textcontrol.gd" id="2_i3r8d"]
-[ext_resource type="Script" path="res://scripts/RayCast3D.gd" id="3_s6cnq"]
-[ext_resource type="Texture2D" uid="uid://1f8wq8hkrxny" path="res://assets/Sprite-0001.png" id="4_2818u"]
+[ext_resource type="Script" path="res://mechanics/Player/RayCast3D.gd" id="3_s6cnq"]
+[ext_resource type="Texture2D" uid="uid://1f8wq8hkrxny" path="res://assets/textures/Sprite-0001.png" id="4_2818u"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_6plb0"]
 size = Vector2(30, 30)

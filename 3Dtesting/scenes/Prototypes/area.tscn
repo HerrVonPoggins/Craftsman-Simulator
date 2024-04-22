@@ -1,12 +1,12 @@
 [gd_scene load_steps=27 format=3 uid="uid://b46vxk3egej7y"]
 
-[ext_resource type="Script" path="res://scripts/world.gd" id="1_bfy3s"]
-[ext_resource type="Script" path="res://scripts/RayCast3D.gd" id="2_8i7hf"]
-[ext_resource type="Script" path="res://scenes/Prototypes/CharacterFP+WASD.gd" id="3_y7358"]
-[ext_resource type="Texture2D" uid="uid://1f8wq8hkrxny" path="res://assets/Sprite-0001.png" id="4_24kx7"]
-[ext_resource type="PackedScene" uid="uid://c6ub5x3yfjwfq" path="res://mechanics/wall.tscn" id="5_u1eic"]
-[ext_resource type="ArrayMesh" uid="uid://dj0uc6jfc4h7w" path="res://assets/low_poly_cat.obj" id="6_vt052"]
-[ext_resource type="Texture2D" uid="uid://c51l6bli4rw12" path="res://assets/icon.svg" id="7_k7xv8"]
+[ext_resource type="Script" path="res://scenes/CorePlayable/world.gd" id="1_bfy3s"]
+[ext_resource type="Script" path="res://mechanics/Player/RayCast3D.gd" id="2_8i7hf"]
+[ext_resource type="Script" path="res://mechanics/Player/CharacterFP+WASD.gd" id="3_y7358"]
+[ext_resource type="Texture2D" uid="uid://1f8wq8hkrxny" path="res://assets/textures/Sprite-0001.png" id="4_24kx7"]
+[ext_resource type="PackedScene" uid="uid://c6ub5x3yfjwfq" path="res://mechanics/build_wall/wall.tscn" id="5_u1eic"]
+[ext_resource type="ArrayMesh" uid="uid://dj0uc6jfc4h7w" path="res://assets/models/low_poly_cat.obj" id="6_vt052"]
+[ext_resource type="Texture2D" uid="uid://c51l6bli4rw12" path="res://assets/textures/icon.svg" id="7_k7xv8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qb8bt"]
 sky_top_color = Color(0.196078, 0.356863, 1, 1)

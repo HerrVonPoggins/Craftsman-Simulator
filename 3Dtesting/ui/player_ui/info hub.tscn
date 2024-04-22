@@ -1,0 +1,101 @@
+[gd_scene load_steps=8 format=3 uid="uid://cc4eoydeq1jwv"]
+
+[ext_resource type="Script" path="res://ui/player_ui/TabContainer.gd" id="1_pp8q6"]
+[ext_resource type="PackedScene" uid="uid://biv5si5cbepod" path="res://ui/player_ui/checklist.tscn" id="2_leu6n"]
+[ext_resource type="Texture2D" uid="uid://dr813mjfqn5n4" path="res://assets/textures/warning_sample.jpg" id="2_xxoj5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cvin2"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+texture = ExtResource("2_xxoj5")
+modulate_color = Color(1, 1, 1, 0.4)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a48ki"]
+content_margin_left = 0.0
+texture = ExtResource("2_xxoj5")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 480, 402)
+modulate_color = Color(0.560784, 0.560784, 0.560784, 0.278431)
+
+[sub_resource type="Theme" id="Theme_n4dvj"]
+Panel/styles/panel = SubResource("StyleBoxTexture_cvin2")
+TabContainer/styles/panel = SubResource("StyleBoxTexture_a48ki")
+
+[sub_resource type="Theme" id="Theme_7en1x"]
+Panel/styles/panel = SubResource("StyleBoxTexture_cvin2")
+
+[node name="Control" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_pp8q6")
+
+[node name="ButtonInfoHub" type="Button" parent="."]
+process_mode = 3
+visible = false
+layout_mode = 0
+offset_left = 1481.0
+offset_top = 52.0
+offset_right = 1629.0
+offset_bottom = 83.0
+text = "Infohub schließen"
+
+[node name="ButtonChecklist" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1695.0
+offset_top = 51.0
+offset_right = 1863.0
+offset_bottom = 82.0
+text = "Checkliste "
+
+[node name="TabContainer" type="TabContainer" parent="."]
+process_mode = 3
+layout_mode = 0
+offset_left = 134.0
+offset_top = 88.0
+offset_right = 1644.0
+offset_bottom = 938.0
+theme = SubResource("Theme_n4dvj")
+all_tabs_in_front = true
+drag_to_rearrange_enabled = true
+
+[node name="1" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+theme = SubResource("Theme_7en1x")
+tab_alignment = 1
+
+[node name="MaurerText" type="RichTextLabel" parent="TabContainer/1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="2" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+tab_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="TabContainer/2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.001
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.172
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="checklist" parent="." instance=ExtResource("2_leu6n")]
+position = Vector2(20, -76)
+
+[connection signal="pressed" from="ButtonInfoHub" to="." method="_on_button_info_hub_pressed"]
+[connection signal="pressed" from="ButtonChecklist" to="." method="_on_button_checklist_pressed"]

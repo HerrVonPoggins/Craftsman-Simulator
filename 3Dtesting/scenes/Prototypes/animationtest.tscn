@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://b5xc761o388md"]
 
-[ext_resource type="PackedScene" uid="uid://ceopf5xvnxi7e" path="res://assets/Walking.fbx" id="1_0sqbp"]
+[ext_resource type="PackedScene" uid="uid://ceopf5xvnxi7e" path="res://assets/models/Walking.fbx" id="1_0sqbp"]
 [ext_resource type="Script" path="res://scenes/Prototypes/animationtest.gd" id="1_b2uue"]
 
 
