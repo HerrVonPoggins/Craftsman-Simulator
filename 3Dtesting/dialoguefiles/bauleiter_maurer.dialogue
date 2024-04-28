@@ -1,0 +1,32 @@
+~ this_is_a_node_title
+if Global.current_scene == 1:
+	Bauleiter: Wilkommen auf der Baustelle!
+	Bauleiter: Deine erste Aufgabe wird es sein eine Wand zu Maurern.
+	Bauleiter: Setzte die gelben Dämmblöcke in die leeren Plätze.
+	Bauleiter: Füll den Zementmischer erst mit Wasser und einem Sack Mörtel.
+	Bauleiter: als nächstes schalte den Zementmischer (E drücken) an.
+	Bauleiter: nimm die Kelle um Mörtel aus dem Eimer auf die markierte stelle zu setzen.
+	Bauleiter: du musst die Kelle jedes mal durch den Eimer ziehen und dann auf den Ziegeln entlang ziehen.
+	Bauleiter: platziere abwechselnd Mörtel und Ziegel.
+	Bauleiter: Achtung einer der Ziegel muss an der Tischsäge kleiner geschnitten werden. ein Ziegel liegt bereit neben der Tischsäge.
+	Bauleiter: Sprich vorher noch mit dem Maurer er gibt dir eine Zusammenfassung über seinen Beruf.
+	Bauleiter: Falls du genaueres wissen willst ließ in deinem Handbuch (ESC) nach.
+	Bauleiter: Viel Glück.
+
+if Global.current_scene == 2:
+	Bauleiter: Wilkommen auf der Baustelle!
+	Bauleiter: Deine erste Aufgabe wird es sein eine Ständerwand zu bauen.
+	Bauleiter: Du musst die Profile mit Dichtband bekleben.
+	Bauleiter: Danach bringst du sie an Boden/Decke und den Wänden an.
+	Bauleiter: als nächstes setzt du in den markierten slots die zwischen Profile.
+	Bauleiter: dann kannst du eine Seite mit Gipskartonplatten beplanken.
+	Bauleiter: nun wird das Dämmmaterial eingelegt um dann die andere Seite zu verplanken.
+	Bauleiter: jetzt hast du den größten Teil hinter dir
+	Bauleiter: verspachtle die Fugen.
+	Bauleiter: dann verspachtle den Rest der Wand. 
+	Bauleiter: Sprich noch vorher mit dem Stuckateur er gibt dir eine Zusammenfassung über seinen Beruf.
+	Bauleiter: Falls du genaueres wissen willst ließ in deinem Handbuch (ESC) nach.
+	Bauleiter: Viel Glück.
+
+
+=> END

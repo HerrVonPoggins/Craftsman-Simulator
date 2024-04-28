@@ -1,0 +1,144 @@
+[gd_scene load_steps=13 format=3 uid="uid://ejeh6fcxpdcs"]
+
+[ext_resource type="Script" path="res://ui/screens/titlescreen.gd" id="1_erga7"]
+[ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://ui/player_ui/transition.tscn" id="2_f7fqr"]
+[ext_resource type="Texture2D" uid="uid://dr813mjfqn5n4" path="res://assets/textures/warning_sample.jpg" id="2_ltah8"]
+[ext_resource type="StyleBox" uid="uid://c8y6ncw8xv1vl" path="res://assets/textures/button texture.tres" id="3_dcg8v"]
+[ext_resource type="FontFile" uid="uid://ccolb6uftch63" path="res://assets/fonts/AldotheApache.ttf" id="3_g4wl5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vp2bl"]
+texture = ExtResource("2_ltah8")
+modulate_color = Color(0.0784314, 0.0784314, 0.0784314, 0.756863)
+
+[sub_resource type="Theme" id="Theme_o2eg2"]
+Panel/styles/panel = SubResource("StyleBoxTexture_vp2bl")
+
+[sub_resource type="LabelSettings" id="LabelSettings_137km"]
+font = ExtResource("3_g4wl5")
+font_size = 180
+outline_size = 100
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_0eiux"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(1, 0.760784, 0.254902, 1)
+Button/colors/font_outline_color = Color(1, 0.760784, 0.254902, 1)
+Button/constants/outline_size = 41
+Button/font_sizes/font_size = 100
+Button/fonts/font = ExtResource("3_g4wl5")
+Button/styles/normal = ExtResource("3_dcg8v")
+
+[sub_resource type="Animation" id="Animation_axmk6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_23qvj"]
+resource_name = "fade_in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_byatd"]
+_data = {
+"RESET": SubResource("Animation_axmk6"),
+"fade_in": SubResource("Animation_23qvj")
+}
+
+[node name="Titlescreen" type="Node2D"]
+script = ExtResource("1_erga7")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+theme = SubResource("Theme_o2eg2")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 950.0
+offset_top = 66.0
+offset_right = 1918.0
+offset_bottom = 386.0
+text = "CRAFTSMAN
+SIMULATOR"
+label_settings = SubResource("LabelSettings_137km")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonStart" type="Button" parent="."]
+process_mode = 3
+custom_minimum_size = Vector2(500, 0)
+offset_left = 135.0
+offset_top = 418.0
+offset_right = 789.0
+offset_bottom = 542.0
+size_flags_horizontal = 4
+theme = SubResource("Theme_0eiux")
+theme_override_fonts/font = ExtResource("3_g4wl5")
+text = "start"
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonCredits" type="Button" parent="."]
+process_mode = 3
+custom_minimum_size = Vector2(500, 0)
+offset_left = 137.0
+offset_top = 587.0
+offset_right = 791.0
+offset_bottom = 720.0
+theme = SubResource("Theme_0eiux")
+text = "credits
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonQuit" type="Button" parent="."]
+process_mode = 3
+custom_minimum_size = Vector2(500, 0)
+offset_left = 136.0
+offset_top = 758.0
+offset_right = 794.0
+offset_bottom = 907.0
+theme = SubResource("Theme_0eiux")
+text = "quit"
+metadata/_edit_use_anchors_ = true
+
+[node name="Transition" parent="." instance=ExtResource("2_f7fqr")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_byatd")
+}
+
+[node name="ColorRect" type="ColorRect" parent="AnimationPlayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="ButtonStart" to="." method="_on_button_start_pressed"]
+[connection signal="pressed" from="ButtonCredits" to="." method="_on_button_credits_pressed"]
+[connection signal="pressed" from="ButtonQuit" to="." method="_on_button_quit_pressed"]

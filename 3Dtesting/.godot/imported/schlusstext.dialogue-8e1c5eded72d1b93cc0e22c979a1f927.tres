@@ -1,0 +1,96 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_n016g"]
+
+[resource]
+script = ExtResource("1_n016g")
+using_states = PackedStringArray()
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray("Bauleiter")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": &"title"
+},
+"3": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Gute Arbeit!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Gute Arbeit!",
+"type": &"dialogue"
+},
+"4": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Nun weißt du was der beruf des Maurers beinhaltet.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nun weißt du was der beruf des Maurers beinhaltet.",
+"type": &"dialogue"
+},
+"5": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Melde dich jetzt bei deiner Lehrkraft und hole dir das Quizz.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Melde dich jetzt bei deiner Lehrkraft und hole dir das Quizz.",
+"type": &"dialogue"
+},
+"6": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Falls dir irgendwelche Fragen schwerfallen ließ im Handbuch (ESC) nach.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Falls dir irgendwelche Fragen schwerfallen ließ im Handbuch (ESC) nach.",
+"type": &"dialogue"
+},
+"7": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "9",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Wenn du Fertig bist gib das Quizz ab.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wenn du Fertig bist gib das Quizz ab.",
+"type": &"dialogue"
+},
+"9": {
+"id": "9",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+}
+}
+raw_text = "~ this_is_a_node_title
+
+Bauleiter: Gute Arbeit!
+Bauleiter: Nun weißt du was der beruf des Maurers beinhaltet.
+Bauleiter: Melde dich jetzt bei deiner Lehrkraft und hole dir das Quizz.
+Bauleiter: Falls dir irgendwelche Fragen schwerfallen ließ im Handbuch (ESC) nach.
+Bauleiter: Wenn du Fertig bist gib das Quizz ab.
+
+=> END"
+metadata/dialogue_manager_version = "2.38.0"
