@@ -132,7 +132,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_yjdu6")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1se38"]
-size = Vector3(1, 0.96875, 1)
+size = Vector3(0.523621, 0.96875, 0.705444)
 
 [node name="Mixer" type="Node3D"]
 script = ExtResource("1_brxoa")
@@ -150,7 +150,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.521506, 0)
 mesh = SubResource("ArrayMesh_7xlgq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Range" groups=["cement_mixer"]]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, 8.20817, 0)
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -0.493927, 8.20817, -0.114441)
 shape = SubResource("BoxShape3D_1se38")
 
 [connection signal="body_entered" from="Range" to="." method="_on_range_body_entered"]

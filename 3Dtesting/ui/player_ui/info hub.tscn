@@ -77,6 +77,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+text = "
+Maurer:
+Der Maurer baut die Rohbauten für Wohn- und Geschäftsgebäude. Sie Gießen das Fundament, mauern die Wände und montieren Geschossdecken/Fertigteile. Sie verwenden unteranderem Betonschalungen."
 
 [node name="2" type="TabBar" parent="TabContainer"]
 visible = false

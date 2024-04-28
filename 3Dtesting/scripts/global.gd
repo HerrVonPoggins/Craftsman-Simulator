@@ -8,5 +8,5 @@ var wall_finished = false
 var concrete_mixed = false
 var brick_sawed = false
 var isolation = false
-
+var current_scene = 0
 
