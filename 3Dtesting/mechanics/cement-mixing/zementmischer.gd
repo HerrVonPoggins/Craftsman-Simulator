@@ -3,7 +3,14 @@ var water = false
 var concrete = false
 @onready var concrete_bucket_obj = $"../Props/ConcreteBucketObj"
 @onready var collision_shape_3d = $"../Props/ConcreteBucketObj/CollisionShape3D"
+@onready var sand_value = $SandValue
+@onready var water_value = $WaterValue
+@onready var cement_value = $CementValue
 
+func _ready():
+	cement_value.visible = false
+	water_value.visible = false
+	sand_value.visible = false
 
 	#mechanic to fill water and concretebag into the mixer
 func _on_range_body_entered(body):
