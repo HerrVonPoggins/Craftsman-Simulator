@@ -1,6 +1,9 @@
 extends Node3D
 var water = false
 var concrete = false
+var water_filled = false
+var cement_filled = false
+
 @onready var concrete_bucket_obj = $"../Props/ConcreteBucketObj"
 @onready var collision_shape_3d = $"../Props/ConcreteBucketObj/CollisionShape3D"
 @onready var sand_value = $SandValue
@@ -12,18 +15,31 @@ func _ready():
 	water_value.visible = false
 	sand_value.visible = false
 
+func _process(delta):
+	if water == true:
+		if Input.is_action_pressed("leftclick"):
+			water_value.value += 1.5
+	if water_value.value >= 100:
+		water_value.value = 100
+		water_filled = true
+	if concrete == true:
+		if Input.is_action_pressed("leftclick"):
+			cement_value.value += 1.5
+	if cement_value.value >= 100:
+		cement_value.value = 100
+		cement_filled = true
 	#mechanic to fill water and concretebag into the mixer
 func _on_range_body_entered(body):
 	if body.is_in_group("water"):
-		body.queue_free()
+		water_value.visible = true
 		water = true
 	if body.is_in_group("concrete"):
-		body.queue_free()
+		cement_value.visible = true
 		concrete = true
 
 
 func _on_player_start_mixer():
-	if water == true and concrete == true:
+	if water_filled == true and cement_filled == true:
 		#if mixer is turned on the concrete bucket becomes visible 
 		concrete_bucket_obj.visible = true
 		concrete_bucket_obj.freeze = false
@@ -31,3 +47,12 @@ func _on_player_start_mixer():
 		water = false
 		concrete = false
 		Global.concrete_mixed = true
+
+
+func _on_range_body_exited(body):
+	if body.is_in_group("water"):
+		water_value.visible = false
+		water = false
+	if body.is_in_group("concrete"):
+		cement_value.visible = false
+		concrete = false

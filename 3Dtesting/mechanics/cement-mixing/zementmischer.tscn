@@ -199,3 +199,4 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_lkv1d")
 show_percentage = false
 
 [connection signal="body_entered" from="Range" to="." method="_on_range_body_entered"]
+[connection signal="body_exited" from="Range" to="." method="_on_range_body_exited"]
