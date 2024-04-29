@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://0he1lqnqyqvf"]
+[gd_scene load_steps=16 format=3 uid="uid://0he1lqnqyqvf"]
 
 [ext_resource type="Script" path="res://mechanics/cement-mixing/zementmischer.gd" id="1_brxoa"]
 
@@ -134,6 +134,24 @@ shadow_mesh = SubResource("ArrayMesh_yjdu6")
 [sub_resource type="BoxShape3D" id="BoxShape3D_1se38"]
 size = Vector3(0.523621, 0.96875, 0.705444)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kapd3"]
+bg_color = Color(0.968627, 0.929412, 0.682353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sxwvi"]
+bg_color = Color(0.827451, 0.686275, 0.176471, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bld68"]
+bg_color = Color(0.49016, 0.952266, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yjjnm"]
+bg_color = Color(0, 0.772549, 0.980392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7pbq"]
+bg_color = Color(0.670588, 0.670588, 0.670588, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lkv1d"]
+bg_color = Color(0.466667, 0.466667, 0.466667, 1)
+
 [node name="Mixer" type="Node3D"]
 script = ExtResource("1_brxoa")
 
@@ -153,4 +171,32 @@ mesh = SubResource("ArrayMesh_7xlgq")
 transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -0.493927, 8.20817, -0.114441)
 shape = SubResource("BoxShape3D_1se38")
 
+[node name="SandValue" type="ProgressBar" parent="."]
+offset_left = 869.0
+offset_top = 95.0
+offset_right = 1792.0
+offset_bottom = 150.0
+theme_override_styles/background = SubResource("StyleBoxFlat_kapd3")
+theme_override_styles/fill = SubResource("StyleBoxFlat_sxwvi")
+show_percentage = false
+
+[node name="WaterValue" type="ProgressBar" parent="."]
+offset_left = 553.0
+offset_top = 95.0
+offset_right = 870.0
+offset_bottom = 150.0
+theme_override_styles/background = SubResource("StyleBoxFlat_bld68")
+theme_override_styles/fill = SubResource("StyleBoxFlat_yjjnm")
+show_percentage = false
+
+[node name="CementValue" type="ProgressBar" parent="."]
+offset_left = 154.0
+offset_top = 95.0
+offset_right = 553.0
+offset_bottom = 150.0
+theme_override_styles/background = SubResource("StyleBoxFlat_q7pbq")
+theme_override_styles/fill = SubResource("StyleBoxFlat_lkv1d")
+show_percentage = false
+
 [connection signal="body_entered" from="Range" to="." method="_on_range_body_entered"]
+[connection signal="body_exited" from="Range" to="." method="_on_range_body_exited"]
