@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cc4eoydeq1jwv"]
 
 [ext_resource type="Script" path="res://ui/player_ui/TabContainer.gd" id="1_pp8q6"]
-[ext_resource type="PackedScene" uid="uid://biv5si5cbepod" path="res://UI/player_ui/checklist.tscn" id="2_leu6n"]
+[ext_resource type="PackedScene" uid="uid://biv5si5cbepod" path="res://ui/player_ui/checklist.tscn" id="2_leu6n"]
 [ext_resource type="Texture2D" uid="uid://dr813mjfqn5n4" path="res://assets/textures/warning_sample.jpg" id="2_xxoj5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cvin2"]
