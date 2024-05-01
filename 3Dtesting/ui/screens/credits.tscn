@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://crp5o34epeoac"]
 
 [ext_resource type="Script" path="res://ui/screens/credits.gd" id="1_uxtxq"]
-[ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://ui/player_ui/transition.tscn" id="2_k2vxt"]
+[ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://UI/player_ui/transition.tscn" id="2_k2vxt"]
 
 [sub_resource type="Animation" id="Animation_axmk6"]
 length = 0.001
