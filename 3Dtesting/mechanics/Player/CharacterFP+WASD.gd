@@ -3,8 +3,7 @@ extends CharacterBody3D
 
 var SPEED = 5.0
 const JUMP_VELOCITY = 4.5
-var is_up = false
-var is_crouching = false
+
 	#Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -30,7 +29,6 @@ func _unhandled_input(event):
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(60))
 		player_body.rotate_y(-event.relative.x * 0.01)
 func _physics_process(delta):
-
 	#gravity
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -42,22 +40,7 @@ func _physics_process(delta):
 		SPEED = 5
 
 
-	if Input.is_action_pressed("crouch") and is_crouching == false:
-		$"../Arm".play("crouch")
-		is_crouching = true
-	if not Input.is_action_pressed("crouch") and is_crouching == true:
-		$"../Arm".play_backwards("crouch")
-		is_crouching = false
 
-
-
-	if Input.is_action_pressed("leftclick") and is_up == false:
-		$"../Arm".play("arm_movement")
-		is_up = true
-	if not Input.is_action_pressed("leftclick") and is_up == true:
-		$"../Arm".play_backwards("arm_movement")
-		is_up = false
-		
 	# jump
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY

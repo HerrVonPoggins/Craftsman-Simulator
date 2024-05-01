@@ -3,14 +3,14 @@ extends RayCast3D
 var last = Vector3.ZERO
 var obj = null
 
-@onready var point = $"../MeshInstance3D2/Hold"
+@onready var point = $"../Hold"
 @onready var player = $"../../../.."
 
 #The Raycast shoots a laser for a fixed range, on collision with something we can get the object  and check if it is in group "grab"
 #a object in group "grab" will then fixed on the hold point of the character until we release it.
 func _process(delta):
 
-	if Input.is_action_just_pressed("interagieren"):
+	if Input.is_action_just_pressed("leftclick"):
 		if obj == null:
 			var collider = get_collider()
 			if collider != null:
@@ -39,7 +39,6 @@ func _process(delta):
 		obj.position = point.global_position
 		if obj.is_class("RigidBody3D"):
 			obj.linear_velocity = Vector3.ZERO
-			obj.look_at($"../VisionCenter".global_position)
 
 
 	else:

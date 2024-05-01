@@ -1,11 +1,11 @@
-Node3D
-AnimationPlayer
-MeshInstance3D
 RigidBody3D
+Node3D
 CollisionShape3D
 Area3D
+MeshInstance3D
 CPUParticles3D
 HBoxContainer
+AnimationPlayer
 Marker3D
 Label
 Panel

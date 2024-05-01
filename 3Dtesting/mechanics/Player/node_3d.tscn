@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cxv4g3lrd0p6b"]
+[gd_scene load_steps=9 format=3 uid="uid://cxv4g3lrd0p6b"]
 
 [ext_resource type="Script" path="res://mechanics/Player/player_signals.gd" id="1_l3e41"]
 [ext_resource type="Script" path="res://mechanics/Player/CharacterFP+WASD.gd" id="2_ep0ko"]
@@ -12,76 +12,6 @@
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_d8pds"]
 points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607, 0.498884, 0.169713, 0.559144, 0.464172, 0.231051, -0.803591, 0.320455, 0.40741, 0.651043, -0.243523, -0.482789, 0.594843, 0.0822132, -0.362868, -0.682312, 0.289697, 0.469044, -0.654529, -0.0662713, -0.127444, 0.842701, -0.338103, -0.393435, -0.683942, -0.244717, 0.438255, 0.623309, 0.200849, 0.0841477, 0.977454, 0.114795, -0.0682023, -0.976458, -0.12927, 0.20055, -0.563129, -0.451454, -0.185527, 0.595453, -0.453475, -0.273363, 0.592268, 0.407754, -0.00693649, -0.476823, 0.49966, 0.375821, -0.588614, 0.316955, 0.111579, 0.563059, -0.481177, -0.41725, 0.527866, -0.270497, -0.484546, -0.596972, -0.0665097, -0.279747, 0.908561, 0.0533361, -0.250197, -0.880712, 0.205319, 0.263647, -0.902771, -0.127394, 0.293368, 0.871526, -0.157196, 0.373412, -0.526319, -0.328246, 0.499663, 0.476641, -0.00688856, 0.0531056, 0.875001, 0.324703, -0.154543, -0.590854, 0.465879, -0.0972799, -0.782358, -0.398188, -0.387649, -0.498171, 0.31565, -0.30068, -0.587995, -0.388901)
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_i147v"]
-top_radius = 0.1
-bottom_radius = 0.2
-
-[sub_resource type="Animation" id="Animation_e3mxv"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CharacterBody3D/Neck/Camera3D/MeshInstance3D2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.403591, 2.15338, 0.631944)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CharacterBody3D/Neck/Camera3D:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.106806, 0, 0.181925)]
-}
-
-[sub_resource type="Animation" id="Animation_whdx4"]
-resource_name = "arm_movement"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CharacterBody3D/Neck/Camera3D/MeshInstance3D2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0.561653, -0.484124, -0.298909), Vector3(0.561653, -0.484124, -2.58895)]
-}
-
-[sub_resource type="Animation" id="Animation_c1dx2"]
-resource_name = "crouch"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CharacterBody3D/Neck/Camera3D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0.106806, 0, 0.181925), Vector3(0.106806, -1.50472, 0.181925)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ojcbm"]
-_data = {
-"RESET": SubResource("Animation_e3mxv"),
-"arm_movement": SubResource("Animation_whdx4"),
-"crouch": SubResource("Animation_c1dx2")
-}
 
 [node name="Player" type="Node3D"]
 script = ExtResource("1_l3e41")
@@ -108,12 +38,15 @@ shape = SubResource("ConvexPolygonShape3D_d8pds")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0665251, 4.22224, -0.18428)
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Neck"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.106806, 0, 0.181925)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.181925)
 
 [node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/Neck/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00154877, 0)
 target_position = Vector3(0, 0, -10)
 script = ExtResource("2_esgj4")
+
+[node name="Hold" type="Node3D" parent="CharacterBody3D/Neck/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.51267)
 
 [node name="TextureRect" type="TextureRect" parent="CharacterBody3D/Neck/Camera3D"]
 anchors_preset = 8
@@ -133,21 +66,5 @@ expand_mode = 1
 [node name="Arrowhead" parent="CharacterBody3D/Neck/Camera3D" instance=ExtResource("5_bmhdd")]
 transform = Transform3D(0.0364169, 0, -0.999337, 0, 1, 0, 0.999336, 0, 0.036417, -0.129629, 0.813902, -1.86011)
 visible = false
-
-[node name="VisionCenter" type="Node3D" parent="CharacterBody3D/Neck/Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.48176)
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="CharacterBody3D/Neck/Camera3D"]
-transform = Transform3D(0.988371, -0.0916541, -0.121337, 0.15075, 0.485955, 0.860885, -0.0199392, -0.869165, 0.49412, -0.403591, 2.15338, 0.631944)
-mesh = SubResource("CylinderMesh_i147v")
-skeleton = NodePath("../../..")
-
-[node name="Hold" type="Node3D" parent="CharacterBody3D/Neck/Camera3D/MeshInstance3D2"]
-transform = Transform3D(0.991245, 0.0890703, 0.0974707, 0.0414878, 0.490709, -0.870335, -0.125351, 0.866759, 0.482717, 0.0348632, 1.00802, 0.05302)
-
-[node name="Arm" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_ojcbm")
-}
 
 [connection signal="concrete_bucket_pos_reached" from="." to="CharacterBody3D/Neck/Camera3D/RayCast3D" method="_on_player_concrete_bucket_pos_reached"]

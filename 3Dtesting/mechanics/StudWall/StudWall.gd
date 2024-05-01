@@ -2,30 +2,22 @@ extends Node3D
 
 var counter = 0
 # Called when the node enters the scene tree for the first time.
-
-
 func _ready():
 	counter = 37
-	#pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):#
+func _process(delta):
 	pass
-	#if $Spachtel/CollisionShape3D.visible == true and $Spachtel33.visible == true:
-		#pass #die Fugen sichtbar machen
 
 
 func _on_area_3d_body_entered(body):
-
-
 	if body.is_in_group("profile_long"):
 		body.queue_free()
 		if $Profile.visible == false:
 			$Profile.visible = true
 		else:
 			$Profile2.visible = true
-
 
 
 	if body.is_in_group("profile_short") and $Profile2.visible == true:
@@ -209,9 +201,6 @@ func _on_area_3d_body_entered(body):
 			$Isolation6.visible = true
 			counter = 25
 
-	if body.is_in_group("spatula"):
-		$FinishedSurface.visible = true
-		$FinishedSurface2.visible = true
 
 func _on_spachtel_body_entered(body):
 	if body.is_in_group("trowel") and counter == 37 and Input.is_action_pressed("leftclick"):
