@@ -10,4 +10,4 @@ var brick_sawed = false
 var isolation = false
 var current_scene = 0
 
-var trowel_picked
+var trowel_picked = false

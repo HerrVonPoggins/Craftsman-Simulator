@@ -16,6 +16,8 @@ func _process(delta):
 			if collider != null:
 				if collider.is_in_group("grab"):
 					obj = collider
+				if collider.is_in_group("trowel"):
+					Global.trowel_picked = true
 
 	#The Raycast shoots a laser for a fixed range, on collision with something we can get the object and check if it is in group "npc"
 	#if we press interact(E) while focused on the npc the mouse pointer becomes visible again and a dialogue will bes started

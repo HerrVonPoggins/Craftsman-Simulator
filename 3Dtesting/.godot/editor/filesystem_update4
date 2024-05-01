@@ -4,3 +4,5 @@ res://mechanics/Player/node_3d.tscn
 res://mechanics/cement-mixing/zementmischer.tscn
 res://UI/Inventory/inventory.tscn
 res://scripts/global.gd
+res://mechanics/Player/RayCast3D.gd
+res://UI/Inventory/inventory.gd
