@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://djw5gwv30bvm1"]
+[gd_scene load_steps=2 format=3 uid="uid://djw5gwv30bvm1"]
+
+[ext_resource type="Script" path="res://UI/Inventory/inventory.gd" id="1_2k2bt"]
 
 [node name="Inventory" type="Control"]
 layout_mode = 3
@@ -7,3 +9,51 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2k2bt")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 507.0
+offset_right = 1386.0
+offset_bottom = 585.0
+
+[node name="TrowelButton" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+
+[node name="button2" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+
+[node name="TrowelButton3" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+
+[node name="TrowelButton4" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+
+[node name="TrowelButton5" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+
+[node name="TrowelButton6" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+
+[node name="TrowelButton7" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+
+[node name="TrowelButton8" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+
+[node name="TrowelButton9" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+
+[node name="TrowelButton10" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
