@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://tbludy7knp6j"]
+[gd_scene load_steps=43 format=3 uid="uid://tbludy7knp6j"]
 
 [ext_resource type="Texture2D" uid="uid://k0fmfgl0bft6" path="res://assets/models/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="1_4as53"]
 [ext_resource type="Script" path="res://scenes/StuckateurScene/Stuckateur.gd" id="1_daabn"]
@@ -259,6 +259,15 @@ shadow_mesh = SubResource("ArrayMesh_l3lw7")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_mbitb"]
 points = PackedVector3Array(-0.00757949, 0.03907, -0.0924542, 0.0554639, 0.00468579, 0.0680758, -0.0534308, 0.00468579, 0.0680758, 0.00961259, 0.841765, -0.138339, 0.0899003, -0.0240672, -0.0809831, -0.0878672, 0.00468579, -0.0867186, -0.0190293, 0.790061, -0.144096, -0.0591905, -0.0240672, 0.0566047, -0.00682469, 0.709756, -0.145748, -0.0878672, -0.0240672, -0.0695119, -0.00757949, 0.830332, -0.132603, 0.0554639, -0.0240672, 0.0680758, 0.0153375, 0.818729, -0.149832, 0.084158, 0.00468579, -0.0523053, -0.0878672, 0.00468579, -0.0695119, 0.0153375, 0.818729, -0.138339, -0.0591905, 0.00468579, 0.0566047, -0.0190293, 0.78443, -0.132603, 0.0899003, 0.00468579, -0.0809831, 0.0726908, 0.00468579, -0.000750892, 0.00961259, 0.830332, -0.132603, -0.0133044, 0.818729, -0.132603, -0.0843125, -0.00663764, -0.085, -0.00712741, 0.813734, -0.149686, -0.0763826, 0.00468579, -0.0179576, 0.0153375, 0.807381, -0.132603, -0.0133044, 0.830332, -0.144096, 0.0726908, -0.0240672, -0.000750892, 0.00376092, 0.819786, -0.151281, -0.00757949, 0.841765, -0.138339, 0.0612236, 0.00468579, 0.0451336, 0.084158, -0.0240672, -0.0523053)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kgaui"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_op6t6"]
+albedo_color = Color(0.827451, 0.301961, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5gg8h"]
+albedo_color = Color(0, 0, 0, 1)
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_daabn")
@@ -724,11 +733,26 @@ shape = SubResource("ConvexPolygonShape3D_4xeso")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.11849, 0.512237, 2.12812)
 
 [node name="mörtelkelle" type="MeshInstance3D" parent="prop/Trowel"]
-transform = Transform3D(0.0713155, 5.16958e-08, 4.94639, -0.299891, 0.572461, 0.0116202, -3.00225, -0.0571824, 0.116336, 0, 0, 0)
+transform = Transform3D(-3.01803, 0, -4.32548e-07, 0, 0.57531, 0, 2.63845e-07, 0, -4.94777, 0, 0, 0)
 mesh = SubResource("ArrayMesh_1evph")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="prop/Trowel"]
+transform = Transform3D(-3.01803, 0, -4.32548e-07, 0, 0.57531, 0, 2.63845e-07, 0, -4.94777, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_mbitb")
+
+[node name="Spatula" type="RigidBody3D" parent="prop" groups=["grab", "spatula"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.92549, 0.512237, 2.12812)
+
+[node name="mörtelkelle" type="MeshInstance3D" parent="prop/Spatula"]
+transform = Transform3D(0.0713155, 5.16958e-08, 4.94639, -0.299891, 0.572461, 0.0116202, -3.00225, -0.0571824, 0.116336, 0, 0, 0)
+mesh = SubResource("ArrayMesh_1evph")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_kgaui")
+surface_material_override/1 = SubResource("StandardMaterial3D_op6t6")
+surface_material_override/2 = SubResource("StandardMaterial3D_5gg8h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="prop/Spatula"]
 transform = Transform3D(0.0713155, 5.16958e-08, 4.94639, -0.299891, 0.572461, 0.0116202, -3.00225, -0.0571824, 0.116336, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_mbitb")
 
