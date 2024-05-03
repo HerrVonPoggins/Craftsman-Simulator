@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cc4eoydeq1jwv"]
+[gd_scene load_steps=9 format=3 uid="uid://cc4eoydeq1jwv"]
 
 [ext_resource type="Script" path="res://ui/player_ui/TabContainer.gd" id="1_pp8q6"]
-[ext_resource type="PackedScene" uid="uid://biv5si5cbepod" path="res://UI/player_ui/checklist.tscn" id="2_leu6n"]
+[ext_resource type="PackedScene" uid="uid://biv5si5cbepod" path="res://ui/player_ui/checklist.tscn" id="2_leu6n"]
 [ext_resource type="Texture2D" uid="uid://dr813mjfqn5n4" path="res://assets/textures/warning_sample.jpg" id="2_xxoj5"]
+[ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://ui/player_ui/transition.tscn" id="4_egnei"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cvin2"]
 content_margin_left = 1.0
@@ -35,6 +36,47 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_pp8q6")
 
+[node name="ButtonSettings" type="Button" parent="."]
+visible = false
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 0
+offset_left = 132.0
+offset_top = 507.0
+offset_right = 432.0
+offset_bottom = 557.0
+text = "Settings"
+
+[node name="ButtonSave_Load" type="Button" parent="."]
+visible = false
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 0
+offset_left = 131.0
+offset_top = 587.0
+offset_right = 431.0
+offset_bottom = 637.0
+text = "Save/Load"
+
+[node name="ButtonMainMenu" type="Button" parent="."]
+visible = false
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 0
+offset_left = 131.0
+offset_top = 673.0
+offset_right = 431.0
+offset_bottom = 729.0
+text = "Mainmenu"
+
+[node name="ButtonQuit" type="Button" parent="."]
+visible = false
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 0
+offset_left = 131.0
+offset_top = 755.0
+offset_right = 431.0
+offset_bottom = 811.0
+text = "Quit
+"
+
 [node name="ButtonInfoHub" type="Button" parent="."]
 process_mode = 3
 visible = false
@@ -57,7 +99,7 @@ text = "Checkliste "
 [node name="TabContainer" type="TabContainer" parent="."]
 process_mode = 3
 layout_mode = 0
-offset_left = 134.0
+offset_left = 499.0
 offset_top = 88.0
 offset_right = 1644.0
 offset_bottom = 938.0
@@ -100,5 +142,11 @@ grow_vertical = 2
 [node name="checklist" parent="." instance=ExtResource("2_leu6n")]
 position = Vector2(20, -76)
 
+[node name="Transition" parent="." instance=ExtResource("4_egnei")]
+
+[connection signal="pressed" from="ButtonSettings" to="." method="_on_button_settings_pressed"]
+[connection signal="pressed" from="ButtonSave_Load" to="." method="_on_button_save_load_pressed"]
+[connection signal="pressed" from="ButtonMainMenu" to="." method="_on_button_main_menu_pressed"]
+[connection signal="pressed" from="ButtonQuit" to="." method="_on_button_quit_pressed"]
 [connection signal="pressed" from="ButtonInfoHub" to="." method="_on_button_info_hub_pressed"]
 [connection signal="pressed" from="ButtonChecklist" to="." method="_on_button_checklist_pressed"]

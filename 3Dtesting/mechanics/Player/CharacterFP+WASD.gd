@@ -3,6 +3,9 @@ extends CharacterBody3D
 
 var SPEED = 5.0
 const JUMP_VELOCITY = 4.5
+var is_up = false
+var is_crouching = false
+
 
 	#Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -39,7 +42,20 @@ func _physics_process(delta):
 	else:
 		SPEED = 5
 
+	if Input.is_action_pressed("leftclick") and is_up == false:
+		$"../Animation".play("arm")
+		is_up = true
+	if not Input.is_action_pressed("leftclick") and is_up == true:
+		$"../Animation".play_backwards("arm")
+		is_up = false
 
+
+	if Input.is_action_pressed("crouch") and is_crouching == false:
+		$"../Animation".play("crouch")
+		is_crouching = true
+	if not Input.is_action_pressed("crouch") and is_crouching == true:
+		$"../Animation".play_backwards("crouch")
+		is_crouching = false
 
 	# jump
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():

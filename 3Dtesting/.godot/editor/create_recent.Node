@@ -1,12 +1,12 @@
 Button
+AnimationPlayer
+Node3D
+MeshInstance3D
 HBoxContainer
 RigidBody3D
-Node3D
 CollisionShape3D
 Area3D
-MeshInstance3D
 CPUParticles3D
-AnimationPlayer
 Marker3D
 Label
 Panel
