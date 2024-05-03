@@ -77,14 +77,15 @@ func _on_button_checklist_pressed():
 
 func _on_button_main_menu_pressed():
 	$Transition._change_scene("res://ui/screens/titlescreen.tscn")
-
+	close()
+	
 
 func _on_button_save_load_pressed():
 	pass # Replace with function body.
 
 
 func _on_button_settings_pressed():
-	pass # Replace with function body.--
+	pass # Replace with function body.
 
 
 func _on_button_quit_pressed():

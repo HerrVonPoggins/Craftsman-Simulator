@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_t5s05"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_o18cq"]
 
 [resource]
-script = ExtResource("1_t5s05")
+script = ExtResource("1_o18cq")
 using_states = PackedStringArray()
 titles = {
 "this_is_a_node_title": "2"
@@ -25,9 +25,9 @@ lines = {
 "notes": "",
 "parent_id": "2",
 "tags": PackedStringArray(),
-"text": "platziere abwechselnd Mörtel und Ziegel.",
+"text": "du musst die Kelle jedes mal durch den Eimer ziehen und dann auf den Ziegeln entlang ziehen.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "platziere abwechselnd Mörtel und Ziegel.",
+"translation_key": "du musst die Kelle jedes mal durch den Eimer ziehen und dann auf den Ziegeln entlang ziehen.",
 "type": &"dialogue"
 },
 "11": {
@@ -38,9 +38,9 @@ lines = {
 "notes": "",
 "parent_id": "2",
 "tags": PackedStringArray(),
-"text": "Achtung einer der Ziegel muss an der Tischsäge kleiner geschnitten werden. ein Ziegel liegt bereit neben der Tischsäge.",
+"text": "platziere abwechselnd Mörtel und Ziegel.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Achtung einer der Ziegel muss an der Tischsäge kleiner geschnitten werden. ein Ziegel liegt bereit neben der Tischsäge.",
+"translation_key": "platziere abwechselnd Mörtel und Ziegel.",
 "type": &"dialogue"
 },
 "12": {
@@ -51,9 +51,9 @@ lines = {
 "notes": "",
 "parent_id": "2",
 "tags": PackedStringArray(),
-"text": "Sprich vorher noch mit dem Maurer er gibt dir eine Zusammenfassung über seinen Beruf.",
+"text": "Achtung einer der Ziegel muss an der Tischsäge kleiner geschnitten werden. ein Ziegel liegt bereit neben der Tischsäge.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Sprich vorher noch mit dem Maurer er gibt dir eine Zusammenfassung über seinen Beruf.",
+"translation_key": "Achtung einer der Ziegel muss an der Tischsäge kleiner geschnitten werden. ein Ziegel liegt bereit neben der Tischsäge.",
 "type": &"dialogue"
 },
 "13": {
@@ -64,15 +64,28 @@ lines = {
 "notes": "",
 "parent_id": "2",
 "tags": PackedStringArray(),
-"text": "Falls du genaueres wissen willst ließ in deinem Handbuch (ESC) nach.",
+"text": "Sprich vorher noch mit dem Maurer er gibt dir eine Zusammenfassung über seinen Beruf.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Falls du genaueres wissen willst ließ in deinem Handbuch (ESC) nach.",
+"translation_key": "Sprich vorher noch mit dem Maurer er gibt dir eine Zusammenfassung über seinen Beruf.",
 "type": &"dialogue"
 },
 "14": {
 "character": "Bauleiter",
 "character_replacements": Array[Dictionary]([]),
 "id": "14",
+"next_id": "15",
+"notes": "",
+"parent_id": "2",
+"tags": PackedStringArray(),
+"text": "Falls du genaueres wissen willst ließ in deinem Handbuch (ESC) nach.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Falls du genaueres wissen willst ließ in deinem Handbuch (ESC) nach.",
+"type": &"dialogue"
+},
+"15": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
 "next_id": "16",
 "notes": "",
 "parent_id": "2",
@@ -83,6 +96,30 @@ lines = {
 "type": &"dialogue"
 },
 "16": {
+"id": "16",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
+},
+"next_id": "18",
+"parent_id": "2",
+"type": &"mutation"
+},
+"18": {
 "condition": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -102,50 +139,35 @@ lines = {
 "type": "colon"
 }])
 },
-"id": "16",
-"next_conditional_id": "32",
-"next_id": "17",
-"next_id_after": "32",
+"id": "18",
+"next_conditional_id": "35",
+"next_id": "19",
+"next_id_after": "35",
 "type": &"condition"
 },
-"17": {
-"character": "Bauleiter",
-"character_replacements": Array[Dictionary]([]),
-"id": "17",
-"next_id": "18",
-"notes": "",
-"parent_id": "16",
-"tags": PackedStringArray(),
-"text": "Wilkommen auf der Baustelle!",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Wilkommen auf der Baustelle!",
-"type": &"dialogue"
-},
-"18": {
-"character": "Bauleiter",
-"character_replacements": Array[Dictionary]([]),
-"id": "18",
-"next_id": "19",
-"notes": "",
-"parent_id": "16",
-"tags": PackedStringArray(),
-"text": "Deine erste Aufgabe wird es sein eine Ständerwand zu bauen.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Deine erste Aufgabe wird es sein eine Ständerwand zu bauen.",
-"type": &"dialogue"
-},
 "19": {
-"character": "Bauleiter",
-"character_replacements": Array[Dictionary]([]),
 "id": "19",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
 "next_id": "20",
-"notes": "",
-"parent_id": "16",
-"tags": PackedStringArray(),
-"text": "Du musst die Profile mit Dichtband bekleben.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Du musst die Profile mit Dichtband bekleben.",
-"type": &"dialogue"
+"parent_id": "18",
+"type": &"mutation"
 },
 "2": {
 "condition": {
@@ -168,9 +190,9 @@ lines = {
 }])
 },
 "id": "2",
-"next_conditional_id": "16",
+"next_conditional_id": "18",
 "next_id": "3",
-"next_id_after": "16",
+"next_id_after": "18",
 "type": &"condition"
 },
 "20": {
@@ -179,11 +201,11 @@ lines = {
 "id": "20",
 "next_id": "21",
 "notes": "",
-"parent_id": "16",
+"parent_id": "18",
 "tags": PackedStringArray(),
-"text": "Danach bringst du sie an Boden/Decke und den Wänden an.",
+"text": "Wilkommen auf der Baustelle!",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Danach bringst du sie an Boden/Decke und den Wänden an.",
+"translation_key": "Wilkommen auf der Baustelle!",
 "type": &"dialogue"
 },
 "21": {
@@ -192,11 +214,11 @@ lines = {
 "id": "21",
 "next_id": "22",
 "notes": "",
-"parent_id": "16",
+"parent_id": "18",
 "tags": PackedStringArray(),
-"text": "als nächstes setzt du in den markierten slots die zwischen Profile.",
+"text": "Deine erste Aufgabe wird es sein eine Ständerwand zu bauen.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "als nächstes setzt du in den markierten slots die zwischen Profile.",
+"translation_key": "Deine erste Aufgabe wird es sein eine Ständerwand zu bauen.",
 "type": &"dialogue"
 },
 "22": {
@@ -205,11 +227,11 @@ lines = {
 "id": "22",
 "next_id": "23",
 "notes": "",
-"parent_id": "16",
+"parent_id": "18",
 "tags": PackedStringArray(),
-"text": "dann kannst du eine Seite mit Gipskartonplatten beplanken.",
+"text": "Du musst die Profile mit Dichtband bekleben.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "dann kannst du eine Seite mit Gipskartonplatten beplanken.",
+"translation_key": "Du musst die Profile mit Dichtband bekleben.",
 "type": &"dialogue"
 },
 "23": {
@@ -218,11 +240,11 @@ lines = {
 "id": "23",
 "next_id": "24",
 "notes": "",
-"parent_id": "16",
+"parent_id": "18",
 "tags": PackedStringArray(),
-"text": "nun wird das Dämmmaterial eingelegt um dann die andere Seite zu verplanken.",
+"text": "Danach bringst du sie an Boden/Decke und den Wänden an.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "nun wird das Dämmmaterial eingelegt um dann die andere Seite zu verplanken.",
+"translation_key": "Danach bringst du sie an Boden/Decke und den Wänden an.",
 "type": &"dialogue"
 },
 "24": {
@@ -231,11 +253,11 @@ lines = {
 "id": "24",
 "next_id": "25",
 "notes": "",
-"parent_id": "16",
+"parent_id": "18",
 "tags": PackedStringArray(),
-"text": "jetzt hast du den größten Teil hinter dir",
+"text": "als nächstes setzt du in den markierten slots die zwischen Profile.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "jetzt hast du den größten Teil hinter dir",
+"translation_key": "als nächstes setzt du in den markierten slots die zwischen Profile.",
 "type": &"dialogue"
 },
 "25": {
@@ -244,11 +266,11 @@ lines = {
 "id": "25",
 "next_id": "26",
 "notes": "",
-"parent_id": "16",
+"parent_id": "18",
 "tags": PackedStringArray(),
-"text": "verspachtle die Fugen.",
+"text": "dann kannst du eine Seite mit Gipskartonplatten beplanken.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "verspachtle die Fugen.",
+"translation_key": "dann kannst du eine Seite mit Gipskartonplatten beplanken.",
 "type": &"dialogue"
 },
 "26": {
@@ -257,11 +279,11 @@ lines = {
 "id": "26",
 "next_id": "27",
 "notes": "",
-"parent_id": "16",
+"parent_id": "18",
 "tags": PackedStringArray(),
-"text": "dann verspachtle den Rest der Wand.",
+"text": "nun wird das Dämmmaterial eingelegt um dann die andere Seite zu verplanken.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "dann verspachtle den Rest der Wand.",
+"translation_key": "nun wird das Dämmmaterial eingelegt um dann die andere Seite zu verplanken.",
 "type": &"dialogue"
 },
 "27": {
@@ -270,11 +292,11 @@ lines = {
 "id": "27",
 "next_id": "28",
 "notes": "",
-"parent_id": "16",
+"parent_id": "18",
 "tags": PackedStringArray(),
-"text": "Sprich noch vorher mit dem Stuckateur er gibt dir eine Zusammenfassung über seinen Beruf.",
+"text": "jetzt hast du den größten Teil hinter dir",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Sprich noch vorher mit dem Stuckateur er gibt dir eine Zusammenfassung über seinen Beruf.",
+"translation_key": "jetzt hast du den größten Teil hinter dir",
 "type": &"dialogue"
 },
 "28": {
@@ -283,41 +305,115 @@ lines = {
 "id": "28",
 "next_id": "29",
 "notes": "",
-"parent_id": "16",
+"parent_id": "18",
 "tags": PackedStringArray(),
-"text": "Falls du genaueres wissen willst ließ in deinem Handbuch (ESC) nach.",
+"text": "verspachtle die Fugen.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Falls du genaueres wissen willst ließ in deinem Handbuch (ESC) nach.",
+"translation_key": "verspachtle die Fugen.",
 "type": &"dialogue"
 },
 "29": {
 "character": "Bauleiter",
 "character_replacements": Array[Dictionary]([]),
 "id": "29",
+"next_id": "30",
+"notes": "",
+"parent_id": "18",
+"tags": PackedStringArray(),
+"text": "dann verspachtle den Rest der Wand.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "dann verspachtle den Rest der Wand.",
+"type": &"dialogue"
+},
+"3": {
+"id": "3",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
+"next_id": "4",
+"parent_id": "2",
+"type": &"mutation"
+},
+"30": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "30",
+"next_id": "31",
+"notes": "",
+"parent_id": "18",
+"tags": PackedStringArray(),
+"text": "Sprich noch vorher mit dem Stuckateur er gibt dir eine Zusammenfassung über seinen Beruf.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sprich noch vorher mit dem Stuckateur er gibt dir eine Zusammenfassung über seinen Beruf.",
+"type": &"dialogue"
+},
+"31": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "31",
 "next_id": "32",
 "notes": "",
-"parent_id": "16",
+"parent_id": "18",
+"tags": PackedStringArray(),
+"text": "Falls du genaueres wissen willst ließ in deinem Handbuch (ESC) nach.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Falls du genaueres wissen willst ließ in deinem Handbuch (ESC) nach.",
+"type": &"dialogue"
+},
+"32": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "32",
+"next_id": "33",
+"notes": "",
+"parent_id": "18",
 "tags": PackedStringArray(),
 "text": "Viel Glück.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Viel Glück.",
 "type": &"dialogue"
 },
-"3": {
-"character": "Bauleiter",
-"character_replacements": Array[Dictionary]([]),
-"id": "3",
-"next_id": "4",
-"notes": "",
-"parent_id": "2",
-"tags": PackedStringArray(),
-"text": "Wilkommen auf der Baustelle!",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Wilkommen auf der Baustelle!",
-"type": &"dialogue"
+"33": {
+"id": "33",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
 },
-"32": {
-"id": "32",
+"next_id": "35",
+"parent_id": "18",
+"type": &"mutation"
+},
+"35": {
+"id": "35",
 "is_snippet": false,
 "next_id": "end",
 "type": &"goto"
@@ -330,9 +426,9 @@ lines = {
 "notes": "",
 "parent_id": "2",
 "tags": PackedStringArray(),
-"text": "Deine erste Aufgabe wird es sein eine Wand zu Maurern.",
+"text": "Wilkommen auf der Baustelle!",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Deine erste Aufgabe wird es sein eine Wand zu Maurern.",
+"translation_key": "Wilkommen auf der Baustelle!",
 "type": &"dialogue"
 },
 "5": {
@@ -343,9 +439,9 @@ lines = {
 "notes": "",
 "parent_id": "2",
 "tags": PackedStringArray(),
-"text": "Setzte die gelben Dämmblöcke in die leeren Plätze.",
+"text": "Deine erste Aufgabe wird es sein eine Wand zu Maurern.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Setzte die gelben Dämmblöcke in die leeren Plätze.",
+"translation_key": "Deine erste Aufgabe wird es sein eine Wand zu Maurern.",
 "type": &"dialogue"
 },
 "6": {
@@ -356,9 +452,9 @@ lines = {
 "notes": "",
 "parent_id": "2",
 "tags": PackedStringArray(),
-"text": "Füll den Zementmischer erst mit Wasser und einem Sack Mörtel.",
+"text": "Setzte die gelben Dämmblöcke in die leeren Plätze.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Füll den Zementmischer erst mit Wasser und einem Sack Mörtel.",
+"translation_key": "Setzte die gelben Dämmblöcke in die leeren Plätze.",
 "type": &"dialogue"
 },
 "7": {
@@ -369,9 +465,9 @@ lines = {
 "notes": "",
 "parent_id": "2",
 "tags": PackedStringArray(),
-"text": "als nächstes schalte den Zementmischer (E drücken) an.",
+"text": "Füll den Zementmischer erst mit Wasser und einem Sack Mörtel.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "als nächstes schalte den Zementmischer (E drücken) an.",
+"translation_key": "Füll den Zementmischer erst mit Wasser und einem Sack Mörtel.",
 "type": &"dialogue"
 },
 "8": {
@@ -382,9 +478,9 @@ lines = {
 "notes": "",
 "parent_id": "2",
 "tags": PackedStringArray(),
-"text": "nimm die Kelle um Mörtel aus dem Eimer auf die markierte stelle zu setzen.",
+"text": "als nächstes schalte den Zementmischer (E drücken) an.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "nimm die Kelle um Mörtel aus dem Eimer auf die markierte stelle zu setzen.",
+"translation_key": "als nächstes schalte den Zementmischer (E drücken) an.",
 "type": &"dialogue"
 },
 "9": {
@@ -395,14 +491,15 @@ lines = {
 "notes": "",
 "parent_id": "2",
 "tags": PackedStringArray(),
-"text": "du musst die Kelle jedes mal durch den Eimer ziehen und dann auf den Ziegeln entlang ziehen.",
+"text": "nimm die Kelle um Mörtel aus dem Eimer auf die markierte stelle zu setzen.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "du musst die Kelle jedes mal durch den Eimer ziehen und dann auf den Ziegeln entlang ziehen.",
+"translation_key": "nimm die Kelle um Mörtel aus dem Eimer auf die markierte stelle zu setzen.",
 "type": &"dialogue"
 }
 }
 raw_text = "~ this_is_a_node_title
 if Global.current_scene == 1:
+	set Global.dialogue_open = true
 	Bauleiter: Wilkommen auf der Baustelle!
 	Bauleiter: Deine erste Aufgabe wird es sein eine Wand zu Maurern.
 	Bauleiter: Setzte die gelben Dämmblöcke in die leeren Plätze.
@@ -415,8 +512,10 @@ if Global.current_scene == 1:
 	Bauleiter: Sprich vorher noch mit dem Maurer er gibt dir eine Zusammenfassung über seinen Beruf.
 	Bauleiter: Falls du genaueres wissen willst ließ in deinem Handbuch (ESC) nach.
 	Bauleiter: Viel Glück.
+	set Global.dialogue_open = false
 
 if Global.current_scene == 2:
+	set Global.dialogue_open = true
 	Bauleiter: Wilkommen auf der Baustelle!
 	Bauleiter: Deine erste Aufgabe wird es sein eine Ständerwand zu bauen.
 	Bauleiter: Du musst die Profile mit Dichtband bekleben.
@@ -430,7 +529,7 @@ if Global.current_scene == 2:
 	Bauleiter: Sprich noch vorher mit dem Stuckateur er gibt dir eine Zusammenfassung über seinen Beruf.
 	Bauleiter: Falls du genaueres wissen willst ließ in deinem Handbuch (ESC) nach.
 	Bauleiter: Viel Glück.
-
+	set Global.dialogue_open = false
 
 => END"
 metadata/dialogue_manager_version = "2.38.0"

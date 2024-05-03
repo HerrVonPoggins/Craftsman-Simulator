@@ -13,7 +13,7 @@ height = 0.5
 [node name="ArrowTip" type="Node3D"]
 
 [node name="ArrowHead" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.000402589, 0.0344785, -0.999405, 0.999932, 0.0116757, 0, 0.0116688, -0.999337, -0.0344808, -0.0406347, 0, 0.245634)
+transform = Transform3D(-0.000402589, 0.0344785, -0.999405, 0.999932, 0.0116757, 0, 0.0116688, -0.999337, -0.0344808, -0.0406347, 0, -0.217258)
 mesh = SubResource("CylinderMesh_f05e0")
 
 [node name="ArrowBody" type="MeshInstance3D" parent="ArrowHead"]

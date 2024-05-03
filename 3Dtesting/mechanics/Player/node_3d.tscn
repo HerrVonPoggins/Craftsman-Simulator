@@ -57,7 +57,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0.504248, -0.33749, 0.154572), Vector3(0.504248, -0.33749, -2.2214)]
+"values": [Vector3(0.504248, -0.33749, 0.154572), Vector3(0.504248, -0.33749, -3.15279)]
 }
 
 [sub_resource type="Animation" id="Animation_byu7o"]
@@ -143,7 +143,7 @@ mesh = SubResource("CylinderMesh_r7tb1")
 transform = Transform3D(0.977194, 4.3684e-08, -0.212348, -0.203015, 0.293206, -0.934246, 0.0622618, 0.956049, 0.286519, 0.00660753, 1.02174, -0.0134356)
 
 [node name="VisionCenter" type="Node3D" parent="CharacterBody3D/Neck/Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.8759)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.6386)
 
 [node name="Animation" type="AnimationPlayer" parent="."]
 libraries = {

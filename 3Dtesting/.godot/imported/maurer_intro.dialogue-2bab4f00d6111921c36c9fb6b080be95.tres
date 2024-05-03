@@ -1,21 +1,44 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_lg32a"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_jjdyh"]
 
 [resource]
-script = ExtResource("1_lg32a")
+script = ExtResource("1_jjdyh")
 using_states = PackedStringArray()
 titles = {
-"this_is_a_node_title": "3"
+"this_is_a_node_title": "2"
 }
 character_names = PackedStringArray("Bauleiter")
-first_title = "3"
+first_title = "2"
 lines = {
 "1": {
 "id": "1",
-"next_id": "3",
+"next_id": "2",
 "text": "this_is_a_node_title",
 "type": &"title"
+},
+"2": {
+"id": "2",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
+"next_id": "3",
+"type": &"mutation"
 },
 "3": {
 "character": "Bauleiter",
@@ -43,14 +66,38 @@ lines = {
 },
 "5": {
 "id": "5",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
+},
+"next_id": "6",
+"type": &"mutation"
+},
+"6": {
+"id": "6",
 "is_snippet": false,
 "next_id": "end",
 "type": &"goto"
 }
 }
 raw_text = "~ this_is_a_node_title
-
+set Global.dialogue_open = true
 Bauleiter: Guten Morgen Praktikant!
 Bauleiter: Komm zu mir dann erkläre ich dir was heute deine Aufgabe sein wird.
+set Global.dialogue_open = false
 => END"
 metadata/dialogue_manager_version = "2.38.0"

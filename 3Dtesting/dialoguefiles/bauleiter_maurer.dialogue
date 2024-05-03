@@ -1,5 +1,6 @@
 ~ this_is_a_node_title
 if Global.current_scene == 1:
+	set Global.dialogue_open = true
 	Bauleiter: Wilkommen auf der Baustelle!
 	Bauleiter: Deine erste Aufgabe wird es sein eine Wand zu Maurern.
 	Bauleiter: Setzte die gelben Dämmblöcke in die leeren Plätze.
@@ -12,8 +13,10 @@ if Global.current_scene == 1:
 	Bauleiter: Sprich vorher noch mit dem Maurer er gibt dir eine Zusammenfassung über seinen Beruf.
 	Bauleiter: Falls du genaueres wissen willst ließ in deinem Handbuch (ESC) nach.
 	Bauleiter: Viel Glück.
+	set Global.dialogue_open = false
 
 if Global.current_scene == 2:
+	set Global.dialogue_open = true
 	Bauleiter: Wilkommen auf der Baustelle!
 	Bauleiter: Deine erste Aufgabe wird es sein eine Ständerwand zu bauen.
 	Bauleiter: Du musst die Profile mit Dichtband bekleben.
@@ -27,6 +30,6 @@ if Global.current_scene == 2:
 	Bauleiter: Sprich noch vorher mit dem Stuckateur er gibt dir eine Zusammenfassung über seinen Beruf.
 	Bauleiter: Falls du genaueres wissen willst ließ in deinem Handbuch (ESC) nach.
 	Bauleiter: Viel Glück.
-
+	set Global.dialogue_open = false
 
 => END

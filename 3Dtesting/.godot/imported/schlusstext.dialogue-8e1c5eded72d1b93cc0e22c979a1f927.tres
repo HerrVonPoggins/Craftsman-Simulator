@@ -1,21 +1,44 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_ltbvt"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_6veyp"]
 
 [resource]
-script = ExtResource("1_ltbvt")
+script = ExtResource("1_6veyp")
 using_states = PackedStringArray()
 titles = {
-"this_is_a_node_title": "3"
+"this_is_a_node_title": "2"
 }
 character_names = PackedStringArray("Bauleiter")
-first_title = "3"
+first_title = "2"
 lines = {
 "1": {
 "id": "1",
-"next_id": "3",
+"next_id": "2",
 "text": "this_is_a_node_title",
 "type": &"title"
+},
+"2": {
+"id": "2",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
+"next_id": "3",
+"type": &"mutation"
 },
 "3": {
 "character": "Bauleiter",
@@ -69,13 +92,36 @@ lines = {
 "character": "Bauleiter",
 "character_replacements": Array[Dictionary]([]),
 "id": "7",
-"next_id": "9",
+"next_id": "8",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Wenn du Fertig bist gib das Quizz ab.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Wenn du Fertig bist gib das Quizz ab.",
 "type": &"dialogue"
+},
+"8": {
+"id": "8",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
+},
+"next_id": "9",
+"type": &"mutation"
 },
 "9": {
 "id": "9",
@@ -85,12 +131,12 @@ lines = {
 }
 }
 raw_text = "~ this_is_a_node_title
-
+set Global.dialogue_open = true
 Bauleiter: Gute Arbeit!
 Bauleiter: Nun weißt du was der beruf des Maurers beinhaltet.
 Bauleiter: Melde dich jetzt bei deiner Lehrkraft und hole dir das Quizz.
 Bauleiter: Falls dir irgendwelche Fragen schwerfallen ließ im Handbuch (ESC) nach.
 Bauleiter: Wenn du Fertig bist gib das Quizz ab.
-
+set Global.dialogue_open = false
 => END"
 metadata/dialogue_manager_version = "2.38.0"
