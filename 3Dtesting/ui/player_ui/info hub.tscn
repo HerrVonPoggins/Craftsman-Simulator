@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cc4eoydeq1jwv"]
+[gd_scene load_steps=10 format=3 uid="uid://cc4eoydeq1jwv"]
 
 [ext_resource type="Script" path="res://ui/player_ui/TabContainer.gd" id="1_pp8q6"]
 [ext_resource type="PackedScene" uid="uid://biv5si5cbepod" path="res://ui/player_ui/checklist.tscn" id="2_leu6n"]
 [ext_resource type="Texture2D" uid="uid://dr813mjfqn5n4" path="res://assets/textures/warning_sample.jpg" id="2_xxoj5"]
 [ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://ui/player_ui/transition.tscn" id="4_egnei"]
+[ext_resource type="PackedScene" uid="uid://ccfrjw5825ajn" path="res://ui/player_ui/settings.tscn" id="5_qw0s6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cvin2"]
 content_margin_left = 1.0
@@ -40,21 +41,31 @@ script = ExtResource("1_pp8q6")
 visible = false
 custom_minimum_size = Vector2(300, 50)
 layout_mode = 0
-offset_left = 132.0
-offset_top = 507.0
-offset_right = 432.0
-offset_bottom = 557.0
+offset_left = 127.0
+offset_top = 453.0
+offset_right = 427.0
+offset_bottom = 503.0
 text = "Settings"
 
-[node name="ButtonSave_Load" type="Button" parent="."]
+[node name="ButtonSave" type="Button" parent="."]
+visible = false
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 0
+offset_left = 129.0
+offset_top = 526.0
+offset_right = 429.0
+offset_bottom = 576.0
+text = "Save"
+
+[node name="ButtonLoad" type="Button" parent="."]
 visible = false
 custom_minimum_size = Vector2(300, 50)
 layout_mode = 0
 offset_left = 131.0
-offset_top = 587.0
+offset_top = 593.0
 offset_right = 431.0
-offset_bottom = 637.0
-text = "Save/Load"
+offset_bottom = 643.0
+text = "Load"
 
 [node name="ButtonMainMenu" type="Button" parent="."]
 visible = false
@@ -144,8 +155,22 @@ position = Vector2(20, -76)
 
 [node name="Transition" parent="." instance=ExtResource("4_egnei")]
 
+[node name="Control" parent="." instance=ExtResource("5_qw0s6")]
+visible = false
+layout_mode = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 693.0
+offset_top = 314.0
+offset_right = 693.0
+offset_bottom = 314.0
+grow_horizontal = 1
+grow_vertical = 1
+
 [connection signal="pressed" from="ButtonSettings" to="." method="_on_button_settings_pressed"]
-[connection signal="pressed" from="ButtonSave_Load" to="." method="_on_button_save_load_pressed"]
+[connection signal="pressed" from="ButtonSave" to="." method="_on_button_save_pressed"]
+[connection signal="pressed" from="ButtonLoad" to="." method="_on_button_load_pressed"]
 [connection signal="pressed" from="ButtonMainMenu" to="." method="_on_button_main_menu_pressed"]
 [connection signal="pressed" from="ButtonQuit" to="." method="_on_button_quit_pressed"]
 [connection signal="pressed" from="ButtonInfoHub" to="." method="_on_button_info_hub_pressed"]

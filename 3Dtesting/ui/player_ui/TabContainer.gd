@@ -10,8 +10,15 @@ signal closed
 @onready var checklist_button = $ButtonChecklist
 @onready var tab = $TabContainer
 
+
+
+
+
 func _ready():
 	close()
+	#$"TabContainer/1/MaurerText".append_text("[color=#ffff00]this text is white[/color]")
+
+
 
 #sets the checkmarks of the checklist
 func _process(delta):
@@ -29,7 +36,8 @@ func _process(delta):
 			checklist_button.visible = false
 			info_hub_button.visible = false
 			$ButtonSettings.visible = false
-			$ButtonSave_Load.visible = false
+			$ButtonSave.visible = false
+			$ButtonLoad.visible = false
 			$ButtonMainMenu.visible = false
 			$ButtonQuit.visible = false
 			Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
@@ -38,7 +46,8 @@ func _process(delta):
 			info_hub_button.visible = true
 			checklist_button.visible = true
 			$ButtonSettings.visible = true
-			$ButtonSave_Load.visible = true
+			$ButtonSave.visible = true
+			$ButtonLoad.visible = true
 			$ButtonMainMenu.visible = true
 			$ButtonQuit.visible = true
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -59,7 +68,8 @@ func _on_button_info_hub_pressed():
 		info_hub_button.visible = false
 		checklist_button.visible = false
 		$ButtonSettings.visible = false
-		$ButtonSave_Load.visible = false
+		$ButtonSave.visible = false
+		$ButtonLoad.visible = false
 		$ButtonMainMenu.visible = false
 		$ButtonQuit.visible = false
 	else:
@@ -80,14 +90,25 @@ func _on_button_main_menu_pressed():
 	close()
 	
 
-func _on_button_save_load_pressed():
-	pass # Replace with function body.
+func _on_button_save_pressed():
+	Global.save()
 
+func _on_button_load_pressed():
+	Global.load_save()
+	if Global.current_scene == 1:
+		$Transition._change_scene("res://scenes/CorePlayable/CorePlayable.tscn")
+	elif Global.current_scene == 2:
+		$Transition._change_scene("res://scenes/StuckateurScene/Stuckateur.tscn")
 
 func _on_button_settings_pressed():
-	pass # Replace with function body.
+	$Control.visible = true
 
 
 func _on_button_quit_pressed():
 	get_tree().quit()
+
+
+
+
+
 

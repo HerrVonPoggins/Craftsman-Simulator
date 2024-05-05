@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://chngdy2vpbn5d"]
+[gd_scene load_steps=28 format=3 uid="uid://chngdy2vpbn5d"]
 
 [ext_resource type="Script" path="res://mechanics/StudWall/StudWall.gd" id="1_xo0iv"]
 [ext_resource type="Texture2D" uid="uid://qc6iyco4u5e8" path="res://assets/models/isoslierung_38ebb6_2515fa7e0ef74758a2f8a6adc7b867de~mv2.jpg" id="2_d4fdt"]
+[ext_resource type="ArrayMesh" uid="uid://dfk7y7w5dvc35" path="res://assets/models/brick_outline_prototyp(1).obj" id="3_ols2n"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2plm3"]
 size = Vector3(11.483, 5.47876, 1)
@@ -66,6 +67,24 @@ size = Vector3(1, 1.3, 0.005)
 [sub_resource type="BoxMesh" id="BoxMesh_87mgq"]
 size = Vector3(2, 1.3, 0.005)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e2mq3"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ri1hf"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_otibw"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uliok"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c4x0x"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_no57n"]
+albedo_color = Color(1, 1, 0, 1)
+
 [sub_resource type="SphereShape3D" id="SphereShape3D_ntvvd"]
 radius = 0.188443
 
@@ -78,6 +97,27 @@ rings = 5
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_meak7"]
 albedo_color = Color(0.792157, 0.639216, 0.313726, 1)
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_b4r8q"]
+radius = 0.201278
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hclx3"]
+top_radius = 0.01
+bottom_radius = 0.01
+height = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rpaf5"]
+albedo_color = Color(0.435294, 0.435294, 0.435294, 1)
+metallic = 1.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_j1pww"]
+top_radius = 0.02
+bottom_radius = 0.01
+height = 0.05
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o77fy"]
+albedo_color = Color(0.435294, 0.435294, 0.435294, 1)
+metallic = 1.0
+
 [node name="StudWall" type="Node3D"]
 script = ExtResource("1_xo0iv")
 
@@ -89,630 +129,958 @@ shape = SubResource("BoxShape3D_2plm3")
 
 [node name="Profile" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.954269, -0.252027, 0)
+visible = false
 mesh = SubResource("BoxMesh_1b3ka")
 
 [node name="Profile2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.954269, 3.93191, 0)
+visible = false
 mesh = SubResource("BoxMesh_1b3ka")
 
 [node name="Profile3" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.60312, 1.82513, 0)
+visible = false
 mesh = SubResource("BoxMesh_4x46q")
 
 [node name="Profile4" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.66216, 1.82513, 0)
+visible = false
 mesh = SubResource("BoxMesh_4x46q")
 
 [node name="Profile5" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.61017, 1.82513, 0)
+visible = false
 mesh = SubResource("BoxMesh_4x46q")
 
 [node name="Profile6" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.532954, 1.82513, 0)
+visible = false
 mesh = SubResource("BoxMesh_4x46q")
 
 [node name="Profile7" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.56128, 1.82513, 0)
+visible = false
 mesh = SubResource("BoxMesh_4x46q")
 
 [node name="Profile8" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.64621, 1.82513, 0)
+visible = false
 mesh = SubResource("BoxMesh_4x46q")
 
 [node name="Profile9" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.67153, 1.82513, 0)
+visible = false
 mesh = SubResource("BoxMesh_4x46q")
 
 [node name="Isolation1" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.45, 0, -7.54979e-08, 0, 0.7, 0, 6.79481e-08, 0, -0.5, -5.60579, 1.84454, 0)
+visible = false
 mesh = SubResource("ArrayMesh_gs7sf")
 skeleton = NodePath("")
 
 [node name="Isolation2" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.45, 0, -7.54979e-08, 0, 0.7, 0, 6.79481e-08, 0, -0.5, -3.62503, 1.84454, 0)
+visible = false
 mesh = SubResource("ArrayMesh_gs7sf")
 skeleton = NodePath("")
 
 [node name="Isolation3" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.45, 0, -7.54979e-08, 0, 0.7, 0, 6.79481e-08, 0, -0.5, -1.56258, 1.84454, 0)
+visible = false
 mesh = SubResource("ArrayMesh_gs7sf")
 skeleton = NodePath("")
 
 [node name="Isolation4" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.45, 0, -7.54979e-08, 0, 0.7, 0, 6.79481e-08, 0, -0.5, 0.504432, 1.84454, 0)
+visible = false
 mesh = SubResource("ArrayMesh_gs7sf")
 skeleton = NodePath("")
 
 [node name="Isolation5" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.45, 0, -7.54979e-08, 0, 0.7, 0, 6.79481e-08, 0, -0.5, 2.60571, 1.84454, 0)
+visible = false
 mesh = SubResource("ArrayMesh_gs7sf")
 skeleton = NodePath("")
 
 [node name="Isolation6" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.2, 0, -7.54979e-08, 0, 0.7, 0, 3.01992e-08, 0, -0.5, 4.13471, 1.84454, 0)
+visible = false
 mesh = SubResource("ArrayMesh_gs7sf")
 skeleton = NodePath("")
 
 [node name="GKB13" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.68576, 1.17765, 0.144371)
+visible = false
 mesh = SubResource("BoxMesh_4s4jb")
 
 [node name="GKB14" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.52127, 1.17765, 0.144371)
+visible = false
 mesh = SubResource("BoxMesh_4s4jb")
 
 [node name="GKB15" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.60797, 1.17765, 0.144371)
+visible = false
 mesh = SubResource("BoxMesh_4s4jb")
 
 [node name="GKB16" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.56057, 2.4829, 0.144371)
+visible = false
 mesh = SubResource("BoxMesh_4s4jb")
 
 [node name="GKB17" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.56057, 2.4829, 0.144371)
+visible = false
 mesh = SubResource("BoxMesh_4s4jb")
 
 [node name="GKB18" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.513578, 2.4829, 0.144371)
+visible = false
 mesh = SubResource("BoxMesh_4s4jb")
 
 [node name="GKB19" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.23809, 2.4829, 0.144371)
+visible = false
 mesh = SubResource("BoxMesh_1dlbv")
 
 [node name="GKB20" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22472, 0.355545, 0.144371)
+visible = false
 mesh = SubResource("BoxMesh_njybi")
 
 [node name="GKB21" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.67576, 3.31981, 0.120977)
+visible = false
 mesh = SubResource("BoxMesh_87mgq")
 
 [node name="GKB22" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.58864, 0.372849, 0.120977)
+visible = false
 mesh = SubResource("BoxMesh_87mgq")
 
 [node name="GKB23" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.527225, 0.372849, 0.120977)
+visible = false
 mesh = SubResource("BoxMesh_87mgq")
 
 [node name="GKB24" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49466, 3.33024, 0.120977)
+visible = false
 mesh = SubResource("BoxMesh_87mgq")
 
 [node name="GKB25" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.68648, 3.33024, 0.120977)
+visible = false
 mesh = SubResource("BoxMesh_87mgq")
 
 [node name="GKB1" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.68576, 1.19063, -0.156288)
+visible = false
 mesh = SubResource("BoxMesh_4s4jb")
 
 [node name="GKB2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.52127, 1.17765, -0.156288)
+visible = false
 mesh = SubResource("BoxMesh_4s4jb")
 
 [node name="GKB3" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.60797, 1.17765, -0.156288)
+visible = false
 mesh = SubResource("BoxMesh_4s4jb")
 
 [node name="GKB4" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.56057, 2.4829, -0.156288)
+visible = false
 mesh = SubResource("BoxMesh_4s4jb")
 
 [node name="GKB5" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.513578, 2.4829, -0.156288)
+visible = false
 mesh = SubResource("BoxMesh_4s4jb")
 
 [node name="GKB6" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.23809, 2.4829, -0.156288)
+visible = false
 mesh = SubResource("BoxMesh_1dlbv")
 
 [node name="GKB7" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22472, 0.355545, -0.156288)
+visible = false
 mesh = SubResource("BoxMesh_njybi")
 
 [node name="GKB8" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.67576, 3.31981, -0.179681)
+visible = false
 mesh = SubResource("BoxMesh_87mgq")
 
 [node name="GKB9" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.58864, 0.372849, -0.179681)
+visible = false
 mesh = SubResource("BoxMesh_87mgq")
 
 [node name="GKB10" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.527225, 0.372849, -0.179681)
+visible = false
 mesh = SubResource("BoxMesh_87mgq")
 
 [node name="GKB11" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49466, 3.33024, -0.179681)
+visible = false
 mesh = SubResource("BoxMesh_87mgq")
 
 [node name="GKB12" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.68648, 3.33024, -0.154048)
+visible = false
 mesh = SubResource("BoxMesh_87mgq")
 
-[node name="Spachtel" type="Area3D" parent="."]
+[node name="Outlines" type="Node3D" parent="."]
+
+[node name="OutlineProfile" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(0.6, 0, 0, 0, -1.74846e-08, -2, 0, 0.4, -8.74228e-08, -6.59833, 1.83823, 0)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_e2mq3")
+
+[node name="OutlineProfile2" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(0.6, 0, 0, 0, -1.74846e-08, -2, 0, 0.4, -8.74228e-08, -4.66285, 1.83823, 0)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_e2mq3")
+
+[node name="OutlineProfile3" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(0.6, 0, 0, 0, -1.74846e-08, -2, 0, 0.4, -8.74228e-08, -2.59455, 1.83823, 0)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_e2mq3")
+
+[node name="OutlineProfile4" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(0.6, 0, 0, 0, -1.74846e-08, -2, 0, 0.4, -8.74228e-08, -0.544062, 1.83823, 0)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_e2mq3")
+
+[node name="OutlineProfile5" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(0.6, 0, 0, 0, -1.74846e-08, -2, 0, 0.4, -8.74228e-08, 1.54841, 1.83823, 0)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_e2mq3")
+
+[node name="OutlineProfile6" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(0.6, 0, 0, 0, -1.74846e-08, -2, 0, 0.4, -8.74228e-08, 3.62008, 1.83823, 0)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_e2mq3")
+
+[node name="OutlineProfile7" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(0.6, 0, 0, 0, -1.74846e-08, -2, 0, 0.4, -8.74228e-08, 4.66558, 1.83823, 0)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_e2mq3")
+
+[node name="OutlineProfile8" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(0.00131948, -1.74461e-08, -5.99999, -0.599999, -1.74845e-08, -0.0131948, -2.61692e-08, 0.4, -2.62268e-07, -0.947322, -0.242471, 0)
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_e2mq3")
+
+[node name="OutlineProfile9" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(0.00131948, -1.74461e-08, -5.99999, -0.599999, -1.74845e-08, -0.0131948, -2.61692e-08, 0.4, -2.62268e-07, -0.947322, 3.93698, 0)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_e2mq3")
+
+[node name="OutlineGKBLarge" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 1, 0, 4.5, 0, -0.05, 0, -4.37114e-08, -5.69929, 1.23983, 0.149673)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_ri1hf")
+
+[node name="OutlineGKBLarge2" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 1, 0, 4.5, 0, -0.05, 0, -4.37114e-08, -1.51446, 1.23983, 0.149673)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_ri1hf")
+
+[node name="OutlineGKBLarge3" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 1, 0, 4.5, 0, -0.05, 0, -4.37114e-08, 2.58303, 1.23983, 0.149673)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_ri1hf")
+
+[node name="OutlineGKBLarge4" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 1, 0, 4.5, 0, -0.05, 0, -4.37114e-08, 0.527252, 2.37388, 0.149673)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_ri1hf")
+
+[node name="OutlineGKBLarge5" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 1, 0, 4.5, 0, -0.05, 0, -4.37114e-08, -3.54412, 2.37388, 0.149673)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_ri1hf")
+
+[node name="OutlineGKBSmall" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 1, 0, 2, 0, -0.05, 0, -4.37114e-08, -5.67757, 3.31073, 0.149673)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../OutlineGKBLarge")
+surface_material_override/0 = SubResource("StandardMaterial3D_otibw")
+
+[node name="OutlineGKBSmall2" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 1, 0, 2, 0, -0.05, 0, -4.37114e-08, -1.51285, 3.31073, 0.149673)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../OutlineGKBLarge")
+surface_material_override/0 = SubResource("StandardMaterial3D_otibw")
+
+[node name="OutlineGKBSmall3" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 1, 0, 2, 0, -0.05, 0, -4.37114e-08, 2.57762, 3.31073, 0.149673)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../OutlineGKBLarge")
+surface_material_override/0 = SubResource("StandardMaterial3D_otibw")
+
+[node name="OutlineGKBSmall4" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 1, 0, 2, 0, -0.05, 0, -4.37114e-08, 0.55382, 0.327492, 0.149673)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../OutlineGKBLarge")
+surface_material_override/0 = SubResource("StandardMaterial3D_otibw")
+
+[node name="OutlineGKBSmall5" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 1, 0, 2, 0, -0.05, 0, -4.37114e-08, -3.5646, 0.327492, 0.149673)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../OutlineGKBLarge")
+surface_material_override/0 = SubResource("StandardMaterial3D_otibw")
+
+[node name="OutlineGKBThinLarge" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 0.5, 0, 4.5, 0, -0.05, 0, -2.18557e-08, 4.22704, 2.49034, 0.154337)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_uliok")
+
+[node name="OutlineGKBThinSmall" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 0.5, 0, 2, 0, -0.05, 0, -2.18557e-08, 4.22731, 0.329055, 0.1381)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_c4x0x")
+
+[node name="OutlineGKBLarge6" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 1, 0, 4.5, 0, -0.05, 0, -4.37114e-08, -5.69929, 1.23983, -0.158902)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_ri1hf")
+
+[node name="OutlineGKBLarge7" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 1, 0, 4.5, 0, -0.05, 0, -4.37114e-08, -1.51446, 1.23983, -0.158902)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_ri1hf")
+
+[node name="OutlineGKBLarge8" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 1, 0, 4.5, 0, -0.05, 0, -4.37114e-08, 2.58303, 1.23983, -0.158902)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_ri1hf")
+
+[node name="OutlineGKBLarge9" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 1, 0, 4.5, 0, -0.05, 0, -4.37114e-08, 0.527252, 2.37388, -0.158902)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_ri1hf")
+
+[node name="OutlineGKBLarge10" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 1, 0, 4.5, 0, -0.05, 0, -4.37114e-08, -3.54412, 2.37388, -0.158902)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_ri1hf")
+
+[node name="OutlineGKBSmall6" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 1, 0, 2, 0, -0.05, 0, -4.37114e-08, -5.67757, 3.31073, -0.158902)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../OutlineGKBLarge")
+surface_material_override/0 = SubResource("StandardMaterial3D_otibw")
+
+[node name="OutlineGKBSmall7" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 1, 0, 2, 0, -0.05, 0, -4.37114e-08, -1.51285, 3.31073, -0.158902)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../OutlineGKBLarge")
+surface_material_override/0 = SubResource("StandardMaterial3D_otibw")
+
+[node name="OutlineGKBSmall8" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 1, 0, 2, 0, -0.05, 0, -4.37114e-08, 2.57762, 3.31073, -0.158902)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../OutlineGKBLarge")
+surface_material_override/0 = SubResource("StandardMaterial3D_otibw")
+
+[node name="OutlineGKBSmall9" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 1, 0, 2, 0, -0.05, 0, -4.37114e-08, 0.55382, 0.327492, -0.158902)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../OutlineGKBLarge")
+surface_material_override/0 = SubResource("StandardMaterial3D_otibw")
+
+[node name="OutlineGKBSmall10" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 1, 0, 2, 0, -0.05, 0, -4.37114e-08, -3.5646, 0.327492, -0.158902)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../OutlineGKBLarge")
+surface_material_override/0 = SubResource("StandardMaterial3D_otibw")
+
+[node name="OutlineGKBThinLarge2" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 0.5, 0, 4.5, 0, -0.05, 0, -2.18557e-08, 4.22704, 2.48779, -0.154238)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_uliok")
+
+[node name="OutlineGKBThinSmall2" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(-2.18557e-09, 0, 0.5, 0, 2, 0, -0.05, 0, -2.18557e-08, 4.22731, 0.329055, -0.170476)
+visible = false
+mesh = ExtResource("3_ols2n")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_c4x0x")
+
+[node name="OutlineIsolation" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(5, 0, 0, 0, 5.5, 0, 0, 0, 0.15, -5.51492, 1.86522, 0)
+visible = false
+mesh = ExtResource("3_ols2n")
+surface_material_override/0 = SubResource("StandardMaterial3D_no57n")
+
+[node name="OutlineIsolation2" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(5, 0, 0, 0, 5.5, 0, 0, 0, 0.15, -3.66471, 1.86522, 0)
+visible = false
+mesh = ExtResource("3_ols2n")
+surface_material_override/0 = SubResource("StandardMaterial3D_no57n")
+
+[node name="OutlineIsolation3" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(5, 0, 0, 0, 5.5, 0, 0, 0, 0.15, -1.71578, 1.86522, 0)
+visible = false
+mesh = ExtResource("3_ols2n")
+surface_material_override/0 = SubResource("StandardMaterial3D_no57n")
+
+[node name="OutlineIsolation4" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(5, 0, 0, 0, 5.5, 0, 0, 0, 0.15, 0.386499, 1.86522, 0)
+visible = false
+mesh = ExtResource("3_ols2n")
+surface_material_override/0 = SubResource("StandardMaterial3D_no57n")
+
+[node name="OutlineIsolation5" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(5, 0, 0, 0, 5.5, 0, 0, 0, 0.15, 2.48919, 1.86522, 0)
+visible = false
+mesh = ExtResource("3_ols2n")
+surface_material_override/0 = SubResource("StandardMaterial3D_no57n")
+
+[node name="OutlineIsolation6" type="MeshInstance3D" parent="Outlines"]
+transform = Transform3D(2.5, 0, 0, 0, 5.5, 0, 0, 0, 0.15, 4.11248, 1.86522, 0)
+visible = false
+mesh = ExtResource("3_ols2n")
+surface_material_override/0 = SubResource("StandardMaterial3D_no57n")
+
+[node name="Spachtel" type="Node3D" parent="."]
+
+[node name="Spachtel" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55536, -0.229871, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel2" type="Area3D" parent="."]
+[node name="Spachtel2" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55536, -0.0668482, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel2"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel2"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel2"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel3" type="Area3D" parent="."]
+[node name="Spachtel3" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55536, 0.115138, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel3"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel3"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel3"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel3"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel4" type="Area3D" parent="."]
+[node name="Spachtel4" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55536, 0.271728, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel4"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel4"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel4"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel4"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel5" type="Area3D" parent="."]
+[node name="Spachtel5" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55536, 0.414719, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel5"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel5"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel5"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel5"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel6" type="Area3D" parent="."]
+[node name="Spachtel6" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55536, 0.557883, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel6"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel6"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel6"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel6"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel7" type="Area3D" parent="."]
+[node name="Spachtel7" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55536, 0.715239, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel7"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel7"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel7"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel7"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel8" type="Area3D" parent="."]
+[node name="Spachtel8" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55536, 0.878728, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel8"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel8"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel8"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel8"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel9" type="Area3D" parent="."]
+[node name="Spachtel9" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55536, 1.03853, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel9"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel9"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel9"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel9"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel10" type="Area3D" parent="."]
+[node name="Spachtel10" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55536, 1.17422, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel10"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel10"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel10"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel10"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel11" type="Area3D" parent="."]
+[node name="Spachtel11" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55536, 1.31777, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel11"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel11"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel11"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel11"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel12" type="Area3D" parent="."]
+[node name="Spachtel12" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55536, 1.47259, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel12"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel12"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel12"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel12"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel13" type="Area3D" parent="."]
+[node name="Spachtel13" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55536, 1.6159, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel13"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel13"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel13"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel13"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel14" type="Area3D" parent="."]
+[node name="Spachtel14" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55536, 1.74294, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel14"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel14"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel14"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel14"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel15" type="Area3D" parent="."]
+[node name="Spachtel15" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55536, 1.90084, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel15"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel15"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel15"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel15"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel16" type="Area3D" parent="."]
+[node name="Spachtel16" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55536, 2.06888, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel16"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel16"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel16"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel16"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel17" type="Area3D" parent="."]
+[node name="Spachtel17" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55536, 2.23807, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel17"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel17"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel17"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel17"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel18" type="Area3D" parent="."]
+[node name="Spachtel18" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55536, 2.40734, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel18"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel18"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel18"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel18"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel19" type="Area3D" parent="."]
+[node name="Spachtel19" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55536, 2.61352, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel19"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel19"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel19"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel19"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel20" type="Area3D" parent="."]
+[node name="Spachtel20" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.55536, 2.74326, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel20"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel20"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel20"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel20"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel21" type="Area3D" parent="."]
+[node name="Spachtel21" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.62871, 2.74326, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel21"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel21"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel21"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel21"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel22" type="Area3D" parent="."]
+[node name="Spachtel22" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.78513, 2.74326, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel22"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel22"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel22"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel22"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel23" type="Area3D" parent="."]
+[node name="Spachtel23" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.95032, 2.74326, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel23"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel23"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel23"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel23"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel24" type="Area3D" parent="."]
+[node name="Spachtel24" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1301, 2.74326, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel24"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel24"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel24"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel24"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel25" type="Area3D" parent="."]
+[node name="Spachtel25" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.30355, 2.74326, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel25"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel25"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel25"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel25"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel26" type="Area3D" parent="."]
+[node name="Spachtel26" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.47461, 2.74326, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel26"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel26"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel26"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel26"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel27" type="Area3D" parent="."]
+[node name="Spachtel27" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6457, 2.74326, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel27"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel27"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel27"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel27"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel28" type="Area3D" parent="."]
+[node name="Spachtel28" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.80533, 2.74326, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel28"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel28"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel28"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel28"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel29" type="Area3D" parent="."]
+[node name="Spachtel29" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9634, 2.74326, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel29"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel29"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel29"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel29"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel30" type="Area3D" parent="."]
+[node name="Spachtel30" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.12746, 2.74326, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel30"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel30"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel30"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel30"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel31" type="Area3D" parent="."]
+[node name="Spachtel31" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.29856, 2.74326, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel31"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel31"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel31"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel31"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel32" type="Area3D" parent="."]
+[node name="Spachtel32" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47482, 2.74326, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel32"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel32"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel32"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel32"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.0293107, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
-[node name="Spachtel33" type="Area3D" parent="."]
+[node name="Spachtel33" type="Area3D" parent="Spachtel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.64616, 2.74326, 0.148112)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel33"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Spachtel/Spachtel33"]
 shape = SubResource("SphereShape3D_ntvvd")
 
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel33"]
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Spachtel/Spachtel33"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.0545568, 0, 0)
 mesh = SubResource("CylinderMesh_1v048")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_meak7")
 
+[node name="Area3D2" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -6.58974, 0.727319, 0.247346)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2"]
+shape = SubResource("SphereShape3D_b4r8q")
+
+[node name="screw" type="MeshInstance3D" parent="Area3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 3.55271e-15, 0, -3.55271e-15, 1, -4.76837e-07, -2.98023e-08, 0)
+mesh = SubResource("CylinderMesh_hclx3")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_rpaf5")
+
+[node name="screwhead" type="MeshInstance3D" parent="Area3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 3.55271e-15, 0, -3.55271e-15, 1, 0, 0.0941055, 0)
+mesh = SubResource("CylinderMesh_j1pww")
+surface_material_override/0 = SubResource("StandardMaterial3D_o77fy")
+
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
-[connection signal="body_entered" from="Spachtel" to="." method="_on_spachtel_body_entered"]
-[connection signal="body_entered" from="Spachtel2" to="." method="_on_spachtel_2_body_entered"]
-[connection signal="body_entered" from="Spachtel3" to="." method="_on_spachtel_3_body_entered"]
-[connection signal="body_entered" from="Spachtel4" to="." method="_on_spachtel_4_body_entered"]
-[connection signal="body_entered" from="Spachtel5" to="." method="_on_spachtel_5_body_entered"]
-[connection signal="body_entered" from="Spachtel6" to="." method="_on_spachtel_6_body_entered"]
-[connection signal="body_entered" from="Spachtel7" to="." method="_on_spachtel_7_body_entered"]
-[connection signal="body_entered" from="Spachtel8" to="." method="_on_spachtel_8_body_entered"]
-[connection signal="body_entered" from="Spachtel9" to="." method="_on_spachtel_9_body_entered"]
-[connection signal="body_entered" from="Spachtel10" to="." method="_on_spachtel_10_body_entered"]
-[connection signal="body_entered" from="Spachtel11" to="." method="_on_spachtel_11_body_entered"]
-[connection signal="body_entered" from="Spachtel12" to="." method="_on_spachtel_12_body_entered"]
-[connection signal="body_entered" from="Spachtel13" to="." method="_on_spachtel_13_body_entered"]
-[connection signal="body_entered" from="Spachtel14" to="." method="_on_spachtel_14_body_entered"]
-[connection signal="body_entered" from="Spachtel15" to="." method="_on_spachtel_15_body_entered"]
-[connection signal="body_entered" from="Spachtel16" to="." method="_on_spachtel_16_body_entered"]
-[connection signal="body_entered" from="Spachtel17" to="." method="_on_spachtel_17_body_entered"]
-[connection signal="body_entered" from="Spachtel18" to="." method="_on_spachtel_18_body_entered"]
-[connection signal="body_entered" from="Spachtel19" to="." method="_on_spachtel_19_body_entered"]
-[connection signal="body_entered" from="Spachtel20" to="." method="_on_spachtel_20_body_entered"]
-[connection signal="body_entered" from="Spachtel21" to="." method="_on_spachtel_21_body_entered"]
-[connection signal="body_entered" from="Spachtel22" to="." method="_on_spachtel_22_body_entered"]
-[connection signal="body_entered" from="Spachtel23" to="." method="_on_spachtel_23_body_entered"]
-[connection signal="body_entered" from="Spachtel24" to="." method="_on_spachtel_24_body_entered"]
-[connection signal="body_entered" from="Spachtel25" to="." method="_on_spachtel_25_body_entered"]
-[connection signal="body_entered" from="Spachtel26" to="." method="_on_spachtel_26_body_entered"]
-[connection signal="body_entered" from="Spachtel27" to="." method="_on_spachtel_27_body_entered"]
-[connection signal="body_entered" from="Spachtel28" to="." method="_on_spachtel_28_body_entered"]
-[connection signal="body_entered" from="Spachtel29" to="." method="_on_spachtel_29_body_entered"]
-[connection signal="body_entered" from="Spachtel30" to="." method="_on_spachtel_30_body_entered"]
-[connection signal="body_entered" from="Spachtel31" to="." method="_on_spachtel_31_body_entered"]
-[connection signal="body_entered" from="Spachtel32" to="." method="_on_spachtel_32_body_entered"]
-[connection signal="body_entered" from="Spachtel33" to="." method="_on_spachtel_33_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel" to="." method="_on_spachtel_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel2" to="." method="_on_spachtel_2_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel3" to="." method="_on_spachtel_3_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel4" to="." method="_on_spachtel_4_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel5" to="." method="_on_spachtel_5_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel6" to="." method="_on_spachtel_6_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel7" to="." method="_on_spachtel_7_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel8" to="." method="_on_spachtel_8_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel9" to="." method="_on_spachtel_9_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel10" to="." method="_on_spachtel_10_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel11" to="." method="_on_spachtel_11_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel12" to="." method="_on_spachtel_12_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel13" to="." method="_on_spachtel_13_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel14" to="." method="_on_spachtel_14_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel15" to="." method="_on_spachtel_15_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel16" to="." method="_on_spachtel_16_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel17" to="." method="_on_spachtel_17_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel18" to="." method="_on_spachtel_18_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel19" to="." method="_on_spachtel_19_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel20" to="." method="_on_spachtel_20_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel21" to="." method="_on_spachtel_21_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel22" to="." method="_on_spachtel_22_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel23" to="." method="_on_spachtel_23_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel24" to="." method="_on_spachtel_24_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel25" to="." method="_on_spachtel_25_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel26" to="." method="_on_spachtel_26_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel27" to="." method="_on_spachtel_27_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel28" to="." method="_on_spachtel_28_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel29" to="." method="_on_spachtel_29_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel30" to="." method="_on_spachtel_30_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel31" to="." method="_on_spachtel_31_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel32" to="." method="_on_spachtel_32_body_entered"]
+[connection signal="body_entered" from="Spachtel/Spachtel33" to="." method="_on_spachtel_33_body_entered"]
+[connection signal="body_entered" from="Area3D2" to="." method="_on_area_3d_2_body_entered"]
