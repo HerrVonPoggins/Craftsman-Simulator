@@ -1,7 +1,8 @@
 extends CharacterBody3D
 
-
-var SPEED = 10
+var speed
+const WALK_SPEED = 10
+const SPRINT_SPEED = 20
 const JUMP_VELOCITY = 4.5
 var is_up = false
 var is_crouching = false
@@ -43,9 +44,9 @@ func _physics_process(delta):
 
 	#sprint
 	if Input.is_action_pressed("sprint"):
-		SPEED = 15
+		speed = SPRINT_SPEED
 	else:
-		SPEED = 10
+		speed = WALK_SPEED
 
 	if Input.is_action_pressed("leftclick") and is_up == false and Global.dialogue_open == false:
 		$"../Animation".play("arm")
@@ -69,12 +70,16 @@ func _physics_process(delta):
 	#WASD Controls
 	var input_dir = Input.get_vector("left", "right", "forward", "back")
 	var direction = (neck.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+	if is_on_floor():
+		if direction:
+			velocity.x = direction.x * speed
+			velocity.z = direction.z * speed
+		else:
+			velocity.x = move_toward(velocity.x, 0, speed)
+			velocity.z = move_toward(velocity.z, 0, speed)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+		velocity.x = lerp(velocity.x, direction.x * speed, delta * 2.0)
+		velocity.z = lerp(velocity.z, direction.z * speed, delta * 2.0)
 
 	#head bob
 	t_bob += delta * velocity.length() * float(is_on_floor())
