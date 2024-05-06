@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://k0fmfgl0bft6" path="res://assets/models/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="1_4as53"]
 [ext_resource type="Script" path="res://scenes/StuckateurScene/Stuckateur.gd" id="1_daabn"]
 [ext_resource type="PackedScene" uid="uid://cxv4g3lrd0p6b" path="res://mechanics/Player/node_3d.tscn" id="2_oxvis"]
-[ext_resource type="PackedScene" uid="uid://cc4eoydeq1jwv" path="res://ui/player_ui/info hub.tscn" id="4_a0nxn"]
+[ext_resource type="PackedScene" uid="uid://cc4eoydeq1jwv" path="res://UI/player_ui/info hub.tscn" id="4_a0nxn"]
 [ext_resource type="PackedScene" uid="uid://chngdy2vpbn5d" path="res://mechanics/StudWall/stud_wall.tscn" id="5_100iy"]
 [ext_resource type="Texture2D" uid="uid://qc6iyco4u5e8" path="res://assets/models/isoslierung_38ebb6_2515fa7e0ef74758a2f8a6adc7b867de~mv2.jpg" id="6_2lvlq"]
 

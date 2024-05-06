@@ -1,10 +1,15 @@
 extends CharacterBody3D
 
 
-var SPEED = 5.0
+var SPEED = 10
 const JUMP_VELOCITY = 4.5
 var is_up = false
 var is_crouching = false
+
+#head_bop variables
+const bob_freq = 2.0
+const bob_amp = 0.03
+var t_bob = 0.0
 
 
 	#Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -38,9 +43,9 @@ func _physics_process(delta):
 
 	#sprint
 	if Input.is_action_pressed("sprint"):
-		SPEED = 10
+		SPEED = 15
 	else:
-		SPEED = 5
+		SPEED = 10
 
 	if Input.is_action_pressed("leftclick") and is_up == false and Global.dialogue_open == false:
 		$"../Animation".play("arm")
@@ -71,4 +76,15 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
+	#head bob
+	t_bob += delta * velocity.length() * float(is_on_floor())
+	camera.transform.origin = _headbob(t_bob)
+
 	move_and_slide()
+
+
+func _headbob(time) -> Vector3:
+	var pos = Vector3.ZERO
+	pos.y =sin(time * bob_freq) * bob_amp
+	pos.x = cos(time * bob_freq / 2) * bob_amp
+	return pos

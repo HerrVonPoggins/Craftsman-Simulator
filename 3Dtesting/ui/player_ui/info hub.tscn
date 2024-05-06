@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://cc4eoydeq1jwv"]
 
 [ext_resource type="Script" path="res://ui/player_ui/TabContainer.gd" id="1_pp8q6"]
-[ext_resource type="PackedScene" uid="uid://biv5si5cbepod" path="res://ui/player_ui/checklist.tscn" id="2_leu6n"]
+[ext_resource type="PackedScene" uid="uid://biv5si5cbepod" path="res://UI/player_ui/checklist.tscn" id="2_leu6n"]
 [ext_resource type="Texture2D" uid="uid://dr813mjfqn5n4" path="res://assets/textures/warning_sample.jpg" id="2_xxoj5"]
-[ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://ui/player_ui/transition.tscn" id="4_egnei"]
-[ext_resource type="PackedScene" uid="uid://ccfrjw5825ajn" path="res://ui/player_ui/settings.tscn" id="5_qw0s6"]
+[ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://UI/player_ui/transition.tscn" id="4_egnei"]
+[ext_resource type="PackedScene" uid="uid://ccfrjw5825ajn" path="res://UI/player_ui/settings.tscn" id="5_qw0s6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cvin2"]
 content_margin_left = 1.0

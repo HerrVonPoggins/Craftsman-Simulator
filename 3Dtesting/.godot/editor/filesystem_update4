@@ -1,16 +1,16 @@
-res://ui/screens/titlescreen.tscn
+res://mechanics/Player/node_3d.tscn
 res://Settings.gd
+res://mechanics/Player/CharacterFP+WASD.gd
 res://scenes/CorePlayable/CorePlayable.tscn
 res://scenes/StuckateurScene/Stuckateur.tscn
-res://mechanics/Player/node_3d.tscn
+res://UI/Inventory/inventory.tscn
+res://mechanics/StudWall/stud_wall.tscn
+res://mechanics/Player/arrowhead.tscn
+res://mechanics/build_wall/wall.tscn
+res://ui/screens/titlescreen.tscn
 res://ui/player_ui/checklist.tscn
 res://ui/screens/credits.tscn
 res://ui/screens/endscreen.tscn
 res://ui/player_ui/info hub.tscn
 res://ui/player_ui/transition.tscn
-res://mechanics/StudWall/stud_wall.tscn
-res://mechanics/Player/arrowhead.tscn
-res://mechanics/build_wall/wall.tscn
 res://ui/player_ui/settings.tscn
-res://ui/player_ui/TabContainer.gd
-res://UI/Inventory/inventory.tscn
