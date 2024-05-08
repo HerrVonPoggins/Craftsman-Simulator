@@ -107,7 +107,15 @@ skeleton = NodePath("../..")
 transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, -0.00937235, -0.468778, -0.236481)
 shape = SubResource("ConvexPolygonShape3D_d8pds")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="CharacterBody3D"]
+[node name="StepUpSeparationRay_F" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(0.999999, 0.000265864, -0.00105895, -0.00106011, 0.00442767, -0.99999, -0.000261182, 0.99999, 0.00442795, 0, -0.411484, -0.773894)
+shape = SubResource("SeparationRayShape3D_gixhk")
+
+[node name="StepUpSeparationRay_L" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(0.999999, 0.000265864, -0.00105895, -0.00106011, 0.00442767, -0.99999, -0.000261182, 0.99999, 0.00442795, 0, -0.411484, -0.773894)
+shape = SubResource("SeparationRayShape3D_gixhk")
+
+[node name="StepUpSeparationRay_R" type="CollisionShape3D" parent="CharacterBody3D"]
 transform = Transform3D(0.999999, 0.000265864, -0.00105895, -0.00106011, 0.00442767, -0.99999, -0.000261182, 0.99999, 0.00442795, 0, -0.411484, -0.773894)
 shape = SubResource("SeparationRayShape3D_gixhk")
 
