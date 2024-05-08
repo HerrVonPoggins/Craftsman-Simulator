@@ -47,7 +47,7 @@ func snap_down_to_stairs_check():
 		var body_test_result = PhysicsTestMotionResult3D.new()
 		var params = PhysicsTestMotionParameters3D.new()
 		var max_step_down = -0.5
-		params.from = self.global_position
+		params.from = self.global_transform
 		params.motion = Vector3(0, max_step_down, 0)
 		if PhysicsServer3D.body_test_motion(self.get_rid(), params, body_test_result):
 			var translate_y = body_test_result.get_travel().y #pos of the body right before collision

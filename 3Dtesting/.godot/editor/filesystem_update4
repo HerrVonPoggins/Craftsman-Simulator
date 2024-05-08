@@ -1,3 +1,7 @@
 res://mechanics/Player/node_3d.tscn
 res://Settings.gd
 res://mechanics/Player/CharacterFP+WASD.gd
+res://scenes/CorePlayable/CorePlayable.tscn
+res://scenes/StuckateurScene/Stuckateur.tscn
+res://ui/screens/titlescreen.tscn
+res://ui/player_ui/transition.tscn
