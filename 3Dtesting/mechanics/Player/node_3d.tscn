@@ -145,6 +145,10 @@ transform = Transform3D(0.977194, 4.3684e-08, -0.212348, -0.203015, 0.293206, -0
 [node name="VisionCenter" type="Node3D" parent="CharacterBody3D/Neck/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.6386)
 
+[node name="StairsBelowRayCast3D" type="RayCast3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0685587, -1.38404, -0.187357)
+target_position = Vector3(0, -0.5, 0)
+
 [node name="Animation" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_n62r8")
