@@ -230,8 +230,12 @@ func _on_area_3d_body_entered(body):
 			$GKB20.visible = true
 			$Outlines/OutlineGKBThinSmall.visible = false
 			#evtl marker für spachterl einfügen 
-			counter = 37
-
+			counter = 36.5
+			$Area3D2.visible = true
+			$Area3D3.visible = true
+			$Area3D4.visible = true
+			$Area3D5.visible = true
+			$Area3D6.visible = true
 
 
 
@@ -381,8 +385,70 @@ func _on_spachtel_33_body_entered(body):
 
 
 func _on_area_3d_2_body_entered(body):
-	if body.is_in_group("drill"):
-		$Area3D2/screw.position.y -= 0.2
-		$Area3D2/screwhead.position.y -= 0.2
+	if body.is_in_group("drill") and counter == 36.5:
 		$Area3D2/CollisionShape3D.call_deferred("set_disabled", true)
+		$Area3D2/screw.position.y -= 0.1
+		$Area3D2/screwhead.position.y -= 0.1
+		await get_tree().create_timer(1).timeout
+		$Area3D2/screw.position.y -= 0.1
+		$Area3D2/screwhead.position.y -= 0.1
+		await get_tree().create_timer(1).timeout
+		$Area3D2/screw.position.y -= 0.1
+		$Area3D2/screwhead.position.y -= 0.1
 
+
+
+
+
+func _on_area_3d_3_body_entered(body):
+	if body.is_in_group("drill") and counter == 36.5:
+		$Area3D3/CollisionShape3D.call_deferred("set_disabled", true)
+		$Area3D3/screw.position.y -= 0.1
+		$Area3D3/screwhead.position.y -= 0.1
+		await get_tree().create_timer(1).timeout
+		$Area3D3/screw.position.y -= 0.1
+		$Area3D3/screwhead.position.y -= 0.1
+		await get_tree().create_timer(1).timeout
+		$Area3D3/screw.position.y -= 0.1
+		$Area3D3/screwhead.position.y -= 0.1
+
+
+func _on_area_3d_4_body_entered(body):
+	if body.is_in_group("drill") and counter == 36.5:
+		$Area3D4/CollisionShape3D.call_deferred("set_disabled", true)
+		$Area3D4/screw.position.y -= 0.1
+		$Area3D4/screwhead.position.y -= 0.1
+		await get_tree().create_timer(1).timeout
+		$Area3D4/screw.position.y -= 0.1
+		$Area3D4/screwhead.position.y -= 0.1
+		await get_tree().create_timer(1).timeout
+		$Area3D4/screw.position.y -= 0.1
+		$Area3D4/screwhead.position.y -= 0.1
+
+
+func _on_area_3d_5_body_entered(body):
+	if body.is_in_group("drill") and counter == 36.5:
+		$Area3D5/CollisionShape3D.call_deferred("set_disabled", true)
+		$Area3D5/screw.position.y -= 0.1
+		$Area3D5/screwhead.position.y -= 0.1
+		await get_tree().create_timer(1).timeout
+		$Area3D5/screw.position.y -= 0.1
+		$Area3D5/screwhead.position.y -= 0.1
+		await get_tree().create_timer(1).timeout
+		$Area3D5/screw.position.y -= 0.1
+		$Area3D5/screwhead.position.y -= 0.1
+
+
+
+func _on_area_3d_6_body_entered(body):
+	if body.is_in_group("drill") and counter == 36.5:
+		$Area3D6/CollisionShape3D.call_deferred("set_disabled", true)
+		$Area3D6/screw.position.y -= 0.1
+		$Area3D6/screwhead.position.y -= 0.1
+		await get_tree().create_timer(1).timeout
+		$Area3D6/screw.position.y -= 0.1
+		$Area3D6/screwhead.position.y -= 0.1
+		await get_tree().create_timer(1).timeout
+		$Area3D6/screw.position.y -= 0.1
+		$Area3D6/screwhead.position.y -= 0.1
+		counter = 37

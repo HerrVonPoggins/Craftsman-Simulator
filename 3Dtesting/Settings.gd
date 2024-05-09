@@ -15,5 +15,13 @@ func _on_button_pressed():
 	$".".visible = false
 
 
-func _on_h_scroll_bar_scrolling():
+
+
+
+
+func _on_volume_scrolling():
 	Global.volume = $HScrollBar.value
+
+
+func _on_mouse_sens_scrolling():
+	Global.mouse_sensitivity = $TabContainer/TabBar2/MouseSens.value

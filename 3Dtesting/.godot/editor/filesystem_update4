@@ -1,7 +1,11 @@
-res://mechanics/Player/node_3d.tscn
+res://ui/screens/titlescreen.tscn
 res://Settings.gd
-res://mechanics/Player/CharacterFP+WASD.gd
 res://scenes/CorePlayable/CorePlayable.tscn
 res://scenes/StuckateurScene/Stuckateur.tscn
-res://ui/screens/titlescreen.tscn
-res://ui/player_ui/transition.tscn
+res://mechanics/Player/node_3d.tscn
+res://ui/player_ui/settings.tscn
+res://mechanics/StudWall/stud_wall.tscn
+res://scenes/ElektrikerScene/Elektriker.tscn
+res://ui/player_ui/info hub.tscn
+res://scripts/global.gd
+res://ui/player_ui/TabContainer.gd

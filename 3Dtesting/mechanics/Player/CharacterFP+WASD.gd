@@ -38,10 +38,10 @@ func _unhandled_input(event):
 	elif event.is_action_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	if event is InputEventMouseMotion:
-		neck.rotate_y(-event.relative.x * 0.01)
-		camera.rotate_x(-event.relative.y * 0.01)
+		neck.rotate_y(-event.relative.x * Global.mouse_sensitivity)
+		camera.rotate_x(-event.relative.y * Global.mouse_sensitivity)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(60))
-		player_body.rotate_y(-event.relative.x * 0.01)
+		player_body.rotate_y(-event.relative.x * Global.mouse_sensitivity)
 
 	
 func _physics_process(delta):
