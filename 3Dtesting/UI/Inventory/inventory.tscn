@@ -57,3 +57,5 @@ layout_mode = 2
 [node name="TrowelButton10" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
+
+[connection signal="pressed" from="HBoxContainer/TrowelButton" to="." method="_on_trowel_button_pressed"]
