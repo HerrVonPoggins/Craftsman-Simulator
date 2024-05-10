@@ -3,6 +3,9 @@ extends RayCast3D
 var last = Vector3.ZERO
 var obj = null
 
+@onready var trowel = $Props/Trowel
+@onready var hold = $Player/CharacterBody3D/Neck/Camera3D/MeshInstance3D/Hold
+
 @onready var point = $"../MeshInstance3D/Hold"
 @onready var player = $"../../../.."
 
@@ -58,3 +61,7 @@ func _process(delta):
 
 func _on_player_concrete_bucket_pos_reached():
 	obj = null
+
+
+func _on_inventory_trowel_button_clicked():
+	trowel.position = hold.position

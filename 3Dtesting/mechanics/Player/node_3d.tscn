@@ -154,7 +154,7 @@ visible = false
 transform = Transform3D(0.997713, -0.0646264, 0.01982, 3.64033e-09, 0.293206, 0.956049, -0.0675974, -0.953862, 0.292535, 0.504248, -0.33749, 0.154572)
 mesh = SubResource("CylinderMesh_r7tb1")
 
-[node name="Hold" type="Node3D" parent="CharacterBody3D/Neck/Camera3D/MeshInstance3D"]
+[node name="Hold" type="Marker3D" parent="CharacterBody3D/Neck/Camera3D/MeshInstance3D"]
 transform = Transform3D(0.977194, 4.3684e-08, -0.212348, -0.203015, 0.293206, -0.934246, 0.0622618, 0.956049, 0.286519, 0.00660753, 1.02174, -0.0134356)
 
 [node name="VisionCenter" type="Node3D" parent="CharacterBody3D/Neck/Camera3D"]
@@ -174,3 +174,4 @@ libraries = {
 [node name="Inventory" parent="CanvasLayer" instance=ExtResource("6_2noio")]
 
 [connection signal="concrete_bucket_pos_reached" from="." to="CharacterBody3D/Neck/Camera3D/RayCast3D" method="_on_player_concrete_bucket_pos_reached"]
+[connection signal="trowel_button_clicked" from="CanvasLayer/Inventory" to="CharacterBody3D/Neck/Camera3D/RayCast3D" method="_on_inventory_trowel_button_clicked"]

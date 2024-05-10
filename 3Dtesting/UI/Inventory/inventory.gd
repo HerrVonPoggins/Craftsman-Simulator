@@ -16,8 +16,12 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("inventory"):
 		self.visible = !self.visible
+		if self.visible == true:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		if self.visible == false:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if Global.trowel_picked == true:
-		trowel_button.Icon = trowel_icon
+		$HBoxContainer/TrowelButton.disabled = false
 
 
 func _on_trowel_button_pressed():

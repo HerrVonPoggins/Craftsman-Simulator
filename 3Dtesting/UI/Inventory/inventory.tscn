@@ -21,6 +21,7 @@ offset_bottom = 585.0
 [node name="TrowelButton" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
+disabled = true
 
 [node name="button2" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(80, 0)
