@@ -1,7 +1,6 @@
-res://UI/Inventory/inventory.gd
-res://UI/Inventory/inventory.tscn
-res://Settings.gd
 res://scenes/CorePlayable/CorePlayable.tscn
+res://Settings.gd
 res://scenes/StuckateurScene/Stuckateur.tscn
 res://mechanics/Player/node_3d.tscn
 res://mechanics/StudWall/stud_wall.tscn
+res://UI/Inventory/inventory.tscn
