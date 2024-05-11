@@ -3,7 +3,7 @@ extends RayCast3D
 var last = Vector3.ZERO
 var obj = null
 
-@onready var trowel = $Props/Trowel
+@onready var trowel = preload("res://mechanics/Tools/trowel.tscn")
 @onready var hold = $Player/CharacterBody3D/Neck/Camera3D/MeshInstance3D/Hold
 
 @onready var point = $"../MeshInstance3D/Hold"
@@ -64,4 +64,7 @@ func _on_player_concrete_bucket_pos_reached():
 
 
 func _on_inventory_trowel_button_clicked():
-	trowel.position = hold.position
+	var new_trowel = trowel.instantiate()
+	new_trowel.freeze = true
+	new_trowel.global_position = hold.global_position
+	add_child(new_trowel)

@@ -1,6 +1,6 @@
 3acdcc5cb6df755358dde907981ccea8
-::res://::1715364942
-Settings.gd::GDScript::-1::1715364921::0::1::::<>Control<>::
+::res://::1715443974
+Settings.gd::GDScript::-1::1715376508::0::1::::<>Control<>::
 ::res://addons/::1714321214
 ::res://addons/dialogue_manager/::1713113001
 constants.gd::GDScript::-1::1713113001::0::1::::<>Node<>::
@@ -112,30 +112,30 @@ Sprite-0001.png::CompressedTexture2D::1837275663270596470::1714321215::171432121
 warning_sample.jpg::CompressedTexture2D::8422226147283637527::1714321215::1714321215::1::::<><>::
 ::res://assets/video/::1714321215
 VID-20240228-WA0002.ogv::VideoStreamTheora::-1::1714321215::0::1::::<><>::
-::res://dialoguefiles/::1715004360
+::res://dialoguefiles/::1715364944
 bauleiter_maurer.dialogue::Resource::8352994675498894795::1715004062::1715364944::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 maurer_intro.dialogue::Resource::7035358605989605458::1715004062::1715364944::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 maurer_text.dialogue::Resource::6401223706840958401::1715004062::1715364944::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 schlusstext.dialogue::Resource::8692822673032486500::1715004062::1715364944::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
-::res://mechanics/::1714321278
+::res://mechanics/::1715377470
 ::res://mechanics/build_wall/::1715364921
 wall.gd::GDScript::-1::1714321215::0::1::::<>Node3D<>::
 wall.tscn::PackedScene::6990098618445403050::1715364921::0::1::::<><>::res://mechanics/build_wall/wall.gd<>uid://dfk7y7w5dvc35::::res://assets/models/brick_outline_prototyp(1).obj<>uid://dwfc4k5batkf2::::res://assets/models/bricks_8017-normal.jpg
 ::res://mechanics/cement-mixing/::1714565562
 zementmischer.gd::GDScript::-1::1714386541::0::1::::<>Node3D<>::
 zementmischer.tscn::PackedScene::1769461636928547823::1714565562::0::1::::<><>::res://mechanics/cement-mixing/zementmischer.gd
-::res://mechanics/Player/::1715364921
+::res://mechanics/Player/::1715443964
 arrowhead.tscn::PackedScene::6958196614761482372::1715007954::0::1::::<><>::
 CharacterFP+WASD.gd::GDScript::-1::1715364921::0::1::::<>CharacterBody3D<>::
-node_3d.tscn::PackedScene::6432309699873923891::1715364921::0::1::::<><>::res://mechanics/Player/player_signals.gd<>res://mechanics/Player/CharacterFP+WASD.gd<>res://mechanics/Player/RayCast3D.gd<>uid://1f8wq8hkrxny::::res://assets/textures/Sprite-0001.png<>uid://c6euqm1mx4k1q::::res://mechanics/Player/arrowhead.tscn
+node_3d.tscn::PackedScene::6432309699873923891::1715443964::0::1::::<><>::res://mechanics/Player/player_signals.gd<>res://mechanics/Player/CharacterFP+WASD.gd<>res://mechanics/Player/RayCast3D.gd<>uid://1f8wq8hkrxny::::res://assets/textures/Sprite-0001.png<>uid://c6euqm1mx4k1q::::res://mechanics/Player/arrowhead.tscn<>uid://djw5gwv30bvm1::::res://UI/Inventory/inventory.tscn
 player_signals.gd::GDScript::-1::1714321215::0::1::::<>Node3D<>::
-RayCast3D.gd::GDScript::-1::1715004062::0::1::::<>RayCast3D<>::
-::res://mechanics/StudWall/::1715364921
+RayCast3D.gd::GDScript::-1::1715443964::0::1::::<>RayCast3D<>::
+::res://mechanics/StudWall/::1715377289
 StudWall.gd::GDScript::-1::1715364921::0::1::::<>Node3D<>::
-stud_wall.tscn::PackedScene::5291371146237886347::1715364921::0::1::::<><>::res://mechanics/StudWall/StudWall.gd<>uid://qc6iyco4u5e8::::res://assets/models/isoslierung_38ebb6_2515fa7e0ef74758a2f8a6adc7b867de~mv2.jpg<>uid://dfk7y7w5dvc35::::res://assets/models/brick_outline_prototyp(1).obj
+stud_wall.tscn::PackedScene::5291371146237886347::1715377289::0::1::::<><>::res://mechanics/StudWall/StudWall.gd<>uid://qc6iyco4u5e8::::res://assets/models/isoslierung_38ebb6_2515fa7e0ef74758a2f8a6adc7b867de~mv2.jpg<>uid://dfk7y7w5dvc35::::res://assets/models/brick_outline_prototyp(1).obj
 ::res://scenes/::1715364921
-::res://scenes/CorePlayable/::1715364921
-CorePlayable.tscn::PackedScene::367638352014426829::1715364921::0::1::::<><>::res://scenes/CorePlayable/world.gd<>uid://k0fmfgl0bft6::::res://assets/models/kloofendal_48d_partly_cloudy_puresky_2k.hdr<>uid://c6ub5x3yfjwfq::::res://mechanics/build_wall/wall.tscn<>uid://0he1lqnqyqvf::::res://mechanics/cement-mixing/zementmischer.tscn<>uid://cc4eoydeq1jwv::::res://UI/player_ui/info hub.tscn<>uid://cyxbogh4cdp8::::res://assets/models/eimer_wasser_1.webp<>uid://cxv4g3lrd0p6b::::res://mechanics/Player/node_3d.tscn<>uid://b5j4cr3xx3olk::::res://assets/models/prototyp_8017-normal.jpg<>uid://cbm1imohoschq::::res://assets/models/prototyp_38ebb6_2515fa7e0ef74758a2f8a6adc7b867de~mv2.jpg<>uid://cuah07tkcv0tv::::res://assets/models/prototyp_0eea4b826599b804f7b0db99e8741b3e (1).png<>uid://bvmgvs5ttf7f5::::res://assets/models/prototyp_brick-wall-stone-bricks-rock-surface-cartoon-style-seamless_191307-535.png<>uid://b7aos5ba5ift4::::res://assets/models/prototyp_360_F_257717689_dOEzjdOvMhY2lZbsWM1eVGum8v7yTBWx.jpg<>uid://c1ed05li6c5pd::::res://assets/models/prototyp4_8017-normal.jpg<>uid://cworeflv4g4ct::::res://assets/models/prototyp4_38ebb6_2515fa7e0ef74758a2f8a6adc7b867de~mv2.jpg<>uid://bfcibpy2rsirf::::res://assets/models/double_trash_bags.obj<>uid://cs3eo786kk6wl::::res://assets/models/prototyp4_1000_F_506249130_NuCs1XOcDm59hn4qhZEw2e8N64NSJRAF.jpg<>uid://bmrq0v6mprlfw::::res://assets/models/traffic_cone.obj<>uid://bjnetetpcwbxu::::res://assets/models/prototyp4_normal-map-wall-texture-normal-mapping-photo.jpg<>uid://dwfc4k5batkf2::::res://assets/models/bricks_8017-normal.jpg<>uid://qc6iyco4u5e8::::res://assets/models/isoslierung_38ebb6_2515fa7e0ef74758a2f8a6adc7b867de~mv2.jpg
+::res://scenes/CorePlayable/::1715443964
+CorePlayable.tscn::PackedScene::367638352014426829::1715443964::0::1::::<><>::res://scenes/CorePlayable/world.gd<>uid://k0fmfgl0bft6::::res://assets/models/kloofendal_48d_partly_cloudy_puresky_2k.hdr<>uid://c6ub5x3yfjwfq::::res://mechanics/build_wall/wall.tscn<>uid://0he1lqnqyqvf::::res://mechanics/cement-mixing/zementmischer.tscn<>uid://cc4eoydeq1jwv::::res://UI/player_ui/info hub.tscn<>uid://cyxbogh4cdp8::::res://assets/models/eimer_wasser_1.webp<>uid://cxv4g3lrd0p6b::::res://mechanics/Player/node_3d.tscn<>uid://b5j4cr3xx3olk::::res://assets/models/prototyp_8017-normal.jpg<>uid://cbm1imohoschq::::res://assets/models/prototyp_38ebb6_2515fa7e0ef74758a2f8a6adc7b867de~mv2.jpg<>uid://cuah07tkcv0tv::::res://assets/models/prototyp_0eea4b826599b804f7b0db99e8741b3e (1).png<>uid://bvmgvs5ttf7f5::::res://assets/models/prototyp_brick-wall-stone-bricks-rock-surface-cartoon-style-seamless_191307-535.png<>uid://b7aos5ba5ift4::::res://assets/models/prototyp_360_F_257717689_dOEzjdOvMhY2lZbsWM1eVGum8v7yTBWx.jpg<>uid://c1ed05li6c5pd::::res://assets/models/prototyp4_8017-normal.jpg<>uid://cworeflv4g4ct::::res://assets/models/prototyp4_38ebb6_2515fa7e0ef74758a2f8a6adc7b867de~mv2.jpg<>uid://bfcibpy2rsirf::::res://assets/models/double_trash_bags.obj<>uid://cs3eo786kk6wl::::res://assets/models/prototyp4_1000_F_506249130_NuCs1XOcDm59hn4qhZEw2e8N64NSJRAF.jpg<>uid://bmrq0v6mprlfw::::res://assets/models/traffic_cone.obj<>uid://bjnetetpcwbxu::::res://assets/models/prototyp4_normal-map-wall-texture-normal-mapping-photo.jpg<>uid://dwfc4k5batkf2::::res://assets/models/bricks_8017-normal.jpg<>uid://qc6iyco4u5e8::::res://assets/models/isoslierung_38ebb6_2515fa7e0ef74758a2f8a6adc7b867de~mv2.jpg
 world.gd::GDScript::-1::1715364921::0::1::::<>Node3D<>::
 ::res://scenes/ElektrikerScene/::1715364921
 Elektriker.tscn::PackedScene::4405951662758816784::1715364921::0::1::::<><>::res://scenes/ElektrikerScene/world.gd<>uid://k0fmfgl0bft6::::res://assets/models/kloofendal_48d_partly_cloudy_puresky_2k.hdr<>uid://cxv4g3lrd0p6b::::res://mechanics/Player/node_3d.tscn<>uid://cc4eoydeq1jwv::::res://ui/player_ui/info hub.tscn
@@ -158,20 +158,20 @@ Text + FP.tscn::PackedScene::5690061750290966257::1714321215::0::1::::<><>::uid:
 Text + Iso.tscn::PackedScene::2426334669002527147::1714321215::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://assets/models/low_poly_cat.obj<>res://scenes/Prototypes/Textcontrol.gd<>res://mechanics/Player/RayCast3D.gd<>uid://1f8wq8hkrxny::::res://assets/textures/Sprite-0001.png
 Text + TP.tscn::PackedScene::1170809510888540463::1714321215::0::1::::<><>::uid://dj0uc6jfc4h7w::::res://assets/models/low_poly_cat.obj<>res://scenes/Prototypes/Textcontrol.gd<>res://mechanics/Player/RayCast3D.gd<>uid://1f8wq8hkrxny::::res://assets/textures/Sprite-0001.png
 Textcontrol.gd::GDScript::-1::1714321215::0::1::::<>CharacterBody3D<>::
-::res://scenes/StuckateurScene/::1715364921
+::res://scenes/StuckateurScene/::1715377289
 Stuckateur.gd::GDScript::-1::1715364921::0::1::::<>Node3D<>::
-Stuckateur.tscn::PackedScene::1336356205788386795::1715364921::0::1::::<><>::uid://k0fmfgl0bft6::::res://assets/models/kloofendal_48d_partly_cloudy_puresky_2k.hdr<>res://scenes/StuckateurScene/Stuckateur.gd<>uid://cxv4g3lrd0p6b::::res://mechanics/Player/node_3d.tscn<>uid://cc4eoydeq1jwv::::res://UI/player_ui/info hub.tscn<>uid://chngdy2vpbn5d::::res://mechanics/StudWall/stud_wall.tscn<>uid://qc6iyco4u5e8::::res://assets/models/isoslierung_38ebb6_2515fa7e0ef74758a2f8a6adc7b867de~mv2.jpg
+Stuckateur.tscn::PackedScene::1336356205788386795::1715377289::0::1::::<><>::uid://k0fmfgl0bft6::::res://assets/models/kloofendal_48d_partly_cloudy_puresky_2k.hdr<>res://scenes/StuckateurScene/Stuckateur.gd<>uid://cxv4g3lrd0p6b::::res://mechanics/Player/node_3d.tscn<>uid://cc4eoydeq1jwv::::res://UI/player_ui/info hub.tscn<>uid://chngdy2vpbn5d::::res://mechanics/StudWall/stud_wall.tscn<>uid://qc6iyco4u5e8::::res://assets/models/isoslierung_38ebb6_2515fa7e0ef74758a2f8a6adc7b867de~mv2.jpg
 ::res://scripts/::1715364921
 global.gd::GDScript::-1::1715364921::0::1::::<>Node<>::
 ::res://UI/::1714565620
-::res://UI/Inventory/::1715364921
-inventory.gd::GDScript::-1::1715364921::0::1::::<>Control<>::
-inventory.tscn::PackedScene::7838211368217593182::1715364921::0::1::::<><>::res://UI/Inventory/inventory.gd
-::res://UI/player_ui/::1715364921
+::res://UI/Inventory/::1715377289
+inventory.gd::GDScript::-1::1715366878::0::1::::<>Control<>::
+inventory.tscn::PackedScene::7838211368217593182::1715377289::0::1::::<><>::res://UI/Inventory/inventory.gd
+::res://UI/player_ui/::1715377289
 Checklist.gd::GDScript::-1::1714321215::0::1::::<>Node2D<>::
 checklist.tscn::PackedScene::2993137486329213323::1715364921::0::1::::<><>::res://ui/player_ui/Checklist.gd<>uid://dr813mjfqn5n4::::res://assets/textures/warning_sample.jpg<>uid://ccolb6uftch63::::res://assets/fonts/AldotheApache.ttf
 info hub.tscn::PackedScene::4973355144014707637::1715364921::0::1::::<><>::res://ui/player_ui/TabContainer.gd<>uid://biv5si5cbepod::::res://ui/player_ui/checklist.tscn<>uid://dr813mjfqn5n4::::res://assets/textures/warning_sample.jpg<>uid://cdpolkwg0t10a::::res://ui/player_ui/transition.tscn<>uid://ccfrjw5825ajn::::res://ui/player_ui/settings.tscn
-settings.tscn::PackedScene::4924590407849204863::1715364921::0::1::::<><>::res://Settings.gd
+settings.tscn::PackedScene::4924590407849204863::1715377289::0::1::::<><>::res://Settings.gd
 TabContainer.gd::GDScript::-1::1715004062::0::1::::<>Control<>::
 transition.gd::GDScript::-1::1714321215::0::1::::<>CanvasLayer<>::
 transition.tscn::PackedScene::5015243805768877474::1715007954::0::1::::<><>::res://ui/player_ui/transition.gd

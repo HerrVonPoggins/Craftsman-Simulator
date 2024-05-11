@@ -5,5 +5,4 @@ res://mechanics/Player/node_3d.tscn
 res://mechanics/StudWall/stud_wall.tscn
 res://UI/Inventory/inventory.tscn
 res://mechanics/Player/RayCast3D.gd
-res://UI/Inventory/inventory.gd
 res://ui/player_ui/settings.tscn
