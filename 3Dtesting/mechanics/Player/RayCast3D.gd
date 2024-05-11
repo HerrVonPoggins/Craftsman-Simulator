@@ -64,9 +64,7 @@ func _process(delta):
 func _on_player_concrete_bucket_pos_reached():
 	obj = null
 
-
 func _on_inventory_trowel_button_clicked():
 	var new_trowel = trowel.instantiate()
-	new_trowel.freeze = true
 	new_trowel.global_position = hold.global_position
 	add_child(new_trowel)

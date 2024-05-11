@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 CollisionShape3D
 Area3D
 MeshInstance3D
 RigidBody3D
+=======
+CSGMesh3D
+WorldEnvironment
+>>>>>>> 31ca6a69c88176aa046ede80a0d8ef6227b39daf
 Marker3D
 CanvasLayer
 TabBar
@@ -11,4 +16,8 @@ Label
 HScrollBar
 Button
 Panel
+<<<<<<< HEAD
 Node3D
+=======
+Area3D
+>>>>>>> 31ca6a69c88176aa046ede80a0d8ef6227b39daf
