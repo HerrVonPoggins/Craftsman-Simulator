@@ -75,18 +75,22 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 
 	#WASD Controls
-	var input_dir = Input.get_vector("left", "right", "forward", "back")
-	var direction = (neck.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if is_on_floor():
-		if direction:
-			velocity.x = direction.x * speed
-			velocity.z = direction.z * speed
+	if Global.stay == true:
+		velocity.x = 0
+		velocity.z = 0
+	if Global.stay == false:
+		var input_dir = Input.get_vector("left", "right", "forward", "back")
+		var direction = (neck.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+		if is_on_floor():
+			if direction:
+				velocity.x = direction.x * speed
+				velocity.z = direction.z * speed
+			else:
+				velocity.x = lerp(velocity.x, direction.x * speed, delta * 7.0)
+				velocity.z = lerp(velocity.z, direction.z * speed, delta * 7.0)
 		else:
-			velocity.x = lerp(velocity.x, direction.x * speed, delta * 7.0)
-			velocity.z = lerp(velocity.z, direction.z * speed, delta * 7.0)
-	else:
-		velocity.x = lerp(velocity.x, direction.x * speed, delta * 2.0)
-		velocity.z = lerp(velocity.z, direction.z * speed, delta * 2.0)
+			velocity.x = lerp(velocity.x, direction.x * speed, delta * 2.0)
+			velocity.z = lerp(velocity.z, direction.z * speed, delta * 2.0)
 
 	#head bob
 	if is_crouching == false:

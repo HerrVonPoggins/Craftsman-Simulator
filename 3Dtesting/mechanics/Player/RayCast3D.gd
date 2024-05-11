@@ -57,7 +57,9 @@ func _process(delta):
 #rightclick to release object
 	if Input.is_action_pressed("rightclick"):
 		obj = null
-
+	if Global.let_go == true:
+		obj = null
+		Global.let_go = false
 
 func _on_player_concrete_bucket_pos_reached():
 	obj = null

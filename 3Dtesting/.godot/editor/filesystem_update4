@@ -1,8 +1,10 @@
-res://scenes/CorePlayable/CorePlayable.tscn
+res://ui/screens/titlescreen.tscn
 res://Settings.gd
-res://scenes/StuckateurScene/Stuckateur.tscn
-res://mechanics/Player/node_3d.tscn
+res://mechanics/PowerBox/power_box.tscn
+res://scenes/CorePlayable/CorePlayable.tscn
 res://mechanics/StudWall/stud_wall.tscn
-res://UI/Inventory/inventory.tscn
-res://mechanics/Player/RayCast3D.gd
+res://ui/player_ui/info hub.tscn
 res://ui/player_ui/settings.tscn
+res://mechanics/build_wall/wall.tscn
+res://ui/Inventory/inventory.tscn
+res://scenes/StuckateurScene/Stuckateur.tscn

@@ -1,0 +1,83 @@
+[gd_scene load_steps=5 format=3 uid="uid://ck2ddnhldnuci"]
+
+[ext_resource type="Script" path="res://mechanics/PowerBox/power_box.gd" id="1_h030n"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_8jjky"]
+size = Vector3(0.1, 1.2, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_i3ntx"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.05
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_s2plp"]
+radius = 0.120437
+
+[node name="PowerBox" type="Node3D"]
+script = ExtResource("1_h030n")
+
+[node name="Back" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_8jjky")
+
+[node name="Outlet2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.415032, 0.451547)
+mesh = SubResource("CylinderMesh_i3ntx")
+
+[node name="OutletRange2" type="Area3D" parent="Outlet2"]
+transform = Transform3D(1, 0, 0, 0, 1, 3.55271e-15, 0, -3.55271e-15, 1, 0.0740104, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Outlet2/OutletRange2"]
+shape = SubResource("SphereShape3D_s2plp")
+
+[node name="Outlet3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.0175057, 0.451547)
+mesh = SubResource("CylinderMesh_i3ntx")
+
+[node name="OutletRange3" type="Area3D" parent="Outlet3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Outlet3/OutletRange3"]
+shape = SubResource("SphereShape3D_s2plp")
+
+[node name="Outlet4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -0.413666, 0.451547)
+mesh = SubResource("CylinderMesh_i3ntx")
+
+[node name="OutletRange4" type="Area3D" parent="Outlet4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Outlet4/OutletRange4"]
+shape = SubResource("SphereShape3D_s2plp")
+
+[node name="Outlet5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -0.413666, -0.438275)
+mesh = SubResource("CylinderMesh_i3ntx")
+
+[node name="OutletRange5" type="Area3D" parent="Outlet5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Outlet5/OutletRange5"]
+shape = SubResource("SphereShape3D_s2plp")
+
+[node name="Outlet6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.0135158, -0.438275)
+mesh = SubResource("CylinderMesh_i3ntx")
+
+[node name="OutletRange6" type="Area3D" parent="Outlet6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Outlet6/OutletRange6"]
+shape = SubResource("SphereShape3D_s2plp")
+
+[node name="Outlet7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.403912, -0.438275)
+mesh = SubResource("CylinderMesh_i3ntx")
+
+[node name="OutletRange7" type="Area3D" parent="Outlet7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Outlet7/OutletRange7"]
+shape = SubResource("SphereShape3D_s2plp")
+
+[connection signal="body_entered" from="Outlet2/OutletRange2" to="." method="_on_outlet_range_2_body_entered"]
+[connection signal="body_exited" from="Outlet2/OutletRange2" to="." method="_on_outlet_range_2_body_exited"]
+[connection signal="body_entered" from="Outlet3/OutletRange3" to="." method="_on_outlet_range_3_body_entered"]
+[connection signal="body_entered" from="Outlet4/OutletRange4" to="." method="_on_outlet_range_4_body_entered"]
+[connection signal="body_entered" from="Outlet5/OutletRange5" to="." method="_on_outlet_range_5_body_entered"]
+[connection signal="body_entered" from="Outlet6/OutletRange6" to="." method="_on_outlet_range_6_body_entered"]
+[connection signal="body_entered" from="Outlet7/OutletRange7" to="." method="_on_outlet_range_7_body_entered"]
