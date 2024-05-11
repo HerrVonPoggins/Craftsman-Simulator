@@ -6,3 +6,4 @@ res://mechanics/StudWall/stud_wall.tscn
 res://UI/Inventory/inventory.tscn
 res://mechanics/Player/RayCast3D.gd
 res://ui/player_ui/settings.tscn
+res://scenes/Carpenter/carpenter_world.tscn

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbwo7p8h85rtt"]
+
+[ext_resource type="PackedScene" uid="uid://cxv4g3lrd0p6b" path="res://mechanics/Player/node_3d.tscn" id="1_vr1d5"]
+
+[sub_resource type="Environment" id="Environment_d4kmn"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_p316q"]
+size = Vector2(20, 20)
+
+[node name="CarpenterWorld" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_d4kmn")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+mesh = SubResource("PlaneMesh_p316q")
+
+[node name="Player" parent="." instance=ExtResource("1_vr1d5")]
