@@ -1,10 +1,2 @@
-res://ui/screens/titlescreen.tscn
 res://Settings.gd
-res://mechanics/PowerBox/power_box.tscn
-res://mechanics/StudWall/stud_wall.tscn
-res://ui/player_ui/info hub.tscn
-res://ui/player_ui/settings.tscn
-res://scenes/CorePlayable/CorePlayable.tscn
-res://mechanics/build_wall/wall.tscn
-res://ui/Inventory/inventory.tscn
-res://scenes/StuckateurScene/Stuckateur.tscn
+res://scenes/Carpenter/carpenter_world.tscn

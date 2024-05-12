@@ -16,3 +16,5 @@ environment = SubResource("Environment_d4kmn")
 mesh = SubResource("PlaneMesh_p316q")
 
 [node name="Player" parent="." instance=ExtResource("1_vr1d5")]
+
+[node name="Props" type="Node3D" parent="."]
