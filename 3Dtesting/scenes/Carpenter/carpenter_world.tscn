@@ -1,20 +1,153 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbwo7p8h85rtt"]
+[gd_scene load_steps=11 format=3 uid="uid://cbwo7p8h85rtt"]
 
 [ext_resource type="PackedScene" uid="uid://cxv4g3lrd0p6b" path="res://mechanics/Player/node_3d.tscn" id="1_vr1d5"]
+[ext_resource type="PackedScene" uid="uid://bncehlcg0sopv" path="res://mechanics/Carpenter-Areas/stairs.tscn" id="2_m6mv6"]
 
 [sub_resource type="Environment" id="Environment_d4kmn"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_p316q"]
-size = Vector2(20, 20)
+[sub_resource type="PlaneMesh" id="PlaneMesh_sa11d"]
+size = Vector2(100, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ge5c"]
+albedo_color = Color(0.278431, 0.278431, 0.278431, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_5rnvt"]
+data = PackedVector3Array(50, 0, 50, -50, 0, 50, 50, 0, -50, -50, 0, 50, -50, 0, -50, 50, 0, -50)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4scgb"]
+size = Vector3(16, 2.3, 0.48)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2lw57"]
+points = PackedVector3Array(8, 1.15, 0.24, 8, 1.15, -0.24, -8, 1.15, 0.24, 8, -1.15, 0.24, 8, -1.15, -0.24, -8, 1.15, -0.24, -8, -1.15, 0.24, -8, -1.15, -0.24)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xn026"]
+size = Vector3(1.415, 0.25, 4.295)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wyqp0"]
+points = PackedVector3Array(0.7075, 0.125, 2.1475, 0.7075, -0.125, 2.1475, 0.7075, 0.125, -2.1475, -0.7075, 0.125, 2.1475, -0.7075, -0.125, 2.1475, 0.7075, -0.125, -2.1475, -0.7075, 0.125, -2.1475, -0.7075, -0.125, -2.1475)
 
 [node name="CarpenterWorld" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_d4kmn")
 
-[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
-mesh = SubResource("PlaneMesh_p316q")
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.330399, -0.624174, 0.707986, -6.61764e-10, 0.750111, 0.661312, -0.943841, -0.218497, 0.247836, 27.5737, 18.4035, -38.953)
+light_color = Color(0.8, 0.784314, 0.776471, 1)
+shadow_enabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_sa11d")
+surface_material_override/0 = SubResource("StandardMaterial3D_1ge5c")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_5rnvt")
 
 [node name="Player" parent="." instance=ExtResource("1_vr1d5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.162058, 0)
+
+[node name="Stairs" parent="." instance=ExtResource("2_m6mv6")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -0.258987, 4.16967, -8.70824)
 
 [node name="Props" type="Node3D" parent="."]
+
+[node name="Wallguide" type="RigidBody3D" parent="Props" groups=["grab", "wallguide"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.088, 6.37346, 0)
+
+[node name="Wallguide" type="MeshInstance3D" parent="Props/Wallguide"]
+transform = Transform3D(0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0, 1, -1.09165, 1.53879, 0.061)
+mesh = SubResource("BoxMesh_4scgb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Wallguide"]
+transform = Transform3D(0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0, 1, -1.09165, 1.53879, 0.061)
+shape = SubResource("ConvexPolygonShape3D_2lw57")
+
+[node name="Step1" type="RigidBody3D" parent="Props" groups=["grab", "step"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9889, 0.267962, 0)
+
+[node name="Step1" type="MeshInstance3D" parent="Props/Step1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_xn026")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Step1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wyqp0")
+
+[node name="Step2" type="RigidBody3D" parent="Props" groups=["grab", "step"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.3832, 0.267962, 0)
+
+[node name="Step1" type="MeshInstance3D" parent="Props/Step2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_xn026")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Step2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wyqp0")
+
+[node name="Step3" type="RigidBody3D" parent="Props" groups=["grab", "step"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7098, 0.267962, 0)
+
+[node name="Step1" type="MeshInstance3D" parent="Props/Step3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_xn026")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Step3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wyqp0")
+
+[node name="Step4" type="RigidBody3D" parent="Props" groups=["grab", "step"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5352, 0.267962, 0)
+
+[node name="Step1" type="MeshInstance3D" parent="Props/Step4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_xn026")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Step4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wyqp0")
+
+[node name="Step5" type="RigidBody3D" parent="Props" groups=["grab", "step"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5399, 0.267962, 0)
+
+[node name="Step1" type="MeshInstance3D" parent="Props/Step5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_xn026")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Step5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wyqp0")
+
+[node name="Step6" type="RigidBody3D" parent="Props" groups=["grab", "step"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.2253, 0.267962, 0)
+
+[node name="Step1" type="MeshInstance3D" parent="Props/Step6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_xn026")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Step6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wyqp0")
+
+[node name="Step7" type="RigidBody3D" parent="Props" groups=["grab", "step"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0044, 0.267962, 0)
+
+[node name="Step1" type="MeshInstance3D" parent="Props/Step7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_xn026")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Step7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wyqp0")
+
+[node name="Step8" type="RigidBody3D" parent="Props" groups=["grab", "step"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8955, 0.267962, 0)
+
+[node name="Step1" type="MeshInstance3D" parent="Props/Step8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_xn026")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Step8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wyqp0")
