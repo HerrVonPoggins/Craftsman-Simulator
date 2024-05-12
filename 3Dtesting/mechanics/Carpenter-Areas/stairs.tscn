@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bncehlcg0sopv"]
+[gd_scene load_steps=14 format=3 uid="uid://bncehlcg0sopv"]
 
 [ext_resource type="Script" path="res://mechanics/Carpenter-Areas/stairs.gd" id="1_ue7se"]
 
@@ -8,8 +8,35 @@ size = Vector3(15.1132, 9.42497, 4.39282)
 [sub_resource type="BoxMesh" id="BoxMesh_krv0d"]
 size = Vector3(16, 2.3, 0.48)
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_bi0bh"]
+points = PackedVector3Array(8, 1.15, 0.24, 8, 1.15, -0.24, -8, 1.15, 0.24, 8, -1.15, 0.24, 8, -1.15, -0.24, -8, 1.15, -0.24, -8, -1.15, 0.24, -8, -1.15, -0.24)
+
 [sub_resource type="BoxMesh" id="BoxMesh_dv3u8"]
 size = Vector3(1.415, 0.25, 4.295)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_g2dog"]
+points = PackedVector3Array(0.7075, 0.125, 2.1475, 0.7075, -0.125, 2.1475, 0.7075, 0.125, -2.1475, -0.7075, 0.125, 2.1475, -0.7075, -0.125, 2.1475, 0.7075, -0.125, -2.1475, -0.7075, 0.125, -2.1475, -0.7075, -0.125, -2.1475)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_cpgse"]
+points = PackedVector3Array(0.7075, 0.125, 2.1475, 0.7075, -0.125, 2.1475, 0.7075, 0.125, -2.1475, -0.7075, 0.125, 2.1475, -0.7075, -0.125, 2.1475, 0.7075, -0.125, -2.1475, -0.7075, 0.125, -2.1475, -0.7075, -0.125, -2.1475)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_htc8h"]
+points = PackedVector3Array(0.7075, 0.125, 2.1475, 0.7075, -0.125, 2.1475, 0.7075, 0.125, -2.1475, -0.7075, 0.125, 2.1475, -0.7075, -0.125, 2.1475, 0.7075, -0.125, -2.1475, -0.7075, 0.125, -2.1475, -0.7075, -0.125, -2.1475)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_uur78"]
+points = PackedVector3Array(0.7075, 0.125, 2.1475, 0.7075, -0.125, 2.1475, 0.7075, 0.125, -2.1475, -0.7075, 0.125, 2.1475, -0.7075, -0.125, 2.1475, 0.7075, -0.125, -2.1475, -0.7075, 0.125, -2.1475, -0.7075, -0.125, -2.1475)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_a0ekc"]
+points = PackedVector3Array(0.7075, 0.125, 2.1475, 0.7075, -0.125, 2.1475, 0.7075, 0.125, -2.1475, -0.7075, 0.125, 2.1475, -0.7075, -0.125, 2.1475, 0.7075, -0.125, -2.1475, -0.7075, 0.125, -2.1475, -0.7075, -0.125, -2.1475)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hec83"]
+points = PackedVector3Array(0.7075, 0.125, 2.1475, 0.7075, -0.125, 2.1475, 0.7075, 0.125, -2.1475, -0.7075, 0.125, 2.1475, -0.7075, -0.125, 2.1475, 0.7075, -0.125, -2.1475, -0.7075, 0.125, -2.1475, -0.7075, -0.125, -2.1475)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qq31r"]
+points = PackedVector3Array(0.7075, 0.125, 2.1475, 0.7075, -0.125, 2.1475, 0.7075, 0.125, -2.1475, -0.7075, 0.125, 2.1475, -0.7075, -0.125, 2.1475, 0.7075, -0.125, -2.1475, -0.7075, 0.125, -2.1475, -0.7075, -0.125, -2.1475)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nepyp"]
+points = PackedVector3Array(0.7075, 0.125, 2.1475, 0.7075, -0.125, 2.1475, 0.7075, 0.125, -2.1475, -0.7075, 0.125, 2.1475, -0.7075, -0.125, 2.1475, 0.7075, -0.125, -2.1475, -0.7075, 0.125, -2.1475, -0.7075, -0.125, -2.1475)
 
 [node name="Stairs" type="Node3D"]
 script = ExtResource("1_ue7se")
@@ -22,47 +49,100 @@ shape = SubResource("BoxShape3D_l2dkw")
 
 [node name="Wallguide" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0, 1, -1.09165, 1.53879, 0.061)
-visible = false
 mesh = SubResource("BoxMesh_krv0d")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wallguide"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wallguide/StaticBody3D"]
+transform = Transform3D(1, 2.98023e-08, 0, -2.98023e-08, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_bi0bh")
 
 [node name="Step1" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, -2.4, 2.4)
 visible = false
 mesh = SubResource("BoxMesh_dv3u8")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Step1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Step1/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_g2dog")
+
 [node name="Step2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1, -1.4, 2.29)
 visible = false
 mesh = SubResource("BoxMesh_dv3u8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Step2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Step2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_cpgse")
 
 [node name="Step3" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, -0.4, 2.29)
 visible = false
 mesh = SubResource("BoxMesh_dv3u8")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Step3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Step3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_htc8h")
+
 [node name="Step4" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.6, 2.29)
 visible = false
 mesh = SubResource("BoxMesh_dv3u8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Step4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Step4/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_uur78")
 
 [node name="Step5" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 1.6, 2.29)
 visible = false
 mesh = SubResource("BoxMesh_dv3u8")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Step5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Step5/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_a0ekc")
+
 [node name="Step6" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 2.6, 2.29)
 visible = false
 mesh = SubResource("BoxMesh_dv3u8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Step6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Step6/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_hec83")
 
 [node name="Step7" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 3.6, 2.29)
 visible = false
 mesh = SubResource("BoxMesh_dv3u8")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Step7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Step7/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_qq31r")
+
 [node name="Step8" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2, 4.535, 2.324)
 visible = false
 mesh = SubResource("BoxMesh_dv3u8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Step8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Step8/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_nepyp")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
