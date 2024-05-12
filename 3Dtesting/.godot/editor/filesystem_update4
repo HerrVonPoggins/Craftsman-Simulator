@@ -1,2 +1,5 @@
 res://Settings.gd
 res://scenes/Carpenter/carpenter_world.tscn
+res://mechanics/Carpenter-Areas/stairs.tscn
+res://mechanics/Carpenter-Areas/stairs.gd
+res://mechanics/StudWall/stud_wall.tscn

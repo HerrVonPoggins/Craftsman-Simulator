@@ -1,12 +1,57 @@
-[gd_scene load_steps=2 format=3 uid="uid://bncehlcg0sopv"]
+[gd_scene load_steps=5 format=3 uid="uid://bncehlcg0sopv"]
+
+[ext_resource type="Script" path="res://mechanics/Carpenter-Areas/stairs.gd" id="1_ue7se"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l2dkw"]
 size = Vector3(2.66733, 1.93665, 0.999512)
 
+[sub_resource type="BoxMesh" id="BoxMesh_krv0d"]
+size = Vector3(2.135, 0.315, 0.055)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dv3u8"]
+size = Vector3(0.19, 0.035, 0.715)
+
 [node name="Stairs" type="Node3D"]
+script = ExtResource("1_ue7se")
 
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33392, 0.978509, 0.500508)
 shape = SubResource("BoxShape3D_l2dkw")
+
+[node name="Wallguide" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.819152, 0.573576, 0, -0.573576, 0.819152, 0, 0, 0, 1, 1.358, 0.916, 0.061)
+mesh = SubResource("BoxMesh_krv0d")
+
+[node name="Step1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.3, 0.436)
+mesh = SubResource("BoxMesh_dv3u8")
+
+[node name="Step2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8, 0.45, 0.436)
+mesh = SubResource("BoxMesh_dv3u8")
+
+[node name="Step3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6, 0.6, 0.436)
+mesh = SubResource("BoxMesh_dv3u8")
+
+[node name="Step4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, 0.75, 0.436)
+mesh = SubResource("BoxMesh_dv3u8")
+
+[node name="Step5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 0.9, 0.436)
+mesh = SubResource("BoxMesh_dv3u8")
+
+[node name="Step6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.05, 0.436)
+mesh = SubResource("BoxMesh_dv3u8")
+
+[node name="Step7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 1.2, 0.436)
+mesh = SubResource("BoxMesh_dv3u8")
+
+[node name="Step8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 1.35, 0.436)
+mesh = SubResource("BoxMesh_dv3u8")
