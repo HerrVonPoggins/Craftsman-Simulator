@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://b1md7g3p8mtdf"
+path="res://.godot/imported/spirit_level_needed.dialogue-351c83124d699cab29b351c745a9f56f.tres"
+
+[deps]
+
+source_file="res://dialoguefiles/spirit_level_needed.dialogue"
+dest_files=["res://.godot/imported/spirit_level_needed.dialogue-351c83124d699cab29b351c745a9f56f.tres"]
+
+[params]
+
+defaults=true
