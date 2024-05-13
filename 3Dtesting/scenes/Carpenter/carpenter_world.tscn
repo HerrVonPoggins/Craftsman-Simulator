@@ -3,6 +3,8 @@
 [ext_resource type="Script" path="res://scenes/Carpenter/carpenter_world.gd" id="1_afk8f"]
 [ext_resource type="PackedScene" uid="uid://cxv4g3lrd0p6b" path="res://mechanics/Player/node_3d.tscn" id="1_vr1d5"]
 [ext_resource type="PackedScene" uid="uid://bncehlcg0sopv" path="res://mechanics/Carpenter-Areas/stairs.tscn" id="2_m6mv6"]
+[ext_resource type="BoxMesh" uid="uid://b7qpr6ucdmfmq" path="res://assets/carpenter-assets/wallguide_mesh(unplaned).tres" id="4_f6o6e"]
+[ext_resource type="BoxMesh" uid="uid://bcokw07emnd0j" path="res://assets/carpenter-assets/step_mesh(unplaned).tres" id="5_edkhr"]
 
 [sub_resource type="Environment" id="Environment_d4kmn"]
 
@@ -15,14 +17,8 @@ albedo_color = Color(0.278431, 0.278431, 0.278431, 1)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_5rnvt"]
 data = PackedVector3Array(50, 0, 50, -50, 0, 50, 50, 0, -50, -50, 0, 50, -50, 0, -50, 50, 0, -50)
 
-[sub_resource type="BoxMesh" id="BoxMesh_4scgb"]
-size = Vector3(16, 2.3, 0.48)
-
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2lw57"]
 points = PackedVector3Array(8, 1.15, 0.24, 8, 1.15, -0.24, -8, 1.15, 0.24, 8, -1.15, 0.24, 8, -1.15, -0.24, -8, 1.15, -0.24, -8, -1.15, 0.24, -8, -1.15, -0.24)
-
-[sub_resource type="BoxMesh" id="BoxMesh_xn026"]
-size = Vector3(1.415, 0.25, 4.295)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wyqp0"]
 points = PackedVector3Array(0.7075, 0.125, 2.1475, 0.7075, -0.125, 2.1475, 0.7075, 0.125, -2.1475, -0.7075, 0.125, 2.1475, -0.7075, -0.125, 2.1475, 0.7075, -0.125, -2.1475, -0.7075, 0.125, -2.1475, -0.7075, -0.125, -2.1475)
@@ -68,7 +64,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.088, 6.37346, 0)
 
 [node name="Wallguide" type="MeshInstance3D" parent="Props/Wallguide"]
 transform = Transform3D(0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0, 1, -1.09165, 1.53879, 0.061)
-mesh = SubResource("BoxMesh_4scgb")
+mesh = ExtResource("4_f6o6e")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Wallguide"]
 transform = Transform3D(0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0, 1, -1.09165, 1.53879, 0.061)
@@ -78,7 +74,7 @@ shape = SubResource("ConvexPolygonShape3D_2lw57")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9889, 0.267962, 0)
 
 [node name="Step1" type="MeshInstance3D" parent="Props/Step1"]
-mesh = SubResource("BoxMesh_xn026")
+mesh = ExtResource("5_edkhr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Step1"]
 shape = SubResource("ConvexPolygonShape3D_wyqp0")
@@ -87,7 +83,7 @@ shape = SubResource("ConvexPolygonShape3D_wyqp0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.3832, 0.267962, 0)
 
 [node name="Step1" type="MeshInstance3D" parent="Props/Step2"]
-mesh = SubResource("BoxMesh_xn026")
+mesh = ExtResource("5_edkhr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Step2"]
 shape = SubResource("ConvexPolygonShape3D_wyqp0")
@@ -96,7 +92,7 @@ shape = SubResource("ConvexPolygonShape3D_wyqp0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7098, 0.267962, 0)
 
 [node name="Step1" type="MeshInstance3D" parent="Props/Step3"]
-mesh = SubResource("BoxMesh_xn026")
+mesh = ExtResource("5_edkhr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Step3"]
 shape = SubResource("ConvexPolygonShape3D_wyqp0")
@@ -105,7 +101,7 @@ shape = SubResource("ConvexPolygonShape3D_wyqp0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5352, 0.267962, 0)
 
 [node name="Step1" type="MeshInstance3D" parent="Props/Step4"]
-mesh = SubResource("BoxMesh_xn026")
+mesh = ExtResource("5_edkhr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Step4"]
 shape = SubResource("ConvexPolygonShape3D_wyqp0")
@@ -114,7 +110,7 @@ shape = SubResource("ConvexPolygonShape3D_wyqp0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5399, 0.267962, 0)
 
 [node name="Step1" type="MeshInstance3D" parent="Props/Step5"]
-mesh = SubResource("BoxMesh_xn026")
+mesh = ExtResource("5_edkhr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Step5"]
 shape = SubResource("ConvexPolygonShape3D_wyqp0")
@@ -123,7 +119,7 @@ shape = SubResource("ConvexPolygonShape3D_wyqp0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.2253, 0.267962, 0)
 
 [node name="Step1" type="MeshInstance3D" parent="Props/Step6"]
-mesh = SubResource("BoxMesh_xn026")
+mesh = ExtResource("5_edkhr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Step6"]
 shape = SubResource("ConvexPolygonShape3D_wyqp0")
@@ -132,7 +128,7 @@ shape = SubResource("ConvexPolygonShape3D_wyqp0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0044, 0.267962, 0)
 
 [node name="Step1" type="MeshInstance3D" parent="Props/Step7"]
-mesh = SubResource("BoxMesh_xn026")
+mesh = ExtResource("5_edkhr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Step7"]
 shape = SubResource("ConvexPolygonShape3D_wyqp0")
@@ -141,7 +137,7 @@ shape = SubResource("ConvexPolygonShape3D_wyqp0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8955, 0.267962, 0)
 
 [node name="Step1" type="MeshInstance3D" parent="Props/Step8"]
-mesh = SubResource("BoxMesh_xn026")
+mesh = ExtResource("5_edkhr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Step8"]
 shape = SubResource("ConvexPolygonShape3D_wyqp0")
@@ -155,3 +151,5 @@ mesh = SubResource("CylinderMesh_c487c")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Planer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.69861, 0.246992, 0)
 shape = SubResource("ConvexPolygonShape3D_0ydn2")
+
+[connection signal="body_entered" from="Props/Wallguide" to="." method="_on_wallguide_body_entered"]
