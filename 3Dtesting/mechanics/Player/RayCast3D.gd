@@ -36,7 +36,12 @@ func _process(delta):
 					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_text.dialogue"))
 				if collider.is_in_group("cement_mixer"):
 					player.emit_signal("start_mixer")
-
+				if collider.is_in_group("helmet"):
+					collider.queue_free()
+				if collider.is_in_group("gloves"):
+					collider.queue_free()
+				if collider.is_in_group("boots"):
+					collider.queue_free()
 
 
 	if obj != null:
