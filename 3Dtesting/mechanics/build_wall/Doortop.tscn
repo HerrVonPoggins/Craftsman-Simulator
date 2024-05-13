@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckkechdc8rspf"]
+
+[ext_resource type="Script" path="res://mechanics/build_wall/Doortop.gd" id="1_4y07e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_obhal"]
+size = Vector3(4.65479, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kk8yt"]
+size = Vector3(5, 0.5, 0.5)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_iyopy"]
+radius = 0.2
+height = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ymfu"]
+albedo_color = Color(0.576471, 0.576471, 0.576471, 1)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_4y07e")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_obhal")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
+visible = false
+mesh = SubResource("BoxMesh_kk8yt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.39467, 0, 0.151218)
+visible = false
+mesh = SubResource("CapsuleMesh_iyopy")
+surface_material_override/0 = SubResource("StandardMaterial3D_0ymfu")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37425, 0, 0.151218)
+visible = false
+mesh = SubResource("CapsuleMesh_iyopy")
+surface_material_override/0 = SubResource("StandardMaterial3D_0ymfu")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
