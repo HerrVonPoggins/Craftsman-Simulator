@@ -1,12 +1,9 @@
-<<<<<<< Updated upstream
+Sprite2D
 PopupPanel
-=======
 Button
 CollisionShape2D
 Area2D
-Sprite2D
 StaticBody2D
->>>>>>> Stashed changes
 MeshInstance3D
 RigidBody3D
 Node3D
@@ -15,9 +12,3 @@ Area3D
 StaticBody3D
 CSGMesh3D
 WorldEnvironment
-Marker3D
-CanvasLayer
-TabBar
-TabContainer
-RayCast3D
-Label
