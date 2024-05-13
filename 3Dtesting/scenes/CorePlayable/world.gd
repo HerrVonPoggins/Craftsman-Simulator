@@ -20,6 +20,8 @@ func _process(delta):
 		await $WallAnimation.animation_finished
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_intro.dialogue"))
 
+	if $StringWedge/MeshInstance3D.visible == true and $StringWedge2/MeshInstance3D.visible == true:
+		$StringWedge/String.visible = true
 
 #functions for the info hub to pause the scene
 func _on_control_opened():
@@ -59,3 +61,16 @@ func _on_isolation_area_body_entered(body):
 		elif $Props/Isolation2.visible == true and counter == 2:
 			$Props/Isolation3.visible = true
 			Global.isolation = true
+
+
+func _on_string_wedge_body_entered(body):
+	if body.is_in_group("wedge"):
+		body.queue_free()
+		$StringWedge/MeshInstance3D.visible = true
+		$StringWedge/CollisionShape3D.call_deferred("set_disabled", true)
+
+func _on_string_wedge_2_body_entered(body):
+	if body.is_in_group("wedge"):
+		body.queue_free()
+		$StringWedge2/MeshInstance3D.visible = true
+		$StringWedge2/CollisionShape3D.call_deferred("set_disabled", true)

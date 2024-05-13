@@ -6,11 +6,9 @@ res://scenes/ElektrikerScene/Elektriker.tscn
 res://scenes/CorePlayable/CorePlayable.tscn
 res://mechanics/Player/node_3d.tscn
 res://mechanics/build_wall/wall.tscn
-res://addons/dialogue_manager/example_balloon/example_balloon.tscn
-res://ui/player_ui/checklist.tscn
-res://ui/player_ui/settings.tscn
 res://ui/player_ui/info hub.tscn
 res://scenes/StuckateurScene/Stuckateur.tscn
 res://mechanics/StudWall/stud_wall.tscn
 res://mechanics/build_wall/Doortop.tscn
-res://mechanics/build_wall/Doortop.gd
+res://scenes/CorePlayable/world.gd
+res://mechanics/Player/RayCast3D.gd
