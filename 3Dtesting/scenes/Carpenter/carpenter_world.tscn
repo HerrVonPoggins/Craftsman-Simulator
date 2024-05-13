@@ -52,7 +52,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_1ge5c")
 shape = SubResource("ConcavePolygonShape3D_5rnvt")
 
 [node name="Player" parent="." instance=ExtResource("1_vr1d5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.162058, 0)
 
 [node name="Stairs" parent="." instance=ExtResource("2_m6mv6")]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -0.258987, 4.16967, -8.70824)
@@ -60,14 +59,14 @@ transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -0.258987, 4.16967, -8.
 [node name="Props" type="Node3D" parent="."]
 
 [node name="Wallguide" type="RigidBody3D" parent="Props" groups=["grab", "wallguide"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.088, 6.37346, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.088, 2.89987, -2.49579)
 
 [node name="Wallguide" type="MeshInstance3D" parent="Props/Wallguide"]
-transform = Transform3D(0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0, 1, -1.09165, 1.53879, 0.061)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = ExtResource("4_f6o6e")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Wallguide"]
-transform = Transform3D(0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0, 1, -1.09165, 1.53879, 0.061)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_2lw57")
 
 [node name="Step1" type="RigidBody3D" parent="Props" groups=["grab", "step"]]
@@ -143,13 +142,12 @@ mesh = ExtResource("5_edkhr")
 shape = SubResource("ConvexPolygonShape3D_wyqp0")
 
 [node name="Planer" type="RigidBody3D" parent="." groups=["grab", "planer"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.55291, 0.325562, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Planer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.69861, 0.246992, 0)
 mesh = SubResource("CylinderMesh_c487c")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Planer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.69861, 0.246992, 0)
 shape = SubResource("ConvexPolygonShape3D_0ydn2")
 
 [connection signal="body_entered" from="Props/Wallguide" to="." method="_on_wallguide_body_entered"]

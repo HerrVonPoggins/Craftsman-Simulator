@@ -14,4 +14,4 @@ func _process(delta):
 
 func _on_wallguide_body_entered(body):
 	if body.is_in_group("planer"):
-		$Props/Wallguide/Wallguide.Mesh = planed_mesh_wallguide
+		$Props/Wallguide/Wallguide.mesh = planed_mesh_wallguide
