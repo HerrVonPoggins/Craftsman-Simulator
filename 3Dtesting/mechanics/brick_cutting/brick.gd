@@ -14,12 +14,13 @@ func follow_mouse():
 	#without it, the sprite gets teleported to the mouse once you click anywhere in the area
 	$".".position = get_global_mouse_position() + mouse_offset
 
-func _on_button_up():
+func _on_button_button_up():
 	selected = false
 
 
-func _on_button_down():
+func _on_button_button_down():
 	#if the input is the left mouse_button and the player keeps holding it, the variable selected gets set to true 
 	# -> follow_mouse can be called
 	mouse_offset = position - get_global_mouse_position()
 	selected = true
+

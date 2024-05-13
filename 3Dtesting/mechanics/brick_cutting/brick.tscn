@@ -1,34 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cvtdevokkwcld"]
+[gd_scene load_steps=5 format=3 uid="uid://bc1ob8y1y72qh"]
 
+[ext_resource type="Script" path="res://mechanics/brick_cutting/brick.gd" id="1_dc8fi"]
 [ext_resource type="Texture2D" uid="uid://c51l6bli4rw12" path="res://assets/textures/icon.svg" id="1_ppgmd"]
-
-[sub_resource type="GDScript" id="GDScript_36qcc"]
-script/source = "extends StaticBody2D
-
-var selected: bool = false
-var mouse_offset
-var selected_areas = []
-#as long as the player holds down the mouse-button follow_mouse() is called and the item can be dragged.
-func _process(_delta):
-	if selected == true:
-		follow_mouse()
-
-#the items position gets set to the mouse position, so the player can drag it anywhere in the scene
-func follow_mouse():
-	#mouse_offset makes it so the sprite gets dragged from the position you clicked
-	#without it, the sprite gets teleported to the mouse once you click anywhere in the area
-	$\".\".position = get_global_mouse_position() + mouse_offset
-
-func _on_button_button_down():
-	#if the input is the left mouse_button and the player keeps holding it, the variable selected gets set to true 
-	# -> follow_mouse can be called
-	mouse_offset = position - get_global_mouse_position()
-	selected = true
-
-
-func _on_button_button_up():
-	selected = false
-"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xlwqh"]
 size = Vector2(205, 85)
@@ -38,7 +11,7 @@ size = Vector2(16, 79)
 
 [node name="Brick" type="StaticBody2D"]
 position = Vector2(1121, 506)
-script = SubResource("GDScript_36qcc")
+script = ExtResource("1_dc8fi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(92, 31.5)
