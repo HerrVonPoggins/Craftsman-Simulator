@@ -1,10 +1,27 @@
-[gd_scene load_steps=10 format=3 uid="uid://cc4eoydeq1jwv"]
+[gd_scene load_steps=15 format=3 uid="uid://cc4eoydeq1jwv"]
 
 [ext_resource type="Script" path="res://ui/player_ui/TabContainer.gd" id="1_pp8q6"]
+[ext_resource type="Texture2D" uid="uid://b64wbqw154cxp" path="res://ui/player_ui/Options_Button.png" id="2_b7f4i"]
 [ext_resource type="PackedScene" uid="uid://biv5si5cbepod" path="res://ui/player_ui/checklist.tscn" id="2_leu6n"]
 [ext_resource type="Texture2D" uid="uid://dr813mjfqn5n4" path="res://assets/textures/warning_sample.jpg" id="2_xxoj5"]
 [ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://ui/player_ui/transition.tscn" id="4_egnei"]
 [ext_resource type="PackedScene" uid="uid://ccfrjw5825ajn" path="res://ui/player_ui/settings.tscn" id="5_qw0s6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_748e5"]
+texture = ExtResource("2_b7f4i")
+modulate_color = Color(0.631373, 0.631373, 0.631373, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yd1r0"]
+texture = ExtResource("2_b7f4i")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yx41j"]
+texture = ExtResource("2_b7f4i")
+modulate_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_vwtvn"]
+Button/styles/hover = SubResource("StyleBoxTexture_748e5")
+Button/styles/normal = SubResource("StyleBoxTexture_yd1r0")
+Button/styles/pressed = SubResource("StyleBoxTexture_yx41j")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cvin2"]
 content_margin_left = 1.0
@@ -39,13 +56,12 @@ script = ExtResource("1_pp8q6")
 
 [node name="ButtonSettings" type="Button" parent="."]
 visible = false
-custom_minimum_size = Vector2(300, 50)
 layout_mode = 0
-offset_left = 127.0
-offset_top = 453.0
-offset_right = 427.0
-offset_bottom = 503.0
-text = "Settings"
+offset_left = 37.0
+offset_top = 49.0
+offset_right = 114.0
+offset_bottom = 127.0
+theme = SubResource("Theme_vwtvn")
 
 [node name="ButtonSave" type="Button" parent="."]
 visible = false

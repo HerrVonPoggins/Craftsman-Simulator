@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=12 format=3 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
+[ext_resource type="Texture2D" uid="uid://ds70b3dh3uctp" path="res://addons/dialogue_manager/example_balloon/Dialog_UI.png" id="2_smpx2"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
@@ -63,6 +64,12 @@ MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 15
 Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kuook"]
+texture = ExtResource("2_smpx2")
+
+[sub_resource type="Theme" id="Theme_to7ea"]
+Panel/styles/panel = SubResource("StyleBoxTexture_kuook")
+
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
 script = ExtResource("1_36de5")
@@ -84,19 +91,22 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 21.0
-offset_top = -183.0
-offset_right = -19.0
+offset_left = 345.0
+offset_top = -286.0
+offset_right = -416.0
 offset_bottom = -19.0
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 1
+theme = SubResource("Theme_to7ea")
 
 [node name="Dialogue" type="MarginContainer" parent="Balloon/Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 304.0
+offset_top = 5.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -127,9 +137,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -147.0
-offset_top = -558.0
+offset_top = -697.0
 offset_right = 494.0
-offset_bottom = -154.0
+offset_bottom = -293.0
 grow_horizontal = 2
 grow_vertical = 0
 
