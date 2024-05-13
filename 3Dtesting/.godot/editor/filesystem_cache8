@@ -127,10 +127,10 @@ maurer_text.dialogue::Resource::6401223706840958401::1715004062::1715626159::1::
 schlusstext.dialogue::Resource::8692822673032486500::1715004062::1715626159::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 spirit_level_needed.dialogue::Resource::4236342806834665095::1715626131::1715629750::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 ::res://mechanics/::1715637092
-::res://mechanics/brick_cutting/::1715637482
-brick.tscn::PackedScene::2581325787827898707::1715637482::0::1::::<><>::res://mechanics/brick_cutting/brick.gd<>uid://c51l6bli4rw12::::res://assets/textures/icon.svg
-brick_cutting.gd::GDScript::-1::1715637230::0::1::::<>Node2D<>::
-brick_cutting.tscn::PackedScene::587589769622650591::1715637482::0::1::::<><>::res://mechanics/brick_cutting/brick_cutting.gd<>uid://bc1ob8y1y72qh::::res://mechanics/brick_cutting/brick.tscn
+::res://mechanics/brick_cutting/::1715639425
+brick.tscn::PackedScene::2581325787827898707::1715639425::0::1::::<><>::res://mechanics/brick_cutting/brick.gd<>uid://c51l6bli4rw12::::res://assets/textures/icon.svg
+brick_cutting.gd::GDScript::-1::1715639261::0::1::::<>Node2D<>::
+brick_cutting.tscn::PackedScene::587589769622650591::1715639425::0::1::::<><>::res://mechanics/brick_cutting/brick_cutting.gd<>uid://bc1ob8y1y72qh::::res://mechanics/brick_cutting/brick.tscn
 brick.gd::GDScript::-1::1715637479::0::1::::<>StaticBody2D<>::
 ::res://mechanics/build_wall/::1715626178
 Doortop.gd::GDScript::-1::1715626131::0::1::::<>Node3D<>::
@@ -195,18 +195,18 @@ global.gd::GDScript::-1::1715467338::0::1::::<>Node<>::
 ::res://UI/Inventory/::1715456810
 inventory.gd::GDScript::-1::1715366878::0::1::::<>Control<>::
 inventory.tscn::PackedScene::7838211368217593182::1715456810::0::1::::<><>::res://UI/Inventory/inventory.gd
-::res://UI/player_ui/::1715637230
+::res://UI/player_ui/::1715639389
 Checklist.gd::GDScript::-1::1714321215::0::1::::<>Node2D<>::
 checklist.tscn::PackedScene::2993137486329213323::1715626131::0::1::::<><>::res://ui/player_ui/Checklist.gd<>uid://be6bba0eknndn::::res://ui/player_ui/Quest_UI.png<>uid://ccolb6uftch63::::res://assets/fonts/AldotheApache.ttf
 info hub.tscn::PackedScene::4973355144014707637::1715626178::0::1::::<><>::res://ui/player_ui/TabContainer.gd<>uid://b64wbqw154cxp::::res://ui/player_ui/Options_Button.png<>uid://biv5si5cbepod::::res://ui/player_ui/checklist.tscn<>uid://dr813mjfqn5n4::::res://assets/textures/warning_sample.jpg<>uid://cdpolkwg0t10a::::res://ui/player_ui/transition.tscn<>uid://ccfrjw5825ajn::::res://ui/player_ui/settings.tscn
-Options_Button.png::CompressedTexture2D::4623480226556459053::1715626131::1715637230::1::::<><>::
-Quest_UI.png::CompressedTexture2D::2731234310223496559::1715626131::1715637230::1::::<><>::
+Options_Button.png::CompressedTexture2D::4623480226556459053::1715626131::1715639389::1::::<><>::
+Quest_UI.png::CompressedTexture2D::2731234310223496559::1715626131::1715639389::1::::<><>::
 Settings.gd::GDScript::-1::1715637065::0::1::::<>Control<>::
 settings.tscn::PackedScene::4924590407849204863::1715456809::0::1::::<><>::res://Settings.gd
 TabContainer.gd::GDScript::-1::1715004062::0::1::::<>Control<>::
 transition.gd::GDScript::-1::1714321215::0::1::::<>CanvasLayer<>::
 transition.tscn::PackedScene::5015243805768877474::1715007954::0::1::::<><>::res://ui/player_ui/transition.gd
-::res://UI/screens/::1715637482
+::res://UI/screens/::1715639425
 credits.gd::GDScript::-1::1714321215::0::1::::<>Node2D<>::
 credits.tscn::PackedScene::5998865402096403978::1715364921::0::1::::<><>::res://ui/screens/credits.gd<>uid://cdpolkwg0t10a::::res://ui/player_ui/transition.tscn
 endscreen.gd::GDScript::-1::1714321215::0::1::::<>Node2D<>::
@@ -217,21 +217,21 @@ titlescreen.tscn::PackedScene::299591778937143882::1715635806::0::1::::<><>::res
 ::res://ui/Inventory/::1715456810
 inventory.gd::GDScript::-1::1715366878::0::1::::<>Control<>::
 inventory.tscn::PackedScene::7838211368217593182::1715456810::0::1::::<><>::res://UI/Inventory/inventory.gd
-::res://ui/player_ui/::1715637230
+::res://ui/player_ui/::1715639389
 Checklist.gd::GDScript::-1::1714321215::0::1::::<>Node2D<>::
 checklist.tscn::PackedScene::-1::1715626131::0::1::::<><>::
 info hub.tscn::PackedScene::-1::1715626178::0::1::::<><>::
-Options_Button.png::CompressedTexture2D::4623480226556459053::1715626131::1715637495::1::::<><>::
-Quest_UI.png::CompressedTexture2D::2731234310223496559::1715626131::1715637495::1::::<><>::
+Options_Button.png::CompressedTexture2D::4623480226556459053::1715626131::1715639430::1::::<><>::
+Quest_UI.png::CompressedTexture2D::2731234310223496559::1715626131::1715639430::1::::<><>::
 Settings.gd::GDScript::-1::1715637065::0::1::::<>Control<>::
 settings.tscn::PackedScene::-1::1715637065::0::1::::<><>::
 TabContainer.gd::GDScript::-1::1715004062::0::1::::<>Control<>::
 transition.gd::GDScript::-1::1714321215::0::1::::<>CanvasLayer<>::
 transition.tscn::PackedScene::-1::1715007954::0::1::::<><>::
-::res://ui/screens/::1715637482
+::res://ui/screens/::1715639425
 credits.gd::GDScript::-1::1714321215::0::1::::<>Node2D<>::
 credits.tscn::PackedScene::-1::1715364921::0::1::::<><>::
 endscreen.gd::GDScript::-1::1714321215::0::1::::<>Node2D<>::
 endscreen.tscn::PackedScene::-1::1715364921::0::1::::<><>::
 titlescreen.gd::GDScript::-1::1714321215::0::1::::<>Node2D<>::
-titlescreen.tscn::PackedScene::299591778937143882::1715637482::0::1::::<><>::res://ui/screens/titlescreen.gd<>uid://cdpolkwg0t10a::::res://ui/player_ui/transition.tscn<>uid://dr813mjfqn5n4::::res://assets/textures/warning_sample.jpg<>uid://c8y6ncw8xv1vl::::res://assets/textures/button texture.tres<>uid://ccolb6uftch63::::res://assets/fonts/AldotheApache.ttf
+titlescreen.tscn::PackedScene::299591778937143882::1715639425::0::1::::<><>::res://ui/screens/titlescreen.gd<>res://ui/player_ui/transition.tscn<>uid://dr813mjfqn5n4::::res://assets/textures/warning_sample.jpg<>uid://c8y6ncw8xv1vl::::res://assets/textures/button texture.tres<>uid://ccolb6uftch63::::res://assets/fonts/AldotheApache.ttf

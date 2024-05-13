@@ -14,8 +14,8 @@ position = Vector2(1121, 506)
 script = ExtResource("1_dc8fi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_repeat = 1
 position = Vector2(92, 31.5)
-scale = Vector2(1.64062, 0.679687)
 texture = ExtResource("1_ppgmd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
