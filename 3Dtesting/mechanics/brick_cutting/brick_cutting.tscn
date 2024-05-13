@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvj6aq3ieso7o"]
+
+[ext_resource type="Script" path="res://mechanics/brick_cutting/brick_cutting.gd" id="1_sv5v8"]
+[ext_resource type="PackedScene" uid="uid://cvtdevokkwcld" path="res://mechanics/brick_cutting/brick.tscn" id="2_dilnv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g70vp"]
+size = Vector2(18, 95)
+
+[node name="BrickCutting" type="Node2D"]
+script = ExtResource("1_sv5v8")
+
+[node name="Brick" parent="." instance=ExtResource("2_dilnv")]
+
+[node name="Cutting Area" type="Area2D" parent="."]
+position = Vector2(930, 472)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cutting Area"]
+position = Vector2(-1, 37.5)
+shape = SubResource("RectangleShape2D_g70vp")
+
+[connection signal="area_entered" from="Cutting Area" to="." method="_on_cutting_area_area_entered"]

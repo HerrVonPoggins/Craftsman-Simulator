@@ -6,9 +6,21 @@ res://scenes/ElektrikerScene/Elektriker.tscn
 res://scenes/CorePlayable/CorePlayable.tscn
 res://mechanics/Player/node_3d.tscn
 res://mechanics/build_wall/wall.tscn
+<<<<<<< Updated upstream
 res://ui/player_ui/info hub.tscn
 res://scenes/StuckateurScene/Stuckateur.tscn
 res://mechanics/StudWall/stud_wall.tscn
 res://mechanics/build_wall/Doortop.tscn
 res://scenes/CorePlayable/world.gd
 res://mechanics/Player/RayCast3D.gd
+=======
+res://scenes/StuckateurScene/Stuckateur.tscn
+res://mechanics/StudWall/stud_wall.tscn
+res://mechanics/build_wall/Doortop.tscn
+res://mechanics/brick_cutting/brick_cutting.tscn
+res://mechanics/brick_cutting/brick_cutting.gd
+res://mechanics/brick_cutting/brick.tscn
+res://mechanics/brick_cutting/brick.gd
+res://ui/screens/titlescreen.tscn
+res://mechanics/brick_cutting/Brick.gd
+>>>>>>> Stashed changes

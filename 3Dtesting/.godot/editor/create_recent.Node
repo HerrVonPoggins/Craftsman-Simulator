@@ -1,4 +1,12 @@
+<<<<<<< Updated upstream
 PopupPanel
+=======
+Button
+CollisionShape2D
+Area2D
+Sprite2D
+StaticBody2D
+>>>>>>> Stashed changes
 MeshInstance3D
 RigidBody3D
 Node3D
