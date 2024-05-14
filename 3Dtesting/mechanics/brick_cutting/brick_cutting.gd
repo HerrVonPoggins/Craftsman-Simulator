@@ -3,7 +3,7 @@ extends Node2D
 var brick_scene = preload("res://mechanics/brick_cutting/brick.tscn")
 
 func _on_cutting_area_area_entered(area):
-	if area.is_in_group("cutting_point"):
+	if area.is_in_group("cutting_point") and Input.is_action_just_pressed("interagieren"):
 		
 		var brick_half1 = brick_scene.instantiate()
 		brick_half1.position = Vector2(840, 477)
