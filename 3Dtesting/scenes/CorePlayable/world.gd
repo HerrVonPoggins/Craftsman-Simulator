@@ -52,7 +52,7 @@ func _on_saw_body_entered(body):
 
 #mechanic for the isolation blocks to appear when they are put into the area3d
 func _on_isolation_area_body_entered(body):
-	if body.is_in_group("isolation"):
+	if body.is_in_group("isolation") and Global.tutorial_finished == true:
 		body.queue_free()
 		if $Props/Isolation1.visible == false and counter == 0:
 			$Props/Isolation1.visible = true
@@ -66,13 +66,13 @@ func _on_isolation_area_body_entered(body):
 
 
 func _on_string_wedge_body_entered(body):
-	if body.is_in_group("wedge"):
+	if body.is_in_group("wedge") and Global.concrete_mixed == true:
 		body.queue_free()
 		$StringWedge/MeshInstance3D.visible = true
 		$StringWedge/CollisionShape3D.call_deferred("set_disabled", true)
 
 func _on_string_wedge_2_body_entered(body):
-	if body.is_in_group("wedge"):
+	if body.is_in_group("wedge") and Global.concrete_mixed == true:
 		body.queue_free()
 		$StringWedge2/MeshInstance3D.visible = true
 		$StringWedge2/CollisionShape3D.call_deferred("set_disabled", true)

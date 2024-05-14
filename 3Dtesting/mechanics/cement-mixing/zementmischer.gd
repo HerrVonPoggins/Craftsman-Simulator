@@ -18,19 +18,19 @@ func _ready():
 	sand_value.visible = false
 
 func _process(delta):
-	if water == true:
+	if water == true and Global.tutorial_finished == true:
 		if Input.is_action_pressed("leftclick"):
 			water_value.value += 1.5
 	if water_value.value >= 100:
 		water_value.value = 100
 		water_filled = true
-	if concrete == true:
+	if concrete == true and Global.tutorial_finished == true:
 		if Input.is_action_pressed("leftclick"):
 			cement_value.value += 1.5
 	if cement_value.value >= 100:
 		cement_value.value = 100
 		cement_filled = true
-	if sand == true:
+	if sand == true and Global.tutorial_finished == true:
 		if Input.is_action_pressed("leftclick"):
 			sand_value.value += 1.5
 	if sand_value.value >= 100:

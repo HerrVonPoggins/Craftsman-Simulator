@@ -30,7 +30,7 @@ func _process(delta):
 		check.check_state_4 = true
 	if Global.concrete_mixed == true:
 		check.check_state_2 = true
-	if Global.door_top == true:
+	if Global.door_top == 2 and Global.window_top == 4:
 		check.check_state_5 = true
 	if Global.tutorial_finished == true:
 		check.check_state_1 = true

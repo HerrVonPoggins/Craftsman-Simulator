@@ -31,7 +31,7 @@ func _on_area_3d_body_entered(body):
 		concrete_line_3 = true
 		Global.concrete = false
 
-	if body.is_in_group("brick") == true and Global.isolation == true:
+	if body.is_in_group("brick") == true and Global.isolation == true and Global.string == true:
 		
 		if brick_1.visible == false and body.is_in_group("cut") == false and concrete_line_1 == true and counter == 1 :
 			body.queue_free()
