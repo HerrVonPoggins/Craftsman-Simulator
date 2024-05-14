@@ -62,11 +62,9 @@ transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -0.258987, 4.16967, -8.
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.088, 2.89987, -2.49579)
 
 [node name="Wallguide" type="MeshInstance3D" parent="Props/Wallguide"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = ExtResource("4_f6o6e")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Props/Wallguide"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_2lw57")
 
 [node name="Step1" type="RigidBody3D" parent="Props" groups=["grab", "step"]]

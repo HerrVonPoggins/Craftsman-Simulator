@@ -18,14 +18,7 @@ func _on_area_3d_body_entered(body):
 	if body.is_in_group("trowel") and Global.concrete == true:
 		if counter == 0:
 			counter = 0
-	#elif concrete_line_1 == true and counter == 1 and brick_1.visible == true and Global.concrete == true:
-#
-		#Global.concrete = false
-		#counter = 2
-	#elif outline_3 == true and counter == 2 and brick_2.visible == true and Global.concrete == true:
-#
-		#Global.concrete = false
-	
+
 	if $Area3D/SmallConcrete/MeshInstance3D.visible == true and $Area3D/SmallConcrete8/MeshInstance3D.visible == true and counter == 0:
 		concrete_line_1 = true
 		Global.concrete = false
@@ -60,7 +53,6 @@ func _on_area_3d_body_entered(body):
 		body.queue_free()
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/spirit_level_needed.dialogue"))
 		Global.wall_finished = true
-			#DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/schlusstext.dialogue"))
 
 
 

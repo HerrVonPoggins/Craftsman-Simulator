@@ -11,3 +11,12 @@ res://scripts/global.gd
 res://mechanics/Player/RayCast3D.gd
 res://ui/player_ui/settings.tscn
 res://ui/player_ui/Settings.gd
+res://scenes/StuckateurScene/Stuckateur.tscn
+res://scenes/Carpenter/carpenter_world.tscn
+res://scenes/CorePlayable/world.gd
+res://mechanics/build_wall/Doortop.tscn
+res://mechanics/build_wall/Doortop.gd
+res://mechanics/build_wall/wall.tscn
+res://mechanics/build_wall/wall.gd
+res://mechanics/build_wall/windowtop.tscn
+res://mechanics/build_wall/windowtop.gd

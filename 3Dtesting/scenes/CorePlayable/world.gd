@@ -22,6 +22,7 @@ func _process(delta):
 
 	if $StringWedge/MeshInstance3D.visible == true and $StringWedge2/MeshInstance3D.visible == true:
 		$StringWedge/String.visible = true
+		Global.string = true
 
 #functions for the info hub to pause the scene
 func _on_control_opened():
