@@ -10,6 +10,7 @@ size = Vector2(18, 95)
 script = ExtResource("1_sv5v8")
 
 [node name="Brick" parent="." instance=ExtResource("2_dilnv")]
+position = Vector2(947, 477)
 
 [node name="Cutting Area" type="Area2D" parent="."]
 position = Vector2(930, 472)
