@@ -1,3 +1,5 @@
+TextureRect
+HBoxContainer
 StaticBody3D
 RigidBody3D
 Sprite2D
@@ -11,4 +13,3 @@ Node3D
 CollisionShape3D
 Area3D
 CSGMesh3D
-WorldEnvironment

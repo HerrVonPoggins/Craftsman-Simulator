@@ -1,10 +1,20 @@
 ~ this_is_a_node_title
 set Global.dialogue_open = true
-Maurer: Hallo Neuling!
-Maurer: Ich bin der Maurer und soll dir etwas über den Beruf des Maurers erklären.
-Maurer: Der Beruf des Maurers beschäftigt sich damit Rohbauten für Gebäude herzustellen.
-Maurer: Wir betonieren das Fundament und mauern die Außen/Innenwände.
-Maurer: Heute darfst du ein Paar Ziegel für die Hauswand unseres Kunden maurern.
-Maurer: Der Chef hat die bereits deine Aufgaben aufgezählt falls du mehr wissen willst ließ im Handbuch nach. 
+Maurer: Hey, du bist also der neue Praktikant, richtig?
+Maurer: Schön dich kennenzulernen!
+Maurer: Ich bin der Maurer hier auf der Baustelle.
+Maurer: Mein Name ist Bruno, aber die meisten nennen mich einfach Bär.
+
+Maurer: Na, wie war dein Gespräch mit dem Bauleiter?
+Maurer: Er hat bestimmt eine Menge erzählt, oder?
+Maurer: Keine Sorge, ich werde dir zeigen, was du hier machen musst.
+Maurer: Also, als erstes müssen wir Mörtel mischen.
+Maurer: Hast du das schon mal gemacht? Nein? Kein Problem!
+Maurer: Das ist ganz einfach. Sieh mal, hier ist eine Schubkarre une eine Kelle.
+Maurer: Wir nehmen etwas Sand, fügen Wasser und Zement hinzu und rühren kräftig um.
+Maurer: Aber pass auf, dass der Mörtel nicht zu flüssig wird!
+Maurer: Sobald der Mörtel fertig ist, lädst du ihn in die Schubkarre und bringst ihn zur Wand, die wir bearbeiten.
+Maurer: Stell sicher, dass du den Mörtel gleichmäßig aufträgst, damit alles gut hält.
+Maurer: Verstanden?
 set Global.dialogue_open = false
 => END

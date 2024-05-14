@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_8hcrx"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_n012i"]
 
 [resource]
-script = ExtResource("1_8hcrx")
+script = ExtResource("1_n012i")
 using_states = PackedStringArray()
 titles = {
 "this_is_a_node_title": "2"
@@ -18,10 +18,135 @@ lines = {
 "type": &"title"
 },
 "10": {
+"character": "Maurer",
+"character_replacements": Array[Dictionary]([]),
 "id": "10",
-"is_snippet": false,
-"next_id": "end",
-"type": &"goto"
+"next_id": "11",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Keine Sorge, ich werde dir zeigen, was du hier machen musst.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Keine Sorge, ich werde dir zeigen, was du hier machen musst.",
+"type": &"dialogue"
+},
+"11": {
+"character": "Maurer",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "12",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Also, als erstes müssen wir Mörtel mischen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Also, als erstes müssen wir Mörtel mischen.",
+"type": &"dialogue"
+},
+"12": {
+"character": "Maurer",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Hast du das schon mal gemacht? Nein? Kein Problem!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hast du das schon mal gemacht? Nein? Kein Problem!",
+"type": &"dialogue"
+},
+"13": {
+"character": "Maurer",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "14",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Das ist ganz einfach. Sieh mal, hier ist eine Schubkarre une eine Kelle.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Das ist ganz einfach. Sieh mal, hier ist eine Schubkarre une eine Kelle.",
+"type": &"dialogue"
+},
+"14": {
+"character": "Maurer",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Wir nehmen etwas Sand, fügen Wasser und Zement hinzu und rühren kräftig um.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wir nehmen etwas Sand, fügen Wasser und Zement hinzu und rühren kräftig um.",
+"type": &"dialogue"
+},
+"15": {
+"character": "Maurer",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "16",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Aber pass auf, dass der Mörtel nicht zu flüssig wird!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Aber pass auf, dass der Mörtel nicht zu flüssig wird!",
+"type": &"dialogue"
+},
+"16": {
+"character": "Maurer",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Sobald der Mörtel fertig ist, lädst du ihn in die Schubkarre und bringst ihn zur Wand, die wir bearbeiten.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sobald der Mörtel fertig ist, lädst du ihn in die Schubkarre und bringst ihn zur Wand, die wir bearbeiten.",
+"type": &"dialogue"
+},
+"17": {
+"character": "Maurer",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "18",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Stell sicher, dass du den Mörtel gleichmäßig aufträgst, damit alles gut hält.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Stell sicher, dass du den Mörtel gleichmäßig aufträgst, damit alles gut hält.",
+"type": &"dialogue"
+},
+"18": {
+"character": "Maurer",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "19",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Verstanden?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Verstanden?",
+"type": &"dialogue"
+},
+"19": {
+"id": "19",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
+},
+"next_id": "20",
+"type": &"mutation"
 },
 "2": {
 "id": "2",
@@ -46,6 +171,12 @@ lines = {
 "next_id": "3",
 "type": &"mutation"
 },
+"20": {
+"id": "20",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
 "3": {
 "character": "Maurer",
 "character_replacements": Array[Dictionary]([]),
@@ -53,9 +184,9 @@ lines = {
 "next_id": "4",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Hallo Neuling!",
+"text": "Hey, du bist also der neue Praktikant, richtig?",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Hallo Neuling!",
+"translation_key": "Hey, du bist also der neue Praktikant, richtig?",
 "type": &"dialogue"
 },
 "4": {
@@ -65,9 +196,9 @@ lines = {
 "next_id": "5",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Ich bin der Maurer und soll dir etwas über den Beruf des Maurers erklären.",
+"text": "Schön dich kennenzulernen!",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Ich bin der Maurer und soll dir etwas über den Beruf des Maurers erklären.",
+"translation_key": "Schön dich kennenzulernen!",
 "type": &"dialogue"
 },
 "5": {
@@ -77,33 +208,21 @@ lines = {
 "next_id": "6",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Der Beruf des Maurers beschäftigt sich damit Rohbauten für Gebäude herzustellen.",
+"text": "Ich bin der Maurer hier auf der Baustelle.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Der Beruf des Maurers beschäftigt sich damit Rohbauten für Gebäude herzustellen.",
+"translation_key": "Ich bin der Maurer hier auf der Baustelle.",
 "type": &"dialogue"
 },
 "6": {
 "character": "Maurer",
 "character_replacements": Array[Dictionary]([]),
 "id": "6",
-"next_id": "7",
-"notes": "",
-"tags": PackedStringArray(),
-"text": "Wir betonieren das Fundament und mauern die Außen/Innenwände.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Wir betonieren das Fundament und mauern die Außen/Innenwände.",
-"type": &"dialogue"
-},
-"7": {
-"character": "Maurer",
-"character_replacements": Array[Dictionary]([]),
-"id": "7",
 "next_id": "8",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Heute darfst du ein Paar Ziegel für die Hauswand unseres Kunden maurern.",
+"text": "Mein Name ist Bruno, aber die meisten nennen mich einfach Bär.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Heute darfst du ein Paar Ziegel für die Hauswand unseres Kunden maurern.",
+"translation_key": "Mein Name ist Bruno, aber die meisten nennen mich einfach Bär.",
 "type": &"dialogue"
 },
 "8": {
@@ -113,43 +232,42 @@ lines = {
 "next_id": "9",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Der Chef hat die bereits deine Aufgaben aufgezählt falls du mehr wissen willst ließ im Handbuch nach.",
+"text": "Na, wie war dein Gespräch mit dem Bauleiter?",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Der Chef hat die bereits deine Aufgaben aufgezählt falls du mehr wissen willst ließ im Handbuch nach.",
+"translation_key": "Na, wie war dein Gespräch mit dem Bauleiter?",
 "type": &"dialogue"
 },
 "9": {
+"character": "Maurer",
+"character_replacements": Array[Dictionary]([]),
 "id": "9",
-"mutation": {
-"expression": Array[Dictionary]([{
-"type": "variable",
-"value": "Global"
-}, {
-"type": "dot"
-}, {
-"type": "variable",
-"value": "dialogue_open"
-}, {
-"type": "assignment",
-"value": "="
-}, {
-"type": "variable",
-"value": "false"
-}]),
-"is_blocking": true
-},
 "next_id": "10",
-"type": &"mutation"
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Er hat bestimmt eine Menge erzählt, oder?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Er hat bestimmt eine Menge erzählt, oder?",
+"type": &"dialogue"
 }
 }
 raw_text = "~ this_is_a_node_title
 set Global.dialogue_open = true
-Maurer: Hallo Neuling!
-Maurer: Ich bin der Maurer und soll dir etwas über den Beruf des Maurers erklären.
-Maurer: Der Beruf des Maurers beschäftigt sich damit Rohbauten für Gebäude herzustellen.
-Maurer: Wir betonieren das Fundament und mauern die Außen/Innenwände.
-Maurer: Heute darfst du ein Paar Ziegel für die Hauswand unseres Kunden maurern.
-Maurer: Der Chef hat die bereits deine Aufgaben aufgezählt falls du mehr wissen willst ließ im Handbuch nach. 
+Maurer: Hey, du bist also der neue Praktikant, richtig?
+Maurer: Schön dich kennenzulernen!
+Maurer: Ich bin der Maurer hier auf der Baustelle.
+Maurer: Mein Name ist Bruno, aber die meisten nennen mich einfach Bär.
+
+Maurer: Na, wie war dein Gespräch mit dem Bauleiter?
+Maurer: Er hat bestimmt eine Menge erzählt, oder?
+Maurer: Keine Sorge, ich werde dir zeigen, was du hier machen musst.
+Maurer: Also, als erstes müssen wir Mörtel mischen.
+Maurer: Hast du das schon mal gemacht? Nein? Kein Problem!
+Maurer: Das ist ganz einfach. Sieh mal, hier ist eine Schubkarre une eine Kelle.
+Maurer: Wir nehmen etwas Sand, fügen Wasser und Zement hinzu und rühren kräftig um.
+Maurer: Aber pass auf, dass der Mörtel nicht zu flüssig wird!
+Maurer: Sobald der Mörtel fertig ist, lädst du ihn in die Schubkarre und bringst ihn zur Wand, die wir bearbeiten.
+Maurer: Stell sicher, dass du den Mörtel gleichmäßig aufträgst, damit alles gut hält.
+Maurer: Verstanden?
 set Global.dialogue_open = false
 => END"
 metadata/dialogue_manager_version = "2.38.0"

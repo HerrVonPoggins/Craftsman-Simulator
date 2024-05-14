@@ -105,7 +105,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 304.0
+offset_left = 321.0
 offset_top = 5.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -128,6 +128,19 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 text = "Dialogue..."
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Balloon/Panel"]
+custom_minimum_size = Vector2(275, 0)
+layout_mode = 2
+offset_left = 23.0
+offset_top = 48.0
+offset_right = 307.0
+offset_bottom = 247.0
+size_flags_horizontal = 0
+
+[node name="TextureRect" type="TextureRect" parent="Balloon/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(278, 100)
+layout_mode = 2
 
 [node name="Responses" type="MarginContainer" parent="Balloon"]
 layout_mode = 1

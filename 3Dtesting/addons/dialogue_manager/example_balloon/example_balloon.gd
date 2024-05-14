@@ -5,7 +5,7 @@ extends CanvasLayer
 
 ## The action to use to skip typing the dialogue
 @export var skip_action: StringName = &"ui_cancel"
-
+@onready var portrait = $Balloon/Panel/HBoxContainer/TextureRect
 @onready var balloon: Control = %Balloon
 @onready var character_label: RichTextLabel = %CharacterLabel
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
@@ -43,6 +43,18 @@ var dialogue_line: DialogueLine:
 
 		character_label.visible = not dialogue_line.character.is_empty()
 		character_label.text = tr(dialogue_line.character, "dialogue")
+
+
+		#if dialogue_line.character.to_lower() == "bauleiter":
+			#portrait.texture = load("res://assets/textures/icon.svg")
+		#elif dialogue_line.character.to_lower() == "maurer":
+			#portrait.texture = load()
+		#elif dialogue_line.character.to_lower() == "stuckateur":
+			#portrait.texture = load()
+
+
+
+
 
 		dialogue_label.hide()
 		dialogue_label.dialogue_line = dialogue_line

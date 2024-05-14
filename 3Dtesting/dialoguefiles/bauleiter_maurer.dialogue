@@ -1,18 +1,20 @@
 ~ this_is_a_node_title
 if Global.current_scene == 1:
 	set Global.dialogue_open = true
-	Bauleiter: Wilkommen auf der Baustelle!
-	Bauleiter: Deine erste Aufgabe wird es sein eine Wand zu Maurern.
-	Bauleiter: Setzte die gelben Dämmblöcke in die leeren Plätze.
-	Bauleiter: Füll den Zementmischer erst mit Wasser und einem Sack Mörtel.
-	Bauleiter: als nächstes schalte den Zementmischer (E drücken) an.
-	Bauleiter: nimm die Kelle um Mörtel aus dem Eimer auf die markierte stelle zu setzen.
-	Bauleiter: du musst die Kelle jedes mal durch den Eimer ziehen und dann auf den Ziegeln entlang ziehen.
-	Bauleiter: platziere abwechselnd Mörtel und Ziegel.
-	Bauleiter: Achtung einer der Ziegel muss an der Tischsäge kleiner geschnitten werden. ein Ziegel liegt bereit neben der Tischsäge.
-	Bauleiter: Sprich vorher noch mit dem Maurer er gibt dir eine Zusammenfassung über seinen Beruf.
-	Bauleiter: Falls du genaueres wissen willst ließ in deinem Handbuch (ESC) nach.
-	Bauleiter: Viel Glück.
+	Bauleiter: Ah, da bist du ja, unser neuer Praktikant!
+	Bauleiter: Herzlich willkommen auf der Baustelle von "Craftsman Simulator".
+	Bauleiter: Ich bin der Bauleiter, der Zukunftsfuchs, aber du kannst mich einfach Fuchs nennen.
+	Bauleiter: Du wirst die nächsten Tage spannende Ausbildungsberufe auf der Baustelle entdecken und beim Hausbau mitwirken.
+	
+	Bauleiter: Aber vergiss nicht, auf deine Sicherheit zu achten.
+	Bauleiter: Eine Baustelle kann sehr gefährlich sein, aber mit der richtigen Arbeitskleidung und Vorsichtsmaßnahmen können wir Unfälle vermeiden.
+	Bauleiter: Du solltest jetzt deine passende Arbeitskleidung finden.
+	Bauleiter: Ziehe sie an und komm bitte danach wieder zu mir.
+	
+	Bauleiter: Gut gemacht! 
+	Bauleiter: Bevor es aber losgeht, muss ich dir noch das Baustellen-Tagebuch geben, das du jetzt im Menü (ESC) findest
+	Bauleiter: Dort könntest du alle Ausbildungsberufe nochmal genauer nachlesen und dich besser informieren (es gibt ein Quiz zum Schluss).
+	Bauleiter: Und jetzt viel Spaß!
 	set Global.dialogue_open = false
 
 if Global.current_scene == 2:
