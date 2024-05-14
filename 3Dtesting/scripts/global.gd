@@ -16,6 +16,7 @@ var save_path = "user://variable.save"
 var mouse_sensitivity = 0.01
 var stay = false
 var let_go = false
+var tutorial_finished = false
 
 func save():
 	var file = FileAccess.open(save_path, FileAccess.WRITE)

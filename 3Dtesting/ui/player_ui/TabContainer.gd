@@ -22,6 +22,9 @@ func _ready():
 
 #sets the checkmarks of the checklist
 func _process(delta):
+	if Global.tutorial_finished == true:
+		$Panel.visible = false
+		
 	if Global.wall_finished == true:
 		check.check_state_3 = true
 	if Global.concrete_mixed == true:

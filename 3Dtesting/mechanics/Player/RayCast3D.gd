@@ -8,10 +8,13 @@ var obj = null
 
 @onready var point = $"../MeshInstance3D/Hold"
 @onready var player = $"../../../.."
+var work_clothes = 0
 
 #The Raycast shoots a laser for a fixed range, on collision with something we can get the object  and check if it is in group "grab"
 #a object in group "grab" will then fixed on the hold point of the character until we release it.
 func _process(delta):
+	if work_clothes == 3:
+		Global.tutorial_finished = true
 
 	if Input.is_action_just_pressed("interagieren"):
 		if obj == null:
@@ -36,12 +39,16 @@ func _process(delta):
 					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_text.dialogue"))
 				if collider.is_in_group("cement_mixer"):
 					player.emit_signal("start_mixer")
+
 				if collider.is_in_group("helmet"):
 					collider.queue_free()
+					work_clothes += 1
 				if collider.is_in_group("gloves"):
 					collider.queue_free()
+					work_clothes += 1
 				if collider.is_in_group("boots"):
 					collider.queue_free()
+					work_clothes += 1
 
 
 	if obj != null:
