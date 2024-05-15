@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ckkechdc8rspf"]
+[gd_scene load_steps=12 format=3 uid="uid://ckkechdc8rspf"]
 
 [ext_resource type="Script" path="res://mechanics/build_wall/Doortop.gd" id="1_4y07e"]
 [ext_resource type="Texture2D" uid="uid://dwfc4k5batkf2" path="res://assets/models/bricks_8017-normal.jpg" id="2_h7qix"]
@@ -57,6 +57,12 @@ height = 1.2
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ymfu"]
 albedo_color = Color(0.576471, 0.576471, 0.576471, 1)
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_4j6jj"]
+radius = 0.77507
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_q5efb"]
+radius = 0.731936
+
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_4y07e")
 
@@ -74,16 +80,32 @@ mesh = SubResource("ArrayMesh_k0l5f")
 transform = Transform3D(-8.74228e-08, 0, 2.5, 0, 1, 0, -2, 0, -1.09278e-07, -0.0274665, 0, -0.0567921)
 mesh = ExtResource("3_j3ufj")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="Area3D2" type="Area3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.23134, -0.0799192, -0.0902297)
 visible = false
 mesh = SubResource("CapsuleMesh_iyopy")
+skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_0ymfu")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43255, 0, 0)
+shape = SubResource("SphereShape3D_4j6jj")
+
+[node name="Area3D3" type="Area3D" parent="."]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Area3D3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.29838, 0, -0.0691734)
 visible = false
 mesh = SubResource("CapsuleMesh_iyopy")
+skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_0ymfu")
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5774, 0, 0)
+shape = SubResource("SphereShape3D_q5efb")
+
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Area3D2" to="." method="_on_area_3d_2_body_entered"]
+[connection signal="body_entered" from="Area3D3" to="." method="_on_area_3d_3_body_entered"]

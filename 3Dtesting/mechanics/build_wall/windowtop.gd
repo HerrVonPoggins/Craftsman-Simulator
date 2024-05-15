@@ -8,11 +8,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
-
+	if $Area3D2/MeshInstance3D.visible == true and $Area3D3/MeshInstance3D2.visible == true:
+		Global.window_top += 1
+		Global.concrete = false
 
 func _on_area_3d_body_entered(body):
-	if body.is_in_group("window") :
+	if body.is_in_group("window") and Global.wall_finished == true:
 		body.queue_free()
 		$Area3D/CollisionShape3D.call_deferred("set_disabled", true)
 		$Area3D/MeshInstance3D.visible = true
@@ -26,3 +27,14 @@ func _on_area_3d_body_entered(body):
 			Global.concrete = false
 			Global.window_top += 1
 			
+
+func _on_area_3d_2_body_entered(body):
+	if body.is_in_group("trowel") and Global.concrete == true and Global.wall_finished == true:
+		if $Area3D/MeshInstance3D.visible == true:
+			$Area3D2/MeshInstance3D.visible = true
+
+
+func _on_area_3d_3_body_entered(body):
+	if body.is_in_group("trowel") and Global.concrete == true and Global.wall_finished == true:
+		if $Area3D/MeshInstance3D.visible == true:
+			$Area3D3/MeshInstance3D2.visible = true

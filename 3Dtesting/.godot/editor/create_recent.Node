@@ -1,3 +1,5 @@
+CollisionShape3D
+Area3D
 MeshInstance3D
 VBoxContainer
 Label
@@ -10,5 +12,3 @@ RigidBody3D
 Sprite2D
 PopupPanel
 Button
-CollisionShape2D
-Area2D

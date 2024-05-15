@@ -63,8 +63,8 @@ func _check_3_on(check2state):
 	check_3.button_pressed = check_state_3
 	
 func _check_4_on(check2state):
-	check_4.button_pressed = check_state_3
+	check_4.button_pressed = check_state_4
 	
 func _check_5_on(check2state):
-	check_5.button_pressed = check_state_3
+	check_5.button_pressed = check_state_5
 
