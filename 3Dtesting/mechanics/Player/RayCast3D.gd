@@ -15,6 +15,7 @@ var work_clothes = 0
 func _process(delta):
 	if work_clothes == 3:
 		Global.tutorial_finished = true
+		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_1.dialogue"))
 
 	if Input.is_action_just_pressed("interagieren"):
 		if obj == null:
@@ -39,6 +40,7 @@ func _process(delta):
 					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_text.dialogue"))
 				if collider.is_in_group("cement_mixer"):
 					player.emit_signal("start_mixer")
+					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_2.dialogue"))
 
 				if collider.is_in_group("helmet"):
 					collider.queue_free()

@@ -1,0 +1,57 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_83lqj"]
+
+[resource]
+script = ExtResource("1_83lqj")
+using_states = PackedStringArray()
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray("Maurer")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": &"title"
+},
+"3": {
+"character": "Maurer",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Jetzt hast du den Mörtel fertig gemischt.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Jetzt hast du den Mörtel fertig gemischt.",
+"type": &"dialogue"
+},
+"4": {
+"character": "Maurer",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "6",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Nun musst du die Richtschnur setzen also schnapp dir die Keile und bringe sie and den markierten stellen an.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nun musst du die Richtschnur setzen also schnapp dir die Keile und bringe sie and den markierten stellen an.",
+"type": &"dialogue"
+},
+"6": {
+"id": "6",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+}
+}
+raw_text = "~ this_is_a_node_title
+
+Maurer: Jetzt hast du den Mörtel fertig gemischt.
+Maurer: Nun musst du die Richtschnur setzen also schnapp dir die Keile und bringe sie and den markierten stellen an.
+
+=> END"
+metadata/dialogue_manager_version = "2.38.0"

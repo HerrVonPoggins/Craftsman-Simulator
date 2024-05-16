@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_6jkp0"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_meuae"]
 
 [resource]
-script = ExtResource("1_6jkp0")
+script = ExtResource("1_meuae")
 using_states = PackedStringArray()
 titles = {
 "this_is_a_node_title": "2"
@@ -72,9 +72,9 @@ lines = {
 "next_id": "15",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Wir nehmen etwas Sand, fügen Wasser und Zement hinzu und rühren kräftig um.",
+"text": "Wir nehmen etwas Sand, fügen Wasser und Zement hinzu und rühren kräftig um. (Fülle Wasser, Sand und Zement in den Mischer und schalte ihn mit E an)",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Wir nehmen etwas Sand, fügen Wasser und Zement hinzu und rühren kräftig um.",
+"translation_key": "Wir nehmen etwas Sand, fügen Wasser und Zement hinzu und rühren kräftig um. (Fülle Wasser, Sand und Zement in den Mischer und schalte ihn mit E an)",
 "type": &"dialogue"
 },
 "15": {
@@ -263,7 +263,7 @@ Maurer: Keine Sorge, ich werde dir zeigen, was du hier machen musst.
 Maurer: Also, als erstes müssen wir Mörtel mischen.
 Maurer: Hast du das schon mal gemacht? Nein? Kein Problem!
 Maurer: Das ist ganz einfach. Sieh mal, hier ist eine Schubkarre une eine Kelle.
-Maurer: Wir nehmen etwas Sand, fügen Wasser und Zement hinzu und rühren kräftig um.
+Maurer: Wir nehmen etwas Sand, fügen Wasser und Zement hinzu und rühren kräftig um. (Fülle Wasser, Sand und Zement in den Mischer und schalte ihn mit E an)
 Maurer: Aber pass auf, dass der Mörtel nicht zu flüssig wird!
 Maurer: Sobald der Mörtel fertig ist, lädst du ihn in die Schubkarre und bringst ihn zur Wand, die wir bearbeiten.
 Maurer: Stell sicher, dass du den Mörtel gleichmäßig aufträgst, damit alles gut hält.

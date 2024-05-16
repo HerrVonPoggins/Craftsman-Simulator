@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://csfmgta3lo283"
+path="res://.godot/imported/maurer_step_4.dialogue-fe2d5b0e9c0bb8b3809da72f3fe32844.tres"
+
+[deps]
+
+source_file="res://dialoguefiles/maurer_step_4.dialogue"
+dest_files=["res://.godot/imported/maurer_step_4.dialogue-fe2d5b0e9c0bb8b3809da72f3fe32844.tres"]
+
+[params]
+
+defaults=true

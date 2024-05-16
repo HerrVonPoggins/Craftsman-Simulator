@@ -18,6 +18,7 @@ func _process(delta):
 	if $StringWedge/MeshInstance3D.visible == true and $StringWedge2/MeshInstance3D.visible == true:
 		$StringWedge/String.visible = true
 		Global.string = true
+		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_3.dialogue"))
 	
 	
 	if Global.wall_finished == true and played == false:
@@ -25,7 +26,10 @@ func _process(delta):
 		played = true
 		$WallAnimation.play("brick_build")
 		await $WallAnimation.animation_finished
-		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/schlusstext.dialogue"))
+		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_4.dialogue"))
+		
+		if Global.door_top == 2 and Global.window_top == 4:
+			DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/schlusstext.dialogue"))
 
 
 
