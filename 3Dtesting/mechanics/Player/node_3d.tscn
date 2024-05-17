@@ -1,11 +1,12 @@
-[gd_scene load_steps=16 format=3 uid="uid://cxv4g3lrd0p6b"]
+[gd_scene load_steps=17 format=3 uid="uid://cxv4g3lrd0p6b"]
 
 [ext_resource type="Script" path="res://mechanics/Player/player_signals.gd" id="1_l3e41"]
 [ext_resource type="Script" path="res://mechanics/Player/CharacterFP+WASD.gd" id="2_ep0ko"]
 [ext_resource type="Script" path="res://mechanics/Player/RayCast3D.gd" id="2_esgj4"]
 [ext_resource type="Texture2D" uid="uid://1f8wq8hkrxny" path="res://assets/textures/Sprite-0001.png" id="3_d3pfc"]
 [ext_resource type="PackedScene" uid="uid://c6euqm1mx4k1q" path="res://mechanics/Player/arrowhead.tscn" id="5_bmhdd"]
-[ext_resource type="PackedScene" uid="uid://djw5gwv30bvm1" path="res://ui/Inventory/inventory.tscn" id="6_2noio"]
+[ext_resource type="PackedScene" uid="uid://djw5gwv30bvm1" path="res://UI/Inventory/inventory.tscn" id="6_2noio"]
+[ext_resource type="PackedScene" uid="uid://q7njbo82kc3y" path="res://mechanics/Player/hold.tscn" id="6_e1oej"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_16dfd"]
 
@@ -154,8 +155,7 @@ visible = false
 transform = Transform3D(0.997713, -0.0646264, 0.01982, 3.64033e-09, 0.293206, 0.956049, -0.0675974, -0.953862, 0.292535, 0.504248, -0.33749, 0.154572)
 mesh = SubResource("CylinderMesh_r7tb1")
 
-[node name="Hold" type="Marker3D" parent="CharacterBody3D/Neck/Camera3D/MeshInstance3D"]
-transform = Transform3D(0.977194, 4.3684e-08, -0.212348, -0.203015, 0.293206, -0.934246, 0.0622618, 0.956049, 0.286519, 0.00660753, 1.02174, -0.0134356)
+[node name="Hold" parent="CharacterBody3D/Neck/Camera3D/MeshInstance3D" instance=ExtResource("6_e1oej")]
 
 [node name="VisionCenter" type="Node3D" parent="CharacterBody3D/Neck/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.6386)
@@ -174,4 +174,4 @@ libraries = {
 [node name="Inventory" parent="CanvasLayer" instance=ExtResource("6_2noio")]
 
 [connection signal="concrete_bucket_pos_reached" from="." to="CharacterBody3D/Neck/Camera3D/RayCast3D" method="_on_player_concrete_bucket_pos_reached"]
-[connection signal="trowel_button_clicked" from="CanvasLayer/Inventory" to="CharacterBody3D/Neck/Camera3D/RayCast3D" method="_on_inventory_trowel_button_clicked"]
+[connection signal="trowel_button_clicked" from="CanvasLayer/Inventory" to="." method="_on_inventory_trowel_button_clicked"]
