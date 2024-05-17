@@ -3,6 +3,7 @@ extends Node3D
 
 var counter = 0
 var played = false
+var diealogue_played = 0
 
 #plays the animation to fade into the scene from the black screen
 func _ready():
@@ -14,8 +15,11 @@ func _ready():
 	#when the wall is build the animation to fill in the remaining bricks and a praise dialogue is started
 func _process(delta):
 	
-	
-	if $StringWedge/MeshInstance3D.visible == true and $StringWedge2/MeshInstance3D.visible == true:
+	if Global.tutorial_finished == true and counter == 0:
+		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_1.dialogue"))
+		counter = 0.5
+		
+	if $StringWedge/MeshInstance3D.visible == true and $StringWedge2/MeshInstance3D.visible == true and Global.string == false:
 		$StringWedge/String.visible = true
 		Global.string = true
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_3.dialogue"))
@@ -62,7 +66,7 @@ func _on_saw_body_entered(body):
 func _on_isolation_area_body_entered(body):
 	if body.is_in_group("isolation") and Global.tutorial_finished == true:
 		body.queue_free()
-		if $Props/Isolation1.visible == false and counter == 0:
+		if $Props/Isolation1.visible == false and counter == 0.5:
 			$Props/Isolation1.visible = true
 			counter = 1
 		elif $Props/Isolation1.visible == true and counter == 1:

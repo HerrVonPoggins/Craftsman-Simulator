@@ -1,5 +1,5 @@
 extends Node3D
-
+var done = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -8,19 +8,19 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if $Area3D2/MeshInstance3D.visible == true and $Area3D3/MeshInstance3D2.visible == true:
-		Global.door_top += 1
+	if $Area3D2/MeshInstance3D.visible == true and $Area3D3/MeshInstance3D2.visible == true and done == false:
 		Global.concrete = false
+		Global.door_top += 1
+		done = true
+
 
 
 func _on_area_3d_body_entered(body):
 	if body.is_in_group("lintel") and Global.wall_finished == true :
-		 #
 		body.queue_free()
 		$Area3D/CollisionShape3D.call_deferred("set_disabled", true)
 		$Area3D/MeshInstance3D.visible = true
 		$Area3D/MeshInstance3D2.visible = false
-
 
 
 

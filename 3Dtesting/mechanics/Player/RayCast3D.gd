@@ -12,7 +12,7 @@ var work_clothes = 0
 func _process(delta):
 	if work_clothes == 3:
 		Global.tutorial_finished = true
-		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_1.dialogue"))
+
 
 	if Input.is_action_just_pressed("interagieren"):
 		if obj == null:
