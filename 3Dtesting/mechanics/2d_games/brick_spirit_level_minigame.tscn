@@ -1,0 +1,126 @@
+[gd_scene load_steps=7 format=3 uid="uid://dskx83c07jk17"]
+
+[ext_resource type="Script" path="res://mechanics/2d_games/Hammer.gd" id="1_5vxdr"]
+[ext_resource type="Script" path="res://mechanics/2d_games/brick_spirit_level_minigame.gd" id="1_jul41"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qdc3i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2prg4"]
+size = Vector2(0.49315, 1.00449)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qhh7i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j25np"]
+size = Vector2(339, 168)
+
+[node name="2d_game" type="Node2D"]
+script = ExtResource("1_jul41")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_vertical = 4
+
+[node name="Brick" type="Sprite2D" parent="."]
+position = Vector2(337, 899)
+rotation = 0.330899
+scale = Vector2(429, 166.5)
+texture = SubResource("PlaceholderTexture2D_qdc3i")
+
+[node name="Area2D0" type="Area2D" parent="Brick"]
+position = Vector2(-0.343862, -5.69782)
+rotation = 0.490538
+scale = Vector2(0.00258762, 0.00589999)
+skew = -0.410262
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Brick/Area2D0"]
+position = Vector2(231.391, 920.976)
+rotation = -0.204388
+scale = Vector2(429, 166.5)
+shape = SubResource("RectangleShape2D_2prg4")
+
+[node name="Area2D1" type="Area2D" parent="Brick"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Brick/Area2D1"]
+position = Vector2(0.24826, -0.00848389)
+shape = SubResource("RectangleShape2D_2prg4")
+
+[node name="Brick2" type="Sprite2D" parent="."]
+position = Vector2(908, 873)
+rotation = -0.538402
+scale = Vector2(429, 166.5)
+texture = SubResource("PlaceholderTexture2D_qdc3i")
+
+[node name="Area2D" type="Area2D" parent="Brick2"]
+position = Vector2(-0.266973, -0.0577974)
+rotation = 0.490538
+scale = Vector2(0.00258762, 0.00589999)
+skew = -0.410262
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Brick2/Area2D"]
+position = Vector2(11.5972, 6.74565)
+rotation = -0.204388
+scale = Vector2(429, 166.5)
+shape = SubResource("RectangleShape2D_2prg4")
+
+[node name="Area2D2" type="Area2D" parent="Brick2"]
+position = Vector2(0.219581, -0.0192711)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Brick2/Area2D2"]
+position = Vector2(0.0361859, 0.000649601)
+shape = SubResource("RectangleShape2D_2prg4")
+
+[node name="Brick3" type="Sprite2D" parent="."]
+position = Vector2(1533, 914)
+rotation = 0.349066
+scale = Vector2(429, 166.5)
+texture = SubResource("PlaceholderTexture2D_qdc3i")
+
+[node name="Area2D3" type="Area2D" parent="Brick3"]
+position = Vector2(-0.343862, -5.69782)
+rotation = 0.490538
+scale = Vector2(0.00258762, 0.00589999)
+skew = -0.410262
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Brick3/Area2D3"]
+position = Vector2(231.391, 920.976)
+rotation = -0.204388
+scale = Vector2(429, 166.5)
+shape = SubResource("RectangleShape2D_2prg4")
+
+[node name="Area2D4" type="Area2D" parent="Brick3"]
+position = Vector2(0, 4.76837e-07)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Brick3/Area2D4"]
+position = Vector2(0.24826, -0.00848436)
+shape = SubResource("RectangleShape2D_2prg4")
+
+[node name="Hammer" type="RigidBody2D" parent="." groups=["hammer"]]
+position = Vector2(970.13, 229)
+rotation = 1.5708
+gravity_scale = 0.0
+script = ExtResource("1_5vxdr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Hammer"]
+position = Vector2(7.29598, -2.28882e-05)
+scale = Vector2(338.861, 169.369)
+texture = SubResource("PlaceholderTexture2D_qhh7i")
+
+[node name="Button" type="Button" parent="Hammer"]
+offset_left = -162.0
+offset_top = -86.0
+offset_right = 177.0
+offset_bottom = 87.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hammer"]
+position = Vector2(6.49998, 0.129761)
+shape = SubResource("RectangleShape2D_j25np")
+
+[connection signal="body_entered" from="Brick/Area2D0" to="." method="_on_area_2d_0_body_entered"]
+[connection signal="body_entered" from="Brick/Area2D1" to="." method="_on_area_2d_1_body_entered"]
+[connection signal="body_entered" from="Brick2/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Brick2/Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="Brick3/Area2D3" to="." method="_on_area_2d_3_body_entered"]
+[connection signal="body_entered" from="Brick3/Area2D4" to="." method="_on_area_2d_4_body_entered"]
+[connection signal="button_down" from="Hammer/Button" to="Hammer" method="_on_button_button_down"]
+[connection signal="button_up" from="Hammer/Button" to="Hammer" method="_on_button_button_up"]
