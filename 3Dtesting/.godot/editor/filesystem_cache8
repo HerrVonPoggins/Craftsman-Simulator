@@ -214,7 +214,7 @@ global.gd::GDScript::-1::1715713149::0::1::::<>Node<>::
 ::res://UI/Inventory/::1715955351
 inventory.gd::GDScript::-1::1715951213::0::1::::<>Control<>::
 inventory.tscn::PackedScene::7838211368217593182::1715955351::0::1::::<><>::res://UI/Inventory/inventory.gd
-::res://UI/player_ui/::1716219503
+::res://UI/player_ui/::1716219518
 1.png::CompressedTexture2D::3473161339835247598::1715696611::1716219518::1::::<><>::
 2.png::CompressedTexture2D::7360490423067285775::1715696611::1716219518::1::::<><>::
 3.png::CompressedTexture2D::7305876024354119766::1715696611::1716219518::1::::<><>::
@@ -241,17 +241,17 @@ titlescreen.tscn::PackedScene::299591778937143882::1715955351::0::1::::<><>::res
 ::res://ui/Inventory/::1715955351
 inventory.gd::GDScript::-1::1715951213::0::1::::<>Control<>::
 inventory.tscn::PackedScene::7838211368217593182::1715955351::0::1::::<><>::res://UI/Inventory/inventory.gd
-::res://ui/player_ui/::1716219503
-1.png::CompressedTexture2D::3473161339835247598::1715696611::1716219503::1::::<><>::
-2.png::CompressedTexture2D::7360490423067285775::1715696611::1716219503::1::::<><>::
-3.png::CompressedTexture2D::7305876024354119766::1715696611::1716219503::1::::<><>::
-4.png::CompressedTexture2D::8555811134180993803::1715696611::1716219503::1::::<><>::
-5.png::CompressedTexture2D::1229957364018111191::1715696611::1716219503::1::::<><>::
+::res://ui/player_ui/::1716219518
+1.png::CompressedTexture2D::3473161339835247598::1715696611::1716219535::1::::<><>::
+2.png::CompressedTexture2D::7360490423067285775::1715696611::1716219535::1::::<><>::
+3.png::CompressedTexture2D::7305876024354119766::1715696611::1716219535::1::::<><>::
+4.png::CompressedTexture2D::8555811134180993803::1715696611::1716219535::1::::<><>::
+5.png::CompressedTexture2D::1229957364018111191::1715696611::1716219535::1::::<><>::
 Checklist.gd::GDScript::-1::1715873704::0::1::::<>Node2D<>::
 checklist.tscn::PackedScene::2993137486329213323::1715873704::0::1::::<><>::res://ui/player_ui/Checklist.gd<>uid://be6bba0eknndn::::res://ui/player_ui/Quest_UI.png<>uid://ccolb6uftch63::::res://assets/fonts/AldotheApache.ttf
 info hub.tscn::PackedScene::4973355144014707637::1715710631::0::1::::<><>::res://ui/player_ui/TabContainer.gd<>uid://b64wbqw154cxp::::res://ui/player_ui/Options_Button.png<>uid://biv5si5cbepod::::res://ui/player_ui/checklist.tscn<>uid://dr813mjfqn5n4::::res://assets/textures/warning_sample.jpg<>uid://cdpolkwg0t10a::::res://ui/player_ui/transition.tscn<>uid://bpqopvth4yp87::::res://ui/player_ui/1.png<>uid://dc4qg4m7u1b48::::res://ui/player_ui/2.png<>uid://ccfrjw5825ajn::::res://ui/player_ui/settings.tscn<>uid://dcdayfud0hwvm::::res://ui/player_ui/3.png<>uid://dt5q7vaxyp3f0::::res://ui/player_ui/4.png<>uid://rr2hodwwfv1h::::res://ui/player_ui/5.png
-Options_Button.png::CompressedTexture2D::4623480226556459053::1715626131::1716219502::1::::<><>::
-Quest_UI.png::CompressedTexture2D::2731234310223496559::1715626131::1716219502::1::::<><>::
+Options_Button.png::CompressedTexture2D::4623480226556459053::1715626131::1716219534::1::::<><>::
+Quest_UI.png::CompressedTexture2D::2731234310223496559::1715626131::1716219534::1::::<><>::
 Settings.gd::GDScript::-1::1715710630::0::1::::<>Control<>::
 settings.tscn::PackedScene::4924590407849204863::1715637065::0::1::::<><>::res://ui/player_ui/Settings.gd
 TabContainer.gd::GDScript::-1::1715730668::0::1::::<>Control<>::
