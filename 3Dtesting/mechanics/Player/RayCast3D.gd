@@ -3,6 +3,8 @@ extends RayCast3D
 var last = Vector3.ZERO
 var obj = null
 
+signal start_saw_minigame
+
 @onready var point = $"../MeshInstance3D/Hold"
 @onready var player = $"../../../.."
 var work_clothes = 0
@@ -48,6 +50,9 @@ func _process(delta):
 				if collider.is_in_group("boots"):
 					collider.queue_free()
 					work_clothes += 1
+
+				if collider.is_in_group("saw_minigame"):
+					emit_signal("start_saw_minigame")
 
 
 	if obj != null:

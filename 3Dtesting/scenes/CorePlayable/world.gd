@@ -52,14 +52,6 @@ func _on_concrete_bucket_body_entered(body):
 	if body.is_in_group("tool"):
 		Global.concrete = true
 
-#when the cutable brick enters the area3d its scale gets reduced
-func _on_saw_body_entered(body):
-	if body.is_in_group("cut"):
-		$Props/BrickCut.scale = Vector3(1,1,0.5)
-		$Props/BrickCut/Brick_008.scale = Vector3(0.618,1,0.5)
-		$Props/BrickCut/Brick_008.position = Vector3(0,5.154,-2.019)
-		$Props/BrickCut/CollisionShape3D.scale = Vector3(1,1,0.5)
-		Global.brick_sawed = true
 
 
 #mechanic for the isolation blocks to appear when they are put into the area3d
@@ -90,3 +82,13 @@ func _on_string_wedge_2_body_entered(body):
 		$StringWedge2/MeshInstance3D.visible = true
 		$StringWedge2/MeshInstance3D2.visible = false
 		$StringWedge2/CollisionShape3D.call_deferred("set_disabled", true)
+
+
+func _on_ray_cast_3d_start_saw_minigame():
+	$Props/Saw/Camera3D.current = true
+	Global.stay = true
+	$Props/BrickCut.scale = Vector3(1,1,0.5)
+	$Props/BrickCut/Brick_008.scale = Vector3(0.618,1,0.5)
+	$Props/BrickCut/Brick_008.position = Vector3(0,5.154,-2.019)
+	$Props/BrickCut/CollisionShape3D.scale = Vector3(1,1,0.5)
+	Global.brick_sawed = true
