@@ -1,3 +1,4 @@
+res://mechanics/brick_cutting
 res://scripts
 res://mechanics/2d_games
 res://mechanics/Player
@@ -19,5 +20,4 @@ res://UI
 res://mechanics/StudWall
 res://scenes/StuckateurScene
 res://mechanics
-res://assets
 C:/Users/Tobias Kastner/Pictures/GPM3/FBX2glTF-windows-x86_64/FBX2glTF-windows-x86_64
