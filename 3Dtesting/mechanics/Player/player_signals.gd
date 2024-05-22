@@ -2,9 +2,11 @@ extends Node3D
 
 signal start_mixer
 signal concrete_bucket_pos_reached
+signal inv_trowel_button_clicked
+
 
 @onready var trowel = preload("res://mechanics/Tools/trowel.tscn")
-@onready var hold = $"../MeshInstance3D/Hold"
+@onready var hold = $CharacterBody3D/Neck/Camera3D/MeshInstance3D/Hold
 
 @onready var concrete_bucket_spawn = %ConcreteBucketSpawn
 @export var pointer = Vector3.ZERO
@@ -20,6 +22,4 @@ func _process(delta):
 
 
 func _on_inventory_trowel_button_clicked():
-	var new_trowel = trowel.instantiate()
-	new_trowel.position = hold.position
-	add_child(new_trowel)
+	emit_signal("inv_trowel_button_clicked")
