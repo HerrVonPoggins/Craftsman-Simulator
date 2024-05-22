@@ -47,12 +47,15 @@ func _process(delta):
 
 				if collider.is_in_group("helmet"):
 					collider.queue_free()
+					Music._play_collect()
 					work_clothes += 1
 				if collider.is_in_group("gloves"):
 					collider.queue_free()
+					Music._play_collect()
 					work_clothes += 1
 				if collider.is_in_group("boots"):
 					collider.queue_free()
+					Music._play_collect()
 					work_clothes += 1
 
 				if collider.is_in_group("saw_minigame"):

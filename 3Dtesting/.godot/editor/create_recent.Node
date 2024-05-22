@@ -1,3 +1,5 @@
+AudioStreamPlayer2D
+Node
 RigidBody3D
 Area2D
 Sprite2D
@@ -11,4 +13,3 @@ CharacterBody3D
 StaticBody3D
 CollisionShape3D
 Area3D
-MeshInstance3D
