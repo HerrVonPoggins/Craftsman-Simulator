@@ -66,46 +66,46 @@ radius = 0.731936
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_4y07e")
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Lintel" type="Area3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lintel"]
 shape = SubResource("BoxShape3D_obhal")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
+[node name="Brick" type="MeshInstance3D" parent="Lintel"]
 transform = Transform3D(-4.37114e-08, 0, 2.5, 0, 1, 0, -1, 0, -1.09278e-07, 10.6663, 5.13249, -0.068501)
 visible = false
 mesh = SubResource("ArrayMesh_k0l5f")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Area3D"]
+[node name="Outline" type="MeshInstance3D" parent="Lintel"]
 transform = Transform3D(-8.74228e-08, 0, 2.5, 0, 1, 0, -2, 0, -1.09278e-07, -0.0274665, 0, -0.0567921)
 mesh = ExtResource("3_j3ufj")
 
-[node name="Area3D2" type="Area3D" parent="."]
+[node name="Concrete1" type="Area3D" parent="."]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D2"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Concrete1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.23134, -0.0799192, -0.0902297)
 visible = false
 mesh = SubResource("CapsuleMesh_iyopy")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_0ymfu")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Concrete1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43255, 0, 0)
 shape = SubResource("SphereShape3D_4j6jj")
 
-[node name="Area3D3" type="Area3D" parent="."]
+[node name="Concrete2" type="Area3D" parent="."]
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Area3D3"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Concrete2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.29838, 0, -0.0691734)
 visible = false
 mesh = SubResource("CapsuleMesh_iyopy")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_0ymfu")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D3"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Concrete2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5774, 0, 0)
 shape = SubResource("SphereShape3D_q5efb")
 
-[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
-[connection signal="body_entered" from="Area3D2" to="." method="_on_area_3d_2_body_entered"]
-[connection signal="body_entered" from="Area3D3" to="." method="_on_area_3d_3_body_entered"]
+[connection signal="body_entered" from="Lintel" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Concrete1" to="." method="_on_area_3d_2_body_entered"]
+[connection signal="body_entered" from="Concrete2" to="." method="_on_area_3d_3_body_entered"]

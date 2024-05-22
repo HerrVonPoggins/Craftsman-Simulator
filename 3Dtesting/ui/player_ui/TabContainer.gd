@@ -9,7 +9,11 @@ signal closed
 @onready var info_hub_button = $ButtonInfoHub
 @onready var checklist_button = $ButtonChecklist
 @onready var tab = $TabContainer
-
+@onready var settings = $ButtonSettings
+@onready var save = $ButtonSave
+@onready var load = $ButtonLoad
+@onready var main_menu = $ButtonMainMenu
+@onready var quit = $ButtonQuit
 
 
 
@@ -43,21 +47,21 @@ func _process(delta):
 			close()
 			checklist_button.visible = false
 			info_hub_button.visible = false
-			$ButtonSettings.visible = false
-			$ButtonSave.visible = false
-			$ButtonLoad.visible = false
-			$ButtonMainMenu.visible = false
-			$ButtonQuit.visible = false
+			settings.visible = false
+			save.visible = false
+			load.visible = false
+			main_menu.visible = false
+			quit.visible = false
 			Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 		else:
 			open()
 			info_hub_button.visible = true
 			checklist_button.visible = true
-			$ButtonSettings.visible = true
-			$ButtonSave.visible = true
-			$ButtonLoad.visible = true
-			$ButtonMainMenu.visible = true
-			$ButtonQuit.visible = true
+			settings.visible = true
+			save.visible = true
+			load.visible = true
+			main_menu.visible = true
+			quit.visible = true
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func open():
@@ -75,11 +79,11 @@ func _on_button_info_hub_pressed():
 		close()
 		info_hub_button.visible = false
 		checklist_button.visible = false
-		$ButtonSettings.visible = false
-		$ButtonSave.visible = false
-		$ButtonLoad.visible = false
-		$ButtonMainMenu.visible = false
-		$ButtonQuit.visible = false
+		settings.visible = false
+		save.visible = false
+		load.visible = false
+		main_menu.visible = false
+		quit.visible = false
 	else:
 		open()
 
