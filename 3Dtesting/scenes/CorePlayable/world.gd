@@ -92,3 +92,13 @@ func _on_ray_cast_3d_start_saw_minigame():
 	$Props/BrickCut/Brick_008.position = Vector3(0,5.154,-2.019)
 	$Props/BrickCut/CollisionShape3D.scale = Vector3(1,1,0.5)
 	Global.brick_sawed = true
+
+
+func _on_cut_area_area_entered(area):
+	area.get_node()
+	if area.get_node() == "LockInL":
+		$Props/BrickCut.position = Vector3(-67.501, -10.363, 520.344)
+	if area.get_node() == "LockInM":
+		$Props/BrickCut.position = Vector3(-68.169, -10.363, 520.344)
+	if area.get_node() == "LockInR":
+		$Props/BrickCut.position = Vector3(-68.804, -10.363, 520.344)

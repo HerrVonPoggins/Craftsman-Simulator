@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ddisbe3vc48j4"]
+[gd_scene load_steps=9 format=3 uid="uid://ddisbe3vc48j4"]
 
 [ext_resource type="Script" path="res://mechanics/brick_cutting/brick_cut.gd" id="1_2koao"]
 [ext_resource type="Texture2D" uid="uid://dwfc4k5batkf2" path="res://assets/models/bricks_8017-normal.jpg" id="1_wtu57"]
@@ -49,6 +49,12 @@ shadow_mesh = SubResource("ArrayMesh_1wiuj")
 [sub_resource type="BoxShape3D" id="BoxShape3D_fnph8"]
 size = Vector3(0.422119, 0.73378, 2.00006)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_e1i7n"]
+size = Vector3(0.494141, 0.726196, 0.263184)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vq1x3"]
+size = Vector3(0.66, 0.415, 0.08)
+
 [node name="BrickCut" type="RigidBody3D" groups=["brick", "cut"]]
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -69.1615, -10.3626, 520.344)
 freeze = true
@@ -62,3 +68,35 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0152588, 0.00671005, 0.109497)
 shape = SubResource("BoxShape3D_fnph8")
+
+[node name="LockInL" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LockInL"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107422, 0.00860596, -0.491867)
+shape = SubResource("BoxShape3D_e1i7n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LockInL"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.485489)
+mesh = SubResource("BoxMesh_vq1x3")
+
+[node name="LockInM" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.667038)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LockInM"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107422, 0.00860596, -0.491867)
+shape = SubResource("BoxShape3D_e1i7n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LockInM"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.485489)
+mesh = SubResource("BoxMesh_vq1x3")
+
+[node name="LockInR" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.30669)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LockInR"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107422, 0.00860596, -0.491867)
+shape = SubResource("BoxShape3D_e1i7n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LockInR"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.485489)
+mesh = SubResource("BoxMesh_vq1x3")
