@@ -1,4 +1,6 @@
-res://scenes/CorePlayable/CorePlayable.tscn
+res://ui/screens/titlescreen.tscn
 res://scenes/Carpenter/carpenter_world.gd
 res://Settings.gd
-res://mechanics/brick_cutting/brick_cut.tscn
+res://scenes/CorePlayable/CorePlayable.tscn
+res://scripts/music.tscn
+res://scripts/music.gd

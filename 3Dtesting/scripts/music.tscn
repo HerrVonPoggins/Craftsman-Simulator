@@ -9,6 +9,7 @@ data = PackedByteArray(255, 243, 228, 100, 0, 29, 93, 252, 202, 102, 36, 120, 24
 script = ExtResource("1_jhahl")
 
 [node name="MaineMenu" type="AudioStreamPlayer2D" parent="."]
+autoplay = true
 
 [node name="ButtonSound" type="AudioStreamPlayer2D" parent="."]
 
