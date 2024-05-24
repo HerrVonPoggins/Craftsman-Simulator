@@ -20,7 +20,7 @@ func _on_button_pressed():
 
 
 func _on_volume_scrolling():
-	Global.volume = $HScrollBar.value
+	Music.volume = $HScrollBar.value
 
 
 func _on_mouse_sens_scrolling():

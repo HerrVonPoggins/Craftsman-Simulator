@@ -28,12 +28,10 @@ text = "Done"
 layout_mode = 0
 offset_right = 82.0
 offset_bottom = 40.0
-current_tab = 1
 clip_tabs = false
 drag_to_rearrange_enabled = true
 
 [node name="TabBar" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 
 [node name="Volume" type="HScrollBar" parent="TabContainer/TabBar"]
@@ -53,7 +51,23 @@ text = "Volume"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Volume2" type="HScrollBar" parent="TabContainer/TabBar"]
+offset_left = 163.0
+offset_top = 149.0
+offset_right = 474.0
+offset_bottom = 178.0
+
+[node name="Label2" type="Label" parent="TabContainer/TabBar"]
+offset_left = 15.0
+offset_top = 142.0
+offset_right = 150.0
+offset_bottom = 185.0
+text = "Effects"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="TabBar2" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 
 [node name="MouseSens" type="HScrollBar" parent="TabContainer/TabBar2"]
@@ -78,4 +92,5 @@ vertical_alignment = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="scrolling" from="TabContainer/TabBar/Volume" to="." method="_on_volume_scrolling"]
+[connection signal="scrolling" from="TabContainer/TabBar/Volume2" to="." method="_on_volume_2_scrolling"]
 [connection signal="scrolling" from="TabContainer/TabBar2/MouseSens" to="." method="_on_mouse_sens_scrolling"]

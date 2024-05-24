@@ -21,8 +21,12 @@ func _on_button_pressed():
 
 
 func _on_volume_scrolling():
-	Global.volume = $HScrollBar.value
+	Music.volume = $TabContainer/TabBar/Volume.value
 
 
 func _on_mouse_sens_scrolling():
 	Global.mouse_sensitivity = $TabContainer/TabBar2/MouseSens.value
+
+
+func _on_volume_2_scrolling():
+	Music.effects = $TabContainer/TabBar/Volume2.value

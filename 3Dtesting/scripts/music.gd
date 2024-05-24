@@ -1,5 +1,7 @@
 extends Node
 
+var volume = 0
+var effects = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -8,8 +10,20 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
-
+	$MaineMenu.volume_db = volume
+	$ButtonSound.volume_db = effects
+	$BrickPlacing.volume_db = effects
+	$ConcretePlacing.volume_db = effects
+	$WalkFloor.volume_db = effects
+	$WalkGrass.volume_db = effects
+	$FillMixerConcrete.volume_db = effects
+	$FillMixerWater.volume_db = effects
+	$FillMixerSand.volume_db = effects
+	$WedgePlacing.volume_db = effects
+	$Collect.volume_db = effects
+	$MixerSound.volume_db = effects
+	$SawSound.volume_db = effects
+	
 
 func _play_collect():
 	$Collect.play()

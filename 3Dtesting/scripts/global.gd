@@ -10,7 +10,6 @@ var brick_sawed = false
 var isolation = false
 var current_scene = 0
 var dialogue_open = false
-var volume = 0
 var trowel_picked = false
 var save_path = "user://variable.save"
 var mouse_sensitivity = 0.01
