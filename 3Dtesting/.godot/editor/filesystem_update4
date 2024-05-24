@@ -1,15 +1,3 @@
-res://ui/screens/titlescreen.tscn
+res://mechanics/build_wall/brickplacingminigame.tscn
 res://scenes/Carpenter/carpenter_world.gd
 res://Settings.gd
-res://scripts/music.tscn
-res://scripts/music.gd
-res://scenes/CorePlayable/CorePlayable.tscn
-res://scenes/CorePlayable/world.gd
-res://ui/screens/titlescreen.gd
-res://ui/screens/credits.gd
-res://ui/screens/endscreen.gd
-res://ui/player_ui/Settings.gd
-res://ui/player_ui/TabContainer.gd
-res://ui/Inventory/inventory.gd
-res://mechanics/Player/RayCast3D.gd
-res://mechanics/build_wall/wall.gd

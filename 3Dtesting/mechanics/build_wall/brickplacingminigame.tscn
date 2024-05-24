@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://brsmrqkeinfal"]
+[gd_scene load_steps=12 format=3 uid="uid://brsmrqkeinfal"]
 
 [ext_resource type="Script" path="res://mechanics/build_wall/brickplacingminigame.gd" id="1_xmykr"]
 
@@ -67,6 +67,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_qyirc")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bgt7o"]
+size = Vector3(0.0153694, 0.0221282, 0.0205383)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ev4se"]
 resource_name = "Material.005"
@@ -139,28 +142,87 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_36edp")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ondk1"]
+size = Vector3(1.98718, 2.1889, 2.09152)
+
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_xmykr")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.04206)
-
 [node name="Cube_001" type="MeshInstance3D" parent="."]
-transform = Transform3D(-17.6522, -9.27888e-07, -3.91438, -3.71991, -8.13064e-07, 18.575, -1.07526e-06, 18.0456, 6.35644e-07, -0.617505, -0.313512, 0.872683)
+transform = Transform3D(-16.7756, 6.05186e-07, -3.71993, -3.53517, -5.76154e-07, 17.6523, 4.73209e-07, 17.15, 7.24297e-07, -0.617505, -0.313512, 0.872683)
 mesh = SubResource("ArrayMesh_2gvyd")
 skeleton = NodePath("")
+
+[node name="Brick1" type="Area3D" parent="Cube_001"]
+transform = Transform3D(-0.0542414, -0.0114305, -3.30405e-09, -2.84938e-09, -2.49679e-09, 0.0554152, -0.0108626, 0.0515467, 1.76395e-09, -0.0370779, -0.0483599, 0.00945278)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_001/Brick1"]
+transform = Transform3D(-17.6522, -9.2781e-07, -3.91438, -3.71991, -8.13022e-07, 18.575, -1.07526e-06, 18.0444, 6.35603e-07, -0.741505, -0.340671, 0.87416)
+shape = SubResource("BoxShape3D_bgt7o")
+
+[node name="Brick2" type="Area3D" parent="Cube_001"]
+transform = Transform3D(-0.0542414, -0.0114305, -3.30405e-09, -2.84939e-09, -2.49679e-09, 0.0554152, -0.0108626, 0.0515467, 1.76395e-09, -0.0530896, -0.0487683, 0.00913949)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_001/Brick2"]
+transform = Transform3D(-17.6522, -9.2781e-07, -3.91438, -3.71991, -8.13022e-07, 18.575, -1.07526e-06, 18.0444, 6.35603e-07, -0.741505, -0.340671, 0.87416)
+shape = SubResource("BoxShape3D_bgt7o")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.04206)
 
 [node name="Cube_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(-17.6178, -1.18039e-06, 4.08247, 3.87965, -3.58798e-07, 18.5388, -1.07526e-06, 18.0456, 6.35644e-07, 0.041615, -0.45447, 0.872683)
 mesh = SubResource("ArrayMesh_2gvyd")
 skeleton = NodePath("")
 
+[node name="Brick3" type="Area3D" parent="Cube_002"]
+transform = Transform3D(-0.0542414, -0.0114305, -3.30405e-09, -2.84938e-09, -2.49679e-09, 0.0554152, -0.0108626, 0.0515467, 1.76395e-09, -0.0370779, -0.0483599, 0.00945278)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_002/Brick3"]
+transform = Transform3D(-17.6522, -9.2781e-07, -3.91438, -3.71991, -8.13022e-07, 18.575, -1.07526e-06, 18.0444, 6.35603e-07, -0.741505, -0.340671, 0.87416)
+shape = SubResource("BoxShape3D_bgt7o")
+
+[node name="Brick4" type="Area3D" parent="Cube_002"]
+transform = Transform3D(-0.0542414, -0.0114305, -3.30405e-09, -2.84939e-09, -2.49679e-09, 0.0554152, -0.0108626, 0.0515467, 1.76395e-09, -0.0530896, -0.0487683, 0.00913949)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_002/Brick4"]
+transform = Transform3D(-17.6522, -9.2781e-07, -3.91438, -3.71991, -8.13022e-07, 18.575, -1.07526e-06, 18.0444, 6.35603e-07, -0.741505, -0.340671, 0.87416)
+shape = SubResource("BoxShape3D_bgt7o")
+
 [node name="Cube_003" type="MeshInstance3D" parent="."]
-transform = Transform3D(-17.933, -1.13492e-06, 2.06366, 1.96113, -4.83745e-07, 18.8705, -1.07526e-06, 18.0456, 6.35644e-07, 0.744995, -0.45447, 0.872683)
+transform = Transform3D(-16.2215, -1.23157e-06, 8.30582, 7.89318, -7.27266e-08, 17.0695, -1.07526e-06, 18.0456, 6.35644e-07, 0.744995, -0.45447, 0.872683)
 mesh = SubResource("ArrayMesh_2gvyd")
 skeleton = NodePath("")
 
-[node name="Sledgehammer" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.00104712, 0.176989, 0.00157077, -0.299986, -0.00063444, 0.00134556, 0.00270221, -0.00184788, 0.149986, 0.685934, 0.606248, 1.16555)
+[node name="Brick5" type="Area3D" parent="Cube_003"]
+transform = Transform3D(-0.0542414, -0.0114305, -3.30405e-09, -2.84938e-09, -2.49679e-09, 0.0554152, -0.0108626, 0.0515467, 1.76395e-09, -0.0370779, -0.0483599, 0.00945278)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_003/Brick5"]
+transform = Transform3D(-17.6522, -9.2781e-07, -3.91438, -3.71991, -8.13022e-07, 18.575, -1.07526e-06, 18.0444, 6.35603e-07, -0.741505, -0.340671, 0.87416)
+shape = SubResource("BoxShape3D_bgt7o")
+
+[node name="Brick6" type="Area3D" parent="Cube_003"]
+transform = Transform3D(-0.0542414, -0.0114305, -3.30405e-09, -2.84939e-09, -2.49679e-09, 0.0554152, -0.0108626, 0.0515467, 1.76395e-09, -0.0530896, -0.0487683, 0.00913949)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_003/Brick6"]
+transform = Transform3D(-17.6522, -9.2781e-07, -3.91438, -3.71991, -8.13022e-07, 18.575, -1.07526e-06, 18.0444, 6.35603e-07, -0.741505, -0.340671, 0.87416)
+shape = SubResource("BoxShape3D_bgt7o")
+
+[node name="Hammer" type="RigidBody3D" parent="." groups=["hammer"]]
+gravity_scale = 0.0
+
+[node name="Sledgehammer" type="MeshInstance3D" parent="Hammer"]
+transform = Transform3D(-0.00104712, 0.176989, 0.00157077, -0.299986, -0.00063444, 0.00134556, 0.00270221, -0.00184788, 0.149986, 0.0425673, 0, 1.0865)
 mesh = SubResource("ArrayMesh_u1cg6")
 skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hammer"]
+transform = Transform3D(-0.00104712, 0.176989, 0.00157077, -0.299986, -0.00063444, 0.00134556, 0.00270221, -0.00184788, 0.149986, 0.0644219, 0.0404356, 0.805649)
+shape = SubResource("BoxShape3D_ondk1")
+
+[connection signal="body_entered" from="Cube_001/Brick1" to="." method="_on_brick_1_body_entered"]
+[connection signal="body_entered" from="Cube_001/Brick2" to="." method="_on_brick_2_body_entered"]
+[connection signal="body_entered" from="Cube_002/Brick3" to="." method="_on_brick_3_body_entered"]
+[connection signal="body_entered" from="Cube_002/Brick4" to="." method="_on_brick_4_body_entered"]
+[connection signal="body_entered" from="Cube_003/Brick5" to="." method="_on_brick_5_body_entered"]
+[connection signal="body_entered" from="Cube_003/Brick6" to="." method="_on_brick_6_body_entered"]
