@@ -52,12 +52,14 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Volume2" type="HScrollBar" parent="TabContainer/TabBar"]
+layout_mode = 0
 offset_left = 163.0
 offset_top = 149.0
 offset_right = 474.0
 offset_bottom = 178.0
 
 [node name="Label2" type="Label" parent="TabContainer/TabBar"]
+layout_mode = 0
 offset_left = 15.0
 offset_top = 142.0
 offset_right = 150.0
