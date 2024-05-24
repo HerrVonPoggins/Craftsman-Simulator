@@ -42,6 +42,7 @@ func _process(delta):
 					Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_text.dialogue"))
 				if collider.is_in_group("cement_mixer"):
+					Music._play_mixer()
 					player.emit_signal("start_mixer")
 					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_2.dialogue"))
 

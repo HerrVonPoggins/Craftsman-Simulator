@@ -13,6 +13,7 @@ func _process(delta):
 
 
 func _on_button_pressed():
+	Music._play_button()
 	$".".visible = false
 
 

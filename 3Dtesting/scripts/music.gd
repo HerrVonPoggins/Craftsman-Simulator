@@ -37,13 +37,27 @@ func _pause_main_menu():
 func _continue_main_menu():
 	$MaineMenu.stream_paused = false
 
+func _play_bricklayer():
+	$BricklayerMusic.play()
+func _stop_bricklayer():
+	$BricklayerMusic.stop()
+func _pause_bricklayer():
+	$BricklayerMusic.stream_paused = true
+func _continue_bricklayer():
+	$BricklayerMusic.stream_paused = false
+
+
+
+
+
+
 func _play_button():
 	$ButtonSound.play()
 
 func _play_brick_placing():
 	$BrickPlacing.play()
 
-func _play_Concrete_Placing():
+func _play_concrete_placing():
 	$ConcretePlacing.play()
 
 func _play_walk_floor():
@@ -61,7 +75,7 @@ func _play_fill_mixer_water():
 func _play_fill_mixer_sand():
 	$FillMixerSand.play()
 
-func _play_Wedge():
+func _play_wedge():
 	$WedgePlacing.play()
 
 func _play_mixer():
@@ -70,6 +84,8 @@ func _play_mixer():
 func _play_saw():
 	$SawSound.play()
 
+func _play_string():
+	$WedgeString.play()
 
 
 

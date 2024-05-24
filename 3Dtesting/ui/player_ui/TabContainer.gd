@@ -75,6 +75,7 @@ func close():
 	closed.emit()
 
 func _on_button_info_hub_pressed():
+	Music._play_button()
 	if isOpen == true:
 		close()
 		info_hub_button.visible = false
@@ -88,6 +89,7 @@ func _on_button_info_hub_pressed():
 		open()
 
 func _on_button_checklist_pressed():
+	Music._play_button()
 	if check.visible == false:
 		check.visible = true
 	else:
@@ -98,14 +100,17 @@ func _on_button_checklist_pressed():
 
 
 func _on_button_main_menu_pressed():
+	Music._play_button()
 	$Transition._change_scene("res://ui/screens/titlescreen.tscn")
 	close()
 	
 
 func _on_button_save_pressed():
+	Music._play_button()
 	Global.save()
 
 func _on_button_load_pressed():
+	Music._play_button()
 	Global.load_save()
 	if Global.current_scene == 1:
 		$Transition._change_scene("res://scenes/CorePlayable/CorePlayable.tscn")
@@ -113,6 +118,7 @@ func _on_button_load_pressed():
 		$Transition._change_scene("res://scenes/StuckateurScene/Stuckateur.tscn")
 
 func _on_button_settings_pressed():
+	Music._play_button()
 	$Control.visible = true
 
 

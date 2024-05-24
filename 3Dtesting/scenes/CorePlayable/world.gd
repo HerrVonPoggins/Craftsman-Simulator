@@ -20,6 +20,7 @@ func _process(delta):
 		counter = 0.5
 		
 	if $StringWedge/MeshInstance3D.visible == true and $StringWedge2/MeshInstance3D.visible == true and Global.string == false:
+		Music._play_string()
 		$StringWedge/String.visible = true
 		Global.string = true
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_3.dialogue"))
@@ -72,6 +73,7 @@ func _on_isolation_area_body_entered(body):
 func _on_string_wedge_body_entered(body):
 	if body.is_in_group("wedge") and Global.concrete_mixed == true:
 		body.queue_free()
+		Music._play_wedge()
 		$StringWedge/MeshInstance3D.visible = true
 		$StringWedge/MeshInstance3D2.visible = false
 		$StringWedge/CollisionShape3D.call_deferred("set_disabled", true)
@@ -79,6 +81,7 @@ func _on_string_wedge_body_entered(body):
 func _on_string_wedge_2_body_entered(body):
 	if body.is_in_group("wedge") and Global.concrete_mixed == true:
 		body.queue_free()
+		Music._play_wedge()
 		$StringWedge2/MeshInstance3D.visible = true
 		$StringWedge2/MeshInstance3D2.visible = false
 		$StringWedge2/CollisionShape3D.call_deferred("set_disabled", true)

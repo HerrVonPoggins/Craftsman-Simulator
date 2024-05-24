@@ -35,18 +35,21 @@ func _on_area_3d_body_entered(body):
 		
 		if brick_1.visible == false and body.is_in_group("cut") == false and concrete_line_1 == true and counter == 1 :
 			body.queue_free()
+			Music._play_brick_placing()
 			brick_1.visible = true
 			outline_1.visible = false
 			outline_2.visible = true
 			
 		elif brick_2.visible == false and body.is_in_group("cut") == false and concrete_line_2 == true and counter == 2:
 			body.queue_free()
+			Music._play_brick_placing()
 			brick_2.visible = true
 			outline_2.visible = false
 			outline_3.visible = true
 
 		elif brick_3.visible == false and body.is_in_group("cut") and outline_3.visible == true and concrete_line_3 == true:
 			body.queue_free()
+			Music._play_brick_placing()
 			brick_3.visible = true
 			outline_3.visible = false
 	if body.is_in_group("spirit_level") and brick_3.visible == true:
@@ -58,67 +61,87 @@ func _on_area_3d_body_entered(body):
 
 func _on_small_concrete_body_entered(body):
 	if body.is_in_group("trowel") and Input.is_action_pressed("leftclick") and Global.concrete == true and outline_1.visible == true:
+		Music._play_concrete_placing()
 		$Area3D/SmallConcrete/MeshInstance3D.visible = true
 func _on_small_concrete_2_body_entered(body):
 	if body.is_in_group("trowel") and Input.is_action_pressed("leftclick") and Global.concrete == true and outline_1.visible == true:
+		Music._play_concrete_placing()
 		$Area3D/SmallConcrete2/MeshInstance3D.visible = true
 func _on_small_concrete_3_body_entered(body):
 	if body.is_in_group("trowel") and Input.is_action_pressed("leftclick") and Global.concrete == true and outline_1.visible == true:
+		Music._play_concrete_placing()
 		$Area3D/SmallConcrete3/MeshInstance3D.visible = true
 func _on_small_concrete_4_body_entered(body):
 	if body.is_in_group("trowel") and Input.is_action_pressed("leftclick") and Global.concrete == true and outline_1.visible == true:
+		Music._play_concrete_placing()
 		$Area3D/SmallConcrete4/MeshInstance3D.visible = true
 func _on_small_concrete_5_body_entered(body):
 	if body.is_in_group("trowel") and Input.is_action_pressed("leftclick") and Global.concrete == true and outline_1.visible == true:
+		Music._play_concrete_placing()
 		$Area3D/SmallConcrete5/MeshInstance3D.visible = true
 func _on_small_concrete_6_body_entered(body):
 	if body.is_in_group("trowel") and Input.is_action_pressed("leftclick") and Global.concrete == true and outline_1.visible == true:
+		Music._play_concrete_placing()
 		$Area3D/SmallConcrete6/MeshInstance3D.visible = true
 func _on_small_concrete_7_body_entered(body):
 	if body.is_in_group("trowel") and Input.is_action_pressed("leftclick") and Global.concrete == true and outline_1.visible == true:
+		Music._play_concrete_placing()
 		$Area3D/SmallConcrete7/MeshInstance3D.visible = true
 func _on_small_concrete_8_body_entered(body):
 	if body.is_in_group("trowel") and Input.is_action_pressed("leftclick") and Global.concrete == true and outline_1.visible == true:
+		Music._play_concrete_placing()
 		$Area3D/SmallConcrete8/MeshInstance3D.visible = true
 
 
 func _on_small_concrete_9_body_entered(body):
 	if body.is_in_group("trowel") and Input.is_action_pressed("leftclick") and Global.concrete == true and concrete_line_1 == true and outline_2.visible == true:
+		Music._play_concrete_placing()
 		$Area3D/SmallConcrete9/MeshInstance3D.visible = true
 func _on_small_concrete_10_body_entered(body):
 	if body.is_in_group("trowel") and Input.is_action_pressed("leftclick") and Global.concrete == true and concrete_line_1 == true and outline_2.visible == true:
+		Music._play_concrete_placing()
 		$Area3D/SmallConcrete10/MeshInstance3D.visible = true
 func _on_small_concrete_11_body_entered(body):
 	if body.is_in_group("trowel") and Input.is_action_pressed("leftclick") and Global.concrete == true and concrete_line_1 == true and outline_2.visible == true:
+		Music._play_concrete_placing()
 		$Area3D/SmallConcrete11/MeshInstance3D.visible = true
 func _on_small_concrete_12_body_entered(body):
 	if body.is_in_group("trowel") and Input.is_action_pressed("leftclick") and Global.concrete == true and concrete_line_1 == true and outline_2.visible == true:
+		Music._play_concrete_placing()
 		$Area3D/SmallConcrete12/MeshInstance3D.visible = true
 func _on_small_concrete_13_body_entered(body):
 	if body.is_in_group("trowel") and Input.is_action_pressed("leftclick") and Global.concrete == true and concrete_line_1 == true and outline_2.visible == true:
+		Music._play_concrete_placing()
 		$Area3D/SmallConcrete13/MeshInstance3D.visible = true
 func _on_small_concrete_14_body_entered(body):
 	if body.is_in_group("trowel") and Input.is_action_pressed("leftclick") and Global.concrete == true and concrete_line_1 == true and outline_2.visible == true:
+		Music._play_concrete_placing()
 		$Area3D/SmallConcrete14/MeshInstance3D.visible = true
 func _on_small_concrete_15_body_entered(body):
 	if body.is_in_group("trowel") and Input.is_action_pressed("leftclick") and Global.concrete == true and concrete_line_1 == true and outline_2.visible == true:
+		Music._play_concrete_placing()
 		$Area3D/SmallConcrete15/MeshInstance3D.visible = true
 func _on_small_concrete_16_body_entered(body):
 	if body.is_in_group("trowel") and Input.is_action_pressed("leftclick") and Global.concrete == true and concrete_line_1 == true and outline_2.visible == true:
+		Music._play_concrete_placing()
 		$Area3D/SmallConcrete16/MeshInstance3D.visible = true
 
 
 func _on_small_concrete_17_body_entered(body):
 	if body.is_in_group("trowel") and Input.is_action_pressed("leftclick") and Global.concrete == true and concrete_line_2 == true and outline_3.visible == true:
+		Music._play_concrete_placing()
 		$Area3D/SmallConcrete17/MeshInstance3D.visible = true
 func _on_small_concrete_18_body_entered(body):
 	if body.is_in_group("trowel") and Input.is_action_pressed("leftclick") and Global.concrete == true and concrete_line_2 == true and outline_3.visible == true:
+		Music._play_concrete_placing()
 		$Area3D/SmallConcrete18/MeshInstance3D.visible = true
 func _on_small_concrete_19_body_entered(body):
 	if body.is_in_group("trowel") and Input.is_action_pressed("leftclick") and Global.concrete == true  and concrete_line_2 == true and outline_3.visible == true:
+		Music._play_concrete_placing()
 		$Area3D/SmallConcrete19/MeshInstance3D.visible = true
 func _on_small_concrete_20_body_entered(body):
 	if body.is_in_group("trowel") and Input.is_action_pressed("leftclick") and Global.concrete == true  and concrete_line_2 == true and outline_3.visible == true:
+		Music._play_concrete_placing()
 		$Area3D/SmallConcrete20/MeshInstance3D.visible = true
 
 

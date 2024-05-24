@@ -29,6 +29,8 @@ autoplay = true
 
 [node name="WedgePlacing" type="AudioStreamPlayer2D" parent="."]
 
+[node name="WedgeString" type="AudioStreamPlayer2D" parent="."]
+
 [node name="Collect" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamMP3_7mmh0")
 
@@ -36,9 +38,7 @@ stream = SubResource("AudioStreamMP3_7mmh0")
 
 [node name="SawSound" type="AudioStreamPlayer2D" parent="."]
 
-[node name="AudioStreamPlayer2D14" type="AudioStreamPlayer2D" parent="."]
-
-[node name="AudioStreamPlayer2D15" type="AudioStreamPlayer2D" parent="."]
+[node name="BricklayerMusic" type="AudioStreamPlayer2D" parent="."]
 
 [node name="AudioStreamPlayer2D16" type="AudioStreamPlayer2D" parent="."]
 

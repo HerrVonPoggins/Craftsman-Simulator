@@ -22,4 +22,5 @@ func _process(delta):
 
 
 func _on_trowel_button_pressed():
+	Music._play_button()
 	emit_signal("trowel_button_clicked")
