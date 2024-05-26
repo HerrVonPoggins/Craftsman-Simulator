@@ -1,6 +1,6 @@
 3acdcc5cb6df755358dde907981ccea8
-::res://::1716552566
-Settings.gd::GDScript::-1::1716545025::0::1::::<>Control<>::
+::res://::1716716102
+Settings.gd::GDScript::-1::1716552584::0::1::::<>Control<>::
 ::res://addons/::1713293054
 ::res://addons/dialogue_manager/::1713796856
 constants.gd::GDScript::-1::1712740799::0::1::::<>Node<>::
@@ -150,9 +150,9 @@ Hammer.gd::GDScript::-1::1716213244::0::1::::<>RigidBody2D<>::
 ::res://mechanics/brick_cutting/::1716455095
 brick_cut.gd::GDScript::-1::1716455095::0::1::::<>RigidBody3D<>::
 brick_cut.tscn::PackedScene::7387438549995498875::1716455095::0::1::::<><>::res://mechanics/brick_cutting/brick_cut.gd<>uid://dwfc4k5batkf2::::res://assets/models/bricks_8017-normal.jpg
-::res://mechanics/build_wall/::1716552555
+::res://mechanics/build_wall/::1716552584
 brickplacingminigame.gd::GDScript::-1::1716552555::0::1::::<>Node3D<>::
-brickplacingminigame.tscn::PackedScene::3617549643536903943::1716552555::0::1::::<><>::res://mechanics/build_wall/brickplacingminigame.gd
+brickplacingminigame.tscn::PackedScene::3617549643536903943::1716552584::0::1::::<><>::res://mechanics/build_wall/brickplacingminigame.gd
 Doortop.gd::GDScript::-1::1716367087::0::1::::<>Node3D<>::
 Doortop.tscn::PackedScene::5495620393299523043::1716367087::0::1::::<><>::res://mechanics/build_wall/Doortop.gd<>uid://dwfc4k5batkf2::::res://assets/models/bricks_8017-normal.jpg<>uid://dfk7y7w5dvc35::::res://assets/models/brick_outline_prototyp(1).obj
 wall.gd::GDScript::-1::1716547573::0::1::::<>Node3D<>::
@@ -185,8 +185,8 @@ stud_wall.tscn::PackedScene::5291371146237886347::1715633203::0::1::::<><>::res:
 trowel.tscn::PackedScene::4291328714433466311::1716181239::0::1::::<><>::
 ::res://savefiles/::1714656427
 ::res://scenes/::1715707458
-::res://scenes/Carpenter/::1716545025
-carpenter_world.gd::GDScript::-1::1716545025::0::1::::<>Node3D<>::
+::res://scenes/Carpenter/::1716552584
+carpenter_world.gd::GDScript::-1::1716552584::0::1::::<>Node3D<>::
 carpenter_world.tscn::PackedScene::4889354544109381117::1715706335::0::1::::<><>::res://scenes/Carpenter/carpenter_world.gd<>uid://cxv4g3lrd0p6b::::res://mechanics/Player/node_3d.tscn<>uid://bncehlcg0sopv::::res://mechanics/Carpenter-Areas/stairs.tscn<>uid://b7qpr6ucdmfmq::::res://assets/carpenter-assets/wallguide_mesh(unplaned).tres<>uid://bcokw07emnd0j::::res://assets/carpenter-assets/step_mesh(unplaned).tres
 ::res://scenes/CorePlayable/::1716547573
 CorePlayable.tscn::PackedScene::367638352014426829::1716547573::0::1::::<><>::res://scenes/CorePlayable/world.gd<>uid://k0fmfgl0bft6::::res://assets/models/kloofendal_48d_partly_cloudy_puresky_2k.hdr<>uid://c6ub5x3yfjwfq::::res://mechanics/build_wall/wall.tscn<>uid://0he1lqnqyqvf::::res://mechanics/cement-mixing/zementmischer.tscn<>uid://cc4eoydeq1jwv::::res://ui/player_ui/info hub.tscn<>uid://cyxbogh4cdp8::::res://assets/models/eimer_wasser_1.webp<>uid://cxv4g3lrd0p6b::::res://mechanics/Player/node_3d.tscn<>uid://ddisbe3vc48j4::::res://mechanics/brick_cutting/brick_cut.tscn<>uid://dfk7y7w5dvc35::::res://assets/models/brick_outline_prototyp(1).obj<>uid://bfcibpy2rsirf::::res://assets/models/double_trash_bags.obj<>uid://bmrq0v6mprlfw::::res://assets/models/traffic_cone.obj<>uid://dwfc4k5batkf2::::res://assets/models/bricks_8017-normal.jpg<>uid://qc6iyco4u5e8::::res://assets/models/isoslierung_38ebb6_2515fa7e0ef74758a2f8a6adc7b867de~mv2.jpg<>uid://b2e0s63uasg6b::::res://mechanics/Tools/trowel.tscn<>uid://drqhurviabxvr::::res://mechanics/build_wall/windowtop.tscn<>uid://ckkechdc8rspf::::res://mechanics/build_wall/Doortop.tscn<>uid://4sc0de3s2g68::::res://assets/models/prototyp5_brick-wall-stone-bricks-rock-surface-cartoon-style-seamless_191307-535.png<>uid://bmaj688jw4v5y::::res://assets/models/prototyp5_360_F_257717689_dOEzjdOvMhY2lZbsWM1eVGum8v7yTBWx.jpg<>uid://cm3acp3e8tvev::::res://assets/models/prototyp5_38ebb6_2515fa7e0ef74758a2f8a6adc7b867de~mv2.jpg<>uid://yeuwg0p8j2bp::::res://assets/models/prototyp5_1000_F_506249130_NuCs1XOcDm59hn4qhZEw2e8N64NSJRAF.jpg<>uid://bk0xy0t2qkr31::::res://assets/models/prototyp5_normal-map-wall-texture-normal-mapping-photo.jpg<>uid://c25o1dw58fyra::::res://assets/models/prototyp5_T_PolygonConstruction_04_B.png<>uid://cgyju8ktk8ok4::::res://assets/models/prototyp5_T_PolygonConstruction_04_C.png
@@ -228,7 +228,7 @@ music.tscn::PackedScene::3538743680357874426::1716547607::0::1::::<><>::res://sc
 ::res://ui/Inventory/::1716547231
 inventory.gd::GDScript::-1::1716547231::0::1::::<>Control<>::
 inventory.tscn::PackedScene::7838211368217593182::1716147297::0::1::::<><>::res://UI/Inventory/inventory.gd
-::res://ui/player_ui/::1716552552
+::res://ui/player_ui/::1716552568
 1.png::CompressedTexture2D::3473161339835247598::1715689975::1716552568::1::::<><>::
 2.png::CompressedTexture2D::7360490423067285775::1715689975::1716552568::1::::<><>::
 3.png::CompressedTexture2D::7305876024354119766::1715689975::1716552568::1::::<><>::

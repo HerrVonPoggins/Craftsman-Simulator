@@ -40,10 +40,6 @@ func _unhandled_input(event):
 		
 
 
-	if Input.is_action_just_pressed("kamera"):
-		print(Brick_1.rotation.x)
-		print(Brick_2.rotation.x)
-		print(Brick_3.rotation.x)
 
 
 

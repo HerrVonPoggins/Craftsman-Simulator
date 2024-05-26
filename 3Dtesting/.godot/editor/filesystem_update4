@@ -1,3 +1,7 @@
-res://mechanics/build_wall/brickplacingminigame.tscn
+res://ui/screens/titlescreen.tscn
 res://scenes/Carpenter/carpenter_world.gd
 res://Settings.gd
+res://mechanics/build_wall/brickplacingminigame.tscn
+res://mechanics/build_wall/concreteplacingminigame.tscn
+res://mechanics/build_wall/brickplacingminigame.gd
+res://mechanics/build_wall/concreteplacingminigame.gd
