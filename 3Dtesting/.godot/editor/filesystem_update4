@@ -1,4 +1,9 @@
-res://mechanics/brick_cutting/saw.tscn
+res://ui/screens/titlescreen.tscn
 res://scenes/Carpenter/carpenter_world.gd
 res://Settings.gd
-res://mechanics/brick_cutting/brick_cut.gd
+res://mechanics/CurcuitMinigame/curcuits.tscn
+res://mechanics/CurcuitMinigame/curcuits.gd
+res://scenes/Prototypes/PnC+Iso.tscn
+res://mechanics/CurcuitMinigame/curcuitcollision.gd
+res://mechanics/Player/node_3d.tscn
+res://mechanics/build_wall/brickplacingminigame.tscn
