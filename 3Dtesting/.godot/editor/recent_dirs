@@ -1,3 +1,4 @@
+res://mechanics/SwitchMinigame
 res://mechanics/CurcuitMinigame
 res://mechanics/brick_cutting
 res://mechanics/build_wall
@@ -19,5 +20,4 @@ res://scenes/ElektrikerScene
 res://ui/player_ui
 res://UI
 res://mechanics/StudWall
-res://scenes/StuckateurScene
 C:/Users/Tobias Kastner/Pictures/GPM3/FBX2glTF-windows-x86_64/FBX2glTF-windows-x86_64
