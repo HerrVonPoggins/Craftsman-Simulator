@@ -19,7 +19,7 @@ var tutorial_finished = false
 var string = false
 var door_top = 0
 var window_top = 0
-
+var walking_on = null
 func save():
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
 	file.store_var(current_scene)

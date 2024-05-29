@@ -7,6 +7,10 @@ const JUMP_VELOCITY = 4.5
 var is_up = false
 var is_crouching = false
 
+@onready var house_ground = $Map/Haus_Grundriss/HouseGround
+@onready var map_ground = $Map/Boden/MapGround
+
+
 #stairs function variables
 var was_on_floor_last_frame
 var snapped_to_stairs_last_frame = false
@@ -83,9 +87,15 @@ func _physics_process(delta):
 		var direction = (neck.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if is_on_floor():
 			if direction:
+				
 				velocity.x = direction.x * speed
 				velocity.z = direction.z * speed
 			else:
+				if Global.walking_on == map_ground:
+					Music._play_walk_grass()
+				elif Global.walking_on == house_ground:
+					Music._play_walk_floor()
+					
 				velocity.x = lerp(velocity.x, direction.x * speed, delta * 7.0)
 				velocity.z = lerp(velocity.z, direction.z * speed, delta * 7.0)
 		else:
