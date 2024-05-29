@@ -63,8 +63,14 @@ func _play_concrete_placing():
 func _play_walk_floor():
 	$WalkFloor.play()
 
+func _stop_walk_floor():
+	$WalkFloor.stop()
+
 func _play_walk_grass():
 	$WalkGrass.play()
+
+func _stop_walk_grass():
+	$WalkGrass.stop()
 
 func _play_fill_mixer_concrete():
 	$FillMixerConcrete.play()

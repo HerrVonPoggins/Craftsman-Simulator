@@ -87,13 +87,15 @@ func _physics_process(delta):
 		var direction = (neck.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if is_on_floor():
 			if direction:
-				
+
 				velocity.x = direction.x * speed
 				velocity.z = direction.z * speed
 			else:
-				if Global.walking_on == map_ground:
+				if Global.walking_on.get_instance_id() == 72276249330:
+					Music._stop_walk_floor()
 					Music._play_walk_grass()
-				elif Global.walking_on == house_ground:
+				elif Global.walking_on.get_instance_id() == 71756155603:
+					Music._stop_walk_grass()
 					Music._play_walk_floor()
 					
 				velocity.x = lerp(velocity.x, direction.x * speed, delta * 7.0)
