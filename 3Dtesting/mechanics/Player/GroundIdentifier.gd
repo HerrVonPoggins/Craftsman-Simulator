@@ -11,6 +11,13 @@ func _process(delta):
 	if get_collider() != null:
 		Global.walking_on = get_collider()
 
+	if Global.walking_on.get_instance_id() != 72393689842:
+		Music._stop_walk_grass()
+	if Global.walking_on.get_instance_id() != 71873596115:
+		Music._stop_walk_floor()
+		
+		
+
 	if Input.is_action_just_pressed("kamera"):
 		
 		#print(Global.walking_on)
