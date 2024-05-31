@@ -205,7 +205,6 @@ size = Vector3(0.66, 0.415, 0.08)
 
 [node name="Saw" type="RigidBody3D" groups=["saw_minigame"]]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -68.0663, -11.1689, 520.103)
-script = ExtResource("1_vjocy")
 
 [node name="saw_mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0.0974731, -25.3273, 0.103127)
@@ -223,6 +222,7 @@ shape = SubResource("ConvexPolygonShape3D_xs1a4")
 
 [node name="SawCamera" type="Camera3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.99329, 0.678289, 0.149582)
+script = ExtResource("1_vjocy")
 
 [node name="CutArea" type="Area3D" parent="."]
 
@@ -235,8 +235,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.329529, 0.888246, 0.082115
 shape = SubResource("ConcavePolygonShape3D_28p34")
 
 [node name="BrickCut" type="RigidBody3D" parent="." groups=["brick", "cut"]]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 3.59989e-21, 0, 1, -0.240967, 0.8559, -1.0964)
-freeze = true
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 3.59989e-21, 0, 1, -0.5, 0.85, -1.15)
 
 [node name="Brick_008" type="MeshInstance3D" parent="BrickCut"]
 transform = Transform3D(-0.618, 0, 3.89414e-07, 0, 1, 0, -2.40658e-07, 0, -1, 0, 5.16954, -4.16223)

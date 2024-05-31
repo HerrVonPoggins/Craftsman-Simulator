@@ -1,3 +1,4 @@
+C:/GameDev/PlugIns/FBX2glTF-windows-x86_64/FBX2glTF-windows-x86_64
 res://mechanics/SwitchMinigame
 res://mechanics/CurcuitMinigame
 res://mechanics/brick_cutting
@@ -7,17 +8,10 @@ res://mechanics/2d_games
 res://mechanics/Player
 res://assets/carpenter-assets
 res://mechanics/Carpenter-Areas
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
 res://scenes/Carpenter
->>>>>>> 31ca6a69c88176aa046ede80a0d8ef6227b39daf
 res://mechanics/Tools
-=======
 res://mechanics/PowerBox
->>>>>>> Stashed changes
 res://scenes/ElektrikerScene
 res://ui/player_ui
 res://UI
 res://mechanics/StudWall
-C:/Users/Tobias Kastner/Pictures/GPM3/FBX2glTF-windows-x86_64/FBX2glTF-windows-x86_64
