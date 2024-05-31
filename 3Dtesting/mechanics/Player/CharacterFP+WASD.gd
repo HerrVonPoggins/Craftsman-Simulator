@@ -78,11 +78,6 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	#if Global.walking_on != null:
-		#if Global.walking_on.get_instance_id() != 72393689842:
-			#Music._stop_walk_grass()
-		#if Global.walking_on.get_instance_id() != 71873596115:
-			#Music._stop_walk_floor()
 
 
 
@@ -91,27 +86,33 @@ func _physics_process(delta):
 	if Global.stay == true:
 		velocity.x = 0
 		velocity.z = 0
+
 	if Global.stay == false:
 		var input_dir = Input.get_vector("left", "right", "forward", "back")
 		var direction = (neck.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if is_on_floor():
 			if direction:
-
+				Global.is_walking = true
 				velocity.x = direction.x * speed
 				velocity.z = direction.z * speed
+
+
 			else:
-				if Global.walking_on.get_instance_id() == 72393689842:
-					Music._play_walk_grass()
-					#await get_tree().create_timer(1).timeout
-				elif Global.walking_on.get_instance_id() == 71873596115:
-					Music._play_walk_floor()
-					#await get_tree().create_timer(1).timeout
-					direction = direction
+				Global.is_walking = true
+				#if Global.walking_on.get_instance_id() == Global.ground_grass:
+					#Music._play_walk_grass()
+					#print("startet")
+				#elif Global.walking_on.get_instance_id() == Global.ground_floor:
+					#Music._play_walk_floor()
+
 				velocity.x = lerp(velocity.x, direction.x * speed, delta * 7.0)
 				velocity.z = lerp(velocity.z, direction.z * speed, delta * 7.0)
 		else:
 			velocity.x = lerp(velocity.x, direction.x * speed, delta * 2.0)
 			velocity.z = lerp(velocity.z, direction.z * speed, delta * 2.0)
+
+
+
 
 	#head bob
 	if is_crouching == false:
@@ -121,6 +122,7 @@ func _physics_process(delta):
 	rotate_step_up_separation_ray()
 	move_and_slide()
 	snap_down_to_stairs_check()
+
 
 func rotate_step_up_separation_ray():
 	
@@ -138,7 +140,7 @@ func rotate_step_up_separation_ray():
 	$StepUpSeparationRay_R.global_position.z = self.global_position.z + xz_r_ray_pos.z
 
 func snap_down_to_stairs_check():
-
+	
 	var did_snap = false
 	if not is_on_floor() and velocity.y <= 0 and (was_on_floor_last_frame or snapped_to_stairs_last_frame) and $StairsBelowRayCast3D.is_colliding():
 		var body_test_result = PhysicsTestMotionResult3D.new()
@@ -160,3 +162,7 @@ func _headbob(time) -> Vector3:
 	pos.y =sin(time * bob_freq) * bob_amp
 	pos.x = cos(time * bob_freq / 2) * bob_amp
 	return pos
+
+func _process(delta):
+	if velocity.x <= 1 and velocity.x >= -1 and velocity.z <= 1 and velocity.z >= -1:
+		Global.is_walking = false
