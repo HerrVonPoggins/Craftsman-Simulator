@@ -23,6 +23,7 @@ func _on_button_pressed():
 
 func _on_volume_scrolling():
 	Music.volume = $TabContainer/TabBar/Volume.value
+	print(Music.volume)
 
 
 func _on_mouse_sens_scrolling():

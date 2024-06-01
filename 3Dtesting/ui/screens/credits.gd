@@ -2,6 +2,7 @@ extends Node2D
 
 #scene transition
 func _ready():
+	Global.current_scene = -1
 	$AnimationPlayer.play("fade_in")
 	
 #change back to titlescreen

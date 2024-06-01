@@ -114,6 +114,7 @@ func _physics_process(delta):
 					Music._play_walk_floor()
 					Global.walk_sound_started = true
 
+
 				velocity.x = lerp(velocity.x, direction.x * speed, delta * 7.0)
 				velocity.z = lerp(velocity.z, direction.z * speed, delta * 7.0)
 		else:

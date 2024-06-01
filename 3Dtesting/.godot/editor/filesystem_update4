@@ -2,6 +2,6 @@ res://ui/screens/titlescreen.tscn
 res://scenes/Carpenter/carpenter_world.gd
 res://Settings.gd
 res://scenes/CorePlayable/CorePlayable.tscn
-res://mechanics/Player/CharacterFP+WASD.gd
-res://mechanics/Player/GroundIdentifier.gd
-res://scripts/global.gd
+res://scripts/music.tscn
+res://scenes/StuckateurScene/Stuckateur.tscn
+res://ui/screens/credits.tscn

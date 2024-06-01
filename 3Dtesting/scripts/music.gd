@@ -1,7 +1,7 @@
 extends Node
 
-var volume = 0
-var effects = 0
+var volume = 15
+var effects = 15
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,6 +11,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$MaineMenu.volume_db = volume
+	$BricklayerMusic.volume_db = volume
 	$ButtonSound.volume_db = effects
 	$BrickPlacing.volume_db = effects
 	$ConcretePlacing.volume_db = effects

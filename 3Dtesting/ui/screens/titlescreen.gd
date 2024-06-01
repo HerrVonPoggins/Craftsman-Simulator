@@ -5,9 +5,14 @@ extends Node2D
 
 func _ready():
 	$AnimationPlayer.play("fade_in")
+	
+	if Global.current_scene != -1:
+		Music._play_main_menu()
+	Global.current_scene = 0
 
 func _on_button_start_pressed():
 	Music._play_button()
+	Music._stop_main_menu()
 	$Transition._change_scene("res://scenes/CorePlayable/CorePlayable.tscn")
 
 func _on_button_credits_pressed():

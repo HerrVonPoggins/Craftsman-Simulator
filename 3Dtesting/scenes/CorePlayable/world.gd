@@ -7,6 +7,7 @@ var diealogue_played = 0
 
 #plays the animation to fade into the scene from the black screen
 func _ready():
+	Music._play_bricklayer()
 	Global.ground_floor = $Map/Haus_Grundriss/HouseGround.get_instance_id()
 	Global.ground_grass = $Map/Boden/MapGround.get_instance_id()
 	Global.current_scene = 1

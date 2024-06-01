@@ -101,6 +101,7 @@ func _on_button_checklist_pressed():
 
 func _on_button_main_menu_pressed():
 	Music._play_button()
+	Music._stop_bricklayer()
 	$Transition._change_scene("res://ui/screens/titlescreen.tscn")
 	close()
 	
@@ -123,6 +124,7 @@ func _on_button_settings_pressed():
 
 
 func _on_button_quit_pressed():
+	Music._play_button()
 	get_tree().quit()
 
 
