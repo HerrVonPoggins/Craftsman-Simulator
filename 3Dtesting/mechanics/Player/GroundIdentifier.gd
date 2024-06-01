@@ -16,6 +16,7 @@ func _process(delta):
 			Music._play_walk_floor()
 			if Global.walking_on.get_instance_id() != Global.ground_grass:
 				Music._stop_walk_floor()
+				
 			
 		if Global.walking_on.get_instance_id() == Global.ground_floor:
 			Music._play_walk_grass()
@@ -25,6 +26,7 @@ func _process(delta):
 	if Global.is_walking == false:
 		Music._stop_walk_floor()
 		Music._stop_walk_grass()
+		Global.walk_sound_started = false
 
 	#if Global.walking_on.get_instance_id() != 72444021493:
 		#Music._stop_walk_grass()
@@ -42,6 +44,7 @@ func _process(delta):
 		
 
 	if Input.is_action_just_pressed("kamera"):
-		print(Global.is_walking)
+		#print(Global.is_walking)
 		print(Global.walking_on.get_instance_id())
+		print(Global.ground_grass)
 

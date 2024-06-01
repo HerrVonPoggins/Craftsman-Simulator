@@ -7,6 +7,7 @@ const JUMP_VELOCITY = 4.5
 var is_up = false
 var is_crouching = false
 
+
 @onready var house_ground = $Map/Haus_Grundriss/HouseGround
 @onready var map_ground = $Map/Boden/MapGround
 
@@ -93,17 +94,25 @@ func _physics_process(delta):
 		if is_on_floor():
 			if direction:
 				Global.is_walking = true
+				if Global.walking_on.get_instance_id() == Global.ground_grass and Global.walk_sound_started == false:
+					Music._play_walk_grass()
+					Global.walk_sound_started = true
+				elif Global.walking_on.get_instance_id() == Global.ground_floor and Global.walk_sound_started == false:
+					Music._play_walk_floor()
+					Global.walk_sound_started = true
+				Global.is_walking = true
 				velocity.x = direction.x * speed
 				velocity.z = direction.z * speed
 
 
 			else:
 				Global.is_walking = true
-				#if Global.walking_on.get_instance_id() == Global.ground_grass:
-					#Music._play_walk_grass()
-					#print("startet")
-				#elif Global.walking_on.get_instance_id() == Global.ground_floor:
-					#Music._play_walk_floor()
+				if Global.walking_on.get_instance_id() == Global.ground_grass and Global.walk_sound_started == false:
+					Music._play_walk_grass()
+					Global.walk_sound_started = true
+				elif Global.walking_on.get_instance_id() == Global.ground_floor and Global.walk_sound_started == false:
+					Music._play_walk_floor()
+					Global.walk_sound_started = true
 
 				velocity.x = lerp(velocity.x, direction.x * speed, delta * 7.0)
 				velocity.z = lerp(velocity.z, direction.z * speed, delta * 7.0)

@@ -24,7 +24,7 @@ var walking_on = null
 var ground_grass = null
 var ground_floor = null
 var is_walking = false
-
+var walk_sound_started = false
 func save():
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
 	file.store_var(current_scene)
