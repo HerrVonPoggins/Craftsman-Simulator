@@ -18,6 +18,10 @@ func _ready():
 	#when the wall is build the animation to fill in the remaining bricks and a praise dialogue is started
 func _process(delta):
 	
+	if Input.is_action_just_pressed("kamera"):
+		$Node3D5/Camera3D.current = true
+		$Node3D5.visible = true
+	
 	if Global.tutorial_finished == true and counter == 0:
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_1.dialogue"))
 		counter = 0.5

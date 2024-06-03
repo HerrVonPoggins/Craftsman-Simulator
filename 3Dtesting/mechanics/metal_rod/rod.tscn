@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8bxr3vceyac2"]
+
+[ext_resource type="Script" path="res://mechanics/metal_rod/rod.gd" id="1_guwtp"]
+[ext_resource type="ArrayMesh" uid="uid://dfk7y7w5dvc35" path="res://assets/models/brick_outline_prototyp(1).obj" id="1_otvx8"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_kok22"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 1.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_sd72v"]
+radius = 1.3404
+
+[node name="Rod" type="Node3D"]
+script = ExtResource("1_guwtp")
+
+[node name="StringWedge" type="Area3D" parent="."]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StringWedge"]
+transform = Transform3D(0.5, 0, 0, 0, -2.18557e-08, -4.5, 0, 0.5, -1.96701e-07, 0, 4.47896, 0)
+mesh = ExtResource("1_otvx8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StringWedge"]
+transform = Transform3D(1, 0, 0, 0, 9, 0, 0, 0, 1, 0, 4.41912, 0)
+visible = false
+mesh = SubResource("CylinderMesh_kok22")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StringWedge"]
+shape = SubResource("SphereShape3D_sd72v")
+
+[connection signal="body_entered" from="StringWedge" to="." method="_on_string_wedge_body_entered"]

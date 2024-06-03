@@ -2,6 +2,4 @@ res://ui/screens/titlescreen.tscn
 res://scenes/Carpenter/carpenter_world.gd
 res://Settings.gd
 res://scenes/CorePlayable/CorePlayable.tscn
-res://scripts/music.tscn
-res://scenes/StuckateurScene/Stuckateur.tscn
-res://ui/screens/credits.tscn
+res://mechanics/metal_rod/rod.tscn

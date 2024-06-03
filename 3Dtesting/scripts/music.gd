@@ -1,6 +1,6 @@
 extends Node
 
-var volume = 15
+var volume = -50
 var effects = 15
 
 # Called when the node enters the scene tree for the first time.
