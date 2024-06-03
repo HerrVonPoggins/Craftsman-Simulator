@@ -14,8 +14,8 @@ func _physics_process(delta):
 		var start = camera.project_ray_origin(mouse)
 		var end = start + camera.project_ray_normal(mouse) * RAY_LENGTH
 		var result = worldspace.intersect_ray(PhysicsRayQueryParameters3D.create(start, end))
-		if result.collider == $"../BrickCut":
-			pass
+		#if result.collider == $"../BrickCut":
+			#pass
 
 func _input(event):
 	if event is InputEventMouse:

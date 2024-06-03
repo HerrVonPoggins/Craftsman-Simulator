@@ -8,7 +8,7 @@ var diealogue_played = 0
 #plays the animation to fade into the scene from the black screen
 func _ready():
 	Music._play_bricklayer()
-	Global.ground_floor = $Map/Haus_Grundriss/HouseGround.get_instance_id()
+	Global.ground_floor = $"Root Scene/RootNode/Bodenplatte_001".get_instance_id()
 	Global.ground_grass = $Map/Boden/MapGround.get_instance_id()
 	Global.current_scene = 1
 	DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_intro.dialogue"))
@@ -30,6 +30,7 @@ func _process(delta):
 		Music._play_string()
 		$StringWedge/String.visible = true
 		Global.string = true
+		Global.isolation = true
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_3.dialogue"))
 	
 	
@@ -63,18 +64,18 @@ func _on_concrete_bucket_body_entered(body):
 
 
 #mechanic for the isolation blocks to appear when they are put into the area3d
-func _on_isolation_area_body_entered(body):
-	if body.is_in_group("isolation") and Global.tutorial_finished == true:
-		body.queue_free()
-		if $Props/Isolation1.visible == false and counter == 0.5:
-			$Props/Isolation1.visible = true
-			counter = 1
-		elif $Props/Isolation1.visible == true and counter == 1:
-			$Props/Isolation2.visible = true
-			counter = 2
-		elif $Props/Isolation2.visible == true and counter == 2:
-			$Props/Isolation3.visible = true
-			Global.isolation = true
+#func _on_isolation_area_body_entered(body):
+	#if body.is_in_group("isolation") and Global.tutorial_finished == true:
+		#body.queue_free()
+		#if $Props/Isolation1.visible == false and counter == 0.5:
+			#$Props/Isolation1.visible = true
+			#counter = 1
+		#elif $Props/Isolation1.visible == true and counter == 1:
+			#$Props/Isolation2.visible = true
+			#counter = 2
+		#elif $Props/Isolation2.visible == true and counter == 2:
+			#$Props/Isolation3.visible = true
+			#Global.isolation = true
 
 
 func _on_string_wedge_body_entered(body):
@@ -95,7 +96,7 @@ func _on_string_wedge_2_body_entered(body):
 
 
 func _on_ray_cast_3d_start_saw_minigame():
-	$"Props/Saw/SawCamera".current = true
+	$Saw/SawCamera.current = true
 	Global.stay = true
 	$Props/BrickCut.scale = Vector3(1,1,0.5)
 	$Props/BrickCut/Brick_008.scale = Vector3(0.618,1,0.5)
