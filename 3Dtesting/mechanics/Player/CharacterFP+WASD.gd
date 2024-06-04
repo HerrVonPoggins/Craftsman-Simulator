@@ -133,10 +133,15 @@ func _physics_process(delta):
 	move_and_slide()
 	snap_down_to_stairs_check()
 
-
+var _last_xz_vel: Vector3 = Vector3(0,0,0)
 func rotate_step_up_separation_ray():
-	
 	var xz_vel = velocity * Vector3(1,0,1)
+	
+	if xz_vel.length() < 0.1:
+		xz_vel = _last_xz_vel
+	else:
+		_last_xz_vel = xz_vel
+	
 	var xz_f_ray_pos = xz_vel.normalized() * initial_separation_ray_dist
 	$StepUpSeparationRay_F.global_position.x = self.global_position.x + xz_f_ray_pos.x
 	$StepUpSeparationRay_F.global_position.z = self.global_position.z + xz_f_ray_pos.z
@@ -148,7 +153,23 @@ func rotate_step_up_separation_ray():
 	var xz_r_ray_pos = xz_f_ray_pos.rotated(Vector3(0, 1.0, 0), deg_to_rad(50))
 	$StepUpSeparationRay_R.global_position.x = self.global_position.x + xz_r_ray_pos.x
 	$StepUpSeparationRay_R.global_position.z = self.global_position.z + xz_r_ray_pos.z
-
+	
+	$StepUpSeparationRay_F/RayCast3D.force_raycast_update()
+	$StepUpSeparationRay_L/RayCast3D.force_raycast_update()
+	$StepUpSeparationRay_R/RayCast3D.force_raycast_update()
+	var max_slope_ang_dot = Vector3(0,1,0).rotated(Vector3(1.0,0,0), self.floor_max_angle).dot(Vector3(0,1,0))
+	var any_too_steep = false
+	if $StepUpSeparationRay_F/RayCast3D.is_colliding() and $StepUpSeparationRay_F/RayCast3D.get_collision_normal().dot(Vector3(0,1,0)) < max_slope_ang_dot:
+		any_too_steep = true
+	if $StepUpSeparationRay_L/RayCast3D.is_colliding() and $StepUpSeparationRay_L/RayCast3D.get_collision_normal().dot(Vector3(0,1,0)) < max_slope_ang_dot:
+		any_too_steep = true
+	if $StepUpSeparationRay_R/RayCast3D.is_colliding() and $StepUpSeparationRay_R/RayCast3D.get_collision_normal().dot(Vector3(0,1,0)) < max_slope_ang_dot:
+		any_too_steep = true
+	
+	$StepUpSeparationRay_F/RayCast3D.disabled = any_too_steep
+	$StepUpSeparationRay_L/RayCast3D.disabled = any_too_steep
+	$StepUpSeparationRay_R/RayCast3D.disabled = any_too_steep
+	
 func snap_down_to_stairs_check():
 	
 	var did_snap = false

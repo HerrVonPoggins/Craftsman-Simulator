@@ -20,11 +20,33 @@ var string = false
 var door_top = 0
 var window_top = 0
 var walking_on = null
-
+var spirit_level = false
 var ground_grass = null
 var ground_floor = null
 var is_walking = false
 var walk_sound_started = false
+
+
+
+
+var brick_1 = false	
+var brick_2 = false
+var brick_3 = false
+var concrete_1 = false
+var concrete_2 = false
+var concrete_3 = false
+
+
+
+
+
+
+
+
+
+
+
+
 func save():
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
 	file.store_var(current_scene)

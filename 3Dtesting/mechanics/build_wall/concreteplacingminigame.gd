@@ -3,12 +3,16 @@ extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	
+	if $".".visible == true:
+		$Camera3D.current = true
+	if $concrete7/MeshInstance3D2.visible == true:
+		Global.concrete_1 = true
 
 
 func _unhandled_input(event):
@@ -21,7 +25,7 @@ func _unhandled_input(event):
 	elif event.is_action_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		pass
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and $Camera3D.current == true:
 		$RigidBody3D.position.z += (+event.relative.y * 0.01)
 		$RigidBody3D.position.x += (+event.relative.x * 0.01)
 
@@ -134,4 +138,6 @@ func _on_concrete_6_body_exited(body):
 
 
 func _on_concrete_7_body_exited(body):
-	pass # Replace with function body.
+	if $concrete7/MeshInstance3D2.visible == true:
+		Global.concrete_1 = true
+		$".".queue_free()

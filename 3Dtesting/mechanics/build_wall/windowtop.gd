@@ -19,7 +19,7 @@ func _process(delta):
 func _on_area_3d_body_entered(body):
 	if body.is_in_group("window") and Global.wall_finished == true:
 		body.queue_free()
-		$Area3D/CollisionShape3D.call_deferred("set_disabled", true)
+		$Lintel/CollisionShape3D.call_deferred("set_disabled", true)
 		window_lintel_brick.visible = true
 		window_lintel_outline.visible = false
 		
