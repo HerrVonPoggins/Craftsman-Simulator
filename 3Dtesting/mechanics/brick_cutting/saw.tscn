@@ -141,7 +141,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_x300y")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xs1a4"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_uerh8"]
 points = PackedVector3Array(0.923624, 0.0439274, 0.674172, 0.964603, 0.0145032, 0.715048, 0.923624, 0.0439274, -0.674316, -0.924006, 0.0439274, 0.674172, 0.964603, -0.0286233, 0.715048, 0.964603, 0.0145032, -0.715052, -0.964607, 0.0145032, 0.715048, -0.924006, 0.0439274, -0.674316, 0.873392, -1.42959, 0.570582, 0.890388, -1.42959, 0.553924, 0.964603, -0.0286233, -0.715052, -0.000190854, -0.0303543, 0.715048, -0.964607, 0.0145032, -0.715052, -0.964607, -0.0286233, 0.715048, -0.873585, -1.42959, 0.570582, 0.890388, -1.42959, -0.554068, 0.873392, -1.42959, -0.570866, -0.000190854, -0.0303543, -0.715052, -0.964607, -0.0286233, -0.715052, -0.890581, -1.42959, 0.553924, -0.873585, -1.42959, -0.570866, -0.890581, -1.42959, -0.554068)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_icygo"]
@@ -194,8 +194,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_kkpip")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_fnph8"]
-size = Vector3(0.422119, 0.73378, 2.00006)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_oh81o"]
+points = PackedVector3Array(-0.308636, -5.52384, -5.24479, 0.277335, -5.52384, -5.24479, -0.308636, -5.52384, -3.32682, -0.349636, -5.48287, -5.24479, -0.308636, -5.48287, -5.28571, 0.277335, -5.48287, -5.28571, 0.318336, -5.48287, -5.24479, 0.277335, -5.52384, -3.32682, -0.308636, -5.48287, -3.28571, -0.349636, -5.48287, -3.32682, -0.349636, -4.83194, -5.24479, -0.308636, -4.83194, -5.28571, 0.277335, -4.83194, -5.28571, 0.318336, -4.83194, -5.24479, 0.318336, -5.48287, -3.32682, 0.277335, -5.48287, -3.28571, -0.308636, -4.83194, -3.28571, -0.349636, -4.83194, -3.32682, -0.308636, -4.79082, -5.24479, 0.277335, -4.79082, -5.24479, 0.318336, -4.83194, -3.32682, 0.277335, -4.83194, -3.28571, -0.308636, -4.79082, -3.32682, 0.277335, -4.79082, -3.32682)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e1i7n"]
 size = Vector3(0.494141, 0.726196, 0.263184)
@@ -203,25 +203,26 @@ size = Vector3(0.494141, 0.726196, 0.263184)
 [sub_resource type="BoxMesh" id="BoxMesh_vq1x3"]
 size = Vector3(0.66, 0.415, 0.08)
 
-[node name="Saw" type="RigidBody3D" groups=["saw_minigame"]]
+[node name="Saw" type="StaticBody3D" groups=["saw_minigame"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.8713, -11.1689, 549.758)
 
 [node name="saw_mesh" type="MeshInstance3D" parent="."]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0.0974731, -25.3273, 0.103127)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0589256, -6.29023, 0.0724487)
 mesh = SubResource("ArrayMesh_v1cws")
 skeleton = NodePath("")
 
 [node name="table_mesh" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, 0, 0, 0)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("ArrayMesh_xibye")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, 0, 0, 0)
-shape = SubResource("ConvexPolygonShape3D_xs1a4")
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_uerh8")
 
 [node name="SawCamera" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.99329, 0.678289, 0.149582)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.44117, 0.372091, 0.0858154)
+fov = 45.0
 script = ExtResource("1_h4o6s")
 
 [node name="CutArea" type="Area3D" parent="."]
@@ -235,19 +236,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.329529, 0.888246, 0.082115
 shape = SubResource("ConcavePolygonShape3D_28p34")
 
 [node name="BrickCut" type="CharacterBody3D" parent="." groups=["brick", "cut"]]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -0.5, 0.85, -1.15)
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0.174175, 0.242094, -0.783569)
 motion_mode = 1
 
 [node name="Brick_008" type="MeshInstance3D" parent="BrickCut"]
-transform = Transform3D(-0.618, 0, 3.89414e-07, 0, 1, 0, -2.40658e-07, 0, -1, 0, 5.16954, -4.16223)
+transform = Transform3D(-0.15, 0, 5.84122e-08, 0, 0.15, 0, -5.84122e-08, 0, -0.15, 0, 0.546295, 0)
 mesh = SubResource("ArrayMesh_cfpyh")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BrickCut"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0152588, 0.00671005, 0.109497)
-shape = SubResource("BoxShape3D_fnph8")
+transform = Transform3D(-0.14, 0, 5.4518e-08, 0, 0.14, 0, -5.4518e-08, 0, -0.14, -0.00317955, 0.495991, 0.0429688)
+shape = SubResource("ConvexPolygonShape3D_oh81o")
 
 [node name="LockInL" type="Area3D" parent="BrickCut" groups=["lock_in"]]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -0.00580502, -0.229889, 0.59845)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BrickCut/LockInL"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107422, 0.00860596, -0.491867)
@@ -258,7 +260,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.485489)
 mesh = SubResource("BoxMesh_vq1x3")
 
 [node name="LockInM" type="Area3D" parent="BrickCut" groups=["lock_in_correct"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.667038)
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -0.00473309, -0.229286, 0.724731)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BrickCut/LockInM"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107422, 0.00860596, -0.491867)
@@ -269,7 +271,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.485489)
 mesh = SubResource("BoxMesh_vq1x3")
 
 [node name="LockInR" type="Area3D" parent="BrickCut" groups=["lock_in"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.30669)
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -0.00407028, -0.229496, 0.836182)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BrickCut/LockInR"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107422, 0.00860596, -0.491867)

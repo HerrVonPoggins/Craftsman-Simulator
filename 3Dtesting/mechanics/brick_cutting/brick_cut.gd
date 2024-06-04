@@ -1,5 +1,7 @@
 extends Camera3D
 
+signal brick_cut_correct
+
 var lock_in_wrong = false
 var lock_in_correct = false
 
@@ -15,7 +17,7 @@ func _physics_process(delta):
 	#Cutting the Brick at the marked position
 	if Input.is_action_just_pressed("interagieren"):
 		if lock_in_correct == true:
-			print("yessir")
+			emit_signal("brick_cut_correct")
 		elif lock_in_wrong == true:
 			print("wrong")
 
