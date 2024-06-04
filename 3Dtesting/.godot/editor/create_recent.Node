@@ -1,14 +1,11 @@
-<<<<<<< Updated upstream
 RayCast3D
-=======
-CollisionShape3D
-Area3D
->>>>>>> Stashed changes
 RigidBody3D
 StaticBody3D
 Node3D
 MeshInstance3D
 Camera3D
+CollisionShape3D
+Area3D
 AudioStreamPlayer2D
 Node
 Area2D

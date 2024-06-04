@@ -87,11 +87,11 @@ func _on_string_wedge_2_body_entered(body):
 func _on_ray_cast_3d_start_saw_minigame():
 	$Saw/SawCamera.current = true
 	Global.stay = true
-	$Props/BrickCut.scale = Vector3(1,1,0.5)
-	$Props/BrickCut/Brick_008.scale = Vector3(0.618,1,0.5)
-	$Props/BrickCut/Brick_008.position = Vector3(0,5.154,-2.019)
-	$Props/BrickCut/CollisionShape3D.scale = Vector3(1,1,0.5)
-	Global.brick_sawed = true
+	#$Saw/BrickCut.scale = Vector3(1,1,0.5)
+	#$Saw/BrickCut/Brick_008.scale = Vector3(0.618,1,0.5)
+	#$Saw/BrickCut/Brick_008.position = Vector3(0,5.154,-2.019)
+	#$Saw/BrickCut/CollisionShape3D.scale = Vector3(1,1,0.5)
+	#Global.brick_sawed = true
 
 
 func _on_cut_area_area_entered(area):
