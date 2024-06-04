@@ -17,10 +17,17 @@ func _ready():
 	
 	#when the wall is build the animation to fill in the remaining bricks and a praise dialogue is started
 func _process(delta):
+	if Global.concrete_1 == true:
+		$"Area3D2/mörtel".visible = true
+	if Global.concrete_2 == true:
+		$"Area3D3/mörtel".visible = true
+	if Global.concrete_3 == true:
+		$"Area3D4/mörtel".visible = true
+	
+	
 	
 	if Input.is_action_just_pressed("kamera"):
-		$Node3D5/Camera3D.current = true
-		$Node3D5.visible = true
+		pass
 	
 	if Global.tutorial_finished == true and counter == 0:
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_1.dialogue"))
@@ -35,10 +42,7 @@ func _process(delta):
 	
 	
 	if Global.wall_finished == true and played == false:
-		$Props/bricks.visible = true
 		played = true
-		$WallAnimation.play("brick_build")
-		await $WallAnimation.animation_finished
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_4.dialogue"))
 		
 		if Global.door_top == 2 and Global.window_top == 4:
@@ -61,21 +65,6 @@ func _on_concrete_bucket_body_entered(body):
 	if body.is_in_group("tool"):
 		Global.concrete = true
 
-
-
-#mechanic for the isolation blocks to appear when they are put into the area3d
-#func _on_isolation_area_body_entered(body):
-	#if body.is_in_group("isolation") and Global.tutorial_finished == true:
-		#body.queue_free()
-		#if $Props/Isolation1.visible == false and counter == 0.5:
-			#$Props/Isolation1.visible = true
-			#counter = 1
-		#elif $Props/Isolation1.visible == true and counter == 1:
-			#$Props/Isolation2.visible = true
-			#counter = 2
-		#elif $Props/Isolation2.visible == true and counter == 2:
-			#$Props/Isolation3.visible = true
-			#Global.isolation = true
 
 
 func _on_string_wedge_body_entered(body):
@@ -113,3 +102,27 @@ func _on_cut_area_area_entered(area):
 		$Props/BrickCut.position = Vector3(-68.169, -10.363, 520.344)
 	if area.get_node() == "LockInR":
 		$Props/BrickCut.position = Vector3(-68.804, -10.363, 520.344)
+
+
+func _on_area_3d_2_body_entered(body):
+	if body.is_in_group("trowel") and Global.concrete == true:
+		$Area3D2/CollisionShape3D.call_deferred("set_disabled", true)
+		$Node3D5.visible = true
+
+
+func _on_area_3d_3_body_entered(body):
+	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_1 == true:
+		$Area3D3/CollisionShape3D.call_deferred("set_disabled", true)
+		$Node3D7.visible = true
+
+
+func _on_area_3d_4_body_entered(body):
+	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_2 == true:
+		$Area3D4/CollisionShape3D.call_deferred("set_disabled", true)
+		$Node3D8.visible = true
+
+
+func _on_area_3d_5_body_entered(body):
+	if body.is_in_group("spirit_level"):
+		$Node3D9.visible = true
+		
