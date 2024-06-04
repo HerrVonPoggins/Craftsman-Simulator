@@ -3,7 +3,7 @@ extends Node3D
 signal start_mixer
 signal concrete_bucket_pos_reached
 signal inv_trowel_button_clicked
-
+signal delete_sand_container
 
 @onready var trowel = preload("res://mechanics/Tools/trowel.tscn")
 @onready var hold = $CharacterBody3D/Neck/Camera3D/MeshInstance3D/Hold
@@ -23,3 +23,7 @@ func _process(delta):
 
 func _on_inventory_trowel_button_clicked():
 	emit_signal("inv_trowel_button_clicked")
+
+
+func _on_mixer_sand_level_reached():
+	emit_signal("delete_sand_container")

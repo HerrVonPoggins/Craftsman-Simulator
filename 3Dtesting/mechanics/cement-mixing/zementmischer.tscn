@@ -142,7 +142,7 @@ size = Vector3(0.523621, 0.96875, 0.705444)
 texture = ExtResource("2_8bsti")
 expand_margin_top = 20.0
 expand_margin_bottom = 20.0
-region_rect = Rect2(406.068, 0, 1325.67, 340)
+region_rect = Rect2(392.906, 0, 1319.02, 340)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k8nct"]
 texture = ExtResource("3_jmknd")
@@ -150,24 +150,23 @@ texture = ExtResource("3_jmknd")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rtk4m"]
 texture = ExtResource("2_8bsti")
 expand_margin_top = 20.0
-expand_margin_right = 20.0
+expand_margin_right = 50.0
 expand_margin_bottom = 20.0
-region_rect = Rect2(395.712, 0, 1711.31, 340)
+region_rect = Rect2(1712.79, 0, 394.229, 340)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gaeq1"]
 texture = ExtResource("4_8ew6k")
-expand_margin_right = 10.0
+expand_margin_right = 5.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hfm0q"]
 texture = ExtResource("2_8bsti")
-expand_margin_left = 20.0
+expand_margin_left = 50.0
 expand_margin_top = 20.0
 expand_margin_bottom = 20.0
-region_rect = Rect2(15.6745, 0, 1716.07, 340)
+region_rect = Rect2(15.6745, 0, 375.361, 340)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wyeo8"]
 texture = ExtResource("5_2gyiv")
-expand_margin_left = 10.0
 
 [node name="Mixer" type="Node3D"]
 script = ExtResource("1_brxoa")

@@ -6,3 +6,6 @@ res://mechanics/brick_cutting/saw.tscn
 res://mechanics/cement-mixing/zementmischer.tscn
 res://scenes/CorePlayable/world.gd
 res://ui/screens/titlescreen.tscn
+res://mechanics/cement-mixing/zementmischer.gd
+res://mechanics/Player/RayCast3D.gd
+res://mechanics/Player/player_signals.gd

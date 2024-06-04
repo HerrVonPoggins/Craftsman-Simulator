@@ -196,5 +196,6 @@ libraries = {
 [node name="Inventory" parent="CanvasLayer" instance=ExtResource("6_2noio")]
 
 [connection signal="concrete_bucket_pos_reached" from="." to="CharacterBody3D/Neck/Camera3D/RayCast3D" method="_on_player_concrete_bucket_pos_reached"]
+[connection signal="delete_sand_container" from="." to="CharacterBody3D/Neck/Camera3D/RayCast3D" method="_on_player_delete_sand_container"]
 [connection signal="inv_trowel_button_clicked" from="." to="CharacterBody3D/Neck/Camera3D/RayCast3D" method="_on_player_inv_trowel_button_clicked"]
 [connection signal="trowel_button_clicked" from="CanvasLayer/Inventory" to="." method="_on_inventory_trowel_button_clicked"]

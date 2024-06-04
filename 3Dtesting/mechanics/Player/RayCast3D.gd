@@ -96,3 +96,7 @@ func _on_player_inv_trowel_button_clicked():
 		obj = trowel_collider
 	elif obj != null:
 		obj = null
+
+func _on_player_delete_sand_container():
+	if obj != null:
+		obj.queue_free()
