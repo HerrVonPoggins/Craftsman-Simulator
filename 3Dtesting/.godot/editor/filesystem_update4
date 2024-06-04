@@ -1,8 +1,7 @@
 res://ui/screens/titlescreen.tscn
 res://scenes/Carpenter/carpenter_world.gd
 res://Settings.gd
-res://ui/player_ui/settings.tscn
-res://addons/dialogue_manager/example_balloon/example_balloon.tscn
-res://addons/dialogue_manager/example_balloon/example_balloon.gd
 res://scenes/CorePlayable/CorePlayable.tscn
-res://mechanics/brick_cutting/brick_cut.gd
+res://mechanics/build_wall/concreteplacingminigam3.tscn
+res://mechanics/build_wall/concreteplacingminigame2.tscn
+res://mechanics/build_wall/concreteplacingminigame.tscn
