@@ -4,5 +4,5 @@ res://mechanics/Player/node_3d.tscn
 res://scenes/CorePlayable/CorePlayable.tscn
 res://mechanics/brick_cutting/saw.tscn
 res://mechanics/cement-mixing/zementmischer.tscn
+res://scenes/CorePlayable/world.gd
 res://ui/screens/titlescreen.tscn
-res://mechanics/cement-mixing/zementmischer.gd

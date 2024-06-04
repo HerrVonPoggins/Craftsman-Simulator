@@ -95,21 +95,10 @@ func _on_string_wedge_2_body_entered(body):
 
 func _on_ray_cast_3d_start_saw_minigame():
 	if Global.brick_sawed == false:
-		$Props/Saw/SawCamera.current = true
+		$Saw/SawCamera.current = true
 		Global.brick_saw_cam = true
 		Global.stay = true
 	
-
-
-func _on_cut_area_area_entered(area):
-	area.get_node()
-	if area.get_node() == "LockInL":
-		$Props/BrickCut.position = Vector3(-67.501, -10.363, 520.344)
-	if area.get_node() == "LockInM":
-		$Props/BrickCut.position = Vector3(-68.169, -10.363, 520.344)
-	if area.get_node() == "LockInR":
-		$Props/BrickCut.position = Vector3(-68.804, -10.363, 520.344)
-
 
 func _on_area_3d_2_body_entered(body):
 	if body.is_in_group("trowel") and Global.concrete == true:
@@ -136,7 +125,7 @@ func _on_area_3d_5_body_entered(body):
 
 
 func _on_saw_camera_brick_cut_correct():
-	$Props/Saw/BrickCut.queue_free()
+	$Saw/BrickCut.queue_free()
 	Global.brick_sawed = true
 	Global.brick_saw_cam = false
 	Global.stay = false
