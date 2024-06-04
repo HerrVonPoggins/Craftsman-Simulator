@@ -45,10 +45,10 @@ var dialogue_line: DialogueLine:
 		character_label.text = tr(dialogue_line.character, "dialogue")
 
 
-		#if dialogue_line.character.to_lower() == "bauleiter":
-			#portrait.texture = load("res://assets/textures/icon.svg")
-		#elif dialogue_line.character.to_lower() == "maurer":
-			#portrait.texture = load()
+		if dialogue_line.character.to_lower() == "bauleiter":
+			portrait.texture = load("res://assets/portraits/fuchs portrait.png")
+		elif dialogue_line.character.to_lower() == "maurer":
+			portrait.texture = load("res://assets/portraits/bär portrait.png")
 		#elif dialogue_line.character.to_lower() == "stuckateur":
 			#portrait.texture = load()
 

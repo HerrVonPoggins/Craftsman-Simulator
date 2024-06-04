@@ -1,6 +1,32 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccfrjw5825ajn"]
+[gd_scene load_steps=15 format=3 uid="uid://ccfrjw5825ajn"]
 
 [ext_resource type="Script" path="res://ui/player_ui/Settings.gd" id="1_uylec"]
+[ext_resource type="Texture2D" uid="uid://dkkiap5oxgfek" path="res://ui/Settings_broken_down.png" id="2_1r1xx"]
+[ext_resource type="Texture2D" uid="uid://fveyrb4au8lq" path="res://ui/Settings_exit.png" id="3_q8l33"]
+[ext_resource type="Texture2D" uid="uid://cq1g8v6tn74wi" path="res://ui/-_Button.png" id="4_el5of"]
+[ext_resource type="Texture2D" uid="uid://4tcrvnajmyh7" path="res://ui/+_Button.png" id="5_d7fba"]
+
+[sub_resource type="Theme" id="Theme_thh6n"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o6bxa"]
+texture = ExtResource("2_1r1xx")
+
+[sub_resource type="Theme" id="Theme_noswb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_twvs0"]
+texture = ExtResource("3_q8l33")
+
+[sub_resource type="Theme" id="Theme_5jba8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oevyp"]
+texture = ExtResource("4_el5of")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uj3ai"]
+texture = ExtResource("5_d7fba")
+
+[sub_resource type="Theme" id="Theme_ojfb5"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_n0oov"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -15,90 +41,117 @@ script = ExtResource("1_uylec")
 layout_mode = 0
 offset_right = 568.0
 offset_bottom = 354.0
+theme = SubResource("Theme_thh6n")
+theme_override_styles/panel = SubResource("StyleBoxTexture_o6bxa")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 195.0
-offset_top = 284.0
-offset_right = 329.0
-offset_bottom = 315.0
-text = "Done"
+offset_left = 547.0
+offset_top = -13.0
+offset_right = 580.0
+offset_bottom = 17.0
+theme = SubResource("Theme_noswb")
+theme_override_styles/normal = SubResource("StyleBoxTexture_twvs0")
 
-[node name="TabContainer" type="TabContainer" parent="."]
+[node name="Volume" type="HScrollBar" parent="."]
 layout_mode = 0
-offset_right = 82.0
-offset_bottom = 40.0
-clip_tabs = false
-drag_to_rearrange_enabled = true
-
-[node name="TabBar" type="TabBar" parent="TabContainer"]
-layout_mode = 2
-
-[node name="Volume" type="HScrollBar" parent="TabContainer/TabBar"]
-layout_mode = 0
-offset_left = 162.0
-offset_top = 82.0
-offset_right = 473.0
-offset_bottom = 111.0
+offset_left = 130.0
+offset_top = 58.0
+offset_right = 441.0
+offset_bottom = 87.0
 min_value = -50.0
 max_value = 50.0
 value = 15.0
 
-[node name="Label" type="Label" parent="TabContainer/TabBar"]
+[node name="Volume2" type="HScrollBar" parent="."]
 layout_mode = 0
-offset_left = 14.0
-offset_top = 75.0
-offset_right = 149.0
-offset_bottom = 118.0
-text = "Volume"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Volume2" type="HScrollBar" parent="TabContainer/TabBar"]
-layout_mode = 0
-offset_left = 163.0
-offset_top = 149.0
-offset_right = 474.0
-offset_bottom = 178.0
+offset_left = 131.0
+offset_top = 129.0
+offset_right = 442.0
+offset_bottom = 158.0
 min_value = -50.0
 max_value = 50.0
 value = 15.0
 
-[node name="Label2" type="Label" parent="TabContainer/TabBar"]
+[node name="MouseSens" type="HScrollBar" parent="."]
 layout_mode = 0
-offset_left = 15.0
-offset_top = 142.0
-offset_right = 150.0
-offset_bottom = 185.0
-text = "Effects"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TabBar2" type="TabBar" parent="TabContainer"]
-visible = false
-layout_mode = 2
-
-[node name="MouseSens" type="HScrollBar" parent="TabContainer/TabBar2"]
-layout_mode = 0
-offset_left = 162.0
-offset_top = 113.0
-offset_right = 473.0
-offset_bottom = 142.0
+offset_left = 132.0
+offset_top = 204.0
+offset_right = 443.0
+offset_bottom = 233.0
 min_value = 0.005
 max_value = 0.09
 value = 0.01
 
-[node name="Label" type="Label" parent="TabContainer/TabBar2"]
+[node name="Button2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 14.0
-offset_top = 106.0
-offset_right = 149.0
-offset_bottom = 149.0
-text = "Mouse Sensitivity"
-horizontal_alignment = 1
-vertical_alignment = 1
+offset_left = 60.0
+offset_top = 56.0
+offset_right = 90.0
+offset_bottom = 86.0
+theme = SubResource("Theme_5jba8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_oevyp")
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 130.0
+offset_right = 91.0
+offset_bottom = 160.0
+theme = SubResource("Theme_5jba8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_oevyp")
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 205.0
+offset_right = 92.0
+offset_bottom = 235.0
+theme = SubResource("Theme_5jba8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_oevyp")
+
+[node name="Button5" type="Button" parent="."]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 58.0
+offset_right = 510.0
+offset_bottom = 88.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_uj3ai")
+
+[node name="Button6" type="Button" parent="."]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 130.0
+offset_right = 508.0
+offset_bottom = 160.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_uj3ai")
+
+[node name="Button7" type="Button" parent="."]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 206.0
+offset_right = 508.0
+offset_bottom = 236.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_uj3ai")
+
+[node name="CheckButton" type="CheckButton" parent="."]
+layout_mode = 0
+offset_left = 386.0
+offset_top = 256.0
+offset_right = 431.0
+offset_bottom = 280.0
+scale = Vector2(2.5, 1.7)
+theme = SubResource("Theme_ojfb5")
+icon = SubResource("ImageTexture_n0oov")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="scrolling" from="TabContainer/TabBar/Volume" to="." method="_on_volume_scrolling"]
-[connection signal="scrolling" from="TabContainer/TabBar/Volume2" to="." method="_on_volume_2_scrolling"]
-[connection signal="scrolling" from="TabContainer/TabBar2/MouseSens" to="." method="_on_mouse_sens_scrolling"]
+[connection signal="scrolling" from="Volume" to="." method="_on_volume_scrolling"]
+[connection signal="scrolling" from="Volume2" to="." method="_on_volume_2_scrolling"]
+[connection signal="scrolling" from="MouseSens" to="." method="_on_mouse_sens_scrolling"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="Button7" to="." method="_on_button_7_pressed"]
+[connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]
