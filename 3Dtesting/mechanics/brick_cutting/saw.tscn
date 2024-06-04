@@ -226,6 +226,7 @@ fov = 45.0
 script = ExtResource("1_h4o6s")
 
 [node name="CutArea" type="Area3D" parent="."]
+transform = Transform3D(0.265, 0, 0, 0, 0.265, 0, 0, 0, 0.265, 0.0319214, 0.050559, 0.0504761)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CutArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.329529, 0.888246, 0.0821152)
