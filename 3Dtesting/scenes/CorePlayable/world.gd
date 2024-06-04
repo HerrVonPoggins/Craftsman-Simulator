@@ -85,9 +85,10 @@ func _on_string_wedge_2_body_entered(body):
 
 
 func _on_ray_cast_3d_start_saw_minigame():
-	$Props/Saw/SawCamera.current = true
-	Global.brick_saw_cam = true
-	Global.stay = true
+	if Global.brick_sawed == false:
+		$Props/Saw/SawCamera.current = true
+		Global.brick_saw_cam = true
+		Global.stay = true
 	
 
 
@@ -133,4 +134,5 @@ func _on_saw_camera_brick_cut_correct():
 	$Props/Saw/BrickCut/Brick_008.scale = Vector3(0.15, 0.15, 0.075)
 	Global.brick_sawed = true
 	Global.brick_saw_cam = false
+	Global.stay = false
 	$Player/CharacterBody3D/Neck/Camera3D.current = true
