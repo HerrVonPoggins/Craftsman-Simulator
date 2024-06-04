@@ -15,10 +15,6 @@ func _on_button_pressed():
 	$".".visible = false
 
 
-
-
-
-
 func _on_volume_scrolling():
 	Music.volume = $HScrollBar.value
 

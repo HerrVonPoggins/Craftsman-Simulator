@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://crat4alhu2v8o"]
+
+[ext_resource type="Texture2D" uid="uid://0xfjes5t40nk" path="res://UI/Regler.png" id="1_w1m7x"]
+
+[node name="settings_regler" type="TextureButton"]
+offset_left = -271.0
+offset_top = 82.0
+offset_right = -185.0
+offset_bottom = 220.0
+texture_normal = ExtResource("1_w1m7x")

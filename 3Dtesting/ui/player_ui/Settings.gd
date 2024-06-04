@@ -1,10 +1,37 @@
 extends Control
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	_check_sens()
+	_check_music()
+	_check_sound()
 
+func _check_sens():
+	var button_container = $SensivityContainer
+	for i in range(button_container.get_child_count()):
+		var button = button_container.get_child(i)
+		if i < Global.mouse_sense:
+			button.visible = true
+		else:
+			button.visible = false
+
+func _check_music():
+	var button_container = $MusicContainer
+	for i in range(button_container.get_child_count()):
+		var button = button_container.get_child(i)
+		if i < Global.musik_count:
+			button.visible = true
+		else:
+			button.visible = false
+
+func _check_sound():
+	var button_container = $SoundContainer
+	for i in range(button_container.get_child_count()):
+		var button = button_container.get_child(i)
+		if i < Global.sound_count:
+			button.visible = true
+		else:
+			button.visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -12,14 +39,59 @@ func _process(delta):
 		$".".visible = false
 
 
+
 func _on_button_pressed():
 	Music._play_button()
 	$".".visible = false
 
 
+func _on_music_minus_button_pressed():
+	if Global.musik_count == 1:
+		pass
+	else:
+		Global.musik_count -= 1
+		_check_music()
+		$Volume.value -= 20
 
+func _on_music_plus_button_pressed():
+	if Global.musik_count == 12:
+		pass
+	else:
+		Global.musik_count += 1
+		_check_music()
+		$Volume.value += 20
 
+func _on_sound_minus_button_pressed():
+	if Global.sound_count == 1:
+		pass
+	else:
+		Global.sound_count -= 1
+		_check_sound()
+		$Volume2.value -= 20
 
+func _on_sound_plus_button_pressed():
+	if Global.sound_count == 12:
+		pass
+	else:
+		Global.sound_count += 1
+		_check_sound()
+		$Volume2.value += 20
+
+func _on_sens_minus_button_pressed():
+	if Global.mouse_sense == 1:
+		pass
+	else:
+		Global.mouse_sense -= 1
+		_check_sens()
+		$MouseSens.value -= 0.01
+
+func _on_sens_plus_button_pressed():
+	if Global.mouse_sense == 12:
+		pass
+	else:
+		Global.mouse_sense += 1
+		_check_sens()
+		$MouseSens.value += 0.01
 
 func _on_volume_scrolling():
 	Music.volume = $Volume.value
@@ -33,34 +105,10 @@ func _on_mouse_sens_scrolling():
 func _on_volume_2_scrolling():
 	Music.effects = $Volume2.value
 
-
-func _on_button_2_pressed():
-	$Volume.value -= 20
-
-
-func _on_button_3_pressed():
-	$Volume2.value -= 20
-
-
-func _on_button_4_pressed():
-	$MouseSens.value -= 10
-
-
-func _on_button_5_pressed():
-	$Volume.value += 20
-
-
-func _on_button_6_pressed():
-	$Volume2.value += 20
-
-
-func _on_button_7_pressed():
-	$MouseSens.value += 10
-
-
 func _on_check_button_toggled(toggled_on):
 
 	if toggled_on == true:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
+

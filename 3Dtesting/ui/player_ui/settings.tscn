@@ -1,15 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://ccfrjw5825ajn"]
+[gd_scene load_steps=51 format=3 uid="uid://ccfrjw5825ajn"]
 
 [ext_resource type="Script" path="res://ui/player_ui/Settings.gd" id="1_uylec"]
-[ext_resource type="Texture2D" uid="uid://dkkiap5oxgfek" path="res://ui/Settings_broken_down.png" id="2_1r1xx"]
-[ext_resource type="Texture2D" uid="uid://fveyrb4au8lq" path="res://ui/Settings_exit.png" id="3_q8l33"]
-[ext_resource type="Texture2D" uid="uid://cq1g8v6tn74wi" path="res://ui/-_Button.png" id="4_el5of"]
-[ext_resource type="Texture2D" uid="uid://4tcrvnajmyh7" path="res://ui/+_Button.png" id="5_d7fba"]
-
-[sub_resource type="Theme" id="Theme_thh6n"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o6bxa"]
-texture = ExtResource("2_1r1xx")
+[ext_resource type="Texture2D" uid="uid://dkkiap5oxgfek" path="res://UI/Settings_broken_down.png" id="2_su5ey"]
+[ext_resource type="Texture2D" uid="uid://fveyrb4au8lq" path="res://UI/Settings_exit.png" id="3_q8l33"]
+[ext_resource type="Texture2D" uid="uid://cbbqpbjor5nu0" path="res://UI/Settings_gesamt.png" id="3_tmoia"]
+[ext_resource type="Texture2D" uid="uid://cq1g8v6tn74wi" path="res://UI/minus_Button.png" id="5_rvwqe"]
+[ext_resource type="Texture2D" uid="uid://4tcrvnajmyh7" path="res://UI/plus_Button.png" id="6_277k4"]
+[ext_resource type="Texture2D" uid="uid://xl1xkvnya3g5" path="res://UI/Fullscreen_right.png" id="8_i8xbu"]
+[ext_resource type="Texture2D" uid="uid://bh8rv6y64i5g2" path="res://UI/Fullscreen_left.png" id="9_xelbk"]
+[ext_resource type="Texture2D" uid="uid://0xfjes5t40nk" path="res://UI/Regler.png" id="9_xloir"]
+[ext_resource type="PackedScene" uid="uid://crat4alhu2v8o" path="res://UI/player_ui/settings_regler.tscn" id="10_1ica6"]
 
 [sub_resource type="Theme" id="Theme_noswb"]
 
@@ -19,139 +19,471 @@ texture = ExtResource("3_q8l33")
 [sub_resource type="Theme" id="Theme_5jba8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oevyp"]
-texture = ExtResource("4_el5of")
+texture = ExtResource("5_rvwqe")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ahgp5"]
+texture = ExtResource("5_rvwqe")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jsb3f"]
+texture = ExtResource("5_rvwqe")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ui7a0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xf4nv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_obk0l"]
+texture = ExtResource("5_rvwqe")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1qcqj"]
+texture = ExtResource("5_rvwqe")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_siuju"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k7sh2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u8um8"]
+texture = ExtResource("5_rvwqe")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q0w0j"]
+texture = ExtResource("5_rvwqe")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g3r7f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wf0sj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uj3ai"]
-texture = ExtResource("5_d7fba")
+texture = ExtResource("6_277k4")
 
-[sub_resource type="Theme" id="Theme_ojfb5"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_01yk0"]
+texture = ExtResource("6_277k4")
 
-[sub_resource type="ImageTexture" id="ImageTexture_n0oov"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_urtod"]
+texture = ExtResource("6_277k4")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fm3ju"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_st6yq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8di1t"]
+texture = ExtResource("6_277k4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sfu02"]
+texture = ExtResource("6_277k4")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bfe04"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ror15"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r5iap"]
+texture = ExtResource("6_277k4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dkxto"]
+texture = ExtResource("6_277k4")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_crssh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pvly8"]
+
+[sub_resource type="Theme" id="Theme_6y3qx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0bp1n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o4el1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a8uw2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ayqpp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2cajj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2rqim"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a63t4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t0gub"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1uo0v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h5xqj"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 script = ExtResource("1_uylec")
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_right = 568.0
-offset_bottom = 354.0
-theme = SubResource("Theme_thh6n")
-theme_override_styles/panel = SubResource("StyleBoxTexture_o6bxa")
+[node name="SettingsBrokenDown" type="Sprite2D" parent="."]
+scale = Vector2(0.515355, 0.515355)
+texture = ExtResource("2_su5ey")
+
+[node name="SettingsBrokenDown2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0.708679, -1.81116)
+scale = Vector2(0.515355, 0.515355)
+texture = ExtResource("3_tmoia")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 547.0
-offset_top = -13.0
-offset_right = 580.0
-offset_bottom = 17.0
+offset_left = 342.561
+offset_top = -487.54
+offset_right = 433.561
+offset_bottom = -396.54
 theme = SubResource("Theme_noswb")
 theme_override_styles/normal = SubResource("StyleBoxTexture_twvs0")
 
+[node name="music_minus_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -380.0
+offset_top = -342.0
+offset_right = -209.0
+offset_bottom = -138.0
+scale = Vector2(0.517799, 0.517799)
+theme = SubResource("Theme_5jba8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_oevyp")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ahgp5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jsb3f")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ui7a0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xf4nv")
+
+[node name="sound_minus_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -380.439
+offset_top = -142.54
+offset_right = -292.439
+offset_bottom = -37.5397
+theme = SubResource("Theme_5jba8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_oevyp")
+theme_override_styles/hover = SubResource("StyleBoxTexture_obk0l")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1qcqj")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_siuju")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_k7sh2")
+
+[node name="sens_minus_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -379.439
+offset_top = 64.4603
+offset_right = -291.439
+offset_bottom = 169.46
+theme = SubResource("Theme_5jba8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_oevyp")
+theme_override_styles/hover = SubResource("StyleBoxTexture_u8um8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_q0w0j")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g3r7f")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wf0sj")
+
+[node name="music_plus_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 292.561
+offset_top = -340.54
+offset_right = 380.561
+offset_bottom = -235.54
+theme_override_styles/normal = SubResource("StyleBoxTexture_uj3ai")
+theme_override_styles/hover = SubResource("StyleBoxTexture_01yk0")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_urtod")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_fm3ju")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_st6yq")
+
+[node name="sound_plus_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 292.561
+offset_top = -142.54
+offset_right = 380.561
+offset_bottom = -37.5397
+theme_override_styles/normal = SubResource("StyleBoxTexture_uj3ai")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8di1t")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_sfu02")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_bfe04")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ror15")
+
+[node name="sens_plus_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 293.561
+offset_top = 64.4603
+offset_right = 381.561
+offset_bottom = 169.46
+theme_override_styles/normal = SubResource("StyleBoxTexture_uj3ai")
+theme_override_styles/hover = SubResource("StyleBoxTexture_r5iap")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dkxto")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_crssh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pvly8")
+
+[node name="CheckButton" type="CheckButton" parent="."]
+layout_mode = 0
+offset_left = 183.561
+offset_top = 244.46
+offset_right = 416.561
+offset_bottom = 357.46
+scale = Vector2(0.52069, 0.52069)
+theme = SubResource("Theme_6y3qx")
+theme_override_icons/checked = ExtResource("8_i8xbu")
+theme_override_icons/unchecked = ExtResource("9_xelbk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0bp1n")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_o4el1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_a8uw2")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ayqpp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2cajj")
+
+[node name="Regler" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-249.773, 116.606)
+scale = Vector2(0.505271, 0.505271)
+texture = ExtResource("9_xloir")
+
+[node name="Regler7" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-6.27301, 116.606)
+scale = Vector2(0.505271, 0.505271)
+texture = ExtResource("9_xloir")
+
+[node name="Regler8" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(32.4811, 116.606)
+scale = Vector2(0.505271, 0.505271)
+texture = ExtResource("9_xloir")
+
+[node name="Regler9" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(73.2396, 116.606)
+scale = Vector2(0.505271, 0.505271)
+texture = ExtResource("9_xloir")
+
+[node name="Regler10" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(115.78, 116.606)
+scale = Vector2(0.505271, 0.505271)
+texture = ExtResource("9_xloir")
+
+[node name="SensivityContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = -271.0
+offset_top = 82.0
+offset_right = 824.0
+offset_bottom = 220.0
+scale = Vector2(0.498617, 0.498617)
+theme_override_constants/separation = 5
+
+[node name="Regler_Button_1" parent="SensivityContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_2" parent="SensivityContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_3" parent="SensivityContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_4" parent="SensivityContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_5" parent="SensivityContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_6" parent="SensivityContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_7" parent="SensivityContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_8" parent="SensivityContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_9" parent="SensivityContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_10" parent="SensivityContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_11" parent="SensivityContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_12" parent="SensivityContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="SoundContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = -271.0
+offset_top = -124.533
+offset_right = 824.0
+offset_bottom = 13.467
+scale = Vector2(0.498617, 0.498617)
+theme_override_constants/separation = 5
+
+[node name="Regler_Button_1" parent="SoundContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_2" parent="SoundContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_3" parent="SoundContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_4" parent="SoundContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_5" parent="SoundContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_6" parent="SoundContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_7" parent="SoundContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_8" parent="SoundContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_9" parent="SoundContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_10" parent="SoundContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_11" parent="SoundContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_12" parent="SoundContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="MusicContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = -271.0
+offset_top = -323.209
+offset_right = 824.0
+offset_bottom = -185.209
+scale = Vector2(0.498617, 0.498617)
+theme_override_constants/separation = 5
+
+[node name="Regler_Button_1" parent="MusicContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_2" parent="MusicContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_3" parent="MusicContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_4" parent="MusicContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_5" parent="MusicContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_6" parent="MusicContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_7" parent="MusicContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_8" parent="MusicContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_9" parent="MusicContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_10" parent="MusicContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_11" parent="MusicContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Regler_Button_12" parent="MusicContainer" instance=ExtResource("10_1ica6")]
+layout_mode = 2
+mouse_filter = 1
+
 [node name="Volume" type="HScrollBar" parent="."]
 layout_mode = 0
-offset_left = 130.0
-offset_top = 58.0
-offset_right = 441.0
-offset_bottom = 87.0
+offset_left = -149.207
+offset_top = -299.271
+offset_right = 161.793
+offset_bottom = -270.271
+theme_override_styles/scroll = SubResource("StyleBoxEmpty_2rqim")
+theme_override_styles/scroll_focus = SubResource("StyleBoxEmpty_a63t4")
+theme_override_styles/grabber = SubResource("StyleBoxEmpty_t0gub")
+theme_override_styles/grabber_highlight = SubResource("StyleBoxEmpty_1uo0v")
+theme_override_styles/grabber_pressed = SubResource("StyleBoxEmpty_h5xqj")
 min_value = -50.0
 max_value = 50.0
 value = 15.0
 
 [node name="Volume2" type="HScrollBar" parent="."]
 layout_mode = 0
-offset_left = 131.0
-offset_top = 129.0
-offset_right = 442.0
-offset_bottom = 158.0
+offset_left = -156.216
+offset_top = -102.796
+offset_right = 154.784
+offset_bottom = -73.7962
+theme_override_styles/scroll = SubResource("StyleBoxEmpty_2rqim")
+theme_override_styles/scroll_focus = SubResource("StyleBoxEmpty_a63t4")
+theme_override_styles/grabber = SubResource("StyleBoxEmpty_t0gub")
+theme_override_styles/grabber_highlight = SubResource("StyleBoxEmpty_1uo0v")
+theme_override_styles/grabber_pressed = SubResource("StyleBoxEmpty_h5xqj")
 min_value = -50.0
 max_value = 50.0
 value = 15.0
 
 [node name="MouseSens" type="HScrollBar" parent="."]
 layout_mode = 0
-offset_left = 132.0
-offset_top = 204.0
-offset_right = 443.0
-offset_bottom = 233.0
+offset_left = -159.221
+offset_top = 103.018
+offset_right = 151.779
+offset_bottom = 132.018
+theme_override_styles/scroll = SubResource("StyleBoxEmpty_2rqim")
+theme_override_styles/scroll_focus = SubResource("StyleBoxEmpty_a63t4")
+theme_override_styles/grabber = SubResource("StyleBoxEmpty_t0gub")
+theme_override_styles/grabber_highlight = SubResource("StyleBoxEmpty_1uo0v")
+theme_override_styles/grabber_pressed = SubResource("StyleBoxEmpty_h5xqj")
 min_value = 0.005
 max_value = 0.09
 value = 0.01
 
-[node name="Button2" type="Button" parent="."]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 56.0
-offset_right = 90.0
-offset_bottom = 86.0
-theme = SubResource("Theme_5jba8")
-theme_override_styles/normal = SubResource("StyleBoxTexture_oevyp")
-
-[node name="Button3" type="Button" parent="."]
-layout_mode = 0
-offset_left = 61.0
-offset_top = 130.0
-offset_right = 91.0
-offset_bottom = 160.0
-theme = SubResource("Theme_5jba8")
-theme_override_styles/normal = SubResource("StyleBoxTexture_oevyp")
-
-[node name="Button4" type="Button" parent="."]
-layout_mode = 0
-offset_left = 62.0
-offset_top = 205.0
-offset_right = 92.0
-offset_bottom = 235.0
-theme = SubResource("Theme_5jba8")
-theme_override_styles/normal = SubResource("StyleBoxTexture_oevyp")
-
-[node name="Button5" type="Button" parent="."]
-layout_mode = 0
-offset_left = 480.0
-offset_top = 58.0
-offset_right = 510.0
-offset_bottom = 88.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_uj3ai")
-
-[node name="Button6" type="Button" parent="."]
-layout_mode = 0
-offset_left = 478.0
-offset_top = 130.0
-offset_right = 508.0
-offset_bottom = 160.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_uj3ai")
-
-[node name="Button7" type="Button" parent="."]
-layout_mode = 0
-offset_left = 478.0
-offset_top = 206.0
-offset_right = 508.0
-offset_bottom = 236.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_uj3ai")
-
-[node name="CheckButton" type="CheckButton" parent="."]
-layout_mode = 0
-offset_left = 386.0
-offset_top = 256.0
-offset_right = 431.0
-offset_bottom = 280.0
-scale = Vector2(2.5, 1.7)
-theme = SubResource("Theme_ojfb5")
-icon = SubResource("ImageTexture_n0oov")
-
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="music_minus_button" to="." method="_on_music_minus_button_pressed"]
+[connection signal="pressed" from="sound_minus_button" to="." method="_on_sound_minus_button_pressed"]
+[connection signal="pressed" from="sens_minus_button" to="." method="_on_sens_minus_button_pressed"]
+[connection signal="pressed" from="music_plus_button" to="." method="_on_music_plus_button_pressed"]
+[connection signal="pressed" from="sound_plus_button" to="." method="_on_sound_plus_button_pressed"]
+[connection signal="pressed" from="sens_plus_button" to="." method="_on_sens_plus_button_pressed"]
+[connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="scrolling" from="Volume" to="." method="_on_volume_scrolling"]
 [connection signal="scrolling" from="Volume2" to="." method="_on_volume_2_scrolling"]
 [connection signal="scrolling" from="MouseSens" to="." method="_on_mouse_sens_scrolling"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
-[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
-[connection signal="pressed" from="Button6" to="." method="_on_button_6_pressed"]
-[connection signal="pressed" from="Button7" to="." method="_on_button_7_pressed"]
-[connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]
