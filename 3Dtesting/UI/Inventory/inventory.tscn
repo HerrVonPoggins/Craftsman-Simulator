@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://djw5gwv30bvm1"]
+[gd_scene load_steps=5 format=3 uid="uid://djw5gwv30bvm1"]
 
 [ext_resource type="Script" path="res://UI/Inventory/inventory.gd" id="1_2k2bt"]
+[ext_resource type="Texture2D" uid="uid://6iw5ch25qnnj" path="res://ui/Inventory_slot.png" id="2_tecys"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tgkn1"]
+texture = ExtResource("2_tecys")
+
+[sub_resource type="Theme" id="Theme_vh8sk"]
+Button/styles/normal = SubResource("StyleBoxTexture_tgkn1")
 
 [node name="Inventory" type="Control"]
 layout_mode = 3
@@ -21,42 +28,52 @@ offset_bottom = 585.0
 [node name="TrowelButton" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
+theme = SubResource("Theme_vh8sk")
 disabled = true
 
 [node name="button2" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
+theme = SubResource("Theme_vh8sk")
 
 [node name="TrowelButton3" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
+theme = SubResource("Theme_vh8sk")
 
 [node name="TrowelButton4" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
+theme = SubResource("Theme_vh8sk")
 
 [node name="TrowelButton5" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
+theme = SubResource("Theme_vh8sk")
 
 [node name="TrowelButton6" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
+theme = SubResource("Theme_vh8sk")
 
 [node name="TrowelButton7" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
+theme = SubResource("Theme_vh8sk")
 
 [node name="TrowelButton8" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
+theme = SubResource("Theme_vh8sk")
 
 [node name="TrowelButton9" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
+theme = SubResource("Theme_vh8sk")
 
 [node name="TrowelButton10" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
+theme = SubResource("Theme_vh8sk")
 
 [connection signal="pressed" from="HBoxContainer/TrowelButton" to="." method="_on_trowel_button_pressed"]

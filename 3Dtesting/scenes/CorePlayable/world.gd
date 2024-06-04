@@ -42,6 +42,15 @@ func _process(delta):
 	
 	
 	if Global.wall_finished == true and played == false:
+		$Doortop.visible = true
+		$Doortop2.visible = true
+		$Doortop3.visible = true
+		$Doortop4.visible = true
+		$Node3D.visible = true
+		$Node3D3.visible = true
+		$Node3D4.visible = true
+		$Node3D6.visible = true
+		$Node3D2.visible = true
 		played = true
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_4.dialogue"))
 		
