@@ -18,19 +18,19 @@ func _ready():
 	sand_value.visible = false
 
 func _process(delta):
-	if water == true and Global.tutorial_finished == true:
+	if water == true: #and Global.tutorial_finished == true:
 		if Input.is_action_pressed("leftclick"):
 			water_value.value += 1.5
 	if water_value.value >= 100:
 		water_value.value = 100
 		water_filled = true
-	if concrete == true and Global.tutorial_finished == true:
+	if concrete == true: #and Global.tutorial_finished == true:
 		if Input.is_action_pressed("leftclick"):
 			cement_value.value += 1.5
 	if cement_value.value >= 100:
 		cement_value.value = 100
 		cement_filled = true
-	if sand == true and Global.tutorial_finished == true:
+	if sand == true: #and Global.tutorial_finished == true:
 		if Input.is_action_pressed("leftclick"):
 			sand_value.value += 1.5
 	if sand_value.value >= 100:
@@ -40,12 +40,18 @@ func _process(delta):
 func _on_range_body_entered(body):
 	if body.is_in_group("water"):
 		water_value.visible = true
+		cement_value.visible = true
+		sand_value.visible = true
 		water = true
 	if body.is_in_group("concrete"):
+		water_value.visible = true
 		cement_value.visible = true
+		sand_value.visible = true
 		concrete = true
 	if body.is_in_group("sand"):
+		water_value.visible = true
 		sand_value.visible = true
+		cement_value.visible = true
 		sand = true
 
 func _on_player_start_mixer():
@@ -62,10 +68,16 @@ func _on_player_start_mixer():
 func _on_range_body_exited(body):
 	if body.is_in_group("water"):
 		water_value.visible = false
+		cement_value.visible = false
+		sand_value.visible = false
 		water = false
 	if body.is_in_group("concrete"):
+		water_value.visible = false
 		cement_value.visible = false
+		sand_value.visible = false
 		concrete = false
 	if body.is_in_group("sand"):
+		water_value.visible = false
+		cement_value.visible = false
 		sand_value.visible = false
 		sand = false

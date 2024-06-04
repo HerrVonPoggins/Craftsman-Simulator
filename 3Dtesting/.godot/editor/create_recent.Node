@@ -1,9 +1,9 @@
+MeshInstance3D
+RigidBody3D
 StaticBody3D
 CharacterBody3D
 RayCast3D
-RigidBody3D
 Node3D
-MeshInstance3D
 Camera3D
 CollisionShape3D
 Area3D

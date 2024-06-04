@@ -7,12 +7,14 @@ var lock_in_correct = false
 
 func _physics_process(delta):
 	#Cuttable Brick Movement
-	$"../BrickCut".velocity = clamp($"../BrickCut".velocity, Vector3(0,0,-0.5), Vector3(0,0,0.5))
 	if Global.brick_saw_cam == true:
-		if Input.is_action_just_pressed("left"):
-			$"../BrickCut".velocity += Vector3(0,0,0.5)
-		if Input.is_action_just_pressed("right"):
-			$"../BrickCut".velocity += Vector3(0,0,-0.5)
+		$"../BrickCut".velocity = clamp($"../BrickCut".velocity, Vector3(0,0,-0.5), Vector3(0,0,0.5))
+		if Input.is_action_pressed("left"):
+			$"../BrickCut".velocity = Vector3(0,0,0.5)
+		elif Input.is_action_pressed("right"):
+			$"../BrickCut".velocity = Vector3(0,0,-0.5)
+		else:
+			$"../BrickCut".velocity = Vector3(0,0,0)
 		$"../BrickCut".move_and_slide()
 
 	#Cutting the Brick at the marked position
