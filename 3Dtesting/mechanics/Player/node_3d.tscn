@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://mechanics/Player/RayCast3D.gd" id="2_esgj4"]
 [ext_resource type="Texture2D" uid="uid://1f8wq8hkrxny" path="res://assets/textures/Sprite-0001.png" id="3_d3pfc"]
 [ext_resource type="PackedScene" uid="uid://c6euqm1mx4k1q" path="res://mechanics/Player/arrowhead.tscn" id="5_bmhdd"]
-[ext_resource type="PackedScene" uid="uid://djw5gwv30bvm1" path="res://UI/Inventory/inventory.tscn" id="6_2noio"]
+[ext_resource type="PackedScene" uid="uid://djw5gwv30bvm1" path="res://ui/Inventory/inventory.tscn" id="6_2noio"]
 [ext_resource type="PackedScene" uid="uid://q7njbo82kc3y" path="res://mechanics/Player/hold.tscn" id="6_e1oej"]
 [ext_resource type="Script" path="res://mechanics/Player/GroundIdentifier.gd" id="7_3412t"]
 
