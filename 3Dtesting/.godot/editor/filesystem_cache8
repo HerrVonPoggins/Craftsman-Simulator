@@ -172,9 +172,9 @@ spirit_level_needed.dialogue::Resource::4236342806834665095::1717489724::1717489
 brick_spirit_level_minigame.gd::GDScript::-1::1717489724::0::1::::<>Node2D<>::
 brick_spirit_level_minigame.tscn::PackedScene::8444761911059401508::1717489724::0::1::::<><>::res://mechanics/2d_games/Hammer.gd<>res://mechanics/2d_games/brick_spirit_level_minigame.gd
 Hammer.gd::GDScript::-1::1717489724::0::1::::<>RigidBody2D<>::
-::res://mechanics/brick_cutting/::1717517645
-brick_cut.gd::GDScript::-1::1717517639::0::1::::<>Camera3D<>::
-saw.tscn::PackedScene::8611473856882821695::1717517645::0::1::::<><>::res://mechanics/brick_cutting/brick_cut.gd<>uid://dwfc4k5batkf2::::res://assets/models/bricks_8017-normal.jpg
+::res://mechanics/brick_cutting/::1717517698
+brick_cut.gd::GDScript::-1::1717517698::0::1::::<>Camera3D<>::
+saw.tscn::PackedScene::8611473856882821695::1717517698::0::1::::<><>::res://mechanics/brick_cutting/brick_cut.gd<>uid://dwfc4k5batkf2::::res://assets/models/bricks_8017-normal.jpg
 ::res://mechanics/build_wall/::1717513167
 brickplacingminigame.gd::GDScript::-1::1717513167::0::1::::<>Node3D<>::
 brickplacingminigame.tscn::PackedScene::3617549643536903943::1717513167::0::1::::<><>::res://mechanics/build_wall/brickplacingminigame.gd
@@ -226,11 +226,11 @@ trowel.tscn::PackedScene::4291328714433466311::1717489724::0::1::::<><>::
 ::res://scenes/Carpenter/::1717513439
 carpenter_world.gd::GDScript::-1::1717513439::0::1::::<>Node3D<>::
 carpenter_world.tscn::PackedScene::4889354544109381117::1717489724::0::1::::<><>::res://scenes/Carpenter/carpenter_world.gd<>uid://cxv4g3lrd0p6b::::res://mechanics/Player/node_3d.tscn<>uid://bncehlcg0sopv::::res://mechanics/Carpenter-Areas/stairs.tscn<>uid://b7qpr6ucdmfmq::::res://assets/carpenter-assets/wallguide_mesh(unplaned).tres<>uid://bcokw07emnd0j::::res://assets/carpenter-assets/step_mesh(unplaned).tres
-::res://scenes/CorePlayable/::1717517645
-CorePlayable.tscn::PackedScene::367638352014426829::1717517645::0::1::::<><>::res://scenes/CorePlayable/world.gd<>uid://c6ub5x3yfjwfq::::res://mechanics/build_wall/wall.tscn<>uid://0he1lqnqyqvf::::res://mechanics/cement-mixing/zementmischer.tscn<>uid://cc4eoydeq1jwv::::res://UI/player_ui/info hub.tscn<>uid://cyxbogh4cdp8::::res://assets/models/eimer_wasser_1.webp<>uid://cxv4g3lrd0p6b::::res://mechanics/Player/node_3d.tscn<>uid://dfk7y7w5dvc35::::res://assets/models/brick_outline_prototyp(1).obj<>uid://bfcibpy2rsirf::::res://assets/models/double_trash_bags.obj<>uid://bmrq0v6mprlfw::::res://assets/models/traffic_cone.obj<>uid://dwfc4k5batkf2::::res://assets/models/bricks_8017-normal.jpg<>uid://b2e0s63uasg6b::::res://mechanics/Tools/trowel.tscn<>uid://duxpymako04v0::::res://mechanics/brick_cutting/saw.tscn<>uid://n4kamoh4pdg4::::res://mechanics/build_wall/concreteplacingminigame.tscn<>uid://b8dt4snpw78s6::::res://mechanics/build_wall/concreteplacingminigame2.tscn<>uid://bi5tirgw72us4::::res://mechanics/build_wall/concreteplacingminigam3.tscn<>uid://drqhurviabxvr::::res://mechanics/build_wall/windowtop.tscn<>uid://ckkechdc8rspf::::res://mechanics/build_wall/Doortop.tscn<>uid://brsmrqkeinfal::::res://mechanics/build_wall/brickplacingminigame.tscn<>uid://4sc0de3s2g68::::res://assets/models/prototyp5_brick-wall-stone-bricks-rock-surface-cartoon-style-seamless_191307-535.png<>uid://bmaj688jw4v5y::::res://assets/models/prototyp5_360_F_257717689_dOEzjdOvMhY2lZbsWM1eVGum8v7yTBWx.jpg<>uid://cm3acp3e8tvev::::res://assets/models/prototyp5_38ebb6_2515fa7e0ef74758a2f8a6adc7b867de~mv2.jpg<>uid://c25o1dw58fyra::::res://assets/models/prototyp5_T_PolygonConstruction_04_B.png<>uid://cgyju8ktk8ok4::::res://assets/models/prototyp5_T_PolygonConstruction_04_C.png
+::res://scenes/CorePlayable/::1717518603
+CorePlayable.tscn::PackedScene::367638352014426829::1717518602::0::1::::<><>::res://scenes/CorePlayable/world.gd<>uid://c6ub5x3yfjwfq::::res://mechanics/build_wall/wall.tscn<>uid://0he1lqnqyqvf::::res://mechanics/cement-mixing/zementmischer.tscn<>uid://cc4eoydeq1jwv::::res://UI/player_ui/info hub.tscn<>uid://cyxbogh4cdp8::::res://assets/models/eimer_wasser_1.webp<>uid://cxv4g3lrd0p6b::::res://mechanics/Player/node_3d.tscn<>uid://dfk7y7w5dvc35::::res://assets/models/brick_outline_prototyp(1).obj<>uid://bfcibpy2rsirf::::res://assets/models/double_trash_bags.obj<>uid://bmrq0v6mprlfw::::res://assets/models/traffic_cone.obj<>uid://dwfc4k5batkf2::::res://assets/models/bricks_8017-normal.jpg<>uid://b2e0s63uasg6b::::res://mechanics/Tools/trowel.tscn<>uid://duxpymako04v0::::res://mechanics/brick_cutting/saw.tscn<>uid://n4kamoh4pdg4::::res://mechanics/build_wall/concreteplacingminigame.tscn<>uid://b8dt4snpw78s6::::res://mechanics/build_wall/concreteplacingminigame2.tscn<>uid://bi5tirgw72us4::::res://mechanics/build_wall/concreteplacingminigam3.tscn<>uid://drqhurviabxvr::::res://mechanics/build_wall/windowtop.tscn<>uid://ckkechdc8rspf::::res://mechanics/build_wall/Doortop.tscn<>uid://brsmrqkeinfal::::res://mechanics/build_wall/brickplacingminigame.tscn<>uid://4sc0de3s2g68::::res://assets/models/prototyp5_brick-wall-stone-bricks-rock-surface-cartoon-style-seamless_191307-535.png<>uid://bmaj688jw4v5y::::res://assets/models/prototyp5_360_F_257717689_dOEzjdOvMhY2lZbsWM1eVGum8v7yTBWx.jpg<>uid://cm3acp3e8tvev::::res://assets/models/prototyp5_38ebb6_2515fa7e0ef74758a2f8a6adc7b867de~mv2.jpg<>uid://c25o1dw58fyra::::res://assets/models/prototyp5_T_PolygonConstruction_04_B.png<>uid://cgyju8ktk8ok4::::res://assets/models/prototyp5_T_PolygonConstruction_04_C.png
 radio(1).fbx::PackedScene::3433104680136509660::1717489726::1717489726::1::::<><>::
 toolbox.fbx::PackedScene::2185489451015958581::1717489726::1717489726::1::::<><>::
-world.gd::GDScript::-1::1717516389::0::1::::<>Node3D<>::
+world.gd::GDScript::-1::1717518603::0::1::::<>Node3D<>::
 ::res://scenes/ElektrikerScene/::1717489726
 Elektriker.tscn::PackedScene::4405951662758816784::1717489726::0::1::::<><>::res://scenes/ElektrikerScene/world.gd<>uid://k0fmfgl0bft6::::res://assets/models/kloofendal_48d_partly_cloudy_puresky_2k.hdr<>uid://cxv4g3lrd0p6b::::res://mechanics/Player/node_3d.tscn<>uid://cc4eoydeq1jwv::::res://ui/player_ui/info hub.tscn<>uid://ck2ddnhldnuci::::res://mechanics/PowerBox/power_box.tscn
 world.gd::GDScript::-1::1717489726::0::1::::<>Node3D<>::
@@ -266,17 +266,17 @@ music.tscn::PackedScene::3538743680357874426::1717489727::0::1::::<><>::res://sc
 ::res://UI/Inventory/::1717489723
 inventory.gd::GDScript::-1::1717489723::0::1::::<>Control<>::
 inventory.tscn::PackedScene::7838211368217593182::1717489723::0::1::::<><>::res://UI/Inventory/inventory.gd
-::res://UI/player_ui/::1717517635
-1.png::CompressedTexture2D::3473161339835247598::1717489727::1717517683::1::::<><>::
-2.png::CompressedTexture2D::7360490423067285775::1717489727::1717517683::1::::<><>::
-3.png::CompressedTexture2D::7305876024354119766::1717489727::1717517683::1::::<><>::
-4.png::CompressedTexture2D::8555811134180993803::1717489727::1717517683::1::::<><>::
-5.png::CompressedTexture2D::1229957364018111191::1717489727::1717517683::1::::<><>::
+::res://UI/player_ui/::1717518211
+1.png::CompressedTexture2D::3473161339835247598::1717489727::1717518652::1::::<><>::
+2.png::CompressedTexture2D::7360490423067285775::1717489727::1717518652::1::::<><>::
+3.png::CompressedTexture2D::7305876024354119766::1717489727::1717518652::1::::<><>::
+4.png::CompressedTexture2D::8555811134180993803::1717489727::1717518652::1::::<><>::
+5.png::CompressedTexture2D::1229957364018111191::1717489727::1717518652::1::::<><>::
 Checklist.gd::GDScript::-1::1717489727::0::1::::<>Node2D<>::
 checklist.tscn::PackedScene::2993137486329213323::1717489727::0::1::::<><>::res://ui/player_ui/Checklist.gd<>uid://be6bba0eknndn::::res://ui/player_ui/Quest_UI.png<>uid://ccolb6uftch63::::res://assets/fonts/AldotheApache.ttf
 info hub.tscn::PackedScene::4973355144014707637::1717489727::0::1::::<><>::res://ui/player_ui/TabContainer.gd<>uid://b64wbqw154cxp::::res://ui/player_ui/Options_Button.png<>uid://biv5si5cbepod::::res://ui/player_ui/checklist.tscn<>uid://dr813mjfqn5n4::::res://assets/textures/warning_sample.jpg<>uid://cdpolkwg0t10a::::res://ui/player_ui/transition.tscn<>uid://bpqopvth4yp87::::res://ui/player_ui/1.png<>uid://dc4qg4m7u1b48::::res://ui/player_ui/2.png<>uid://ccfrjw5825ajn::::res://ui/player_ui/settings.tscn<>uid://dcdayfud0hwvm::::res://ui/player_ui/3.png<>uid://dt5q7vaxyp3f0::::res://ui/player_ui/4.png<>uid://rr2hodwwfv1h::::res://ui/player_ui/5.png
-Options_Button.png::CompressedTexture2D::4623480226556459053::1717489727::1717517682::1::::<><>::
-Quest_UI.png::CompressedTexture2D::2731234310223496559::1717489727::1717517682::1::::<><>::
+Options_Button.png::CompressedTexture2D::4623480226556459053::1717489727::1717518652::1::::<><>::
+Quest_UI.png::CompressedTexture2D::2731234310223496559::1717489727::1717518652::1::::<><>::
 Settings.gd::GDScript::-1::1717489727::0::1::::<>Control<>::
 settings.tscn::PackedScene::4924590407849204863::1717489727::0::1::::<><>::res://ui/player_ui/Settings.gd
 TabContainer.gd::GDScript::-1::1717489727::0::1::::<>Control<>::
@@ -293,17 +293,17 @@ titlescreen.tscn::PackedScene::299591778937143882::1717512511::0::1::::<><>::res
 ::res://ui/Inventory/::1717489723
 inventory.gd::GDScript::-1::1717489723::0::1::::<>Control<>::
 inventory.tscn::PackedScene::7838211368217593182::1717489723::0::1::::<><>::res://UI/Inventory/inventory.gd
-::res://ui/player_ui/::1717517635
-1.png::CompressedTexture2D::3473161339835247598::1717489727::1717517635::1::::<><>::
-2.png::CompressedTexture2D::7360490423067285775::1717489727::1717517635::1::::<><>::
-3.png::CompressedTexture2D::7305876024354119766::1717489727::1717517635::1::::<><>::
-4.png::CompressedTexture2D::8555811134180993803::1717489727::1717517635::1::::<><>::
-5.png::CompressedTexture2D::1229957364018111191::1717489727::1717517635::1::::<><>::
+::res://ui/player_ui/::1717518211
+1.png::CompressedTexture2D::3473161339835247598::1717489727::1717518210::1::::<><>::
+2.png::CompressedTexture2D::7360490423067285775::1717489727::1717518211::1::::<><>::
+3.png::CompressedTexture2D::7305876024354119766::1717489727::1717518211::1::::<><>::
+4.png::CompressedTexture2D::8555811134180993803::1717489727::1717518211::1::::<><>::
+5.png::CompressedTexture2D::1229957364018111191::1717489727::1717518211::1::::<><>::
 Checklist.gd::GDScript::-1::1717489727::0::1::::<>Node2D<>::
 checklist.tscn::PackedScene::2993137486329213323::1717489727::0::1::::<><>::res://ui/player_ui/Checklist.gd<>uid://be6bba0eknndn::::res://ui/player_ui/Quest_UI.png<>uid://ccolb6uftch63::::res://assets/fonts/AldotheApache.ttf
 info hub.tscn::PackedScene::4973355144014707637::1717489727::0::1::::<><>::res://ui/player_ui/TabContainer.gd<>uid://b64wbqw154cxp::::res://ui/player_ui/Options_Button.png<>uid://biv5si5cbepod::::res://ui/player_ui/checklist.tscn<>uid://dr813mjfqn5n4::::res://assets/textures/warning_sample.jpg<>uid://cdpolkwg0t10a::::res://ui/player_ui/transition.tscn<>uid://bpqopvth4yp87::::res://ui/player_ui/1.png<>uid://dc4qg4m7u1b48::::res://ui/player_ui/2.png<>uid://ccfrjw5825ajn::::res://ui/player_ui/settings.tscn<>uid://dcdayfud0hwvm::::res://ui/player_ui/3.png<>uid://dt5q7vaxyp3f0::::res://ui/player_ui/4.png<>uid://rr2hodwwfv1h::::res://ui/player_ui/5.png
-Options_Button.png::CompressedTexture2D::4623480226556459053::1717489727::1717517635::1::::<><>::
-Quest_UI.png::CompressedTexture2D::2731234310223496559::1717489727::1717517635::1::::<><>::
+Options_Button.png::CompressedTexture2D::4623480226556459053::1717489727::1717518210::1::::<><>::
+Quest_UI.png::CompressedTexture2D::2731234310223496559::1717489727::1717518210::1::::<><>::
 Settings.gd::GDScript::-1::1717489727::0::1::::<>Control<>::
 settings.tscn::PackedScene::4924590407849204863::1717489727::0::1::::<><>::res://ui/player_ui/Settings.gd
 TabContainer.gd::GDScript::-1::1717489727::0::1::::<>Control<>::

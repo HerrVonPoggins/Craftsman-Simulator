@@ -125,9 +125,10 @@ func _on_area_3d_5_body_entered(body):
 
 
 func _on_saw_camera_brick_cut_correct():
-	$Saw/BrickCut.scale = Vector3(1,1,0.5)
-	$Saw/BrickCut/Brick_008.scale = Vector3(0.618,1,0.5)
-	$Saw/BrickCut/Brick_008.position = Vector3(0,5.154,-2.019)
-	$Saw/BrickCut/CollisionShape3D.scale = Vector3(1,1,0.5)
+	$Props/Saw/BrickCut/LockInL.visible = false
+	$Props/Saw/BrickCut/LockInM.visible = false
+	$Props/Saw/BrickCut/LockInR.visible = false
+	$Props/Saw/BrickCut/Brick_008.position = Vector3(0, 0.546, 0.635)
+	$Props/Saw/BrickCut/Brick_008.scale = Vector3(0.15, 0.15, 0.075)
 	Global.brick_sawed = true
 	$Player/CharacterBody3D/Neck/Camera3D.current = true
