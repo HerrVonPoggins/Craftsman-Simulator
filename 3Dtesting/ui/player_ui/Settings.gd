@@ -22,13 +22,45 @@ func _on_button_pressed():
 
 
 func _on_volume_scrolling():
-	Music.volume = $TabContainer/TabBar/Volume.value
+	Music.volume = $Volume.value
 	print(Music.volume)
 
 
 func _on_mouse_sens_scrolling():
-	Global.mouse_sensitivity = $TabContainer/TabBar2/MouseSens.value
+	Global.mouse_sensitivity = $MouseSens.value
 
 
 func _on_volume_2_scrolling():
-	Music.effects = $TabContainer/TabBar/Volume2.value
+	Music.effects = $Volume2.value
+
+
+func _on_button_2_pressed():
+	$Volume.value -= 20
+
+
+func _on_button_3_pressed():
+	$Volume2.value -= 20
+
+
+func _on_button_4_pressed():
+	$MouseSens.value -= 10
+
+
+func _on_button_5_pressed():
+	$Volume.value += 20
+
+
+func _on_button_6_pressed():
+	$Volume2.value += 20
+
+
+func _on_button_7_pressed():
+	$MouseSens.value += 10
+
+
+func _on_check_button_toggled(toggled_on):
+
+	if toggled_on == true:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
