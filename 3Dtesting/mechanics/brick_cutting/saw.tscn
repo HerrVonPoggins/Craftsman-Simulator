@@ -226,7 +226,7 @@ fov = 45.0
 script = ExtResource("1_h4o6s")
 
 [node name="CutArea" type="Area3D" parent="."]
-transform = Transform3D(0.265, 0, 0, 0, 0.265, 0, 0, 0, 0.265, 0.0319214, 0.050559, 0.0504761)
+transform = Transform3D(0.265, 0, 0, 0, 0.265, 0, 0, 0, 0.265, 0.087471, 0.050559, 0.0504761)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CutArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.329529, 0.888246, 0.0821152)
@@ -237,49 +237,43 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.329529, 0.888246, 0.082115
 shape = SubResource("ConcavePolygonShape3D_28p34")
 
 [node name="BrickCut" type="CharacterBody3D" parent="." groups=["brick", "cut"]]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0.174175, 0.242094, -0.783569)
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0.761364, 0.230795, 0.525513)
 motion_mode = 1
 
 [node name="Brick_008" type="MeshInstance3D" parent="BrickCut"]
-transform = Transform3D(-0.15, 0, 5.84122e-08, 0, 0.15, 0, -5.84122e-08, 0, -0.15, 0, 0.546295, 0)
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
 mesh = SubResource("ArrayMesh_cfpyh")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BrickCut"]
-transform = Transform3D(-0.14, 0, 5.4518e-08, 0, 0.14, 0, -5.4518e-08, 0, -0.14, -0.00317955, 0.495991, 0.0429688)
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_oh81o")
 
 [node name="LockInL" type="Area3D" parent="BrickCut" groups=["lock_in"]]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -0.00580502, -0.229889, 0.59845)
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -0.012064, -0.775192, -0.767639)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BrickCut/LockInL"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107422, 0.00860596, -0.491867)
 shape = SubResource("BoxShape3D_e1i7n")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="BrickCut/LockInL"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.485489)
 mesh = SubResource("BoxMesh_vq1x3")
 
 [node name="LockInM" type="Area3D" parent="BrickCut" groups=["lock_in_correct"]]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -0.00473309, -0.229286, 0.724731)
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -0.0109921, -0.77459, -0.644348)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BrickCut/LockInM"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107422, 0.00860596, -0.491867)
 shape = SubResource("BoxShape3D_e1i7n")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="BrickCut/LockInM"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.485489)
 mesh = SubResource("BoxMesh_vq1x3")
 
 [node name="LockInR" type="Area3D" parent="BrickCut" groups=["lock_in"]]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -0.00407028, -0.229496, 0.836182)
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -0.0103292, -0.774799, -0.53186)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BrickCut/LockInR"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107422, 0.00860596, -0.491867)
 shape = SubResource("BoxShape3D_e1i7n")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="BrickCut/LockInR"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.485489)
 mesh = SubResource("BoxMesh_vq1x3")
 
 [connection signal="area_entered" from="CutArea" to="SawCamera" method="_on_cut_area_area_entered"]

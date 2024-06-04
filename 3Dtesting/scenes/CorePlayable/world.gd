@@ -130,7 +130,7 @@ func _on_saw_camera_brick_cut_correct():
 	$Props/Saw/BrickCut/LockInL.visible = false
 	$Props/Saw/BrickCut/LockInM.visible = false
 	$Props/Saw/BrickCut/LockInR.visible = false
-	$Props/Saw/BrickCut/Brick_008.position = Vector3(0, 0.546, 0.635)
+	$Props/Saw/BrickCut.position = Vector3(0.761, 0.231, 0.5)
 	$Props/Saw/BrickCut/Brick_008.scale = Vector3(0.15, 0.15, 0.075)
 	$Props/Saw/BrickCut.add_to_group("grab")
 	Global.brick_sawed = true
