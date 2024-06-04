@@ -166,9 +166,9 @@ func rotate_step_up_separation_ray():
 	if $StepUpSeparationRay_R/RayCast3D.is_colliding() and $StepUpSeparationRay_R/RayCast3D.get_collision_normal().dot(Vector3(0,1,0)) < max_slope_ang_dot:
 		any_too_steep = true
 	
-	$StepUpSeparationRay_F/RayCast3D.disabled = any_too_steep
-	$StepUpSeparationRay_L/RayCast3D.disabled = any_too_steep
-	$StepUpSeparationRay_R/RayCast3D.disabled = any_too_steep
+	$StepUpSeparationRay_F/RayCast3D.enabled = any_too_steep
+	$StepUpSeparationRay_L/RayCast3D.enabled = any_too_steep
+	$StepUpSeparationRay_R/RayCast3D.enabled = any_too_steep
 	
 func snap_down_to_stairs_check():
 	

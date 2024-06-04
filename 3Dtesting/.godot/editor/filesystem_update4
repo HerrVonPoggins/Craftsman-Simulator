@@ -6,3 +6,5 @@ res://mechanics/brick_cutting/saw.tscn
 res://mechanics/brick_cutting/brick_cut.gd
 res://scenes/CorePlayable/world.gd
 res://ui/screens/titlescreen.tscn
+res://mechanics/Player/CharacterFP+WASD.gd
+res://scripts/global.gd
