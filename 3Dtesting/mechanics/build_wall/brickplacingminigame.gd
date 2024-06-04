@@ -12,6 +12,11 @@ func _ready():
 
 
 func _process(delta):
+	if $".".visible == true:
+		$Camera3D.current = true
+	
+	
+	
 	if Brick_1.rotation.x <= -1.4 and Brick_1.rotation.x >= -1.48:
 		Brick_1.rotation.x = -1.57 
 		brick_1_done = true
@@ -22,6 +27,7 @@ func _process(delta):
 		Brick_3.rotation.x = -1.57 
 		brick_3_done = true
 	if brick_1_done == true and brick_2_done == true and brick_3_done == true:
+		Global.wall_finished = true
 		queue_free()
 
 func _unhandled_input(event):
@@ -34,7 +40,7 @@ func _unhandled_input(event):
 	elif event.is_action_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		pass
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and $Camera3D.current == true:
 		$Hammer.position.y += (-event.relative.y * 0.01)
 		$Hammer.position.x += (+event.relative.x * 0.01)
 		
