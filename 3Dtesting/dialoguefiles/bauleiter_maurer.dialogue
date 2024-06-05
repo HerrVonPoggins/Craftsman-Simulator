@@ -1,38 +1,28 @@
 ~ this_is_a_node_title
-if Global.current_scene == 1 and Global.dialogue_count == 0:
+if Global.current_scene == 1:
 	set Global.dialogue_open = true
-	Bauleiter: Ah, da bist du ja, unser neuer Praktikant!
-	Bauleiter: Herzlich willkommen auf der Baustelle von "Craftsman Simulator".
-	Bauleiter: Ich bin der Bauleiter, der Zukunftsfuchs, aber du kannst mich einfach Fuchs nennen.
-	Bauleiter: Du wirst die nächsten Tage spannende Ausbildungsberufe auf der Baustelle entdecken und beim Hausbau mitwirken.
+	if Global.tutorial_finished == false:
+		Bauleiter: Ah, da bist du ja, unser neuer Praktikant!
+		Bauleiter: Herzlich willkommen auf der Baustelle von "Craftsman Simulator".
+		Bauleiter: Ich bin der Bauleiter, der Zukunftsfuchs, aber du kannst mich einfach Fuchs nennen.
+		Bauleiter: Du wirst die nächsten Tage spannende Ausbildungsberufe auf der Baustelle entdecken und beim Hausbau mitwirken.
+		
+		Bauleiter: Aber vergiss nicht, auf deine Sicherheit zu achten.
+		Bauleiter: Eine Baustelle kann sehr gefährlich sein, aber mit der richtigen Arbeitskleidung und Vorsichtsmaßnahmen können wir Unfälle vermeiden.
+		Bauleiter: Du solltest jetzt deine passende Arbeitskleidung finden.
+		Bauleiter: Ziehe sie an und komm bitte danach wieder zu mir.
 	
-	Bauleiter: Aber vergiss nicht, auf deine Sicherheit zu achten.
-	Bauleiter: Eine Baustelle kann sehr gefährlich sein, aber mit der richtigen Arbeitskleidung und Vorsichtsmaßnahmen können wir Unfälle vermeiden.
-	Bauleiter: Du solltest jetzt deine passende Arbeitskleidung finden.
-	Bauleiter: Ziehe sie an und komm bitte danach wieder zu mir.
-	
-	Bauleiter: Gut gemacht! 
-	Bauleiter: Bevor es aber losgeht, muss ich dir noch das Baustellen-Tagebuch geben, das du jetzt im Menü (ESC) findest
-	Bauleiter: Dort könntest du alle Ausbildungsberufe nochmal genauer nachlesen und dich besser informieren (es gibt ein Quiz zum Schluss).
-	Bauleiter: Und jetzt viel Spaß!
+	if Global.tutorial_finished == true:
+		Bauleiter: Gut gemacht! 
+		Bauleiter: Bevor es aber losgeht, muss ich dir noch das Baustellen-Tagebuch geben, das du jetzt im Menü (ESC) findest
+		Bauleiter: Dort könntest du alle Ausbildungsberufe nochmal genauer nachlesen und dich besser informieren (es gibt ein Quiz zum Schluss).
+		Bauleiter: Und jetzt viel Spaß!
 	set Global.dialogue_open = false
-	set Global.dialogue_count = 1
+
 
 if Global.current_scene == 2:
 	set Global.dialogue_open = true
-	Bauleiter: Wilkommen auf der Baustelle!
-	Bauleiter: Deine erste Aufgabe wird es sein eine Ständerwand zu bauen.
-	Bauleiter: Du musst die Profile mit Dichtband bekleben.
-	Bauleiter: Danach bringst du sie an Boden/Decke und den Wänden an.
-	Bauleiter: als nächstes setzt du in den markierten slots die zwischen Profile.
-	Bauleiter: dann kannst du eine Seite mit Gipskartonplatten beplanken.
-	Bauleiter: nun wird das Dämmmaterial eingelegt um dann die andere Seite zu verplanken.
-	Bauleiter: jetzt hast du den größten Teil hinter dir
-	Bauleiter: verspachtle die Fugen.
-	Bauleiter: dann verspachtle den Rest der Wand. 
-	Bauleiter: Sprich noch vorher mit dem Stuckateur er gibt dir eine Zusammenfassung über seinen Beruf.
-	Bauleiter: Falls du genaueres wissen willst ließ in deinem Handbuch (ESC) nach.
-	Bauleiter: Viel Glück.
+
 	set Global.dialogue_open = false
 
 => END

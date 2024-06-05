@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_cbpfo"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_2qmpb"]
 
 [resource]
-script = ExtResource("1_cbpfo")
+script = ExtResource("1_2qmpb")
 using_states = PackedStringArray()
 titles = {
 "this_is_a_node_title": "2"
@@ -170,7 +170,7 @@ lines = {
 "id": "2",
 "next_conditional_id": "22",
 "next_id": "3",
-"next_id_after": "25",
+"next_id_after": "22",
 "type": &"condition"
 },
 "20": {
@@ -217,51 +217,12 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "25",
+"next_id": "22",
 "parent_id": "2",
 "type": &"mutation"
 },
 "22": {
-"condition": {
-"expression": Array[Dictionary]([{
-"type": "variable",
-"value": "Global"
-}, {
-"type": "dot"
-}, {
-"type": "variable",
-"value": "dialogue_count"
-}, {
-"type": "comparison",
-"value": "=="
-}, {
-"type": "number",
-"value": 1
-}, {
-"type": "colon"
-}])
-},
 "id": "22",
-"next_conditional_id": "25",
-"next_id": "23",
-"next_id_after": "25",
-"type": &"condition"
-},
-"23": {
-"character": "Maurer",
-"character_replacements": Array[Dictionary]([]),
-"id": "23",
-"next_id": "25",
-"notes": "",
-"parent_id": "22",
-"tags": PackedStringArray(),
-"text": "Hol dir bitte zuerst deine Arbeitskleidung und komm dann nochmal zu mir.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Hol dir bitte zuerst deine Arbeitskleidung und komm dann nochmal zu mir.",
-"type": &"dialogue"
-},
-"25": {
-"id": "25",
 "is_snippet": false,
 "next_id": "end",
 "type": &"goto"
@@ -377,8 +338,5 @@ if Global.dialogue_count == 2:
 	Maurer: Verstanden?
 	set Global.dialogue_open = false
 	set Global.dialogue_count = 2
-elif Global.dialogue_count == 1:
-	Maurer: Hol dir bitte zuerst deine Arbeitskleidung und komm dann nochmal zu mir.
-	
 => END"
 metadata/dialogue_manager_version = "2.38.0"

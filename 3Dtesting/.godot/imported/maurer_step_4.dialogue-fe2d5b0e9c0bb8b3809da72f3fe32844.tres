@@ -1,33 +1,21 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_y8wqm"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_agtrh"]
 
 [resource]
-script = ExtResource("1_y8wqm")
+script = ExtResource("1_agtrh")
 using_states = PackedStringArray()
 titles = {
-"this_is_a_node_title": "3"
+"this_is_a_node_title": "4"
 }
 character_names = PackedStringArray("Maurer")
-first_title = "3"
+first_title = "4"
 lines = {
 "1": {
 "id": "1",
-"next_id": "3",
+"next_id": "4",
 "text": "this_is_a_node_title",
 "type": &"title"
-},
-"3": {
-"character": "Maurer",
-"character_replacements": Array[Dictionary]([]),
-"id": "3",
-"next_id": "4",
-"notes": "",
-"tags": PackedStringArray(),
-"text": "Zum Abschluss deiner heutigen Aufgaben musst du noch die Tür- und Fensterstürze einbauen.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Zum Abschluss deiner heutigen Aufgaben musst du noch die Tür- und Fensterstürze einbauen.",
-"type": &"dialogue"
 },
 "4": {
 "character": "Maurer",
@@ -36,16 +24,28 @@ lines = {
 "next_id": "5",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Dafür setzte die Stürze an die markierten Stellen in den Türen und Fenstern an.",
+"text": "Zum Abschluss deiner heutigen Aufgaben musst du noch die Tür- und Fensterstürze einbauen.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Dafür setzte die Stürze an die markierten Stellen in den Türen und Fenstern an.",
+"translation_key": "Zum Abschluss deiner heutigen Aufgaben musst du noch die Tür- und Fensterstürze einbauen.",
 "type": &"dialogue"
 },
 "5": {
 "character": "Maurer",
 "character_replacements": Array[Dictionary]([]),
 "id": "5",
-"next_id": "7",
+"next_id": "6",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Dafür setzte die Stürze an die markierten Stellen in den Türen und Fenstern an.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Dafür setzte die Stürze an die markierten Stellen in den Türen und Fenstern an.",
+"type": &"dialogue"
+},
+"6": {
+"character": "Maurer",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "8",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Danach hol deine Kelle mit Mörtel und schmiere Mörtel an die Seiten der Stürz.",
@@ -53,14 +53,15 @@ lines = {
 "translation_key": "Danach hol deine Kelle mit Mörtel und schmiere Mörtel an die Seiten der Stürz.",
 "type": &"dialogue"
 },
-"7": {
-"id": "7",
+"8": {
+"id": "8",
 "is_snippet": false,
 "next_id": "end",
 "type": &"goto"
 }
 }
 raw_text = "~ this_is_a_node_title
+
 
 Maurer: Zum Abschluss deiner heutigen Aufgaben musst du noch die Tür- und Fensterstürze einbauen.
 Maurer: Dafür setzte die Stürze an die markierten Stellen in den Türen und Fenstern an.

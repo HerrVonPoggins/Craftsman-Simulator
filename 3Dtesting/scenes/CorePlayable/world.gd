@@ -128,5 +128,6 @@ func _on_saw_camera_brick_cut_correct():
 	$Saw/BrickCut.queue_free()
 	Global.brick_sawed = true
 	Global.brick_saw_cam = false
+	$Props/Brick3.visible = true
 	Global.stay = false
 	$Player/CharacterBody3D/Neck/Camera3D.current = true

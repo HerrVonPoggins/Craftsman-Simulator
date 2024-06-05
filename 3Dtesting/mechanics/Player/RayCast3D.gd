@@ -35,13 +35,13 @@ func _process(delta):
 		if obj == null:
 			var collider = get_collider()
 			if collider != null:
-				if collider.is_in_group("npc"):
+				if collider.is_in_group("npc") and Global.dialogue_open == false:
 					Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/bauleiter_maurer.dialogue"))
-				if collider.is_in_group("maurer"):
+				if collider.is_in_group("maurer") and Global.dialogue_open == false:
 					Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_text.dialogue"))
-				if collider.is_in_group("cement_mixer"):
+				if collider.is_in_group("cement_mixer") and Global.dialogue_open == false:
 					Music._play_mixer()
 					player.emit_signal("start_mixer")
 					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_2.dialogue"))

@@ -2,7 +2,7 @@
 
 Bauleiter: Super!
 Bauleiter: Die Arbeitskleidung passt zu dir.
-Bauleiter: Als nächstes solltest du mit dem Maurer Bär sprechen.
+Bauleiter: Komm als nächstes zurück zu mir.
 set Global.dialogue_count = 2
 
 => END

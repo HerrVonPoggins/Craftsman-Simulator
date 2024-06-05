@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_e7n18"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_818yp"]
 
 [resource]
-script = ExtResource("1_e7n18")
+script = ExtResource("1_818yp")
 using_states = PackedStringArray()
 titles = {
 "this_is_a_node_title": "3"
@@ -48,9 +48,9 @@ lines = {
 "next_id": "6",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Als nächstes solltest du mit dem Maurer Bär sprechen.",
+"text": "Komm als nächstes zurück zu mir.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Als nächstes solltest du mit dem Maurer Bär sprechen.",
+"translation_key": "Komm als nächstes zurück zu mir.",
 "type": &"dialogue"
 },
 "6": {
@@ -87,7 +87,7 @@ raw_text = "~ this_is_a_node_title
 
 Bauleiter: Super!
 Bauleiter: Die Arbeitskleidung passt zu dir.
-Bauleiter: Als nächstes solltest du mit dem Maurer Bär sprechen.
+Bauleiter: Komm als nächstes zurück zu mir.
 set Global.dialogue_count = 2
 
 => END"

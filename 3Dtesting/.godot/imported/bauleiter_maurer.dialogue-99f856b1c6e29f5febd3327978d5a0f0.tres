@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_3tyl5"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_7wea4"]
 
 [resource]
-script = ExtResource("1_3tyl5")
+script = ExtResource("1_7wea4")
 using_states = PackedStringArray()
 titles = {
 "this_is_a_node_title": "2"
@@ -23,11 +23,11 @@ lines = {
 "id": "10",
 "next_id": "11",
 "notes": "",
-"parent_id": "2",
+"parent_id": "4",
 "tags": PackedStringArray(),
-"text": "Eine Baustelle kann sehr gefährlich sein, aber mit der richtigen Arbeitskleidung und Vorsichtsmaßnahmen können wir Unfälle vermeiden.",
+"text": "Aber vergiss nicht, auf deine Sicherheit zu achten.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Eine Baustelle kann sehr gefährlich sein, aber mit der richtigen Arbeitskleidung und Vorsichtsmaßnahmen können wir Unfälle vermeiden.",
+"translation_key": "Aber vergiss nicht, auf deine Sicherheit zu achten.",
 "type": &"dialogue"
 },
 "11": {
@@ -36,51 +36,65 @@ lines = {
 "id": "11",
 "next_id": "12",
 "notes": "",
-"parent_id": "2",
+"parent_id": "4",
 "tags": PackedStringArray(),
-"text": "Du solltest jetzt deine passende Arbeitskleidung finden.",
+"text": "Eine Baustelle kann sehr gefährlich sein, aber mit der richtigen Arbeitskleidung und Vorsichtsmaßnahmen können wir Unfälle vermeiden.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Du solltest jetzt deine passende Arbeitskleidung finden.",
+"translation_key": "Eine Baustelle kann sehr gefährlich sein, aber mit der richtigen Arbeitskleidung und Vorsichtsmaßnahmen können wir Unfälle vermeiden.",
 "type": &"dialogue"
 },
 "12": {
 "character": "Bauleiter",
 "character_replacements": Array[Dictionary]([]),
 "id": "12",
-"next_id": "14",
+"next_id": "13",
 "notes": "",
-"parent_id": "2",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Du solltest jetzt deine passende Arbeitskleidung finden.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Du solltest jetzt deine passende Arbeitskleidung finden.",
+"type": &"dialogue"
+},
+"13": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "15",
+"notes": "",
+"parent_id": "4",
 "tags": PackedStringArray(),
 "text": "Ziehe sie an und komm bitte danach wieder zu mir.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Ziehe sie an und komm bitte danach wieder zu mir.",
 "type": &"dialogue"
 },
-"14": {
-"character": "Bauleiter",
-"character_replacements": Array[Dictionary]([]),
-"id": "14",
-"next_id": "15",
-"notes": "",
-"parent_id": "2",
-"tags": PackedStringArray(),
-"text": "Gut gemacht!",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Gut gemacht!",
-"type": &"dialogue"
-},
 "15": {
-"character": "Bauleiter",
-"character_replacements": Array[Dictionary]([]),
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "tutorial_finished"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "true"
+}, {
+"type": "colon"
+}])
+},
 "id": "15",
+"next_conditional_id": "20",
 "next_id": "16",
-"notes": "",
+"next_id_after": "20",
 "parent_id": "2",
-"tags": PackedStringArray(),
-"text": "Bevor es aber losgeht, muss ich dir noch das Baustellen-Tagebuch geben, das du jetzt im Menü (ESC) findest",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Bevor es aber losgeht, muss ich dir noch das Baustellen-Tagebuch geben, das du jetzt im Menü (ESC) findest",
-"type": &"dialogue"
+"type": &"condition"
 },
 "16": {
 "character": "Bauleiter",
@@ -88,11 +102,11 @@ lines = {
 "id": "16",
 "next_id": "17",
 "notes": "",
-"parent_id": "2",
+"parent_id": "15",
 "tags": PackedStringArray(),
-"text": "Dort könntest du alle Ausbildungsberufe nochmal genauer nachlesen und dich besser informieren (es gibt ein Quiz zum Schluss).",
+"text": "Gut gemacht!",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Dort könntest du alle Ausbildungsberufe nochmal genauer nachlesen und dich besser informieren (es gibt ein Quiz zum Schluss).",
+"translation_key": "Gut gemacht!",
 "type": &"dialogue"
 },
 "17": {
@@ -101,60 +115,38 @@ lines = {
 "id": "17",
 "next_id": "18",
 "notes": "",
-"parent_id": "2",
+"parent_id": "15",
+"tags": PackedStringArray(),
+"text": "Bevor es aber losgeht, muss ich dir noch das Baustellen-Tagebuch geben, das du jetzt im Menü (ESC) findest",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Bevor es aber losgeht, muss ich dir noch das Baustellen-Tagebuch geben, das du jetzt im Menü (ESC) findest",
+"type": &"dialogue"
+},
+"18": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "19",
+"notes": "",
+"parent_id": "15",
+"tags": PackedStringArray(),
+"text": "Dort könntest du alle Ausbildungsberufe nochmal genauer nachlesen und dich besser informieren (es gibt ein Quiz zum Schluss).",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Dort könntest du alle Ausbildungsberufe nochmal genauer nachlesen und dich besser informieren (es gibt ein Quiz zum Schluss).",
+"type": &"dialogue"
+},
+"19": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "19",
+"next_id": "20",
+"notes": "",
+"parent_id": "15",
 "tags": PackedStringArray(),
 "text": "Und jetzt viel Spaß!",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Und jetzt viel Spaß!",
 "type": &"dialogue"
-},
-"18": {
-"id": "18",
-"mutation": {
-"expression": Array[Dictionary]([{
-"type": "variable",
-"value": "Global"
-}, {
-"type": "dot"
-}, {
-"type": "variable",
-"value": "dialogue_open"
-}, {
-"type": "assignment",
-"value": "="
-}, {
-"type": "variable",
-"value": "false"
-}]),
-"is_blocking": true
-},
-"next_id": "19",
-"parent_id": "2",
-"type": &"mutation"
-},
-"19": {
-"id": "19",
-"mutation": {
-"expression": Array[Dictionary]([{
-"type": "variable",
-"value": "Global"
-}, {
-"type": "dot"
-}, {
-"type": "variable",
-"value": "dialogue_count"
-}, {
-"type": "assignment",
-"value": "="
-}, {
-"type": "number",
-"value": 1
-}]),
-"is_blocking": true
-},
-"next_id": "21",
-"parent_id": "2",
-"type": &"mutation"
 },
 "2": {
 "condition": {
@@ -173,33 +165,40 @@ lines = {
 "type": "number",
 "value": 1
 }, {
-"type": "and_or",
-"value": "and"
-}, {
+"type": "colon"
+}])
+},
+"id": "2",
+"next_conditional_id": "23",
+"next_id": "3",
+"next_id_after": "23",
+"type": &"condition"
+},
+"20": {
+"id": "20",
+"mutation": {
+"expression": Array[Dictionary]([{
 "type": "variable",
 "value": "Global"
 }, {
 "type": "dot"
 }, {
 "type": "variable",
-"value": "dialogue_count"
+"value": "dialogue_open"
 }, {
-"type": "comparison",
-"value": "=="
+"type": "assignment",
+"value": "="
 }, {
-"type": "number",
-"value": 0
-}, {
-"type": "colon"
-}])
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
 },
-"id": "2",
-"next_conditional_id": "21",
-"next_id": "3",
-"next_id_after": "21",
-"type": &"condition"
+"next_id": "23",
+"parent_id": "2",
+"type": &"mutation"
 },
-"21": {
+"23": {
 "condition": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -219,14 +218,14 @@ lines = {
 "type": "colon"
 }])
 },
-"id": "21",
-"next_conditional_id": "38",
-"next_id": "22",
-"next_id_after": "38",
+"id": "23",
+"next_conditional_id": "28",
+"next_id": "24",
+"next_id_after": "28",
 "type": &"condition"
 },
-"22": {
-"id": "22",
+"24": {
+"id": "24",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -245,100 +244,39 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "23",
-"parent_id": "21",
+"next_id": "26",
+"parent_id": "23",
 "type": &"mutation"
 },
-"23": {
-"character": "Bauleiter",
-"character_replacements": Array[Dictionary]([]),
-"id": "23",
-"next_id": "24",
-"notes": "",
-"parent_id": "21",
-"tags": PackedStringArray(),
-"text": "Wilkommen auf der Baustelle!",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Wilkommen auf der Baustelle!",
-"type": &"dialogue"
-},
-"24": {
-"character": "Bauleiter",
-"character_replacements": Array[Dictionary]([]),
-"id": "24",
-"next_id": "25",
-"notes": "",
-"parent_id": "21",
-"tags": PackedStringArray(),
-"text": "Deine erste Aufgabe wird es sein eine Ständerwand zu bauen.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Deine erste Aufgabe wird es sein eine Ständerwand zu bauen.",
-"type": &"dialogue"
-},
-"25": {
-"character": "Bauleiter",
-"character_replacements": Array[Dictionary]([]),
-"id": "25",
-"next_id": "26",
-"notes": "",
-"parent_id": "21",
-"tags": PackedStringArray(),
-"text": "Du musst die Profile mit Dichtband bekleben.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Du musst die Profile mit Dichtband bekleben.",
-"type": &"dialogue"
-},
 "26": {
-"character": "Bauleiter",
-"character_replacements": Array[Dictionary]([]),
 "id": "26",
-"next_id": "27",
-"notes": "",
-"parent_id": "21",
-"tags": PackedStringArray(),
-"text": "Danach bringst du sie an Boden/Decke und den Wänden an.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Danach bringst du sie an Boden/Decke und den Wänden an.",
-"type": &"dialogue"
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
 },
-"27": {
-"character": "Bauleiter",
-"character_replacements": Array[Dictionary]([]),
-"id": "27",
 "next_id": "28",
-"notes": "",
-"parent_id": "21",
-"tags": PackedStringArray(),
-"text": "als nächstes setzt du in den markierten slots die zwischen Profile.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "als nächstes setzt du in den markierten slots die zwischen Profile.",
-"type": &"dialogue"
+"parent_id": "23",
+"type": &"mutation"
 },
 "28": {
-"character": "Bauleiter",
-"character_replacements": Array[Dictionary]([]),
 "id": "28",
-"next_id": "29",
-"notes": "",
-"parent_id": "21",
-"tags": PackedStringArray(),
-"text": "dann kannst du eine Seite mit Gipskartonplatten beplanken.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "dann kannst du eine Seite mit Gipskartonplatten beplanken.",
-"type": &"dialogue"
-},
-"29": {
-"character": "Bauleiter",
-"character_replacements": Array[Dictionary]([]),
-"id": "29",
-"next_id": "30",
-"notes": "",
-"parent_id": "21",
-"tags": PackedStringArray(),
-"text": "nun wird das Dämmmaterial eingelegt um dann die andere Seite zu verplanken.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "nun wird das Dämmmaterial eingelegt um dann die andere Seite zu verplanken.",
-"type": &"dialogue"
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
 },
 "3": {
 "id": "3",
@@ -364,87 +302,8 @@ lines = {
 "parent_id": "2",
 "type": &"mutation"
 },
-"30": {
-"character": "Bauleiter",
-"character_replacements": Array[Dictionary]([]),
-"id": "30",
-"next_id": "31",
-"notes": "",
-"parent_id": "21",
-"tags": PackedStringArray(),
-"text": "jetzt hast du den größten Teil hinter dir",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "jetzt hast du den größten Teil hinter dir",
-"type": &"dialogue"
-},
-"31": {
-"character": "Bauleiter",
-"character_replacements": Array[Dictionary]([]),
-"id": "31",
-"next_id": "32",
-"notes": "",
-"parent_id": "21",
-"tags": PackedStringArray(),
-"text": "verspachtle die Fugen.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "verspachtle die Fugen.",
-"type": &"dialogue"
-},
-"32": {
-"character": "Bauleiter",
-"character_replacements": Array[Dictionary]([]),
-"id": "32",
-"next_id": "33",
-"notes": "",
-"parent_id": "21",
-"tags": PackedStringArray(),
-"text": "dann verspachtle den Rest der Wand.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "dann verspachtle den Rest der Wand.",
-"type": &"dialogue"
-},
-"33": {
-"character": "Bauleiter",
-"character_replacements": Array[Dictionary]([]),
-"id": "33",
-"next_id": "34",
-"notes": "",
-"parent_id": "21",
-"tags": PackedStringArray(),
-"text": "Sprich noch vorher mit dem Stuckateur er gibt dir eine Zusammenfassung über seinen Beruf.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Sprich noch vorher mit dem Stuckateur er gibt dir eine Zusammenfassung über seinen Beruf.",
-"type": &"dialogue"
-},
-"34": {
-"character": "Bauleiter",
-"character_replacements": Array[Dictionary]([]),
-"id": "34",
-"next_id": "35",
-"notes": "",
-"parent_id": "21",
-"tags": PackedStringArray(),
-"text": "Falls du genaueres wissen willst ließ in deinem Handbuch (ESC) nach.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Falls du genaueres wissen willst ließ in deinem Handbuch (ESC) nach.",
-"type": &"dialogue"
-},
-"35": {
-"character": "Bauleiter",
-"character_replacements": Array[Dictionary]([]),
-"id": "35",
-"next_id": "36",
-"notes": "",
-"parent_id": "21",
-"tags": PackedStringArray(),
-"text": "Viel Glück.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Viel Glück.",
-"type": &"dialogue"
-},
-"36": {
-"id": "36",
-"mutation": {
+"4": {
+"condition": {
 "expression": Array[Dictionary]([{
 "type": "variable",
 "value": "Global"
@@ -452,38 +311,23 @@ lines = {
 "type": "dot"
 }, {
 "type": "variable",
-"value": "dialogue_open"
+"value": "tutorial_finished"
 }, {
-"type": "assignment",
-"value": "="
+"type": "comparison",
+"value": "=="
 }, {
 "type": "variable",
 "value": "false"
-}]),
-"is_blocking": true
+}, {
+"type": "colon"
+}])
 },
-"next_id": "38",
-"parent_id": "21",
-"type": &"mutation"
-},
-"38": {
-"id": "38",
-"is_snippet": false,
-"next_id": "end",
-"type": &"goto"
-},
-"4": {
-"character": "Bauleiter",
-"character_replacements": Array[Dictionary]([]),
 "id": "4",
+"next_conditional_id": "15",
 "next_id": "5",
-"notes": "",
+"next_id_after": "15",
 "parent_id": "2",
-"tags": PackedStringArray(),
-"text": "Ah, da bist du ja, unser neuer Praktikant!",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Ah, da bist du ja, unser neuer Praktikant!",
-"type": &"dialogue"
+"type": &"condition"
 },
 "5": {
 "character": "Bauleiter",
@@ -491,11 +335,11 @@ lines = {
 "id": "5",
 "next_id": "6",
 "notes": "",
-"parent_id": "2",
+"parent_id": "4",
 "tags": PackedStringArray(),
-"text": "Herzlich willkommen auf der Baustelle von \"Craftsman Simulator\".",
+"text": "Ah, da bist du ja, unser neuer Praktikant!",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Herzlich willkommen auf der Baustelle von \"Craftsman Simulator\".",
+"translation_key": "Ah, da bist du ja, unser neuer Praktikant!",
 "type": &"dialogue"
 },
 "6": {
@@ -504,75 +348,65 @@ lines = {
 "id": "6",
 "next_id": "7",
 "notes": "",
-"parent_id": "2",
+"parent_id": "4",
 "tags": PackedStringArray(),
-"text": "Ich bin der Bauleiter, der Zukunftsfuchs, aber du kannst mich einfach Fuchs nennen.",
+"text": "Herzlich willkommen auf der Baustelle von \"Craftsman Simulator\".",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Ich bin der Bauleiter, der Zukunftsfuchs, aber du kannst mich einfach Fuchs nennen.",
+"translation_key": "Herzlich willkommen auf der Baustelle von \"Craftsman Simulator\".",
 "type": &"dialogue"
 },
 "7": {
 "character": "Bauleiter",
 "character_replacements": Array[Dictionary]([]),
 "id": "7",
-"next_id": "9",
+"next_id": "8",
 "notes": "",
-"parent_id": "2",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Ich bin der Bauleiter, der Zukunftsfuchs, aber du kannst mich einfach Fuchs nennen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ich bin der Bauleiter, der Zukunftsfuchs, aber du kannst mich einfach Fuchs nennen.",
+"type": &"dialogue"
+},
+"8": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "10",
+"notes": "",
+"parent_id": "4",
 "tags": PackedStringArray(),
 "text": "Du wirst die nächsten Tage spannende Ausbildungsberufe auf der Baustelle entdecken und beim Hausbau mitwirken.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Du wirst die nächsten Tage spannende Ausbildungsberufe auf der Baustelle entdecken und beim Hausbau mitwirken.",
 "type": &"dialogue"
-},
-"9": {
-"character": "Bauleiter",
-"character_replacements": Array[Dictionary]([]),
-"id": "9",
-"next_id": "10",
-"notes": "",
-"parent_id": "2",
-"tags": PackedStringArray(),
-"text": "Aber vergiss nicht, auf deine Sicherheit zu achten.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Aber vergiss nicht, auf deine Sicherheit zu achten.",
-"type": &"dialogue"
 }
 }
 raw_text = "~ this_is_a_node_title
-if Global.current_scene == 1 and Global.dialogue_count == 0:
+if Global.current_scene == 1:
 	set Global.dialogue_open = true
-	Bauleiter: Ah, da bist du ja, unser neuer Praktikant!
-	Bauleiter: Herzlich willkommen auf der Baustelle von \"Craftsman Simulator\".
-	Bauleiter: Ich bin der Bauleiter, der Zukunftsfuchs, aber du kannst mich einfach Fuchs nennen.
-	Bauleiter: Du wirst die nächsten Tage spannende Ausbildungsberufe auf der Baustelle entdecken und beim Hausbau mitwirken.
+	if Global.tutorial_finished == false:
+		Bauleiter: Ah, da bist du ja, unser neuer Praktikant!
+		Bauleiter: Herzlich willkommen auf der Baustelle von \"Craftsman Simulator\".
+		Bauleiter: Ich bin der Bauleiter, der Zukunftsfuchs, aber du kannst mich einfach Fuchs nennen.
+		Bauleiter: Du wirst die nächsten Tage spannende Ausbildungsberufe auf der Baustelle entdecken und beim Hausbau mitwirken.
+		
+		Bauleiter: Aber vergiss nicht, auf deine Sicherheit zu achten.
+		Bauleiter: Eine Baustelle kann sehr gefährlich sein, aber mit der richtigen Arbeitskleidung und Vorsichtsmaßnahmen können wir Unfälle vermeiden.
+		Bauleiter: Du solltest jetzt deine passende Arbeitskleidung finden.
+		Bauleiter: Ziehe sie an und komm bitte danach wieder zu mir.
 	
-	Bauleiter: Aber vergiss nicht, auf deine Sicherheit zu achten.
-	Bauleiter: Eine Baustelle kann sehr gefährlich sein, aber mit der richtigen Arbeitskleidung und Vorsichtsmaßnahmen können wir Unfälle vermeiden.
-	Bauleiter: Du solltest jetzt deine passende Arbeitskleidung finden.
-	Bauleiter: Ziehe sie an und komm bitte danach wieder zu mir.
-	
-	Bauleiter: Gut gemacht! 
-	Bauleiter: Bevor es aber losgeht, muss ich dir noch das Baustellen-Tagebuch geben, das du jetzt im Menü (ESC) findest
-	Bauleiter: Dort könntest du alle Ausbildungsberufe nochmal genauer nachlesen und dich besser informieren (es gibt ein Quiz zum Schluss).
-	Bauleiter: Und jetzt viel Spaß!
+	if Global.tutorial_finished == true:
+		Bauleiter: Gut gemacht! 
+		Bauleiter: Bevor es aber losgeht, muss ich dir noch das Baustellen-Tagebuch geben, das du jetzt im Menü (ESC) findest
+		Bauleiter: Dort könntest du alle Ausbildungsberufe nochmal genauer nachlesen und dich besser informieren (es gibt ein Quiz zum Schluss).
+		Bauleiter: Und jetzt viel Spaß!
 	set Global.dialogue_open = false
-	set Global.dialogue_count = 1
+
 
 if Global.current_scene == 2:
 	set Global.dialogue_open = true
-	Bauleiter: Wilkommen auf der Baustelle!
-	Bauleiter: Deine erste Aufgabe wird es sein eine Ständerwand zu bauen.
-	Bauleiter: Du musst die Profile mit Dichtband bekleben.
-	Bauleiter: Danach bringst du sie an Boden/Decke und den Wänden an.
-	Bauleiter: als nächstes setzt du in den markierten slots die zwischen Profile.
-	Bauleiter: dann kannst du eine Seite mit Gipskartonplatten beplanken.
-	Bauleiter: nun wird das Dämmmaterial eingelegt um dann die andere Seite zu verplanken.
-	Bauleiter: jetzt hast du den größten Teil hinter dir
-	Bauleiter: verspachtle die Fugen.
-	Bauleiter: dann verspachtle den Rest der Wand. 
-	Bauleiter: Sprich noch vorher mit dem Stuckateur er gibt dir eine Zusammenfassung über seinen Beruf.
-	Bauleiter: Falls du genaueres wissen willst ließ in deinem Handbuch (ESC) nach.
-	Bauleiter: Viel Glück.
+
 	set Global.dialogue_open = false
 
 => END"
