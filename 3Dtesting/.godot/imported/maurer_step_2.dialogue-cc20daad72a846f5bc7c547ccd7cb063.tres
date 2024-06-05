@@ -6,16 +6,48 @@
 script = ExtResource("1_s6vs2")
 using_states = PackedStringArray()
 titles = {
-"this_is_a_node_title": "3"
+"this_is_a_node_title": "2"
 }
 character_names = PackedStringArray("Maurer")
-first_title = "3"
+first_title = "2"
 lines = {
 "1": {
 "id": "1",
-"next_id": "3",
+"next_id": "2",
 "text": "this_is_a_node_title",
 "type": &"title"
+},
+"10": {
+"id": "10",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"2": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_count"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "number",
+"value": 3
+}, {
+"type": "colon"
+}])
+},
+"id": "2",
+"next_conditional_id": "7",
+"next_id": "3",
+"next_id_after": "7",
+"type": &"condition"
 },
 "3": {
 "character": "Maurer",
@@ -23,6 +55,7 @@ lines = {
 "id": "3",
 "next_id": "4",
 "notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
 "text": "Jetzt hast du den Mörtel fertig gemischt.",
 "text_replacements": Array[Dictionary]([]),
@@ -33,25 +66,87 @@ lines = {
 "character": "Maurer",
 "character_replacements": Array[Dictionary]([]),
 "id": "4",
-"next_id": "6",
+"next_id": "5",
 "notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
 "text": "Nun musst du die Richtschnur setzen also schnapp dir die Keile und bringe sie and den markierten stellen an.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Nun musst du die Richtschnur setzen also schnapp dir die Keile und bringe sie and den markierten stellen an.",
 "type": &"dialogue"
 },
-"6": {
-"id": "6",
-"is_snippet": false,
-"next_id": "end",
-"type": &"goto"
+"5": {
+"id": "5",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_count"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 4
+}]),
+"is_blocking": true
+},
+"next_id": "7",
+"parent_id": "2",
+"type": &"mutation"
+},
+"7": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_replay"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "number",
+"value": 1
+}, {
+"type": "colon"
+}])
+},
+"id": "7",
+"next_conditional_id": "10",
+"next_id": "8",
+"next_id_after": "10",
+"type": &"condition"
+},
+"8": {
+"character": "Maurer",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "10",
+"notes": "",
+"parent_id": "7",
+"tags": PackedStringArray(),
+"text": "Das Verhältnis Stimmt nicht. Hast Du etwas vergessen?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Das Verhältnis Stimmt nicht. Hast Du etwas vergessen?",
+"type": &"dialogue"
 }
 }
 raw_text = "~ this_is_a_node_title
-
-Maurer: Jetzt hast du den Mörtel fertig gemischt.
-Maurer: Nun musst du die Richtschnur setzen also schnapp dir die Keile und bringe sie and den markierten stellen an.
+if Global.dialogue_count == 3:
+	Maurer: Jetzt hast du den Mörtel fertig gemischt.
+	Maurer: Nun musst du die Richtschnur setzen also schnapp dir die Keile und bringe sie and den markierten stellen an.
+	set Global.dialogue_count = 4
+	
+if Global.dialogue_replay == 1:
+	Maurer: Das Verhältnis Stimmt nicht. Hast Du etwas vergessen?
 
 => END"
 metadata/dialogue_manager_version = "2.38.0"

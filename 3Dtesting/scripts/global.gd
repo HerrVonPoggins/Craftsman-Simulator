@@ -29,6 +29,7 @@ var ground_floor = null
 var is_walking = false
 var walk_sound_started = false
 var dialogue_count = 0
+var dialogue_replay = 0
 
 
 

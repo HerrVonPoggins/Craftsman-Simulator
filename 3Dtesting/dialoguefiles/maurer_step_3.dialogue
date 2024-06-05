@@ -1,13 +1,13 @@
 ~ this_is_a_node_title
-
-Maurer: Perfekt! durch die Richtschnur hast du nun eine Orientierungslinie um deine Ziegel richtig zu setzen.
-Maurer: Nun kommen wir zum Mauerbau.
-Maurer: Zuerst lege die Dämmplatten in die offenen Felder.
-Maurer: Als nächstes nimm deine Kelle und tauche sie in den Mörtel.
-Maurer: Jetzt kannst du an der markierten stelle mit der Kelle Mörtel auftragen. (streiche mit der Kelle durch)
-Maurer: Ziegel können nun auf den Mörtel gesetzt werden.
-Maurer: Aber pass auf eine Lücke ist kleiner, deshalb musst du einen Ziegel schneiden.
-Maurer: Im Nebenraum ist eine Säge und ein Ziegel vorbereitet. Bitte nimm den Ziegel und Scheide ihn richtig zu.
-Maurer: Wenn du die Reihe fertig gemacht hast musst du noch mit der Wasserwaage prüfen ob sie gerade ist. (lege die Wasserwaage auf die Mauerreihe)
-
+if Global.dialogue_count == 4:
+	Maurer: Perfekt! durch die Richtschnur hast du nun eine Orientierungslinie um deine Ziegel richtig zu setzen.
+	Maurer: Nun kommen wir zum Mauerbau.
+	Maurer: Zuerst lege die Dämmplatten in die offenen Felder.
+	Maurer: Als nächstes nimm deine Kelle und tauche sie in den Mörtel.
+	Maurer: Jetzt kannst du an der markierten stelle mit der Kelle Mörtel auftragen. (streiche mit der Kelle durch)
+	Maurer: Ziegel können nun auf den Mörtel gesetzt werden.
+	Maurer: Aber pass auf eine Lücke ist kleiner, deshalb musst du einen Ziegel schneiden.
+	Maurer: Im Nebenraum ist eine Säge und ein Ziegel vorbereitet. Bitte nimm den Ziegel und Scheide ihn richtig zu.
+	Maurer: Wenn du die Reihe fertig gemacht hast musst du noch mit der Wasserwaage prüfen ob sie gerade ist. (lege die Wasserwaage auf die Mauerreihe)
+	set Global.dialogue_count = 5
 => END

@@ -81,6 +81,11 @@ func _on_player_start_mixer():
 		water = false
 		concrete = false
 		Global.concrete_mixed = true
+		Global.dialogue_count = 3
+		Global.dialogue_replay = null
+	else:
+		Global.dialogue_replay = 1
+		
 
 
 func _on_range_body_exited(body):

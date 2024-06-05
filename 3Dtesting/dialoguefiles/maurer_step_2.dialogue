@@ -1,6 +1,10 @@
 ~ this_is_a_node_title
-
-Maurer: Jetzt hast du den Mörtel fertig gemischt.
-Maurer: Nun musst du die Richtschnur setzen also schnapp dir die Keile und bringe sie and den markierten stellen an.
+if Global.dialogue_count == 3:
+	Maurer: Jetzt hast du den Mörtel fertig gemischt.
+	Maurer: Nun musst du die Richtschnur setzen also schnapp dir die Keile und bringe sie and den markierten stellen an.
+	set Global.dialogue_count = 4
+	
+if Global.dialogue_replay == 1:
+	Maurer: Das Verhältnis Stimmt nicht. Hast Du etwas vergessen?
 
 => END

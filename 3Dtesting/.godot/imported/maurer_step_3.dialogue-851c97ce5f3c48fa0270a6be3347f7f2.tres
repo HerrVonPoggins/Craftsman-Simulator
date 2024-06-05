@@ -6,14 +6,14 @@
 script = ExtResource("1_si5s0")
 using_states = PackedStringArray()
 titles = {
-"this_is_a_node_title": "3"
+"this_is_a_node_title": "2"
 }
 character_names = PackedStringArray("Maurer")
-first_title = "3"
+first_title = "2"
 lines = {
 "1": {
 "id": "1",
-"next_id": "3",
+"next_id": "2",
 "text": "this_is_a_node_title",
 "type": &"title"
 },
@@ -23,6 +23,7 @@ lines = {
 "id": "10",
 "next_id": "11",
 "notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
 "text": "Im Nebenraum ist eine Säge und ein Ziegel vorbereitet. Bitte nimm den Ziegel und Scheide ihn richtig zu.",
 "text_replacements": Array[Dictionary]([]),
@@ -33,13 +34,38 @@ lines = {
 "character": "Maurer",
 "character_replacements": Array[Dictionary]([]),
 "id": "11",
-"next_id": "13",
+"next_id": "12",
 "notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
 "text": "Wenn du die Reihe fertig gemacht hast musst du noch mit der Wasserwaage prüfen ob sie gerade ist. (lege die Wasserwaage auf die Mauerreihe)",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Wenn du die Reihe fertig gemacht hast musst du noch mit der Wasserwaage prüfen ob sie gerade ist. (lege die Wasserwaage auf die Mauerreihe)",
 "type": &"dialogue"
+},
+"12": {
+"id": "12",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_count"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 5
+}]),
+"is_blocking": true
+},
+"next_id": "13",
+"parent_id": "2",
+"type": &"mutation"
 },
 "13": {
 "id": "13",
@@ -47,12 +73,39 @@ lines = {
 "next_id": "end",
 "type": &"goto"
 },
+"2": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_count"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "number",
+"value": 4
+}, {
+"type": "colon"
+}])
+},
+"id": "2",
+"next_conditional_id": "13",
+"next_id": "3",
+"next_id_after": "13",
+"type": &"condition"
+},
 "3": {
 "character": "Maurer",
 "character_replacements": Array[Dictionary]([]),
 "id": "3",
 "next_id": "4",
 "notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
 "text": "Perfekt! durch die Richtschnur hast du nun eine Orientierungslinie um deine Ziegel richtig zu setzen.",
 "text_replacements": Array[Dictionary]([]),
@@ -65,6 +118,7 @@ lines = {
 "id": "4",
 "next_id": "5",
 "notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
 "text": "Nun kommen wir zum Mauerbau.",
 "text_replacements": Array[Dictionary]([]),
@@ -77,6 +131,7 @@ lines = {
 "id": "5",
 "next_id": "6",
 "notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
 "text": "Zuerst lege die Dämmplatten in die offenen Felder.",
 "text_replacements": Array[Dictionary]([]),
@@ -89,6 +144,7 @@ lines = {
 "id": "6",
 "next_id": "7",
 "notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
 "text": "Als nächstes nimm deine Kelle und tauche sie in den Mörtel.",
 "text_replacements": Array[Dictionary]([]),
@@ -101,6 +157,7 @@ lines = {
 "id": "7",
 "next_id": "8",
 "notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
 "text": "Jetzt kannst du an der markierten stelle mit der Kelle Mörtel auftragen. (streiche mit der Kelle durch)",
 "text_replacements": Array[Dictionary]([]),
@@ -113,6 +170,7 @@ lines = {
 "id": "8",
 "next_id": "9",
 "notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
 "text": "Ziegel können nun auf den Mörtel gesetzt werden.",
 "text_replacements": Array[Dictionary]([]),
@@ -125,6 +183,7 @@ lines = {
 "id": "9",
 "next_id": "10",
 "notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
 "text": "Aber pass auf eine Lücke ist kleiner, deshalb musst du einen Ziegel schneiden.",
 "text_replacements": Array[Dictionary]([]),
@@ -133,16 +192,16 @@ lines = {
 }
 }
 raw_text = "~ this_is_a_node_title
-
-Maurer: Perfekt! durch die Richtschnur hast du nun eine Orientierungslinie um deine Ziegel richtig zu setzen.
-Maurer: Nun kommen wir zum Mauerbau.
-Maurer: Zuerst lege die Dämmplatten in die offenen Felder.
-Maurer: Als nächstes nimm deine Kelle und tauche sie in den Mörtel.
-Maurer: Jetzt kannst du an der markierten stelle mit der Kelle Mörtel auftragen. (streiche mit der Kelle durch)
-Maurer: Ziegel können nun auf den Mörtel gesetzt werden.
-Maurer: Aber pass auf eine Lücke ist kleiner, deshalb musst du einen Ziegel schneiden.
-Maurer: Im Nebenraum ist eine Säge und ein Ziegel vorbereitet. Bitte nimm den Ziegel und Scheide ihn richtig zu.
-Maurer: Wenn du die Reihe fertig gemacht hast musst du noch mit der Wasserwaage prüfen ob sie gerade ist. (lege die Wasserwaage auf die Mauerreihe)
-
+if Global.dialogue_count == 4:
+	Maurer: Perfekt! durch die Richtschnur hast du nun eine Orientierungslinie um deine Ziegel richtig zu setzen.
+	Maurer: Nun kommen wir zum Mauerbau.
+	Maurer: Zuerst lege die Dämmplatten in die offenen Felder.
+	Maurer: Als nächstes nimm deine Kelle und tauche sie in den Mörtel.
+	Maurer: Jetzt kannst du an der markierten stelle mit der Kelle Mörtel auftragen. (streiche mit der Kelle durch)
+	Maurer: Ziegel können nun auf den Mörtel gesetzt werden.
+	Maurer: Aber pass auf eine Lücke ist kleiner, deshalb musst du einen Ziegel schneiden.
+	Maurer: Im Nebenraum ist eine Säge und ein Ziegel vorbereitet. Bitte nimm den Ziegel und Scheide ihn richtig zu.
+	Maurer: Wenn du die Reihe fertig gemacht hast musst du noch mit der Wasserwaage prüfen ob sie gerade ist. (lege die Wasserwaage auf die Mauerreihe)
+	set Global.dialogue_count = 5
 => END"
 metadata/dialogue_manager_version = "2.38.0"
