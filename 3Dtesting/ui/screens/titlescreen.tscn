@@ -1,32 +1,17 @@
-[gd_scene load_steps=13 format=3 uid="uid://ejeh6fcxpdcs"]
+[gd_scene load_steps=17 format=3 uid="uid://ejeh6fcxpdcs"]
 
 [ext_resource type="Script" path="res://ui/screens/titlescreen.gd" id="1_erga7"]
 [ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://UI/player_ui/transition.tscn" id="2_f7fqr"]
-[ext_resource type="Texture2D" uid="uid://dr813mjfqn5n4" path="res://assets/textures/warning_sample.jpg" id="2_ltah8"]
-[ext_resource type="StyleBox" uid="uid://c8y6ncw8xv1vl" path="res://assets/textures/button texture.tres" id="3_dcg8v"]
-[ext_resource type="FontFile" uid="uid://ccolb6uftch63" path="res://assets/fonts/AldotheApache.ttf" id="3_g4wl5"]
+[ext_resource type="Texture2D" uid="uid://d1xtlxkryrubw" path="res://assets/textures/Title_Background.png" id="2_u2qpo"]
+[ext_resource type="Texture2D" uid="uid://ywgvwp4p6ttr" path="res://assets/textures/Title_Start.png" id="5_h843a"]
+[ext_resource type="Texture2D" uid="uid://dt6c17fnbgluf" path="res://assets/textures/CraftsmanSimulator_Logo.png" id="6_ifxim"]
+[ext_resource type="Texture2D" uid="uid://g7cnuna6ifpl" path="res://assets/textures/Title_Quit.png" id="7_ehyvl"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vp2bl"]
-texture = ExtResource("2_ltah8")
-modulate_color = Color(0.0784314, 0.0784314, 0.0784314, 0.756863)
+texture = ExtResource("2_u2qpo")
 
 [sub_resource type="Theme" id="Theme_o2eg2"]
 Panel/styles/panel = SubResource("StyleBoxTexture_vp2bl")
-
-[sub_resource type="LabelSettings" id="LabelSettings_137km"]
-font = ExtResource("3_g4wl5")
-font_size = 180
-outline_size = 100
-outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="Theme" id="Theme_0eiux"]
-Button/colors/font_color = Color(0, 0, 0, 1)
-Button/colors/font_hover_color = Color(1, 0.760784, 0.254902, 1)
-Button/colors/font_outline_color = Color(1, 0.760784, 0.254902, 1)
-Button/constants/outline_size = 41
-Button/font_sizes/font_size = 100
-Button/fonts/font = ExtResource("3_g4wl5")
-Button/styles/normal = ExtResource("3_dcg8v")
 
 [sub_resource type="Animation" id="Animation_axmk6"]
 length = 0.001
@@ -41,6 +26,42 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CraftsmanSimulatorLogo:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.896679, 0.896679)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ButtonStart:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ButtonQuit:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_23qvj"]
@@ -59,9 +80,91 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_55qsn"]
+resource_name = "Logo"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CraftsmanSimulatorLogo:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.896679, 0.896679), Vector2(1, 1), Vector2(0.896679, 0.896679)]
+}
+
+[sub_resource type="Animation" id="Animation_74amg"]
+resource_name = "Start_quit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ButtonStart:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.3, 1.3), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3k7w4"]
+resource_name = "Start_hover"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ButtonStart:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.3, 1.3)]
+}
+
+[sub_resource type="Animation" id="Animation_o3qgk"]
+resource_name = "Quit_hover"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ButtonQuit:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.3, 1.3)]
+}
+
+[sub_resource type="Animation" id="Animation_4rhgq"]
+resource_name = "Quit_exit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ButtonQuit:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.3, 1.3), Vector2(1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_byatd"]
 _data = {
+"Logo": SubResource("Animation_55qsn"),
+"Quit_exit": SubResource("Animation_4rhgq"),
+"Quit_hover": SubResource("Animation_o3qgk"),
 "RESET": SubResource("Animation_axmk6"),
+"Start_hover": SubResource("Animation_3k7w4"),
+"Start_quit": SubResource("Animation_74amg"),
 "fade_in": SubResource("Animation_23qvj")
 }
 
@@ -69,58 +172,19 @@ _data = {
 script = ExtResource("1_erga7")
 
 [node name="Panel" type="Panel" parent="."]
-offset_right = 1920.0
-offset_bottom = 1080.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -92.0
+offset_top = -60.0
+offset_right = 2081.0
+offset_bottom = 1146.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 theme = SubResource("Theme_o2eg2")
-
-[node name="Label" type="Label" parent="."]
-offset_left = 950.0
-offset_top = 66.0
-offset_right = 1918.0
-offset_bottom = 386.0
-text = "CRAFTSMAN
-SIMULATOR"
-label_settings = SubResource("LabelSettings_137km")
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="ButtonStart" type="Button" parent="."]
-process_mode = 3
-custom_minimum_size = Vector2(500, 0)
-offset_left = 135.0
-offset_top = 418.0
-offset_right = 789.0
-offset_bottom = 542.0
-size_flags_horizontal = 4
-theme = SubResource("Theme_0eiux")
-theme_override_fonts/font = ExtResource("3_g4wl5")
-text = "start"
-metadata/_edit_use_anchors_ = true
-
-[node name="ButtonCredits" type="Button" parent="."]
-process_mode = 3
-custom_minimum_size = Vector2(500, 0)
-offset_left = 137.0
-offset_top = 587.0
-offset_right = 791.0
-offset_bottom = 720.0
-theme = SubResource("Theme_0eiux")
-text = "credits
-"
-metadata/_edit_use_anchors_ = true
-
-[node name="ButtonQuit" type="Button" parent="."]
-process_mode = 3
-custom_minimum_size = Vector2(500, 0)
-offset_left = 136.0
-offset_top = 758.0
-offset_right = 794.0
-offset_bottom = 907.0
-theme = SubResource("Theme_0eiux")
-text = "quit"
-metadata/_edit_use_anchors_ = true
 
 [node name="Transition" parent="." instance=ExtResource("2_f7fqr")]
 
@@ -140,6 +204,71 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
+[node name="QuitPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_byatd")
+}
+
+[node name="ColorRect" type="ColorRect" parent="QuitPlayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="StartPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_byatd")
+}
+
+[node name="ColorRect" type="ColorRect" parent="StartPlayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonStart" type="TextureButton" parent="."]
+offset_left = 208.0
+offset_top = 552.0
+offset_right = 592.0
+offset_bottom = 738.0
+pivot_offset = Vector2(182, 97)
+size_flags_vertical = 4
+texture_normal = ExtResource("5_h843a")
+texture_pressed = ExtResource("5_h843a")
+texture_hover = ExtResource("5_h843a")
+texture_disabled = ExtResource("5_h843a")
+texture_focused = ExtResource("5_h843a")
+
+[node name="ButtonQuit" type="TextureButton" parent="."]
+offset_left = 248.0
+offset_top = 816.0
+offset_right = 541.0
+offset_bottom = 1011.0
+pivot_offset = Vector2(146, 92)
+texture_normal = ExtResource("7_ehyvl")
+texture_pressed = ExtResource("7_ehyvl")
+texture_hover = ExtResource("7_ehyvl")
+texture_disabled = ExtResource("7_ehyvl")
+texture_focused = ExtResource("7_ehyvl")
+
+[node name="CraftsmanSimulatorLogo" type="Sprite2D" parent="."]
+position = Vector2(1363, 334)
+scale = Vector2(0.896679, 0.896679)
+texture = ExtResource("6_ifxim")
+
+[connection signal="mouse_entered" from="ButtonStart" to="." method="_on_button_start_mouse_entered"]
+[connection signal="mouse_exited" from="ButtonStart" to="." method="_on_button_start_mouse_exited"]
 [connection signal="pressed" from="ButtonStart" to="." method="_on_button_start_pressed"]
-[connection signal="pressed" from="ButtonCredits" to="." method="_on_button_credits_pressed"]
+[connection signal="mouse_entered" from="ButtonQuit" to="." method="_on_button_quit_mouse_entered"]
+[connection signal="mouse_exited" from="ButtonQuit" to="." method="_on_button_quit_mouse_exited"]
 [connection signal="pressed" from="ButtonQuit" to="." method="_on_button_quit_pressed"]

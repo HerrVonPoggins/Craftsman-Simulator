@@ -12,4 +12,3 @@ Camera3D
 CollisionShape3D
 Area3D
 AudioStreamPlayer2D
-Node
