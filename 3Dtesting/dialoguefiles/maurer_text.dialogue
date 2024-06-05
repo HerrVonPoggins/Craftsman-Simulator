@@ -1,20 +1,22 @@
 ~ this_is_a_node_title
-set Global.dialogue_open = true
-Maurer: Hey, du bist also der neue Praktikant, richtig?
-Maurer: Schön dich kennenzulernen!
-Maurer: Ich bin der Maurer hier auf der Baustelle.
-Maurer: Mein Name ist Bruno, aber die meisten nennen mich einfach Bär.
+if Global.dialogue_count == 1:
+	set Global.dialogue_open = true
+	Maurer: Hey, du bist also der neue Praktikant, richtig?
+	Maurer: Schön dich kennenzulernen!
+	Maurer: Ich bin der Maurer hier auf der Baustelle.
+	Maurer: Mein Name ist Bruno, aber die meisten nennen mich einfach Bär.
 
-Maurer: Na, wie war dein Gespräch mit dem Bauleiter?
-Maurer: Er hat bestimmt eine Menge erzählt, oder?
-Maurer: Keine Sorge, ich werde dir zeigen, was du hier machen musst.
-Maurer: Also, als erstes müssen wir Mörtel mischen.
-Maurer: Hast du das schon mal gemacht? Nein? Kein Problem!
-Maurer: Das ist ganz einfach. Sieh mal, hier ist eine Schubkarre une eine Kelle.
-Maurer: Wir nehmen etwas Sand, fügen Wasser und Zement hinzu und rühren kräftig um. (Fülle Wasser, Sand und Zement in den Mischer und schalte ihn mit E an)
-Maurer: Aber pass auf, dass der Mörtel nicht zu flüssig wird!
-Maurer: Sobald der Mörtel fertig ist, lädst du ihn in die Schubkarre und bringst ihn zur Wand, die wir bearbeiten.
-Maurer: Stell sicher, dass du den Mörtel gleichmäßig aufträgst, damit alles gut hält.
-Maurer: Verstanden?
-set Global.dialogue_open = false
+	Maurer: Na, wie war dein Gespräch mit dem Bauleiter?
+	Maurer: Er hat bestimmt eine Menge erzählt, oder?
+	Maurer: Keine Sorge, ich werde dir zeigen, was du hier machen musst.
+	Maurer: Also, als erstes müssen wir Mörtel mischen.
+	Maurer: Hast du das schon mal gemacht? Nein? Kein Problem!
+	Maurer: Das ist ganz einfach. Sieh mal, hier ist eine Schubkarre une eine Kelle.
+	Maurer: Wir nehmen etwas Sand, fügen Wasser und Zement hinzu und rühren kräftig um. (Fülle Wasser, Sand und Zement in den Mischer und schalte ihn mit E an)
+	Maurer: Aber pass auf, dass der Mörtel nicht zu flüssig wird!
+	Maurer: Sobald der Mörtel fertig ist, lädst du ihn in die Schubkarre und bringst ihn zur Wand, die wir bearbeiten.
+	Maurer: Stell sicher, dass du den Mörtel gleichmäßig aufträgst, damit alles gut hält.
+	Maurer: Verstanden?
+	set Global.dialogue_open = false
+	set Global.dialogue_count = 2
 => END

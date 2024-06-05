@@ -5,3 +5,4 @@ res://UI/player_ui/info hub.tscn
 res://ui/screens/titlescreen.tscn
 res://ui/player_ui/checklist.tscn
 res://scenes/CorePlayable/CorePlayable.tscn
+res://scripts/global.gd

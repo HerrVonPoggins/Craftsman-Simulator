@@ -1,5 +1,5 @@
 ~ this_is_a_node_title
-if Global.current_scene == 1:
+if Global.current_scene == 1 and Global.dialogue_count == 0:
 	set Global.dialogue_open = true
 	Bauleiter: Ah, da bist du ja, unser neuer Praktikant!
 	Bauleiter: Herzlich willkommen auf der Baustelle von "Craftsman Simulator".
@@ -16,6 +16,7 @@ if Global.current_scene == 1:
 	Bauleiter: Dort könntest du alle Ausbildungsberufe nochmal genauer nachlesen und dich besser informieren (es gibt ein Quiz zum Schluss).
 	Bauleiter: Und jetzt viel Spaß!
 	set Global.dialogue_open = false
+	set Global.dialogue_count = 1
 
 if Global.current_scene == 2:
 	set Global.dialogue_open = true

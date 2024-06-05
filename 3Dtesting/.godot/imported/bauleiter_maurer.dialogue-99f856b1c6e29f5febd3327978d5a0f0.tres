@@ -128,7 +128,31 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "20",
+"next_id": "19",
+"parent_id": "2",
+"type": &"mutation"
+},
+"19": {
+"id": "19",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_count"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 1
+}]),
+"is_blocking": true
+},
+"next_id": "21",
 "parent_id": "2",
 "type": &"mutation"
 },
@@ -149,16 +173,33 @@ lines = {
 "type": "number",
 "value": 1
 }, {
+"type": "and_or",
+"value": "and"
+}, {
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_count"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "number",
+"value": 0
+}, {
 "type": "colon"
 }])
 },
 "id": "2",
-"next_conditional_id": "20",
+"next_conditional_id": "21",
 "next_id": "3",
-"next_id_after": "20",
+"next_id_after": "21",
 "type": &"condition"
 },
-"20": {
+"21": {
 "condition": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -178,14 +219,14 @@ lines = {
 "type": "colon"
 }])
 },
-"id": "20",
-"next_conditional_id": "37",
-"next_id": "21",
-"next_id_after": "37",
+"id": "21",
+"next_conditional_id": "38",
+"next_id": "22",
+"next_id_after": "38",
 "type": &"condition"
 },
-"21": {
-"id": "21",
+"22": {
+"id": "22",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -204,22 +245,9 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "22",
-"parent_id": "20",
-"type": &"mutation"
-},
-"22": {
-"character": "Bauleiter",
-"character_replacements": Array[Dictionary]([]),
-"id": "22",
 "next_id": "23",
-"notes": "",
-"parent_id": "20",
-"tags": PackedStringArray(),
-"text": "Wilkommen auf der Baustelle!",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Wilkommen auf der Baustelle!",
-"type": &"dialogue"
+"parent_id": "21",
+"type": &"mutation"
 },
 "23": {
 "character": "Bauleiter",
@@ -227,11 +255,11 @@ lines = {
 "id": "23",
 "next_id": "24",
 "notes": "",
-"parent_id": "20",
+"parent_id": "21",
 "tags": PackedStringArray(),
-"text": "Deine erste Aufgabe wird es sein eine Ständerwand zu bauen.",
+"text": "Wilkommen auf der Baustelle!",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Deine erste Aufgabe wird es sein eine Ständerwand zu bauen.",
+"translation_key": "Wilkommen auf der Baustelle!",
 "type": &"dialogue"
 },
 "24": {
@@ -240,11 +268,11 @@ lines = {
 "id": "24",
 "next_id": "25",
 "notes": "",
-"parent_id": "20",
+"parent_id": "21",
 "tags": PackedStringArray(),
-"text": "Du musst die Profile mit Dichtband bekleben.",
+"text": "Deine erste Aufgabe wird es sein eine Ständerwand zu bauen.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Du musst die Profile mit Dichtband bekleben.",
+"translation_key": "Deine erste Aufgabe wird es sein eine Ständerwand zu bauen.",
 "type": &"dialogue"
 },
 "25": {
@@ -253,11 +281,11 @@ lines = {
 "id": "25",
 "next_id": "26",
 "notes": "",
-"parent_id": "20",
+"parent_id": "21",
 "tags": PackedStringArray(),
-"text": "Danach bringst du sie an Boden/Decke und den Wänden an.",
+"text": "Du musst die Profile mit Dichtband bekleben.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Danach bringst du sie an Boden/Decke und den Wänden an.",
+"translation_key": "Du musst die Profile mit Dichtband bekleben.",
 "type": &"dialogue"
 },
 "26": {
@@ -266,11 +294,11 @@ lines = {
 "id": "26",
 "next_id": "27",
 "notes": "",
-"parent_id": "20",
+"parent_id": "21",
 "tags": PackedStringArray(),
-"text": "als nächstes setzt du in den markierten slots die zwischen Profile.",
+"text": "Danach bringst du sie an Boden/Decke und den Wänden an.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "als nächstes setzt du in den markierten slots die zwischen Profile.",
+"translation_key": "Danach bringst du sie an Boden/Decke und den Wänden an.",
 "type": &"dialogue"
 },
 "27": {
@@ -279,11 +307,11 @@ lines = {
 "id": "27",
 "next_id": "28",
 "notes": "",
-"parent_id": "20",
+"parent_id": "21",
 "tags": PackedStringArray(),
-"text": "dann kannst du eine Seite mit Gipskartonplatten beplanken.",
+"text": "als nächstes setzt du in den markierten slots die zwischen Profile.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "dann kannst du eine Seite mit Gipskartonplatten beplanken.",
+"translation_key": "als nächstes setzt du in den markierten slots die zwischen Profile.",
 "type": &"dialogue"
 },
 "28": {
@@ -292,11 +320,11 @@ lines = {
 "id": "28",
 "next_id": "29",
 "notes": "",
-"parent_id": "20",
+"parent_id": "21",
 "tags": PackedStringArray(),
-"text": "nun wird das Dämmmaterial eingelegt um dann die andere Seite zu verplanken.",
+"text": "dann kannst du eine Seite mit Gipskartonplatten beplanken.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "nun wird das Dämmmaterial eingelegt um dann die andere Seite zu verplanken.",
+"translation_key": "dann kannst du eine Seite mit Gipskartonplatten beplanken.",
 "type": &"dialogue"
 },
 "29": {
@@ -305,11 +333,11 @@ lines = {
 "id": "29",
 "next_id": "30",
 "notes": "",
-"parent_id": "20",
+"parent_id": "21",
 "tags": PackedStringArray(),
-"text": "jetzt hast du den größten Teil hinter dir",
+"text": "nun wird das Dämmmaterial eingelegt um dann die andere Seite zu verplanken.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "jetzt hast du den größten Teil hinter dir",
+"translation_key": "nun wird das Dämmmaterial eingelegt um dann die andere Seite zu verplanken.",
 "type": &"dialogue"
 },
 "3": {
@@ -342,11 +370,11 @@ lines = {
 "id": "30",
 "next_id": "31",
 "notes": "",
-"parent_id": "20",
+"parent_id": "21",
 "tags": PackedStringArray(),
-"text": "verspachtle die Fugen.",
+"text": "jetzt hast du den größten Teil hinter dir",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "verspachtle die Fugen.",
+"translation_key": "jetzt hast du den größten Teil hinter dir",
 "type": &"dialogue"
 },
 "31": {
@@ -355,11 +383,11 @@ lines = {
 "id": "31",
 "next_id": "32",
 "notes": "",
-"parent_id": "20",
+"parent_id": "21",
 "tags": PackedStringArray(),
-"text": "dann verspachtle den Rest der Wand.",
+"text": "verspachtle die Fugen.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "dann verspachtle den Rest der Wand.",
+"translation_key": "verspachtle die Fugen.",
 "type": &"dialogue"
 },
 "32": {
@@ -368,11 +396,11 @@ lines = {
 "id": "32",
 "next_id": "33",
 "notes": "",
-"parent_id": "20",
+"parent_id": "21",
 "tags": PackedStringArray(),
-"text": "Sprich noch vorher mit dem Stuckateur er gibt dir eine Zusammenfassung über seinen Beruf.",
+"text": "dann verspachtle den Rest der Wand.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Sprich noch vorher mit dem Stuckateur er gibt dir eine Zusammenfassung über seinen Beruf.",
+"translation_key": "dann verspachtle den Rest der Wand.",
 "type": &"dialogue"
 },
 "33": {
@@ -381,11 +409,11 @@ lines = {
 "id": "33",
 "next_id": "34",
 "notes": "",
-"parent_id": "20",
+"parent_id": "21",
 "tags": PackedStringArray(),
-"text": "Falls du genaueres wissen willst ließ in deinem Handbuch (ESC) nach.",
+"text": "Sprich noch vorher mit dem Stuckateur er gibt dir eine Zusammenfassung über seinen Beruf.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Falls du genaueres wissen willst ließ in deinem Handbuch (ESC) nach.",
+"translation_key": "Sprich noch vorher mit dem Stuckateur er gibt dir eine Zusammenfassung über seinen Beruf.",
 "type": &"dialogue"
 },
 "34": {
@@ -394,15 +422,28 @@ lines = {
 "id": "34",
 "next_id": "35",
 "notes": "",
-"parent_id": "20",
+"parent_id": "21",
+"tags": PackedStringArray(),
+"text": "Falls du genaueres wissen willst ließ in deinem Handbuch (ESC) nach.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Falls du genaueres wissen willst ließ in deinem Handbuch (ESC) nach.",
+"type": &"dialogue"
+},
+"35": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "35",
+"next_id": "36",
+"notes": "",
+"parent_id": "21",
 "tags": PackedStringArray(),
 "text": "Viel Glück.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Viel Glück.",
 "type": &"dialogue"
 },
-"35": {
-"id": "35",
+"36": {
+"id": "36",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -421,12 +462,12 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "37",
-"parent_id": "20",
+"next_id": "38",
+"parent_id": "21",
 "type": &"mutation"
 },
-"37": {
-"id": "37",
+"38": {
+"id": "38",
 "is_snippet": false,
 "next_id": "end",
 "type": &"goto"
@@ -498,7 +539,7 @@ lines = {
 }
 }
 raw_text = "~ this_is_a_node_title
-if Global.current_scene == 1:
+if Global.current_scene == 1 and Global.dialogue_count == 0:
 	set Global.dialogue_open = true
 	Bauleiter: Ah, da bist du ja, unser neuer Praktikant!
 	Bauleiter: Herzlich willkommen auf der Baustelle von \"Craftsman Simulator\".
@@ -515,6 +556,7 @@ if Global.current_scene == 1:
 	Bauleiter: Dort könntest du alle Ausbildungsberufe nochmal genauer nachlesen und dich besser informieren (es gibt ein Quiz zum Schluss).
 	Bauleiter: Und jetzt viel Spaß!
 	set Global.dialogue_open = false
+	set Global.dialogue_count = 1
 
 if Global.current_scene == 2:
 	set Global.dialogue_open = true

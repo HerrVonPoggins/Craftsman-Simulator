@@ -23,10 +23,11 @@ lines = {
 "id": "10",
 "next_id": "11",
 "notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
-"text": "Keine Sorge, ich werde dir zeigen, was du hier machen musst.",
+"text": "Er hat bestimmt eine Menge erzählt, oder?",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Keine Sorge, ich werde dir zeigen, was du hier machen musst.",
+"translation_key": "Er hat bestimmt eine Menge erzählt, oder?",
 "type": &"dialogue"
 },
 "11": {
@@ -35,10 +36,11 @@ lines = {
 "id": "11",
 "next_id": "12",
 "notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
-"text": "Also, als erstes müssen wir Mörtel mischen.",
+"text": "Keine Sorge, ich werde dir zeigen, was du hier machen musst.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Also, als erstes müssen wir Mörtel mischen.",
+"translation_key": "Keine Sorge, ich werde dir zeigen, was du hier machen musst.",
 "type": &"dialogue"
 },
 "12": {
@@ -47,10 +49,11 @@ lines = {
 "id": "12",
 "next_id": "13",
 "notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
-"text": "Hast du das schon mal gemacht? Nein? Kein Problem!",
+"text": "Also, als erstes müssen wir Mörtel mischen.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Hast du das schon mal gemacht? Nein? Kein Problem!",
+"translation_key": "Also, als erstes müssen wir Mörtel mischen.",
 "type": &"dialogue"
 },
 "13": {
@@ -59,10 +62,11 @@ lines = {
 "id": "13",
 "next_id": "14",
 "notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
-"text": "Das ist ganz einfach. Sieh mal, hier ist eine Schubkarre une eine Kelle.",
+"text": "Hast du das schon mal gemacht? Nein? Kein Problem!",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Das ist ganz einfach. Sieh mal, hier ist eine Schubkarre une eine Kelle.",
+"translation_key": "Hast du das schon mal gemacht? Nein? Kein Problem!",
 "type": &"dialogue"
 },
 "14": {
@@ -71,10 +75,11 @@ lines = {
 "id": "14",
 "next_id": "15",
 "notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
-"text": "Wir nehmen etwas Sand, fügen Wasser und Zement hinzu und rühren kräftig um. (Fülle Wasser, Sand und Zement in den Mischer und schalte ihn mit E an)",
+"text": "Das ist ganz einfach. Sieh mal, hier ist eine Schubkarre une eine Kelle.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Wir nehmen etwas Sand, fügen Wasser und Zement hinzu und rühren kräftig um. (Fülle Wasser, Sand und Zement in den Mischer und schalte ihn mit E an)",
+"translation_key": "Das ist ganz einfach. Sieh mal, hier ist eine Schubkarre une eine Kelle.",
 "type": &"dialogue"
 },
 "15": {
@@ -83,10 +88,11 @@ lines = {
 "id": "15",
 "next_id": "16",
 "notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
-"text": "Aber pass auf, dass der Mörtel nicht zu flüssig wird!",
+"text": "Wir nehmen etwas Sand, fügen Wasser und Zement hinzu und rühren kräftig um. (Fülle Wasser, Sand und Zement in den Mischer und schalte ihn mit E an)",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Aber pass auf, dass der Mörtel nicht zu flüssig wird!",
+"translation_key": "Wir nehmen etwas Sand, fügen Wasser und Zement hinzu und rühren kräftig um. (Fülle Wasser, Sand und Zement in den Mischer und schalte ihn mit E an)",
 "type": &"dialogue"
 },
 "16": {
@@ -95,10 +101,11 @@ lines = {
 "id": "16",
 "next_id": "17",
 "notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
-"text": "Sobald der Mörtel fertig ist, lädst du ihn in die Schubkarre und bringst ihn zur Wand, die wir bearbeiten.",
+"text": "Aber pass auf, dass der Mörtel nicht zu flüssig wird!",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Sobald der Mörtel fertig ist, lädst du ihn in die Schubkarre und bringst ihn zur Wand, die wir bearbeiten.",
+"translation_key": "Aber pass auf, dass der Mörtel nicht zu flüssig wird!",
 "type": &"dialogue"
 },
 "17": {
@@ -107,10 +114,11 @@ lines = {
 "id": "17",
 "next_id": "18",
 "notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
-"text": "Stell sicher, dass du den Mörtel gleichmäßig aufträgst, damit alles gut hält.",
+"text": "Sobald der Mörtel fertig ist, lädst du ihn in die Schubkarre und bringst ihn zur Wand, die wir bearbeiten.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Stell sicher, dass du den Mörtel gleichmäßig aufträgst, damit alles gut hält.",
+"translation_key": "Sobald der Mörtel fertig ist, lädst du ihn in die Schubkarre und bringst ihn zur Wand, die wir bearbeiten.",
 "type": &"dialogue"
 },
 "18": {
@@ -119,14 +127,54 @@ lines = {
 "id": "18",
 "next_id": "19",
 "notes": "",
+"parent_id": "2",
+"tags": PackedStringArray(),
+"text": "Stell sicher, dass du den Mörtel gleichmäßig aufträgst, damit alles gut hält.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Stell sicher, dass du den Mörtel gleichmäßig aufträgst, damit alles gut hält.",
+"type": &"dialogue"
+},
+"19": {
+"character": "Maurer",
+"character_replacements": Array[Dictionary]([]),
+"id": "19",
+"next_id": "20",
+"notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
 "text": "Verstanden?",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Verstanden?",
 "type": &"dialogue"
 },
-"19": {
-"id": "19",
+"2": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_count"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "number",
+"value": 1
+}, {
+"type": "colon"
+}])
+},
+"id": "2",
+"next_conditional_id": "22",
+"next_id": "3",
+"next_id_after": "22",
+"type": &"condition"
+},
+"20": {
+"id": "20",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -145,11 +193,42 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "20",
+"next_id": "21",
+"parent_id": "2",
 "type": &"mutation"
 },
-"2": {
-"id": "2",
+"21": {
+"id": "21",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_count"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 2
+}]),
+"is_blocking": true
+},
+"next_id": "22",
+"parent_id": "2",
+"type": &"mutation"
+},
+"22": {
+"id": "22",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"3": {
+"id": "3",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -168,26 +247,9 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "3",
-"type": &"mutation"
-},
-"20": {
-"id": "20",
-"is_snippet": false,
-"next_id": "end",
-"type": &"goto"
-},
-"3": {
-"character": "Maurer",
-"character_replacements": Array[Dictionary]([]),
-"id": "3",
 "next_id": "4",
-"notes": "",
-"tags": PackedStringArray(),
-"text": "Hey, du bist also der neue Praktikant, richtig?",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Hey, du bist also der neue Praktikant, richtig?",
-"type": &"dialogue"
+"parent_id": "2",
+"type": &"mutation"
 },
 "4": {
 "character": "Maurer",
@@ -195,10 +257,11 @@ lines = {
 "id": "4",
 "next_id": "5",
 "notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
-"text": "Schön dich kennenzulernen!",
+"text": "Hey, du bist also der neue Praktikant, richtig?",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Schön dich kennenzulernen!",
+"translation_key": "Hey, du bist also der neue Praktikant, richtig?",
 "type": &"dialogue"
 },
 "5": {
@@ -207,34 +270,37 @@ lines = {
 "id": "5",
 "next_id": "6",
 "notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
-"text": "Ich bin der Maurer hier auf der Baustelle.",
+"text": "Schön dich kennenzulernen!",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Ich bin der Maurer hier auf der Baustelle.",
+"translation_key": "Schön dich kennenzulernen!",
 "type": &"dialogue"
 },
 "6": {
 "character": "Maurer",
 "character_replacements": Array[Dictionary]([]),
 "id": "6",
-"next_id": "8",
+"next_id": "7",
 "notes": "",
+"parent_id": "2",
+"tags": PackedStringArray(),
+"text": "Ich bin der Maurer hier auf der Baustelle.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ich bin der Maurer hier auf der Baustelle.",
+"type": &"dialogue"
+},
+"7": {
+"character": "Maurer",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "9",
+"notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
 "text": "Mein Name ist Bruno, aber die meisten nennen mich einfach Bär.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Mein Name ist Bruno, aber die meisten nennen mich einfach Bär.",
-"type": &"dialogue"
-},
-"8": {
-"character": "Maurer",
-"character_replacements": Array[Dictionary]([]),
-"id": "8",
-"next_id": "9",
-"notes": "",
-"tags": PackedStringArray(),
-"text": "Na, wie war dein Gespräch mit dem Bauleiter?",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Na, wie war dein Gespräch mit dem Bauleiter?",
 "type": &"dialogue"
 },
 "9": {
@@ -243,31 +309,34 @@ lines = {
 "id": "9",
 "next_id": "10",
 "notes": "",
+"parent_id": "2",
 "tags": PackedStringArray(),
-"text": "Er hat bestimmt eine Menge erzählt, oder?",
+"text": "Na, wie war dein Gespräch mit dem Bauleiter?",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Er hat bestimmt eine Menge erzählt, oder?",
+"translation_key": "Na, wie war dein Gespräch mit dem Bauleiter?",
 "type": &"dialogue"
 }
 }
 raw_text = "~ this_is_a_node_title
-set Global.dialogue_open = true
-Maurer: Hey, du bist also der neue Praktikant, richtig?
-Maurer: Schön dich kennenzulernen!
-Maurer: Ich bin der Maurer hier auf der Baustelle.
-Maurer: Mein Name ist Bruno, aber die meisten nennen mich einfach Bär.
+if Global.dialogue_count == 1:
+	set Global.dialogue_open = true
+	Maurer: Hey, du bist also der neue Praktikant, richtig?
+	Maurer: Schön dich kennenzulernen!
+	Maurer: Ich bin der Maurer hier auf der Baustelle.
+	Maurer: Mein Name ist Bruno, aber die meisten nennen mich einfach Bär.
 
-Maurer: Na, wie war dein Gespräch mit dem Bauleiter?
-Maurer: Er hat bestimmt eine Menge erzählt, oder?
-Maurer: Keine Sorge, ich werde dir zeigen, was du hier machen musst.
-Maurer: Also, als erstes müssen wir Mörtel mischen.
-Maurer: Hast du das schon mal gemacht? Nein? Kein Problem!
-Maurer: Das ist ganz einfach. Sieh mal, hier ist eine Schubkarre une eine Kelle.
-Maurer: Wir nehmen etwas Sand, fügen Wasser und Zement hinzu und rühren kräftig um. (Fülle Wasser, Sand und Zement in den Mischer und schalte ihn mit E an)
-Maurer: Aber pass auf, dass der Mörtel nicht zu flüssig wird!
-Maurer: Sobald der Mörtel fertig ist, lädst du ihn in die Schubkarre und bringst ihn zur Wand, die wir bearbeiten.
-Maurer: Stell sicher, dass du den Mörtel gleichmäßig aufträgst, damit alles gut hält.
-Maurer: Verstanden?
-set Global.dialogue_open = false
+	Maurer: Na, wie war dein Gespräch mit dem Bauleiter?
+	Maurer: Er hat bestimmt eine Menge erzählt, oder?
+	Maurer: Keine Sorge, ich werde dir zeigen, was du hier machen musst.
+	Maurer: Also, als erstes müssen wir Mörtel mischen.
+	Maurer: Hast du das schon mal gemacht? Nein? Kein Problem!
+	Maurer: Das ist ganz einfach. Sieh mal, hier ist eine Schubkarre une eine Kelle.
+	Maurer: Wir nehmen etwas Sand, fügen Wasser und Zement hinzu und rühren kräftig um. (Fülle Wasser, Sand und Zement in den Mischer und schalte ihn mit E an)
+	Maurer: Aber pass auf, dass der Mörtel nicht zu flüssig wird!
+	Maurer: Sobald der Mörtel fertig ist, lädst du ihn in die Schubkarre und bringst ihn zur Wand, die wir bearbeiten.
+	Maurer: Stell sicher, dass du den Mörtel gleichmäßig aufträgst, damit alles gut hält.
+	Maurer: Verstanden?
+	set Global.dialogue_open = false
+	set Global.dialogue_count = 2
 => END"
 metadata/dialogue_manager_version = "2.38.0"
