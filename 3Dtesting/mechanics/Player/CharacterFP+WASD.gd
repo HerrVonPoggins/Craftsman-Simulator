@@ -3,7 +3,7 @@ extends CharacterBody3D
 var speed
 const WALK_SPEED = 10
 const SPRINT_SPEED = 20
-const JUMP_VELOCITY = 4.5
+const JUMP_VELOCITY = 25
 var is_up = false
 var is_crouching = false
 
@@ -52,7 +52,7 @@ func _unhandled_input(event):
 func _physics_process(delta):
 	#gravity
 	if not is_on_floor():
-		velocity.y -= gravity * delta
+		velocity.y -= (7 * gravity) * delta
 
 	#sprint
 	if Input.is_action_pressed("sprint"):
@@ -118,8 +118,8 @@ func _physics_process(delta):
 				velocity.x = lerp(velocity.x, direction.x * speed, delta * 7.0)
 				velocity.z = lerp(velocity.z, direction.z * speed, delta * 7.0)
 		else:
-			velocity.x = lerp(velocity.x, direction.x * speed, delta * 2.0)
-			velocity.z = lerp(velocity.z, direction.z * speed, delta * 2.0)
+			velocity.x = lerp(velocity.x, direction.x * speed, delta)
+			velocity.z = lerp(velocity.z, direction.z * speed, delta)
 
 
 
