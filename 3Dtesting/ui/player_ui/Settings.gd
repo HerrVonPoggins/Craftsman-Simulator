@@ -107,7 +107,7 @@ func _on_volume_2_scrolling():
 
 func _on_check_button_toggled(toggled_on):
 
-	if toggled_on == true:
+	if toggled_on == false:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)

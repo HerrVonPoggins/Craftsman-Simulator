@@ -3,14 +3,13 @@
 [ext_resource type="Script" path="res://ui/player_ui/TabContainer.gd" id="1_pp8q6"]
 [ext_resource type="Texture2D" uid="uid://b64wbqw154cxp" path="res://UI/player_ui/Options_Button.png" id="2_b7f4i"]
 [ext_resource type="PackedScene" uid="uid://biv5si5cbepod" path="res://UI/player_ui/checklist.tscn" id="2_leu6n"]
-[ext_resource type="Texture2D" uid="uid://dr813mjfqn5n4" path="res://assets/textures/warning_sample.jpg" id="2_xxoj5"]
 [ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://UI/player_ui/transition.tscn" id="4_egnei"]
-[ext_resource type="Texture2D" uid="uid://bpqopvth4yp87" path="res://UI/player_ui/1.png" id="4_rd1wi"]
-[ext_resource type="Texture2D" uid="uid://dc4qg4m7u1b48" path="res://UI/player_ui/2.png" id="5_28t3r"]
 [ext_resource type="PackedScene" uid="uid://ccfrjw5825ajn" path="res://UI/player_ui/settings.tscn" id="5_qw0s6"]
-[ext_resource type="Texture2D" uid="uid://dcdayfud0hwvm" path="res://UI/player_ui/3.png" id="6_yrla8"]
-[ext_resource type="Texture2D" uid="uid://dt5q7vaxyp3f0" path="res://UI/player_ui/4.png" id="7_s21hl"]
-[ext_resource type="Texture2D" uid="uid://rr2hodwwfv1h" path="res://UI/player_ui/5.png" id="8_r5003"]
+[ext_resource type="Texture2D" uid="uid://cpixxm65ujhws" path="res://UI/Quit_Button.png" id="8_bgu1x"]
+[ext_resource type="Texture2D" uid="uid://dqiduk4bv4lr5" path="res://UI/Coming_soon.png" id="9_56ss8"]
+[ext_resource type="Texture2D" uid="uid://dw5h2wlrh5ob0" path="res://UI/Log_Buch.png" id="12_btghm"]
+[ext_resource type="Texture2D" uid="uid://ct23mbhdbwecb" path="res://UI/Log-Buch_Open.png" id="13_qmlyq"]
+[ext_resource type="Texture2D" uid="uid://nhi4c87607cc" path="res://UI/Maurer_Logbuch.png" id="14_i5ynq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_748e5"]
 texture = ExtResource("2_b7f4i")
@@ -28,28 +27,15 @@ Button/styles/hover = SubResource("StyleBoxTexture_748e5")
 Button/styles/normal = SubResource("StyleBoxTexture_yd1r0")
 Button/styles/pressed = SubResource("StyleBoxTexture_yx41j")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cvin2"]
-content_margin_left = 1.0
-content_margin_top = 1.0
-content_margin_right = 1.0
-content_margin_bottom = 1.0
-texture = ExtResource("2_xxoj5")
-modulate_color = Color(1, 1, 1, 0.4)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3m626"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a48ki"]
-content_margin_left = 0.0
-texture = ExtResource("2_xxoj5")
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
-region_rect = Rect2(0, 0, 480, 402)
-modulate_color = Color(0.560784, 0.560784, 0.560784, 0.278431)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fy57w"]
 
-[sub_resource type="Theme" id="Theme_n4dvj"]
-Panel/styles/panel = SubResource("StyleBoxTexture_cvin2")
-TabContainer/styles/panel = SubResource("StyleBoxTexture_a48ki")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ulnq"]
 
-[sub_resource type="Theme" id="Theme_7en1x"]
-Panel/styles/panel = SubResource("StyleBoxTexture_cvin2")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g6uua"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_id4j3"]
 
 [node name="Control" type="Control"]
 process_mode = 3
@@ -63,191 +49,71 @@ mouse_filter = 1
 script = ExtResource("1_pp8q6")
 
 [node name="ButtonSettings" type="Button" parent="."]
-visible = false
 layout_mode = 0
-offset_left = 37.0
-offset_top = 49.0
-offset_right = 114.0
-offset_bottom = 127.0
+offset_left = 53.0
+offset_top = -247.0
+offset_right = 130.0
+offset_bottom = -169.0
 theme = SubResource("Theme_vwtvn")
 
 [node name="ButtonSave" type="Button" parent="."]
-visible = false
 custom_minimum_size = Vector2(300, 50)
 layout_mode = 0
-offset_left = 129.0
+offset_left = -376.0
 offset_top = 526.0
-offset_right = 429.0
+offset_right = -76.0
 offset_bottom = 576.0
 text = "Save"
 
 [node name="ButtonLoad" type="Button" parent="."]
-visible = false
 custom_minimum_size = Vector2(300, 50)
 layout_mode = 0
-offset_left = 131.0
+offset_left = -374.0
 offset_top = 593.0
-offset_right = 431.0
+offset_right = -74.0
 offset_bottom = 643.0
 text = "Load"
 
 [node name="ButtonMainMenu" type="Button" parent="."]
-visible = false
 custom_minimum_size = Vector2(300, 50)
 layout_mode = 0
-offset_left = 131.0
+offset_left = -374.0
 offset_top = 673.0
-offset_right = 431.0
+offset_right = -74.0
 offset_bottom = 729.0
 text = "Mainmenu"
 
 [node name="ButtonQuit" type="Button" parent="."]
-visible = false
 custom_minimum_size = Vector2(300, 50)
 layout_mode = 0
-offset_left = 131.0
+offset_left = -374.0
 offset_top = 755.0
-offset_right = 431.0
+offset_right = -74.0
 offset_bottom = 811.0
 text = "Quit
 "
 
-[node name="ButtonInfoHub" type="Button" parent="."]
-process_mode = 3
-visible = false
-layout_mode = 0
-offset_left = 1481.0
-offset_top = 52.0
-offset_right = 1629.0
-offset_bottom = 83.0
-text = "Infohub schließen"
-
 [node name="ButtonChecklist" type="Button" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 1695.0
-offset_top = 51.0
-offset_right = 1863.0
-offset_bottom = 82.0
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 292.0
+offset_top = -527.0
+offset_right = 460.0
+offset_bottom = -496.0
+grow_horizontal = 0
+grow_vertical = 2
 text = "Checkliste "
 
-[node name="TabContainer" type="TabContainer" parent="."]
-process_mode = 3
-layout_mode = 0
-offset_left = 769.0
-offset_top = 102.0
-offset_right = 1517.0
-offset_bottom = 959.0
-theme = SubResource("Theme_n4dvj")
-all_tabs_in_front = true
-drag_to_rearrange_enabled = true
-
-[node name="1" type="TabBar" parent="TabContainer"]
-layout_mode = 2
-theme = SubResource("Theme_7en1x")
-tab_alignment = 1
-
-[node name="MaurerText" type="RichTextLabel" parent="TabContainer/1"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "
-"
-
-[node name="1" type="Sprite2D" parent="TabContainer/1/MaurerText"]
-position = Vector2(374, 414.25)
-scale = Vector2(0.328483, 0.257236)
-texture = ExtResource("4_rd1wi")
-
-[node name="2" type="TabBar" parent="TabContainer"]
-visible = false
-layout_mode = 2
-tab_alignment = 1
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="TabContainer/2"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.001
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 0.172
-offset_right = -2.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="1" type="Sprite2D" parent="TabContainer/2"]
-position = Vector2(374, 414.25)
-scale = Vector2(0.328483, 0.257236)
-texture = ExtResource("5_28t3r")
-
-[node name="3" type="TabBar" parent="TabContainer"]
-visible = false
-layout_mode = 2
-tab_alignment = 1
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="TabContainer/3"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.001
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 0.172
-offset_right = -2.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="1" type="Sprite2D" parent="TabContainer/3"]
-position = Vector2(374, 414.25)
-scale = Vector2(0.328483, 0.257236)
-texture = ExtResource("6_yrla8")
-
-[node name="4" type="TabBar" parent="TabContainer"]
-visible = false
-layout_mode = 2
-tab_alignment = 1
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="TabContainer/4"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.001
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 0.172
-offset_right = -2.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="1" type="Sprite2D" parent="TabContainer/4"]
-position = Vector2(374, 414.25)
-scale = Vector2(0.328483, 0.257236)
-texture = ExtResource("7_s21hl")
-
-[node name="5" type="TabBar" parent="TabContainer"]
-visible = false
-layout_mode = 2
-tab_alignment = 1
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="TabContainer/5"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.001
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 0.172
-offset_right = -2.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="1" type="Sprite2D" parent="TabContainer/5"]
-position = Vector2(374, 414.25)
-scale = Vector2(0.328483, 0.257236)
-texture = ExtResource("8_r5003")
-
 [node name="checklist" parent="." instance=ExtResource("2_leu6n")]
-position = Vector2(20, -76)
+layout_mode = 1
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = -1.0
 
 [node name="Transition" parent="." instance=ExtResource("4_egnei")]
 visible = false
@@ -257,11 +123,18 @@ visible = false
 layout_mode = 1
 
 [node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 1567.0
-offset_top = 510.0
-offset_right = 1888.0
-offset_bottom = 1042.0
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 247.0
+offset_top = -478.0
+offset_right = 568.0
+offset_bottom = 54.0
+grow_horizontal = 0
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 layout_mode = 0
@@ -317,10 +190,189 @@ layout_mode = 2
 layout_mode = 2
 text = "Shift = Sprinten"
 
+[node name="Job_Buch" type="TextureButton" parent="."]
+layout_mode = 1
+offset_left = 34.0
+offset_top = 20.0
+offset_right = 1576.0
+offset_bottom = 2091.0
+scale = Vector2(0.0665274, 0.0665274)
+texture_normal = ExtResource("12_btghm")
+texture_pressed = ExtResource("12_btghm")
+texture_hover = ExtResource("12_btghm")
+texture_disabled = ExtResource("12_btghm")
+texture_focused = ExtResource("12_btghm")
+
+[node name="Setting_Button" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -274.0
+offset_top = 28.0
+offset_right = 195.0
+offset_bottom = 544.0
+grow_horizontal = 0
+scale = Vector2(0.206334, 0.206334)
+texture_normal = ExtResource("2_b7f4i")
+texture_pressed = ExtResource("2_b7f4i")
+texture_hover = ExtResource("2_b7f4i")
+texture_disabled = ExtResource("2_b7f4i")
+texture_focused = ExtResource("2_b7f4i")
+
+[node name="Quit_Button" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -148.0
+offset_top = 28.0
+offset_right = 517.0
+offset_bottom = 760.0
+grow_horizontal = 0
+scale = Vector2(0.145107, 0.145107)
+texture_normal = ExtResource("8_bgu1x")
+texture_pressed = ExtResource("8_bgu1x")
+texture_hover = ExtResource("8_bgu1x")
+texture_disabled = ExtResource("8_bgu1x")
+texture_focused = ExtResource("8_bgu1x")
+
+[node name="Job_Buch_Open" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 4
+texture_repeat = 1
+position = Vector2(960, 538.096)
+scale = Vector2(0.501363, 0.501363)
+texture = ExtResource("13_qmlyq")
+
+[node name="Zimmermann_Button" type="Button" parent="Job_Buch_Open"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.5
+offset_top = -1877.5
+offset_right = -63.5
+offset_bottom = -1534.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3m626")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fy57w")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0ulnq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g6uua")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_id4j3")
+metadata/_edit_use_anchors_ = true
+
+[node name="Maurer_Button" type="Button" parent="Job_Buch_Open"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.5
+offset_top = -1507.5
+offset_right = -55.5
+offset_bottom = -1181.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3m626")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fy57w")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0ulnq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g6uua")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_id4j3")
+metadata/_edit_use_anchors_ = true
+
+[node name="Elektriker_Button" type="Button" parent="Job_Buch_Open"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.565
+offset_top = -1156.68
+offset_right = -48.5652
+offset_bottom = -830.681
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3m626")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fy57w")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0ulnq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g6uua")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_id4j3")
+metadata/_edit_use_anchors_ = true
+
+[node name="Close_Button" type="Button" parent="Job_Buch_Open"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3064.5
+offset_top = -1899.5
+offset_right = -2949.5
+offset_bottom = -1683.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3m626")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fy57w")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0ulnq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g6uua")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_id4j3")
+metadata/_edit_use_anchors_ = true
+
+[node name="MaurerLogbuch" type="Sprite2D" parent="Job_Buch_Open"]
+position = Vector2(49.0378, 73.5567)
+texture = ExtResource("14_i5ynq")
+
+[node name="ComingSoon" type="Sprite2D" parent="Job_Buch_Open"]
+visible = false
+texture_filter = 5
+position = Vector2(39.8912, 3.7973)
+scale = Vector2(1.08186, 1.08186)
+texture = ExtResource("9_56ss8")
+
+[node name="Job_Buch_Closed" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 5
+position = Vector2(988, 538.096)
+scale = Vector2(0.472892, 0.472892)
+texture = ExtResource("12_btghm")
+
+[node name="Log_Buch_Open_Button" type="Button" parent="Job_Buch_Closed"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -221.427
+offset_top = -1914.82
+offset_right = -111.427
+offset_bottom = -1694.82
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3m626")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fy57w")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0ulnq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g6uua")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_id4j3")
+
 [connection signal="pressed" from="ButtonSettings" to="." method="_on_button_settings_pressed"]
 [connection signal="pressed" from="ButtonSave" to="." method="_on_button_save_pressed"]
 [connection signal="pressed" from="ButtonLoad" to="." method="_on_button_load_pressed"]
 [connection signal="pressed" from="ButtonMainMenu" to="." method="_on_button_main_menu_pressed"]
 [connection signal="pressed" from="ButtonQuit" to="." method="_on_button_quit_pressed"]
-[connection signal="pressed" from="ButtonInfoHub" to="." method="_on_button_info_hub_pressed"]
 [connection signal="pressed" from="ButtonChecklist" to="." method="_on_button_checklist_pressed"]
+[connection signal="pressed" from="Job_Buch" to="." method="_on_job_buch_pressed"]
+[connection signal="pressed" from="Setting_Button" to="." method="_on_setting_button_pressed"]
+[connection signal="pressed" from="Quit_Button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Job_Buch_Open/Zimmermann_Button" to="." method="_on_zimmermann_button_pressed"]
+[connection signal="pressed" from="Job_Buch_Open/Maurer_Button" to="." method="_on_maurer_button_pressed"]
+[connection signal="pressed" from="Job_Buch_Open/Elektriker_Button" to="." method="_on_elektriker_button_pressed"]
+[connection signal="pressed" from="Job_Buch_Open/Close_Button" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="Job_Buch_Closed/Log_Buch_Open_Button" to="." method="_on_log_buch_open_button_pressed"]

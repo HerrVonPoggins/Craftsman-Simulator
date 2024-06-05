@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @onready var label_1 = $Panel/VBoxContainer/HBoxContainer/Label
 @onready var label_2 = $Panel/VBoxContainer/HBoxContainer2/Label

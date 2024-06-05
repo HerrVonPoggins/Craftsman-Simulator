@@ -19,8 +19,9 @@ signal closed
 
 
 func _ready():
-	close()
+	#close()
 	#$"TabContainer/1/MaurerText".append_text("[color=#ffff00]this text is white[/color]")
+	pass
 
 
 
@@ -44,24 +45,12 @@ func _process(delta):
 	#sets the open/closemechanic on the escape button
 	if Input.is_action_just_pressed("escape"):
 		if isOpen == true:
-			close()
-			checklist_button.visible = false
-			info_hub_button.visible = false
-			settings.visible = false
-			save.visible = false
-			load.visible = false
-			main_menu.visible = false
-			quit.visible = false
+			isOpen = false
+			closed.emit()
 			Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 		else:
-			open()
-			info_hub_button.visible = true
-			checklist_button.visible = true
-			settings.visible = true
-			save.visible = true
-			load.visible = true
-			main_menu.visible = true
-			quit.visible = true
+			isOpen = true
+			opened.emit()
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func open():
@@ -132,3 +121,49 @@ func _on_button_quit_pressed():
 
 
 
+
+
+func _on_close_button_pressed():
+	$Job_Buch_Open.hide()
+	$Job_Buch.show()
+	$Setting_Button.show()
+	$Quit_Button.show()
+	$checklist.show()
+
+func _on_elektriker_button_pressed():
+	if $Job_Buch_Open/MaurerLogbuch.visible == true:
+		$Job_Buch_Open/MaurerLogbuch.hide()
+		$Job_Buch_Open/ComingSoon.show()
+
+
+func _on_maurer_button_pressed():
+	if $Job_Buch_Open/ComingSoon.visible == true:
+		$Job_Buch_Open/ComingSoon.hide()
+		$Job_Buch_Open/MaurerLogbuch.show()
+
+
+func _on_zimmermann_button_pressed():
+	if $Job_Buch_Open/MaurerLogbuch.visible == true:
+		$Job_Buch_Open/MaurerLogbuch.hide()
+		$Job_Buch_Open/ComingSoon.show()
+
+
+func _on_log_buch_open_button_pressed():
+	$Job_Buch_Closed.hide()
+	$Job_Buch_Open.show()
+	
+
+
+func _on_job_buch_pressed():
+	$Job_Buch_Closed.show()
+	$Job_Buch.hide()
+	$Setting_Button.hide()
+	$Quit_Button.hide()
+	$checklist.hide()
+	
+func _on_quit_button_pressed():
+	get_tree().quit()
+
+
+func _on_setting_button_pressed():
+	$Control.visible = true
