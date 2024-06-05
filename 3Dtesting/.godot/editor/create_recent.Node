@@ -1,5 +1,8 @@
-Control
 RichTextLabel
+TextureRect
+AnimationPlayer
+TextEdit
+Control
 Button
 TextureButton
 HBoxContainer
@@ -9,7 +12,3 @@ MeshInstance3D
 RigidBody3D
 StaticBody3D
 CharacterBody3D
-RayCast3D
-Node3D
-Camera3D
-CollisionShape3D
