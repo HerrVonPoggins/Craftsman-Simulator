@@ -1,16 +1,16 @@
 [gd_scene load_steps=20 format=3 uid="uid://cc4eoydeq1jwv"]
 
 [ext_resource type="Script" path="res://ui/player_ui/TabContainer.gd" id="1_pp8q6"]
-[ext_resource type="Texture2D" uid="uid://b64wbqw154cxp" path="res://ui/player_ui/Options_Button.png" id="2_b7f4i"]
-[ext_resource type="PackedScene" uid="uid://biv5si5cbepod" path="res://ui/player_ui/checklist.tscn" id="2_leu6n"]
+[ext_resource type="Texture2D" uid="uid://b64wbqw154cxp" path="res://UI/player_ui/Options_Button.png" id="2_b7f4i"]
+[ext_resource type="PackedScene" uid="uid://biv5si5cbepod" path="res://UI/player_ui/checklist.tscn" id="2_leu6n"]
 [ext_resource type="Texture2D" uid="uid://dr813mjfqn5n4" path="res://assets/textures/warning_sample.jpg" id="2_xxoj5"]
-[ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://ui/player_ui/transition.tscn" id="4_egnei"]
-[ext_resource type="Texture2D" uid="uid://bpqopvth4yp87" path="res://ui/player_ui/1.png" id="4_rd1wi"]
-[ext_resource type="Texture2D" uid="uid://dc4qg4m7u1b48" path="res://ui/player_ui/2.png" id="5_28t3r"]
-[ext_resource type="PackedScene" uid="uid://ccfrjw5825ajn" path="res://ui/player_ui/settings.tscn" id="5_qw0s6"]
-[ext_resource type="Texture2D" uid="uid://dcdayfud0hwvm" path="res://ui/player_ui/3.png" id="6_yrla8"]
-[ext_resource type="Texture2D" uid="uid://dt5q7vaxyp3f0" path="res://ui/player_ui/4.png" id="7_s21hl"]
-[ext_resource type="Texture2D" uid="uid://rr2hodwwfv1h" path="res://ui/player_ui/5.png" id="8_r5003"]
+[ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://UI/player_ui/transition.tscn" id="4_egnei"]
+[ext_resource type="Texture2D" uid="uid://bpqopvth4yp87" path="res://UI/player_ui/1.png" id="4_rd1wi"]
+[ext_resource type="Texture2D" uid="uid://dc4qg4m7u1b48" path="res://UI/player_ui/2.png" id="5_28t3r"]
+[ext_resource type="PackedScene" uid="uid://ccfrjw5825ajn" path="res://UI/player_ui/settings.tscn" id="5_qw0s6"]
+[ext_resource type="Texture2D" uid="uid://dcdayfud0hwvm" path="res://UI/player_ui/3.png" id="6_yrla8"]
+[ext_resource type="Texture2D" uid="uid://dt5q7vaxyp3f0" path="res://UI/player_ui/4.png" id="7_s21hl"]
+[ext_resource type="Texture2D" uid="uid://rr2hodwwfv1h" path="res://UI/player_ui/5.png" id="8_r5003"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_748e5"]
 texture = ExtResource("2_b7f4i")
@@ -54,9 +54,12 @@ Panel/styles/panel = SubResource("StyleBoxTexture_cvin2")
 [node name="Control" type="Control"]
 process_mode = 3
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_pp8q6")
 
 [node name="ButtonSettings" type="Button" parent="."]
@@ -247,19 +250,11 @@ texture = ExtResource("8_r5003")
 position = Vector2(20, -76)
 
 [node name="Transition" parent="." instance=ExtResource("4_egnei")]
+visible = false
 
 [node name="Control" parent="." instance=ExtResource("5_qw0s6")]
 visible = false
 layout_mode = 1
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 693.0
-offset_top = 314.0
-offset_right = 693.0
-offset_bottom = 314.0
-grow_horizontal = 1
-grow_vertical = 1
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0

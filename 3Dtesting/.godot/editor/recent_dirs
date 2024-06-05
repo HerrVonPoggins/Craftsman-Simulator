@@ -1,3 +1,4 @@
+res://UI
 res://UI/player_ui
 res://mechanics/brick_cutting
 res://mechanics/build_wall
@@ -15,5 +16,4 @@ res://mechanics/Tools
 res://mechanics/PowerBox
 res://scenes/ElektrikerScene
 res://ui/player_ui
-res://UI
 res://mechanics/StudWall
