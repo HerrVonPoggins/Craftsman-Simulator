@@ -4,6 +4,12 @@ res://UI/player_ui/settings.tscn
 res://UI/player_ui/info hub.tscn
 res://ui/screens/titlescreen.tscn
 res://ui/player_ui/checklist.tscn
-res://scenes/CorePlayable/CorePlayable.tscn
-res://scripts/global.gd
-res://mechanics/cement-mixing/zementmischer.gd
+res://ui/screens/titlescreen.gd
+res://scripts/music.tscn
+res://addons/dialogue_manager/dialogue_label.tscn
+res://addons/dialogue_manager/example_balloon/example_balloon.tscn
+res://addons/dialogue_manager/example_balloon/small_example_balloon.tscn
+res://ui/player_ui/TabContainer.gd
+res://UI/player_ui/checklist.tscn
+res://ui/player_ui/Checklist.gd
+res://ui/player_ui/Settings.gd

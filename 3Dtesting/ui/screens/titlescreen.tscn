@@ -13,6 +13,53 @@ texture = ExtResource("2_u2qpo")
 [sub_resource type="Theme" id="Theme_o2eg2"]
 Panel/styles/panel = SubResource("StyleBoxTexture_vp2bl")
 
+[sub_resource type="Animation" id="Animation_55qsn"]
+resource_name = "Logo"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CraftsmanSimulatorLogo:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.896679, 0.896679), Vector2(1, 1), Vector2(0.896679, 0.896679)]
+}
+
+[sub_resource type="Animation" id="Animation_4rhgq"]
+resource_name = "Quit_exit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ButtonQuit:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.3, 1.3), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_o3qgk"]
+resource_name = "Quit_hover"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ButtonQuit:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.3, 1.3)]
+}
+
 [sub_resource type="Animation" id="Animation_axmk6"]
 length = 0.001
 tracks/0/type = "value"
@@ -64,37 +111,19 @@ tracks/3/keys = {
 "values": [Vector2(1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_23qvj"]
-resource_name = "fade_in"
-length = 0.5
+[sub_resource type="Animation" id="Animation_3k7w4"]
+resource_name = "Start_hover"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayer/ColorRect:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_55qsn"]
-resource_name = "Logo"
-length = 2.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CraftsmanSimulatorLogo:scale")
+tracks/0/path = NodePath("ButtonStart:scale")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0.896679, 0.896679), Vector2(1, 1), Vector2(0.896679, 0.896679)]
+"values": [Vector2(1, 1), Vector2(1.3, 1.3)]
 }
 
 [sub_resource type="Animation" id="Animation_74amg"]
@@ -112,49 +141,20 @@ tracks/0/keys = {
 "values": [Vector2(1.3, 1.3), Vector2(1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_3k7w4"]
-resource_name = "Start_hover"
+[sub_resource type="Animation" id="Animation_23qvj"]
+resource_name = "fade_in"
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ButtonStart:scale")
-tracks/0/interp = 2
+tracks/0/path = NodePath("AnimationPlayer/ColorRect:modulate")
+tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(1.3, 1.3)]
-}
-
-[sub_resource type="Animation" id="Animation_o3qgk"]
-resource_name = "Quit_hover"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ButtonQuit:scale")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(1.3, 1.3)]
-}
-
-[sub_resource type="Animation" id="Animation_4rhgq"]
-resource_name = "Quit_exit"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ButtonQuit:scale")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1.3, 1.3), Vector2(1, 1)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_byatd"]
