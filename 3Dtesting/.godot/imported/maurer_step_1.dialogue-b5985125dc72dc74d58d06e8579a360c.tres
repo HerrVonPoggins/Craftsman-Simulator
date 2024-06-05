@@ -45,7 +45,7 @@ lines = {
 "character": "Bauleiter",
 "character_replacements": Array[Dictionary]([]),
 "id": "5",
-"next_id": "7",
+"next_id": "6",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Als nächstes solltest du mit dem Maurer Bär sprechen.",
@@ -53,8 +53,31 @@ lines = {
 "translation_key": "Als nächstes solltest du mit dem Maurer Bär sprechen.",
 "type": &"dialogue"
 },
-"7": {
-"id": "7",
+"6": {
+"id": "6",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_count"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 2
+}]),
+"is_blocking": true
+},
+"next_id": "8",
+"type": &"mutation"
+},
+"8": {
+"id": "8",
 "is_snippet": false,
 "next_id": "end",
 "type": &"goto"
@@ -65,6 +88,7 @@ raw_text = "~ this_is_a_node_title
 Bauleiter: Super!
 Bauleiter: Die Arbeitskleidung passt zu dir.
 Bauleiter: Als nächstes solltest du mit dem Maurer Bär sprechen.
+set Global.dialogue_count = 2
 
 => END"
 metadata/dialogue_manager_version = "2.38.0"

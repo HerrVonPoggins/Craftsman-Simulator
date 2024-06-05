@@ -3,5 +3,6 @@
 Bauleiter: Super!
 Bauleiter: Die Arbeitskleidung passt zu dir.
 Bauleiter: Als nächstes solltest du mit dem Maurer Bär sprechen.
+set Global.dialogue_count = 2
 
 => END

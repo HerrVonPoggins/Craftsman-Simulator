@@ -1,5 +1,5 @@
 ~ this_is_a_node_title
-if Global.dialogue_count == 1:
+if Global.dialogue_count == 2:
 	set Global.dialogue_open = true
 	Maurer: Hey, du bist also der neue Praktikant, richtig?
 	Maurer: Schön dich kennenzulernen!
@@ -19,4 +19,7 @@ if Global.dialogue_count == 1:
 	Maurer: Verstanden?
 	set Global.dialogue_open = false
 	set Global.dialogue_count = 2
+elif Global.dialogue_count == 1:
+	Maurer: Hol dir bitte zuerst deine Arbeitskleidung und komm dann nochmal zu mir.
+	
 => END
