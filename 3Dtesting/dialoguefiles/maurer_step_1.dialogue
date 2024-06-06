@@ -1,8 +1,10 @@
 ~ this_is_a_node_title
 
+set Global.dialogue_open = true
 Bauleiter: Super!
 Bauleiter: Die Arbeitskleidung passt zu dir.
 Bauleiter: Komm als nächstes zurück zu mir.
 set Global.dialogue_count = 2
+set Global.dialogue_open = false
 
 => END

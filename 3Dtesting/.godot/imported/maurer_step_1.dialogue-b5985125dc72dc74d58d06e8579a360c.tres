@@ -17,17 +17,34 @@ lines = {
 "text": "this_is_a_node_title",
 "type": &"title"
 },
+"10": {
+"id": "10",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
 "3": {
-"character": "Bauleiter",
-"character_replacements": Array[Dictionary]([]),
 "id": "3",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
 "next_id": "4",
-"notes": "",
-"tags": PackedStringArray(),
-"text": "Super!",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Super!",
-"type": &"dialogue"
+"type": &"mutation"
 },
 "4": {
 "character": "Bauleiter",
@@ -36,9 +53,9 @@ lines = {
 "next_id": "5",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Die Arbeitskleidung passt zu dir.",
+"text": "Super!",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Die Arbeitskleidung passt zu dir.",
+"translation_key": "Super!",
 "type": &"dialogue"
 },
 "5": {
@@ -48,13 +65,25 @@ lines = {
 "next_id": "6",
 "notes": "",
 "tags": PackedStringArray(),
+"text": "Die Arbeitskleidung passt zu dir.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Die Arbeitskleidung passt zu dir.",
+"type": &"dialogue"
+},
+"6": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"notes": "",
+"tags": PackedStringArray(),
 "text": "Komm als nächstes zurück zu mir.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Komm als nächstes zurück zu mir.",
 "type": &"dialogue"
 },
-"6": {
-"id": "6",
+"7": {
+"id": "7",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -78,17 +107,36 @@ lines = {
 },
 "8": {
 "id": "8",
-"is_snippet": false,
-"next_id": "end",
-"type": &"goto"
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
+},
+"next_id": "10",
+"type": &"mutation"
 }
 }
 raw_text = "~ this_is_a_node_title
 
+set Global.dialogue_open = true
 Bauleiter: Super!
 Bauleiter: Die Arbeitskleidung passt zu dir.
 Bauleiter: Komm als nächstes zurück zu mir.
 set Global.dialogue_count = 2
+set Global.dialogue_open = false
 
 => END"
 metadata/dialogue_manager_version = "2.38.0"

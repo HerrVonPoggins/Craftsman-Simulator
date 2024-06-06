@@ -6,16 +6,39 @@
 script = ExtResource("1_agtrh")
 using_states = PackedStringArray()
 titles = {
-"this_is_a_node_title": "4"
+"this_is_a_node_title": "3"
 }
 character_names = PackedStringArray("Maurer")
-first_title = "4"
+first_title = "3"
 lines = {
 "1": {
 "id": "1",
-"next_id": "4",
+"next_id": "3",
 "text": "this_is_a_node_title",
 "type": &"title"
+},
+"3": {
+"id": "3",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
+"next_id": "4",
+"type": &"mutation"
 },
 "4": {
 "character": "Maurer",
@@ -45,13 +68,36 @@ lines = {
 "character": "Maurer",
 "character_replacements": Array[Dictionary]([]),
 "id": "6",
-"next_id": "8",
+"next_id": "7",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Danach hol deine Kelle mit Mörtel und schmiere Mörtel an die Seiten der Stürz.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Danach hol deine Kelle mit Mörtel und schmiere Mörtel an die Seiten der Stürz.",
 "type": &"dialogue"
+},
+"7": {
+"id": "7",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
+},
+"next_id": "8",
+"type": &"mutation"
 },
 "8": {
 "id": "8",
@@ -62,10 +108,10 @@ lines = {
 }
 raw_text = "~ this_is_a_node_title
 
-
+set Global.dialogue_open = true
 Maurer: Zum Abschluss deiner heutigen Aufgaben musst du noch die Tür- und Fensterstürze einbauen.
 Maurer: Dafür setzte die Stürze an die markierten Stellen in den Türen und Fenstern an.
 Maurer: Danach hol deine Kelle mit Mörtel und schmiere Mörtel an die Seiten der Stürz.
-
+set Global.dialogue_open = false
 => END"
 metadata/dialogue_manager_version = "2.38.0"

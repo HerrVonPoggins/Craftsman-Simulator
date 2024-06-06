@@ -12,4 +12,7 @@ func _process(delta):
 
 
 func _on_string_wedge_body_entered(body):
-	pass # Replace with function body.
+	if body.is_in_group("rod") and $".".visible == true:
+		body.queue_free()
+		$StringWedge/MeshInstance3D.visible = true
+		$StringWedge/MeshInstance3D2.queue_free()

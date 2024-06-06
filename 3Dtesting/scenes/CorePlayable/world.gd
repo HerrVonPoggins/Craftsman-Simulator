@@ -27,7 +27,7 @@ func _process(delta):
 	
 	
 	if Input.is_action_just_pressed("kamera"):
-		pass
+		Global.wall_finished = true
 	
 	if Global.tutorial_finished == true and counter == 0:
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_1.dialogue"))
@@ -42,19 +42,34 @@ func _process(delta):
 	
 	
 	if Global.wall_finished == true and played == false:
+		played = true
+		$"Root Scene/RootNode/geruest merged".visible = true
+		#$house_anim_1.visible = true
+		#$house_anim_1/AnimationPlayer.play("Scene")
+		#await  $house_anim_1/AnimationPlayer.animation_finished
+
+		#$house_anim_2.visible = true
+		#$house_anim_2/AnimationPlayer.play("Scene")
+		#await $house_anim_2/AnimationPlayer.animation_finished
+
+
+		$"Root Scene/RootNode/Wand Unten_006/StaticBody3D/CollisionShape3D".call_deferred("set_disabled", false)
 		$Doortop.visible = true
 		$Doortop2.visible = true
 		$Doortop3.visible = true
 		$Doortop4.visible = true
+		$Doortop5.visible = true
+		$Doortop6.visible = true
+		$Doortop7.visible = true
+		$Doortop8.visible = true
 		$Node3D.visible = true
 		$Node3D3.visible = true
 		$Node3D4.visible = true
-		$Node3D6.visible = true
-		$Node3D2.visible = true
+		$"Root Scene/RootNode/geruest merged".visible = true
 		played = true
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_4.dialogue"))
 		
-		if Global.door_top == 2 and Global.window_top == 4:
+		if Global.door_top == 8 and Global.window_top == 3:
 			DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/schlusstext.dialogue"))
 
 

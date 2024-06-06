@@ -1,4 +1,5 @@
 ~ this_is_a_node_title
+set Global.dialogue_open = true
 if Global.dialogue_count == 4:
 	Maurer: Perfekt! durch die Richtschnur hast du nun eine Orientierungslinie um deine Ziegel richtig zu setzen.
 	Maurer: Nun kommen wir zum Mauerbau.
@@ -10,4 +11,5 @@ if Global.dialogue_count == 4:
 	Maurer: Im Nebenraum ist eine Säge und ein Ziegel vorbereitet. Bitte nimm den Ziegel und Scheide ihn richtig zu.
 	Maurer: Wenn du die Reihe fertig gemacht hast musst du noch mit der Wasserwaage prüfen ob sie gerade ist. (lege die Wasserwaage auf die Mauerreihe)
 	set Global.dialogue_count = 5
+	set Global.dialogue_open = false
 => END
