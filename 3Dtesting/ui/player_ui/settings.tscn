@@ -1,13 +1,16 @@
-[gd_scene load_steps=53 format=3 uid="uid://ccfrjw5825ajn"]
+[gd_scene load_steps=70 format=3 uid="uid://ccfrjw5825ajn"]
 
 [ext_resource type="Script" path="res://ui/player_ui/Settings.gd" id="1_uylec"]
-[ext_resource type="Texture2D" uid="uid://dkkiap5oxgfek" path="res://ui/Settings_broken_down.png" id="2_su5ey"]
-[ext_resource type="Texture2D" uid="uid://fveyrb4au8lq" path="res://ui/Settings_exit.png" id="3_q8l33"]
-[ext_resource type="Texture2D" uid="uid://cq1g8v6tn74wi" path="res://ui/minus_Button.png" id="5_rvwqe"]
-[ext_resource type="Texture2D" uid="uid://4tcrvnajmyh7" path="res://ui/plus_Button.png" id="6_277k4"]
-[ext_resource type="Texture2D" uid="uid://xl1xkvnya3g5" path="res://ui/Fullscreen_right.png" id="8_i8xbu"]
-[ext_resource type="Texture2D" uid="uid://bh8rv6y64i5g2" path="res://ui/Fullscreen_left.png" id="9_xelbk"]
-[ext_resource type="PackedScene" uid="uid://crat4alhu2v8o" path="res://ui/player_ui/settings_regler.tscn" id="10_1ica6"]
+[ext_resource type="Texture2D" uid="uid://dkkiap5oxgfek" path="res://UI/Settings_broken_down.png" id="2_su5ey"]
+[ext_resource type="Texture2D" uid="uid://dgiw0i48qv61o" path="res://assets/textures/settings_menu_new.png" id="3_7a0e6"]
+[ext_resource type="Texture2D" uid="uid://fveyrb4au8lq" path="res://UI/Settings_exit.png" id="3_q8l33"]
+[ext_resource type="Texture2D" uid="uid://cq1g8v6tn74wi" path="res://UI/minus_Button.png" id="5_rvwqe"]
+[ext_resource type="Texture2D" uid="uid://4tcrvnajmyh7" path="res://UI/plus_Button.png" id="6_277k4"]
+[ext_resource type="Texture2D" uid="uid://c2sy7s8pf4kl8" path="res://assets/textures/Quit_button_settings.png" id="7_eo7xh"]
+[ext_resource type="Texture2D" uid="uid://xl1xkvnya3g5" path="res://UI/Fullscreen_right.png" id="8_i8xbu"]
+[ext_resource type="Texture2D" uid="uid://bh8rv6y64i5g2" path="res://UI/Fullscreen_left.png" id="9_xelbk"]
+[ext_resource type="PackedScene" uid="uid://crat4alhu2v8o" path="res://UI/player_ui/settings_regler.tscn" id="10_1ica6"]
+[ext_resource type="Texture2D" uid="uid://bhhk1l5sabkp6" path="res://assets/textures/settings_symbol.png" id="11_7v0kh"]
 
 [sub_resource type="Theme" id="Theme_noswb"]
 
@@ -92,6 +95,15 @@ texture = ExtResource("6_277k4")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pvly8"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ieojk"]
+texture = ExtResource("7_eo7xh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_shpw3"]
+texture = ExtResource("7_eo7xh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_46r33"]
+texture = ExtResource("7_eo7xh")
+
 [sub_resource type="Theme" id="Theme_6y3qx"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0bp1n"]
@@ -114,7 +126,266 @@ texture = ExtResource("6_277k4")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h5xqj"]
 
+[sub_resource type="Animation" id="Animation_lfv74"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("music_plus_button:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("music_minus_button:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sound_minus_button:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sens_minus_button:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("sens_plus_button:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("sound_plus_button:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("quit_game:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SettingsSymbol:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_giolg"]
+resource_name = "exit_game"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("quit_game:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_42d0o"]
+resource_name = "exit_menu"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_xjnnd"]
+resource_name = "music_minus"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("music_minus_button:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_noc51"]
+resource_name = "music_plus"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("music_plus_button:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1av0s"]
+resource_name = "sens_minus"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sens_minus_button:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_knwk2"]
+resource_name = "sens_plus"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sens_plus_button:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gvtwe"]
+resource_name = "settings_idle"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SettingsSymbol:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3, 4.5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.5708, 3.14159, 4.71239, 6.26573]
+}
+
+[sub_resource type="Animation" id="Animation_bbu18"]
+resource_name = "sound_minus"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sound_minus_button:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tm4sx"]
+resource_name = "sound_plus"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sound_plus_button:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nah3d"]
+_data = {
+"RESET": SubResource("Animation_lfv74"),
+"exit_game": SubResource("Animation_giolg"),
+"exit_menu": SubResource("Animation_42d0o"),
+"music_minus": SubResource("Animation_xjnnd"),
+"music_plus": SubResource("Animation_noc51"),
+"sens_minus": SubResource("Animation_1av0s"),
+"sens_plus": SubResource("Animation_knwk2"),
+"settings_idle": SubResource("Animation_gvtwe"),
+"sound_minus": SubResource("Animation_bbu18"),
+"sound_plus": SubResource("Animation_tm4sx")
+}
+
 [node name="Control" type="Control"]
+texture_filter = 6
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -128,15 +399,22 @@ size_flags_vertical = 4
 script = ExtResource("1_uylec")
 
 [node name="SettingsBrokenDown" type="Sprite2D" parent="."]
+visible = false
 scale = Vector2(0.515355, 0.515355)
 texture = ExtResource("2_su5ey")
 
+[node name="SettingsBrokenDown2" type="Sprite2D" parent="."]
+position = Vector2(-0.999975, -1.26544)
+scale = Vector2(0.454641, 0.454641)
+texture = ExtResource("3_7a0e6")
+
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 342.561
-offset_top = -487.54
-offset_right = 433.561
-offset_bottom = -396.54
+offset_left = 300.312
+offset_top = -482.729
+offset_right = 381.312
+offset_bottom = -401.729
+pivot_offset = Vector2(39.7434, 40.2195)
 theme = SubResource("Theme_noswb")
 theme_override_styles/normal = SubResource("StyleBoxTexture_twvs0")
 theme_override_styles/hover = SubResource("StyleBoxTexture_lgp0g")
@@ -146,11 +424,11 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_0gyf8")
 
 [node name="music_minus_button" type="Button" parent="."]
 layout_mode = 0
-offset_left = -380.0
-offset_top = -342.0
-offset_right = -209.0
-offset_bottom = -138.0
-scale = Vector2(0.517799, 0.517799)
+offset_left = -337.0
+offset_top = -355.0
+offset_right = -260.0
+offset_bottom = -263.0
+pivot_offset = Vector2(36.221, 46.744)
 theme = SubResource("Theme_5jba8")
 theme_override_styles/normal = SubResource("StyleBoxTexture_oevyp")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ahgp5")
@@ -160,10 +438,11 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_xf4nv")
 
 [node name="sound_minus_button" type="Button" parent="."]
 layout_mode = 0
-offset_left = -380.439
-offset_top = -142.54
-offset_right = -292.439
-offset_bottom = -37.5397
+offset_left = -337.0
+offset_top = -180.0
+offset_right = -260.0
+offset_bottom = -88.0
+pivot_offset = Vector2(36.221, 46.744)
 theme = SubResource("Theme_5jba8")
 theme_override_styles/normal = SubResource("StyleBoxTexture_oevyp")
 theme_override_styles/hover = SubResource("StyleBoxTexture_obk0l")
@@ -173,10 +452,11 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_k7sh2")
 
 [node name="sens_minus_button" type="Button" parent="."]
 layout_mode = 0
-offset_left = -379.439
-offset_top = 64.4603
-offset_right = -291.439
-offset_bottom = 169.46
+offset_left = -336.0
+offset_top = 3.0
+offset_right = -259.0
+offset_bottom = 95.0
+pivot_offset = Vector2(36.221, 46.744)
 theme = SubResource("Theme_5jba8")
 theme_override_styles/normal = SubResource("StyleBoxTexture_oevyp")
 theme_override_styles/hover = SubResource("StyleBoxTexture_u8um8")
@@ -185,11 +465,13 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_g3r7f")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_wf0sj")
 
 [node name="music_plus_button" type="Button" parent="."]
+texture_filter = 6
 layout_mode = 0
-offset_left = 292.561
-offset_top = -340.54
-offset_right = 380.561
-offset_bottom = -235.54
+offset_left = 257.0
+offset_top = -355.0
+offset_right = 334.0
+offset_bottom = -262.0
+pivot_offset = Vector2(36.2211, 46.7444)
 theme_override_styles/normal = SubResource("StyleBoxTexture_uj3ai")
 theme_override_styles/hover = SubResource("StyleBoxTexture_01yk0")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_urtod")
@@ -198,10 +480,11 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_st6yq")
 
 [node name="sound_plus_button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 292.561
-offset_top = -142.54
-offset_right = 380.561
-offset_bottom = -37.5397
+offset_left = 257.0
+offset_top = -180.0
+offset_right = 334.0
+offset_bottom = -87.0
+pivot_offset = Vector2(36.221, 46.744)
 theme_override_styles/normal = SubResource("StyleBoxTexture_uj3ai")
 theme_override_styles/hover = SubResource("StyleBoxTexture_8di1t")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_sfu02")
@@ -210,23 +493,37 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_ror15")
 
 [node name="sens_plus_button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 293.561
-offset_top = 64.4603
-offset_right = 381.561
-offset_bottom = 169.46
+offset_left = 258.0
+offset_top = 3.0
+offset_right = 335.0
+offset_bottom = 95.0
+pivot_offset = Vector2(36.221, 46.744)
 theme_override_styles/normal = SubResource("StyleBoxTexture_uj3ai")
 theme_override_styles/hover = SubResource("StyleBoxTexture_r5iap")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_dkxto")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_crssh")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_pvly8")
 
+[node name="quit_game" type="Button" parent="."]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 264.0
+offset_right = 265.0
+offset_bottom = 344.0
+pivot_offset = Vector2(49.496, 33.9251)
+theme_override_styles/normal = SubResource("StyleBoxTexture_ieojk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_shpw3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_46r33")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_crssh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pvly8")
+
 [node name="CheckButton" type="CheckButton" parent="."]
 layout_mode = 0
-offset_left = 183.561
-offset_top = 244.46
-offset_right = 416.561
-offset_bottom = 357.46
-scale = Vector2(0.52069, 0.52069)
+offset_left = 161.4
+offset_top = 160.186
+offset_right = 394.4
+offset_bottom = 273.186
+scale = Vector2(0.443357, 0.443357)
 theme = SubResource("Theme_6y3qx")
 theme_override_icons/checked = ExtResource("9_xelbk")
 theme_override_icons/unchecked = ExtResource("8_i8xbu")
@@ -238,11 +535,11 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_2cajj")
 
 [node name="SensivityContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = -271.0
-offset_top = 82.0
-offset_right = 824.0
-offset_bottom = 220.0
-scale = Vector2(0.498617, 0.498617)
+offset_left = -240.527
+offset_top = 19.3364
+offset_right = 854.473
+offset_bottom = 157.336
+scale = Vector2(0.44, 0.44)
 theme_override_constants/separation = 5
 
 [node name="Regler_Button_1" parent="SensivityContainer" instance=ExtResource("10_1ica6")]
@@ -295,11 +592,11 @@ mouse_filter = 1
 
 [node name="SoundContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = -271.0
-offset_top = -124.533
-offset_right = 824.0
-offset_bottom = 13.467
-scale = Vector2(0.498617, 0.498617)
+offset_left = -240.527
+offset_top = -163.914
+offset_right = 854.473
+offset_bottom = -25.9136
+scale = Vector2(0.44, 0.44)
 theme_override_constants/separation = 5
 
 [node name="Regler_Button_1" parent="SoundContainer" instance=ExtResource("10_1ica6")]
@@ -352,11 +649,11 @@ mouse_filter = 1
 
 [node name="MusicContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = -271.0
-offset_top = -323.209
-offset_right = 824.0
-offset_bottom = -185.209
-scale = Vector2(0.498617, 0.498617)
+offset_left = -240.527
+offset_top = -338.814
+offset_right = 854.473
+offset_bottom = -200.814
+scale = Vector2(0.44, 0.44)
 theme_override_constants/separation = 5
 
 [node name="Regler_Button_1" parent="MusicContainer" instance=ExtResource("10_1ica6")]
@@ -452,6 +749,29 @@ min_value = 0.005
 max_value = 0.09
 value = 0.01
 
+[node name="SettingsPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nah3d")
+}
+
+[node name="SettingsIdlePlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nah3d")
+}
+autoplay = "settings_idle"
+
+[node name="SettingsSymbol" type="Sprite2D" parent="."]
+position = Vector2(-1.33203, 419.268)
+scale = Vector2(0.465278, 0.465277)
+texture = ExtResource("11_7v0kh")
+
+[node name="ExitTimer" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+
+[node name="QuitTimer" type="Timer" parent="."]
+wait_time = 0.4
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="music_minus_button" to="." method="_on_music_minus_button_pressed"]
 [connection signal="pressed" from="sound_minus_button" to="." method="_on_sound_minus_button_pressed"]
@@ -459,7 +779,10 @@ value = 0.01
 [connection signal="pressed" from="music_plus_button" to="." method="_on_music_plus_button_pressed"]
 [connection signal="pressed" from="sound_plus_button" to="." method="_on_sound_plus_button_pressed"]
 [connection signal="pressed" from="sens_plus_button" to="." method="_on_sens_plus_button_pressed"]
+[connection signal="pressed" from="quit_game" to="." method="_on_quit_game_pressed"]
 [connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="scrolling" from="Volume" to="." method="_on_volume_scrolling"]
 [connection signal="scrolling" from="Volume2" to="." method="_on_volume_2_scrolling"]
 [connection signal="scrolling" from="MouseSens" to="." method="_on_mouse_sens_scrolling"]
+[connection signal="timeout" from="ExitTimer" to="." method="_on_exit_timer_timeout"]
+[connection signal="timeout" from="QuitTimer" to="." method="_on_quit_timer_timeout"]

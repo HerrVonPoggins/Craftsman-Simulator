@@ -1,15 +1,14 @@
-[gd_scene load_steps=20 format=3 uid="uid://cc4eoydeq1jwv"]
+[gd_scene load_steps=19 format=3 uid="uid://cc4eoydeq1jwv"]
 
 [ext_resource type="Script" path="res://ui/player_ui/TabContainer.gd" id="1_pp8q6"]
-[ext_resource type="Texture2D" uid="uid://b64wbqw154cxp" path="res://ui/player_ui/Options_Button.png" id="2_b7f4i"]
-[ext_resource type="PackedScene" uid="uid://biv5si5cbepod" path="res://ui/player_ui/checklist.tscn" id="2_leu6n"]
-[ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://ui/player_ui/transition.tscn" id="4_egnei"]
-[ext_resource type="PackedScene" uid="uid://ccfrjw5825ajn" path="res://ui/player_ui/settings.tscn" id="5_qw0s6"]
-[ext_resource type="Texture2D" uid="uid://cpixxm65ujhws" path="res://ui/Quit_Button.png" id="8_bgu1x"]
-[ext_resource type="Texture2D" uid="uid://dqiduk4bv4lr5" path="res://ui/Coming_soon.png" id="9_56ss8"]
-[ext_resource type="Texture2D" uid="uid://dw5h2wlrh5ob0" path="res://ui/Log_Buch.png" id="12_btghm"]
-[ext_resource type="Texture2D" uid="uid://ct23mbhdbwecb" path="res://ui/Log-Buch_Open.png" id="13_qmlyq"]
-[ext_resource type="Texture2D" uid="uid://nhi4c87607cc" path="res://ui/Maurer_Logbuch.png" id="14_i5ynq"]
+[ext_resource type="Texture2D" uid="uid://b64wbqw154cxp" path="res://UI/player_ui/Options_Button.png" id="2_b7f4i"]
+[ext_resource type="PackedScene" uid="uid://biv5si5cbepod" path="res://UI/player_ui/checklist.tscn" id="2_leu6n"]
+[ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://UI/player_ui/transition.tscn" id="4_egnei"]
+[ext_resource type="PackedScene" uid="uid://ccfrjw5825ajn" path="res://UI/player_ui/settings.tscn" id="5_qw0s6"]
+[ext_resource type="Texture2D" uid="uid://dqiduk4bv4lr5" path="res://UI/Coming_soon.png" id="9_56ss8"]
+[ext_resource type="Texture2D" uid="uid://dw5h2wlrh5ob0" path="res://UI/Log_Buch.png" id="12_btghm"]
+[ext_resource type="Texture2D" uid="uid://ct23mbhdbwecb" path="res://UI/Log-Buch_Open.png" id="13_qmlyq"]
+[ext_resource type="Texture2D" uid="uid://nhi4c87607cc" path="res://UI/Maurer_Logbuch.png" id="14_i5ynq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_748e5"]
 texture = ExtResource("2_b7f4i")
@@ -208,9 +207,9 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -274.0
+offset_left = -146.0
 offset_top = 28.0
-offset_right = 195.0
+offset_right = 323.0
 offset_bottom = 544.0
 grow_horizontal = 0
 scale = Vector2(0.206334, 0.206334)
@@ -219,23 +218,6 @@ texture_pressed = ExtResource("2_b7f4i")
 texture_hover = ExtResource("2_b7f4i")
 texture_disabled = ExtResource("2_b7f4i")
 texture_focused = ExtResource("2_b7f4i")
-
-[node name="Quit_Button" type="TextureButton" parent="."]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -148.0
-offset_top = 28.0
-offset_right = 517.0
-offset_bottom = 760.0
-grow_horizontal = 0
-scale = Vector2(0.145107, 0.145107)
-texture_normal = ExtResource("8_bgu1x")
-texture_pressed = ExtResource("8_bgu1x")
-texture_hover = ExtResource("8_bgu1x")
-texture_disabled = ExtResource("8_bgu1x")
-texture_focused = ExtResource("8_bgu1x")
 
 [node name="Job_Buch_Open" type="Sprite2D" parent="."]
 visible = false
@@ -370,7 +352,6 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_id4j3")
 [connection signal="pressed" from="ButtonChecklist" to="." method="_on_button_checklist_pressed"]
 [connection signal="pressed" from="Job_Buch" to="." method="_on_job_buch_pressed"]
 [connection signal="pressed" from="Setting_Button" to="." method="_on_setting_button_pressed"]
-[connection signal="pressed" from="Quit_Button" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="Job_Buch_Open/Zimmermann_Button" to="." method="_on_zimmermann_button_pressed"]
 [connection signal="pressed" from="Job_Buch_Open/Maurer_Button" to="." method="_on_maurer_button_pressed"]
 [connection signal="pressed" from="Job_Buch_Open/Elektriker_Button" to="." method="_on_elektriker_button_pressed"]

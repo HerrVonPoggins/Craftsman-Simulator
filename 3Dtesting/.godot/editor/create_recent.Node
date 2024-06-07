@@ -1,8 +1,10 @@
+TextureProgressBar
+Timer
+AnimationPlayer
 StaticBody3D
 CollisionShape3D
 RichTextLabel
 TextureRect
-AnimationPlayer
 TextEdit
 Control
 Button
@@ -10,5 +12,3 @@ TextureButton
 HBoxContainer
 CheckButton
 CheckBox
-MeshInstance3D
-RigidBody3D

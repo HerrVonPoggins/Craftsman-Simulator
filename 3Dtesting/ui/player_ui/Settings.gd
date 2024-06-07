@@ -5,6 +5,7 @@ func _ready():
 	_check_sens()
 	_check_music()
 	_check_sound()
+	#$SettingsPlayer.play("settings_idle")
 
 func _check_sens():
 	var button_container = $SensivityContainer
@@ -42,10 +43,12 @@ func _process(delta):
 
 func _on_button_pressed():
 	Music._play_button()
-	$".".visible = false
+	$SettingsPlayer.play("exit_menu")
+	$ExitTimer.start()
 
 
 func _on_music_minus_button_pressed():
+	$SettingsPlayer.play("music_minus")
 	if Global.musik_count == 1:
 		pass
 	else:
@@ -54,6 +57,7 @@ func _on_music_minus_button_pressed():
 		$Volume.value -= 20
 
 func _on_music_plus_button_pressed():
+	$SettingsPlayer.play("music_plus")
 	if Global.musik_count == 12:
 		pass
 	else:
@@ -62,6 +66,7 @@ func _on_music_plus_button_pressed():
 		$Volume.value += 20
 
 func _on_sound_minus_button_pressed():
+	$SettingsPlayer.play("sound_minus")
 	if Global.sound_count == 1:
 		pass
 	else:
@@ -70,6 +75,7 @@ func _on_sound_minus_button_pressed():
 		$Volume2.value -= 20
 
 func _on_sound_plus_button_pressed():
+	$SettingsPlayer.play("sound_plus")
 	if Global.sound_count == 12:
 		pass
 	else:
@@ -78,6 +84,7 @@ func _on_sound_plus_button_pressed():
 		$Volume2.value += 20
 
 func _on_sens_minus_button_pressed():
+	$SettingsPlayer.play("sens_minus")
 	if Global.mouse_sense == 1:
 		pass
 	else:
@@ -86,12 +93,18 @@ func _on_sens_minus_button_pressed():
 		$MouseSens.value -= 0.01
 
 func _on_sens_plus_button_pressed():
+	$SettingsPlayer.play("sens_plus")
 	if Global.mouse_sense == 12:
 		pass
 	else:
 		Global.mouse_sense += 1
 		_check_sens()
 		$MouseSens.value += 0.01
+		
+func _on_quit_game_pressed():
+	$SettingsPlayer.play("exit_game")
+	$QuitTimer.start()
+
 
 func _on_volume_scrolling():
 	Music.volume = $Volume.value
@@ -112,3 +125,10 @@ func _on_check_button_toggled(toggled_on):
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
 
+
+func _on_exit_timer_timeout():
+	$".".hide()
+
+
+func _on_quit_timer_timeout():
+	get_tree().quit()
