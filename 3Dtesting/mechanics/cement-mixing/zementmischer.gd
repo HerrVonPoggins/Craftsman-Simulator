@@ -12,6 +12,7 @@ var sand_level_1 = false
 var sand_level_2 = false
 var sand_level_3 = false
 
+
 @onready var concrete_bucket_obj = $"../Props/ConcreteBucketObj"
 @onready var collision_shape_3d = $"../Props/ConcreteBucketObj/CollisionShape3D"
 @onready var sand_value = $SandValue
@@ -29,13 +30,17 @@ func _process(delta):
 			water_value.value += 100 * delta
 	if water_value.value >= 100:
 		water_value.value = 100
-		water_filled = true
+		if water_filled == false:
+			emit_signal("sand_level_reached")
+			water_filled = true
 	if concrete == true: #and Global.tutorial_finished == true:
 		if Input.is_action_pressed("leftclick"):
 			cement_value.value += 100 * delta
 	if cement_value.value >= 100:
 		cement_value.value = 100
-		cement_filled = true
+		if cement_filled == false:
+			emit_signal("sand_level_reached")
+			cement_filled = true
 	if sand == true: #and Global.tutorial_finished == true:
 		if Input.is_action_pressed("leftclick"):
 			sand_value.value += 25 * delta
@@ -53,7 +58,9 @@ func _process(delta):
 			sand_level_3 = true
 	if sand_value.value >= 100:
 		sand_value.value = 100
-		sand_filled = true
+		if sand_filled == false:
+			emit_signal("sand_level_reached")
+			sand_filled = true
 	#mechanic to fill water and concretebag into the mixer
 func _on_range_body_entered(body):
 	if body.is_in_group("water"):
