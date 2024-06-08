@@ -1,5 +1,5 @@
-res://mechanics/cement-mixing/zementmischer.tscn
+res://scenes/CorePlayable/CorePlayable.tscn
 res://scenes/Carpenter/carpenter_world.gd
 res://Settings.gd
-res://mechanics/cement-mixing/zementmischer.gd
-res://scenes/CorePlayable/CorePlayable.tscn
+res://ui/screens/titlescreen.tscn
+res://mechanics/cement-mixing/zementmischer.tscn
