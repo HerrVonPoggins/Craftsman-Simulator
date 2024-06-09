@@ -163,7 +163,6 @@ scale = Vector2(0.469853, 0.469853)
 texture = ExtResource("2_8bsti")
 
 [node name="WaterValue" type="TextureProgressBar" parent="."]
-z_index = 1
 offset_left = 1276.0
 offset_top = 91.0
 offset_right = 1409.0
@@ -185,6 +184,7 @@ offset_top = 91.0
 offset_right = 1955.0
 offset_bottom = 241.0
 scale = Vector2(0.469958, 0.467629)
+max_value = 400.0
 texture_progress = ExtResource("3_jmknd")
 
 [connection signal="body_entered" from="Range" to="." method="_on_range_body_entered"]

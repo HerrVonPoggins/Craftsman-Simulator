@@ -2,6 +2,8 @@ extends Node3D
 
 signal sand_level_reached
 
+var minigame_started = false
+
 var water = false
 var concrete = false
 var water_filled = false
@@ -18,13 +20,20 @@ var sand_level_3 = false
 @onready var sand_value = $SandValue
 @onready var water_value = $WaterValue
 @onready var cement_value = $CementValue
+@onready var moertel_progress_bar = $MoertelProgressBar
 
 func _ready():
+	moertel_progress_bar.visible = false
 	cement_value.visible = false
 	water_value.visible = false
 	sand_value.visible = false
 
 func _process(delta):
+	if minigame_started == true:
+		moertel_progress_bar.visible = true
+		cement_value.visible = true
+		water_value.visible = true
+		sand_value.visible = true
 	if water == true: #and Global.tutorial_finished == true:
 		if Input.is_action_pressed("leftclick"):
 			water_value.value += 100 * delta
@@ -43,41 +52,38 @@ func _process(delta):
 			cement_filled = true
 	if sand == true: #and Global.tutorial_finished == true:
 		if Input.is_action_pressed("leftclick"):
-			sand_value.value += 25 * delta
-	if sand_value.value >= 25:
+			sand_value.value += 100 * delta
+	if sand_value.value >= 100:
 		if sand_level_1 == false:
 			emit_signal("sand_level_reached")
 			sand_level_1 = true
-	if sand_value.value >= 50:
+	if sand_value.value >= 200:
 		if sand_level_2 == false:
 			emit_signal("sand_level_reached")
 			sand_level_2 = true
-	if sand_value.value >= 75:
+	if sand_value.value >= 300:
 		if sand_level_3 == false:
 			emit_signal("sand_level_reached")
 			sand_level_3 = true
-	if sand_value.value >= 100:
-		sand_value.value = 100
+	if sand_value.value >= 400:
+		sand_value.value = 400
 		if sand_filled == false:
 			emit_signal("sand_level_reached")
 			sand_filled = true
 	#mechanic to fill water and concretebag into the mixer
 func _on_range_body_entered(body):
 	if body.is_in_group("water"):
-		water_value.visible = true
-		cement_value.visible = true
-		sand_value.visible = true
 		water = true
+		if minigame_started == false:
+			minigame_started = true
 	if body.is_in_group("concrete"):
-		water_value.visible = true
-		cement_value.visible = true
-		sand_value.visible = true
 		concrete = true
+		if minigame_started == false:
+			minigame_started = true
 	if body.is_in_group("sand"):
-		water_value.visible = true
-		sand_value.visible = true
-		cement_value.visible = true
 		sand = true
+		if minigame_started == false:
+			minigame_started = true
 
 func _on_player_start_mixer():
 	if water_filled == true and cement_filled == true and sand_filled == true:
@@ -87,9 +93,15 @@ func _on_player_start_mixer():
 		collision_shape_3d.disabled = false
 		water = false
 		concrete = false
+		sand = false
+
 		Global.concrete_mixed = true
 		Global.dialogue_count = 3
 		Global.dialogue_replay = null
+#after the mixer starts the progress bars become invisible
+		cement_value.visible = false
+		water_value.visible = false
+		sand_value.visible = false
 	else:
 		Global.dialogue_replay = 1
 		
@@ -97,17 +109,8 @@ func _on_player_start_mixer():
 
 func _on_range_body_exited(body):
 	if body.is_in_group("water"):
-		water_value.visible = false
-		cement_value.visible = false
-		sand_value.visible = false
 		water = false
 	if body.is_in_group("concrete"):
-		water_value.visible = false
-		cement_value.visible = false
-		sand_value.visible = false
 		concrete = false
 	if body.is_in_group("sand"):
-		water_value.visible = false
-		cement_value.visible = false
-		sand_value.visible = false
 		sand = false
