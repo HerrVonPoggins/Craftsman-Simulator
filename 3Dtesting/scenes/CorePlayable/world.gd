@@ -4,7 +4,7 @@ var mat1 = load("res://assets/textures/material_white.tres")
 var counter = 0
 var played = false
 var diealogue_played = 0
-
+var done = false
 #plays the animation to fade into the scene from the black screen
 func _ready():
 	Music._play_bricklayer()
@@ -18,13 +18,25 @@ func _ready():
 	#when the wall is build the animation to fill in the remaining bricks and a praise dialogue is started
 func _process(delta):
 
-	
-	
+	if Global.rods == 5:
+		pass
+
+
+
+	if Global.concrete_mixed == true and $Area3D/Bucket_water2.visible == false and done == false:
+		$Area3D/Bucket_water2.visible = true
+		$Area3D/Timer.start()
+		$Props/ConcreteBucket/CollisionShape3D.call_deferred("set_disabled", false)
+		done = true
+
+
+
 	if $Node3D5.visible == true or $Node3D7.visible == true or $Node3D8.visible == true or $Node3D9.visible == true:
 		$Player.visible = false
 	else:
 		$Player.visible = true
-	
+
+
 	if Global.concrete_1 == true:
 		$"Area3D2/mörtel".visible = true
 	if Global.concrete_2 == true:
@@ -79,9 +91,13 @@ func _process(delta):
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_4.dialogue"))
 		
 		if Global.door_top == 4 and Global.window_top == 0:
-			DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/schlusstext.dialogue"))
-
-
+			DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_5.dialogue"))
+			$Rod.visible = true
+			$Rod2.visible = true
+			$Rod3.visible = true
+			$Rod4.visible = true
+			$Rod5.visible = true
+			
 
 #functions for the info hub to pause the scene
 func _on_control_opened():
@@ -155,8 +171,9 @@ func _on_saw_camera_brick_cut_correct():
 	$Props/Brick3.visible = true
 	Global.stay = false
 	$Player/CharacterBody3D/Neck/Camera3D.current = true
-
-
+	$Props/Brick3/CollisionShape3D.call_deferred("set_disabled", false)
+	
+	$Props/Brick3.freeze = false
 
 
 
@@ -164,8 +181,10 @@ func _on_saw_camera_brick_cut_correct():
 func _on_area_3d_body_entered(body):
 	if body.is_in_group("concretebucket"):
 		body.queue_free()
-		$Area3D/Bucket_water2.queue_free()
+		#$Area3D/Bucket_water2.queue_free()
+		$Area3D/Timer.stop()
 		$Area3D/ConcreteBucketObj.visible = true
+		$Area3D/Bucket_water2.visible == false
 
 
 func _on_timer_timeout():

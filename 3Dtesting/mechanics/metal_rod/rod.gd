@@ -14,5 +14,6 @@ func _process(delta):
 func _on_string_wedge_body_entered(body):
 	if body.is_in_group("rod") and $".".visible == true:
 		body.queue_free()
+		Global.rods += 1
 		$StringWedge/Cube_001.visible = true
 		$StringWedge/MeshInstance3D2.queue_free()
