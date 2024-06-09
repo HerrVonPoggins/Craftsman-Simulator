@@ -16,7 +16,7 @@ var work_clothes = 0
 #The Raycast shoots a laser for a fixed range, on collision with something we can get the object  and check if it is in group "grab"
 #a object in group "grab" will then fixed on the hold point of the character until we release it.
 func _process(delta):
-	if Global.press_e == true and obj == null:
+	if Global.press_e == true and obj == null and get_collider() != null:
 		$"../../../../Label".visible = true
 	else:
 		$"../../../../Label".visible = false

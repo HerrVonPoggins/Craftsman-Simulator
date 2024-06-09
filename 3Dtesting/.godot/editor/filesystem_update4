@@ -15,3 +15,7 @@ res://scripts/music.tscn
 res://scripts/music.gd
 res://mechanics/Player/GroundIdentifier.gd
 res://scripts/global.gd
+res://mechanics/cement-mixing/zementmischer.tscn
+res://ui/player_ui/settings.tscn
+res://ui/player_ui/Settings.gd
+res://ui/player_ui/settings_regler.tscn

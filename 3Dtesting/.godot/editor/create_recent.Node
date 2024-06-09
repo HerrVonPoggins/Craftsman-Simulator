@@ -1,8 +1,8 @@
+CollisionShape3D
 Label
 MeshInstance3D
 Area3D
 Node3D
-CollisionShape3D
 RigidBody3D
 Timer
 Sprite3D
@@ -12,4 +12,3 @@ AnimationPlayer
 Camera3D
 CharacterBody3D
 RichTextLabel
-TextEdit

@@ -51,6 +51,7 @@ func _on_music_minus_button_pressed():
 	else:
 		Global.musik_count -= 1
 		_check_music()
+		Music.volume -= 20
 		$Volume.value -= 20
 
 func _on_music_plus_button_pressed():
@@ -59,6 +60,7 @@ func _on_music_plus_button_pressed():
 	else:
 		Global.musik_count += 1
 		_check_music()
+		Music.volume += 20
 		$Volume.value += 20
 
 func _on_sound_minus_button_pressed():
@@ -67,6 +69,7 @@ func _on_sound_minus_button_pressed():
 	else:
 		Global.sound_count -= 1
 		_check_sound()
+		Music.effects -= 20
 		$Volume2.value -= 20
 
 func _on_sound_plus_button_pressed():
@@ -75,6 +78,7 @@ func _on_sound_plus_button_pressed():
 	else:
 		Global.sound_count += 1
 		_check_sound()
+		Music.volume += 20
 		$Volume2.value += 20
 
 func _on_sens_minus_button_pressed():
@@ -83,6 +87,7 @@ func _on_sens_minus_button_pressed():
 	else:
 		Global.mouse_sense -= 1
 		_check_sens()
+		Global.mouse_sensitivity -= 0.1
 		$MouseSens.value -= 0.01
 
 func _on_sens_plus_button_pressed():
@@ -91,6 +96,7 @@ func _on_sens_plus_button_pressed():
 	else:
 		Global.mouse_sense += 1
 		_check_sens()
+		Global.mouse_sensitivity += 0.1
 		$MouseSens.value += 0.01
 
 func _on_volume_scrolling():
