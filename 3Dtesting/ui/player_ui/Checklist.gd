@@ -25,21 +25,32 @@ extends Control
 @export var label_text_4 = "Mauer bauen"
 @export var label_text_5 = "Tuersturz plazieren"
 
+var opened = true
 
 
 #functions to switch set the checklist details
 func _process(delta):
-	_check_1_on(check_state_1)
-	_check_2_on(check_state_2)
-	_check_3_on(check_state_3)
-	_check_4_on(check_state_4)
-	_check_5_on(check_state_5)
-	_set_label_1_text(label_text_1)
-	_set_label_2_text(label_text_2)
-	_set_label_3_text(label_text_3)
-	_set_label_4_text(label_text_4)
-	_set_label_5_text(label_text_5)
-	
+	#_check_1_on(check_state_1)
+	#_check_2_on(check_state_2)
+	#_check_3_on(check_state_3)
+	#_check_4_on(check_state_4)
+	#_check_5_on(check_state_5)
+	#_set_label_1_text(label_text_1)
+	#_set_label_2_text(label_text_2)
+	#_set_label_3_text(label_text_3)
+	#_set_label_4_text(label_text_4)
+	#_set_label_5_text(label_text_5)
+	if Input.is_action_just_pressed("interagieren"):
+		if opened == true:
+			$QuestPlayer.play("Quest_revert")
+			opened = false
+		elif opened == false:
+			$QuestPlayer.play("Quest_expand")
+			opened = true
+	if Input.is_action_just_pressed("back"):
+		$InteractionPlayer.play("interaction_popup_pickup_intro")
+	if Input.is_action_just_pressed("right"):
+		$InteractionPlayer.play("interaction_popup_pickup_quit")
 	
 func _set_label_1_text(string):
 	label_1.set_text(string)
