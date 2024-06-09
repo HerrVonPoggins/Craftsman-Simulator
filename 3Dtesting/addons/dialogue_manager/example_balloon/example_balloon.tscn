@@ -133,10 +133,10 @@ text = "Dialogue..."
 [node name="HBoxContainer" type="HBoxContainer" parent="Balloon/Panel"]
 custom_minimum_size = Vector2(275, 0)
 layout_mode = 2
-offset_left = 23.0
-offset_top = 15.0
-offset_right = 307.0
-offset_bottom = 247.0
+offset_left = 22.0
+offset_top = -24.0
+offset_right = 304.0
+offset_bottom = 225.0
 size_flags_horizontal = 0
 
 [node name="TextureRect" type="TextureRect" parent="Balloon/Panel/HBoxContainer"]

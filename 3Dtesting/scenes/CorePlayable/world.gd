@@ -1,6 +1,6 @@
 extends Node3D
 
-
+var mat1 = load("res://assets/textures/material_white.tres")
 var counter = 0
 var played = false
 var diealogue_played = 0
@@ -17,6 +17,11 @@ func _ready():
 	
 	#when the wall is build the animation to fill in the remaining bricks and a praise dialogue is started
 func _process(delta):
+	if $Node3D5.visible == true or $Node3D7.visible == true or $Node3D8.visible == true or $Node3D9.visible == true:
+		$Player.visible = false
+	else:
+		$Player.visible = true
+	
 	if Global.concrete_1 == true:
 		$"Area3D2/mörtel".visible = true
 	if Global.concrete_2 == true:
@@ -27,8 +32,9 @@ func _process(delta):
 	
 	
 	if Input.is_action_just_pressed("kamera"):
-		Global.wall_finished = true
-	
+		pass
+		
+		
 	if Global.tutorial_finished == true and counter == 0:
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_1.dialogue"))
 		counter = 0.5
@@ -146,3 +152,14 @@ func _on_saw_camera_brick_cut_correct():
 	$Props/Brick3.visible = true
 	Global.stay = false
 	$Player/CharacterBody3D/Neck/Camera3D.current = true
+
+
+
+
+
+
+func _on_area_3d_body_entered(body):
+	if body.is_in_group("concretebucket"):
+		body.queue_free()
+		$Area3D/Bucket_water2.queue_free()
+		$Area3D/ConcreteBucketObj.visible = true
