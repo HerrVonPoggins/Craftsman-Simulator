@@ -4,7 +4,14 @@ res://Settings.gd
 res://scenes/CorePlayable/CorePlayable.tscn
 res://mechanics/Player/node_3d.tscn
 res://mechanics/craneminigame/craneminigame.tscn
-res://scenes/CorePlayable/world.gd
-res://mechanics/craneminigame/crane.gd
 res://mechanics/metal_rod/rod.tscn
-res://mechanics/metal_rod/rod.gd
+res://scenes/CorePlayable/world.gd
+res://mechanics/craneminigame/craneminigame.gd
+res://mechanics/craneminigame/crane.gd
+res://mechanics/Player/RayCast3D.gd
+res://mechanics/build_wall/Doortop.tscn
+res://mechanics/build_wall/Doortop.gd
+res://scripts/music.tscn
+res://scripts/music.gd
+res://mechanics/Player/GroundIdentifier.gd
+res://scripts/global.gd

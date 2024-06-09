@@ -43,8 +43,9 @@ func _process(delta):
 		#Global.swap_floor = false
 		
 
-	#if Input.is_action_just_pressed("kamera"):
-		#print(Global.is_walking)
-		#print(Global.walking_on.get_instance_id())
-		#print(Global.ground_grass)
+	if Input.is_action_just_pressed("kamera"):
+		print(Global.is_walking)
+		print(Global.walking_on.get_instance_id())
+		print(Global.ground_grass)
+		print(Global.ground_floor)
 

@@ -8,7 +8,7 @@ var diealogue_played = 0
 #plays the animation to fade into the scene from the black screen
 func _ready():
 	Music._play_bricklayer()
-	Global.ground_floor = $"Root Scene/RootNode/Bodenplatte_001".get_instance_id()
+	Global.ground_floor = $"Root Scene/RootNode/Bodenplatte_001/StaticBody3D".get_instance_id()
 	Global.ground_grass = $Map/Boden/MapGround.get_instance_id()
 	Global.current_scene = 1
 	DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_intro.dialogue"))
@@ -17,6 +17,9 @@ func _ready():
 	
 	#when the wall is build the animation to fill in the remaining bricks and a praise dialogue is started
 func _process(delta):
+
+	
+	
 	if $Node3D5.visible == true or $Node3D7.visible == true or $Node3D8.visible == true or $Node3D9.visible == true:
 		$Player.visible = false
 	else:
@@ -75,7 +78,7 @@ func _process(delta):
 		played = true
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_4.dialogue"))
 		
-		if Global.door_top == 8 and Global.window_top == 3:
+		if Global.door_top == 4 and Global.window_top == 0:
 			DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/schlusstext.dialogue"))
 
 
@@ -163,3 +166,13 @@ func _on_area_3d_body_entered(body):
 		body.queue_free()
 		$Area3D/Bucket_water2.queue_free()
 		$Area3D/ConcreteBucketObj.visible = true
+
+
+func _on_timer_timeout():
+		if $Area3D/ConcreteBucketObj.visible == false:
+			if $Area3D/Bucket_water2.visible == true:
+				$Area3D/Bucket_water2.visible = false
+			elif $Area3D/Bucket_water2.visible == false:
+				$Area3D/Bucket_water2.visible = true
+
+	
