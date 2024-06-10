@@ -8,6 +8,14 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if Input.is_action_just_pressed("kamera"):
+		$"Root Scene/AnimationPlayer".play("Kran teil1|Ausfahren1")
+		await $"Root Scene/AnimationPlayer".animation_finished
+		$"Root Scene/AnimationPlayer".play("Kran teil2|Ausfahren2")
+		#await $"Root Scene/AnimationPlayer".animation_finished
+	
+	
+	
 	if obj != null:
 		obj.global_transform = $CharacterBody3D/Area3D/Hold.global_transform
 

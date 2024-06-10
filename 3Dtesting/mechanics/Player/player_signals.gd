@@ -8,6 +8,7 @@ signal delete_sand_container
 @onready var trowel = preload("res://mechanics/Tools/trowel.tscn")
 @onready var hold = $CharacterBody3D/Neck/Camera3D/MeshInstance3D/Hold
 
+
 @onready var concrete_bucket_spawn = %ConcreteBucketSpawn
 @export var pointer = Vector3.ZERO
 #makes the bucket static when it is put in the right spot

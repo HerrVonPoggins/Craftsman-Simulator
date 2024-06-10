@@ -12,15 +12,20 @@ signal start_saw_minigame
 @onready var point = $"../MeshInstance3D/Hold"
 @onready var player = $"../../../.."
 var work_clothes = 0
-
+var interactable_is_open = false
 #The Raycast shoots a laser for a fixed range, on collision with something we can get the object  and check if it is in group "grab"
 #a object in group "grab" will then fixed on the hold point of the character until we release it.
 func _process(delta):
-	if Global.press_e == true and obj == null and get_collider() != null:
-		$"../../../../Label".visible = true
+	if Global.press_e == true and obj == null and get_collider() != null: 
+		if interactable_is_open == false:
+		#$"../../../../Label".visible = true
+			Checklist._play_interactable()
+			interactable_is_open = true
 	else:
-		
-		$"../../../../Label".visible = false
+		if interactable_is_open == true:
+			Checklist._quit_interactable()
+			#$"../../../../Label".visible = false
+			interactable_is_open = false
 		if temp != null:
 			if temp.get_node("Mesh") != null:
 				temp.get_node("Mesh").transparency = 0

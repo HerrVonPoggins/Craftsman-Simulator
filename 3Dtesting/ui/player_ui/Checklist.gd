@@ -30,6 +30,10 @@ var opened = true
 
 #functions to switch set the checklist details
 func _process(delta):
+	
+	#if Input.is_action_just_pressed("kamera"):
+		#_play_interactable()
+	
 	#_check_1_on(check_state_1)
 	#_check_2_on(check_state_2)
 	#_check_3_on(check_state_3)
@@ -47,10 +51,11 @@ func _process(delta):
 		elif opened == false:
 			$QuestPlayer.play("Quest_expand")
 			opened = true
-	if Input.is_action_just_pressed("back"):
-		$InteractionPlayer.play("interaction_popup_pickup_intro")
-	if Input.is_action_just_pressed("right"):
-		$InteractionPlayer.play("interaction_popup_pickup_quit")
+
+func _play_interactable():
+	$InteractionPlayer.play("interaction_popup_pickup_intro")
+func _quit_interactable():
+	$InteractionPlayer.play("interaction_popup_pickup_quit")
 	
 func _set_label_1_text(string):
 	label_1.set_text(string)

@@ -20,6 +20,7 @@ config/icon="res://assets/textures/icon.svg"
 Global="*res://scripts/global.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Music="*res://scripts/music.tscn"
+Checklist="*res://ui/player_ui/checklist.tscn"
 
 [display]
 
