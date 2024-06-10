@@ -1,4 +1,5 @@
-res://
+res://mechanics/craneminigame
+res://assets/textures
 res://UI
 res://UI/player_ui
 res://mechanics/brick_cutting

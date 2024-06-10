@@ -26,8 +26,7 @@ Music="*res://scripts/music.tscn"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=2
-window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
+window/stretch/mode="viewport"
 
 [editor_plugins]
 
@@ -98,16 +97,13 @@ crouch={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialoguefiles/schlusstext.dialogue", "res://dialoguefiles/bauleiter_maurer.dialogue", "res://dialoguefiles/maurer_intro.dialogue", "res://dialoguefiles/maurer_text.dialogue", "res://dialoguefiles/spirit_level_needed.dialogue", "res://dialoguefiles/maurer_step_1.dialogue", "res://dialoguefiles/maurer_step_2.dialogue", "res://dialoguefiles/maurer_step_3.dialogue", "res://dialoguefiles/maurer_step_4.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialoguefiles/schlusstext.dialogue", "res://dialoguefiles/bauleiter_maurer.dialogue", "res://dialoguefiles/maurer_intro.dialogue", "res://dialoguefiles/maurer_text.dialogue", "res://dialoguefiles/spirit_level_needed.dialogue", "res://dialoguefiles/maurer_step_1.dialogue", "res://dialoguefiles/maurer_step_2.dialogue", "res://dialoguefiles/maurer_step_3.dialogue", "res://dialoguefiles/maurer_step_4.dialogue", "res://dialoguefiles/maurer_step_5.dialogue")
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=2
+textures/canvas_textures/default_texture_filter=0
 lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
 lights_and_shadows/positional_shadow/soft_shadow_filter_quality=0
-textures/default_filters/use_nearest_mipmap_filter=true
-anti_aliasing/quality/msaa_2d=3
-anti_aliasing/quality/msaa_3d=2
 lights_and_shadows/positional_shadow/atlas_quadrant_0_subdiv=0
 lights_and_shadows/positional_shadow/atlas_quadrant_1_subdiv=0
 lights_and_shadows/positional_shadow/atlas_quadrant_2_subdiv=0

@@ -1,0 +1,8 @@
+~ this_is_a_node_title
+
+set Global.dialogue_open = true
+Maurer: Nun musst du die Stützen für die Decke anbringen, damit du die Deckenplatten setzten kannst.
+Maurer: Bringe die Stützen einfach zu den markierten stellen.
+set Global.dialogue_open = false
+
+=> END

@@ -1,8 +1,7 @@
 ~ this_is_a_node_title
 
 set Global.dialogue_open = true
-Maurer: Zum Abschluss deiner heutigen Aufgaben musst du noch die Tür- und Fensterstürze einbauen.
+Maurer: Als nächstes musst du noch die Tür- und Fensterstürze einbauen.
 Maurer: Dafür setzte die Stürze an die markierten Stellen in den Türen und Fenstern an.
-Maurer: Danach hol deine Kelle mit Mörtel und schmiere Mörtel an die Seiten der Stürz.
 set Global.dialogue_open = false
 => END

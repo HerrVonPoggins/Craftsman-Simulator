@@ -30,8 +30,8 @@ var is_walking = false
 var walk_sound_started = false
 var dialogue_count = 0
 var dialogue_replay = 0
-
-
+var press_e = false
+var rods = 0
 
 
 var brick_1 = false	

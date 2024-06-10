@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cxv4g3lrd0p6b"]
+[gd_scene load_steps=19 format=3 uid="uid://cxv4g3lrd0p6b"]
 
 [ext_resource type="Script" path="res://mechanics/Player/player_signals.gd" id="1_l3e41"]
 [ext_resource type="Script" path="res://mechanics/Player/CharacterFP+WASD.gd" id="2_ep0ko"]
@@ -87,6 +87,9 @@ _data = {
 "arm": SubResource("Animation_21u7v"),
 "crouch": SubResource("Animation_byu7o")
 }
+
+[sub_resource type="LabelSettings" id="LabelSettings_cq0xb"]
+font_size = 50
 
 [node name="Player" type="Node3D" groups=["player"]]
 script = ExtResource("1_l3e41")
@@ -182,7 +185,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0685587, -1.38404, -0.18735
 target_position = Vector3(0, -0.5, 0)
 
 [node name="GroundIdentifier" type="RayCast3D" parent="CharacterBody3D"]
-transform = Transform3D(-1.5, 0, 2.26494e-07, 0, 1.5, 0, -2.26494e-07, 0, -1.5, -0.00937235, 0.886948, -0.236481)
+transform = Transform3D(-1.5, 0, 2.26494e-07, 0, 1.5, 0, -2.26494e-07, 0, -1.5, -0.00937235, 0.805359, -0.236481)
 target_position = Vector3(0, -2, 0)
 script = ExtResource("7_3412t")
 
@@ -194,6 +197,18 @@ libraries = {
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Inventory" parent="CanvasLayer" instance=ExtResource("6_2noio")]
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 994.0
+offset_top = 595.0
+offset_right = 1190.0
+offset_bottom = 687.0
+text = "Press E"
+label_settings = SubResource("LabelSettings_cq0xb")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [connection signal="concrete_bucket_pos_reached" from="." to="CharacterBody3D/Neck/Camera3D/RayCast3D" method="_on_player_concrete_bucket_pos_reached"]
 [connection signal="delete_sand_container" from="." to="CharacterBody3D/Neck/Camera3D/RayCast3D" method="_on_player_delete_sand_container"]

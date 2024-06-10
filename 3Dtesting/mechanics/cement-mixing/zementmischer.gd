@@ -15,8 +15,8 @@ var sand_level_2 = false
 var sand_level_3 = false
 
 
-@onready var concrete_bucket_obj = $"../Props/ConcreteBucketObj"
-@onready var collision_shape_3d = $"../Props/ConcreteBucketObj/CollisionShape3D"
+@onready var concrete_bucket_obj = $"../Props/ConcreteBucket"
+@onready var collision_shape_3d = $"../Props/ConcreteBucket/CollisionShape3D"
 @onready var sand_value = $SandValue
 @onready var water_value = $WaterValue
 @onready var cement_value = $CementValue
