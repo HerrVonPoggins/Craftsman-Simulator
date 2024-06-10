@@ -3,7 +3,7 @@ extends RayCast3D
 var mat1 = load("res://assets/textures/material_white.tres")
 var last = Vector3.ZERO
 var obj = null
-
+var temp
 var trowel_collider = null
 
 
@@ -19,16 +19,46 @@ func _process(delta):
 	if Global.press_e == true and obj == null and get_collider() != null:
 		$"../../../../Label".visible = true
 	else:
+		
 		$"../../../../Label".visible = false
+		if temp != null:
+			if temp.get_node("Mesh") != null:
+				temp.get_node("Mesh").transparency = 0
+
+
+
+
+
+
+
+
 	if work_clothes == 3:
 		Global.tutorial_finished = true
 	if obj == null:
 		var collider = get_collider()
 		if collider != null:
 			if collider.is_in_group("use"):
+				temp = collider
+				if temp.get_node("Mesh") != null:
+					temp.get_node("Mesh").transparency = 0.3
+				#load("res://scenes/CorePlayable/CorePlayable.tscn::StandardMaterial3D_g5p21").albedo_color.a = 0.5
+				#load("res://scenes/CorePlayable/CorePlayable.tscn::StandardMaterial3D_g5p21").transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+				#load("res://scenes/CorePlayable/CorePlayable.tscn::StandardMaterial3D_g5p21").blend_mode = BaseMaterial3D.BLEND_MODE_MIX
+				#var new_material = StandardMaterial3D.new()
+#
+				#collider.get_node("Mesh").set_surface_override_material(0, new_material)
+				#new_material.albedo_color = brighten_color(new_material,1.2)
 				Global.press_e = true
+				
 			else:
+				#load("res://scenes/CorePlayable/CorePlayable.tscn::StandardMaterial3D_g5p21").albedo_color.a = 1
 				Global.press_e = false
+				
+			
+
+
+
+
 
 
 
@@ -115,3 +145,4 @@ func _on_player_inv_trowel_button_clicked():
 func _on_player_delete_sand_container():
 	if obj != null:
 		obj.queue_free()
+		

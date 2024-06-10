@@ -8,7 +8,7 @@ const JUMP_VELOCITY = 4.5
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _process(delta):
-	if Input.is_action_just_pressed("interagieren"):
+	if Input.is_action_just_pressed("interagieren") and $"..".visible == true:
 		$"../AnimationPlayer".play("crane_down")
 		await $"../AnimationPlayer".animation_finished
 		$"../AnimationPlayer".play_backwards("crane_down")
