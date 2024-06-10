@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+signal inventory
+
 var speed
 const WALK_SPEED = 10
 const SPRINT_SPEED = 20
@@ -26,8 +28,7 @@ var t_bob = 0.0
 	#Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
-
-
+@onready var inventory_node = $"../CanvasLayer/Inventory"
 @onready var neck = $Neck
 @onready var camera = $Neck/Camera3D
 @onready var raycast = $Neck/Camera3D/RayCast3D
@@ -37,6 +38,7 @@ var hold_object: Object
 
 	#capture mouse on leftclick and move camera when mouse is moved
 func _unhandled_input(event):
+	
 	if event is InputEventMouseButton:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		
@@ -50,6 +52,10 @@ func _unhandled_input(event):
 
 	
 func _physics_process(delta):
+	#inventory
+	if Input.is_action_just_pressed("inventory"):
+		emit_signal("inventory")
+	
 	#gravity
 	if not is_on_floor():
 		velocity.y -= (7 * gravity) * delta
