@@ -94,8 +94,6 @@ func _on_player_concrete_bucket_pos_reached():
 func _on_player_inv_trowel_button_clicked():
 	if obj == null:
 		obj = trowel_collider
-	elif obj != null:
-		obj = null
 
 func _on_player_delete_sand_container():
 	if obj != null:

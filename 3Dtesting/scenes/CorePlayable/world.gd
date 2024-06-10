@@ -14,7 +14,7 @@ func _ready():
 	DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_intro.dialogue"))
 	$Enter.play("fade_in")
 	$Player.pointer = $Props/Trowel.global_position
-	$WallAnimation.play("Brick_test")
+	$WallAnimation.play("Brick_test") 
 	#when the wall is build the animation to fill in the remaining bricks and a praise dialogue is started
 func _process(delta):
 	if Global.concrete_1 == true:

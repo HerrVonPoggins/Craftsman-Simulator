@@ -1,10 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://djw5gwv30bvm1"]
 
 [ext_resource type="Script" path="res://UI/Inventory/inventory.gd" id="1_2k2bt"]
-[ext_resource type="Texture2D" uid="uid://6iw5ch25qnnj" path="res://ui/Inventory_slot.png" id="2_tecys"]
+[ext_resource type="Texture2D" uid="uid://6iw5ch25qnnj" path="res://UI/Inventory_slot.png" id="2_tecys"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tgkn1"]
 texture = ExtResource("2_tecys")
+region_rect = Rect2(1202.12, 146.3, 2978.64, 2976.04)
 
 [sub_resource type="Theme" id="Theme_vh8sk"]
 Button/styles/normal = SubResource("StyleBoxTexture_tgkn1")
