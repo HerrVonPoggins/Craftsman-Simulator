@@ -13,7 +13,8 @@ data = PackedVector3Array(-2.2168, 6.8727, -1.526, -0.3492, 6.5542, -1.7197, -0.
 resource_name = "Zement"
 cull_mode = 2
 albedo_color = Color(0.702422, 0.0529548, 0, 1)
-roughness = 0.5
+metallic = 1.0
+roughness = 0.61
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nfpvr"]
 resource_name = "Zement_Räder"

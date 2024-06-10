@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://b4a78ge8l7qp2"]
+[gd_scene load_steps=70 format=3 uid="uid://4gac5g3iccle"]
 
 [ext_resource type="Script" path="res://ui/player_ui/Settings.gd" id="1_uylec"]
 [ext_resource type="Texture2D" uid="uid://dkkiap5oxgfek" path="res://UI/Settings_broken_down.png" id="2_su5ey"]
