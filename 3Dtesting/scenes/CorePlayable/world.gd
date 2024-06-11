@@ -23,7 +23,7 @@ func _ready():
 	#when the wall is build the animation to fill in the remaining bricks and a praise dialogue is started
 func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
-		Global.start_crane_game = true
+		pass
 		
 	if Global.concrete_filled_roof == true:
 		$"Root Scene".visible = true
@@ -104,6 +104,7 @@ func _process(delta):
 	if Global.wall_finished == true and played == false:
 		played = true
 		$"house_base/geruest merged".visible = true
+		$"house_base/geruest merged/StaticBody3D/CollisionShape3D".call_deferred("set_disabled", false)
 		#$house_anim_1.visible = true
 		#$house_anim_1/AnimationPlayer.play("Scene")
 		#await  $house_anim_1/AnimationPlayer.animation_finished

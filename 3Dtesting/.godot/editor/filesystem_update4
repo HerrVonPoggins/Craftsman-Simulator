@@ -7,3 +7,4 @@ res://scripts/music.tscn
 res://ui/Inventory/inventory.tscn
 res://mechanics/Tools/trowel.tscn
 res://mechanics/Tools/trowel.gd
+res://scenes/CorePlayable/world.gd
