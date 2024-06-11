@@ -7,3 +7,4 @@ res://mechanics/craneminigame/craneminigame.tscn
 res://mechanics/craneminigame/concrete_filler.tscn
 res://mechanics/Player/node_3d.tscn
 res://mechanics/build_wall/brickplacingminigame.tscn
+res://mechanics/craneminigame/concrete_filler.gd
