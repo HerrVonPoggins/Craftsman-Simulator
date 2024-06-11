@@ -1,7 +1,7 @@
 extends Node
 
-var volume = -80
-var effects = -80
+var volume = 0
+var effects = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

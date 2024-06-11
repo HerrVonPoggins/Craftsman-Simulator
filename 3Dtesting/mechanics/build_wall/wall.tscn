@@ -89,18 +89,18 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.72739, -0.0837095, -0.0528
 shape = SubResource("BoxShape3D_2unk7")
 
 [node name="Outline1" type="MeshInstance3D" parent="Area3D"]
-transform = Transform3D(-1.74846e-07, 0, 0.75, 0, 2, 0, -4, 0, -3.27835e-08, -2.16059, -0.197, -0.058)
+transform = Transform3D(-2.18557e-07, 0, 0.75, 0, 2, 0, -5, 0, -3.27835e-08, -2.16059, -0.197, -0.058)
 mesh = ExtResource("2_ka1i1")
 skeleton = NodePath("../../Brick1")
 
 [node name="Outline2" type="MeshInstance3D" parent="Area3D"]
-transform = Transform3D(-0.00397938, 0, 0.75, 0, 2, 0, -4, 0, -0.000746134, -0.639691, -0.197, -0.058)
+transform = Transform3D(-0.00497423, 0, 0.75, 0, 2, 0, -5, 0, -0.000746134, -0.639691, -0.197, -0.058)
 visible = false
 mesh = ExtResource("2_ka1i1")
 skeleton = NodePath("../../Brick2")
 
 [node name="Outline3" type="MeshInstance3D" parent="Area3D"]
-transform = Transform3D(-1.74846e-07, 0, 0.4, 0, 2, 0, -4, 0, -1.74846e-08, 0.501939, -0.196905, -0.058)
+transform = Transform3D(-2.18557e-07, 0, 0.4, 0, 2, 0, -5, 0, -1.74846e-08, 0.501939, -0.196905, -0.058)
 visible = false
 mesh = ExtResource("2_ka1i1")
 skeleton = NodePath("../../Brick1")
@@ -124,17 +124,17 @@ mesh = SubResource("CapsuleMesh_xhtat")
 surface_material_override/0 = SubResource("StandardMaterial3D_ihfmv")
 
 [node name="Brick1" type="MeshInstance3D" parent="."]
-transform = Transform3D(-3.14722e-06, 72, -3.14722e-06, 0, -3.14722e-06, -72, -72, -3.14722e-06, 1.37569e-13, -2.16445, -0.214412, -0.0814446)
+transform = Transform3D(-3.71547e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -85, -3.14722e-06, 1.14641e-13, -2.16445, -0.214412, -0.0814446)
 visible = false
 mesh = SubResource("ArrayMesh_hmeax")
 
 [node name="Brick2" type="MeshInstance3D" parent="."]
-transform = Transform3D(-3.14722e-06, 72, -3.14722e-06, 0, -3.14722e-06, -72, -72, -3.14722e-06, 1.37569e-13, -0.621056, -0.197, -0.0662376)
+transform = Transform3D(-3.71547e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -85, -3.14722e-06, 1.14641e-13, -0.621056, -0.197, -0.0662376)
 visible = false
 mesh = SubResource("ArrayMesh_hmeax")
 
 [node name="Brick3" type="MeshInstance3D" parent="."]
-transform = Transform3D(-3.14722e-06, 35, -3.14722e-06, 0, -1.5299e-06, -72, -72, -1.5299e-06, 1.37569e-13, 0.517725, -0.188934, -0.067849)
+transform = Transform3D(-3.71547e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -85, -3.14722e-06, 1.14641e-13, 0.517725, -0.188934, -0.067849)
 visible = false
 mesh = SubResource("ArrayMesh_hmeax")
 

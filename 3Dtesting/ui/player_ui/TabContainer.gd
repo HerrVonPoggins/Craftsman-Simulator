@@ -30,17 +30,19 @@ func _process(delta):
 	if Global.tutorial_finished == true:
 		$Panel.visible = false
 		
-		
-	if Global.wall_finished == true:
-		check.check_state_4 = true
-	if Global.concrete_mixed == true:
-		check.check_state_2 = true
-	if Global.door_top == 2 and Global.window_top == 4:
-		check.check_state_5 = true
 	if Global.tutorial_finished == true:
 		check.check_state_1 = true
+	if Global.concrete_mixed == true:
+		check.check_state_2 = true
 	if Global.string == true:
 		check.check_state_3 = true
+	if Global.wall_finished == true:
+		check.check_state_4 = true
+	if Global.door_top == 4 and Global.window_top == 0:
+		check.check_state_5 = true
+	if Global.roof_finished == true:
+		check.check_state_6 = true
+
 	
 	#sets the open/closemechanic on the escape button
 	if Input.is_action_just_pressed("escape"):
