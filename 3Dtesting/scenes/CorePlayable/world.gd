@@ -6,6 +6,7 @@ var played = false
 var played2 = false
 var played3 = false
 var played4 = false
+var played5 = false
 var diealogue_played = 0
 var done = false
 
@@ -22,18 +23,35 @@ func _ready():
 	#when the wall is build the animation to fill in the remaining bricks and a praise dialogue is started
 func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
-		Global.rods = 5
+		Global.crane_on = true
+		
+	if Global.roof_finished == true and played5 == false:
+		played5 = true
+		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/schlusstext.dialogue"))
+		$"Root Scene".visible = true
+		
+		
 		
 		
 	if Global.rods == 5 and played4 == false:
 		Global.can_make_roof = true
 		played4 = true
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_6.dialogue"))
+		
+
 	if Global.crane_on == true and played2 == false:
 		$"Root Scene2/AnimationPlayer2".play("Kran teil1|Kran teil1_Go")
 		$"Root Scene2/AnimationPlayer".play("Kran teil1_001|Kran teil1_Los")
 		played2 = true
 		await get_tree().create_timer(5).timeout
+		$Props/Decke1.visible = true
+		$Props/Decke2.visible = true
+		$Props/Decke3.visible = true
+		$Props/Decke4.visible = true
+		$Props/Decke5.visible = true
+		$Props/Decke7.visible = true
+		$Props/Decke8.visible = true
+		$Props/Decke9.visible = true
 		Global.start_crane_game = true
 		
 

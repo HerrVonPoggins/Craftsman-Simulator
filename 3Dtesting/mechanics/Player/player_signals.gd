@@ -22,7 +22,8 @@ signal delete_sand_container
 		#emit_signal("concrete_bucket_pos_reached")
 func _process(delta):
 	$CharacterBody3D/Neck/Camera3D/Arrowhead.look_at(pointer)
-
+	if Input.is_action_just_pressed("interagieren"):
+		$"CharacterBody3D/Neck/Camera3D/Root Scene/AnimationPlayer".play("GrabAction_001")
 
 func _on_inventory_trowel_button_clicked():
 	emit_signal("inv_trowel_button_clicked")
