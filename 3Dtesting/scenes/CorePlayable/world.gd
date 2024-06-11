@@ -23,7 +23,7 @@ func _ready():
 	#when the wall is build the animation to fill in the remaining bricks and a praise dialogue is started
 func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
-		Global.crane_on = true
+		Global.wall_finished = true
 		
 	if Global.concrete_filled_roof == true:
 		$"Root Scene".visible = true
@@ -105,17 +105,18 @@ func _process(delta):
 		played = true
 		$"house_base/geruest merged".visible = true
 		$"house_base/geruest merged/StaticBody3D/CollisionShape3D".call_deferred("set_disabled", false)
-		#$house_anim_1.visible = true
-		#$house_anim_1/AnimationPlayer.play("Scene")
-		#await  $house_anim_1/AnimationPlayer.animation_finished
-
+		$"house_anim_1(1)".visible = true
+		$"house_anim_1(1)/AnimationPlayer".play("Scene")
+		await  $"house_anim_1(1)/AnimationPlayer".animation_finished
+		#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+		#hier restliche Wand animationen reinmachen
 		#$house_anim_2.visible = true
 		#$house_anim_2/AnimationPlayer.play("Scene")
 		#await $house_anim_2/AnimationPlayer.animation_finished
 
 
 		#$"Root Scene/RootNode/Wand Unten_006/StaticBody3D/CollisionShape3D".call_deferred("set_disabled", false)
-		
+		#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 		$Doortop5.visible = true
 		$Doortop6.visible = true
 		$Doortop7.visible = true

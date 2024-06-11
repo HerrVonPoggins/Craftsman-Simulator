@@ -19,9 +19,7 @@ var interactable_is_open = false
 #a object in group "grab" will then fixed on the hold point of the character until we release it.
 func _process(delta):
 	
-	if Input.is_action_just_pressed("kamera"):
-		Global.brick_is_being_placed = true
-		#Global.brick_is_being_placed = false
+
 	
 	
 	if Global.brick_is_being_placed == true:
