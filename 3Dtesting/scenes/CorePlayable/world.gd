@@ -25,12 +25,18 @@ func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
 		Global.start_crane_game = true
 		
+	if Global.concrete_filled_roof == true:
+		$"Root Scene".visible = true	
+	
+		
+		
 	if Global.roof_finished == true and played5 == false:
 		played5 = true
-		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/schlusstext.dialogue"))
-		$"Root Scene".visible = true
+		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_8.dialogue"))
+		$ConcreteFiller.visible = true
 		
 		
+	
 		
 		
 	if Global.rods == 5 and played4 == false:

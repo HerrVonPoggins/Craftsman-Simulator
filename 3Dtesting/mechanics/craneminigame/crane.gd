@@ -9,9 +9,10 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _process(delta):
 	if Global.start_crane_game == true:
+		
 		$"..".visible = true
 		$"../Camera3D".current = true
-		
+		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_7.dialogue"))
 		Global.stay = true
 		Global.crane_on = false
 

@@ -1,5 +1,6 @@
-AnimationPlayer
 MeshInstance3D
+AnimationPlayer
+Camera3D
 Label
 CollisionShape3D
 StaticBody3D
@@ -9,6 +10,5 @@ Node3D
 Timer
 Sprite3D
 TextureRect
-Camera3D
 CharacterBody3D
 RichTextLabel

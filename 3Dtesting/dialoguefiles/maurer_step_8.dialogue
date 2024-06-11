@@ -1,0 +1,8 @@
+~ this_is_a_node_title
+
+set Global.dialogue_open = true
+Maurer: Zuletzt musst du also den Beton einfüllen(linke Maustaste gedrückt halten). 
+Maurer: Wenn du das geschafft hast bist du für heute Fertig.
+set Global.dialogue_open = false
+
+=> END

@@ -42,6 +42,8 @@ var concrete_2 = false
 var concrete_3 = false
 var start_crane_game = false
 var roof_finished = false
+var concrete_filled_roof = false
+
 
 var sound_count = 6
 var musik_count = 6

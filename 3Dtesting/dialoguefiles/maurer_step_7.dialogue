@@ -1,0 +1,10 @@
+~ this_is_a_node_title
+
+set Global.dialogue_open = true
+Maurer: Nun musst du die Deckenplatten mit dem Kran aufsammeln(E).
+Maurer: Lass die Platten über der markierten Stelle runter.
+Maurer: Solltest du alle haben musst wird noch Beton eingefüllt.
+set Global.dialogue_open = false
+
+
+=> END
