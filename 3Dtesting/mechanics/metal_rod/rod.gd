@@ -14,6 +14,7 @@ func _process(delta):
 func _on_string_wedge_body_entered(body):
 	if body.is_in_group("rod") and $".".visible == true:
 		body.queue_free()
+		Music._play_concrete_placing()
 		Global.rods += 1
 		$StringWedge/Mesh.visible = true
 		$StringWedge/CollisionShape3D.call_deferred("set_disabled", true)

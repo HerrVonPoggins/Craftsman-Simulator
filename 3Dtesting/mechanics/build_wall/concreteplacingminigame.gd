@@ -18,6 +18,8 @@ func _process(delta):
 	if $concrete7/MeshInstance3D2.visible == true:
 		Global.concrete_1 = true
 
+	if Input.is_action_just_pressed("reset"):
+		$RigidBody3D.position = Vector3(-0.189,0.112,0)
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton:

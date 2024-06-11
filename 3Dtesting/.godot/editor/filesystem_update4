@@ -8,3 +8,14 @@ res://mechanics/craneminigame/concrete_filler.tscn
 res://mechanics/Player/node_3d.tscn
 res://mechanics/build_wall/brickplacingminigame.tscn
 res://mechanics/craneminigame/concrete_filler.gd
+res://mechanics/build_wall/Doortop.tscn
+res://mechanics/build_wall/Doortop.gd
+res://mechanics/metal_rod/rod.tscn
+res://mechanics/metal_rod/rod.gd
+res://scripts/music.tscn
+res://mechanics/build_wall/concreteplacingminigam3.tscn
+res://mechanics/build_wall/concreteplacingminigam3.gd
+res://mechanics/build_wall/concreteplacingminigame2.tscn
+res://mechanics/build_wall/concreteplacingminigame2.gd
+res://mechanics/build_wall/concreteplacingminigame.tscn
+res://mechanics/build_wall/concreteplacingminigame.gd
