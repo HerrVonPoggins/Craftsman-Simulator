@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cc4eoydeq1jwv"]
+[gd_scene load_steps=20 format=3 uid="uid://cc4eoydeq1jwv"]
 
 [ext_resource type="Script" path="res://ui/player_ui/TabContainer.gd" id="1_pp8q6"]
 [ext_resource type="Texture2D" uid="uid://b64wbqw154cxp" path="res://ui/player_ui/Options_Button.png" id="2_b7f4i"]
@@ -35,6 +35,9 @@ Button/styles/pressed = SubResource("StyleBoxTexture_yx41j")
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g6uua"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_id4j3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2jyr4"]
+font_size = 40
 
 [node name="Control" type="Control"]
 process_mode = 3
@@ -345,6 +348,26 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_fy57w")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_0ulnq")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_g6uua")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_id4j3")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -754.0
+offset_top = -487.0
+offset_right = -595.0
+offset_bottom = -401.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Pausiert"
+label_settings = SubResource("LabelSettings_2jyr4")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [connection signal="pressed" from="ButtonSettings" to="." method="_on_button_settings_pressed"]
 [connection signal="pressed" from="ButtonSave" to="." method="_on_button_save_pressed"]

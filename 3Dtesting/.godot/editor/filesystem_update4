@@ -8,3 +8,5 @@ res://ui/Inventory/inventory.tscn
 res://mechanics/Tools/trowel.tscn
 res://mechanics/Tools/trowel.gd
 res://scenes/CorePlayable/world.gd
+res://ui/player_ui/info hub.tscn
+res://ui/player_ui/TabContainer.gd

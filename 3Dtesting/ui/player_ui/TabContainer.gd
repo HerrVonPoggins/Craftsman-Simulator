@@ -49,21 +49,25 @@ func _process(delta):
 		if isOpen == true:
 			isOpen = false
 			closed.emit()
+			$Label.visible = false
 			Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 		else:
 			isOpen = true
 			opened.emit()
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			$Label.visible = true
 
 func open():
 	tab.visible = true
 	isOpen = true
 	opened.emit()
 
+
 func close():
 	tab.visible = false
 	isOpen = false
 	closed.emit()
+
 
 func _on_button_info_hub_pressed():
 	Music._play_button()
@@ -76,6 +80,7 @@ func _on_button_info_hub_pressed():
 		load.visible = false
 		main_menu.visible = false
 		quit.visible = false
+		
 	else:
 		open()
 
@@ -130,6 +135,7 @@ func _on_close_button_pressed():
 	$Job_Buch.show()
 	$Setting_Button.show()
 	$checklist.show()
+	
 
 func _on_elektriker_button_pressed():
 	if $Job_Buch_Open/MaurerLogbuch.visible == true:

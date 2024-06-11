@@ -1,9 +1,9 @@
+Label
 Camera3D
 CollisionShape3D
 Area3D
 MeshInstance3D
 AnimationPlayer
-Label
 StaticBody3D
 RigidBody3D
 Node3D

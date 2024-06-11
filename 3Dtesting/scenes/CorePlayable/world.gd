@@ -23,7 +23,7 @@ func _ready():
 	#when the wall is build the animation to fill in the remaining bricks and a praise dialogue is started
 func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
-		pass
+		Global.crane_on = true
 		
 	if Global.concrete_filled_roof == true:
 		$"Root Scene".visible = true
