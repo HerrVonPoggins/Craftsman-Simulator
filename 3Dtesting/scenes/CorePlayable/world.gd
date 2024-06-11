@@ -36,6 +36,10 @@ func _process(delta):
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_8.dialogue"))
 		$ConcreteFiller.visible = true
 		
+	if Global.placing_games_open == true:
+		$Wall.visible = false
+	else:
+		$Wall.visible = true
 		
 	
 		

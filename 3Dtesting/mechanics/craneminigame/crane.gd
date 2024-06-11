@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 var played = false
-const SPEED = 20
+var SPEED = 0
 const JUMP_VELOCITY = 4.5
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -16,6 +16,7 @@ func _process(delta):
 		Global.stay = true
 		Global.crane_on = false
 		played = true
+		SPEED = 20
 
 
 

@@ -14,6 +14,7 @@ func _ready():
 func _process(delta):
 	if $".".visible == true:
 		$Camera3D.current = true
+		Global.placing_games_open = true
 		Global.stay = true
 		player.visible = false
 	
@@ -31,6 +32,7 @@ func _process(delta):
 		Global.wall_finished = true
 		Global.stay = false
 		player.visible = true
+		Global.placing_games_open = false
 		queue_free()
 
 func _unhandled_input(event):
