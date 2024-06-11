@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://b8bxr3vceyac2"]
+[gd_scene load_steps=15 format=3 uid="uid://b8bxr3vceyac2"]
 
 [ext_resource type="Script" path="res://mechanics/metal_rod/rod.gd" id="1_guwtp"]
-[ext_resource type="ArrayMesh" uid="uid://dfk7y7w5dvc35" path="res://assets/models/brick_outline_prototyp(1).obj" id="1_otvx8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b7tue"]
 resource_name = "Material.002"
-albedo_color = Color(0.0719449, 0.0719449, 0.0719449, 1)
+albedo_color = Color(0.0705882, 0.0705882, 0.0705882, 1)
 metallic = 0.4
 roughness = 0.236191
 
@@ -17,7 +16,7 @@ roughness = 0.219934
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fhhkm"]
 resource_name = "Material.001"
-albedo_color = Color(0.828408, 0.809907, 0.829527, 1)
+albedo_color = Color(0.827451, 0.811765, 0.831373, 1)
 metallic = 0.4
 roughness = 0.188607
 
@@ -129,8 +128,112 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_gtwq1")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q2qrg"]
+transparency = 1
+albedo_color = Color(0.0705882, 0.0705882, 0.0705882, 0.196078)
+metallic = 0.4
+roughness = 0.25
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7uaoy"]
+transparency = 1
+albedo_color = Color(0.827451, 0.811765, 0.831373, 0.196078)
+metallic = 0.4
+roughness = 0.25
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fkmee"]
+transparency = 1
+albedo_color = Color(0.827451, 0.811765, 0.831373, 0.621438)
+metallic = 0.4
+roughness = 0.25
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_uvm68"]
 size = Vector3(1, 9.46973, 1)
+
+[sub_resource type="Animation" id="Animation_rg7ng"]
+resource_name = "marker"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StringWedge/MeshInstance3D2:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.0705882, 0.0705882, 0.0705882, 0.196078), Color(0.0705882, 0.0705882, 0.0705882, 1), Color(0.0705882, 0.0705882, 0.0705882, 0.196078)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StringWedge/MeshInstance3D2:surface_material_override/2:albedo_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.827451, 0.811765, 0.831373, 0.196078), Color(0.827451, 0.811765, 0.831373, 1), Color(0.827451, 0.811765, 0.831373, 0.196078)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StringWedge/MeshInstance3D2:surface_material_override/3:albedo_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.827451, 0.811765, 0.831373, 0.196078), Color(0.827451, 0.811765, 0.831373, 1), Color(0.827451, 0.811765, 0.831373, 0.196078)]
+}
+
+[sub_resource type="Animation" id="Animation_fq72c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StringWedge/MeshInstance3D2:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.0705882, 0.0705882, 0.0705882, 0.196078)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StringWedge/MeshInstance3D2:surface_material_override/2:albedo_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.827451, 0.811765, 0.831373, 0.196078)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StringWedge/MeshInstance3D2:surface_material_override/3:albedo_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.827451, 0.811765, 0.831373, 0.621438)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hierv"]
+_data = {
+"RESET": SubResource("Animation_fq72c"),
+"marker": SubResource("Animation_rg7ng")
+}
 
 [node name="Rod" type="Node3D"]
 script = ExtResource("1_guwtp")
@@ -138,8 +241,11 @@ script = ExtResource("1_guwtp")
 [node name="StringWedge" type="Area3D" parent="."]
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="StringWedge"]
-transform = Transform3D(1.5, 0, 0, 0, -2.18557e-08, -4.5, 0, 0.5, -1.96701e-07, 0, 4.47896, 0)
-mesh = ExtResource("1_otvx8")
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 0.129136, -0.0173349, -0.151721)
+mesh = SubResource("ArrayMesh_wc8k7")
+surface_material_override/0 = SubResource("StandardMaterial3D_q2qrg")
+surface_material_override/2 = SubResource("StandardMaterial3D_7uaoy")
+surface_material_override/3 = SubResource("StandardMaterial3D_fkmee")
 
 [node name="Mesh" type="MeshInstance3D" parent="StringWedge"]
 transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0.124212, 0, -0.153888)
@@ -150,5 +256,11 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StringWedge"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.23486, 0)
 shape = SubResource("BoxShape3D_uvm68")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hierv")
+}
+autoplay = "marker"
 
 [connection signal="body_entered" from="StringWedge" to="." method="_on_string_wedge_body_entered"]

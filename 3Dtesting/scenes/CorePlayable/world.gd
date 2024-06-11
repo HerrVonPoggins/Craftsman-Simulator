@@ -23,7 +23,7 @@ func _ready():
 	#when the wall is build the animation to fill in the remaining bricks and a praise dialogue is started
 func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
-		print(Global.tutorial_finished)
+		Global.start_crane_game = true
 		
 	if Global.roof_finished == true and played5 == false:
 		played5 = true
@@ -57,7 +57,6 @@ func _process(delta):
 
 	if Global.concrete_mixed == true and $Area3D/Bucket_water2.visible == false and done == false:
 		$Area3D/Bucket_water2.visible = true
-		$Area3D/Timer.start()
 		$Props/ConcreteBucket/CollisionShape3D.call_deferred("set_disabled", false)
 		done = true
 
@@ -215,11 +214,11 @@ func _on_area_3d_body_entered(body):
 		$Area3D/Bucket_water2.visible == false
 
 
-func _on_timer_timeout():
-		if $Area3D/ConcreteBucketObj.visible == false:
-			if $Area3D/Bucket_water2.visible == true:
-				$Area3D/Bucket_water2.visible = false
-			elif $Area3D/Bucket_water2.visible == false:
-				$Area3D/Bucket_water2.visible = true
+#func _on_timer_timeout():
+		#if $Area3D/ConcreteBucketObj.visible == false:
+			#if $Area3D/Bucket_water2.visible == true:
+				#$Area3D/Bucket_water2.visible = false
+			#elif $Area3D/Bucket_water2.visible == false:
+				#$Area3D/Bucket_water2.visible = true
 
 	

@@ -1,14 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://ckkechdc8rspf"]
+[gd_scene load_steps=11 format=3 uid="uid://ckkechdc8rspf"]
 
 [ext_resource type="Script" path="res://mechanics/build_wall/Doortop.gd" id="1_4y07e"]
-[ext_resource type="ArrayMesh" uid="uid://dfk7y7w5dvc35" path="res://assets/models/brick_outline_prototyp(1).obj" id="3_j3ufj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_obhal"]
 size = Vector3(12.2242, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_447eq"]
 resource_name = "Material.001"
-albedo_color = Color(0.812498, 0.329615, 0.164974, 1)
+albedo_color = Color(0.811765, 0.329412, 0.164706, 1)
 metallic = 0.4
 roughness = 0.212721
 
@@ -74,6 +73,50 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_kxprx")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_behtg"]
+transparency = 1
+albedo_color = Color(0.811765, 0.329412, 0.164706, 0.196078)
+metallic = 0.4
+roughness = 0.21
+
+[sub_resource type="Animation" id="Animation_vo7wb"]
+resource_name = "marker"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lintel/Outline:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.811765, 0.329412, 0.164706, 0.196078), Color(0.811765, 0.329412, 0.164706, 1), Color(0.811765, 0.329412, 0.164706, 0.196078)]
+}
+
+[sub_resource type="Animation" id="Animation_mkdkm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lintel/Outline:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.811765, 0.329412, 0.164706, 0.196078)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_toxcb"]
+_data = {
+"RESET": SubResource("Animation_mkdkm"),
+"marker": SubResource("Animation_vo7wb")
+}
+
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_4y07e")
 
@@ -89,7 +132,14 @@ mesh = SubResource("ArrayMesh_6sad1")
 skeleton = NodePath("")
 
 [node name="Outline" type="MeshInstance3D" parent="Lintel"]
-transform = Transform3D(-8.74228e-08, 0, 2.5, 0, 1, 0, -2, 0, -1.09278e-07, -0.0274665, 0, -0.0567921)
-mesh = ExtResource("3_j3ufj")
+transform = Transform3D(-250, -1.31134e-06, 0, -9.55343e-13, 6.55671e-07, 20, -2.18557e-05, 15, -8.74228e-07, -0.0672154, 0, 0.0109742)
+mesh = SubResource("ArrayMesh_6sad1")
+surface_material_override/0 = SubResource("StandardMaterial3D_behtg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_toxcb")
+}
+autoplay = "marker"
 
 [connection signal="body_entered" from="Lintel" to="." method="_on_lintel_body_entered"]

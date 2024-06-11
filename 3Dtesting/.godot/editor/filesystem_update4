@@ -6,3 +6,6 @@ res://mechanics/craneminigame/craneminigame.tscn
 res://ui/player_ui/checklist.tscn
 res://ui/player_ui/info hub.tscn
 res://mechanics/build_wall/wall.tscn
+res://scenes/CorePlayable/world.gd
+res://mechanics/build_wall/Doortop.tscn
+res://mechanics/metal_rod/rod.tscn
