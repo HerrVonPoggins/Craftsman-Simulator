@@ -77,9 +77,9 @@ lines = {
 "notes": "",
 "parent_id": "2",
 "tags": PackedStringArray(),
-"text": "Das ist ganz einfach. Sieh mal, hier ist eine Schubkarre une eine Kelle.",
+"text": "Das ist ganz einfach. Sieh mal, hier ist ein Eimer une eine Kelle.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Das ist ganz einfach. Sieh mal, hier ist eine Schubkarre une eine Kelle.",
+"translation_key": "Das ist ganz einfach. Sieh mal, hier ist ein Eimer une eine Kelle.",
 "type": &"dialogue"
 },
 "15": {
@@ -116,9 +116,9 @@ lines = {
 "notes": "",
 "parent_id": "2",
 "tags": PackedStringArray(),
-"text": "Sobald der Mörtel fertig ist, lädst du ihn in die Schubkarre und bringst ihn zur Wand, die wir bearbeiten.",
+"text": "Sobald der Mörtel fertig ist, füllst du ihn in den Eimer und bringst ihn zur Wand, die wir bearbeiten (E auf Mischer).",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Sobald der Mörtel fertig ist, lädst du ihn in die Schubkarre und bringst ihn zur Wand, die wir bearbeiten.",
+"translation_key": "Sobald der Mörtel fertig ist, füllst du ihn in den Eimer und bringst ihn zur Wand, die wir bearbeiten (E auf Mischer).",
 "type": &"dialogue"
 },
 "18": {
@@ -330,10 +330,10 @@ if Global.dialogue_count == 2:
 	Maurer: Keine Sorge, ich werde dir zeigen, was du hier machen musst.
 	Maurer: Also, als erstes müssen wir Mörtel mischen.
 	Maurer: Hast du das schon mal gemacht? Nein? Kein Problem!
-	Maurer: Das ist ganz einfach. Sieh mal, hier ist eine Schubkarre une eine Kelle.
+	Maurer: Das ist ganz einfach. Sieh mal, hier ist ein Eimer une eine Kelle.
 	Maurer: Wir nehmen etwas Sand, fügen Wasser und Zement hinzu und rühren kräftig um. (Fülle Wasser, Sand und Zement in den Mischer und schalte ihn mit E an)
 	Maurer: Aber pass auf, dass der Mörtel nicht zu flüssig wird!
-	Maurer: Sobald der Mörtel fertig ist, lädst du ihn in die Schubkarre und bringst ihn zur Wand, die wir bearbeiten.
+	Maurer: Sobald der Mörtel fertig ist, füllst du ihn in den Eimer und bringst ihn zur Wand, die wir bearbeiten (E auf Mischer).
 	Maurer: Stell sicher, dass du den Mörtel gleichmäßig aufträgst, damit alles gut hält.
 	Maurer: Verstanden?
 	set Global.dialogue_open = false

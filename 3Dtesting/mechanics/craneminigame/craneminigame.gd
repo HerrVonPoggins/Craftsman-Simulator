@@ -19,6 +19,7 @@ func _process(delta):
 	if $"Decke1 Area/Decke1".visible == true and $"Decke2 Area/Decke 2".visible == true and $"Decke3 Area/Decke 3".visible == true and $"Decke4 Area/Decke 4".visible == true and $"Decke5 Area/Decke 5".visible == true and $"Decke7 Area/Decke 7".visible == true and $"Decke8 Area/Decke 8".visible == true and $"Decke9 Area/Decke 9".visible == true:
 		await get_tree().create_timer(3).timeout
 		Global.stay = false
+		Global.crosshair_off = false
 		Global.roof_finished = true
 		queue_free()
 	

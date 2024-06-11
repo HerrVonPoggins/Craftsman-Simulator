@@ -224,11 +224,6 @@ func _on_area_3d_body_entered(body):
 		$Area3D/Bucket_water2.visible = false
 
 
-#func _on_timer_timeout():
-		#if $Area3D/ConcreteBucketObj.visible == false:
-			#if $Area3D/Bucket_water2.visible == true:
-				#$Area3D/Bucket_water2.visible = false
-			#elif $Area3D/Bucket_water2.visible == false:
-				#$Area3D/Bucket_water2.visible = true
 
-	
+func _on_inventory_spirit_level_button_clicked():
+	pass # Replace with function body.

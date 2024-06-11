@@ -7,6 +7,8 @@ var temp
 var trowel_collider = null
 
 
+
+
 signal start_saw_minigame
 
 @onready var point = $"../MeshInstance3D/Hold"

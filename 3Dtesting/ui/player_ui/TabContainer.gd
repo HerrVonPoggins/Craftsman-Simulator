@@ -129,7 +129,6 @@ func _on_close_button_pressed():
 	$Job_Buch_Open.hide()
 	$Job_Buch.show()
 	$Setting_Button.show()
-	$Quit_Button.show()
 	$checklist.show()
 
 func _on_elektriker_button_pressed():
@@ -160,7 +159,6 @@ func _on_job_buch_pressed():
 	$Job_Buch_Closed.show()
 	$Job_Buch.hide()
 	$Setting_Button.hide()
-	$Quit_Button.hide()
 	$checklist.hide()
 	
 func _on_quit_button_pressed():

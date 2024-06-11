@@ -25,9 +25,9 @@ lines = {
 "notes": "",
 "parent_id": "3",
 "tags": PackedStringArray(),
-"text": "Aber pass auf eine Lücke ist kleiner, deshalb musst du einen Ziegel schneiden.",
+"text": "Hinten ist eine Säge und ein Ziegel vorbereitet.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Aber pass auf eine Lücke ist kleiner, deshalb musst du einen Ziegel schneiden.",
+"translation_key": "Hinten ist eine Säge und ein Ziegel vorbereitet.",
 "type": &"dialogue"
 },
 "11": {
@@ -38,26 +38,13 @@ lines = {
 "notes": "",
 "parent_id": "3",
 "tags": PackedStringArray(),
-"text": "Im Nebenraum ist eine Säge und ein Ziegel vorbereitet. Bitte nimm den Ziegel und Scheide ihn richtig zu.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Im Nebenraum ist eine Säge und ein Ziegel vorbereitet. Bitte nimm den Ziegel und Scheide ihn richtig zu.",
-"type": &"dialogue"
-},
-"12": {
-"character": "Maurer",
-"character_replacements": Array[Dictionary]([]),
-"id": "12",
-"next_id": "13",
-"notes": "",
-"parent_id": "3",
-"tags": PackedStringArray(),
 "text": "Wenn du die Reihe fertig gemacht hast musst du noch mit der Wasserwaage prüfen ob sie gerade ist. (lege die Wasserwaage auf die Mauerreihe)",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Wenn du die Reihe fertig gemacht hast musst du noch mit der Wasserwaage prüfen ob sie gerade ist. (lege die Wasserwaage auf die Mauerreihe)",
 "type": &"dialogue"
 },
-"13": {
-"id": "13",
+"12": {
+"id": "12",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -76,12 +63,12 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "14",
+"next_id": "13",
 "parent_id": "3",
 "type": &"mutation"
 },
-"14": {
-"id": "14",
+"13": {
+"id": "13",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -100,12 +87,12 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "15",
+"next_id": "14",
 "parent_id": "3",
 "type": &"mutation"
 },
-"15": {
-"id": "15",
+"14": {
+"id": "14",
 "is_snippet": false,
 "next_id": "end",
 "type": &"goto"
@@ -154,9 +141,9 @@ lines = {
 }])
 },
 "id": "3",
-"next_conditional_id": "15",
+"next_conditional_id": "14",
 "next_id": "4",
-"next_id_after": "15",
+"next_id_after": "14",
 "type": &"condition"
 },
 "4": {
@@ -193,9 +180,9 @@ lines = {
 "notes": "",
 "parent_id": "3",
 "tags": PackedStringArray(),
-"text": "Zuerst lege die Dämmplatten in die offenen Felder.",
+"text": "Als nächstes nimm deine Kelle und tauche sie in den Mörtel.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Zuerst lege die Dämmplatten in die offenen Felder.",
+"translation_key": "Als nächstes nimm deine Kelle und tauche sie in den Mörtel.",
 "type": &"dialogue"
 },
 "7": {
@@ -206,9 +193,9 @@ lines = {
 "notes": "",
 "parent_id": "3",
 "tags": PackedStringArray(),
-"text": "Als nächstes nimm deine Kelle und tauche sie in den Mörtel.",
+"text": "Jetzt kannst du an der markierten stelle mit der Kelle Mörtel auftragen. (streiche mit der Kelle durch)",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Als nächstes nimm deine Kelle und tauche sie in den Mörtel.",
+"translation_key": "Jetzt kannst du an der markierten stelle mit der Kelle Mörtel auftragen. (streiche mit der Kelle durch)",
 "type": &"dialogue"
 },
 "8": {
@@ -219,9 +206,9 @@ lines = {
 "notes": "",
 "parent_id": "3",
 "tags": PackedStringArray(),
-"text": "Jetzt kannst du an der markierten stelle mit der Kelle Mörtel auftragen. (streiche mit der Kelle durch)",
+"text": "Ziegel können nun auf den Mörtel gesetzt werden.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Jetzt kannst du an der markierten stelle mit der Kelle Mörtel auftragen. (streiche mit der Kelle durch)",
+"translation_key": "Ziegel können nun auf den Mörtel gesetzt werden.",
 "type": &"dialogue"
 },
 "9": {
@@ -232,9 +219,9 @@ lines = {
 "notes": "",
 "parent_id": "3",
 "tags": PackedStringArray(),
-"text": "Ziegel können nun auf den Mörtel gesetzt werden.",
+"text": "Aber pass auf eine Lücke ist kleiner, deshalb musst du einen Ziegel schneiden.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Ziegel können nun auf den Mörtel gesetzt werden.",
+"translation_key": "Aber pass auf eine Lücke ist kleiner, deshalb musst du einen Ziegel schneiden.",
 "type": &"dialogue"
 }
 }
@@ -243,12 +230,11 @@ set Global.dialogue_open = true
 if Global.dialogue_count == 4:
 	Maurer: Perfekt! durch die Richtschnur hast du nun eine Orientierungslinie um deine Ziegel richtig zu setzen.
 	Maurer: Nun kommen wir zum Mauerbau.
-	Maurer: Zuerst lege die Dämmplatten in die offenen Felder.
 	Maurer: Als nächstes nimm deine Kelle und tauche sie in den Mörtel.
 	Maurer: Jetzt kannst du an der markierten stelle mit der Kelle Mörtel auftragen. (streiche mit der Kelle durch)
 	Maurer: Ziegel können nun auf den Mörtel gesetzt werden.
 	Maurer: Aber pass auf eine Lücke ist kleiner, deshalb musst du einen Ziegel schneiden.
-	Maurer: Im Nebenraum ist eine Säge und ein Ziegel vorbereitet. Bitte nimm den Ziegel und Scheide ihn richtig zu.
+	Maurer: Hinten ist eine Säge und ein Ziegel vorbereitet. 
 	Maurer: Wenn du die Reihe fertig gemacht hast musst du noch mit der Wasserwaage prüfen ob sie gerade ist. (lege die Wasserwaage auf die Mauerreihe)
 	set Global.dialogue_count = 5
 	set Global.dialogue_open = false

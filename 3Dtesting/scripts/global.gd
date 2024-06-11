@@ -44,7 +44,7 @@ var start_crane_game = false
 var roof_finished = false
 var concrete_filled_roof = false
 var placing_games_open = false
-
+var crosshair_off = false 
 
 
 

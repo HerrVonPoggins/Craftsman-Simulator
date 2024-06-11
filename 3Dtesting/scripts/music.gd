@@ -12,6 +12,8 @@ func _ready():
 func _process(_delta):
 	$MaineMenu.volume_db = volume
 	$BricklayerMusic.volume_db = volume
+	
+	
 	$ButtonSound.volume_db = effects
 	$BrickPlacing.volume_db = effects
 	$ConcretePlacing.volume_db = effects

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://djw5gwv30bvm1"]
 
 [ext_resource type="Script" path="res://UI/Inventory/inventory.gd" id="1_2k2bt"]
-[ext_resource type="Texture2D" uid="uid://6iw5ch25qnnj" path="res://UI/Inventory_slot.png" id="2_tecys"]
+[ext_resource type="Texture2D" uid="uid://6iw5ch25qnnj" path="res://ui/Inventory_slot.png" id="2_tecys"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tgkn1"]
 texture = ExtResource("2_tecys")
@@ -32,7 +32,7 @@ layout_mode = 2
 theme = SubResource("Theme_vh8sk")
 disabled = true
 
-[node name="button2" type="Button" parent="HBoxContainer"]
+[node name="SpiritLevelButton" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme = SubResource("Theme_vh8sk")
@@ -78,3 +78,4 @@ layout_mode = 2
 theme = SubResource("Theme_vh8sk")
 
 [connection signal="pressed" from="HBoxContainer/TrowelButton" to="." method="_on_trowel_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/SpiritLevelButton" to="." method="_on_spirit_level_button_pressed"]

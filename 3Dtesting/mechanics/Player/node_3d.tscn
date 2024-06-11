@@ -10594,6 +10594,7 @@ target_position = Vector3(0, 0, -10)
 script = ExtResource("2_esgj4")
 
 [node name="TextureRect" type="TextureRect" parent="CharacterBody3D/Neck/Camera3D"]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -11108,6 +11109,7 @@ libraries = {
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D/Neck/Camera3D"]
 transform = Transform3D(0.997713, -0.0646264, 0.01982, 3.64033e-09, 0.293206, 0.956049, -0.0675974, -0.953862, 0.292535, 0.504248, -0.33749, 0.154572)
+visible = false
 mesh = SubResource("CylinderMesh_r7tb1")
 
 [node name="Hold" parent="CharacterBody3D/Neck/Camera3D/MeshInstance3D" instance=ExtResource("6_e1oej")]

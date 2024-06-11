@@ -14,6 +14,7 @@ func _process(delta):
 		$"../Camera3D".current = true
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_7.dialogue"))
 		Global.stay = true
+		Global.crosshair_off = true
 		Global.crane_on = false
 		played = true
 		SPEED = 20

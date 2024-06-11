@@ -25,6 +25,13 @@ func _process(delta):
 	if Input.is_action_just_pressed("interagieren"):
 		$"CharacterBody3D/Neck/Camera3D/Root Scene/AnimationPlayer".play("GrabAction_001")
 
+	if Global.crosshair_off == true:
+		$CharacterBody3D/Neck/Camera3D/TextureRect.visible = false
+	if Global.crosshair_off == false:
+		$CharacterBody3D/Neck/Camera3D/TextureRect.visible = true
+		
+		
+	
 func _on_inventory_trowel_button_clicked():
 	emit_signal("inv_trowel_button_clicked")
 
