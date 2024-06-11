@@ -26,7 +26,8 @@ func _process(delta):
 		Global.start_crane_game = true
 		
 	if Global.concrete_filled_roof == true:
-		$"Root Scene".visible = true	
+		$"Root Scene".visible = true
+		$"Root Scene/RootNode/Cube/StaticBody3D/CollisionShape3D".call_deferred("set_disabled", false)
 	
 		
 		

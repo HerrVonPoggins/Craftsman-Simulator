@@ -10613,7 +10613,7 @@ transform = Transform3D(0.0364169, 0, -0.999337, 0, 1, 0, 0.999336, 0, 0.036417,
 visible = false
 
 [node name="Root Scene" type="Node3D" parent="CharacterBody3D/Neck/Camera3D"]
-transform = Transform3D(-0.992755, 0, -0.120154, 0, 1, 0, 0.120154, 0, -0.992755, 0.611738, -0.483437, 0.939134)
+transform = Transform3D(-0.99984, 0, -0.0178536, 0, 1, 0, 0.0178536, 0, -0.99984, 0.25873, -0.483437, 0.939134)
 visible = false
 
 [node name="RootNode" type="Node3D" parent="CharacterBody3D/Neck/Camera3D/Root Scene"]

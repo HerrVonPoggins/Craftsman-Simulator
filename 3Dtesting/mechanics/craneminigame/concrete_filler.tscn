@@ -21,6 +21,21 @@ glow_enabled = true
 top_radius = 0.05
 bottom_radius = 0.1
 
+[sub_resource type="Animation" id="Animation_7l7p2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.13997, 0.302221)]
+}
+
 [sub_resource type="Animation" id="Animation_thm6f"]
 resource_name = "fill"
 loop_mode = 1
@@ -35,21 +50,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, 1.13997, 0.302221), Vector3(0, -0.10119, 0.302221)]
-}
-
-[sub_resource type="Animation" id="Animation_7l7p2"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MeshInstance3D2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 1.13997, 0.302221)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ry4mb"]

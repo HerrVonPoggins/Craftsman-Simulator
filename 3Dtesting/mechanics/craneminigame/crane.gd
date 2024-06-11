@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-
+var played = false
 const SPEED = 20
 const JUMP_VELOCITY = 4.5
 
@@ -8,13 +8,14 @@ const JUMP_VELOCITY = 4.5
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _process(delta):
-	if Global.start_crane_game == true:
+	if Global.start_crane_game == true and played == false:
 		
 		$"..".visible = true
 		$"../Camera3D".current = true
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_7.dialogue"))
 		Global.stay = true
 		Global.crane_on = false
+		played = true
 
 
 

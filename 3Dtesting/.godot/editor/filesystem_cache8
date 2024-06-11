@@ -1,5 +1,5 @@
 3acdcc5cb6df755358dde907981ccea8
-::res://::1718110304
+::res://::1718113477
 new_shader_material.tres::ShaderMaterial::1804551706650849689::1718095838::0::1::::<><>::res://scenes/CorePlayable/CorePlayable.gdshader
 Settings.gd::GDScript::-1::1718110304::0::1::::<>Control<>::
 ::res://addons/::1717660997
@@ -181,7 +181,7 @@ warning_sample.jpg::CompressedTexture2D::8422226147283637527::1713301043::171378
 water_progress.png::CompressedTexture2D::6519096976723986250::1717830490::1717830490::1::::<><>::
 ::res://assets/video/::1717660997
 VID-20240228-WA0002.ogv::VideoStreamTheora::-1::1712947142::0::1::::<><>::
-::res://dialoguefiles/::1718112731
+::res://dialoguefiles/::1718113023
 bauleiter_maurer.dialogue::Resource::8352994675498894795::1717830520::1718095829::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 maurer_intro.dialogue::Resource::7035358605989605458::1714735195::1718095829::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 maurer_step_1.dialogue::Resource::900546417593765274::1717830520::1718095829::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
@@ -224,12 +224,12 @@ stairs.tscn::PackedScene::3303260356177247275::1715603737::0::1::::<><>::res://m
 ::res://mechanics/cement-mixing/::1718106156
 zementmischer.gd::GDScript::-1::1718106156::0::1::::<>Node3D<>::
 zementmischer.tscn::PackedScene::1769461636928547823::1718106156::0::1::::<><>::res://mechanics/cement-mixing/zementmischer.gd<>uid://bo8c2ur7cexoa::::res://assets/textures/moertel_progress_bar.png<>uid://dwdw67qma4gvu::::res://assets/textures/sand_progress.png<>uid://cy45tsoflqofy::::res://assets/textures/water_progress.png<>uid://d35hcq0c75uob::::res://assets/textures/cement_progress.png
-::res://mechanics/craneminigame/::1718112703
-concrete_filler.gd::GDScript::-1::1718112618::0::1::::<>Node3D<>::
-concrete_filler.tscn::PackedScene::4417174875781340797::1718112858::0::1::::<><>::res://mechanics/craneminigame/concrete_filler.gd<>uid://vkt6eb8hq1ta::::res://mechanics/craneminigame/Decke_animation.fbx<>uid://dtmxvxpud5lh5::::res://mechanics/craneminigame/Filigrandecke.fbx
-crane.gd::GDScript::-1::1718106156::0::1::::<>CharacterBody3D<>::
+::res://mechanics/craneminigame/::1718113406
+concrete_filler.gd::GDScript::-1::1718113293::0::1::::<>Node3D<>::
+concrete_filler.tscn::PackedScene::4417174875781340797::1718113293::0::1::::<><>::res://mechanics/craneminigame/concrete_filler.gd<>uid://vkt6eb8hq1ta::::res://mechanics/craneminigame/Decke_animation.fbx<>uid://dtmxvxpud5lh5::::res://mechanics/craneminigame/Filigrandecke.fbx
+crane.gd::GDScript::-1::1718113406::0::1::::<>CharacterBody3D<>::
 craneminigame.gd::GDScript::-1::1718106156::0::1::::<>Node3D<>::
-craneminigame.tscn::PackedScene::8410866740594291421::1718112630::0::1::::<><>::res://mechanics/craneminigame/craneminigame.gd<>res://mechanics/craneminigame/crane.gd
+craneminigame.tscn::PackedScene::8410866740594291421::1718113406::0::1::::<><>::res://mechanics/craneminigame/craneminigame.gd<>res://mechanics/craneminigame/crane.gd
 Decke_animation.fbx::PackedScene::1495818689560480318::1718106156::1718106156::1::::<><>::
 Filigrandecke.fbx::PackedScene::8519057837879296408::1718106156::1718106156::1::::<><>::
 ::res://mechanics/CurcuitMinigame/::1717828619
@@ -266,12 +266,12 @@ trowel.tscn::PackedScene::4291328714433466311::1716181239::0::1::::<><>::
 ::res://scenes/Carpenter/::1718110304
 carpenter_world.gd::GDScript::-1::1718110304::0::1::::<>Node3D<>::
 carpenter_world.tscn::PackedScene::4889354544109381117::1715706335::0::1::::<><>::res://scenes/Carpenter/carpenter_world.gd<>uid://cxv4g3lrd0p6b::::res://mechanics/Player/node_3d.tscn<>uid://bncehlcg0sopv::::res://mechanics/Carpenter-Areas/stairs.tscn<>uid://b7qpr6ucdmfmq::::res://assets/carpenter-assets/wallguide_mesh(unplaned).tres<>uid://bcokw07emnd0j::::res://assets/carpenter-assets/step_mesh(unplaned).tres
-::res://scenes/CorePlayable/::1718112629
+::res://scenes/CorePlayable/::1718113347
 CorePlayable.gdshader::Shader::-1::1718091033::0::1::::<><>::
-CorePlayable.tscn::PackedScene::367638352014426829::1718112629::0::1::::<><>::res://scenes/CorePlayable/world.gd<>uid://c6ub5x3yfjwfq::::res://mechanics/build_wall/wall.tscn<>uid://0he1lqnqyqvf::::res://mechanics/cement-mixing/zementmischer.tscn<>uid://cc4eoydeq1jwv::::res://ui/player_ui/info hub.tscn<>uid://cyxbogh4cdp8::::res://assets/models/eimer_wasser_1.webp<>uid://cxv4g3lrd0p6b::::res://mechanics/Player/node_3d.tscn<>res://scenes/CorePlayable/CorePlayable.gdshader<>uid://bfcibpy2rsirf::::res://assets/models/double_trash_bags.obj<>uid://bmrq0v6mprlfw::::res://assets/models/traffic_cone.obj<>uid://b2e0s63uasg6b::::res://mechanics/Tools/trowel.tscn<>uid://n4kamoh4pdg4::::res://mechanics/build_wall/concreteplacingminigame.tscn<>uid://b8dt4snpw78s6::::res://mechanics/build_wall/concreteplacingminigame2.tscn<>uid://bi5tirgw72us4::::res://mechanics/build_wall/concreteplacingminigam3.tscn<>uid://ckkechdc8rspf::::res://mechanics/build_wall/Doortop.tscn<>uid://b8bxr3vceyac2::::res://mechanics/metal_rod/rod.tscn<>uid://brsmrqkeinfal::::res://mechanics/build_wall/brickplacingminigame.tscn<>uid://dr3j0m2rhonsf::::res://mechanics/craneminigame/craneminigame.tscn<>uid://duxpymako04v0::::res://mechanics/brick_cutting/saw.tscn<>uid://4sc0de3s2g68::::res://assets/models/prototyp5_brick-wall-stone-bricks-rock-surface-cartoon-style-seamless_191307-535.png<>uid://crlicy405guda::::res://assets/models/house_base.glb<>uid://bmaj688jw4v5y::::res://assets/models/prototyp5_360_F_257717689_dOEzjdOvMhY2lZbsWM1eVGum8v7yTBWx.jpg<>uid://b6mungrmbw6nt::::res://assets/models/world 2.3 decimate applied.glb<>uid://cm3acp3e8tvev::::res://assets/models/prototyp5_38ebb6_2515fa7e0ef74758a2f8a6adc7b867de~mv2.jpg<>uid://b36yhv6m4mi02::::res://mechanics/craneminigame/concrete_filler.tscn<>uid://vkt6eb8hq1ta::::res://mechanics/craneminigame/Decke_animation.fbx<>uid://c25o1dw58fyra::::res://assets/models/prototyp5_T_PolygonConstruction_04_B.png<>uid://cgyju8ktk8ok4::::res://assets/models/prototyp5_T_PolygonConstruction_04_C.png
+CorePlayable.tscn::PackedScene::367638352014426829::1718113347::0::1::::<><>::res://scenes/CorePlayable/world.gd<>uid://c6ub5x3yfjwfq::::res://mechanics/build_wall/wall.tscn<>uid://0he1lqnqyqvf::::res://mechanics/cement-mixing/zementmischer.tscn<>uid://cc4eoydeq1jwv::::res://ui/player_ui/info hub.tscn<>uid://cyxbogh4cdp8::::res://assets/models/eimer_wasser_1.webp<>uid://cxv4g3lrd0p6b::::res://mechanics/Player/node_3d.tscn<>res://scenes/CorePlayable/CorePlayable.gdshader<>uid://bfcibpy2rsirf::::res://assets/models/double_trash_bags.obj<>uid://bmrq0v6mprlfw::::res://assets/models/traffic_cone.obj<>uid://b2e0s63uasg6b::::res://mechanics/Tools/trowel.tscn<>uid://n4kamoh4pdg4::::res://mechanics/build_wall/concreteplacingminigame.tscn<>uid://b8dt4snpw78s6::::res://mechanics/build_wall/concreteplacingminigame2.tscn<>uid://bi5tirgw72us4::::res://mechanics/build_wall/concreteplacingminigam3.tscn<>uid://ckkechdc8rspf::::res://mechanics/build_wall/Doortop.tscn<>uid://b8bxr3vceyac2::::res://mechanics/metal_rod/rod.tscn<>uid://brsmrqkeinfal::::res://mechanics/build_wall/brickplacingminigame.tscn<>uid://dr3j0m2rhonsf::::res://mechanics/craneminigame/craneminigame.tscn<>uid://duxpymako04v0::::res://mechanics/brick_cutting/saw.tscn<>uid://4sc0de3s2g68::::res://assets/models/prototyp5_brick-wall-stone-bricks-rock-surface-cartoon-style-seamless_191307-535.png<>uid://crlicy405guda::::res://assets/models/house_base.glb<>uid://bmaj688jw4v5y::::res://assets/models/prototyp5_360_F_257717689_dOEzjdOvMhY2lZbsWM1eVGum8v7yTBWx.jpg<>uid://b6mungrmbw6nt::::res://assets/models/world 2.3 decimate applied.glb<>uid://cm3acp3e8tvev::::res://assets/models/prototyp5_38ebb6_2515fa7e0ef74758a2f8a6adc7b867de~mv2.jpg<>uid://b36yhv6m4mi02::::res://mechanics/craneminigame/concrete_filler.tscn<>uid://vkt6eb8hq1ta::::res://mechanics/craneminigame/Decke_animation.fbx<>uid://c25o1dw58fyra::::res://assets/models/prototyp5_T_PolygonConstruction_04_B.png<>uid://cgyju8ktk8ok4::::res://assets/models/prototyp5_T_PolygonConstruction_04_C.png
 radio(1).fbx::PackedScene::3433104680136509660::1715677276::1715677277::1::::<><>::
 toolbox.fbx::PackedScene::2185489451015958581::1715677276::1715677277::1::::<><>::
-world.gd::GDScript::-1::1718110025::0::1::::<>Node3D<>::
+world.gd::GDScript::-1::1718113347::0::1::::<>Node3D<>::
 ::res://scenes/ElektrikerScene/::1717660998
 Elektriker.tscn::PackedScene::4405951662758816784::1716217806::0::1::::<><>::res://scenes/ElektrikerScene/world.gd<>uid://k0fmfgl0bft6::::res://assets/models/kloofendal_48d_partly_cloudy_puresky_2k.hdr<>uid://cxv4g3lrd0p6b::::res://mechanics/Player/node_3d.tscn<>uid://cc4eoydeq1jwv::::res://ui/player_ui/info hub.tscn<>uid://ck2ddnhldnuci::::res://mechanics/PowerBox/power_box.tscn
 world.gd::GDScript::-1::1716213245::0::1::::<>Node3D<>::
@@ -299,8 +299,8 @@ fenstersturz.fbx::PackedScene::826658474277271098::1716213017::1716213017::1::::
 spachtel.fbx::PackedScene::7122309807330562181::1715705679::1715705679::1::::<><>::
 Stuckateur.gd::GDScript::-1::1717828620::0::1::::<>Node3D<>::
 Stuckateur.tscn::PackedScene::1336356205788386795::1717243736::0::1::::<><>::uid://k0fmfgl0bft6::::res://assets/models/kloofendal_48d_partly_cloudy_puresky_2k.hdr<>res://scenes/StuckateurScene/Stuckateur.gd<>uid://cxv4g3lrd0p6b::::res://mechanics/Player/node_3d.tscn<>uid://cc4eoydeq1jwv::::res://ui/player_ui/info hub.tscn<>uid://chngdy2vpbn5d::::res://mechanics/StudWall/stud_wall.tscn<>uid://qc6iyco4u5e8::::res://assets/models/isoslierung_38ebb6_2515fa7e0ef74758a2f8a6adc7b867de~mv2.jpg
-::res://scripts/::1718106156
-global.gd::GDScript::-1::1718106156::0::1::::<>Node<>::
+::res://scripts/::1718113277
+global.gd::GDScript::-1::1718113277::0::1::::<>Node<>::
 music.gd::GDScript::-1::1718106156::0::1::::<>Node<>::
 music.tscn::PackedScene::3538743680357874426::1717948362::0::1::::<><>::res://scripts/music.gd<>uid://dmenvs18svasr::::res://assets/sounds/button.ogg<>uid://dlmssq48nksr0::::res://assets/sounds/brick_placing.ogg<>uid://dqvd6iecdj0yp::::res://assets/sounds/concrete_placing.ogg
 ::res://ui/::1718106156
