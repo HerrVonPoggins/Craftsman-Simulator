@@ -3,6 +3,7 @@ extends Node3D
 @onready var Brick_1 = $Cube_001
 @onready var Brick_2 = $Cube_002
 @onready var Brick_3 = $Cube_003
+@onready var trowel = $"../Props/Trowel"
 var brick_1_done = false
 var brick_2_done = false
 var brick_3_done = false
@@ -17,6 +18,7 @@ func _process(delta):
 		Global.placing_games_open = true
 		Global.stay = true
 		player.visible = false
+		trowel.visible = false
 	
 	
 	if Brick_1.rotation.x <= -1.4 and Brick_1.rotation.x >= -1.48:
@@ -32,6 +34,7 @@ func _process(delta):
 		Global.wall_finished = true
 		Global.stay = false
 		player.visible = true
+		trowel.visible = true
 		Global.placing_games_open = false
 		queue_free()
 

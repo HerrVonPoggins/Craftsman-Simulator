@@ -1,5 +1,5 @@
 extends Node3D
-
+@onready var trowel = $"../Props/Trowel"
 @onready var player = $"../Player"
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,6 +13,7 @@ func _process(delta):
 		$Camera3D.current = true
 		Global.placing_games_open = true
 		player.visible = false
+		trowel.visible = false
 		Global.stay = true
 	if $concrete7/MeshInstance3D2.visible == true:
 		Global.concrete_1 = true
@@ -152,5 +153,6 @@ func _on_concrete_7_body_exited(body):
 		Global.concrete_1 = true
 		Global.stay = false
 		player.visible = true
+		trowel.visible = true
 		Global.placing_games_open = false
 		$".".queue_free()

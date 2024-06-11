@@ -76,6 +76,9 @@ func _process(delta):
 			var collider = get_collider()
 			if collider != null:
 				if collider.is_in_group("grab"):
+					
+					$"../Root Scene/AnimationPlayer".play("metarig|grab")
+					await $"../Root Scene/AnimationPlayer".animation_finished
 					obj = collider
 				if collider.is_in_group("trowel"):
 					trowel_collider = collider
@@ -121,6 +124,7 @@ func _process(delta):
 		last = obj.global_position
 		obj.position = point.global_position
 		if obj.is_class("RigidBody3D"):
+			
 			obj.linear_velocity = Vector3.ZERO
 			obj.look_at($"../VisionCenter".global_position)
 

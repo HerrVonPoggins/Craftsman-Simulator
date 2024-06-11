@@ -1,21 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://b36yhv6m4mi02"]
+[gd_scene load_steps=10 format=3 uid="uid://b36yhv6m4mi02"]
 
 [ext_resource type="Script" path="res://mechanics/craneminigame/concrete_filler.gd" id="1_q7spn"]
 [ext_resource type="PackedScene" uid="uid://vkt6eb8hq1ta" path="res://mechanics/craneminigame/Decke_animation.fbx" id="2_cmlfh"]
 [ext_resource type="PackedScene" uid="uid://dtmxvxpud5lh5" path="res://mechanics/craneminigame/Filigrandecke.fbx" id="3_knf0l"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_canuy"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-
-[sub_resource type="Sky" id="Sky_rv012"]
-sky_material = SubResource("ProceduralSkyMaterial_canuy")
-
-[sub_resource type="Environment" id="Environment_j57t6"]
-background_mode = 2
-sky = SubResource("Sky_rv012")
-tonemap_mode = 2
-glow_enabled = true
+[ext_resource type="PackedScene" uid="uid://bno0u33gg4srv" path="res://assets/models/Schalung.fbx" id="4_mdrna"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_j4pfh"]
 top_radius = 0.05
@@ -63,20 +51,15 @@ radius = 0.25
 height = 0.5
 
 [node name="ConcreteFiller" type="Node3D"]
+visible = false
 script = ExtResource("1_q7spn")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_j57t6")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
-shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.27576, 2.0685)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.996984, 0.0760105, -0.015658, 0, 0.201762, 0.979435, 0.0776065, -0.976481, 0.201153, 0.69234, 0.74921, 1.35942)
+visible = false
 mesh = SubResource("CylinderMesh_j4pfh")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -86,6 +69,7 @@ libraries = {
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13997, 0.302221)
+visible = false
 mesh = SubResource("SphereMesh_ipao0")
 
 [node name="Root Scene" parent="." instance=ExtResource("2_cmlfh")]
@@ -93,3 +77,6 @@ transform = Transform3D(4.2, 0, 0, 0, 4.7, 0, 0, 0, 6.3, 0.527043, -17.0627, -30
 
 [node name="Root Scene2" parent="." instance=ExtResource("3_knf0l")]
 transform = Transform3D(4.2, 0, 0, 0, 4.7, 0, 0, 0, 6.3, 0.531486, -16.844, -30.8574)
+
+[node name="Root Scene3" parent="." instance=ExtResource("4_mdrna")]
+transform = Transform3D(4.2, 0, 0, 0, 4.7, 0, 0, 0, 6.3, 0.327971, -16.7769, -31.5132)
