@@ -85,25 +85,28 @@ func _on_range_body_entered(body):
 		if minigame_started == false:
 			minigame_started = true
 
+var mixer_started = false
 func _on_player_start_mixer():
 	if water_filled == true and cement_filled == true and sand_filled == true:
+		if mixer_started == false:
 		#if mixer is turned on the concrete bucket becomes visible 
-		concrete_bucket_obj.visible = true
-		concrete_bucket_obj.freeze = false
-		collision_shape_3d.disabled = false
-		water = false
-		concrete = false
-		sand = false
+			concrete_bucket_obj.visible = true
+			concrete_bucket_obj.freeze = false
+			collision_shape_3d.disabled = false
+			water = false
+			concrete = false
+			sand = false
+			mixer_started = true
 
-		Global.concrete_mixed = true
-		Global.dialogue_count = 3
-		Global.dialogue_replay = null
-#after the mixer starts the progress bars become invisible
-		minigame_started = false
-		$MoertelProgressBar.visible = false
-		cement_value.visible = false
-		water_value.visible = false
-		sand_value.visible = false
+			Global.concrete_mixed = true
+			Global.dialogue_count = 3
+			Global.dialogue_replay = null
+	#after the mixer starts the progress bars become invisible
+			minigame_started = false
+			$MoertelProgressBar.visible = false
+			cement_value.visible = false
+			water_value.visible = false
+			sand_value.visible = false
 		
 	else:
 		Global.dialogue_replay = 1
