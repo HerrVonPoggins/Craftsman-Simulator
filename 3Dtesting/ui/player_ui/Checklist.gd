@@ -31,7 +31,7 @@ var opened = true
 
 
 #functions to switch set the checklist details
-func _process(delta):
+func _process(_delta):
 	
 	
 	_check_1_on(check_state_1)

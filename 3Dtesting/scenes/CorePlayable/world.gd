@@ -218,7 +218,7 @@ func _on_area_3d_body_entered(body):
 		#$Area3D/Bucket_water2.queue_free()
 		$Area3D/Timer.stop()
 		$Area3D/ConcreteBucketObj.visible = true
-		$Area3D/Bucket_water2.visible == false
+		$Area3D/Bucket_water2.visible = false
 
 
 #func _on_timer_timeout():

@@ -5,3 +5,4 @@ res://ui/screens/titlescreen.tscn
 res://scenes/CorePlayable/world.gd
 res://mechanics/cement-mixing/zementmischer.gd
 res://scripts/music.gd
+res://ui/player_ui/Checklist.gd
