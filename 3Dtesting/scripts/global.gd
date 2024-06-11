@@ -45,7 +45,7 @@ var roof_finished = false
 var concrete_filled_roof = false
 var placing_games_open = false
 var crosshair_off = false 
-
+var brick_is_being_placed = false
 
 
 

@@ -84,6 +84,21 @@ roughness = 0.27
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ihfmv"]
 albedo_color = Color(0.411765, 0.411765, 0.411765, 1)
 
+[sub_resource type="Animation" id="Animation_433lo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area3D/Outline1:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.52549, 0.34902, 0.231373)]
+}
+
 [sub_resource type="Animation" id="Animation_031hc"]
 resource_name = "marker"
 length = 1.5
@@ -99,21 +114,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 0.52549, 0.34902, 0.231373), Color(1, 0.52549, 0.34902, 1), Color(1, 0.52549, 0.34902, 0.219608)]
-}
-
-[sub_resource type="Animation" id="Animation_433lo"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Area3D/Outline1:surface_material_override/0:albedo_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 0.52549, 0.34902, 0.231373)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_aktpn"]
