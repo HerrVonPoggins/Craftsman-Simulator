@@ -1,6 +1,6 @@
 CollisionShape3D
-RigidBody3D
 StaticBody3D
+RigidBody3D
 Label
 MeshInstance3D
 Area3D

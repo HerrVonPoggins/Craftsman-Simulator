@@ -99,9 +99,12 @@ func _on_player_start_mixer():
 		Global.dialogue_count = 3
 		Global.dialogue_replay = null
 #after the mixer starts the progress bars become invisible
+		minigame_started = false
+		$MoertelProgressBar.visible = false
 		cement_value.visible = false
 		water_value.visible = false
 		sand_value.visible = false
+		
 	else:
 		Global.dialogue_replay = 1
 		
