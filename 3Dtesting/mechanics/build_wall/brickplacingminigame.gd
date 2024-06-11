@@ -1,5 +1,5 @@
 extends Node3D
-
+@onready var player = $"../Player"
 @onready var Brick_1 = $Cube_001
 @onready var Brick_2 = $Cube_002
 @onready var Brick_3 = $Cube_003
@@ -14,7 +14,8 @@ func _ready():
 func _process(delta):
 	if $".".visible == true:
 		$Camera3D.current = true
-	
+		Global.stay = true
+		player.visible = false
 	
 	
 	if Brick_1.rotation.x <= -1.4 and Brick_1.rotation.x >= -1.48:
@@ -28,6 +29,8 @@ func _process(delta):
 		brick_3_done = true
 	if brick_1_done == true and brick_2_done == true and brick_3_done == true:
 		Global.wall_finished = true
+		Global.stay = false
+		player.visible = true
 		queue_free()
 
 func _unhandled_input(event):

@@ -1,3 +1,5 @@
+res://scenes/CorePlayable
+res://scripts
 res://ui/player_ui
 res://mechanics/craneminigame
 res://assets/textures
@@ -9,7 +11,6 @@ res://mechanics/metal_rod
 C:/GameDev/PlugIns/FBX2glTF-windows-x86_64/FBX2glTF-windows-x86_64
 res://mechanics/SwitchMinigame
 res://mechanics/CurcuitMinigame
-res://scripts
 res://mechanics/2d_games
 res://mechanics/Player
 res://assets/carpenter-assets

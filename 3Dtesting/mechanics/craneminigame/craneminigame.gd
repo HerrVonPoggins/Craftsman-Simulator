@@ -8,15 +8,17 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed("kamera"):
-		$"Root Scene/AnimationPlayer".play("Kran teil1|Ausfahren1")
-		await $"Root Scene/AnimationPlayer".animation_finished
-		$"Root Scene/AnimationPlayer".play("Kran teil2|Ausfahren2")
+	#if Input.is_action_just_pressed("kamera"):
+		
+		#$"Root Scene2/AnimationPlayer2".play("Kran teil1|Kran teil1_Go")
+		#await $"Root Scene2/AnimationPlayer".animation_finished
+		#$"Root Scene2/AnimationPlayer".play("Kran teil1_001|Kran teil1_Los")
+		
 		#await $"Root Scene/AnimationPlayer".animation_finished
 	
 	
 	
-	if obj != null:
+	if obj != null  and $".".visible == true:
 		obj.global_transform = $CharacterBody3D/Area3D/Hold.global_transform
 
 		if obj == $Decke1:
@@ -102,3 +104,8 @@ func _on_decke_9_area_body_entered(body):
 		body.queue_free()
 		$"Decke9 Area/Decke 9".visible = true
 		$"Decke9 Area/MeshInstance3D".queue_free()
+		await get_tree().create_timer(3).timeout
+		Global.stay = false
+		Global.roof_finished = true
+		queue_free()
+		

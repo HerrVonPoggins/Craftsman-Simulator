@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bdc1e0ned6xjg"
+path="res://.godot/imported/maurer_step_6.dialogue-3efde9d15395b0b0c190445843e0a7a7.tres"
+
+[deps]
+
+source_file="res://dialoguefiles/maurer_step_6.dialogue"
+dest_files=["res://.godot/imported/maurer_step_6.dialogue-3efde9d15395b0b0c190445843e0a7a7.tres"]
+
+[params]
+
+defaults=true

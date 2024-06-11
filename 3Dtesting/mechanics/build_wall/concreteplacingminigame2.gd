@@ -1,6 +1,6 @@
 extends Node3D
 
-
+@onready var player = $"../Player"
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -10,6 +10,8 @@ func _ready():
 func _process(delta):
 	if $".".visible == true:
 		$Camera3D.current = true
+		player.visible = false
+		Global.stay = true
 	if $concrete7/MeshInstance3D2.visible == true:
 		Global.concrete_2 = true
 
@@ -139,4 +141,6 @@ func _on_concrete_6_body_exited(body):
 func _on_concrete_7_body_exited(body):
 	if	$concrete7/MeshInstance3D2.visible == true:
 		Global.concrete_2 = true
+		Global.stay = false
+		player.visible = true
 		$".".queue_free()

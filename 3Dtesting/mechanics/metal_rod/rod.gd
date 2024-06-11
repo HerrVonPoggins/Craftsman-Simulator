@@ -15,5 +15,6 @@ func _on_string_wedge_body_entered(body):
 	if body.is_in_group("rod") and $".".visible == true:
 		body.queue_free()
 		Global.rods += 1
-		$StringWedge/Cube_001.visible = true
+		$StringWedge/Mesh.visible = true
+		$StringWedge/CollisionShape3D.call_deferred("set_disabled", true)
 		$StringWedge/MeshInstance3D2.queue_free()

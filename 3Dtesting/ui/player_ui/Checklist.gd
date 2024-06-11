@@ -44,7 +44,7 @@ func _process(delta):
 	#_set_label_3_text(label_text_3)
 	#_set_label_4_text(label_text_4)
 	#_set_label_5_text(label_text_5)
-	if Input.is_action_just_pressed("interagieren"):
+	if Input.is_action_just_pressed("list"):
 		if opened == true:
 			$QuestPlayer.play("Quest_revert")
 			opened = false

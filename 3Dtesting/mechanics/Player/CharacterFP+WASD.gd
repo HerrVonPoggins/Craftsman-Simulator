@@ -66,7 +66,7 @@ func _physics_process(delta):
 	else:
 		speed = WALK_SPEED
 
-	if Input.is_action_pressed("leftclick") and is_up == false and Global.dialogue_open == false:
+	if Input.is_action_pressed("leftclick") and is_up == false and Global.dialogue_open == false and Global.stay == false:
 		$"../Animation".play("arm")
 		is_up = true
 	if not Input.is_action_pressed("leftclick") and is_up == true:

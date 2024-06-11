@@ -3,13 +3,17 @@ extends Node3D
 var mat1 = load("res://assets/textures/material_white.tres")
 var counter = 0
 var played = false
+var played2 = false
+var played3 = false
+var played4 = false
 var diealogue_played = 0
 var done = false
+
 #plays the animation to fade into the scene from the black screen
 func _ready():
 	Music._play_bricklayer()
-	Global.ground_floor = $"Root Scene/RootNode/Bodenplatte_001/StaticBody3D".get_instance_id()
-	Global.ground_grass = $Map/Boden/MapGround.get_instance_id()
+	Global.ground_floor = $house_base/StaticBody3D.get_instance_id()
+	Global.ground_grass = $"Map/world 2_3 decimate applied/Boden modified/StaticBody3D".get_instance_id()
 	Global.current_scene = 1
 	DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_intro.dialogue"))
 	$Enter.play("fade_in")
@@ -17,11 +21,21 @@ func _ready():
 	$WallAnimation.play("Brick_test") 
 	#when the wall is build the animation to fill in the remaining bricks and a praise dialogue is started
 func _process(delta):
-
-	if Global.rods == 5:
-		pass
-
-
+	if Input.is_action_just_pressed("kamera"):
+		Global.rods = 5
+		
+		
+	if Global.rods == 5 and played4 == false:
+		Global.can_make_roof = true
+		played4 = true
+		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_6.dialogue"))
+	if Global.crane_on == true and played2 == false:
+		$"Root Scene2/AnimationPlayer2".play("Kran teil1|Kran teil1_Go")
+		$"Root Scene2/AnimationPlayer".play("Kran teil1_001|Kran teil1_Los")
+		played2 = true
+		await get_tree().create_timer(5).timeout
+		Global.start_crane_game = true
+		
 
 	if Global.concrete_mixed == true and $Area3D/Bucket_water2.visible == false and done == false:
 		$Area3D/Bucket_water2.visible = true
@@ -31,10 +45,8 @@ func _process(delta):
 
 
 
-	if $Node3D5.visible == true or $Node3D7.visible == true or $Node3D8.visible == true or $Node3D9.visible == true:
-		$Player.visible = false
-	else:
-		$Player.visible = true
+
+
 
 
 	if Global.concrete_1 == true:
@@ -46,8 +58,7 @@ func _process(delta):
 	
 	
 	
-	if Input.is_action_just_pressed("kamera"):
-		pass
+
 		
 		
 	if Global.tutorial_finished == true and counter == 0:
@@ -64,7 +75,7 @@ func _process(delta):
 	
 	if Global.wall_finished == true and played == false:
 		played = true
-		$"Root Scene/RootNode/geruest merged".visible = true
+		$"house_base/geruest merged".visible = true
 		#$house_anim_1.visible = true
 		#$house_anim_1/AnimationPlayer.play("Scene")
 		#await  $house_anim_1/AnimationPlayer.animation_finished
@@ -74,29 +85,27 @@ func _process(delta):
 		#await $house_anim_2/AnimationPlayer.animation_finished
 
 
-		$"Root Scene/RootNode/Wand Unten_006/StaticBody3D/CollisionShape3D".call_deferred("set_disabled", false)
-		$Doortop.visible = true
-		$Doortop2.visible = true
-		$Doortop3.visible = true
-		$Doortop4.visible = true
+		#$"Root Scene/RootNode/Wand Unten_006/StaticBody3D/CollisionShape3D".call_deferred("set_disabled", false)
+		
 		$Doortop5.visible = true
 		$Doortop6.visible = true
 		$Doortop7.visible = true
 		$Doortop8.visible = true
-		$Node3D.visible = true
-		$Node3D3.visible = true
-		$Node3D4.visible = true
-		$"Root Scene/RootNode/geruest merged".visible = true
+		#$Node3D.visible = true
+		#$Node3D3.visible = true
+		#$Node3D4.visible = true
+		$"house_base/geruest merged".visible = true
 		played = true
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_4.dialogue"))
 		
-		if Global.door_top == 4 and Global.window_top == 0:
-			DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_5.dialogue"))
-			$Rod.visible = true
-			$Rod2.visible = true
-			$Rod3.visible = true
-			$Rod4.visible = true
-			$Rod5.visible = true
+	if Global.door_top == 4 and Global.window_top == 0 and played3 == false:
+		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_5.dialogue"))
+		played3 = true
+		$Rod.visible = true
+		$Rod2.visible = true
+		$Rod3.visible = true
+		$Rod4.visible = true
+		$Rod5.visible = true
 			
 
 #functions for the info hub to pause the scene
@@ -160,8 +169,9 @@ func _on_area_3d_4_body_entered(body):
 
 func _on_area_3d_5_body_entered(body):
 	if body.is_in_group("spirit_level"):
+		body.queue_free()
 		$Node3D9.visible = true
-		
+
 
 
 func _on_saw_camera_brick_cut_correct():

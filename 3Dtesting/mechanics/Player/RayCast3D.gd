@@ -95,7 +95,9 @@ func _process(delta):
 					Music._play_mixer()
 					player.emit_signal("start_mixer")
 					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_2.dialogue"))
-
+				if collider.is_in_group("truck") and Global.can_make_roof == true:
+					
+					Global.crane_on = true
 				if collider.is_in_group("helmet"):
 					collider.queue_free()
 					Music._play_collect()

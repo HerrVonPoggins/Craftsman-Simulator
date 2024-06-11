@@ -32,15 +32,16 @@ var dialogue_count = 0
 var dialogue_replay = 0
 var press_e = false
 var rods = 0
-
-
+var crane_on = false
+var can_make_roof = false
 var brick_1 = false	
 var brick_2 = false
 var brick_3 = false
 var concrete_1 = false
 var concrete_2 = false
 var concrete_3 = false
-
+var start_crane_game = false
+var roof_finished = false
 
 var sound_count = 6
 var musik_count = 6
