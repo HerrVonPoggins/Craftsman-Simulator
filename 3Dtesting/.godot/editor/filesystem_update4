@@ -6,3 +6,5 @@ res://scenes/CorePlayable/world.gd
 res://mechanics/cement-mixing/zementmischer.gd
 res://scripts/music.gd
 res://ui/player_ui/Checklist.gd
+res://mechanics/Player/node_3d.tscn
+res://mechanics/cement-mixing/zementmischer.tscn

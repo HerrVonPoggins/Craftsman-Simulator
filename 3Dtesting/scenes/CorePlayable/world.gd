@@ -216,7 +216,6 @@ func _on_area_3d_body_entered(body):
 	if body.is_in_group("concretebucket"):
 		body.queue_free()
 		#$Area3D/Bucket_water2.queue_free()
-		$Area3D/Timer.stop()
 		$Area3D/ConcreteBucketObj.visible = true
 		$Area3D/Bucket_water2.visible = false
 
