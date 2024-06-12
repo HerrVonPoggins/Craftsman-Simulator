@@ -266,18 +266,24 @@ func _on_inventory_spirit_level_button_clicked():
 @onready var sand1 = $Props/Sand/Mesh
 
 const HIGHLIGHT = preload("res://scenes/CorePlayable/highlight.tres")
- 
-func _on_ray_cast_3d_mixer_highlight():
-	water.mesh.surface_get_material(0).next_pass = HIGHLIGHT
-	water.mesh.surface_get_material(1).next_pass = HIGHLIGHT
-	water.mesh.surface_get_material(2).next_pass = HIGHLIGHT
-	water.mesh.surface_get_material(3).next_pass = HIGHLIGHT
+var mixer_highlighted = false 
 
-	sand1.mesh.surface_get_material(0).next_pass = HIGHLIGHT
-	sand1.mesh.surface_get_material(1).next_pass = HIGHLIGHT
-	sand1.mesh.surface_get_material(2).next_pass = HIGHLIGHT
+func _on_ray_cast_3d_mixer_highlight():
+	if mixer_highlighted == false:
+		water.mesh.surface_get_material(0).next_pass = HIGHLIGHT
+		water.mesh.surface_get_material(1).next_pass = HIGHLIGHT
+		water.mesh.surface_get_material(2).next_pass = HIGHLIGHT
+		water.mesh.surface_get_material(3).next_pass = HIGHLIGHT
+
+		sand1.mesh.surface_get_material(0).next_pass = HIGHLIGHT
+		sand1.mesh.surface_get_material(1).next_pass = HIGHLIGHT
+		sand1.mesh.surface_get_material(2).next_pass = HIGHLIGHT
+		mixer_highlighted = true
 
 @onready var wedge = $Props/Wedge/Mesh
 
+var wedges_highlighted = false
 func _on_ray_cast_3d_wedge_highlight():
-	wedge.mesh.surface_get_material(0).next_pass = HIGHLIGHT
+	if wedges_highlighted == false:
+		wedge.mesh.surface_get_material(0).next_pass = HIGHLIGHT
+		wedges_highlighted = true
