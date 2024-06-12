@@ -1,5 +1,5 @@
-res://scenes/CorePlayable/CorePlayable.tscn
 res://scenes/Carpenter/carpenter_world.gd
 res://Settings.gd
-res://mechanics/craneminigame/crane.gd
+res://scenes/CorePlayable/CorePlayable.tscn
 res://mechanics/craneminigame/craneminigame.tscn
+res://ui/screens/titlescreen.tscn
