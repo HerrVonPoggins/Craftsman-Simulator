@@ -1,5 +1,7 @@
 extends RayCast3D
 
+signal mixer_highlight
+
 var mat1 = load("res://assets/textures/material_white.tres")
 var last = Vector3.ZERO
 var obj = null
@@ -103,6 +105,7 @@ func _process(delta):
 				if collider.is_in_group("maurer") and Global.dialogue_open == false:
 					Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_text.dialogue"))
+					emit_signal("mixer_highlight")
 				if collider.is_in_group("cement_mixer") and Global.dialogue_open == false:
 					Music._play_mixer()
 					player.emit_signal("start_mixer")
