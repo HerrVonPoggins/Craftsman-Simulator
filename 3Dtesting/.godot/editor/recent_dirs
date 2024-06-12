@@ -1,5 +1,5 @@
-res://mechanics/craneminigame
 res://scenes/CorePlayable
+res://mechanics/craneminigame
 res://scripts
 res://ui/player_ui
 res://assets/textures
