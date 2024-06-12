@@ -25,7 +25,7 @@ func _process(delta):
 	
 	
 	if obj != null  and $".".visible == true:
-		obj.global_transform = $CharacterBody3D/Area3D/Hold.global_transform
+		obj.global_transform = $"Root Scene2/RootNode/Kran_arm/Empty1/CharacterBody3D/Area3D/Hold".global_transform
 
 		if obj == roof1:
 			$"Decke1 Area/MeshInstance3D".visible = true
