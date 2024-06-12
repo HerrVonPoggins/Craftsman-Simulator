@@ -1,6 +1,7 @@
 extends RayCast3D
 
 signal mixer_highlight
+signal wedge_highlight
 
 var mat1 = load("res://assets/textures/material_white.tres")
 var last = Vector3.ZERO
@@ -109,6 +110,7 @@ func _process(delta):
 				if collider.is_in_group("cement_mixer") and Global.dialogue_open == false:
 					Music._play_mixer()
 					player.emit_signal("start_mixer")
+					emit_signal("wedge_highlight")
 					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_2.dialogue"))
 				if collider.is_in_group("truck") and Global.can_make_roof == true:
 					

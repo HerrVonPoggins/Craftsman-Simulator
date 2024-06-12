@@ -276,3 +276,8 @@ func _on_ray_cast_3d_mixer_highlight():
 	sand1.mesh.surface_get_material(0).next_pass = HIGHLIGHT
 	sand1.mesh.surface_get_material(1).next_pass = HIGHLIGHT
 	sand1.mesh.surface_get_material(2).next_pass = HIGHLIGHT
+
+@onready var wedge = $Props/Wedge/Mesh
+
+func _on_ray_cast_3d_wedge_highlight():
+	wedge.mesh.surface_get_material(0).next_pass = HIGHLIGHT
