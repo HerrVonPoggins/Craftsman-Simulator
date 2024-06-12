@@ -105,15 +105,47 @@ func _process(delta):
 		played = true
 		$"house_base/geruest merged".visible = true
 		$"house_base/geruest merged/StaticBody3D/CollisionShape3D".call_deferred("set_disabled", false)
+		#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+		#hier restliche Wand animationen reinmachen$"house_anim_1(1)".visible = true
 		$"house_anim_1(1)".visible = true
 		$"house_anim_1(1)/AnimationPlayer".play("Scene")
 		await  $"house_anim_1(1)/AnimationPlayer".animation_finished
-		#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-		#hier restliche Wand animationen reinmachen
-		#$house_anim_2.visible = true
-		#$house_anim_2/AnimationPlayer.play("Scene")
-		#await $house_anim_2/AnimationPlayer.animation_finished
+		$StaticBody3D/CollisionShape3D.call_deferred("set_disabled", false)
+		$StaticBody3D/CollisionShape3D2.call_deferred("set_disabled", false)
+		$StaticBody3D/CollisionShape3D3.call_deferred("set_disabled", false)
+		$StaticBody3D/CollisionShape3D4.call_deferred("set_disabled", false)
+		$StaticBody3D/CollisionShape3D5.call_deferred("set_disabled", false)
+		$StaticBody3D/CollisionShape3D6.call_deferred("set_disabled", false)
+		$StaticBody3D/CollisionShape3D7.call_deferred("set_disabled", false)
+		$StaticBody3D/CollisionShape3D8.call_deferred("set_disabled", false)
+		
+		
+		
+		
+		
+		
+		
 
+		$"house_anim_3(1)".visible = true
+		$"house_anim_3(1)/AnimationPlayer".play("Scene")
+		
+		$house_base/StaticBody3D2/CollisionShape3D.call_deferred("set_disabled", false)
+		$house_base/StaticBody3D2/CollisionShape3D2.call_deferred("set_disabled", false)
+		$house_base/StaticBody3D2/CollisionShape3D3.call_deferred("set_disabled", false)
+		$house_base/StaticBody3D2/CollisionShape3D4.call_deferred("set_disabled", false)
+		$house_base/StaticBody3D2/CollisionShape3D5.call_deferred("set_disabled", false)
+		$house_base/StaticBody3D2/CollisionShape3D6.call_deferred("set_disabled", false)
+		$house_base/StaticBody3D2/CollisionShape3D7.call_deferred("set_disabled", false)
+		
+		
+		
+		
+		
+		
+		
+		await $"house_anim_3(1)/AnimationPlayer".animation_finished
+		$"house_anim_2(1)".visible = true
+		$"house_anim_2(1)/AnimationPlayer".play("Scene")
 
 		#$"Root Scene/RootNode/Wand Unten_006/StaticBody3D/CollisionShape3D".call_deferred("set_disabled", false)
 		#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
