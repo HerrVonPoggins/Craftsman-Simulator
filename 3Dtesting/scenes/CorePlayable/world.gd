@@ -14,7 +14,7 @@ var done = false
 func _ready():
 	Music._play_bricklayer()
 	Global.ground_floor = $house_base/StaticBody3D.get_instance_id()
-	Global.ground_grass = $"Map/Root Scene3/RootNode/Boden modified/StaticBody3D".get_instance_id()
+	Global.ground_grass = $"Map/map/Boden modified/StaticBody3D".get_instance_id()
 	Global.current_scene = 1
 	DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_intro.dialogue"))
 	$Enter.play("fade_in")
