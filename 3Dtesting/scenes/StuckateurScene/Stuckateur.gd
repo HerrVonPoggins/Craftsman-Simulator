@@ -7,11 +7,7 @@ func _ready():
 	Global.current_scene = 2
 	$CanvasLayer/Control.check.label_text_1 = "Staenderwand bauen"
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	#if Input.is_action_pressed("kamera"):
-		#get_tree().change_scene_to_file("res://scenes/CorePlayable/CorePlayable.tscn")
-	pass
+
 
 #functions for the info hub to pause the scene
 func _on_control_opened():

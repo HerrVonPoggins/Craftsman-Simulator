@@ -63,7 +63,7 @@ var mouse_sense = 6
 
 
 
-
+#save and load func
 
 func save():
 	var file = FileAccess.open(save_path, FileAccess.WRITE)

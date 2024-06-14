@@ -16,7 +16,7 @@ extends Node3D
 
 var counter = 0
 #area3d makes the concrete visible when the trowel (with concrete on it) enters the zone
-#switch between laying bricks and adding concrete-
+#switch between laying bricks and adding concrete
 
 func _on_area_3d_body_entered(body):
 	if body.is_in_group("trowel") and Global.concrete == true:
@@ -68,10 +68,7 @@ func _on_area_3d_body_entered(body):
 			brick_3.visible = true
 			outline_3.visible = false
 			DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/spirit_level_needed.dialogue"))
-			
-	#if body.is_in_group("spirit_level") and brick_3.visible == true:
-		#body.queue_free()
-		#DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/spirit_level_needed.dialogue"))
+
 
 
 

@@ -21,11 +21,11 @@ extends Control
 @export var check_state_5 = false
 @export var check_state_6 = false
 
-@export var label_text_1 = "Arbeitskleidung sammeln"
-@export var label_text_2 = "Zement mischen"
-@export var label_text_3 = "Richtschnur spannen"
-@export var label_text_4 = "Mauer bauen"
-@export var label_text_5 = "Tuersturz plazieren"
+#@export var label_text_1 = "Arbeitskleidung sammeln"
+#@export var label_text_2 = "Zement mischen"
+#@export var label_text_3 = "Richtschnur spannen"
+#@export var label_text_4 = "Mauer bauen"
+#@export var label_text_5 = "Tuersturz plazieren"
 
 var opened = true
 
@@ -56,6 +56,9 @@ func _process(_delta):
 		elif opened == false:
 			$QuestPlayer.play("Quest_expand")
 			opened = true
+			
+			
+	#func to play the animation to tell the player he can interact
 
 func _play_interactable():
 	$InteractionPlayer.play("interaction_popup_pickup_intro")

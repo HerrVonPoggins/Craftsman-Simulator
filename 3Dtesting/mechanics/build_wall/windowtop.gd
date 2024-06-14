@@ -3,12 +3,11 @@ extends Node3D
 var done = false
 @onready var window_lintel_brick = $Lintel/Brick
 @onready var window_lintel_outline = $Lintel/Outline
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
+#window lintel old with placing concrete better use Doortop
+
 func _process(delta):
 	if $Area3D2/MeshInstance3D.visible == true and $Area3D3/MeshInstance3D2.visible == true and done == false:
 		Global.window_top += 1

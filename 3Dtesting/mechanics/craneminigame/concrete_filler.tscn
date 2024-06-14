@@ -1,54 +1,22 @@
-[gd_scene load_steps=23 format=3 uid="uid://b36yhv6m4mi02"]
+[gd_scene load_steps=21 format=3 uid="uid://b36yhv6m4mi02"]
 
 [ext_resource type="Script" path="res://mechanics/craneminigame/concrete_filler.gd" id="1_q7spn"]
 [ext_resource type="PackedScene" uid="uid://vkt6eb8hq1ta" path="res://mechanics/craneminigame/Decke_animation.fbx" id="2_cmlfh"]
 [ext_resource type="PackedScene" uid="uid://dtmxvxpud5lh5" path="res://mechanics/craneminigame/Filigrandecke.fbx" id="3_knf0l"]
 [ext_resource type="PackedScene" uid="uid://bno0u33gg4srv" path="res://assets/models/Schalung.fbx" id="4_mdrna"]
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_j4pfh"]
-top_radius = 0.05
-bottom_radius = 0.1
-
 [sub_resource type="Animation" id="Animation_7l7p2"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MeshInstance3D2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 1.13997, 0.302221)]
-}
 
 [sub_resource type="Animation" id="Animation_thm6f"]
 resource_name = "fill"
 loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MeshInstance3D2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 1.13997, 0.302221), Vector3(0, -0.10119, 0.302221)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ry4mb"]
 _data = {
 "RESET": SubResource("Animation_7l7p2"),
 "fill": SubResource("Animation_thm6f")
 }
-
-[sub_resource type="SphereMesh" id="SphereMesh_ipao0"]
-radius = 0.25
-height = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wvu7i"]
 resource_name = "Material.001"
@@ -424,26 +392,40 @@ script = ExtResource("1_q7spn")
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47196, 2.0685)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.996984, 0.0760105, -0.015658, 0, 0.201762, 0.979435, 0.0776065, -0.976481, 0.201153, 0.69234, 0.74921, 1.35942)
-visible = false
-mesh = SubResource("CylinderMesh_j4pfh")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_ry4mb")
 }
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13997, 0.302221)
-visible = false
-mesh = SubResource("SphereMesh_ipao0")
 
 [node name="Root Scene" parent="." instance=ExtResource("2_cmlfh")]
 transform = Transform3D(4.2, 0, 0, 0, 4.7, 0, 0, 0, 6.3, 0.527043, -17.0627, -30.9085)
 
 [node name="Root Scene2" parent="." instance=ExtResource("3_knf0l")]
 transform = Transform3D(4.2, 0, 0, 0, 4.7, 0, 0, 0, 6.3, 0.531486, -16.844, -30.8574)
+
+[node name="Decke 2" parent="Root Scene2/RootNode" index="0"]
+transform = Transform3D(100, 0, 0, 0, -5.42401e-06, 100, 0, -124.087, -4.37114e-06, 3.08462, 3.1597, 1.48346)
+
+[node name="Decke 3" parent="Root Scene2/RootNode" index="1"]
+transform = Transform3D(1.14214e-05, 124.087, 4.37114e-06, 0, -5.42401e-06, 100, 151.28, -9.36831e-06, -3.30012e-13, 3.4288, 3.1597, -2.16216)
+
+[node name="Decke 5" parent="Root Scene2/RootNode" index="2"]
+transform = Transform3D(1.14214e-05, 124.087, 4.37114e-06, 0, -5.42401e-06, 100, 151.28, -9.36831e-06, -3.30012e-13, 0.258653, 3.1597, -2.16216)
+
+[node name="Decke 6" parent="Root Scene2/RootNode" index="3"]
+transform = Transform3D(1.14214e-05, 41.3734, 4.37114e-06, 0, -1.80849e-06, 100, 151.28, -3.12361e-06, -3.30012e-13, -1.40117, 3.1597, -2.16216)
+
+[node name="Decke 7" parent="Root Scene2/RootNode" index="4"]
+transform = Transform3D(1.14214e-05, 142.872, 4.37114e-06, 0, -6.24515e-06, 100, 151.28, -1.07866e-05, -3.30012e-13, -3.24823, 3.1597, -2.16216)
+
+[node name="Decke 8" parent="Root Scene2/RootNode" index="5"]
+transform = Transform3D(1.06704e-05, 142.872, 4.37114e-06, 0, -6.24515e-06, 100, 141.333, -1.07866e-05, -3.30012e-13, -3.24823, 3.1597, 2.4858)
+
+[node name="Decke 9" parent="Root Scene2/RootNode" index="6"]
+transform = Transform3D(1.06704e-05, 165.612, 4.37114e-06, 0, -7.23914e-06, 100, 141.333, -1.25034e-05, -3.30012e-13, -0.352411, 3.1597, 2.58254)
+
+[node name="Decke1" parent="Root Scene2/RootNode" index="7"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 3.08462, 3.1597, 3.72519)
 
 [node name="Root Scene3" parent="." instance=ExtResource("4_mdrna")]
 transform = Transform3D(4.2, 0, 0, 0, 4.7, 0, 0, 0, 6.3, 0.327971, -16.7769, -31.5132)
@@ -459,7 +441,7 @@ mesh = SubResource("ArrayMesh_kdm75")
 skeleton = NodePath("")
 
 [node name="Icosphere_001" type="MeshInstance3D" parent="Root Scene4/RootNode"]
-transform = Transform3D(3.68172, 3.43968e-10, -0.240842, 0.240842, -1.05276e-08, 3.68172, -3.43968e-10, -3.68959, -1.05276e-08, -0.00635976, -0.732142, 0)
+transform = Transform3D(3.68959, 0, 0, 0, -1.61277e-07, 3.68959, 0, -3.68959, -1.61277e-07, -0.00635976, -0.369107, 0)
 mesh = SubResource("ArrayMesh_nkuo0")
 skeleton = NodePath("")
 
@@ -473,3 +455,5 @@ libraries = {
 "": SubResource("AnimationLibrary_hvhtq")
 }
 speed_scale = 2.0
+
+[editable path="Root Scene2"]

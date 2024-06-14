@@ -3,12 +3,11 @@ extends Node
 var volume = -10
 var effects = 0
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
+#Global script to call from other scenes
+#functions for music and effects
+#sets the volume for the sounds
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	$MaineMenu.volume_db = volume
 	$BricklayerMusic.volume_db = volume

@@ -1,12 +1,17 @@
 extends Node3D
 @onready var trowel = $"../Props/Trowel"
 @onready var player = $"../Player"
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+
+@onready var concrete_1 = $concrete/MeshInstance3D2
+@onready var concrete_2 = $concrete2/MeshInstance3D2
+@onready var concrete_3 = $concrete3/MeshInstance3D2
+@onready var concrete_4 = $concrete4/MeshInstance3D2
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
+
+
+#starts the minigame once it becomes visible
 func _process(delta):
 	if $".".visible == true:
 		$Camera3D.current = true
@@ -14,18 +19,23 @@ func _process(delta):
 		player.visible = false
 		trowel.visible = false
 		Global.stay = true
-	if $concrete4/MeshInstance3D2.visible == true:
+
+
+
+		#when the last concrete is done the variable is true
+	if concrete_4.visible == true:
 		Global.concrete_3 = true
+		#reset for trowel when issues come up
 	if Input.is_action_just_pressed("reset"):
 		$RigidBody3D.position = Vector3(-0.189,0.112,0)
 
+
+
+#moves the trowel with mouse
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		pass
-
-		
-		
 	elif event.is_action_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		pass
@@ -34,73 +44,48 @@ func _unhandled_input(event):
 		$RigidBody3D.position.x += (+event.relative.x * 0.01)
 
 
+
+#functions for the concrete points to swipe on brick and resets if failed
+
 func _on_concrete_body_entered(body):
-	$concrete/MeshInstance3D2.visible = true
-
-
+	concrete_1.visible = true
+	
 func _on_concrete_2_body_entered(body):
-	if $concrete/MeshInstance3D2.visible == true:
-		$concrete2/MeshInstance3D2.visible = true
-
+	if concrete_1.visible == true:
+		concrete_2.visible = true
 
 func _on_concrete_3_body_entered(body):
-	if $concrete2/MeshInstance3D2.visible == true:
-		$concrete3/MeshInstance3D2.visible = true
-
+	if concrete_2.visible == true:
+		concrete_3.visible = true
 
 func _on_concrete_4_body_entered(body):
-	if $concrete3/MeshInstance3D2.visible == true:
-		$concrete4/MeshInstance3D2.visible = true
-
-
-
-
-
-
-
-
-
+	if concrete_3.visible == true:
+		concrete_4.visible = true
 
 func _on_concrete_body_exited(body):
 	pass
-	#if $concrete7/MeshInstance3D2.visible == false:
-		#$concrete/MeshInstance3D2.visible = false
-		#$concrete2/MeshInstance3D2.visible = false
-		#$concrete3/MeshInstance3D2.visible = false
-		#$concrete4/MeshInstance3D2.visible = false
-		#$concrete5/MeshInstance3D2.visible = false
-		#$concrete6/MeshInstance3D2.visible = false
-		#$concrete7/MeshInstance3D2.visible = false
-
 
 
 func _on_concrete_2_body_exited(body):
-	if $concrete3/MeshInstance3D2.visible == false:
-		$concrete/MeshInstance3D2.visible = false
-		$concrete2/MeshInstance3D2.visible = false
-		$concrete3/MeshInstance3D2.visible = false
-		$concrete4/MeshInstance3D2.visible = false
-
-
+	if concrete_3.visible == false:
+		concrete_1.visible = false
+		concrete_2.visible = false
+		concrete_3.visible = false
+		concrete_4.visible = false
 
 func _on_concrete_3_body_exited(body):
-	if $concrete4/MeshInstance3D2.visible == false:
-		$concrete/MeshInstance3D2.visible = false
-		$concrete2/MeshInstance3D2.visible = false
-		$concrete3/MeshInstance3D2.visible = false
-		$concrete4/MeshInstance3D2.visible = false
+	if concrete_4.visible == false:
+		concrete_1.visible = false
+		concrete_2.visible = false
+		concrete_3.visible = false
+		concrete_4.visible = false
 
-
-
+#when last concrete is done the minigame ends and scene deletes itself
 func _on_concrete_4_body_exited(body):
-	if $concrete4/MeshInstance3D2.visible == true:
+	if concrete_4.visible == true:
 		Global.concrete_3 = true
 		Global.stay = false
 		player.visible = true
 		trowel.visible = true
 		Global.placing_games_open = false
 		$".".queue_free()
-
-
-
-

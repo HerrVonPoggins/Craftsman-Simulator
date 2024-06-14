@@ -1,11 +1,11 @@
 extends Control
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	_check_sens()
 	_check_music()
 	_check_sound()
-	#$SettingsPlayer.play("settings_idle")
+
 
 func _check_sens():
 	var button_container = $SensivityContainer

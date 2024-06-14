@@ -16,6 +16,8 @@ signal delete_sand_container
 func _process(delta):
 	$CharacterBody3D/Neck/Camera3D/Arrowhead.look_at(pointer)
 
+	if Input.is_action_just_pressed("kamera"):
+		$"CharacterBody3D/Neck/Camera3D/Root Scene2/AnimationPlayer".play("GrabAction_001")
 
 	if Global.crosshair_off == true:
 		$CharacterBody3D/Neck/Camera3D/TextureRect.visible = false

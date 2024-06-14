@@ -16,41 +16,30 @@ signal start_saw_minigame
 
 @onready var point = $"../MeshInstance3D/Hold"
 @onready var player = $"../../../.."
+
 var work_clothes = 0
 var interactable_is_open = false
 #The Raycast shoots a laser for a fixed range, on collision with something we can get the object  and check if it is in group "grab"
 #a object in group "grab" will then fixed on the hold point of the character until we release it.
 func _process(delta):
-	
-
-	
-	
+#plays the brickplaceing animation when the var becomes true 
 	if Global.brick_is_being_placed == true:
 		_place_brick()
 	
+	#starts the interactable animation if hovered over the right objects
 	if Global.press_e == true and obj == null and get_collider() != null: 
 		if interactable_is_open == false:
-		#$"../../../../Label".visible = true
 			Checklist._play_interactable()
 			interactable_is_open = true
 	else:
 		if interactable_is_open == true:
 			Checklist._quit_interactable()
-			#$"../../../../Label".visible = false
 			interactable_is_open = false
+
+	#makes objects slight transparent when hovered over useable object
 		if temp != null:
 			if temp.get_node("Mesh") != null:
 				temp.get_node("Mesh").transparency = 0
-
-
-
-
-
-
-
-
-	if work_clothes == 3:
-		Global.tutorial_finished = true
 	if obj == null:
 		var collider = get_collider()
 		if collider != null:
@@ -58,35 +47,20 @@ func _process(delta):
 				temp = collider
 				if temp.get_node("Mesh") != null:
 					temp.get_node("Mesh").transparency = 0.3
-				#load("res://scenes/CorePlayable/CorePlayable.tscn::StandardMaterial3D_g5p21").albedo_color.a = 0.5
-				#load("res://scenes/CorePlayable/CorePlayable.tscn::StandardMaterial3D_g5p21").transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-				#load("res://scenes/CorePlayable/CorePlayable.tscn::StandardMaterial3D_g5p21").blend_mode = BaseMaterial3D.BLEND_MODE_MIX
-				#var new_material = StandardMaterial3D.new()
-#
-				#collider.get_node("Mesh").set_surface_override_material(0, new_material)
-				#new_material.albedo_color = brighten_color(new_material,1.2)
 				Global.press_e = true
-				
 			else:
-				#load("res://scenes/CorePlayable/CorePlayable.tscn::StandardMaterial3D_g5p21").albedo_color.a = 1
 				Global.press_e = false
-				
-			
 
+	#sets the tutorial finished once the clothes are collected
+	if work_clothes == 3:
+		Global.tutorial_finished = true
 
-
-
-
-
-
-
-
+#picks up item and starts the pick up animation
 	if Input.is_action_just_pressed("interagieren"):
 		if obj == null:
 			var collider = get_collider()
 			if collider != null:
 				if collider.is_in_group("grab"):
-					
 					$"../Root Scene/AnimationPlayer".play("metarig|grab")
 					await $"../Root Scene/AnimationPlayer".animation_finished
 					obj = collider
@@ -103,15 +77,18 @@ func _process(delta):
 				if collider.is_in_group("npc") and Global.dialogue_open == false:
 					Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/bauleiter_maurer.dialogue"))
+
 				if collider.is_in_group("maurer") and Global.dialogue_open == false:
 					Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_text.dialogue"))
 					emit_signal("mixer_highlight")
+
 				if collider.is_in_group("cement_mixer") and Global.dialogue_open == false:
 					Music._play_mixer()
 					player.emit_signal("start_mixer")
 					emit_signal("wedge_highlight")
 					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_2.dialogue"))
+
 				if collider.is_in_group("truck") and Global.can_make_roof == true:
 					
 					Global.crane_on = true
@@ -156,10 +133,10 @@ func _process(delta):
 		obj = null
 		Global.let_go = false
 
+
+
 func _on_player_concrete_bucket_pos_reached():
 	obj = null
-
-
 
 func _on_player_inv_trowel_button_clicked():
 	if obj == null:
@@ -168,6 +145,7 @@ func _on_player_inv_trowel_button_clicked():
 func _on_player_delete_sand_container():
 	if obj != null:
 		obj.queue_free()
-		
+
+#func to play animation
 func _place_brick():
 	$"../Root Scene2/AnimationPlayer".play("metarig|place brick")

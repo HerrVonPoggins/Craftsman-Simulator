@@ -21,17 +21,17 @@ func _process(delta):
 
 
 
-
+#start the animation to lower the cranehook
 	if Input.is_action_just_pressed("interagieren") and $"..".visible == true:
 		$"../AnimationPlayer".play("crane_down")
 		await $"../AnimationPlayer".animation_finished
 		$"../AnimationPlayer".play_backwards("crane_down")
 
+# Add the gravity.
 func _physics_process(delta):
-	# Add the gravity.
 	if  $".".visible == true:
-		# Get the input direction and handle the movement/deceleration.
-		# As good practice, you should replace UI actions with custom gameplay actions.
+
+#movement for crane
 		var input_dir = Input.get_vector("left", "right", "forward", "back")
 		var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if direction:
@@ -40,7 +40,6 @@ func _physics_process(delta):
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.z = move_toward(velocity.z, 0, SPEED)
-
 		move_and_slide()
 
 

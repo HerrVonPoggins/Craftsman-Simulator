@@ -17,14 +17,6 @@ signal closed
 
 
 
-
-func _ready():
-	#close()
-	#$"TabContainer/1/MaurerText".append_text("[color=#ffff00]this text is white[/color]")
-	pass
-
-
-
 #sets the checkmarks of the checklist
 func _process(delta):
 	if Global.tutorial_finished == true:

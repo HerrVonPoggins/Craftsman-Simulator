@@ -32,7 +32,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var neck = $Neck
 @onready var camera = $Neck/Camera3D
 @onready var raycast = $Neck/Camera3D/RayCast3D
-@onready var hold = $Neck/Camera3D/Hold
+@onready var hold = $"Neck/Camera3D/Root Scene2/RootNode/metarig/Skeleton3D/BoneAttachment3D/Hold"
 @onready var player_body = $MeshInstance3D
 var hold_object: Object
 
@@ -50,7 +50,8 @@ func _unhandled_input(event):
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(60))
 		player_body.rotate_y(-event.relative.x * Global.mouse_sensitivity)
 
-	
+
+
 func _physics_process(delta):
 	#inventory
 	if Input.is_action_just_pressed("inventory"):
@@ -66,6 +67,7 @@ func _physics_process(delta):
 	else:
 		speed = WALK_SPEED
 
+	#arm moves forward on leftclick and if mouse is released the arm goes back
 	if Input.is_action_pressed("leftclick") and is_up == false and Global.dialogue_open == false and Global.stay == false:
 		$"../Animation".play("arm")
 		is_up = true
@@ -73,7 +75,7 @@ func _physics_process(delta):
 		$"../Animation".play_backwards("arm")
 		is_up = false
 
-
+	#crouching on C
 	if Input.is_action_pressed("crouch") and is_crouching == false:
 		$"../Animation".play("crouch")
 		is_crouching = true
@@ -110,7 +112,8 @@ func _physics_process(delta):
 				velocity.x = direction.x * speed
 				velocity.z = direction.z * speed
 
-
+				#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+				#checks the ground from Groundidentifier and plays the right sound
 			else:
 				Global.is_walking = true
 				if Global.walking_on.get_instance_id() == Global.ground_grass and Global.walk_sound_started == false:
@@ -119,7 +122,7 @@ func _physics_process(delta):
 				elif Global.walking_on.get_instance_id() == Global.ground_floor and Global.walk_sound_started == false:
 					Music._play_walk_floor()
 					Global.walk_sound_started = true
-
+				#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 				velocity.x = lerp(velocity.x, direction.x * speed, delta * 7.0)
 				velocity.z = lerp(velocity.z, direction.z * speed, delta * 7.0)
@@ -138,6 +141,10 @@ func _physics_process(delta):
 	rotate_step_up_separation_ray()
 	move_and_slide()
 	snap_down_to_stairs_check()
+
+
+
+
 
 var _last_xz_vel: Vector3 = Vector3(0,0,0)
 func rotate_step_up_separation_ray():
@@ -176,8 +183,8 @@ func rotate_step_up_separation_ray():
 	$StepUpSeparationRay_L/RayCast3D.enabled = any_too_steep
 	$StepUpSeparationRay_R/RayCast3D.enabled = any_too_steep
 	
+	#walk up a stair step
 func snap_down_to_stairs_check():
-	
 	var did_snap = false
 	if not is_on_floor() and velocity.y <= 0 and (was_on_floor_last_frame or snapped_to_stairs_last_frame) and $StairsBelowRayCast3D.is_colliding():
 		var body_test_result = PhysicsTestMotionResult3D.new()
@@ -194,12 +201,14 @@ func snap_down_to_stairs_check():
 	was_on_floor_last_frame = is_on_floor()
 	snapped_to_stairs_last_frame = did_snap
 
+#headbob func
 func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO
 	pos.y =sin(time * bob_freq) * bob_amp
 	pos.x = cos(time * bob_freq / 2) * bob_amp
 	return pos
 
+#checks if player is currently walking to stop sound if standing still
 func _process(delta):
 	if velocity.x <= 1 and velocity.x >= -1 and velocity.z <= 1 and velocity.z >= -1:
 		Global.is_walking = false
