@@ -1,9 +1,4 @@
 res://ui/screens/titlescreen.tscn
 res://scenes/Carpenter/carpenter_world.gd
 res://scenes/CorePlayable/CorePlayable.tscn
-res://scenes/CorePlayable/world.gd
-res://mechanics/Player/CharacterFP+WASD.gd
-res://scripts/global.gd
-res://mechanics/metal_rod/rod.tscn
-res://mechanics/metal_rod/rod.gd
-res://mechanics/Player/RayCast3D.gd
+res://mechanics/craneminigame/craneminigame.tscn

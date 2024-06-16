@@ -35,7 +35,7 @@ var pull = false
 
 #scaling for the obj that is pulled by the crane
 func _ready():
-	$CharacterBody3D/Area3D/Hold.global_scale(Vector3(0.3,0.4,0.4))
+	$CharacterBody3D/Area3D/Hold.global_scale(Vector3(0.15,0.2,0.2))
 
 
 #when all the roofs are placed the minigame ends and the filling comes next

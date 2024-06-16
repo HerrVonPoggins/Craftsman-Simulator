@@ -30,7 +30,7 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
-		Global.wall_finished = true
+		Global.crane_on = true
 		
 		
 	#when the filling minigame is finished the solid roof becomes visible
