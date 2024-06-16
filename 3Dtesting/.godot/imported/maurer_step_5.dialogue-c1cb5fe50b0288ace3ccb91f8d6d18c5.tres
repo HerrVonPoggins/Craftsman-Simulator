@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_l7mnb"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_akjat"]
 
 [resource]
-script = ExtResource("1_l7mnb")
+script = ExtResource("1_akjat")
 using_states = PackedStringArray()
 titles = {
 "this_is_a_node_title": "3"
@@ -65,7 +65,19 @@ lines = {
 "type": &"dialogue"
 },
 "6": {
+"character": "Maurer",
+"character_replacements": Array[Dictionary]([]),
 "id": "6",
+"next_id": "7",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Drücke E auf die platzierten Stützen um diese auszufahren.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Drücke E auf die platzierten Stützen um diese auszufahren.",
+"type": &"dialogue"
+},
+"7": {
+"id": "7",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -84,11 +96,11 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "8",
+"next_id": "9",
 "type": &"mutation"
 },
-"8": {
-"id": "8",
+"9": {
+"id": "9",
 "is_snippet": false,
 "next_id": "end",
 "type": &"goto"
@@ -99,6 +111,7 @@ raw_text = "~ this_is_a_node_title
 set Global.dialogue_open = true
 Maurer: Nun musst du die Stützen für die Decke anbringen, damit du die Deckenplatten setzten kannst.
 Maurer: Bringe die Stützen einfach zu den markierten stellen.
+Maurer: Drücke E auf die platzierten Stützen um diese auszufahren.
 set Global.dialogue_open = false
 
 => END"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b8bxr3vceyac2"]
+[gd_scene load_steps=16 format=3 uid="uid://b8bxr3vceyac2"]
 
 [ext_resource type="Script" path="res://mechanics/metal_rod/rod.gd" id="1_guwtp"]
 
@@ -235,6 +235,9 @@ _data = {
 "marker": SubResource("Animation_rg7ng")
 }
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2gjnh"]
+points = PackedVector3Array(-0.00989828, -0.000628726, 0.0772412, 0.00620862, 0.00593212, 0.0867983, 0.00143615, 0.00772241, 0.0844026, 0.00620862, 0.00593212, -0.000298277, 0.00620862, -0.00599828, 0.0867983, -0.00572177, -0.00599828, -0.000298277, -0.00572177, 0.00593212, -0.000298277, 0.00620862, -0.00599828, -0.000298277, -0.00572177, -0.00599828, 0.0867983, -0.00572177, 0.00593212, 0.0867983, -0.00989828, 0.00116023, 0.0784433, -0.00930073, -0.000628726, 0.0850079, 0.00024106, 0.00772241, 0.0844026, -0.00930073, 0.00116023, 0.0850079, -0.00989828, 0.00116023, 0.0772412, -0.00989828, -0.000628726, 0.0784433)
+
 [node name="Rod" type="Node3D"]
 script = ExtResource("1_guwtp")
 
@@ -247,12 +250,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_q2qrg")
 surface_material_override/2 = SubResource("StandardMaterial3D_7uaoy")
 surface_material_override/3 = SubResource("StandardMaterial3D_fkmee")
 
-[node name="Mesh" type="MeshInstance3D" parent="StringWedge"]
-transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0.124212, 0, -0.153888)
-visible = false
-mesh = SubResource("ArrayMesh_wc8k7")
-skeleton = NodePath("")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StringWedge"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.23486, 0)
 shape = SubResource("BoxShape3D_uvm68")
@@ -262,5 +259,17 @@ libraries = {
 "": SubResource("AnimationLibrary_hierv")
 }
 autoplay = "marker"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["rod_extend"]]
+
+[node name="Mesh" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 0.124212, 0, -0.153888)
+visible = false
+mesh = SubResource("ArrayMesh_wc8k7")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0.124212, 0, -0.153888)
+shape = SubResource("ConvexPolygonShape3D_2gjnh")
 
 [connection signal="body_entered" from="StringWedge" to="." method="_on_string_wedge_body_entered"]

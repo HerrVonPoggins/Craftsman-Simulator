@@ -107,6 +107,8 @@ func _process(delta):
 
 				if collider.is_in_group("saw_minigame"):
 					emit_signal("start_saw_minigame")
+				if collider.is_in_group("rod_extend"):
+					collider.scale = Vector3(1,1.35,1)
 
 
 	if obj != null:

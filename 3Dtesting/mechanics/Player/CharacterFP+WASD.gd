@@ -68,12 +68,14 @@ func _physics_process(delta):
 		speed = WALK_SPEED
 
 	#arm moves forward on leftclick and if mouse is released the arm goes back
-	if Input.is_action_pressed("leftclick") and is_up == false and Global.dialogue_open == false and Global.stay == false:
+	if Input.is_action_pressed("interagieren") and is_up == false and Global.dialogue_open == false and Global.stay == false:
 		$"../Animation".play("arm")
 		is_up = true
-	if not Input.is_action_pressed("leftclick") and is_up == true:
-		$"../Animation".play_backwards("arm")
+	if not Input.is_action_pressed("interagieren") and is_up == true:
 		is_up = false
+		await get_tree().create_timer(2).timeout
+		$"../Animation".play_backwards("arm")
+
 
 	#crouching on C
 	if Input.is_action_pressed("crouch") and is_crouching == false:
