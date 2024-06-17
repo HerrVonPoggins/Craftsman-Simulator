@@ -6,8 +6,8 @@ extends Node3D
 @onready var concrete_2 = $concrete2/MeshInstance3D2
 @onready var concrete_3 = $concrete3/MeshInstance3D2
 @onready var concrete_4 = $concrete4/MeshInstance3D2
-
-
+@onready var concrete_5 = $concrete5/MeshInstance3D2
+@onready var concrete_6 = $concrete6/MeshInstance3D2
 
 
 
@@ -72,6 +72,8 @@ func _on_concrete_2_body_exited(body):
 		concrete_2.visible = false
 		concrete_3.visible = false
 		concrete_4.visible = false
+		concrete_5.visible = false
+		concrete_6.visible = false
 
 func _on_concrete_3_body_exited(body):
 	if concrete_4.visible == false:
@@ -79,10 +81,42 @@ func _on_concrete_3_body_exited(body):
 		concrete_2.visible = false
 		concrete_3.visible = false
 		concrete_4.visible = false
+		concrete_5.visible = false
+		concrete_6.visible = false
 
 #when last concrete is done the minigame ends and scene deletes itself
 func _on_concrete_4_body_exited(body):
+	if concrete_5.visible == false:
+		concrete_1.visible = false
+		concrete_2.visible = false
+		concrete_3.visible = false
+		concrete_4.visible = false
+		concrete_5.visible = false
+		concrete_6.visible = false
+
+
+func _on_concrete_5_body_entered(body):
 	if concrete_4.visible == true:
+		concrete_5.visible = true
+
+
+func _on_concrete_5_body_exited(body):
+	if concrete_6.visible == false:
+		concrete_1.visible = false
+		concrete_2.visible = false
+		concrete_3.visible = false
+		concrete_4.visible = false
+		concrete_5.visible = false
+		concrete_6.visible = false
+
+
+func _on_concrete_6_body_entered(body):
+	if concrete_5.visible == true:
+		concrete_6.visible = true
+
+
+func _on_concrete_6_body_exited(body):
+	if concrete_6.visible == true:
 		Global.concrete_3 = true
 		Global.stay = false
 		player.visible = true

@@ -139,7 +139,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_krd65")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_sv6wy"]
-radius = 0.103838
+radius = 0.131347
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_x1w3t"]
 radius = 0.051962
@@ -185,7 +185,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.194736, 0.17208, -0.076338
 shape = SubResource("SphereShape3D_sv6wy")
 
 [node name="concrete" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.220633, 0.180324, 0.0957385)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.220633, 0.180324, -0.00244823)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="concrete"]
 shape = SubResource("SphereShape3D_x1w3t")
@@ -200,7 +200,7 @@ mesh = SubResource("SphereMesh_qnb6t")
 surface_material_override/0 = SubResource("StandardMaterial3D_w5836")
 
 [node name="concrete2" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.165914, 0.180324, 0.0629907)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.127435, 0.180324, 0.0387359)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="concrete2"]
 shape = SubResource("SphereShape3D_x1w3t")
@@ -215,7 +215,7 @@ mesh = SubResource("SphereMesh_qnb6t")
 surface_material_override/0 = SubResource("StandardMaterial3D_w5836")
 
 [node name="concrete3" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.103201, 0.180324, 0.03238)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.142408, 0.180324, 0.127149)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="concrete3"]
 shape = SubResource("SphereShape3D_x1w3t")
@@ -230,7 +230,7 @@ mesh = SubResource("SphereMesh_qnb6t")
 surface_material_override/0 = SubResource("StandardMaterial3D_w5836")
 
 [node name="concrete4" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0323232, 0.180324, -0.0043461)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.233625, 0.180324, 0.170732)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="concrete4"]
 shape = SubResource("SphereShape3D_x1w3t")
@@ -244,6 +244,36 @@ visible = false
 mesh = SubResource("SphereMesh_qnb6t")
 surface_material_override/0 = SubResource("StandardMaterial3D_w5836")
 
+[node name="concrete5" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.242513, 0.180324, 0.259899)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="concrete5"]
+shape = SubResource("SphereShape3D_x1w3t")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="concrete5"]
+mesh = SubResource("SphereMesh_3wnci")
+surface_material_override/0 = SubResource("StandardMaterial3D_ivool")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="concrete5"]
+visible = false
+mesh = SubResource("SphereMesh_qnb6t")
+surface_material_override/0 = SubResource("StandardMaterial3D_w5836")
+
+[node name="concrete6" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.146189, 0.180324, 0.29615)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="concrete6"]
+shape = SubResource("SphereShape3D_x1w3t")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="concrete6"]
+mesh = SubResource("SphereMesh_3wnci")
+surface_material_override/0 = SubResource("StandardMaterial3D_ivool")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="concrete6"]
+visible = false
+mesh = SubResource("SphereMesh_qnb6t")
+surface_material_override/0 = SubResource("StandardMaterial3D_w5836")
+
 [connection signal="body_entered" from="concrete" to="." method="_on_concrete_body_entered"]
 [connection signal="body_exited" from="concrete" to="." method="_on_concrete_body_exited"]
 [connection signal="body_entered" from="concrete2" to="." method="_on_concrete_2_body_entered"]
@@ -252,3 +282,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_w5836")
 [connection signal="body_exited" from="concrete3" to="." method="_on_concrete_3_body_exited"]
 [connection signal="body_entered" from="concrete4" to="." method="_on_concrete_4_body_entered"]
 [connection signal="body_exited" from="concrete4" to="." method="_on_concrete_4_body_exited"]
+[connection signal="body_entered" from="concrete5" to="." method="_on_concrete_5_body_entered"]
+[connection signal="body_exited" from="concrete5" to="." method="_on_concrete_5_body_exited"]
+[connection signal="body_entered" from="concrete6" to="." method="_on_concrete_6_body_entered"]
+[connection signal="body_exited" from="concrete6" to="." method="_on_concrete_6_body_exited"]

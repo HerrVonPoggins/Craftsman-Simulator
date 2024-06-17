@@ -9,7 +9,11 @@ extends Node3D
 @onready var concrete_5 = $concrete5/MeshInstance3D2
 @onready var concrete_6 = $concrete6/MeshInstance3D2
 @onready var concrete_7 = $concrete7/MeshInstance3D2
-
+@onready var concrete_8 = $concrete8/MeshInstance3D2
+@onready var concrete_9 = $concrete9/MeshInstance3D2
+@onready var concrete_10 = $concrete10/MeshInstance3D2
+@onready var concrete_11 = $concrete11/MeshInstance3D2
+@onready var concrete_12 = $concrete12/MeshInstance3D2
 
 
 #starts the minigame once it becomes visible
@@ -91,7 +95,11 @@ func _on_concrete_2_body_exited(body):
 		concrete_5.visible = false
 		concrete_6.visible = false
 		concrete_7.visible = false
-
+		concrete_8.visible = false
+		concrete_9.visible = false
+		concrete_10.visible = false
+		concrete_11.visible = false
+		concrete_12.visible = false
 
 func _on_concrete_3_body_exited(body):
 	if concrete_4.visible == false:
@@ -102,7 +110,11 @@ func _on_concrete_3_body_exited(body):
 		concrete_5.visible = false
 		concrete_6.visible = false
 		concrete_7.visible = false
-
+		concrete_8.visible = false
+		concrete_9.visible = false
+		concrete_10.visible = false
+		concrete_11.visible = false
+		concrete_12.visible = false
 
 func _on_concrete_4_body_exited(body):
 	if concrete_5.visible == false:
@@ -113,7 +125,11 @@ func _on_concrete_4_body_exited(body):
 		concrete_5.visible = false
 		concrete_6.visible = false
 		concrete_7.visible = false
-
+		concrete_8.visible = false
+		concrete_9.visible = false
+		concrete_10.visible = false
+		concrete_11.visible = false
+		concrete_12.visible = false
 
 func _on_concrete_5_body_exited(body):
 	if concrete_6.visible == false:
@@ -124,7 +140,11 @@ func _on_concrete_5_body_exited(body):
 		concrete_5.visible = false
 		concrete_6.visible = false
 		concrete_7.visible = false
-
+		concrete_8.visible = false
+		concrete_9.visible = false
+		concrete_10.visible = false
+		concrete_11.visible = false
+		concrete_12.visible = false
 
 func _on_concrete_6_body_exited(body):
 	if concrete_7.visible == false:
@@ -135,10 +155,120 @@ func _on_concrete_6_body_exited(body):
 		concrete_5.visible = false
 		concrete_6.visible = false
 		concrete_7.visible = false
+		concrete_8.visible = false
+		concrete_9.visible = false
+		concrete_10.visible = false
+		concrete_11.visible = false
+		concrete_12.visible = false
 
 #when last concrete is done the minigame ends and scene deletes itself
 func _on_concrete_7_body_exited(body):
-	if	concrete_7.visible == true:
+	if concrete_8.visible == false:
+		concrete_1.visible = false
+		concrete_2.visible = false
+		concrete_3.visible = false
+		concrete_4.visible = false
+		concrete_5.visible = false
+		concrete_6.visible = false
+		concrete_7.visible = false
+		concrete_8.visible = false
+		concrete_9.visible = false
+		concrete_10.visible = false
+		concrete_11.visible = false
+		concrete_12.visible = false
+
+
+
+func _on_concrete_8_body_entered(body):
+	if concrete_7.visible == true:
+		concrete_8.visible = true
+
+
+func _on_concrete_8_body_exited(body):
+	if concrete_8.visible == false:
+		concrete_1.visible = false
+		concrete_2.visible = false
+		concrete_3.visible = false
+		concrete_4.visible = false
+		concrete_5.visible = false
+		concrete_6.visible = false
+		concrete_7.visible = false
+		concrete_8.visible = false
+		concrete_9.visible = false
+		concrete_10.visible = false
+		concrete_11.visible = false
+		concrete_12.visible = false
+
+
+func _on_concrete_9_body_entered(body):
+	if concrete_8.visible == true:
+		concrete_9.visible = true
+
+
+func _on_concrete_9_body_exited(body):
+	if concrete_10.visible == false:
+		concrete_1.visible = false
+		concrete_2.visible = false
+		concrete_3.visible = false
+		concrete_4.visible = false
+		concrete_5.visible = false
+		concrete_6.visible = false
+		concrete_7.visible = false
+		concrete_8.visible = false
+		concrete_9.visible = false
+		concrete_10.visible = false
+		concrete_11.visible = false
+		concrete_12.visible = false
+
+
+func _on_concrete_10_body_entered(body):
+	if concrete_9.visible == true:
+		concrete_10.visible = true
+
+
+func _on_concrete_10_body_exited(body):
+	if concrete_11.visible == false:
+		concrete_1.visible = false
+		concrete_2.visible = false
+		concrete_3.visible = false
+		concrete_4.visible = false
+		concrete_5.visible = false
+		concrete_6.visible = false
+		concrete_7.visible = false
+		concrete_8.visible = false
+		concrete_9.visible = false
+		concrete_10.visible = false
+		concrete_11.visible = false
+		concrete_12.visible = false
+
+
+func _on_concrete_11_body_entered(body):
+	if concrete_10.visible == true:
+		concrete_11.visible = true
+
+
+func _on_concrete_11_body_exited(body):
+	if concrete_12.visible == false:
+		concrete_1.visible = false
+		concrete_2.visible = false
+		concrete_3.visible = false
+		concrete_4.visible = false
+		concrete_5.visible = false
+		concrete_6.visible = false
+		concrete_7.visible = false
+		concrete_8.visible = false
+		concrete_9.visible = false
+		concrete_10.visible = false
+		concrete_11.visible = false
+		concrete_12.visible = false
+
+func _on_concrete_12_body_entered(body):
+	if concrete_11.visible == true:
+		concrete_12.visible = true
+
+
+func _on_concrete_12_body_exited(body):
+	if concrete_12.visible == true:
 		Global.concrete_2 = true
 		Global.stay = false
 		player.visible = true

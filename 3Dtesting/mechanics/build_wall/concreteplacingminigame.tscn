@@ -200,7 +200,7 @@ mesh = SubResource("SphereMesh_qnb6t")
 surface_material_override/0 = SubResource("StandardMaterial3D_w5836")
 
 [node name="concrete2" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.175966, 0.180324, 0.0322476)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158347, 0.180324, -0.0252159)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="concrete2"]
 shape = SubResource("SphereShape3D_x1w3t")
@@ -215,7 +215,7 @@ mesh = SubResource("SphereMesh_qnb6t")
 surface_material_override/0 = SubResource("StandardMaterial3D_w5836")
 
 [node name="concrete3" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.103201, 0.180324, -0.0468184)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0690165, 0.180324, -0.0251806)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="concrete3"]
 shape = SubResource("SphereShape3D_x1w3t")
@@ -230,7 +230,7 @@ mesh = SubResource("SphereMesh_qnb6t")
 surface_material_override/0 = SubResource("StandardMaterial3D_w5836")
 
 [node name="concrete4" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0165699, 0.180324, 0.0269722)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0197611, 0.180324, -0.0285555)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="concrete4"]
 shape = SubResource("SphereShape3D_x1w3t")
@@ -245,7 +245,7 @@ mesh = SubResource("SphereMesh_qnb6t")
 surface_material_override/0 = SubResource("StandardMaterial3D_w5836")
 
 [node name="concrete5" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0617901, 0.180324, -0.0432586)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00799035, 0.180324, 0.047609)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="concrete5"]
 shape = SubResource("SphereShape3D_x1w3t")
@@ -260,7 +260,7 @@ mesh = SubResource("SphereMesh_qnb6t")
 surface_material_override/0 = SubResource("StandardMaterial3D_w5836")
 
 [node name="concrete6" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.152762, 0.180324, 0.0152639)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0741517, 0.180324, 0.0869179)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="concrete6"]
 shape = SubResource("SphereShape3D_x1w3t")
@@ -275,7 +275,7 @@ mesh = SubResource("SphereMesh_qnb6t")
 surface_material_override/0 = SubResource("StandardMaterial3D_w5836")
 
 [node name="concrete7" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23548, 0.180324, -0.0629811)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.145277, 0.180324, 0.134224)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="concrete7"]
 shape = SubResource("SphereShape3D_x1w3t")
@@ -285,6 +285,81 @@ mesh = SubResource("SphereMesh_3wnci")
 surface_material_override/0 = SubResource("StandardMaterial3D_ivool")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="concrete7"]
+visible = false
+mesh = SubResource("SphereMesh_qnb6t")
+surface_material_override/0 = SubResource("StandardMaterial3D_w5836")
+
+[node name="concrete8" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.229008, 0.180324, 0.167397)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="concrete8"]
+shape = SubResource("SphereShape3D_x1w3t")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="concrete8"]
+mesh = SubResource("SphereMesh_3wnci")
+surface_material_override/0 = SubResource("StandardMaterial3D_ivool")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="concrete8"]
+visible = false
+mesh = SubResource("SphereMesh_qnb6t")
+surface_material_override/0 = SubResource("StandardMaterial3D_w5836")
+
+[node name="concrete9" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.229008, 0.180324, 0.253369)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="concrete9"]
+shape = SubResource("SphereShape3D_x1w3t")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="concrete9"]
+mesh = SubResource("SphereMesh_3wnci")
+surface_material_override/0 = SubResource("StandardMaterial3D_ivool")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="concrete9"]
+visible = false
+mesh = SubResource("SphereMesh_qnb6t")
+surface_material_override/0 = SubResource("StandardMaterial3D_w5836")
+
+[node name="concrete10" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.142676, 0.180324, 0.253369)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="concrete10"]
+shape = SubResource("SphereShape3D_x1w3t")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="concrete10"]
+mesh = SubResource("SphereMesh_3wnci")
+surface_material_override/0 = SubResource("StandardMaterial3D_ivool")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="concrete10"]
+visible = false
+mesh = SubResource("SphereMesh_qnb6t")
+surface_material_override/0 = SubResource("StandardMaterial3D_w5836")
+
+[node name="concrete11" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0651927, 0.180324, 0.253369)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="concrete11"]
+shape = SubResource("SphereShape3D_x1w3t")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="concrete11"]
+mesh = SubResource("SphereMesh_3wnci")
+surface_material_override/0 = SubResource("StandardMaterial3D_ivool")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="concrete11"]
+visible = false
+mesh = SubResource("SphereMesh_qnb6t")
+surface_material_override/0 = SubResource("StandardMaterial3D_w5836")
+
+[node name="concrete12" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0326934, 0.180324, 0.253369)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="concrete12"]
+shape = SubResource("SphereShape3D_x1w3t")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="concrete12"]
+mesh = SubResource("SphereMesh_3wnci")
+surface_material_override/0 = SubResource("StandardMaterial3D_ivool")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="concrete12"]
 visible = false
 mesh = SubResource("SphereMesh_qnb6t")
 surface_material_override/0 = SubResource("StandardMaterial3D_w5836")
@@ -303,3 +378,13 @@ surface_material_override/0 = SubResource("StandardMaterial3D_w5836")
 [connection signal="body_exited" from="concrete6" to="." method="_on_concrete_6_body_exited"]
 [connection signal="body_entered" from="concrete7" to="." method="_on_concrete_7_body_entered"]
 [connection signal="body_exited" from="concrete7" to="." method="_on_concrete_7_body_exited"]
+[connection signal="body_entered" from="concrete8" to="." method="_on_concrete_8_body_entered"]
+[connection signal="body_exited" from="concrete8" to="." method="_on_concrete_8_body_exited"]
+[connection signal="body_entered" from="concrete9" to="." method="_on_concrete_9_body_entered"]
+[connection signal="body_exited" from="concrete9" to="." method="_on_concrete_9_body_exited"]
+[connection signal="body_entered" from="concrete10" to="." method="_on_concrete_10_body_entered"]
+[connection signal="body_exited" from="concrete10" to="." method="_on_concrete_10_body_exited"]
+[connection signal="body_entered" from="concrete11" to="." method="_on_concrete_11_body_entered"]
+[connection signal="body_exited" from="concrete11" to="." method="_on_concrete_11_body_exited"]
+[connection signal="body_entered" from="concrete12" to="." method="_on_concrete_12_body_entered"]
+[connection signal="body_exited" from="concrete12" to="." method="_on_concrete_12_body_exited"]
