@@ -2,9 +2,10 @@ res://ui/screens/titlescreen.tscn
 res://scenes/Carpenter/carpenter_world.gd
 res://scenes/CorePlayable/CorePlayable.tscn
 res://mechanics/craneminigame/craneminigame.tscn
+res://mechanics/Player/node_3d.tscn
 res://mechanics/build_wall/concreteplacingminigame.tscn
-res://mechanics/build_wall/concreteplacingminigame2.tscn
-res://mechanics/build_wall/concreteplacingminigam3.tscn
-res://mechanics/build_wall/concreteplacingminigame2.gd
 res://mechanics/build_wall/concreteplacingminigame.gd
+res://mechanics/build_wall/concreteplacingminigam3.tscn
 res://mechanics/build_wall/concreteplacingminigam3.gd
+res://mechanics/build_wall/concreteplacingminigame2.tscn
+res://mechanics/build_wall/concreteplacingminigame2.gd

@@ -259,6 +259,8 @@ func _on_area_3d_body_entered(body):
 		body.queue_free()
 		$Area3D/ConcreteBucketObj.visible = true
 		$Area3D/Bucket_water2.visible = false
+		$Area3D/ConcreteBucketObj/CollisionShape3D.call_deferred("set_disabled", false)
+		$Area3D/ConcreteBucketObj/ConcreteBucket/CollisionShape3D.call_deferred("set_disabled", false)
 
 
 #highlight the mixer

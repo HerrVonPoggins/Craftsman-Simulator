@@ -24,8 +24,8 @@ func _process(delta):
 		player.visible = false
 		trowel.visible = false
 		Global.stay = true
-	if concrete_7.visible == true:
-		Global.concrete_1 = true
+
+
 
 	if Input.is_action_just_pressed("reset"):
 		$RigidBody3D.position = Vector3(-0.189,0.112,0)
@@ -266,7 +266,7 @@ func _on_concrete_12_body_entered(body):
 
 
 func _on_concrete_12_body_exited(body):
-	if concrete_11.visible == true:
+	if concrete_12.visible == true:
 		Global.concrete_1 = true
 		Global.stay = false
 		player.visible = true

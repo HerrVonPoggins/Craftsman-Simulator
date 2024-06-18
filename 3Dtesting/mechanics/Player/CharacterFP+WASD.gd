@@ -32,7 +32,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var neck = $Neck
 @onready var camera = $Neck/Camera3D
 @onready var raycast = $Neck/Camera3D/RayCast3D
-@onready var hold = $"Neck/Camera3D/Root Scene2/RootNode/metarig/Skeleton3D/BoneAttachment3D/Hold"
+@onready var hold = $"Neck/Camera3D/Root Scene3/RootNode/metarig/Skeleton3D/BoneAttachment3D/Hold"
 @onready var player_body = $MeshInstance3D
 var hold_object: Object
 
@@ -70,11 +70,13 @@ func _physics_process(delta):
 	#arm moves forward on leftclick and if mouse is released the arm goes back
 	if Input.is_action_pressed("interagieren") and is_up == false and Global.dialogue_open == false and Global.stay == false:
 		$"../Animation".play("arm")
+		$"Neck/Camera3D/Root Scene3/AnimationPlayer".play("metarig|sack in ruehrding")
 		is_up = true
 	if not Input.is_action_pressed("interagieren") and is_up == true:
 		is_up = false
-		await get_tree().create_timer(2).timeout
+		#await get_tree().create_timer(2).timeout
 		$"../Animation".play_backwards("arm")
+		$"Neck/Camera3D/Root Scene3/AnimationPlayer".play_backwards("metarig|sack in ruehrding")
 
 
 	#crouching on C

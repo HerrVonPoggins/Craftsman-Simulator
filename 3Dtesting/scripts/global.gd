@@ -48,6 +48,13 @@ var crosshair_off = false
 var brick_is_being_placed = false
 
 
+#for animations
+var holding_bricks = false
+var holding_bucket = false
+var holding_bag = false
+var is_holding = false
+
+
 
 
 

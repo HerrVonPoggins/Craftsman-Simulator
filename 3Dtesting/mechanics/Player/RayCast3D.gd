@@ -14,7 +14,7 @@ var trowel_collider = null
 
 signal start_saw_minigame
 
-@onready var point = $"../MeshInstance3D/Hold"
+@onready var point = $"../Root Scene3/RootNode/metarig/Skeleton3D/BoneAttachment3D/Hold"
 @onready var player = $"../../../.."
 
 var work_clothes = 0
@@ -61,8 +61,21 @@ func _process(delta):
 			var collider = get_collider()
 			if collider != null:
 				if collider.is_in_group("grab"):
-					$"../Root Scene/AnimationPlayer".play("metarig|grab")
-					await $"../Root Scene/AnimationPlayer".animation_finished
+					Global.is_holding = true
+					$"../Root Scene3/AnimationPlayer".play("metarig|grab")
+					await $"../Root Scene3/AnimationPlayer".animation_finished
+					
+					
+					
+					if collider.is_in_group("bucket"):
+						Global.holding_bucket = true
+					if collider.is_in_group("brick"):
+						Global.holding_bricks = true
+					if collider.is_in_group("bag"):
+						Global.holding_bag = true
+
+
+
 					obj = collider
 				if collider.is_in_group("trowel"):
 					trowel_collider = collider
@@ -129,6 +142,8 @@ func _process(delta):
 
 #rightclick to release object
 	if Input.is_action_pressed("rightclick"):
+		$"../Root Scene3/AnimationPlayer".play("Idle_Walking")
+		Global.is_holding = false
 		obj = null
 
 	if Global.let_go == true:
@@ -150,4 +165,4 @@ func _on_player_delete_sand_container():
 
 #func to play animation
 func _place_brick():
-	$"../Root Scene2/AnimationPlayer".play("metarig|place brick")
+	$"../../Root Scene/AnimationPlayer".play("metarig|place brick")

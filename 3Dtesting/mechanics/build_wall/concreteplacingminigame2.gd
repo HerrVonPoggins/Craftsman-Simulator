@@ -25,9 +25,7 @@ func _process(delta):
 		trowel.visible = false
 		Global.stay = true
 
-		#when the last concrete is done the variable is true
-	if concrete_7.visible == true:
-		Global.concrete_2 = true
+
 		#reset for trowel when issues come up
 	if Input.is_action_just_pressed("reset"):
 		$RigidBody3D.position = Vector3(-0.189,0.112,0)
