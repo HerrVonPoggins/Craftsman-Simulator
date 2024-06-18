@@ -35,7 +35,7 @@ var pull = false
 
 #scaling for the obj that is pulled by the crane
 func _ready():
-	$CharacterBody3D/Area3D/Hold.global_scale(Vector3(0.15,0.2,0.2))
+	$"Root Scene2/RootNode/Kran_arm/Empty1/CharacterBody3D/Area3D/Hold".global_scale(Vector3(0.15,0.2,0.2))
 
 
 #when all the roofs are placed the minigame ends and the filling comes next
@@ -51,7 +51,7 @@ func _process(delta):
 
 	#sets the object to the hold node
 	if obj != null  and $".".visible == true:
-		obj.global_transform = $CharacterBody3D/Area3D/Hold.global_transform
+		obj.global_transform = $"Root Scene2/RootNode/Kran_arm/Empty1/CharacterBody3D/Area3D/Hold".global_transform
 
 
 

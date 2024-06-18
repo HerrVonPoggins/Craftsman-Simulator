@@ -44,6 +44,7 @@ func _process(delta):
 		played5 = true
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_8.dialogue"))
 		$ConcreteFiller.visible = true
+		$"Root Scene2".visible = true
 
 	#make the wall outline invisible while the concrete is put on the bricks
 	if Global.placing_games_open == true:
@@ -58,6 +59,7 @@ func _process(delta):
 		Global.can_make_roof = true
 		played4 = true
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_6.dialogue"))
+		
 
 
 
@@ -68,6 +70,7 @@ func _process(delta):
 		$"Root Scene2/AnimationPlayer".play("Kran teil1_001|Kran teil1_Los")
 		played2 = true
 		await get_tree().create_timer(5).timeout
+		$"Root Scene2".visible = false
 		$Props/Decke1.visible = true
 		$Props/Decke2.visible = true
 		$Props/Decke3.visible = true
