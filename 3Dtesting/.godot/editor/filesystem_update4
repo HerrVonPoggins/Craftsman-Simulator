@@ -1,7 +1,6 @@
 res://ui/screens/titlescreen.tscn
 res://scenes/Carpenter/carpenter_world.gd
 res://scenes/CorePlayable/CorePlayable.tscn
-res://mechanics/craneminigame/craneminigame.tscn
-res://mechanics/craneminigame/crane.gd
-res://mechanics/craneminigame/craneminigame.gd
-res://scenes/CorePlayable/world.gd
+res://scenes/ElektrikerScene/Elektriker.tscn
+res://scenes/Carpenter/carpenter_world.tscn
+res://mechanics/build_wall/wall.tscn
