@@ -7,8 +7,9 @@ var mat1 = load("res://assets/textures/material_white.tres")
 var last = Vector3.ZERO
 var obj = null
 var temp
-var trowel_collider = null
 
+var trowel_collider = null
+var spirit_level_collider = null
 
 
 
@@ -80,6 +81,9 @@ func _process(delta):
 				if collider.is_in_group("trowel"):
 					trowel_collider = collider
 					Global.trowel_picked = true
+				if collider.is_in_group("spirit_level"):
+					spirit_level_collider = collider
+					Global.spirit_level_picked = true
 
 	#The Raycast shoots a laser for a fixed range, on collision with something we can get the object and check if it is in group "npc"
 	#if we press interact(E) while focused on the npc the mouse pointer becomes visible again and a dialogue will bes started
@@ -150,14 +154,16 @@ func _process(delta):
 		obj = null
 		Global.let_go = false
 
-
+#InvButtons activated through number on keyboard instead of mouse
+	if Input.is_action_just_pressed("TrowelButton"):
+		if obj == null:
+			obj = trowel_collider
+	if Input.is_action_just_pressed("SpiritLevelButton"):
+		if obj == null:
+			obj = spirit_level_collider
 
 func _on_player_concrete_bucket_pos_reached():
 	obj = null
-
-func _on_player_inv_trowel_button_clicked():
-	if obj == null:
-		obj = trowel_collider
 
 func _on_player_delete_sand_container():
 	if obj != null:

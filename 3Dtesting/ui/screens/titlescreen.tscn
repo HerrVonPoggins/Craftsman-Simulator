@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://ejeh6fcxpdcs"]
 
 [ext_resource type="Script" path="res://ui/screens/titlescreen.gd" id="1_erga7"]
-[ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://ui/player_ui/transition.tscn" id="2_f7fqr"]
+[ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://UI/player_ui/transition.tscn" id="2_f7fqr"]
 [ext_resource type="Texture2D" uid="uid://d1xtlxkryrubw" path="res://assets/textures/Title_Background.png" id="2_u2qpo"]
 [ext_resource type="Texture2D" uid="uid://ywgvwp4p6ttr" path="res://assets/textures/Title_Start.png" id="5_h843a"]
 [ext_resource type="Texture2D" uid="uid://dt6c17fnbgluf" path="res://assets/textures/CraftsmanSimulator_Logo.png" id="6_ifxim"]

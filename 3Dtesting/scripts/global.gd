@@ -13,7 +13,10 @@ var brick_saw_cam = false
 var isolation = false
 var current_scene = 0
 var dialogue_open = false
+
 var trowel_picked = false
+var spirit_level_picked = false
+
 var save_path = "user://variable.save"
 var mouse_sensitivity = 0.005
 var stay = false

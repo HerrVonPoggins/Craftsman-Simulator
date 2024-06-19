@@ -2,7 +2,6 @@ extends Node3D
 
 signal start_mixer
 signal concrete_bucket_pos_reached
-signal inv_trowel_button_clicked
 signal delete_sand_container
 
 @onready var trowel = preload("res://mechanics/Tools/trowel.tscn")
@@ -40,12 +39,6 @@ func _process(delta):
 		$CharacterBody3D/Neck/Camera3D/TextureRect.visible = true
 		
 		
-	
-func _on_inventory_trowel_button_clicked():
-	emit_signal("inv_trowel_button_clicked")
-
 
 func _on_mixer_sand_level_reached():
 	emit_signal("delete_sand_container")
-
-
