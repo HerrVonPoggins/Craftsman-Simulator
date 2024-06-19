@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://djw5gwv30bvm1"]
+[gd_scene load_steps=7 format=3 uid="uid://djw5gwv30bvm1"]
 
 [ext_resource type="Script" path="res://UI/Inventory/inventory.gd" id="1_2k2bt"]
 [ext_resource type="Texture2D" uid="uid://6iw5ch25qnnj" path="res://UI/Inventory_slot.png" id="2_tecys"]
+[ext_resource type="FontFile" uid="uid://ccolb6uftch63" path="res://assets/fonts/AldotheApache.ttf" id="3_8anv8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tm15q"]
 texture = ExtResource("2_tecys")
@@ -40,11 +41,31 @@ layout_mode = 2
 theme = SubResource("Theme_vh8sk")
 disabled = true
 
+[node name="Label" type="Label" parent="HBoxContainer/TrowelButton"]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 13.0
+offset_right = 133.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_8anv8")
+theme_override_font_sizes/font_size = 30
+text = "1"
+
 [node name="SpiritLevelButton" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 theme = SubResource("Theme_vh8sk")
 disabled = true
+
+[node name="Label" type="Label" parent="HBoxContainer/SpiritLevelButton"]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 13.0
+offset_right = 133.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_8anv8")
+theme_override_font_sizes/font_size = 30
+text = "2"
 
 [node name="TrowelButton3" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(120, 0)
@@ -52,11 +73,29 @@ layout_mode = 2
 theme = SubResource("Theme_vh8sk")
 disabled = true
 
+[node name="Label" type="Label" parent="HBoxContainer/TrowelButton3"]
+offset_left = 93.0
+offset_top = 13.0
+offset_right = 133.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_8anv8")
+theme_override_font_sizes/font_size = 30
+text = "3"
+
 [node name="TrowelButton4" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 theme = SubResource("Theme_vh8sk")
 disabled = true
+
+[node name="Label" type="Label" parent="HBoxContainer/TrowelButton4"]
+offset_left = 93.0
+offset_top = 13.0
+offset_right = 133.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_8anv8")
+theme_override_font_sizes/font_size = 30
+text = "4"
 
 [node name="TrowelButton5" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(120, 0)
@@ -64,11 +103,29 @@ layout_mode = 2
 theme = SubResource("Theme_vh8sk")
 disabled = true
 
+[node name="Label" type="Label" parent="HBoxContainer/TrowelButton5"]
+offset_left = 93.0
+offset_top = 13.0
+offset_right = 133.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_8anv8")
+theme_override_font_sizes/font_size = 30
+text = "5"
+
 [node name="TrowelButton6" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 theme = SubResource("Theme_vh8sk")
 disabled = true
+
+[node name="Label" type="Label" parent="HBoxContainer/TrowelButton6"]
+offset_left = 93.0
+offset_top = 13.0
+offset_right = 133.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_8anv8")
+theme_override_font_sizes/font_size = 30
+text = "6"
 
 [node name="TrowelButton7" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(120, 0)
@@ -76,11 +133,29 @@ layout_mode = 2
 theme = SubResource("Theme_vh8sk")
 disabled = true
 
+[node name="Label" type="Label" parent="HBoxContainer/TrowelButton7"]
+offset_left = 93.0
+offset_top = 13.0
+offset_right = 133.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_8anv8")
+theme_override_font_sizes/font_size = 30
+text = "7"
+
 [node name="TrowelButton8" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 theme = SubResource("Theme_vh8sk")
 disabled = true
+
+[node name="Label" type="Label" parent="HBoxContainer/TrowelButton8"]
+offset_left = 93.0
+offset_top = 13.0
+offset_right = 133.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_8anv8")
+theme_override_font_sizes/font_size = 30
+text = "8"
 
 [node name="TrowelButton9" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(120, 0)
@@ -88,8 +163,26 @@ layout_mode = 2
 theme = SubResource("Theme_vh8sk")
 disabled = true
 
+[node name="Label" type="Label" parent="HBoxContainer/TrowelButton9"]
+offset_left = 93.0
+offset_top = 13.0
+offset_right = 133.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_8anv8")
+theme_override_font_sizes/font_size = 30
+text = "9"
+
 [node name="TrowelButton10" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 theme = SubResource("Theme_vh8sk")
 disabled = true
+
+[node name="Label" type="Label" parent="HBoxContainer/TrowelButton10"]
+offset_left = 93.0
+offset_top = 13.0
+offset_right = 133.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("3_8anv8")
+theme_override_font_sizes/font_size = 30
+text = "0"
