@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://mechanics/build_wall/wall.gd" id="1_rnbkq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2unk7"]
-size = Vector3(2.00427, 0.59906, 0.719544)
+size = Vector3(10.092, 0.59906, 0.719544)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g5p21"]
 resource_name = "Material.002"
@@ -128,7 +128,7 @@ script = ExtResource("1_rnbkq")
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.72739, -0.0837095, -0.0528261)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 11.4041, -0.0837095, -0.0528261)
 shape = SubResource("BoxShape3D_2unk7")
 
 [node name="Outline1" type="MeshInstance3D" parent="Area3D"]
@@ -144,6 +144,108 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ckgwf")
 
 [node name="Outline3" type="MeshInstance3D" parent="Area3D"]
 transform = Transform3D(-3.93402e-06, 36, -2.62268e-06, 0, -1.57361e-06, -60, -90, -1.57361e-06, 1.14641e-13, 0.524444, -0.185298, -0.0713236)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+surface_material_override/0 = SubResource("StandardMaterial3D_ckgwf")
+
+[node name="Outline4" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(-3.93402e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -90, -3.14722e-06, 1.14641e-13, 1.67629, -0.205887, -0.0720563)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+surface_material_override/0 = SubResource("StandardMaterial3D_ckgwf")
+
+[node name="Outline5" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(-3.93402e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -90, -3.14722e-06, 1.14641e-13, 3.20907, -0.205887, -0.0720563)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+surface_material_override/0 = SubResource("StandardMaterial3D_ckgwf")
+
+[node name="Outline6" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(-3.93402e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -90, -3.14722e-06, 1.14641e-13, 4.74042, -0.205887, -0.0720563)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+surface_material_override/0 = SubResource("StandardMaterial3D_ckgwf")
+
+[node name="Outline7" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(-3.93402e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -90, -3.14722e-06, 1.14641e-13, 6.2708, -0.205887, -0.0720563)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+surface_material_override/0 = SubResource("StandardMaterial3D_ckgwf")
+
+[node name="Outline8" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(-3.93402e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -90, -3.14722e-06, 1.14641e-13, 7.80077, -0.205887, -0.0720563)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+surface_material_override/0 = SubResource("StandardMaterial3D_ckgwf")
+
+[node name="Outline9" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(-3.93402e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -90, -3.14722e-06, 1.14641e-13, 9.33421, -0.205887, -0.0720563)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+surface_material_override/0 = SubResource("StandardMaterial3D_ckgwf")
+
+[node name="Outline10" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(-3.93402e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -90, -3.14722e-06, 1.14641e-13, 10.864, -0.205887, -0.0720563)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+surface_material_override/0 = SubResource("StandardMaterial3D_ckgwf")
+
+[node name="Outline11" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(-3.93402e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -90, -3.14722e-06, 1.14641e-13, 12.3857, -0.205887, -0.0720563)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+surface_material_override/0 = SubResource("StandardMaterial3D_ckgwf")
+
+[node name="Outline12" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(-3.93402e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -90, -3.14722e-06, 1.14641e-13, 13.9155, -0.205887, -0.0720563)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+surface_material_override/0 = SubResource("StandardMaterial3D_ckgwf")
+
+[node name="Outline13" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(-3.93402e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -90, -3.14722e-06, 1.14641e-13, 15.4476, -0.205887, -0.0720563)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+surface_material_override/0 = SubResource("StandardMaterial3D_ckgwf")
+
+[node name="Outline14" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(-3.93402e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -90, -3.14722e-06, 1.14641e-13, 16.9802, -0.205887, -0.0720563)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+surface_material_override/0 = SubResource("StandardMaterial3D_ckgwf")
+
+[node name="Outline15" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(-3.93402e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -90, -3.14722e-06, 1.14641e-13, 18.5128, -0.205887, -0.0720563)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+surface_material_override/0 = SubResource("StandardMaterial3D_ckgwf")
+
+[node name="Outline16" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(-3.93402e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -90, -3.14722e-06, 1.14641e-13, 20.0392, -0.205887, -0.0720563)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+surface_material_override/0 = SubResource("StandardMaterial3D_ckgwf")
+
+[node name="Outline17" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(-3.93402e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -90, -3.14722e-06, 1.14641e-13, 21.5688, -0.205887, -0.0720563)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+surface_material_override/0 = SubResource("StandardMaterial3D_ckgwf")
+
+[node name="Outline18" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(-3.93402e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -90, -3.14722e-06, 1.14641e-13, 23.1005, -0.205887, -0.0720563)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+surface_material_override/0 = SubResource("StandardMaterial3D_ckgwf")
+
+[node name="Outline19" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(-3.93402e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -90, -3.14722e-06, 1.14641e-13, 24.6327, -0.205887, -0.0720563)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+surface_material_override/0 = SubResource("StandardMaterial3D_ckgwf")
+
+[node name="Outline20" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(-3.93402e-06, 36, -2.62268e-06, 0, -1.57361e-06, -60, -90, -1.57361e-06, 1.14641e-13, 25.7926, -0.191881, -0.0674793)
 visible = false
 mesh = SubResource("ArrayMesh_hmeax")
 surface_material_override/0 = SubResource("StandardMaterial3D_ckgwf")
@@ -178,6 +280,91 @@ mesh = SubResource("ArrayMesh_hmeax")
 
 [node name="Brick3" type="MeshInstance3D" parent="."]
 transform = Transform3D(-3.71547e-06, 36, -2.62268e-06, 0, -1.57361e-06, -60, -85, -1.57361e-06, 1.14641e-13, 0.517725, -0.188934, -0.067849)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+
+[node name="Brick4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.71547e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -85, -3.14722e-06, 1.14641e-13, 1.68452, -0.197, -0.0662376)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+
+[node name="Brick5" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.71547e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -85, -3.14722e-06, 1.14641e-13, 3.22338, -0.197, -0.0662376)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+
+[node name="Brick6" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.71547e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -85, -3.14722e-06, 1.14641e-13, 4.76147, -0.197, -0.0662376)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+
+[node name="Brick7" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.71547e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -85, -3.14722e-06, 1.14641e-13, 6.2986, -0.197, -0.0662376)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+
+[node name="Brick8" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.71547e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -85, -3.14722e-06, 1.14641e-13, 7.83408, -0.197, -0.0662376)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+
+[node name="Brick9" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.71547e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -85, -3.14722e-06, 1.14641e-13, 9.37344, -0.197, -0.0662376)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+
+[node name="Brick10" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.71547e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -85, -3.14722e-06, 1.14641e-13, 10.9108, -0.197, -0.0662376)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+
+[node name="Brick11" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.71547e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -85, -3.14722e-06, 1.14641e-13, 12.4577, -0.197, -0.0662376)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+
+[node name="Brick12" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.71547e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -85, -3.14722e-06, 1.14641e-13, 13.9959, -0.197, -0.0662376)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+
+[node name="Brick13" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.71547e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -85, -3.14722e-06, 1.14641e-13, 15.5386, -0.197, -0.0662376)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+
+[node name="Brick14" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.71547e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -85, -3.14722e-06, 1.14641e-13, 17.0879, -0.197, -0.0662376)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+
+[node name="Brick15" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.71547e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -85, -3.14722e-06, 1.14641e-13, 18.6352, -0.197, -0.0662376)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+
+[node name="Brick16" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.71547e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -85, -3.14722e-06, 1.14641e-13, 20.174, -0.197, -0.0662376)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+
+[node name="Brick17" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.71547e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -85, -3.14722e-06, 1.14641e-13, 21.7155, -0.197, -0.0662376)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+
+[node name="Brick18" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.71547e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -85, -3.14722e-06, 1.14641e-13, 23.2572, -0.197, -0.0662376)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+
+[node name="Brick19" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.71547e-06, 72, -2.62268e-06, 0, -3.14722e-06, -60, -85, -3.14722e-06, 1.14641e-13, 24.7941, -0.197, -0.0662376)
+visible = false
+mesh = SubResource("ArrayMesh_hmeax")
+
+[node name="Brick20" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.71547e-06, 36, -2.62268e-06, 0, -1.57361e-06, -60, -85, -1.57361e-06, 1.14641e-13, 25.9724, -0.198151, -0.0690295)
 visible = false
 mesh = SubResource("ArrayMesh_hmeax")
 

@@ -3,3 +3,10 @@ res://scenes/CorePlayable/CorePlayable.tscn
 res://UI/Inventory/inventory.tscn
 res://mechanics/Player/node_3d.tscn
 res://UI/Inventory/inventory.gd
+res://ui/screens/titlescreen.tscn
+res://mechanics/build_wall/wall.tscn
+res://mechanics/build_wall/concreteplacingminigame.gd
+res://mechanics/build_wall/concreteplacingminigame.tscn
+res://scenes/CorePlayable/cranemovement.gd
+res://scripts/global.gd
+res://scenes/CorePlayable/world.gd

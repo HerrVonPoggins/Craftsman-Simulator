@@ -225,7 +225,7 @@ func _on_ray_cast_3d_start_saw_minigame():
 func _on_area_3d_2_body_entered(body):
 	if body.is_in_group("trowel") and Global.concrete == true:
 		$Area3D2/CollisionShape3D.call_deferred("set_disabled", true)
-		$Node3D5.visible = true
+		$ConcretePlacingGames/concreteplacing.visible = true
 func _on_area_3d_3_body_entered(body):
 	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_1 == true:
 		$Area3D3/CollisionShape3D.call_deferred("set_disabled", true)
