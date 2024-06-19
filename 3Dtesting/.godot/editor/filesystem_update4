@@ -1,10 +1,5 @@
-res://UI/Inventory/inventory.tscn
 res://scenes/Carpenter/carpenter_world.gd
-res://UI/Inventory/inventory.gd
 res://scenes/CorePlayable/CorePlayable.tscn
-res://mechanics/Player/player_signals.gd
+res://UI/Inventory/inventory.tscn
 res://mechanics/Player/node_3d.tscn
-res://mechanics/Player/RayCast3D.gd
-res://scripts/global.gd
-res://ui/screens/titlescreen.tscn
-res://mechanics/Player/CharacterFP+WASD.gd
+res://UI/Inventory/inventory.gd
