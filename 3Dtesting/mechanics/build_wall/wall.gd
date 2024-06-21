@@ -21,18 +21,17 @@ var counter = 0
 func _on_area_3d_body_entered(body):
 	if body.is_in_group("trowel") and Global.concrete == true:
 		if counter == 0:
-			
 			counter = 0
 
-	if Global.concrete_1 == true and counter == 0:
+	if Global.concrete_amount == 1 and counter == 0:
 		concrete_line_1 = true
 		Global.concrete = false
 		counter = 1
-	elif Global.concrete_2 == true and counter == 1:
+	elif Global.concrete_amount == 2 and counter == 1:
 		concrete_line_2 = true
 		Global.concrete = false
 		counter = 2
-	elif Global.concrete_3 == true:
+	elif Global.concrete_amount == 3 and counter == 2:
 		concrete_line_3 = true
 		Global.concrete = false
 

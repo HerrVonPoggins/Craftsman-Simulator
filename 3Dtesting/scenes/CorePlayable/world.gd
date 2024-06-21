@@ -93,12 +93,42 @@ func _process(delta):
 
 
 	#whent the concrete placing minigames are done a concrete texture appears on the bricks
-	if Global.concrete_1 == true:
-		$"Area3D2/mörtel".visible = true
-	if Global.concrete_2 == true:
-		$"Area3D3/mörtel".visible = true
-	if Global.concrete_3 == true:
-		$"Area3D4/mörtel".visible = true
+	if Global.concrete_amount == 1:
+		$"ConcretePlacingAreas/Area3D2/mörtel".visible = true
+	if Global.concrete_amount == 2:
+		$"ConcretePlacingAreas/Area3D3/mörtel".visible = true
+	if Global.concrete_amount == 3:
+		$"ConcretePlacingAreas/Area3D4/mörtel".visible = true
+	if Global.concrete_amount == 4:
+		$"ConcretePlacingAreas/concreteArea5/mörtel".visible = true
+	if Global.concrete_amount == 5:
+		$"ConcretePlacingAreas/concreteArea6/mörtel".visible = true
+	if Global.concrete_amount == 6:
+		$"ConcretePlacingAreas/concreteArea7/mörtel".visible = true
+	if Global.concrete_amount == 7:
+		$"ConcretePlacingAreas/concreteArea8/mörtel".visible = true
+	if Global.concrete_amount == 8:
+		$"ConcretePlacingAreas/concreteArea9/mörtel".visible = true
+	if Global.concrete_amount == 9:
+		$"ConcretePlacingAreas/concreteArea10/mörtel".visible = true
+	if Global.concrete_amount == 10:
+		$"ConcretePlacingAreas/concreteArea11/mörtel".visible = true
+	if Global.concrete_amount == 11:
+		$"ConcretePlacingAreas/concreteArea12/mörtel".visible = true
+	if Global.concrete_amount == 12:
+		$"ConcretePlacingAreas/concreteArea13/mörtel".visible = true
+	if Global.concrete_amount == 13:
+		$"ConcretePlacingAreas/concreteArea14/mörtel".visible = true
+	if Global.concrete_amount == 14:
+		$"ConcretePlacingAreas/concreteArea15/mörtel".visible = true
+	if Global.concrete_amount == 15:
+		$"ConcretePlacingAreas/concreteArea16/mörtel".visible = true
+	if Global.concrete_amount == 16:
+		$"ConcretePlacingAreas/concreteArea17/mörtel".visible = true
+	if Global.concrete_amount == 17:
+		$"ConcretePlacingAreas/concreteArea18/mörtel".visible = true
+	if Global.concrete_amount == 18:
+		$"ConcretePlacingAreas/concreteArea19/mörtel".visible = true
 
 
 
@@ -224,17 +254,40 @@ func _on_ray_cast_3d_start_saw_minigame():
 #when the trowel with concrete on it is put in the area the placing minigame starts
 func _on_area_3d_2_body_entered(body):
 	if body.is_in_group("trowel") and Global.concrete == true:
-		$Area3D2/CollisionShape3D.call_deferred("set_disabled", true)
+		$ConcretePlacingAreas/Area3D2.call_deferred("set_disabled", true)
 		$ConcretePlacingGames/concreteplacing.visible = true
 func _on_area_3d_3_body_entered(body):
-	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_1 == true:
-		$Area3D3/CollisionShape3D.call_deferred("set_disabled", true)
-		$Node3D7.visible = true
+	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_amount == 1:
+		$ConcretePlacingAreas/Area3D3.call_deferred("set_disabled", true)
+		$ConcretePlacingGames/concreteplacing2.visible = true
 func _on_area_3d_4_body_entered(body):
-	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_2 == true:
-		$Area3D4/CollisionShape3D.call_deferred("set_disabled", true)
-		$Node3D8.visible = true
-
+	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_amount == 2:
+		$ConcretePlacingAreas/Area3D4.call_deferred("set_disabled", true)
+		$ConcretePlacingGames/concreteplacing3.visible = true
+func _on_concrete_area_5_body_entered(body):
+	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_amount == 3:
+		$ConcretePlacingAreas/concreteArea5/CollisionShape3D.call_deferred("set_disabled", true)
+		$ConcretePlacingGames/concreteplacing4.visible = true
+func _on_concrete_area_6_body_entered(body):
+	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_amount == 4:
+		$ConcretePlacingAreas/concreteArea5/CollisionShape3D.call_deferred("set_disabled", true)
+		$ConcretePlacingGames/concreteplacing4.visible = true
+func _on_concrete_area_7_body_entered(body):
+	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_amount == 5:
+		$ConcretePlacingAreas/concreteArea5/CollisionShape3D.call_deferred("set_disabled", true)
+		$ConcretePlacingGames/concreteplacing4.visible = true
+func _on_concrete_area_8_body_entered(body):
+	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_amount == 6:
+		$ConcretePlacingAreas/concreteArea5/CollisionShape3D.call_deferred("set_disabled", true)
+		$ConcretePlacingGames/concreteplacing4.visible = true
+func _on_concrete_area_9_body_entered(body):
+	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_amount == 7:
+		$ConcretePlacingAreas/concreteArea5/CollisionShape3D.call_deferred("set_disabled", true)
+		$ConcretePlacingGames/concreteplacing4.visible = true
+func _on_concrete_area_10_body_entered(body):
+	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_amount == 8:
+		$ConcretePlacingAreas/concreteArea5/CollisionShape3D.call_deferred("set_disabled", true)
+		$ConcretePlacingGames/concreteplacing4.visible = true
 
 #starts spriti level and hammer minigame
 func _on_area_3d_5_body_entered(body):
@@ -286,3 +339,4 @@ func _on_ray_cast_3d_wedge_highlight():
 	if wedges_highlighted == false:
 		wedge.mesh.surface_get_material(0).next_pass = HIGHLIGHT
 		wedges_highlighted = true
+
