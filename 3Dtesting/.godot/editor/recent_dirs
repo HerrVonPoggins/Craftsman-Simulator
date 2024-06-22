@@ -1,3 +1,5 @@
+res://mechanics/saw_wall
+res://UI/screens
 res://scenes/CorePlayable
 res://mechanics/craneminigame
 res://scripts
@@ -11,7 +13,6 @@ res://mechanics/metal_rod
 C:/GameDev/PlugIns/FBX2glTF-windows-x86_64/FBX2glTF-windows-x86_64
 res://mechanics/SwitchMinigame
 res://mechanics/CurcuitMinigame
-res://mechanics/2d_games
 res://mechanics/Player
 res://assets/carpenter-assets
 res://mechanics/Carpenter-Areas
@@ -19,4 +20,3 @@ res://scenes/Carpenter
 res://mechanics/Tools
 res://mechanics/PowerBox
 res://scenes/ElektrikerScene
-res://mechanics/StudWall

@@ -7,6 +7,7 @@ var mat1 = load("res://assets/textures/material_white.tres")
 var last = Vector3.ZERO
 var obj = null
 var temp
+@onready var animation_arms = $"../../../../Root Scene/AnimationPlayer"
 
 var trowel_collider = null
 var spirit_level_collider = null
@@ -172,3 +173,34 @@ func _on_player_delete_sand_container():
 #func to play animation
 func _place_brick():
 	$"../../Root Scene/AnimationPlayer".play("metarig|place brick")
+	
+	#generic animations
+func _play_grab():
+	animation_arms.play("GrabAction_001")
+func _play_stand():
+	animation_arms.play("Idle_Standing_Still_002")
+func _play_walk():
+	animation_arms.play("Idle_Walking")
+func _play_bucket_out():
+
+
+#animations for bag and bucket
+	animation_arms.play("metarig|get bucket out")
+func _play_bag_out():
+	animation_arms.play("metarig|get sand sack out")
+func _play_bucket_away():
+	animation_arms.play("metarig|put bucket away")
+func _play_bag_away():
+	animation_arms.play("metarig|put sand sack away")
+func _play_bag_forward():
+	animation_arms.play("metarig|sack in ruehrding")
+func _play_bag_back():
+	animation_arms.play("metarig|sack aus rührding")
+func _play_bucket_stand():
+	animation_arms.play("metarig|idle standing bucket")
+func _play_bucket_walk():
+	animation_arms.play("metarig|idle walking bucket")
+func _play_bag_stand():
+	animation_arms.play("metarig|idle standing sack")
+func _play_bag_walk():
+	animation_arms.play("metarig|idle walking sack")

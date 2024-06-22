@@ -1,5 +1,10 @@
 res://scenes/Carpenter/carpenter_world.gd
 res://scenes/CorePlayable/CorePlayable.tscn
-res://UI/Inventory/inventory.tscn
 res://mechanics/Player/node_3d.tscn
-res://UI/Inventory/inventory.gd
+res://scenes/Carpenter/carpenter_world.tscn
+res://UI/screens/scene_change.tscn
+res://scenes/ElektrikerScene/Elektriker.tscn
+res://mechanics/saw_wall/saw_wall.tscn
+res://mechanics/saw_wall/plaster.tscn
+res://mechanics/saw_wall/saw_wall.gd
+res://ui/screens/titlescreen.tscn

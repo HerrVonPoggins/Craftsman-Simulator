@@ -4,7 +4,10 @@ var planed_mesh_wallguide = preload("res://assets/carpenter-assets/wallguide_mes
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	Global.current_scene = 2
+	Global.walking_on = $"Map/map/Boden modified/StaticBody3D"
+	#$Enter.play("fade_in")
+	Global.ground_grass = $"Map/map/Boden modified/StaticBody3D".get_instance_id()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

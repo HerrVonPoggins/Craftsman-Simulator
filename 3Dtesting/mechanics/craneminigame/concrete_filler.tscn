@@ -400,6 +400,9 @@ libraries = {
 [node name="Root Scene" parent="." instance=ExtResource("2_cmlfh")]
 transform = Transform3D(4.2, 0, 0, 0, 4.7, 0, 0, 0, 6.3, 0.527043, -17.0627, -30.9085)
 
+[node name="Cube" parent="Root Scene/RootNode" index="0"]
+transform = Transform3D(457.029, 0, 0, 0, -1.99774e-05, 15, 0, -457.029, -6.55671e-07, 0.0115735, 3.05241, 0.198549)
+
 [node name="Root Scene2" parent="." instance=ExtResource("3_knf0l")]
 transform = Transform3D(4.2, 0, 0, 0, 4.7, 0, 0, 0, 6.3, 0.531486, -16.844, -30.8574)
 
@@ -456,4 +459,5 @@ libraries = {
 }
 speed_scale = 2.0
 
+[editable path="Root Scene"]
 [editable path="Root Scene2"]

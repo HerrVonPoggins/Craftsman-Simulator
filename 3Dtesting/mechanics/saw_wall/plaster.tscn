@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxox0oo2cmrav"]
+
+[ext_resource type="Script" path="res://mechanics/saw_wall/plaster.gd" id="1_ubp7r"]
+
+[node name="Plaster" type="Node3D"]
+script = ExtResource("1_ubp7r")

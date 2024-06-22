@@ -1,0 +1,98 @@
+[gd_scene load_steps=7 format=3 uid="uid://bv4i3a72uiipx"]
+
+[ext_resource type="Script" path="res://scene_change.gd" id="1_je1ak"]
+[ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://UI/player_ui/transition.tscn" id="2_5tvtm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_evtvc"]
+line_spacing = 10.0
+font_size = 40
+
+[sub_resource type="Animation" id="Animation_axmk6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Enter/ColorRect2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_23qvj"]
+resource_name = "fade_in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Enter/ColorRect2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_byatd"]
+_data = {
+"RESET": SubResource("Animation_axmk6"),
+"fade_in": SubResource("Animation_23qvj")
+}
+
+[node name="SceneChange" type="Node2D"]
+script = ExtResource("1_je1ak")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1921.0
+offset_bottom = 1077.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 725.0
+offset_top = 257.0
+offset_right = 1165.0
+offset_bottom = 323.0
+text = "Quiz bearbeiten"
+label_settings = SubResource("LabelSettings_evtvc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 692.0
+offset_top = 505.0
+offset_right = 1169.0
+offset_bottom = 656.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "continue
+"
+
+[node name="Enter" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_byatd")
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Enter"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Transition" parent="." instance=ExtResource("2_5tvtm")]
+visible = false
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
