@@ -57,7 +57,7 @@ var holding_bucket = false
 var holding_bag = false
 var is_holding = false
 
-
+var plaster_on = false
 
 
 

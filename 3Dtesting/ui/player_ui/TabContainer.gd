@@ -21,19 +21,57 @@ signal closed
 func _process(delta):
 	if Global.tutorial_finished == true:
 		$Panel.visible = false
+
+	if Global.current_scene == 1:
+		if Global.tutorial_finished == true:
+			check.check_state_1 = true
+		if Global.concrete_mixed == true:
+			check.check_state_2 = true
+		if Global.string == true:
+			check.check_state_3 = true
+		if Global.wall_finished == true:
+			check.check_state_4 = true
+		if Global.door_top == 4 and Global.window_top == 0:
+			check.check_state_5 = true
+		if Global.roof_finished == true:
+			check.check_state_6 = true
+	
+	
+	if Global.current_scene == 2:
+		$checklist.label_text_1 = "wand saegen"
+		$checklist.label_text_2 = "Kabel verlegen"
+		$checklist.label_text_3 = "Gips mischen"
+		$checklist.label_text_4 = "Steckdosenkappen einsetzen"
+		$checklist.label_text_5 = "Schaltplan umsetzen"
+		$checklist.label_text_6 = "Verteilerkasten anschalten"
+		$checklist.check_state_1 = false
+		$checklist.check_state_2 = false
+		$checklist.check_state_3 = false
+		$checklist.check_state_4 = false
+		$checklist.check_state_5 = false
+		$checklist.check_state_6 = false
+	
+	
+	
+	
+	
+	
+	
+	if Global.current_scene == 3:
+		$checklist.label_text_1 = "wand saegen"
+		$checklist.label_text_2 = "Kabel verlegen"
+		$checklist.label_text_3 = "Gips mischen"
+		$checklist.label_text_4 = "Steckdosenkappen einsetzen"
+		$checklist.label_text_5 = "Schaltplan umsetzen"
+		$checklist.label_text_6 = "Verteilerkasten anschalten"
+		$checklist.check_state_1 = false
+		$checklist.check_state_2 = false
+		$checklist.check_state_3 = false
+		$checklist.check_state_4 = false
+		$checklist.check_state_5 = false
+		$checklist.check_state_6 = false
 		
-	if Global.tutorial_finished == true:
-		check.check_state_1 = true
-	if Global.concrete_mixed == true:
-		check.check_state_2 = true
-	if Global.string == true:
-		check.check_state_3 = true
-	if Global.wall_finished == true:
-		check.check_state_4 = true
-	if Global.door_top == 4 and Global.window_top == 0:
-		check.check_state_5 = true
-	if Global.roof_finished == true:
-		check.check_state_6 = true
+		
 
 	
 	#sets the open/closemechanic on the escape button

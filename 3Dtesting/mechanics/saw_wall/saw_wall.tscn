@@ -1,19 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://b832ttb3fi0ct"]
+[gd_scene load_steps=15 format=3 uid="uid://b832ttb3fi0ct"]
 
 [ext_resource type="Script" path="res://mechanics/saw_wall/saw_wall.gd" id="1_i2eco"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vp1at"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-
-[sub_resource type="Sky" id="Sky_dvi53"]
-sky_material = SubResource("ProceduralSkyMaterial_vp1at")
-
-[sub_resource type="Environment" id="Environment_2pile"]
-background_mode = 2
-sky = SubResource("Sky_dvi53")
-tonemap_mode = 2
-glow_enabled = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_clxox"]
 size = Vector3(7, 5, 0.5)
@@ -59,13 +46,6 @@ size = Vector3(0.25, 0.25, 0.5)
 
 [node name="SawWall" type="Node3D"]
 script = ExtResource("1_i2eco")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_2pile")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
-shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35788, 0, 4.17867)

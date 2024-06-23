@@ -1,10 +1,11 @@
 extends Control
 
-@onready var label_1 = $Panel/VBoxContainer/HBoxContainer/Label
-@onready var label_2 = $Panel/VBoxContainer/HBoxContainer2/Label
-@onready var label_3 = $Panel/VBoxContainer/HBoxContainer3/Label
-@onready var label_4 = $Panel/VBoxContainer/HBoxContainer4/Label
-@onready var label_5 = $Panel/VBoxContainer/HBoxContainer5/Label
+@onready var label_1 = $VBoxContainer2/HBoxContainer/Label
+@onready var label_2 = $VBoxContainer2/HBoxContainer2/Label
+@onready var label_3 = $VBoxContainer2/HBoxContainer3/Label
+@onready var label_4 = $VBoxContainer2/HBoxContainer4/Label
+@onready var label_5 = $VBoxContainer2/HBoxContainer5/Label
+@onready var label_6 = $VBoxContainer2/HBoxContainer6/Label
 
 @onready var check_1 = $VBoxContainer2/HBoxContainer/CheckButton
 @onready var check_2 = $VBoxContainer2/HBoxContainer2/CheckButton
@@ -21,11 +22,21 @@ extends Control
 @export var check_state_5 = false
 @export var check_state_6 = false
 
-#@export var label_text_1 = "Arbeitskleidung sammeln"
-#@export var label_text_2 = "Zement mischen"
-#@export var label_text_3 = "Richtschnur spannen"
-#@export var label_text_4 = "Mauer bauen"
-#@export var label_text_5 = "Tuersturz plazieren"
+@export var label_text_1 = "Helm, Schuche, Handschuhe
+gesammelt
+ "
+@export var label_text_2 = "Wasser, Moertel und Sand in den Mischer gefeullt
+ 
+"
+@export var label_text_3 = "Zwei Keile gesetzt und Richtschnur gespannt
+ "
+@export var label_text_4 = "Eimer zum blinkenden Platz bringen, Kelle in Eimer getaucht, Moertel 3x auf die markierten Flaechen gestrichen, Wasserwaage an Ziegelreihe, Ziegel gerade geklopft
+ "
+@export var label_text_5 = "Stürze an Türen angebracht
+ "
+@export var label_text_6 = "Deckenstuetzen aufgestellt
+Kran am LKW (E) gestartet  Deckenplatten verlegt
+"
 
 var opened = true
 
@@ -40,12 +51,12 @@ func _process(_delta):
 	_check_4_on(check_state_4)
 	_check_5_on(check_state_5)
 	_check_6_on(check_state_6)
-	#_set_label_1_text(label_text_1)
-	#_set_label_2_text(label_text_2)
-	#_set_label_3_text(label_text_3)
-	#_set_label_4_text(label_text_4)
-	#_set_label_5_text(label_text_5)
-	
+	_set_label_1_text(label_text_1)
+	_set_label_2_text(label_text_2)
+	_set_label_3_text(label_text_3)
+	_set_label_4_text(label_text_4)
+	_set_label_5_text(label_text_5)
+	_set_label_6_text(label_text_6)
 	
 	
 	
@@ -65,17 +76,18 @@ func _play_interactable():
 func _quit_interactable():
 	$InteractionPlayer.play("interaction_popup_pickup_quit")
 	
-#func _set_label_1_text(string):
-	#label_1.set_text(string)
-#func _set_label_2_text(string):
-	#label_2.set_text(string)
-#func _set_label_3_text(string):
-	#label_3.set_text(string)
-#func _set_label_4_text(string):
-	#label_4.set_text(string)
-#func _set_label_5_text(string):
-	#label_5.set_text(string)
-
+func _set_label_1_text(string):
+	label_1.set_text(string)
+func _set_label_2_text(string):
+	label_2.set_text(string)
+func _set_label_3_text(string):
+	label_3.set_text(string)
+func _set_label_4_text(string):
+	label_4.set_text(string)
+func _set_label_5_text(string):
+	label_5.set_text(string)
+func _set_label_6_text(string):
+	label_6.set_text(string)
 
 func _check_1_on(check1state):
 	check_1.button_pressed = check_state_1

@@ -1,10 +1,18 @@
+res://scenes/ElektrikerScene/Elektriker.tscn
 res://scenes/Carpenter/carpenter_world.gd
+res://mechanics/saw_wall/saw_wall.tscn
+res://mechanics/saw_wall/saw_wall.gd
 res://scenes/CorePlayable/CorePlayable.tscn
 res://mechanics/Player/node_3d.tscn
 res://scenes/Carpenter/carpenter_world.tscn
 res://UI/screens/scene_change.tscn
-res://scenes/ElektrikerScene/Elektriker.tscn
-res://mechanics/saw_wall/saw_wall.tscn
 res://mechanics/saw_wall/plaster.tscn
-res://mechanics/saw_wall/saw_wall.gd
 res://ui/screens/titlescreen.tscn
+res://mechanics/saw_wall/plaster.gd
+res://scripts/global.gd
+res://mechanics/Tools/trowel.tscn
+res://mechanics/Tools/trowel.gd
+res://UI/player_ui/checklist.tscn
+res://ui/player_ui/Checklist.gd
+res://UI/player_ui/info hub.tscn
+res://ui/player_ui/TabContainer.gd

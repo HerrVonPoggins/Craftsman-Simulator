@@ -9,5 +9,9 @@ func _process(delta):
 	else:
 		$"Kelle Groß".visible = false
 		$"mörtelkelle".visible = true
-
-
+	if Global.plaster_on == true:
+		$"Kelle Gips".visible = true
+		$"mörtelkelle".visible = false
+	else:
+		$"Kelle Gips".visible = false
+		$"mörtelkelle".visible = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b2e0s63uasg6b"]
+[gd_scene load_steps=13 format=3 uid="uid://b2e0s63uasg6b"]
 
 [ext_resource type="Script" path="res://mechanics/Tools/trowel.gd" id="1_eax8e"]
 
@@ -167,6 +167,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_yk7jp")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m18w4"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_s06fw"]
 size = Vector3(1.06104, 1.82446, 1)
 
@@ -183,6 +185,13 @@ transform = Transform3D(5.88717, -38.3487, 34.3765, 0.0603511, -32.1456, -41.501
 visible = false
 mesh = SubResource("ArrayMesh_4r105")
 skeleton = NodePath("")
+
+[node name="Kelle Gips" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.88717, -38.3487, 34.3765, 0.0603511, -32.1456, -41.5011, 53.6962, 4.24062, -3.72234, 0.0311138, -0.192, -0.39083)
+visible = false
+mesh = SubResource("ArrayMesh_4r105")
+skeleton = NodePath("")
+surface_material_override/2 = SubResource("StandardMaterial3D_m18w4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(-0.108017, 0.786965, 0.607468, 1.7547e-08, 0.611044, -0.791597, -0.994149, -0.0855057, -0.0660029, 0.0985675, -0.238499, -0.410181)
