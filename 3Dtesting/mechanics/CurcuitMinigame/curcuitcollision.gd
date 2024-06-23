@@ -9,6 +9,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if $"../../../StaticBody3D2".rotation_degrees.x == 20 and $"../../../StaticBody3D3".rotation_degrees.x == 20 and $"../../../StaticBody3D4".rotation_degrees.x == 20 and $"../../../StaticBody3D5".rotation_degrees.x == 20:
+		Global.switch_minigame_on = false
+	if $"../../../StaticBody3D2".rotation_degrees.z == 90:
+		Global.curcuit_minigame_on = false
+		
 	if $"../../../StaticBody3D2".rotation_degrees.x == -40 and done == false:
 		$"../../../Node3D".rotate_z(deg_to_rad(20))
 
@@ -47,14 +52,11 @@ func _process(delta):
 
 		if collider != null:
 			if collider.is_in_group("circuit"):
-
 				collider.rotate_z(deg_to_rad(90.0))
+
 			if collider.is_in_group("switch"):
 				if collider.rotation.x >= 0:
 					collider.rotation.x = deg_to_rad(-40)
 				else:
 					collider.rotation.x = deg_to_rad(20)
 
-
-	if Input.is_action_just_pressed("kamera"):
-		print($"../../../StaticBody3D3".rotation_degrees.x)

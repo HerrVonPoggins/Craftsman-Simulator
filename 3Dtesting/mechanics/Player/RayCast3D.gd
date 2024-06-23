@@ -127,7 +127,10 @@ func _process(delta):
 					emit_signal("start_saw_minigame")
 				if collider.is_in_group("rod_extend"):
 					collider.scale = Vector3(1,1.35,1)
-
+				if collider.is_in_group("curcuit_minigame"):
+					Global.curcuit_minigame_on = true
+				if collider.is_in_group("switch_minigame"):
+					Global.switch_minigame_on = true
 
 	if obj != null:
 		last = obj.global_position

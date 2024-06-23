@@ -18,11 +18,15 @@ func _process(delta):
 
 
 func _on_area_3d_body_entered(body):
-	if body.is_in_group("plaster"):
+	if body.is_in_group("plaster") and $Bucket_water2.visible == true:
+		
 		plaster_added = true
 		body.queue_free()
 	if body.is_in_group("water"):
 		water_added = true
 		body.queue_free()
+		$Bucket_water2.visible = true
+		$Bucket_water.visible = false
+		$AnimationPlayer.play("RESET")
 	if $MeshInstance3D.visible == true and body.is_in_group("trowel"):
 		Global.plaster_on = true

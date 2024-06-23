@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_l6frv"]
+
+[resource]
+script = ExtResource("1_l6frv")
+using_states = PackedStringArray()
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray("Elektriker")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": &"title"
+},
+"3": {
+"character": "Elektriker",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Nun musst du Elektrikergips mischen hol dafür einen Eimer Wasser und einen Sack Gips.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nun musst du Elektrikergips mischen hol dafür einen Eimer Wasser und einen Sack Gips.",
+"type": &"dialogue"
+},
+"4": {
+"character": "Elektriker",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Bringe diese zum markierten Ort um einen Eimer Gips herzustellen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Bringe diese zum markierten Ort um einen Eimer Gips herzustellen.",
+"type": &"dialogue"
+},
+"5": {
+"character": "Elektriker",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Wenn du fertig bist tauche deine Kelle in den Eimer und platziere den Gips an der Mauer.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wenn du fertig bist tauche deine Kelle in den Eimer und platziere den Gips an der Mauer.",
+"type": &"dialogue"
+},
+"6": {
+"character": "Elektriker",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "8",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Danach kannst du die Kappen für die Steckdosen anbrigen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Danach kannst du die Kappen für die Steckdosen anbrigen.",
+"type": &"dialogue"
+},
+"8": {
+"id": "8",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+}
+}
+raw_text = "~ this_is_a_node_title
+
+Elektriker: Nun musst du Elektrikergips mischen hol dafür einen Eimer Wasser und einen Sack Gips.
+Elektriker: Bringe diese zum markierten Ort um einen Eimer Gips herzustellen.
+Elektriker: Wenn du fertig bist tauche deine Kelle in den Eimer und platziere den Gips an der Mauer.
+Elektriker: Danach kannst du die Kappen für die Steckdosen anbrigen.
+
+=> END"
+metadata/dialogue_manager_version = "2.38.0"

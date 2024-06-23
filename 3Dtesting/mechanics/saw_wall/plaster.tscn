@@ -6,14 +6,11 @@
 height = 1.72223
 radius = 1.5024
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_f0u3s"]
-height = 1.0
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4tw4p"]
 resource_name = "Material.011"
 transparency = 1
 cull_mode = 2
-albedo_color = Color(0, 0.396078, 0.905882, 0.196078)
+albedo_color = Color(0, 0.396078, 0.905882, 1)
 roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ari6"]
@@ -135,6 +132,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_5vgyn")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lb3co"]
+albedo_color = Color(0, 0.709804, 1, 1)
+
 [sub_resource type="Animation" id="Animation_3sqof"]
 resource_name = "marker"
 length = 1.5
@@ -164,7 +164,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0, 0.396078, 0.905882, 0.196078)]
+"values": [Color(0, 0.396078, 0.905882, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_x6hs0"]
@@ -183,14 +183,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00133, 0)
 shape = SubResource("CylinderShape3D_ix45c")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.502303, 0)
+transform = Transform3D(-0.132737, 0.414595, -0.76178, 2.22144e-08, 0.614891, 0.530458, 0.733478, 0.0750288, -0.137859, 0, 0, 0)
 visible = false
-mesh = SubResource("CylinderMesh_f0u3s")
+mesh = SubResource("ArrayMesh_rpq42")
+skeleton = NodePath("")
 
 [node name="Bucket_water" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.132737, 0.414595, -0.76178, 2.22144e-08, 0.614891, 0.530458, 0.733478, 0.0750288, -0.137859, 0, 0, 0)
 mesh = SubResource("ArrayMesh_rpq42")
 skeleton = NodePath("")
+
+[node name="Bucket_water2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.132737, 0.414595, -0.76178, 2.22144e-08, 0.614891, 0.530458, 0.733478, 0.0750288, -0.137859, 0, 0, 0)
+visible = false
+mesh = SubResource("ArrayMesh_rpq42")
+skeleton = NodePath("")
+surface_material_override/3 = SubResource("StandardMaterial3D_lb3co")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

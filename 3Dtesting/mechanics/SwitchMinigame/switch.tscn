@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://cw5k75veop6cu"]
 
-[ext_resource type="Script" path="res://mechanics/CurcuitMinigame/curcuits.gd" id="1_bg6pi"]
+[ext_resource type="Script" path="res://mechanics/SwitchMinigame/switch.gd" id="1_l8l8j"]
 [ext_resource type="Script" path="res://mechanics/CurcuitMinigame/curcuitcollision.gd" id="2_n523g"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_sk3ee"]
@@ -35,7 +35,7 @@ bottom_radius = 0.01
 height = 0.08
 
 [node name="Node3D" type="Node3D"]
-script = ExtResource("1_bg6pi")
+script = ExtResource("1_l8l8j")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.922937)

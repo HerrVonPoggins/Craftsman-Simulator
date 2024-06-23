@@ -58,8 +58,8 @@ var holding_bag = false
 var is_holding = false
 
 var plaster_on = false
-
-
+var curcuit_minigame_on = false
+var switch_minigame_on = false
 
 
 

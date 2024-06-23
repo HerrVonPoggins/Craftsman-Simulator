@@ -37,7 +37,7 @@ var hold_object: Object
 	#capture mouse on leftclick and move camera when mouse is moved
 func _unhandled_input(event):
 	
-	if event is InputEventMouseButton:
+	if event is InputEventMouseButton and Global.switch_minigame_on == false and Global.curcuit_minigame_on == false:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		
 	elif event.is_action_pressed("ui_cancel"):

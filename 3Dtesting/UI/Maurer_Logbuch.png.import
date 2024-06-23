@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://nhi4c87607cc"
-path="res://.godot/imported/Maurer_Logbuch.png-773a22ca1bc133debc727ac5c1fe89dd.ctex"
+path="res://.godot/imported/Maurer_Logbuch.png-d15ab94e26d6db12088648d3cfa22efc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/Maurer_Logbuch.png"
-dest_files=["res://.godot/imported/Maurer_Logbuch.png-773a22ca1bc133debc727ac5c1fe89dd.ctex"]
+source_file="res://ui/Maurer_Logbuch.png"
+dest_files=["res://.godot/imported/Maurer_Logbuch.png-d15ab94e26d6db12088648d3cfa22efc.ctex"]
 
 [params]
 

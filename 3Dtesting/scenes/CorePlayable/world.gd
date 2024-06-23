@@ -7,6 +7,7 @@ var played2 = false
 var played3 = false
 var played4 = false
 var played5 = false
+var played6 = false
 var diealogue_played = 0
 var done = false
 @onready var wedge = $Props/Wedge/Mesh
@@ -30,13 +31,17 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
-		Global.crane_on = true
+		Global.concrete_filled_roof = true
+		print("res://UI/screens/scene_change.tscn")
 		
 		
 	#when the filling minigame is finished the solid roof becomes visible
-	if Global.concrete_filled_roof == true:
+	if Global.concrete_filled_roof == true and played6 == false:
+		played6 = true
 		$"Root Scene".visible = true
 		$"Root Scene/RootNode/Cube/StaticBody3D/CollisionShape3D".call_deferred("set_disabled", false)
+		await get_tree().create_timer(5).timeout
+		$Transition._change_scene("res://UI/screens/scene_change.tscn")
 
 
 	#when the roof minigame is finished the filling action starts

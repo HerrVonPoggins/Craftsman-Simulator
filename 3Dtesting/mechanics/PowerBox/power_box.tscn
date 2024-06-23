@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://ck2ddnhldnuci"]
+[gd_scene load_steps=7 format=3 uid="uid://ck2ddnhldnuci"]
 
 [ext_resource type="Script" path="res://mechanics/PowerBox/power_box.gd" id="1_h030n"]
 
@@ -13,6 +13,12 @@ height = 0.05
 [sub_resource type="SphereShape3D" id="SphereShape3D_s2plp"]
 radius = 0.120437
 
+[sub_resource type="BoxMesh" id="BoxMesh_1lh3v"]
+size = Vector3(0.3, 0.1, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rq3ms"]
+points = PackedVector3Array(-0.157936, -0.0579256, -0.507937, 0.15, 0.049831, 0.47746, 0.159524, -0.0579256, 0.507937, -0.157936, -0.0579256, 0.507937, 0.159524, -0.0579256, -0.507937, -0.148895, 0.05, -0.479005, -0.148895, 0.05, 0.479005, 0.15, 0.049831, -0.47746)
+
 [node name="PowerBox" type="Node3D"]
 script = ExtResource("1_h030n")
 
@@ -24,7 +30,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.4
 mesh = SubResource("CylinderMesh_i3ntx")
 
 [node name="OutletRange2" type="Area3D" parent="Outlet2"]
-transform = Transform3D(1, 0, 0, 0, 1, 3.55271e-15, 0, -3.55271e-15, 1, 0.0740104, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 3.55271e-15, 0, -3.55271e-15, 1, 0.0740104, -0.0799584, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Outlet2/OutletRange2"]
 shape = SubResource("SphereShape3D_s2plp")
@@ -34,6 +40,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.0
 mesh = SubResource("CylinderMesh_i3ntx")
 
 [node name="OutletRange3" type="Area3D" parent="Outlet3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.062364, -0.074799, 3.72529e-09)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Outlet3/OutletRange3"]
 shape = SubResource("SphereShape3D_s2plp")
@@ -43,6 +50,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -0.
 mesh = SubResource("CylinderMesh_i3ntx")
 
 [node name="OutletRange4" type="Area3D" parent="Outlet4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0623292, -0.0751513, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Outlet4/OutletRange4"]
 shape = SubResource("SphereShape3D_s2plp")
@@ -52,6 +60,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -0.
 mesh = SubResource("CylinderMesh_i3ntx")
 
 [node name="OutletRange5" type="Area3D" parent="Outlet5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0621832, 0.0750382, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Outlet5/OutletRange5"]
 shape = SubResource("SphereShape3D_s2plp")
@@ -61,6 +70,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.0
 mesh = SubResource("CylinderMesh_i3ntx")
 
 [node name="OutletRange6" type="Area3D" parent="Outlet6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0678589, 0.0820144, -3.72529e-09)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Outlet6/OutletRange6"]
 shape = SubResource("SphereShape3D_s2plp")
@@ -70,9 +80,21 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.4
 mesh = SubResource("CylinderMesh_i3ntx")
 
 [node name="OutletRange7" type="Area3D" parent="Outlet7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0768505, 0.0769021, -0.00462002)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Outlet7/OutletRange7"]
 shape = SubResource("SphereShape3D_s2plp")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.203041, -0.653841, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0992933, 0, 0)
+mesh = SubResource("BoxMesh_1lh3v")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0992933, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_rq3ms")
 
 [connection signal="body_entered" from="Outlet2/OutletRange2" to="." method="_on_outlet_range_2_body_entered"]
 [connection signal="body_exited" from="Outlet2/OutletRange2" to="." method="_on_outlet_range_2_body_exited"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bktqxctr7wh4e"
+path="res://.godot/imported/elektriker_step_4.dialogue-6af832380e407d500d6a73c7bd3c810a.tres"
+
+[deps]
+
+source_file="res://dialoguefiles/elektriker_step_4.dialogue"
+dest_files=["res://.godot/imported/elektriker_step_4.dialogue-6af832380e407d500d6a73c7bd3c810a.tres"]
+
+[params]
+
+defaults=true

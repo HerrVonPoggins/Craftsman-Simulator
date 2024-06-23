@@ -65,12 +65,12 @@ skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_736v8")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Wall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.12856, -2.14478, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.12856, -2.6662, 0)
 mesh = SubResource("BoxMesh_ql1r2")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Wall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98292, -2.8322, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.88143, -2.8322, 0)
 mesh = SubResource("BoxMesh_ql1r2")
 skeleton = NodePath("../..")
 

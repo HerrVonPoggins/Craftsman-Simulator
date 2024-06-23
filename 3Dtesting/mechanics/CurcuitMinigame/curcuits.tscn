@@ -79,7 +79,7 @@ skeleton = NodePath("../..")
 shape = SubResource("ConvexPolygonShape3D_i0p5u")
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="." groups=["circuit"]]
-transform = Transform3D(1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, -0.337661, 0.316707, 0.0445553)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.337661, 0.316707, 0.0445553)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D2"]
 mesh = SubResource("BoxMesh_1prby")

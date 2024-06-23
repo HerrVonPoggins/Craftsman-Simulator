@@ -16,3 +16,13 @@ res://UI/player_ui/checklist.tscn
 res://ui/player_ui/Checklist.gd
 res://UI/player_ui/info hub.tscn
 res://ui/player_ui/TabContainer.gd
+res://mechanics/PowerBox/power_box.tscn
+res://mechanics/Player/RayCast3D.gd
+res://mechanics/SwitchMinigame/switch.tscn
+res://mechanics/CurcuitMinigame/curcuits.gd
+res://mechanics/SwitchMinigame/switch.gd
+res://mechanics/CurcuitMinigame/curcuits.tscn
+res://mechanics/Player/CharacterFP+WASD.gd
+res://mechanics/CurcuitMinigame/curcuitcollision.gd
+res://scenes/CorePlayable/world.gd
+res://UI/player_ui/transition.tscn
