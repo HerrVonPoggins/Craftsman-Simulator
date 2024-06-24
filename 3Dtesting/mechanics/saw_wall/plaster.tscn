@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bxox0oo2cmrav"]
+[gd_scene load_steps=17 format=3 uid="uid://bxox0oo2cmrav"]
 
 [ext_resource type="Script" path="res://mechanics/saw_wall/plaster.gd" id="1_ubp7r"]
 
@@ -132,8 +132,32 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_5vgyn")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lb3co"]
-albedo_color = Color(0, 0.709804, 1, 1)
+[sub_resource type="Animation" id="Animation_62i1m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bucket_water:mesh:surface_0/material:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0.396078, 0.905882, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Stick:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.98456, 0.417113)]
+}
 
 [sub_resource type="Animation" id="Animation_3sqof"]
 resource_name = "marker"
@@ -152,28 +176,43 @@ tracks/0/keys = {
 "values": [Color(0, 0.396078, 0.905882, 0.196078), Color(0, 0.396078, 0.905882, 1), Color(0, 0.396078, 0.905882, 0.196078)]
 }
 
-[sub_resource type="Animation" id="Animation_62i1m"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_1lems"]
+resource_name = "mix"
+length = 2.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Bucket_water:mesh:surface_0/material:albedo_color")
+tracks/0/path = NodePath("Stick:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Color(0, 0.396078, 0.905882, 1)]
+"values": [Vector3(0, 1.98456, 0.417113), Vector3(-0.439428, 1.98456, 0.0690943), Vector3(-0.347676, 1.98456, -0.319552), Vector3(0.141578, 1.98456, -0.427668), Vector3(0.432324, 1.98456, -0.199573), Vector3(0, 1.98456, 0.417113)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_x6hs0"]
 _data = {
 "RESET": SubResource("Animation_62i1m"),
-"marker": SubResource("Animation_3sqof")
+"marker": SubResource("Animation_3sqof"),
+"mix": SubResource("Animation_1lems")
 }
 
-[node name="Plaster" type="Node3D"]
+[sub_resource type="CylinderMesh" id="CylinderMesh_h8yxr"]
+top_radius = 0.05
+bottom_radius = 0.05
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uya55"]
+albedo_color = Color(0.462745, 0.219608, 0.0352941, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lb3co"]
+albedo_color = Color(0, 0.709804, 1, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_h0ay0"]
+points = PackedVector3Array(-0.196671, 0.427154, -0.421568, 0.100793, 1.14928, 1.70495, -0.0696851, 1.1503, 1.71008, -0.295494, 2.3199, 0.283099, 1.08801, 1.82916, 0.818316, 0.698085, -0.214523, 0.299238, -0.739604, -0.112316, 0.304465, -1.09888, 1.78414, 0.862881, 0.56787, 0.299758, -0.2943, -0.199251, -0.440612, 0.554115, -0.786346, 1.20392, 1.53245, 0.730949, 1.20392, 1.57723, 0.350268, 1.60603, -0.071399, 0.418414, 2.3199, 0.506361, -0.65953, 0.219169, -0.204093, -0.920351, 2.0523, 0.818316, -0.741821, 2.18596, 0.41723, 0.820001, 1.51654, 1.4431, 0.230374, -0.43635, 0.55438, 1.04327, 1.42734, 1.26462, 0.820001, 2.1415, 0.461796, -0.358067, 1.60024, -0.0652529, 0.779645, -0.0394466, 0.0884113, -0.697081, 1.4718, 1.4881, -1.05414, 1.4718, 1.26484, -0.0724382, 1.02552, 1.71115, -0.748073, -0.0395885, 0.0458929, 0.329149, 2.3199, 0.283317, 0.329149, 1.07026, 1.71115, 0.735238, 0.1749, -0.121819, -0.518551, 1.11472, 1.66658, -0.564631, -0.264983, 0.474372)
+
+[node name="Plaster" type="Node3D" groups=["plaster_mixer"]]
 script = ExtResource("1_ubp7r")
 
 [node name="Area3D" type="Area3D" parent="."]
@@ -193,17 +232,38 @@ transform = Transform3D(-0.132737, 0.414595, -0.76178, 2.22144e-08, 0.614891, 0.
 mesh = SubResource("ArrayMesh_rpq42")
 skeleton = NodePath("")
 
-[node name="Bucket_water2" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.132737, 0.414595, -0.76178, 2.22144e-08, 0.614891, 0.530458, 0.733478, 0.0750288, -0.137859, 0, 0, 0)
-visible = false
-mesh = SubResource("ArrayMesh_rpq42")
-skeleton = NodePath("")
-surface_material_override/3 = SubResource("StandardMaterial3D_lb3co")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_x6hs0")
 }
 autoplay = "marker"
 
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.894193, 0.447681, 0, -0.447681, 0.894193, 0, 3.77834, 2.42468)
+
+[node name="Stick" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98456, 0.417113)
+visible = false
+mesh = SubResource("CylinderMesh_h8yxr")
+surface_material_override/0 = SubResource("StandardMaterial3D_uya55")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["plaster_mixer"]]
+
+[node name="Bucket_water2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(-0.132737, 0.414595, -0.76178, 2.22144e-08, 0.614891, 0.530458, 0.733478, 0.0750288, -0.137859, 0, 0, 0)
+visible = false
+mesh = SubResource("ArrayMesh_rpq42")
+skeleton = NodePath("")
+surface_material_override/3 = SubResource("StandardMaterial3D_lb3co")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-0.132737, 0.414595, -0.76178, 2.22144e-08, 0.614891, 0.530458, 0.733478, 0.0750288, -0.137859, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_h0ay0")
+disabled = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

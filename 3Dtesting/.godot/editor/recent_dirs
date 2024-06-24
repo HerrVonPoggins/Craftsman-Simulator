@@ -1,3 +1,4 @@
+res://mechanics/light_bulb
 res://mechanics/saw_wall
 res://UI/screens
 res://scenes/CorePlayable
@@ -19,4 +20,3 @@ res://mechanics/Carpenter-Areas
 res://scenes/Carpenter
 res://mechanics/Tools
 res://mechanics/PowerBox
-res://scenes/ElektrikerScene

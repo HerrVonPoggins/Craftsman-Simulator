@@ -5,6 +5,7 @@ var saw_line2 = 0
 var step = 0 
 var played = false
 var played2 = false
+@onready var player = $"../Player"
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Camera3D.current = false
@@ -17,16 +18,21 @@ func _process(delta):
 		$Camera3D.current = false
 		$Saw1/CollisionShape3D.call_deferred("set_disabled", true)
 		played = true
+		player.visible = true
+		Global.stay = false
+		Global.crosshair_off = false
 	if saw_line2 >= 2 and played2 == false:
 		$Saw2.visible = false
 		$Camera3D.current = false
 		$Saw2/CollisionShape3D.call_deferred("set_disabled", true)
 		played2 = true
+		player.visible = true
+		Global.stay = false
+		Global.crosshair_off = false
 
 
-
-	if Input.is_action_just_pressed("kamera"):
-		print(Global.plaster_on)
+	#if Input.is_action_just_pressed("kamera"):
+		#print(Global.plaster_on)
 	
 	
 #moves the saw with mouse
@@ -46,6 +52,10 @@ func _on_toolinsert_1_body_entered(body):
 	if body.is_in_group("wall_saw_prop") and saw_line1 <= 0:
 		$Saw1.visible = true
 		$Camera3D.current = true
+		player.visible = false
+		Global.stay = true
+		Global.crosshair_off = true
+		
 	if body.is_in_group("cable"):
 		pass
 

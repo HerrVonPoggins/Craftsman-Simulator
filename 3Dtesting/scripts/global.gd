@@ -60,7 +60,7 @@ var is_holding = false
 var plaster_on = false
 var curcuit_minigame_on = false
 var switch_minigame_on = false
-
+var plaster_mixing = false
 
 
 var sound_count = 6

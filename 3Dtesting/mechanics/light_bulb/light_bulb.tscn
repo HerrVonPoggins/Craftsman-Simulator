@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://qaj8v6n4same"]
+
+[ext_resource type="Script" path="res://mechanics/light_bulb/light_bulb.gd" id="1_dd4mp"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3skjk"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.5
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_f770c"]
+top_radius = 0.05
+bottom_radius = 0.05
+height = 0.2
+
+[node name="LightBulb" type="Node3D"]
+script = ExtResource("1_dd4mp")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.169659, -0.985503, 0, 0.985503, 0.169659, 0, -1.14972, 0.465017)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CylinderMesh_3skjk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(0.0147998, 0.99989, 0, -0.99989, 0.0147998, 0, 0, 0, 1, 0.169609, 0.136984, 0)
+mesh = SubResource("CylinderMesh_f770c")

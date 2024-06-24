@@ -131,6 +131,8 @@ func _process(delta):
 					Global.curcuit_minigame_on = true
 				if collider.is_in_group("switch_minigame"):
 					Global.switch_minigame_on = true
+				if collider.is_in_group("plaster_mixer"):
+					Global.plaster_mixing = true
 
 	if obj != null:
 		last = obj.global_position
