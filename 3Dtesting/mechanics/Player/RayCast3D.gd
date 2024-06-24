@@ -133,6 +133,12 @@ func _process(delta):
 					Global.switch_minigame_on = true
 				if collider.is_in_group("plaster_mixer"):
 					Global.plaster_mixing = true
+				if collider.is_in_group("open"):
+					print(collider.open)
+					if collider.open == false:
+						collider.open = true
+					else:
+						collider.open = false
 
 	if obj != null:
 		last = obj.global_position

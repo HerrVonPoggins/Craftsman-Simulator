@@ -1,0 +1,97 @@
+[gd_scene load_steps=7 format=3 uid="uid://12nrgbylcf5f"]
+
+[ext_resource type="Script" path="res://mechanics/window_placing/window_placing.gd" id="1_wpju2"]
+[ext_resource type="PackedScene" uid="uid://c1b06qdinvbp8" path="res://mechanics/window_placing/foam.tscn" id="2_fv3j3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vjypx"]
+size = Vector3(2.5, 4, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qcj6d"]
+size = Vector3(2.5, 0.3, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_g0myd"]
+size = Vector3(2.5, 0.3, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mhon3"]
+size = Vector3(2.85065, 4.37549, 1.2417)
+
+[node name="WindowPlacing" type="Node3D"]
+script = ExtResource("1_wpju2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Window" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.208408, 1.73044, 0)
+visible = false
+mesh = SubResource("BoxMesh_vjypx")
+
+[node name="WindowMarker" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.208408, 1.73044, 0)
+visible = false
+mesh = SubResource("BoxMesh_vjypx")
+
+[node name="WindowBoard" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.237128, -0.168453, -0.251963)
+visible = false
+mesh = SubResource("BoxMesh_qcj6d")
+
+[node name="WindowBoardMarker" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.210209, -0.190203, -0.249286)
+visible = false
+mesh = SubResource("BoxMesh_g0myd")
+
+[node name="Area" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.225006, 1.68774, -0.12085)
+shape = SubResource("BoxShape3D_mhon3")
+
+[node name="Foam" parent="." instance=ExtResource("2_fv3j3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.31047, 0.0123075, 0.184408)
+
+[node name="Foam2" parent="." instance=ExtResource("2_fv3j3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.31047, 0.68665, 0.184408)
+
+[node name="Foam3" parent="." instance=ExtResource("2_fv3j3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.31047, 1.29015, 0.184408)
+
+[node name="Foam4" parent="." instance=ExtResource("2_fv3j3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.31047, 1.74645, 0.184408)
+
+[node name="Foam5" parent="." instance=ExtResource("2_fv3j3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.31047, 2.29528, 0.184408)
+
+[node name="Foam6" parent="." instance=ExtResource("2_fv3j3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.31047, 2.70713, 0.184408)
+
+[node name="Foam7" parent="." instance=ExtResource("2_fv3j3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.31047, 3.23323, 0.184408)
+
+[node name="Foam8" parent="." instance=ExtResource("2_fv3j3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.31047, 3.611, 0.184408)
+
+[node name="Foam9" parent="." instance=ExtResource("2_fv3j3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.60601, 0.0123075, 0.184408)
+
+[node name="Foam10" parent="." instance=ExtResource("2_fv3j3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.60601, 0.502135, 0.184408)
+
+[node name="Foam11" parent="." instance=ExtResource("2_fv3j3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.60601, 0.940926, 0.184408)
+
+[node name="Foam12" parent="." instance=ExtResource("2_fv3j3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.60601, 1.50745, 0.184408)
+
+[node name="Foam13" parent="." instance=ExtResource("2_fv3j3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.60601, 2.05589, 0.184408)
+
+[node name="Foam14" parent="." instance=ExtResource("2_fv3j3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.60601, 2.58564, 0.184408)
+
+[node name="Foam15" parent="." instance=ExtResource("2_fv3j3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.60601, 3.14995, 0.184408)
+
+[node name="Foam16" parent="." instance=ExtResource("2_fv3j3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.60601, 3.58934, 0.184408)
+
+[connection signal="body_entered" from="Area" to="." method="_on_area_3d_body_entered"]
