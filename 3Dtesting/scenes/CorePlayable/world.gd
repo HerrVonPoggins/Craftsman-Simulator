@@ -150,7 +150,9 @@ func _process(delta):
 		Global.isolation = true
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_3.dialogue"))
 
-
+	if Global.hammer_minigame_finished == true:
+		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/hammer_minigame_finished.dialogue"))
+		Global.hammer_minigame_finished = false
 
 
 	#when the wall is build the animations will start after 3 seconds wait time and the collisionshapes for the walls are turned on
@@ -270,25 +272,61 @@ func _on_concrete_area_5_body_entered(body):
 		$ConcretePlacingGames/concreteplacing4.visible = true
 func _on_concrete_area_6_body_entered(body):
 	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_amount == 4:
-		$ConcretePlacingAreas/concreteArea5/CollisionShape3D.call_deferred("set_disabled", true)
-		$ConcretePlacingGames/concreteplacing4.visible = true
+		$ConcretePlacingAreas/concreteArea6/CollisionShape3D.call_deferred("set_disabled", true)
+		$ConcretePlacingGames/concreteplacing5.visible = true
 func _on_concrete_area_7_body_entered(body):
 	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_amount == 5:
-		$ConcretePlacingAreas/concreteArea5/CollisionShape3D.call_deferred("set_disabled", true)
-		$ConcretePlacingGames/concreteplacing4.visible = true
+		$ConcretePlacingAreas/concreteArea7/CollisionShape3D.call_deferred("set_disabled", true)
+		$ConcretePlacingGames/concreteplacing6.visible = true
 func _on_concrete_area_8_body_entered(body):
 	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_amount == 6:
-		$ConcretePlacingAreas/concreteArea5/CollisionShape3D.call_deferred("set_disabled", true)
-		$ConcretePlacingGames/concreteplacing4.visible = true
+		$ConcretePlacingAreas/concreteArea8/CollisionShape3D.call_deferred("set_disabled", true)
+		$ConcretePlacingGames/concreteplacing7.visible = true
 func _on_concrete_area_9_body_entered(body):
 	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_amount == 7:
-		$ConcretePlacingAreas/concreteArea5/CollisionShape3D.call_deferred("set_disabled", true)
-		$ConcretePlacingGames/concreteplacing4.visible = true
+		$ConcretePlacingAreas/concreteArea9/CollisionShape3D.call_deferred("set_disabled", true)
+		$ConcretePlacingGames/concreteplacing8.visible = true
 func _on_concrete_area_10_body_entered(body):
 	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_amount == 8:
-		$ConcretePlacingAreas/concreteArea5/CollisionShape3D.call_deferred("set_disabled", true)
-		$ConcretePlacingGames/concreteplacing4.visible = true
-
+		$ConcretePlacingAreas/concreteArea10/CollisionShape3D.call_deferred("set_disabled", true)
+		$ConcretePlacingGames/concreteplacing9.visible = true
+func _on_concrete_area_11_body_entered(body):
+	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_amount == 9:
+		$ConcretePlacingAreas/concreteArea11/CollisionShape3D.call_deferred("set_disabled", true)
+		$ConcretePlacingGames/concreteplacing10.visible = true
+func _on_concrete_area_12_body_entered(body):
+	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_amount == 10:
+		$ConcretePlacingAreas/concreteArea12/CollisionShape3D.call_deferred("set_disabled", true)
+		$ConcretePlacingGames/concreteplacing11.visible = true
+func _on_concrete_area_13_body_entered(body):
+	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_amount == 11:
+		$ConcretePlacingAreas/concreteArea13/CollisionShape3D.call_deferred("set_disabled", true)
+		$ConcretePlacingGames/concreteplacing12.visible = true
+func _on_concrete_area_14_body_entered(body):
+	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_amount == 12:
+		$ConcretePlacingAreas/concreteArea14/CollisionShape3D.call_deferred("set_disabled", true)
+		$ConcretePlacingGames/concreteplacing13.visible = true
+func _on_concrete_area_15_body_entered(body):
+	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_amount == 13:
+		$ConcretePlacingAreas/concreteArea15/CollisionShape3D.call_deferred("set_disabled", true)
+		$ConcretePlacingGames/concreteplacing14.visible = true
+func _on_concrete_area_16_body_entered(body):
+	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_amount == 14:
+		$ConcretePlacingAreas/concreteArea16/CollisionShape3D.call_deferred("set_disabled", true)
+		$ConcretePlacingGames/concreteplacing15.visible = true
+func _on_concrete_area_17_body_entered(body):
+	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_amount == 15:
+		$ConcretePlacingAreas/concreteArea17/CollisionShape3D.call_deferred("set_disabled", true)
+		$ConcretePlacingGames/concreteplacing16.visible = true
+func _on_concrete_area_18_body_entered(body):
+	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_amount == 16:
+		$ConcretePlacingAreas/concreteArea18/CollisionShape3D.call_deferred("set_disabled", true)
+		$ConcretePlacingGames/concreteplacing17.visible = true
+func _on_concrete_area_19_body_entered(body):
+	if body.is_in_group("trowel") and Global.concrete == true and Global.concrete_amount == 17:
+		$ConcretePlacingAreas/concreteArea19/CollisionShape3D.call_deferred("set_disabled", true)
+		$ConcretePlacingGames/concreteplacing18.visible = true
+		
 #starts spriti level and hammer minigame
 func _on_area_3d_5_body_entered(body):
 	if body.is_in_group("spirit_level"):

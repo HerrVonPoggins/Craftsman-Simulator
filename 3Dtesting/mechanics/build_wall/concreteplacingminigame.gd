@@ -21,7 +21,7 @@ func _process(delta):
 	if $".".visible == true:
 		$Camera3D.current = true
 		Global.placing_games_open = true
-		player.visible = false
+		Player.visible = false
 		trowel.visible = false
 		Global.stay = true
 

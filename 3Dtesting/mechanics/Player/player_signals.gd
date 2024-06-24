@@ -1,4 +1,5 @@
 extends Node3D
+class_name Player
 
 signal start_mixer
 signal concrete_bucket_pos_reached

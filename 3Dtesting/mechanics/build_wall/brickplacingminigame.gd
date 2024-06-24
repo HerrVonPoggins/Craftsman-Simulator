@@ -34,7 +34,7 @@ func _process(delta):
 
 #when all bricks are even game ends and deletes the scene
 	if brick_1_done == true and brick_2_done == true and brick_3_done == true:
-		Global.wall_finished = true
+		Global.hammer_minigame_finished = true
 		Global.stay = false
 		player.visible = true
 		trowel.visible = true

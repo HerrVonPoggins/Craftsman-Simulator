@@ -1,0 +1,6 @@
+~ this_is_a_node_title
+set Global.dialogue_open = true
+Maurer: Herzlichen Glückwunsch, du hast jetzt alles über das Bauen einer Wand gelernt, du kannst die Wand nun fertig machen.
+Maurer: Falls du irgendwann dich dazu entscheiden solltest, am nächsten Punkt weiter zu machen und die Mauer fertigstellen dir zu langweilig wird kannst du mit 'k' zu deiner nächsten Aufgabe springen.
+set Global.dialogue_open = false
+=> END

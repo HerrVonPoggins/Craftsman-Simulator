@@ -1,0 +1,103 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_bxiuy"]
+
+[resource]
+script = ExtResource("1_bxiuy")
+using_states = PackedStringArray()
+titles = {
+"this_is_a_node_title": "2"
+}
+character_names = PackedStringArray("Maurer")
+first_title = "2"
+lines = {
+"1": {
+"id": "1",
+"next_id": "2",
+"text": "this_is_a_node_title",
+"type": &"title"
+},
+"2": {
+"id": "2",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
+"next_id": "3",
+"type": &"mutation"
+},
+"3": {
+"character": "Maurer",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Herzlichen Glückwunsch, du hast jetzt alles über das Bauen einer Wand gelernt, du kannst die Wand nun fertig machen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Herzlichen Glückwunsch, du hast jetzt alles über das Bauen einer Wand gelernt, du kannst die Wand nun fertig machen.",
+"type": &"dialogue"
+},
+"4": {
+"character": "Maurer",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Falls du irgendwann dich dazu entscheiden solltest, am nächsten Punkt weiter zu machen und die Mauer fertigstellen dir zu langweilig wird kannst du mit 'k' zu deiner nächsten Aufgabe springen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Falls du irgendwann dich dazu entscheiden solltest, am nächsten Punkt weiter zu machen und die Mauer fertigstellen dir zu langweilig wird kannst du mit 'k' zu deiner nächsten Aufgabe springen.",
+"type": &"dialogue"
+},
+"5": {
+"id": "5",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
+},
+"next_id": "6",
+"type": &"mutation"
+},
+"6": {
+"id": "6",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+}
+}
+raw_text = "~ this_is_a_node_title
+set Global.dialogue_open = true
+Maurer: Herzlichen Glückwunsch, du hast jetzt alles über das Bauen einer Wand gelernt, du kannst die Wand nun fertig machen.
+Maurer: Falls du irgendwann dich dazu entscheiden solltest, am nächsten Punkt weiter zu machen und die Mauer fertigstellen dir zu langweilig wird kannst du mit 'k' zu deiner nächsten Aufgabe springen.
+set Global.dialogue_open = false
+=> END"
+metadata/dialogue_manager_version = "2.38.0"
