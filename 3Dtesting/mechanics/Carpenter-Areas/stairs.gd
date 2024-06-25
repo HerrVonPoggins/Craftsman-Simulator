@@ -1,5 +1,6 @@
 extends Node3D
 
+@onready var animation_player = $AnimationPlayer
 var placed_step_counter = 0
 
 func _on_area_3d_body_entered(body):
@@ -25,4 +26,18 @@ func _on_area_3d_body_entered(body):
 			$Step7.visible = true
 		if placed_step_counter == 8:
 			$Step8.visible = true
-	
+
+
+func _on_dübel_input_event(camera, event, position, normal, shape_idx):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if event.pressed:
+				animation_player.play("Dübel1")
+
+
+
+func _on_dübel_2_input_event(camera, event, position, normal, shape_idx):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if event.pressed:
+				animation_player.play("Dübel2")

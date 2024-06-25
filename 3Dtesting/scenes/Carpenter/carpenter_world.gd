@@ -1,7 +1,5 @@
 extends Node3D
 
-var planed_mesh_wallguide = preload("res://assets/carpenter-assets/wallguide_mesh(planed).tres")
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Enter.play("fade_in")
@@ -14,8 +12,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
-
-func _on_wallguide_body_entered(body):
-	if body.is_in_group("planer"):
-		$Props/Wallguide/Wallguide.mesh = planed_mesh_wallguide

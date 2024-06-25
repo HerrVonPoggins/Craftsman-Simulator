@@ -1,3 +1,5 @@
+res://mechanics/Carpenter-Areas/DübelPlacement
+res://assets/carpenter-assets
 res://mechanics/door_placing
 res://mechanics/window_placing
 res://mechanics/light_bulb
@@ -17,6 +19,4 @@ C:/GameDev/PlugIns/FBX2glTF-windows-x86_64/FBX2glTF-windows-x86_64
 res://mechanics/SwitchMinigame
 res://mechanics/CurcuitMinigame
 res://mechanics/Player
-res://assets/carpenter-assets
 res://mechanics/Carpenter-Areas
-res://scenes/Carpenter
