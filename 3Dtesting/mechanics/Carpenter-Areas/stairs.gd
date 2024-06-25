@@ -26,6 +26,8 @@ func _on_area_3d_body_entered(body):
 	if body.is_in_group("wallguide"):
 		body.queue_free()
 		$Wallguide.visible = true
+		$CameraStand/Camera1.current = true
+		$"DübelContainer".visible = true
 	if body.is_in_group("step"):
 		body.queue_free()
 		placed_step_counter += 1
@@ -88,3 +90,26 @@ func _on_dübel_6_input_event(camera, event, position, normal, shape_idx):
 			if event.pressed:
 				animation_player.play("Dübel6")
 				dübel_amount_1 += 1
+
+var dübel_amount_2 = 6
+func _on_dübel_7_input_event(camera, event, position, normal, shape_idx):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if event.pressed:
+				animation_player.play("Dübel7")
+				dübel_amount_2 += 1
+
+func _on_dübel_8_input_event(camera, event, position, normal, shape_idx):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if event.pressed:
+				animation_player.play("Dübel8")
+				dübel_amount_2 += 1
+
+
+func _on_dübel_9_input_event(camera, event, position, normal, shape_idx):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if event.pressed:
+				animation_player.play("Dübel9")
+				dübel_amount_2 += 1
