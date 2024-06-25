@@ -1,6 +1,7 @@
 extends Node3D
 
 signal dübel_minigame_finished
+signal player_visibility_off
 
 @onready var animation_player = $AnimationPlayer
 var placed_step_counter = 0
@@ -33,31 +34,55 @@ func _on_area_3d_body_entered(body):
 		body.queue_free()
 		$Wallguide.visible = true
 		await get_tree().create_timer(1).timeout
+		emit_signal("player_visibility_off")
 		$"CameraStand/CameraDübel".current = true
 		$"DübelContainer".visible = true
 		Global.switch_minigame_on = true
 		Global.stay = true
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
-	if body.is_in_group("step"):
+	elif body.is_in_group("step1"):
 		body.queue_free()
-		placed_step_counter += 1
-		if placed_step_counter == 1:
-			$Step1.visible = true
-		elif placed_step_counter == 2:
-			$Step2.visible = true
-		elif placed_step_counter == 3:
-			$Step3.visible = true
-		elif placed_step_counter == 4:
-			$Step4.visible = true
-		elif placed_step_counter == 5:
-			$Step5.visible = true
-		elif placed_step_counter == 6:
-			$Step6.visible = true
-		elif placed_step_counter == 7:
-			$Step7.visible = true
-		elif placed_step_counter == 8:
-			$Step8.visible = true
+		$Step1.visible = true
+	elif body.is_in_group("step2"):
+		body.queue_free()
+		$Step2.visible = true
+	elif body.is_in_group("step3"):
+		body.queue_free()
+		$Step3.visible = true
+	elif body.is_in_group("step4"):
+		body.queue_free()
+		$Step4.visible = true
+	elif body.is_in_group("step5"):
+		body.queue_free()
+		$Step5.visible = true
+	elif body.is_in_group("step6"):
+		body.queue_free()
+		$Step6.visible = true
+	elif body.is_in_group("step7"):
+		body.queue_free()
+		$Step7.visible = true
+	elif body.is_in_group("step8"):
+		body.queue_free()
+		$Step8.visible = true
+	elif body.is_in_group("step9"):
+		body.queue_free()
+		$Step9.visible = true
+	elif body.is_in_group("step10"):
+		body.queue_free()
+		$Step10.visible = true
+	elif body.is_in_group("step11"):
+		body.queue_free()
+		$Step11.visible = true
+	elif body.is_in_group("step12"):
+		body.queue_free()
+		$Step12.visible = true
+	elif body.is_in_group("step13"):
+		body.queue_free()
+		$Step13.visible = true
+	elif body.is_in_group("step14"):
+		body.queue_free()
+		$Step14.visible = true
 
 var dübel_amount_1 = 0
 func _on_dübel_input_event(camera, event, position, normal, shape_idx):
