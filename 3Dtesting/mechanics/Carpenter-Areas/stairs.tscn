@@ -526,6 +526,7 @@ shape = SubResource("ConvexPolygonShape3D_nepyp")
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.03696, -1.58022, 2.67331)
 
 [node name="DübelContainer" type="Node3D" parent="."]
+visible = false
 
 [node name="Dübel" type="Area3D" parent="DübelContainer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.08176, -1.94799, 3.10495)

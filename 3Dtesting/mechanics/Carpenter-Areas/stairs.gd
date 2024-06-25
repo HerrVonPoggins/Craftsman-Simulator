@@ -43,19 +43,19 @@ func _on_area_3d_body_entered(body):
 		placed_step_counter += 1
 		if placed_step_counter == 1:
 			$Step1.visible = true
-		if placed_step_counter == 2:
+		elif placed_step_counter == 2:
 			$Step2.visible = true
-		if placed_step_counter == 3:
+		elif placed_step_counter == 3:
 			$Step3.visible = true
-		if placed_step_counter == 4:
+		elif placed_step_counter == 4:
 			$Step4.visible = true
-		if placed_step_counter == 5:
+		elif placed_step_counter == 5:
 			$Step5.visible = true
-		if placed_step_counter == 6:
+		elif placed_step_counter == 6:
 			$Step6.visible = true
-		if placed_step_counter == 7:
+		elif placed_step_counter == 7:
 			$Step7.visible = true
-		if placed_step_counter == 8:
+		elif placed_step_counter == 8:
 			$Step8.visible = true
 
 var dübel_amount_1 = 0
