@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://mechanics/Carpenter-Areas/stairs.gd" id="1_ue7se"]
 [ext_resource type="ArrayMesh" uid="uid://brn8jter8mbl7" path="res://assets/carpenter-assets/step_1.res" id="2_na05v"]
 [ext_resource type="ArrayMesh" uid="uid://bva3m3dn0otvi" path="res://assets/carpenter-assets/wall_guide_mesh.res" id="2_q0pua"]
-[ext_resource type="PackedScene" uid="uid://bjstf7xx8eyej" path="res://assets/carpenter-assets/stufe 2.fbx" id="4_njq7i"]
-[ext_resource type="PackedScene" uid="uid://bkcrbup2o0tjw" path="res://assets/carpenter-assets/stufe 3.fbx" id="5_5jvbo"]
+[ext_resource type="ArrayMesh" uid="uid://b3cyegdfbvrlr" path="res://assets/carpenter-assets/step_2.res" id="4_0rmfe"]
+[ext_resource type="ArrayMesh" uid="uid://bbg3gylat302y" path="res://assets/carpenter-assets/step_3.res" id="5_is5jc"]
 [ext_resource type="PackedScene" uid="uid://40ga5h4v2dow" path="res://assets/carpenter-assets/stufe 4.fbx" id="6_t4bgj"]
 [ext_resource type="PackedScene" uid="uid://b7ggopijk3dmu" path="res://assets/carpenter-assets/stufe 5 basic.fbx" id="7_w5s3t"]
 
@@ -387,13 +387,27 @@ transform = Transform3D(69.8894, 0, 0, 0, -8.33147e-06, 69.8894, 0, -69.8894, -8
 mesh = ExtResource("2_na05v")
 skeleton = NodePath("")
 
-[node name="Step2" parent="." instance=ExtResource("4_njq7i")]
+[node name="Step2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.298678, 0, 1.85043)
 visible = false
 
-[node name="Step3" parent="." instance=ExtResource("5_5jvbo")]
+[node name="RootNode" type="Node3D" parent="Step2"]
+
+[node name="stufe 2" type="MeshInstance3D" parent="Step2/RootNode"]
+transform = Transform3D(69.0657, -10.6986, -5.20717e-07, -5.20717e-07, -8.33147e-06, 69.8894, -10.6986, -69.0657, -8.33147e-06, 1.80122, -1.8445, -0.347838)
+mesh = ExtResource("4_0rmfe")
+skeleton = NodePath("")
+
+[node name="Step3" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.308305, 0, 1.87357)
 visible = false
+
+[node name="RootNode" type="Node3D" parent="Step3"]
+
+[node name="stufe 3" type="MeshInstance3D" parent="Step3/RootNode"]
+transform = Transform3D(69.0657, -10.6986, -5.20717e-07, -5.20717e-07, -8.33147e-06, 69.8894, -10.6986, -69.0657, -8.33147e-06, 1.80122, -1.8445, -0.347838)
+mesh = ExtResource("5_is5jc")
+skeleton = NodePath("")
 
 [node name="Step4" parent="." instance=ExtResource("6_t4bgj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.274554, 0, 1.87988)
