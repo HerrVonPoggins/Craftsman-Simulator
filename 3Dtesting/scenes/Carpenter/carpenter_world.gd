@@ -12,3 +12,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+
+func _on_stairs_dübel_minigame_finished():
+	$Player/CharacterBody3D/Neck/Camera3D.current = true
+	Global.stay = false
+	Global.switch_minigame_on = false
