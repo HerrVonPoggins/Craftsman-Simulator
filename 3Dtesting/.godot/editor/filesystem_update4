@@ -1,6 +1,6 @@
-res://scenes/Carpenter/carpenter_world.tscn
 res://scenes/Carpenter/carpenter_world.gd
+res://scenes/Carpenter/carpenter_world.tscn
+res://mechanics/Player/node_3d.tscn
 res://mechanics/Carpenter-Areas/stairs.tscn
 res://mechanics/Carpenter-Areas/stairs.gd
-res://mechanics/Player/node_3d.tscn
 res://ui/screens/titlescreen.tscn
