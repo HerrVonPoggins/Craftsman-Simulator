@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bncehlcg0sopv"]
+[gd_scene load_steps=26 format=3 uid="uid://bncehlcg0sopv"]
 
 [ext_resource type="Script" path="res://mechanics/Carpenter-Areas/stairs.gd" id="1_ue7se"]
 
@@ -102,10 +102,72 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = PackedFloat32Array(0, 1, -0.0354633, 0, 0, 1, 1, 0.684688, 0, 0)
 
+[sub_resource type="Animation" id="Animation_j5156"]
+resource_name = "Dübel3"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dübel3/MeshInstance3D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 1, 0.685264, 0, 0)
+
+[sub_resource type="Animation" id="Animation_aytkn"]
+resource_name = "Dübel4"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dübel4/MeshInstance3D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.0354633, 0, 0, 1, 1, 0.681364, 0, 0)
+
+[sub_resource type="Animation" id="Animation_7nhck"]
+resource_name = "Dübel5"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dübel5/MeshInstance3D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.0354633, 0, 0, 1, 1, 0.682965, 0, 0)
+
+[sub_resource type="Animation" id="Animation_1al75"]
+resource_name = "Dübel6"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dübel6/MeshInstance3D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.0354633, 0, 0, 1, 1, 0.68784, 0, 0)
+
+[sub_resource type="Animation" id="Animation_kp6rx"]
+resource_name = "Camera1"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CameraStand/Camera1")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 3.03696, -1.58022, 2.67331, 1, 1, 1.12066, -0.605994, 2.67331)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CameraStand/Camera1")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, -0.707107, 0, 0.707107, 1, 1, 0, 0, 0, 1)
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4nxek"]
 _data = {
+"Camera1": SubResource("Animation_kp6rx"),
 "Dübel1": SubResource("Animation_l2yda"),
-"Dübel2": SubResource("Animation_7p3we")
+"Dübel2": SubResource("Animation_7p3we"),
+"Dübel3": SubResource("Animation_j5156"),
+"Dübel4": SubResource("Animation_aytkn"),
+"Dübel5": SubResource("Animation_7nhck"),
+"Dübel6": SubResource("Animation_1al75")
 }
 
 [node name="Stairs" type="Node3D"]
@@ -204,8 +266,10 @@ mesh = SubResource("BoxMesh_dv3u8")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Step8/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_nepyp")
 
-[node name="Camera1" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.47373, -1.58022, 2.67331)
+[node name="CameraStand" type="Node3D" parent="."]
+
+[node name="Camera1" type="Camera3D" parent="CameraStand"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.03696, -1.58022, 2.67331)
 
 [node name="Dübel" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.08176, -1.94799, 3.10495)
@@ -222,7 +286,7 @@ shape = SubResource("ConvexPolygonShape3D_vn46a")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.06809, -2.59534, 3.45451)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Dübel2"]
-transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0.684688, 0, 0)
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -0.0354633, 0, 0)
 mesh = SubResource("CapsuleMesh_j6tb8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Dübel2"]
@@ -233,7 +297,7 @@ shape = SubResource("ConvexPolygonShape3D_vn46a")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.06809, -2.59534, 5.0448)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Dübel3"]
-transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -0.0354633, 0, 0)
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
 mesh = SubResource("CapsuleMesh_j6tb8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Dübel3"]
@@ -281,3 +345,7 @@ libraries = {
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="input_event" from="Dübel" to="." method="_on_dübel_input_event"]
 [connection signal="input_event" from="Dübel2" to="." method="_on_dübel_2_input_event"]
+[connection signal="input_event" from="Dübel3" to="." method="_on_dübel_3_input_event"]
+[connection signal="input_event" from="Dübel4" to="." method="_on_dübel_4_input_event"]
+[connection signal="input_event" from="Dübel5" to="." method="_on_dübel_5_input_event"]
+[connection signal="input_event" from="Dübel6" to="." method="_on_dübel_6_input_event"]
