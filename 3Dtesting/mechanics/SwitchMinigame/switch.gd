@@ -20,14 +20,10 @@ func _process(delta):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		Global.crosshair_off = true
 		Global.stay = true
-		player.visible = false
+		Global.player_visibility = false
 
-	elif Global.switch_minigame_on == false and Global.curcuit_minigame_on == false and Global.power_box == false:
-		$Camera3D.current = false
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		Global.crosshair_off = false
-		Global.stay = false
-		player.visible = true
+
+
 
 	if Input.is_action_just_pressed("leftclick"):
 		var mousePos = get_viewport().get_mouse_position()

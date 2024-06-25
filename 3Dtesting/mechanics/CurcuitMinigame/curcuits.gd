@@ -18,17 +18,14 @@ func _process(delta):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		Global.crosshair_off = true
 		Global.stay = true
-		player.visible = false
-	elif Global.curcuit_minigame_on == false and Global.switch_minigame_on == false and Global.power_box == false:
-		$Camera3D.current = false
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		Global.crosshair_off = false
-		Global.stay = false
-		player.visible = true
+		Global.player_visibility = false
 
-	if Input.is_action_just_pressed("leftclick"):
+
+
+
 		
-
+func _unhandled_input(event):
+	if event is InputEventMouseMotion:
 		var mousePos = get_viewport().get_mouse_position()
 		var raylength = 100
 		var from = camera.project_ray_origin(mousePos)
@@ -39,8 +36,7 @@ func _process(delta):
 		rayQuery.to = to
 		rayQuery.collide_with_areas = true
 		var result = space.intersect_ray(rayQuery)
-	
-		
+
 		if result.size()<1:
 			return
 

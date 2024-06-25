@@ -24,6 +24,11 @@ var interactable_is_open = false
 #The Raycast shoots a laser for a fixed range, on collision with something we can get the object  and check if it is in group "grab"
 #a object in group "grab" will then fixed on the hold point of the character until we release it.
 func _process(delta):
+	if obj != null:
+		if Global.player_visibility == false:
+			obj.visible = false
+		elif Global.player_visibility == true:
+			obj.visible = true
 #plays the brickplaceing animation when the var becomes true 
 	if Global.brick_is_being_placed == true:
 		_place_brick()
