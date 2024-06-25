@@ -68,7 +68,8 @@ func _process(delta):
 					await $"../Root Scene3/AnimationPlayer".animation_finished
 					
 					
-					
+					if collider.is_in_group("can_extend"):
+						Global.can_extend = true
 					if collider.is_in_group("bucket"):
 						Global.holding_bucket = true
 					if collider.is_in_group("brick"):
@@ -133,6 +134,8 @@ func _process(delta):
 					Global.switch_minigame_on = true
 				if collider.is_in_group("plaster_mixer"):
 					Global.plaster_mixing = true
+				if collider.is_in_group("power_box"):
+					Global.power_box = true
 				if collider.is_in_group("open"):
 					print(collider.open)
 					if collider.open == false:
@@ -158,6 +161,7 @@ func _process(delta):
 
 #rightclick to release object
 	if Input.is_action_pressed("rightclick"):
+		Global.can_extend = false
 		$"../Root Scene3/AnimationPlayer".play("Idle_Walking")
 		Global.is_holding = false
 		obj = null
@@ -180,6 +184,7 @@ func _on_player_concrete_bucket_pos_reached():
 func _on_player_delete_sand_container():
 	if obj != null:
 		obj.queue_free()
+		Global.can_extend = false
 		Global.is_holding = false
 
 #func to play animation

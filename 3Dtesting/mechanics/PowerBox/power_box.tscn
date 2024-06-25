@@ -1,9 +1,25 @@
-[gd_scene load_steps=7 format=3 uid="uid://ck2ddnhldnuci"]
+[gd_scene load_steps=24 format=3 uid="uid://ck2ddnhldnuci"]
 
 [ext_resource type="Script" path="res://mechanics/PowerBox/power_box.gd" id="1_h030n"]
+[ext_resource type="Script" path="res://mechanics/PowerBox/RayCast3D.gd" id="2_m31l7"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3802h"]
+size = Vector3(0.3, 1.2, 0.05)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qc2k0"]
+points = PackedVector3Array(0.164286, 0.609524, 0.0416667, -0.159524, -0.609524, -0.0345238, -0.159524, -0.609524, 0.0416667, -0.159524, 0.609524, -0.0345238, 0.164286, -0.609524, -0.0345238, 0.164286, -0.609524, 0.0416667, -0.159524, 0.609524, 0.0416667, 0.164286, 0.609524, -0.0345238)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4luy7"]
+size = Vector3(0.3, 0.05, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_r3lbj"]
+points = PackedVector3Array(-0.157936, -0.0329241, -0.507937, 0.159524, 0.0305431, 0.507937, 0.159524, -0.0329241, 0.507937, 0.159524, 0.0305431, -0.507937, -0.157936, 0.0305431, 0.507937, -0.157936, -0.0329241, 0.507937, 0.159524, -0.0329241, -0.507937, -0.157936, 0.0305431, -0.507937)
 
 [sub_resource type="BoxMesh" id="BoxMesh_8jjky"]
 size = Vector3(0.1, 1.2, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6i7k8"]
+points = PackedVector3Array(-0.0595238, -0.609524, -0.509524, 0.05, 0.55873, 0.47619, -0.0595238, 0.609524, 0.519048, -0.0595238, 0.609524, -0.509524, -0.0595238, -0.609524, 0.519048, 0.05, -0.55873, -0.466667, 0.05, 0.55873, -0.466667, 0.05, -0.55873, 0.47619)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_i3ntx"]
 top_radius = 0.1
@@ -19,11 +35,81 @@ size = Vector3(0.3, 0.1, 1)
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rq3ms"]
 points = PackedVector3Array(-0.157936, -0.0579256, -0.507937, 0.15, 0.049831, 0.47746, 0.159524, -0.0579256, 0.507937, -0.157936, -0.0579256, 0.507937, 0.159524, -0.0579256, -0.507937, -0.148895, 0.05, -0.479005, -0.148895, 0.05, 0.479005, 0.15, 0.049831, -0.47746)
 
+[sub_resource type="SphereMesh" id="SphereMesh_yewgk"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_nuupo"]
+top_radius = 0.03
+bottom_radius = 0.03
+height = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tdb6l"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_kx73c"]
+points = PackedVector3Array(-0.00662007, -0.0482112, -0.02922, 0.0054179, 0.0481175, 0.0294803, 0.0113438, 0.047736, 0.0277558, -0.00662007, 0.0482112, -0.02922, -0.0277152, -0.0482225, 0.0114573, 0.0294805, -0.04812, 0.00541715, 0.0247126, 0.0476231, -0.0169535, -0.0292206, 0.0482196, -0.00661772, 0.0054179, -0.0481175, 0.0294803, -0.0169509, 0.0476251, 0.0247145, 0.0173085, -0.0477281, -0.0244502, -0.0246036, -0.0480335, -0.017101, 0.0294805, 0.04812, 0.00541715, -0.0110637, -0.047909, 0.0278558, 0.0245578, -0.0473228, 0.017163, 0.0114562, 0.0482157, -0.0277157, 0.0278566, -0.0479125, -0.0110615, -0.0277152, 0.0482225, 0.0114573, -0.0170969, 0.0480315, -0.0246066, 0.0245578, 0.0473228, 0.017163, -0.0292206, -0.0482196, -0.00661772, 0.00691772, -0.0480891, -0.0291456, 0.0295318, 0.0482043, -0.0051089, -0.00511222, 0.0482011, 0.0295313, 0.0171625, -0.0473218, 0.0245581, -0.0244488, -0.0477331, 0.0173105, -0.0278143, 0.0483938, -0.01118, -0.0170969, -0.0480315, -0.0246066, -0.0291455, -0.0480964, 0.00691787, 0.0295318, -0.0482043, -0.0051089, -0.0246036, 0.0480335, -0.017101, 0.0247126, -0.0476231, -0.0169535)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_k78bx"]
+top_radius = 0.03
+bottom_radius = 0.03
+height = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dpe70"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ysech"]
+points = PackedVector3Array(-0.00662007, -0.0482112, -0.02922, 0.0054179, 0.0481175, 0.0294803, 0.0113438, 0.047736, 0.0277558, -0.00662007, 0.0482112, -0.02922, -0.0277152, -0.0482225, 0.0114573, 0.0294805, -0.04812, 0.00541715, 0.0247126, 0.0476231, -0.0169535, -0.0292206, 0.0482196, -0.00661772, 0.0054179, -0.0481175, 0.0294803, -0.0169509, 0.0476251, 0.0247145, 0.0173085, -0.0477281, -0.0244502, -0.0246036, -0.0480335, -0.017101, 0.0294805, 0.04812, 0.00541715, -0.0110637, -0.047909, 0.0278558, 0.0245578, -0.0473228, 0.017163, 0.0114562, 0.0482157, -0.0277157, 0.0278566, -0.0479125, -0.0110615, -0.0277152, 0.0482225, 0.0114573, -0.0170969, 0.0480315, -0.0246066, 0.0245578, 0.0473228, 0.017163, -0.0292206, -0.0482196, -0.00661772, 0.00691772, -0.0480891, -0.0291456, 0.0295318, 0.0482043, -0.0051089, -0.00511222, 0.0482011, 0.0295313, 0.0171625, -0.0473218, 0.0245581, -0.0244488, -0.0477331, 0.0173105, -0.0278143, 0.0483938, -0.01118, -0.0170969, -0.0480315, -0.0246066, -0.0291455, -0.0480964, 0.00691787, 0.0295318, -0.0482043, -0.0051089, -0.0246036, 0.0480335, -0.017101, 0.0247126, -0.0476231, -0.0169535)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ojky"]
+albedo_color = Color(0, 0, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7c04e"]
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kqe30"]
+albedo_color = Color(1, 0.435294, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0cajs"]
+albedo_color = Color(1, 0, 1, 1)
+
 [node name="PowerBox" type="Node3D"]
 script = ExtResource("1_h030n")
 
-[node name="Back" type="MeshInstance3D" parent="."]
+[node name="StaticBody3D2" type="StaticBody3D" parent="." groups=["power_box"]]
+
+[node name="Wall" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.189642, -0.00848961, 0.506649)
+mesh = SubResource("BoxMesh_3802h")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.189642, -0.00848961, 0.506649)
+shape = SubResource("ConvexPolygonShape3D_qc2k0")
+
+[node name="Wall2" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.189642, -0.00848961, -0.525118)
+mesh = SubResource("BoxMesh_3802h")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.189642, -0.00848961, -0.525118)
+shape = SubResource("ConvexPolygonShape3D_qc2k0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.186772, 0.618251, 0)
+mesh = SubResource("BoxMesh_4luy7")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.186772, 0.618251, 0)
+shape = SubResource("ConvexPolygonShape3D_r3lbj")
+
+[node name="Back" type="MeshInstance3D" parent="StaticBody3D2"]
 mesh = SubResource("BoxMesh_8jjky")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D2"]
+shape = SubResource("ConvexPolygonShape3D_6i7k8")
 
 [node name="Outlet2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.415032, 0.451547)
@@ -86,7 +172,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0768505, 0.0769021, -0.0046
 shape = SubResource("SphereShape3D_s2plp")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.203041, -0.653841, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.290424, -0.653841, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0992933, 0, 0)
@@ -95,6 +181,89 @@ mesh = SubResource("BoxMesh_1lh3v")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0992933, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_rq3ms")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.53588, 0, 0.00327623)
+
+[node name="Node3D" type="Node3D" parent="Camera3D"]
+transform = Transform3D(0.999509, 0, -0.031341, -0.0215566, 0.725891, -0.687472, 0.0227501, 0.68781, 0.725534, 0, 0, -0.00967389)
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D/Node3D"]
+transform = Transform3D(1, 0, -8.00355e-10, -9.15001e-12, -0.00635287, -0.999979, 3.72529e-09, 0.999979, -0.00635294, 0, 1.19209e-07, 0.00393701)
+target_position = Vector3(0, -2, 0)
+script = ExtResource("2_m31l7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D/Node3D/RayCast3D"]
+transform = Transform3D(1, 0, -2.91038e-11, 0, 1, 9.31323e-10, 0, 0, 1, -0.0248483, -0.792433, 0.00503435)
+visible = false
+mesh = SubResource("SphereMesh_yewgk")
+
+[node name="Wire" type="RigidBody3D" parent="." groups=["can_extend", "grab", "wire", "wire1"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, -0.532, 0.231)
+gravity_scale = 0.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wire"]
+mesh = SubResource("CylinderMesh_nuupo")
+surface_material_override/0 = SubResource("StandardMaterial3D_tdb6l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wire"]
+shape = SubResource("ConvexPolygonShape3D_kx73c")
+
+[node name="Wire2" type="RigidBody3D" parent="." groups=["can_extend", "grab", "wire", "wire2"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, -0.532, 0.147136)
+gravity_scale = 0.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wire2"]
+mesh = SubResource("CylinderMesh_k78bx")
+surface_material_override/0 = SubResource("StandardMaterial3D_dpe70")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wire2"]
+shape = SubResource("ConvexPolygonShape3D_ysech")
+
+[node name="Wire3" type="RigidBody3D" parent="." groups=["can_extend", "grab", "wire", "wire3"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, -0.532, 0.0651494)
+gravity_scale = 0.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wire3"]
+mesh = SubResource("CylinderMesh_k78bx")
+surface_material_override/0 = SubResource("StandardMaterial3D_8ojky")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wire3"]
+shape = SubResource("ConvexPolygonShape3D_ysech")
+
+[node name="Wire4" type="RigidBody3D" parent="." groups=["can_extend", "grab", "wire", "wire4"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, -0.532, -0.0125911)
+gravity_scale = 0.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wire4"]
+mesh = SubResource("CylinderMesh_k78bx")
+surface_material_override/0 = SubResource("StandardMaterial3D_7c04e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wire4"]
+shape = SubResource("ConvexPolygonShape3D_ysech")
+
+[node name="Wire5" type="RigidBody3D" parent="." groups=["can_extend", "grab", "wire", "wire5"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, -0.532, -0.0942406)
+gravity_scale = 0.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wire5"]
+mesh = SubResource("CylinderMesh_k78bx")
+surface_material_override/0 = SubResource("StandardMaterial3D_kqe30")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wire5"]
+shape = SubResource("ConvexPolygonShape3D_ysech")
+
+[node name="Wire6" type="RigidBody3D" parent="." groups=["can_extend", "grab", "wire", "wire6"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, -0.532, -0.186698)
+gravity_scale = 0.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wire6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0185814)
+mesh = SubResource("CylinderMesh_k78bx")
+surface_material_override/0 = SubResource("StandardMaterial3D_0cajs")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wire6"]
+shape = SubResource("ConvexPolygonShape3D_ysech")
 
 [connection signal="body_entered" from="Outlet2/OutletRange2" to="." method="_on_outlet_range_2_body_entered"]
 [connection signal="body_exited" from="Outlet2/OutletRange2" to="." method="_on_outlet_range_2_body_exited"]

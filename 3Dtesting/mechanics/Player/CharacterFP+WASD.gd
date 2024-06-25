@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 var speed
-const WALK_SPEED = 10
+const WALK_SPEED = 7
 const SPRINT_SPEED = 20
 const JUMP_VELOCITY = 25
 var is_up = false
@@ -37,7 +37,7 @@ var hold_object: Object
 	#capture mouse on leftclick and move camera when mouse is moved
 func _unhandled_input(event):
 	
-	if event is InputEventMouseButton and Global.switch_minigame_on == false and Global.curcuit_minigame_on == false:
+	if event is InputEventMouseButton and Global.switch_minigame_on == false and Global.curcuit_minigame_on == false and Global.power_box == false:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		
 	elif event.is_action_pressed("ui_cancel"):
@@ -63,8 +63,9 @@ func _physics_process(delta):
 
 	#arm moves forward on leftclick and if mouse is released the arm goes back
 	if Input.is_action_pressed("interagieren") and is_up == false and Global.dialogue_open == false and Global.stay == false:
-		if Global.holding_bucket == false and Global.holding_bag == true and Global.holding_bucket == false:
+		if Global.holding_bucket == false and Global.holding_bag == false and Global.holding_bucket == false and Global.can_extend == true:
 			$"Neck/Camera3D/Root Scene3/AnimationPlayer".play("metarig|sack in ruehrding")
+			is_up = true
 		#elif Global.holding_bag == true:
 			#$"../Root Scene/AnimationPlayer".play("metarig|sack in ruehrding")
 			#is_up = true

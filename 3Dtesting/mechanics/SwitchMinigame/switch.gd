@@ -22,7 +22,7 @@ func _process(delta):
 		Global.stay = true
 		player.visible = false
 
-	elif Global.switch_minigame_on == false and Global.curcuit_minigame_on == false:
+	elif Global.switch_minigame_on == false and Global.curcuit_minigame_on == false and Global.power_box == false:
 		$Camera3D.current = false
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		Global.crosshair_off = false

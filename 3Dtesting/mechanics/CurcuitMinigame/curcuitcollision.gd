@@ -2,6 +2,7 @@ extends RayCast3D
 
 var obj = null
 var done = false
+var moveable = null
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -59,4 +60,20 @@ func _process(delta):
 					collider.rotation.x = deg_to_rad(-40)
 				else:
 					collider.rotation.x = deg_to_rad(20)
+			if collider.is_in_group("wire"):
+				moveable = collider
 
+func _unhandled_input(event):
+	if moveable != null:
+		if event is InputEventMouseButton:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+			pass
+
+		elif event.is_action_pressed("ui_cancel"):
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			pass
+		if event is InputEventMouseMotion and $Camera3D.current == true:
+			moveable.position.y += (-event.relative.y * 0.01)
+			moveable.position.x += (+event.relative.x * 0.01)
+	else:
+		pass

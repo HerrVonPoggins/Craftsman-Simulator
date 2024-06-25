@@ -1,9 +1,10 @@
 Node3D
-AnimationPlayer
+Node
 MeshInstance3D
+StaticBody3D
+AnimationPlayer
 Area3D
 Camera3D
-StaticBody3D
 CollisionShape3D
 RigidBody3D
 Timer
@@ -11,4 +12,3 @@ Button
 Label
 Panel
 CharacterBody3D
-BoneAttachment3D

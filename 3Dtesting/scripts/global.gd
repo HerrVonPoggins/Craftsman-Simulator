@@ -56,18 +56,19 @@ var holding_bricks = false
 var holding_bucket = false
 var holding_bag = false
 var is_holding = false
+var can_extend = false
 
 var plaster_on = false
 var curcuit_minigame_on = false
 var switch_minigame_on = false
 var plaster_mixing = false
-
+var power_box = false
 
 var sound_count = 6
 var musik_count = 6
 var mouse_sense = 6
 
-
+var player_visibility = true
 
 
 
