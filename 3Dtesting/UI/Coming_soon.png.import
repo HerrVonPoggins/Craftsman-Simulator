@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqiduk4bv4lr5"
-path="res://.godot/imported/Coming_soon.png-ff627ac5101b7cd6e72329b1e5c55101.ctex"
+path="res://.godot/imported/Coming_soon.png-320fafcbeb9e7d90d21068b957f5bc0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/Coming_soon.png"
-dest_files=["res://.godot/imported/Coming_soon.png-ff627ac5101b7cd6e72329b1e5c55101.ctex"]
+source_file="res://UI/Coming_soon.png"
+dest_files=["res://.godot/imported/Coming_soon.png-320fafcbeb9e7d90d21068b957f5bc0c.ctex"]
 
 [params]
 

@@ -63,9 +63,15 @@ func _physics_process(delta):
 
 	#arm moves forward on leftclick and if mouse is released the arm goes back
 	if Input.is_action_pressed("interagieren") and is_up == false and Global.dialogue_open == false and Global.stay == false:
-		$"../Animation".play("arm")
-		$"Neck/Camera3D/Root Scene3/AnimationPlayer".play("metarig|sack in ruehrding")
-		is_up = true
+		if Global.holding_bucket == false and Global.holding_bag == true and Global.holding_bucket == false:
+			$"Neck/Camera3D/Root Scene3/AnimationPlayer".play("metarig|sack in ruehrding")
+		#elif Global.holding_bag == true:
+			#$"../Root Scene/AnimationPlayer".play("metarig|sack in ruehrding")
+			#is_up = true
+		#elif Global.holding_bricks == true:
+			#$"../Root Scene/AnimationPlayer".play("metarig|get bucket out")
+		
+		
 	if not Input.is_action_pressed("interagieren") and is_up == true:
 		is_up = false
 		#await get_tree().create_timer(2).timeout

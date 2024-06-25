@@ -7,7 +7,7 @@ signal delete_sand_container
 @onready var trowel = preload("res://mechanics/Tools/trowel.tscn")
 @onready var hold = $"CharacterBody3D/Neck/Camera3D/Root Scene3/RootNode/metarig/Skeleton3D/BoneAttachment3D/Hold"
 
-
+var played = false
 
 
 
@@ -16,6 +16,9 @@ signal delete_sand_container
 #makes the bucket static when it is put in the right spot
 
 func _process(delta):
+	if Global.is_holding == true and played == false:
+		played = true
+		$"CharacterBody3D/Neck/Camera3D/Root Scene3/AnimationPlayer".play("metarig|get sand sack out")
 	if Global.holding_bucket == true:
 		Global.holding_bucket = false
 		$"CharacterBody3D/Neck/Camera3D/Root Scene3/AnimationPlayer".play("metarig|get bucket out")
@@ -24,7 +27,13 @@ func _process(delta):
 		Global.holding_bag = false
 		$"CharacterBody3D/Neck/Camera3D/Root Scene3/AnimationPlayer".play("metarig|get sand sack out")
 	
+	if Global.holding_bricks == true:
+		Global.holding_bricks = false
+		$"CharacterBody3D/Neck/Camera3D/Root Scene3/AnimationPlayer".play("metarig|get bucket out")
+	
+	
 	if Global.is_holding == false:
+		played = false
 		$"CharacterBody3D/Neck/Camera3D/Root Scene3/AnimationPlayer".play("Idle_Walking")
 		
 

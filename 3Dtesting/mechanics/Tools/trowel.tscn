@@ -176,23 +176,23 @@ size = Vector3(1.06104, 1.82446, 1)
 script = ExtResource("1_eax8e")
 
 [node name="mörtelkelle" type="MeshInstance3D" parent="."]
-transform = Transform3D(5.89897, -36.0979, 56.3918, 0.0748594, -30.2888, -68.0145, 53.6949, 4.00797, -6.10044, 0.0308594, -0.191965, -0.390636)
+transform = Transform3D(5.89897, -36.0979, 56.3918, 0.0748594, -30.2888, -68.0145, 53.6949, 4.00797, -6.10044, -0.147597, 0.250235, 0.0200106)
 mesh = SubResource("ArrayMesh_dkvsd")
 skeleton = NodePath("")
 
 [node name="Kelle Groß" type="MeshInstance3D" parent="."]
-transform = Transform3D(5.88717, -38.3487, 34.3765, 0.0603511, -32.1456, -41.5011, 53.6962, 4.24062, -3.72234, 0.0311138, -0.192, -0.39083)
+transform = Transform3D(5.88717, -38.3487, 34.3765, 0.0603511, -32.1456, -41.5011, 53.6962, 4.24062, -3.72234, -0.147343, 0.2502, 0.0198165)
 visible = false
 mesh = SubResource("ArrayMesh_4r105")
 skeleton = NodePath("")
 
 [node name="Kelle Gips" type="MeshInstance3D" parent="."]
-transform = Transform3D(5.88717, -38.3487, 34.3765, 0.0603511, -32.1456, -41.5011, 53.6962, 4.24062, -3.72234, 0.0311138, -0.192, -0.39083)
+transform = Transform3D(5.88717, -38.3487, 34.3765, 0.0603511, -32.1456, -41.5011, 53.6962, 4.24062, -3.72234, -0.147343, 0.2502, 0.0198165)
 visible = false
 mesh = SubResource("ArrayMesh_4r105")
 skeleton = NodePath("")
 surface_material_override/2 = SubResource("StandardMaterial3D_m18w4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-0.108017, 0.786965, 0.607468, 1.7547e-08, 0.611044, -0.791597, -0.994149, -0.0855057, -0.0660029, 0.0985675, -0.238499, -0.410181)
+transform = Transform3D(-0.108017, 0.786965, 0.607468, 1.7547e-08, 0.611044, -0.791597, -0.994149, -0.0855057, -0.0660029, -0.079889, 0.203701, 0.000465572)
 shape = SubResource("BoxShape3D_s06fw")

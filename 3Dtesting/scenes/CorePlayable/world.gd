@@ -241,7 +241,7 @@ func _on_area_3d_4_body_entered(body):
 		$Node3D8.visible = true
 
 
-#starts spriti level and hammer minigame
+#starts spirit level and hammer minigame
 func _on_area_3d_5_body_entered(body):
 	if body.is_in_group("spirit_level"):
 		body.queue_free()

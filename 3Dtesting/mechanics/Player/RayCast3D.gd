@@ -180,6 +180,7 @@ func _on_player_concrete_bucket_pos_reached():
 func _on_player_delete_sand_container():
 	if obj != null:
 		obj.queue_free()
+		Global.is_holding = false
 
 #func to play animation
 func _place_brick():
