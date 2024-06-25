@@ -20,7 +20,7 @@ func _process(delta):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		Global.crosshair_off = true
 		Global.stay = true
-		player.visible = false
+		Global.player_visibility = false
 
 
 

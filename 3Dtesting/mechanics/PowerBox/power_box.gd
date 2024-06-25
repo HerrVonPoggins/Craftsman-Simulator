@@ -20,11 +20,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#if Input.is_action_just_pressed("kamera"):
-		#print(Global.stay)
-		#print(Global.crosshair_off)
-		#print(player.visible)
-		#print(Global.power_box)
+
 	
 	if Global.power_box == true and played == false:
 		played = true
@@ -32,8 +28,9 @@ func _process(delta):
 		$Camera3D.current = true
 		Global.stay = true
 		Global.crosshair_off = true
-		player.visible = false
+		Global.player_visibility = false
 	
+#PowerBox end condition
 	if $Wire.global_position == $Outlet2/OutletRange2.global_position and $Wire2.global_position == $Outlet3/OutletRange3.global_position and $Wire3.global_position == $Outlet4/OutletRange4.global_position:
 		if  $Wire4.global_position == $Outlet5/OutletRange5.global_position and $Wire5.global_position == $Outlet6/OutletRange6.global_position and $Wire6.global_position == $Outlet7/OutletRange7.global_position:
 			if played2 == false:
@@ -41,7 +38,7 @@ func _process(delta):
 				$Camera3D.current = false
 				Global.crosshair_off = false
 				Global.stay = false
-				player.visible = true
+				Global.player_visibility = true
 				Global.power_box = false
 
 	

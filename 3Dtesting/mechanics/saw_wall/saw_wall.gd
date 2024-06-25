@@ -18,7 +18,7 @@ func _process(delta):
 		$Camera3D.current = false
 		$Saw1/CollisionShape3D.call_deferred("set_disabled", true)
 		played = true
-		player.visible = true
+		Global.player_visibility = true
 		Global.stay = false
 		Global.crosshair_off = false
 		Global.saw_wall = false
@@ -27,7 +27,7 @@ func _process(delta):
 		$Camera3D.current = false
 		$Saw2/CollisionShape3D.call_deferred("set_disabled", true)
 		played2 = true
-		player.visible = true
+		Global.player_visibility = true
 		Global.stay = false
 		Global.crosshair_off = false
 		Global.saw_wall = false
@@ -52,7 +52,7 @@ func _on_toolinsert_1_body_entered(body):
 		Global.saw_wall = true
 		$Saw1.visible = true
 		$Camera3D.current = true
-		player.visible = false
+		Global.player_visibility = false
 		Global.stay = true
 		Global.crosshair_off = true
 		
@@ -64,7 +64,7 @@ func _on_toolinsert_2_body_entered(body):
 		Global.saw_wall = true
 		$Saw2.visible = true
 		$Camera3D.current = true
-		player.visible = false
+		Global.player_visibility = false
 		Global.stay = true
 		Global.crosshair_off = true
 		

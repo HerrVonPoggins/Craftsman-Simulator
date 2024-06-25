@@ -24,7 +24,5 @@ func _on_control_closed():
 	get_tree().paused = false
 
 
-func _on_stand_still_body_entered(body):
-	if body.is_in_group("player"):
-		Global.stay = true
+
 
