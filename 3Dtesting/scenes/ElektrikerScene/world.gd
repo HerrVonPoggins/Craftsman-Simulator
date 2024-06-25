@@ -12,8 +12,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed("kamera"):
-		pass
+	pass
+	#if Input.is_action_just_pressed("kamera"):
+		#Global.player_visibility = false
+		#$Player.visible = false
 
 
 func _on_control_opened():

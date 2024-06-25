@@ -22,8 +22,8 @@ func _process(delta):
 		$Bucket_water.queue_free()
 
 
-	if Input.is_action_just_pressed("kamera"):
-		print($Timer.time_left)
+	#if Input.is_action_just_pressed("kamera"):
+		#print($Timer.time_left)
 
 	if Global.plaster_mixing == true and played2 == false and $StaticBody3D/Bucket_water2.visible == true and played3 == true:
 		$Camera3D.current = true

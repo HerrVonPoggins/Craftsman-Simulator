@@ -16,6 +16,10 @@ var played = false
 #makes the bucket static when it is put in the right spot
 
 func _process(delta):
+	if Global.player_visibility == false:
+		$".".visible = false
+	elif Global.player_visibility == true:
+		$".".visible = true
 	if Global.is_holding == true and played == false:
 		played = true
 		$"CharacterBody3D/Neck/Camera3D/Root Scene3/AnimationPlayer".play("metarig|get sand sack out")
