@@ -8,6 +8,7 @@ var played3 = false
 var played4 = false
 var played5 = false
 var played6 = false
+var played7 = false
 var diealogue_played = 0
 var done = false
 @onready var wedge = $Props/Wedge/Mesh
@@ -31,9 +32,10 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
-		Global.concrete_filled_roof = true
-		print("res://UI/screens/scene_change.tscn")
-		
+		#Global.door_top = 4
+		#Global.rods = 3
+		#print(Global.rods)
+		pass
 		
 	#when the filling minigame is finished the solid roof becomes visible
 	if Global.concrete_filled_roof == true and played6 == false:
@@ -57,10 +59,15 @@ func _process(delta):
 	else:
 		$Wall.visible = true
 
-
+	if Global.rods == 3 and played7 == false:
+		$CanvasLayer/Panel.visible = true
+		Global.stay = true
+		Global.crosshair_off = true
+		Global.dialogue_open = true
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 	#when the rods to support the roof are all placed and extended the roof crane can be activated
-	if Global.rods == 5 and played4 == false:
+	if Global.rods == 19 and played4 == false:
 		Global.can_make_roof = true
 		played4 = true
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_6.dialogue"))
@@ -184,8 +191,24 @@ func _process(delta):
 		$Rod3.visible = true
 		$Rod4.visible = true
 		$Rod5.visible = true
-			
-
+		$Rod6.visible = true
+		$Rod7.visible = true
+		$Rod8.visible = true
+		$Rod9.visible = true
+		$Rod10.visible = true
+		$Rod11.visible = true
+		$Rod12.visible = true
+		$Rod13.visible = true
+		$Rod14.visible = true
+		$Rod15.visible = true
+		$Rod16.visible = true
+		$Rod17.visible = true
+		$Rod18.visible = true
+		$Rod19.visible = true
+		
+		
+		
+		
 #functions for the info hub to pause the scene
 func _on_control_opened():
 	get_tree().paused = true
@@ -291,3 +314,24 @@ func _on_ray_cast_3d_wedge_highlight():
 	if wedges_highlighted == false:
 		wedge.mesh.surface_get_material(0).next_pass = HIGHLIGHT
 		wedges_highlighted = true
+
+
+func _on_button_pressed():
+	if played7 == false:
+		played7 = true
+		$CanvasLayer/Panel.visible = false
+		Global.stay = false
+		Global.crosshair_off = false
+		Global.dialogue_open = false
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		Global.rods = 19
+
+
+func _on_button_2_pressed():
+	if played7 == false:
+		played7 = true
+		Global.stay = false
+		Global.crosshair_off = false
+		Global.dialogue_open = false
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		$CanvasLayer/Panel.visible = false

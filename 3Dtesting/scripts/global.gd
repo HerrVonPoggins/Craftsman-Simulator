@@ -63,6 +63,7 @@ var curcuit_minigame_on = false
 var switch_minigame_on = false
 var plaster_mixing = false
 var power_box = false
+var saw_wall = false
 
 var sound_count = 6
 var musik_count = 6

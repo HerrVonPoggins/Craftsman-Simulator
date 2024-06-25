@@ -19,13 +19,14 @@ func _process(delta):
 	if plaster_added == true and water_added == true and played == false:
 		played = true
 		$MeshInstance3D.visible = true
+		$StaticBody3D/Bucket_water2.visible = false
 		$Bucket_water.queue_free()
 
 
 	#if Input.is_action_just_pressed("kamera"):
 		#print($Timer.time_left)
 
-	if Global.plaster_mixing == true and played2 == false and $StaticBody3D/Bucket_water2.visible == true and played3 == true:
+	if Global.plaster_mixing == true and played2 == false and $MeshInstance3D.visible == true and played3 == false:
 		$Camera3D.current = true
 		Global.stay = true
 		Global.crosshair_off = true

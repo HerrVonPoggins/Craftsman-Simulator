@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bv4i3a72uiipx"]
 
 [ext_resource type="Script" path="res://scene_change.gd" id="1_je1ak"]
-[ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://UI/player_ui/transition.tscn" id="2_5tvtm"]
+[ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://ui/player_ui/transition.tscn" id="2_5tvtm"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_evtvc"]
 line_spacing = 10.0

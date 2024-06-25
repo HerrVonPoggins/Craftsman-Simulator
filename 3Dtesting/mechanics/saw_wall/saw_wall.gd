@@ -21,6 +21,7 @@ func _process(delta):
 		player.visible = true
 		Global.stay = false
 		Global.crosshair_off = false
+		Global.saw_wall = false
 	if saw_line2 >= 2 and played2 == false:
 		$Saw2.visible = false
 		$Camera3D.current = false
@@ -29,10 +30,8 @@ func _process(delta):
 		player.visible = true
 		Global.stay = false
 		Global.crosshair_off = false
+		Global.saw_wall = false
 
-
-	#if Input.is_action_just_pressed("kamera"):
-		#print(Global.plaster_on)
 	
 	
 #moves the saw with mouse
@@ -50,6 +49,7 @@ func _unhandled_input(event):
 		
 func _on_toolinsert_1_body_entered(body):
 	if body.is_in_group("wall_saw_prop") and saw_line1 <= 0:
+		Global.saw_wall = true
 		$Saw1.visible = true
 		$Camera3D.current = true
 		player.visible = false
@@ -57,19 +57,35 @@ func _on_toolinsert_1_body_entered(body):
 		Global.crosshair_off = true
 		
 	if body.is_in_group("cable"):
-		pass
+		$Toolinsert1/Cable.visible = true
 
 func _on_toolinsert_2_body_entered(body):
 	if body.is_in_group("wall_saw_prop") and saw_line2 <= 0:
+		Global.saw_wall = true
 		$Saw2.visible = true
 		$Camera3D.current = true
+		player.visible = false
+		Global.stay = true
+		Global.crosshair_off = true
+		
 	if body.is_in_group("cable"):
-		pass
+		body.queue_free()
+		$Toolinsert2/Cable.visible = true
 
 
+func _on_plaster_outlets_body_entered(body):
+	if body.is_in_group("trowel") and Global.plaster_on == true:
+		$PlasterOutlets/PlasterPlaced.visible = true
+	if body.is_in_group("outlet") and $PlasterOutlets/PlasterPlaced.visible == true:
+		body.queue_free()
+		$PlasterOutlets/OutletCase.visible = true
 
-
-
+func _on_plaster_outlets_2_body_entered(body):
+	if body.is_in_group("trowel") and Global.plaster_on == true:
+		$PlasterOutlets2/PlasterPlaced.visible = true
+	if body.is_in_group("outlet") and $PlasterOutlets/PlasterPlaced.visible == true:
+		body.queue_free()
+		$PlasterOutlets2/OutletCase.visible = true
 
 
 
@@ -220,4 +236,10 @@ func _on_area_3d_34_body_entered(body):
 		$Line2/Area3D34/MeshInstance3D.scale = Vector3(0.25,0.25,0.25)
 		saw_line2 += 1
 		$Line2/Area3D34/CollisionShape3D.call_deferred("set_disabled", true)
+
+
+
+
+
+
 
