@@ -1,5 +1,8 @@
 extends Node3D
 
+var doors_done = 0
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Enter.play("fade_in")
@@ -17,3 +20,16 @@ func _on_stairs_dübel_minigame_finished():
 
 func _on_stairs_player_visibility_off():
 	$Player.visible = false
+
+func _on_control_opened():
+	get_tree().paused = true
+
+
+func _on_control_closed():
+	get_tree().paused = false
+
+
+
+func _process(delta):
+	if doors_done == 7:
+		$Transition._change_scene("res://UI/screens/scene_change.tscn")

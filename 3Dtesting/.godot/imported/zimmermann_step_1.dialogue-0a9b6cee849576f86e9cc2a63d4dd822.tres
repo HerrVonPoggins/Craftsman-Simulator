@@ -1,0 +1,70 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_ewlnd"]
+
+[resource]
+script = ExtResource("1_ewlnd")
+using_states = PackedStringArray()
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray("Zimmermann")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": &"title"
+},
+"3": {
+"character": "Zimmermann",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Guten Tag.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Guten Tag.",
+"type": &"dialogue"
+},
+"4": {
+"character": "Zimmermann",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Du bist also der Praktikant von dem der Bär mir erzählt hat.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Du bist also der Praktikant von dem der Bär mir erzählt hat.",
+"type": &"dialogue"
+},
+"5": {
+"character": "Zimmermann",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "7",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "deine erste Aufgabe wird das bauen einer Treppe.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "deine erste Aufgabe wird das bauen einer Treppe.",
+"type": &"dialogue"
+},
+"7": {
+"id": "7",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+}
+}
+raw_text = "~ this_is_a_node_title
+
+Zimmermann: Guten Tag.
+Zimmermann: Du bist also der Praktikant von dem der Bär mir erzählt hat.
+Zimmermann: deine erste Aufgabe wird das bauen einer Treppe.
+
+=> END"
+metadata/dialogue_manager_version = "2.38.0"

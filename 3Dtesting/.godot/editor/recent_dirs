@@ -1,10 +1,9 @@
-res://mechanics/Carpenter-Areas/DübelPlacement
+res://UI/screens
 res://assets/carpenter-assets
 res://mechanics/door_placing
 res://mechanics/window_placing
 res://mechanics/light_bulb
 res://mechanics/saw_wall
-res://UI/screens
 res://scenes/CorePlayable
 res://mechanics/craneminigame
 res://scripts

@@ -20,6 +20,9 @@ func _on_button_credits_pressed():
 	Music._play_button()
 	$Transition._change_scene("res://ui/screens/credits.tscn")
 
+func _on_level_selection_pressed():
+	$Transition._change_scene("res://UI/screens/level_selection.tscn")
+
 func _on_button_quit_pressed():
 	get_tree().quit()
 
@@ -38,3 +41,6 @@ func _on_button_start_mouse_exited():
 
 func _on_button_quit_mouse_exited():
 	$QuitPlayer.play("Quit_exit")
+
+
+

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dph22gn2sufd5"
+path="res://.godot/imported/zimmermann_intro.dialogue-bb6db236608260342c3fa131fea9bfd2.tres"
+
+[deps]
+
+source_file="res://dialoguefiles/zimmermann_intro.dialogue"
+dest_files=["res://.godot/imported/zimmermann_intro.dialogue-bb6db236608260342c3fa131fea9bfd2.tres"]
+
+[params]
+
+defaults=true

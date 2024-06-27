@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://c7neel65lgf12"
+path="res://.godot/imported/zimmermann_step_3.dialogue-7535bd06b6ac44c8a59ea51fcea9b26d.tres"
+
+[deps]
+
+source_file="res://dialoguefiles/zimmermann_step_3.dialogue"
+dest_files=["res://.godot/imported/zimmermann_step_3.dialogue-7535bd06b6ac44c8a59ea51fcea9b26d.tres"]
+
+[params]
+
+defaults=true
