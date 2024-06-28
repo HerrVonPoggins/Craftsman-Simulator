@@ -1,15 +1,2 @@
-res://scenes/Carpenter/carpenter_world.gd
-res://scenes/Carpenter/carpenter_world.tscn
 res://mechanics/Carpenter-Areas/stairs.tscn
-res://mechanics/window_placing/window_placing.tscn
-res://mechanics/door_placing/door.tscn
-res://ui/screens/titlescreen.tscn
-res://scenes/CorePlayable/CorePlayable.tscn
-res://scenes/ElektrikerScene/Elektriker.tscn
-res://UI/screens/level_selection.gd
-res://UI/screens/level_selection.tscn
-res://ui/screens/titlescreen.gd
-res://UI/player_ui/transition.tscn
-res://scenes/ElektrikerScene/world.gd
-res://UI/player_ui/info hub.tscn
-res://UI/screens/endscreen.tscn
+res://scenes/Carpenter/carpenter_world.gd
