@@ -1,2 +1,3 @@
 res://mechanics/Carpenter-Areas/stairs.tscn
 res://scenes/Carpenter/carpenter_world.gd
+res://scenes/Carpenter/carpenter_world.tscn
