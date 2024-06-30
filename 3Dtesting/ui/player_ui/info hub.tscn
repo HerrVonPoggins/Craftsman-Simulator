@@ -195,6 +195,7 @@ layout_mode = 2
 text = "Shift = Sprinten"
 
 [node name="Job_Buch" type="TextureButton" parent="."]
+visible = false
 layout_mode = 1
 offset_left = 34.0
 offset_top = 20.0

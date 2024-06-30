@@ -35,7 +35,7 @@ var pull = false
 
 #scaling for the obj that is pulled by the crane
 func _ready():
-	$"Root Scene2/RootNode/Kran_arm/Empty1/CharacterBody3D/Area3D/Hold".global_scale(Vector3(0.15,0.2,0.2))
+	$"Root Scene2/RootNode/Kran_arm/Empty1/CharacterBody3D/Area3D/Hold".global_scale(Vector3(0.3,0.23,0.2))
 
 
 #when all the roofs are placed the minigame ends and the filling comes next
@@ -44,6 +44,7 @@ func _process(delta):
 		await get_tree().create_timer(3).timeout
 		Global.stay = false
 		Global.crosshair_off = false
+		Global.player_visibility = true
 		Global.roof_finished = true
 		queue_free()
 		

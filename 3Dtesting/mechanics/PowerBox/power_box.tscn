@@ -76,7 +76,7 @@ albedo_color = Color(1, 0, 1, 1)
 [node name="PowerBox" type="Node3D"]
 script = ExtResource("1_h030n")
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="." groups=["power_box"]]
+[node name="StaticBody3D2" type="StaticBody3D" parent="." groups=["ativate", "power_box"]]
 
 [node name="Wall" type="MeshInstance3D" parent="StaticBody3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.189642, -0.00848961, 0.506649)

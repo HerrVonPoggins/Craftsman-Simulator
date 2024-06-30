@@ -17,6 +17,7 @@ func _process(delta):
 		Global.stay = true
 		Global.crosshair_off = true
 		Global.crane_on = false
+		Global.player_visibility = false
 		played = true
 		SPEED = 20
 

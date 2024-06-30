@@ -9,7 +9,7 @@ var played4 = false
 var played5 = false
 var played6 = false
 var played7 = false
-var diealogue_played = 0
+var dialogue_played = 0
 var done = false
 @onready var wedge = $Props/Wedge/Mesh
 @onready var water = $Props/Water/Mesh
@@ -32,9 +32,8 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
-		#Global.door_top = 4
-		#Global.rods = 3
-		#print(Global.rods)
+		Global.door_top = 4
+		Global.rods = 3
 		pass
 		
 	#when the filling minigame is finished the solid roof becomes visible
@@ -60,11 +59,9 @@ func _process(delta):
 		$Wall.visible = true
 
 	if Global.rods == 3 and played7 == false:
-		$CanvasLayer/Panel.visible = true
-		Global.stay = true
-		Global.crosshair_off = true
-		Global.dialogue_open = true
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		played7 = false
+		Global.skip = 2
+
 
 	#when the rods to support the roof are all placed and extended the roof crane can be activated
 	if Global.rods == 19 and played4 == false:
@@ -316,22 +313,4 @@ func _on_ray_cast_3d_wedge_highlight():
 		wedges_highlighted = true
 
 
-func _on_button_pressed():
-	if played7 == false:
-		played7 = true
-		$CanvasLayer/Panel.visible = false
-		Global.stay = false
-		Global.crosshair_off = false
-		Global.dialogue_open = false
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		Global.rods = 19
 
-
-func _on_button_2_pressed():
-	if played7 == false:
-		played7 = true
-		Global.stay = false
-		Global.crosshair_off = false
-		Global.dialogue_open = false
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		$CanvasLayer/Panel.visible = false

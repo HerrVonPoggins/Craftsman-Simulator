@@ -170,7 +170,7 @@ shadow_mesh = SubResource("ArrayMesh_yk7jp")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m18w4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s06fw"]
-size = Vector3(1.06104, 1.82446, 1)
+size = Vector3(0.695008, 0.763488, 0.228027)
 
 [node name="Trowel" type="RigidBody3D" groups=["grab", "trowel"]]
 script = ExtResource("1_eax8e")
@@ -194,5 +194,5 @@ skeleton = NodePath("")
 surface_material_override/2 = SubResource("StandardMaterial3D_m18w4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-0.108017, 0.786965, 0.607468, 1.7547e-08, 0.611044, -0.791597, -0.994149, -0.0855057, -0.0660029, -0.079889, 0.203701, 0.000465572)
+transform = Transform3D(-0.108017, 0.786965, 0.607468, 1.7547e-08, 0.611044, -0.791597, -0.994149, -0.0855057, -0.0660029, -0.0271317, 0.279667, -0.0514668)
 shape = SubResource("BoxShape3D_s06fw")

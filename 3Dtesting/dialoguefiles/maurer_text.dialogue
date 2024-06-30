@@ -1,5 +1,5 @@
 ~ this_is_a_node_title
-if Global.dialogue_count == 2:
+if Global.dialogue_count == 2 and Global.dialogue_played == 2:
 	set Global.dialogue_open = true
 	Maurer: Hey, du bist also der neue Praktikant, richtig?
 	Maurer: Schön dich kennenzulernen!
@@ -17,6 +17,16 @@ if Global.dialogue_count == 2:
 	Maurer: Sobald der Mörtel fertig ist, füllst du ihn in den Eimer und bringst ihn zur Wand, die wir bearbeiten (E auf Mischer).
 	Maurer: Stell sicher, dass du den Mörtel gleichmäßig aufträgst, damit alles gut hält.
 	Maurer: Verstanden?
+	set Global.dialogue_played = 3
 	set Global.dialogue_open = false
 	set Global.dialogue_count = 2
+	=> END
+	
+if Global.dialogue_played == 3:
+	set Global.dialogue_open = true
+	Maurer: kümmer dich um den Mörtel.
+	set Global.dialogue_open = false
+		
+	
+
 => END

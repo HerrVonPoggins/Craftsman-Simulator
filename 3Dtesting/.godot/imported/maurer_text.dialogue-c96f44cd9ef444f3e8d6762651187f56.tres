@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_8blvd"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_tivxd"]
 
 [resource]
-script = ExtResource("1_8blvd")
+script = ExtResource("1_tivxd")
 using_states = PackedStringArray()
 titles = {
 "this_is_a_node_title": "2"
@@ -164,17 +164,58 @@ lines = {
 "type": "number",
 "value": 2
 }, {
+"type": "and_or",
+"value": "and"
+}, {
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_played"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "number",
+"value": 2
+}, {
 "type": "colon"
 }])
 },
 "id": "2",
-"next_conditional_id": "22",
+"next_conditional_id": "25",
 "next_id": "3",
-"next_id_after": "22",
+"next_id_after": "25",
 "type": &"condition"
 },
 "20": {
 "id": "20",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_played"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 3
+}]),
+"is_blocking": true
+},
+"next_id": "21",
+"parent_id": "2",
+"type": &"mutation"
+},
+"21": {
+"id": "21",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -193,12 +234,12 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "21",
+"next_id": "22",
 "parent_id": "2",
 "type": &"mutation"
 },
-"21": {
-"id": "21",
+"22": {
+"id": "22",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -217,15 +258,103 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "22",
+"next_id": "23",
 "parent_id": "2",
 "type": &"mutation"
 },
-"22": {
-"id": "22",
+"23": {
+"id": "23",
 "is_snippet": false,
 "next_id": "end",
+"parent_id": "2",
 "type": &"goto"
+},
+"25": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_played"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "number",
+"value": 3
+}, {
+"type": "colon"
+}])
+},
+"id": "25",
+"next_conditional_id": "32",
+"next_id": "26",
+"next_id_after": "32",
+"type": &"condition"
+},
+"26": {
+"id": "26",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
+"next_id": "27",
+"parent_id": "25",
+"type": &"mutation"
+},
+"27": {
+"character": "Maurer",
+"character_replacements": Array[Dictionary]([]),
+"id": "27",
+"next_id": "28",
+"notes": "",
+"parent_id": "25",
+"tags": PackedStringArray(),
+"text": "kümmer dich um den Mörtel.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "kümmer dich um den Mörtel.",
+"type": &"dialogue"
+},
+"28": {
+"id": "28",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
+},
+"next_id": "32",
+"parent_id": "25",
+"type": &"mutation"
 },
 "3": {
 "id": "3",
@@ -250,6 +379,12 @@ lines = {
 "next_id": "4",
 "parent_id": "2",
 "type": &"mutation"
+},
+"32": {
+"id": "32",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
 },
 "4": {
 "character": "Maurer",
@@ -318,7 +453,7 @@ lines = {
 }
 }
 raw_text = "~ this_is_a_node_title
-if Global.dialogue_count == 2:
+if Global.dialogue_count == 2 and Global.dialogue_played == 2:
 	set Global.dialogue_open = true
 	Maurer: Hey, du bist also der neue Praktikant, richtig?
 	Maurer: Schön dich kennenzulernen!
@@ -336,7 +471,17 @@ if Global.dialogue_count == 2:
 	Maurer: Sobald der Mörtel fertig ist, füllst du ihn in den Eimer und bringst ihn zur Wand, die wir bearbeiten (E auf Mischer).
 	Maurer: Stell sicher, dass du den Mörtel gleichmäßig aufträgst, damit alles gut hält.
 	Maurer: Verstanden?
+	set Global.dialogue_played = 3
 	set Global.dialogue_open = false
 	set Global.dialogue_count = 2
+	=> END
+	
+if Global.dialogue_played == 3:
+	set Global.dialogue_open = true
+	Maurer: kümmer dich um den Mörtel.
+	set Global.dialogue_open = false
+		
+	
+
 => END"
 metadata/dialogue_manager_version = "2.38.0"

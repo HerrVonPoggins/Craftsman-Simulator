@@ -69,7 +69,7 @@ transform = Transform3D(1, 0, -2.91038e-11, 0, 1, 9.31323e-10, 0, 0, 1, -0.02484
 visible = false
 mesh = SubResource("SphereMesh_sk3ee")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["activate"]]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 mesh = SubResource("BoxMesh_ubarh")
@@ -78,7 +78,7 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_i0p5u")
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="." groups=["circuit"]]
+[node name="StaticBody3D2" type="StaticBody3D" parent="." groups=["activate", "circuit"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.337661, 0.316707, 0.0445553)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D2"]
@@ -93,7 +93,7 @@ mesh = SubResource("CylinderMesh_n4epq")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D2"]
 shape = SubResource("ConvexPolygonShape3D_r2urs")
 
-[node name="StaticBody3D3" type="StaticBody3D" parent="." groups=["circuit"]]
+[node name="StaticBody3D3" type="StaticBody3D" parent="." groups=["activate", "circuit"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00699291, 0.314511, 0.0566036)
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="StaticBody3D3"]
@@ -108,7 +108,7 @@ mesh = SubResource("CylinderMesh_n4epq")
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D3"]
 shape = SubResource("ConvexPolygonShape3D_11qlf")
 
-[node name="StaticBody3D4" type="StaticBody3D" parent="." groups=["circuit"]]
+[node name="StaticBody3D4" type="StaticBody3D" parent="." groups=["activate", "circuit"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.336313, 0.316152, 0.0539337)
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="StaticBody3D4"]
@@ -119,7 +119,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_p3pia")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4"]
 shape = SubResource("ConvexPolygonShape3D_vrco8")
 
-[node name="StaticBody3D5" type="StaticBody3D" parent="." groups=["circuit"]]
+[node name="StaticBody3D5" type="StaticBody3D" parent="." groups=["activate", "circuit"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33559, 0, 0.0526945)
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="StaticBody3D5"]
@@ -130,7 +130,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_p3pia")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D5"]
 shape = SubResource("ConvexPolygonShape3D_kxbd5")
 
-[node name="StaticBody3D6" type="StaticBody3D" parent="." groups=["circuit"]]
+[node name="StaticBody3D6" type="StaticBody3D" parent="." groups=["activate", "circuit"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0555369)
 
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="StaticBody3D6"]
@@ -141,7 +141,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_p3pia")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D6"]
 shape = SubResource("ConvexPolygonShape3D_0nlfa")
 
-[node name="StaticBody3D7" type="StaticBody3D" parent="." groups=["circuit"]]
+[node name="StaticBody3D7" type="StaticBody3D" parent="." groups=["activate", "circuit"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.339232, 0, 0.0647151)
 
 [node name="MeshInstance3D7" type="MeshInstance3D" parent="StaticBody3D7"]
@@ -152,7 +152,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_p3pia")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D7"]
 shape = SubResource("ConvexPolygonShape3D_4c41d")
 
-[node name="StaticBody3D8" type="StaticBody3D" parent="." groups=["circuit"]]
+[node name="StaticBody3D8" type="StaticBody3D" parent="." groups=["activate", "circuit"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356116, -0.335186, 0.0604056)
 
 [node name="MeshInstance3D8" type="MeshInstance3D" parent="StaticBody3D8"]
@@ -163,7 +163,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_p3pia")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D8"]
 shape = SubResource("ConvexPolygonShape3D_s51pm")
 
-[node name="StaticBody3D9" type="StaticBody3D" parent="." groups=["circuit"]]
+[node name="StaticBody3D9" type="StaticBody3D" parent="." groups=["activate", "circuit"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0122128, -0.342999, 0.0465967)
 
 [node name="MeshInstance3D9" type="MeshInstance3D" parent="StaticBody3D9"]
@@ -174,7 +174,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_p3pia")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D9"]
 shape = SubResource("ConvexPolygonShape3D_ejupu")
 
-[node name="StaticBody3D10" type="StaticBody3D" parent="." groups=["circuit"]]
+[node name="StaticBody3D10" type="StaticBody3D" parent="." groups=["activate", "circuit"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32753, -0.356799, 0.0530404)
 
 [node name="MeshInstance3D10" type="MeshInstance3D" parent="StaticBody3D10"]

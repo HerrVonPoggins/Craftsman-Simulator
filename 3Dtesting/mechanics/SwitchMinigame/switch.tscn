@@ -52,7 +52,7 @@ transform = Transform3D(1, 0, -2.91038e-11, 0, 1, 9.31323e-10, 0, 0, 1, -0.02484
 visible = false
 mesh = SubResource("SphereMesh_sk3ee")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["activate"]]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 mesh = SubResource("BoxMesh_ubarh")

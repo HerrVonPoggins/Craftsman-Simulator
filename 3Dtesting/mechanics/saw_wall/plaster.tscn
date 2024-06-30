@@ -247,7 +247,7 @@ visible = false
 mesh = SubResource("CylinderMesh_h8yxr")
 surface_material_override/0 = SubResource("StandardMaterial3D_uya55")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["plaster_mixer"]]
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["activate", "plaster_mixer"]]
 
 [node name="Bucket_water2" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(-0.132737, 0.414595, -0.76178, 2.22144e-08, 0.614891, 0.530458, 0.733478, 0.0750288, -0.137859, 0, 0, 0)

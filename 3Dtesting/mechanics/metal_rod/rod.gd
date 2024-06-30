@@ -13,5 +13,6 @@ func _on_string_wedge_body_entered(body):
 		Music._play_concrete_placing()
 		Global.rods += 1
 		$StaticBody3D/Mesh.visible = true
+		$StaticBody3D/CollisionShape3D2.call_deferred("set_disabled", false)
 		$StringWedge/CollisionShape3D.call_deferred("set_disabled", true)
 		$StringWedge/MeshInstance3D2.queue_free()

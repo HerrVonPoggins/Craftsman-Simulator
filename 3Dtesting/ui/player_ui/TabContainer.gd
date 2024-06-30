@@ -19,6 +19,9 @@ signal closed
 
 #sets the checkmarks of the checklist
 func _process(delta):
+	if Global.book_ready == true:
+		$Job_Buch.show()
+	
 	if Global.tutorial_finished == true:
 		$Panel.visible = false
 
@@ -192,10 +195,11 @@ func _on_log_buch_open_button_pressed():
 
 
 func _on_job_buch_pressed():
-	$Job_Buch_Closed.show()
-	$Job_Buch.hide()
-	$Setting_Button.hide()
-	$checklist.hide()
+	if Global.tutorial_finished == true and Global.book_ready == true:
+		$Job_Buch_Closed.show()
+		$Job_Buch.hide()
+		$Setting_Button.hide()
+		$checklist.hide()
 	
 func _on_quit_button_pressed():
 	get_tree().quit()

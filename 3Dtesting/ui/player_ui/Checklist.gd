@@ -40,10 +40,16 @@ Kran am LKW (E) gestartet  Deckenplatten verlegt
 
 var opened = true
 
-
+#func _ready():
+	#$InteractionPlayer.play("interaction_popup_talk_intro")
+	#await $InteractionPlayer.animation_finished
+	#$InteractionPlayer.play("interaction_popup_talk_quit")
 #functions to switch set the checklist details
 func _process(_delta):
-	
+	if Global.checklist_hide == true:
+		$".".hide()
+	elif Global.checklist_hide == false:
+		$".".show()
 	
 	_check_1_on(check_state_1)
 	_check_2_on(check_state_2)
@@ -76,6 +82,16 @@ func _play_interactable():
 func _quit_interactable():
 	$InteractionPlayer.play("interaction_popup_pickup_quit")
 	
+func _play_talkable():
+	$InteractionPlayer.play("interaction_popup_talk_intro")
+func _quit_talkable():
+	$InteractionPlayer.play("interaction_popup_talk_quit")
+
+func _play_activateable():
+	$InteractionPlayer.play("activateable_popup_talk_intro")
+func _quit_activatekable():
+	$InteractionPlayer.play("activateable_popup_talk_quit")
+
 func _set_label_1_text(string):
 	label_1.set_text(string)
 func _set_label_2_text(string):

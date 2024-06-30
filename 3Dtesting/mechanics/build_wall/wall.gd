@@ -68,6 +68,7 @@ func _on_area_3d_body_entered(body):
 			brick_3.visible = true
 			outline_3.visible = false
 			DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/spirit_level_needed.dialogue"))
+			Global.wall_finished = true
 
 
 

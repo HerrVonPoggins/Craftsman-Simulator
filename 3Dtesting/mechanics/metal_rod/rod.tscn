@@ -260,7 +260,7 @@ libraries = {
 }
 autoplay = "marker"
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["rod_extend"]]
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["activate", "rod_extend"]]
 
 [node name="Mesh" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 0.124212, 0, -0.153888)
@@ -271,5 +271,6 @@ skeleton = NodePath("")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0.124212, 0, -0.153888)
 shape = SubResource("ConvexPolygonShape3D_2gjnh")
+disabled = true
 
 [connection signal="body_entered" from="StringWedge" to="." method="_on_string_wedge_body_entered"]

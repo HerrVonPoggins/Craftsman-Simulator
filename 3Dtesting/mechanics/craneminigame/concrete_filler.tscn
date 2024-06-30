@@ -398,13 +398,13 @@ libraries = {
 }
 
 [node name="Root Scene" parent="." instance=ExtResource("2_cmlfh")]
-transform = Transform3D(4.2, 0, 0, 0, 4.7, 0, 0, 0, 6.3, 0.527043, -17.0627, -30.9085)
+transform = Transform3D(-2.57897e-07, 0, -4.2, 0, 4.7, 0, 5.9, 0, -1.83588e-07, 0.527043, -17.0627, -30.9085)
 
 [node name="Cube" parent="Root Scene/RootNode" index="0"]
 transform = Transform3D(457.029, 0, 0, 0, -1.99774e-05, 15, 0, -457.029, -6.55671e-07, 0.0115735, 3.05241, 0.198549)
 
 [node name="Root Scene2" parent="." instance=ExtResource("3_knf0l")]
-transform = Transform3D(4.2, 0, 0, 0, 4.7, 0, 0, 0, 6.3, 0.531486, -16.844, -30.8574)
+transform = Transform3D(-2.57897e-07, 0, -4.2, 0, 4.7, 0, 5.9, 0, -1.83588e-07, 0.531486, -16.844, -30.8574)
 
 [node name="Decke 2" parent="Root Scene2/RootNode" index="0"]
 transform = Transform3D(100, 0, 0, 0, -5.42401e-06, 100, 0, -124.087, -4.37114e-06, 3.08462, 3.1597, 1.48346)
@@ -431,7 +431,7 @@ transform = Transform3D(1.06704e-05, 165.612, 4.37114e-06, 0, -7.23914e-06, 100,
 transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 3.08462, 3.1597, 3.72519)
 
 [node name="Root Scene3" parent="." instance=ExtResource("4_mdrna")]
-transform = Transform3D(4.2, 0, 0, 0, 4.7, 0, 0, 0, 6.3, 0.327971, -16.7769, -31.5132)
+transform = Transform3D(-2.57897e-07, 0, -4.2, 0, 4.7, 0, 5.9, 0, -1.83588e-07, 0.750166, -16.7769, -30.8184)
 
 [node name="Root Scene4" type="Node3D" parent="."]
 transform = Transform3D(-1.85087e-08, 0.423429, -2.96997, -3, -1.31134e-07, 1.20044e-15, -1.29821e-07, 2.96997, 0.423429, 1.40393, 0, -1.62075)

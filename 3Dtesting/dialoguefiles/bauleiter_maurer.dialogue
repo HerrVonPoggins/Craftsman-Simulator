@@ -1,7 +1,9 @@
 ~ this_is_a_node_title
 if Global.current_scene == 1:
+	
 	set Global.dialogue_open = true
-	if Global.tutorial_finished == false:
+	if Global.tutorial_finished == false and Global.dialogue_played == 0:
+		
 		Bauleiter: Ah, da bist du ja, unser neuer Praktikant!
 		Bauleiter: Herzlich willkommen auf der Baustelle von "Craftsman Simulator".
 		Bauleiter: Ich bin der Bauleiter, der Zukunftsfuchs, aber du kannst mich einfach Fuchs nennen.
@@ -11,18 +13,35 @@ if Global.current_scene == 1:
 		Bauleiter: Eine Baustelle kann sehr gefährlich sein, aber mit der richtigen Arbeitskleidung und Vorsichtsmaßnahmen können wir Unfälle vermeiden.
 		Bauleiter: Du solltest jetzt deine passende Arbeitskleidung finden.
 		Bauleiter: Ziehe sie an und komm bitte danach wieder zu mir.
+		
+		
+		set Global.dialogue_played = 1
+		set Global.dialogue_open = false
+		=> END
+		
+	if Global.dialogue_played == 1 and Global.tutorial_finished == false:
+		Bauleiter: bitte sammle die Arbeitskleidung.
+		
 	
-	if Global.tutorial_finished == true:
+	if Global.tutorial_finished == true and Global.dialogue_played == 1:
+		
 		Bauleiter: Gut gemacht! 
 		Bauleiter: Bevor es aber losgeht, muss ich dir noch das Baustellen-Tagebuch geben, das du jetzt im Menü (ESC) findest
 		Bauleiter: Dort könntest du alle Ausbildungsberufe nochmal genauer nachlesen und dich besser informieren (es gibt ein Quiz zum Schluss).
 		Bauleiter: Und jetzt viel Spaß!
+		set Global.book_ready = true
+		
+
+		set Global.dialogue_played = 2
+		set Global.dialogue_open = false
+		=> END
+
+	if Global.dialogue_played == 2:
+		Bauleiter: bitte melde dich beim Bär.
 	set Global.dialogue_open = false
-
-
-if Global.current_scene == 2:
-	set Global.dialogue_open = true
-
-	set Global.dialogue_open = false
+#if Global.current_scene == 2:
+#	set Global.dialogue_open = true
+#
+#	set Global.dialogue_open = false
 
 => END

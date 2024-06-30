@@ -8,6 +8,9 @@ var lock_in_correct = false
 func _physics_process(delta):
 	#Cuttable Brick Movement
 	if Global.brick_saw_cam == true:
+		Global.stay = true
+		Global.crosshair_off = true
+		Global.player_visibility = false
 		$"../BrickCut".velocity = clamp($"../BrickCut".velocity, Vector3(0,0,-0.5), Vector3(0,0,0.5))
 		if Input.is_action_pressed("left"):
 			$"../BrickCut".velocity = Vector3(0,0,0.5)
@@ -21,6 +24,10 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("interagieren"):
 		if lock_in_correct == true:
 			emit_signal("brick_cut_correct")
+			Global.stay = false
+			Global.crosshair_off = false
+			Global.player_visibility = true
+			Global.dialogue_open = false
 		elif lock_in_wrong == true:
 			print("wrong")
 

@@ -121,6 +121,7 @@ func _physics_process(delta):
 				#checks the ground from Groundidentifier and plays the right sound
 			else:
 				Global.is_walking = true
+				await get_tree().create_timer(0).timeout
 				if Global.walking_on.get_instance_id() == Global.ground_grass and Global.walk_sound_started == false:
 					Music._play_walk_grass()
 					Global.walk_sound_started = true

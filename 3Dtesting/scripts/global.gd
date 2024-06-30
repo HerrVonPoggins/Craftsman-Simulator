@@ -33,7 +33,11 @@ var is_walking = false
 var walk_sound_started = false
 var dialogue_count = 0
 var dialogue_replay = 0
+
 var press_e = false
+var talkable = false
+var activateable = false
+
 var rods = 0
 var crane_on = false
 var can_make_roof = false
@@ -50,7 +54,10 @@ var placing_games_open = false
 var crosshair_off = false 
 var brick_is_being_placed = false
 
-
+var checklist_hide = false
+var dialogue_played = 0
+var book_ready = false
+var skip = 0
 #for animations
 var holding_bricks = false
 var holding_bucket = false

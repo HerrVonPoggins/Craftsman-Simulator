@@ -21,6 +21,8 @@ signal start_saw_minigame
 
 var work_clothes = 0
 var interactable_is_open = false
+var talkable_is_open = false
+var activate_is_open = false
 #The Raycast shoots a laser for a fixed range, on collision with something we can get the object  and check if it is in group "grab"
 #a object in group "grab" will then fixed on the hold point of the character until we release it.
 func _process(delta):
@@ -33,6 +35,7 @@ func _process(delta):
 	if Global.brick_is_being_placed == true:
 		_place_brick()
 	
+	
 	#starts the interactable animation if hovered over the right objects
 	if Global.press_e == true and obj == null and get_collider() != null: 
 		if interactable_is_open == false:
@@ -43,20 +46,45 @@ func _process(delta):
 			Checklist._quit_interactable()
 			interactable_is_open = false
 
+
+	if Global.talkable == true and obj == null and get_collider() != null: 
+		if talkable_is_open == false:
+			Checklist._play_talkable()
+			talkable_is_open = true
+	else:
+		if talkable_is_open == true:
+			Checklist._quit_talkable()
+			talkable_is_open = false
+
+	if Global.activateable == true and obj == null and get_collider() != null: 
+		if activate_is_open == false:
+			Checklist._play_activateable()
+			activate_is_open = true
+	else:
+		if activate_is_open == true:
+			Checklist._quit_activatekable()
+			activate_is_open = false
+
 	#makes objects slight transparent when hovered over useable object
-		if temp != null:
-			if temp.get_node("Mesh") != null:
-				temp.get_node("Mesh").transparency = 0
 	if obj == null:
 		var collider = get_collider()
 		if collider != null:
+			
 			if collider.is_in_group("use"):
-				temp = collider
-				if temp.get_node("Mesh") != null:
-					temp.get_node("Mesh").transparency = 0.3
 				Global.press_e = true
 			else:
 				Global.press_e = false
+
+			if collider.is_in_group("talkable"):
+				Global.talkable = true
+			else:
+				Global.talkable = false
+
+			if collider.is_in_group("activate"):
+				Global.activateable = true
+			else:
+				Global.activateable = false
+
 
 	#sets the tutorial finished once the clothes are collected
 	if work_clothes == 3:
@@ -194,7 +222,7 @@ func _on_player_delete_sand_container():
 
 #func to play animation
 func _place_brick():
-	$"../../Root Scene/AnimationPlayer".play("metarig|place brick")
+	$"../../../../Root Scene/AnimationPlayer".play("metarig|place brick")
 	
 	#generic animations
 func _play_grab():
