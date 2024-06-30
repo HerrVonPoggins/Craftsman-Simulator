@@ -412,6 +412,7 @@ shape = SubResource("BoxShape3D_l2dkw")
 
 [node name="Wallguide" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28929, -4.76837e-07, 1.91349)
+visible = false
 
 [node name="RootNode" type="Node3D" parent="Wallguide"]
 
@@ -694,7 +695,7 @@ shape = SubResource("ConvexPolygonShape3D_vn46a")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.69914, -2.16582, 3.68659)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="DübelContainer/Dübel3"]
-transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 0, 0)
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0.685264, 0, 0)
 mesh = SubResource("CapsuleMesh_j6tb8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DübelContainer/Dübel3"]
