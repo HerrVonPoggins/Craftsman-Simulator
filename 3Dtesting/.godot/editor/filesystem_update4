@@ -4,3 +4,9 @@ res://scenes/Carpenter/carpenter_world.tscn
 res://scenes/CorePlayable/CorePlayable.tscn
 res://scenes/ElektrikerScene/Elektriker.tscn
 res://ui/screens/titlescreen.tscn
+res://mechanics/Player/RayCast3D.gd
+res://scenes/CorePlayable/world.gd
+res://UI/player_ui/checklist.tscn
+res://ui/player_ui/Checklist.gd
+res://mechanics/craneminigame/craneminigame.tscn
+res://mechanics/craneminigame/crane.gd

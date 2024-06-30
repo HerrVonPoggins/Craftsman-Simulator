@@ -46,6 +46,11 @@ var opened = true
 	#$InteractionPlayer.play("interaction_popup_talk_quit")
 #functions to switch set the checklist details
 func _process(_delta):
+	
+	if Global.crosshair_off == true:
+		$HBoxContainer.hide()
+		$Label.hide()
+	
 	if Global.checklist_hide == true:
 		$".".hide()
 	elif Global.checklist_hide == false:

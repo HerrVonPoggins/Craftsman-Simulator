@@ -44,7 +44,7 @@ func _process(delta):
 	
 	#starts the interactable animation if hovered over the right objects
 	if Global.press_e == true and obj == null and get_collider() != null: 
-		if interactable_is_open == false:
+		if interactable_is_open == false and Global.crosshair_off == false:
 			Checklist._play_interactable()
 			interactable_is_open = true
 	else:
@@ -54,7 +54,7 @@ func _process(delta):
 
 
 	if Global.talkable == true and obj == null and get_collider() != null: 
-		if talkable_is_open == false:
+		if talkable_is_open == false and Global.crosshair_off == false:
 			Checklist._play_talkable()
 			talkable_is_open = true
 	else:
@@ -63,7 +63,7 @@ func _process(delta):
 			talkable_is_open = false
 
 	if Global.activateable == true and obj == null and get_collider() != null: 
-		if activate_is_open == false:
+		if activate_is_open == false and Global.crosshair_off == false:
 			Checklist._play_activateable()
 			activate_is_open = true
 	else:

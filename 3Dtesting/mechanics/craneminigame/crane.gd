@@ -28,7 +28,7 @@ func _process(delta):
 
 func _physics_process(delta):
 	## Add the gravity.
-	if  $".".visible == true:
+	if  $".".visible == true and Global.start_crane_game == true:
 		if Input.is_action_pressed("left"):
 			$"../..".rotation_degrees.z += 0.3
 		if Input.is_action_pressed("right"):
