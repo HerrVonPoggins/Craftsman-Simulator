@@ -10,6 +10,8 @@ func _process(delta):
 func _on_string_wedge_body_entered(body):
 	if body.is_in_group("rod") and $".".visible == true:
 		body.queue_free()
+		Global.is_holding = false
+		Global.can_extend = false
 		Music._play_concrete_placing()
 		Global.rods += 1
 		$StaticBody3D/Mesh.visible = true

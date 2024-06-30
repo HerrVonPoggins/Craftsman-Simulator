@@ -20,9 +20,13 @@ func _process(delta):
 		$".".visible = false
 	elif Global.player_visibility == true:
 		$".".visible = true
+
 	if Global.is_holding == true and played == false:
 		played = true
-		$"CharacterBody3D/Neck/Camera3D/Root Scene3/AnimationPlayer".play("metarig|get sand sack out")
+		await get_tree().create_timer(1.5).timeout
+		if Global.holding_bucket == false and Global.holding_bricks == false and Global.holding_bag == false:
+			$"CharacterBody3D/Neck/Camera3D/Root Scene3/AnimationPlayer".play("metarig|get sand sack out")
+
 	if Global.holding_bucket == true:
 		Global.holding_bucket = false
 		$"CharacterBody3D/Neck/Camera3D/Root Scene3/AnimationPlayer".play("metarig|get bucket out")

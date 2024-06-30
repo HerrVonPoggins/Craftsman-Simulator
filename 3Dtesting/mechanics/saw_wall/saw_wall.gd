@@ -57,6 +57,9 @@ func _on_toolinsert_1_body_entered(body):
 		Global.crosshair_off = true
 		
 	if body.is_in_group("cable"):
+		body.queue_free()
+		Global.is_holding = false
+		Global.can_extend = false
 		$Toolinsert1/Cable.visible = true
 
 func _on_toolinsert_2_body_entered(body):
@@ -70,6 +73,8 @@ func _on_toolinsert_2_body_entered(body):
 		
 	if body.is_in_group("cable"):
 		body.queue_free()
+		Global.is_holding = false
+		Global.can_extend = false
 		$Toolinsert2/Cable.visible = true
 
 

@@ -225,6 +225,8 @@ func _on_concrete_bucket_body_entered(body):
 func _on_string_wedge_body_entered(body):
 	if body.is_in_group("wedge") and Global.concrete_mixed == true:
 		body.queue_free()
+		Global.is_holding = false
+		Global.can_extend = false
 		Music._play_wedge()
 		$StringWedge/MeshInstance3D.visible = true
 		$StringWedge/MeshInstance3D2.visible = false
@@ -232,6 +234,8 @@ func _on_string_wedge_body_entered(body):
 func _on_string_wedge_2_body_entered(body):
 	if body.is_in_group("wedge") and Global.concrete_mixed == true:
 		body.queue_free()
+		Global.is_holding = false
+		Global.can_extend = false
 		Music._play_wedge()
 		$StringWedge2/MeshInstance3D.visible = true
 		$StringWedge2/MeshInstance3D2.visible = false
@@ -265,6 +269,8 @@ func _on_area_3d_4_body_entered(body):
 func _on_area_3d_5_body_entered(body):
 	if body.is_in_group("spirit_level"):
 		body.queue_free()
+		Global.is_holding = false
+		Global.can_extend = false
 		$Node3D9.visible = true
 
 
@@ -285,6 +291,8 @@ func _on_saw_camera_brick_cut_correct():
 func _on_area_3d_body_entered(body):
 	if body.is_in_group("concretebucket"):
 		body.queue_free()
+		Global.is_holding = false
+		Global.can_extend = false
 		$Area3D/ConcreteBucketObj.visible = true
 		$Area3D/Bucket_water2.visible = false
 		$Area3D/ConcreteBucketObj/CollisionShape3D.call_deferred("set_disabled", false)

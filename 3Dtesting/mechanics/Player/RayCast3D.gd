@@ -26,6 +26,9 @@ var activate_is_open = false
 #The Raycast shoots a laser for a fixed range, on collision with something we can get the object  and check if it is in group "grab"
 #a object in group "grab" will then fixed on the hold point of the character until we release it.
 func _process(delta):
+	#if obj == null:
+		#Global.is_holding = false
+		#Global.can_extend = false
 	if obj != null:
 		if Global.player_visibility == false:
 			obj.visible = false
@@ -35,6 +38,9 @@ func _process(delta):
 	if Global.brick_is_being_placed == true:
 		_place_brick()
 	
+	if Input.is_action_just_pressed("kamera"):
+		
+		$"../Root Scene3/AnimationPlayer".play("metarig|grab")
 	
 	#starts the interactable animation if hovered over the right objects
 	if Global.press_e == true and obj == null and get_collider() != null: 
@@ -99,6 +105,7 @@ func _process(delta):
 					Global.is_holding = true
 					$"../Root Scene3/AnimationPlayer".play("metarig|grab")
 					await $"../Root Scene3/AnimationPlayer".animation_finished
+					await get_tree().create_timer(0.1).timeout
 					
 					
 					if collider.is_in_group("can_extend"):
@@ -207,9 +214,13 @@ func _process(delta):
 	if Input.is_action_just_pressed("TrowelButton"):
 		if obj == null:
 			obj = trowel_collider
+			Global.can_extend = true
+			Global.is_holding = true
 	if Input.is_action_just_pressed("SpiritLevelButton"):
 		if obj == null:
 			obj = spirit_level_collider
+			Global.can_extend = true
+			Global.is_holding = true
 
 func _on_player_concrete_bucket_pos_reached():
 	obj = null

@@ -56,9 +56,13 @@ func _on_area_3d_body_entered(body):
 		
 		plaster_added = true
 		body.queue_free()
+		Global.is_holding = false
+		Global.can_extend = false
 	if body.is_in_group("water"):
 		water_added = true
 		body.queue_free()
+		Global.is_holding = false
+		Global.can_extend = false
 		$StaticBody3D/Bucket_water2.visible = true
 		$StaticBody3D/CollisionShape3D.call_deferred("set_disabled", false)
 		$Bucket_water.visible = false
