@@ -1,6 +1,6 @@
 extends Node
 
-var volume = -10
+var volume = -80
 var effects = 0
 
 

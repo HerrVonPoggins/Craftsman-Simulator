@@ -3,6 +3,7 @@ res://scenes/Carpenter/carpenter_world.gd
 res://mechanics/Carpenter-Areas/stairs.tscn
 res://mechanics/window_placing/window_placing.tscn
 res://mechanics/door_placing/door.tscn
-res://ui/screens/titlescreen.tscn
+res://mechanics/window_placing/foam.tscn
+res://scenes/ElektrikerScene/Elektriker.tscn
 res://scenes/CorePlayable/CorePlayable.tscn
-res://mechanics/door_placing/door.gd
+res://scripts/music.tscn
