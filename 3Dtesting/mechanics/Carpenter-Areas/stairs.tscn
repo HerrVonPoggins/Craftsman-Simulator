@@ -420,7 +420,7 @@ transform = Transform3D(100, 0, 0, 0, -7.49521e-07, 100, 0, -6.28743, -1.19209e-
 mesh = ExtResource("2_q0pua")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Wallguide/RootNode/wand teil"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Wallguide/RootNode/wand teil" groups=["wallguide"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Wallguide/RootNode/wand teil/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_aa5uq")
@@ -655,7 +655,6 @@ shape = SubResource("ConcavePolygonShape3D_skql2")
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.03696, -1.58022, 2.67331)
 
 [node name="DübelContainer" type="Node3D" parent="."]
-visible = false
 
 [node name="Dübel" type="Area3D" parent="DübelContainer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.75515, -1.68786, 2.71943)

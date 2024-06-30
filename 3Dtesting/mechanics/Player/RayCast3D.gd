@@ -13,7 +13,7 @@ var trowel_collider = null
 var spirit_level_collider = null
 
 
-
+signal start_dübel_minigame
 signal start_saw_minigame
 
 @onready var point = $"../Root Scene3/RootNode/metarig/Skeleton3D/BoneAttachment3D/Hold"
@@ -182,6 +182,8 @@ func _process(delta):
 						collider.open = true
 					else:
 						collider.open = false
+				if collider.is_in_group("wallguide"):
+					emit_signal("start_dübel_minigame") #signal function is in stairs script for the carpenter scene
 
 	if obj != null:
 		last = obj.global_position
