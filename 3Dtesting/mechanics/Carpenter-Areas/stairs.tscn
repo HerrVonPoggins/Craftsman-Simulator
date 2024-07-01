@@ -405,6 +405,7 @@ _data = {
 script = ExtResource("1_ue7se")
 
 [node name="Area3D" type="Area3D" parent="."]
+input_ray_pickable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.43956, 0.488338, 1.72023)
