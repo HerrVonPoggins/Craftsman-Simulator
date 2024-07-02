@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://0xfjes5t40nk" path="res://ui/Regler.png" id="1_w1m7x"]
 
+
 [node name="settings_regler" type="TextureButton"]
 offset_left = -271.0
 offset_top = 82.0

@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://crat4alhu2v8o" path="res://ui/player_ui/settings_regler.tscn" id="10_1ica6"]
 [ext_resource type="Texture2D" uid="uid://bhhk1l5sabkp6" path="res://assets/textures/settings_symbol.png" id="11_7v0kh"]
 
+
 [sub_resource type="Theme" id="Theme_noswb"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_twvs0"]

@@ -35,7 +35,7 @@ func _process(delta):
 		water_value.visible = true
 		sand_value.visible = true
 	if water == true: #and Global.tutorial_finished == true:
-		if Input.is_action_pressed("interagieren"):
+		if Input.is_action_pressed("interagieren") and Global.tutorial_finished == true:
 			water_value.value += 100 * delta
 	if water_value.value >= 100:
 		water_value.value = 100
@@ -43,7 +43,7 @@ func _process(delta):
 			emit_signal("sand_level_reached")
 			water_filled = true
 	if concrete == true: #and Global.tutorial_finished == true:
-		if Input.is_action_pressed("interagieren"):
+		if Input.is_action_pressed("interagieren")and Global.tutorial_finished == true:
 			cement_value.value += 100 * delta
 	if cement_value.value >= 100:
 		cement_value.value = 100
@@ -51,7 +51,7 @@ func _process(delta):
 			emit_signal("sand_level_reached")
 			cement_filled = true
 	if sand == true: #and Global.tutorial_finished == true:
-		if Input.is_action_pressed("interagieren"):
+		if Input.is_action_pressed("interagieren")and Global.tutorial_finished == true:
 			sand_value.value += 100 * delta
 	if sand_value.value >= 100:
 		if sand_level_1 == false:
@@ -74,15 +74,15 @@ func _process(delta):
 func _on_range_body_entered(body):
 	if body.is_in_group("water"):
 		water = true
-		if minigame_started == false:
+		if minigame_started == false and Global.tutorial_finished == true:
 			minigame_started = true
 	if body.is_in_group("concrete"):
 		concrete = true
-		if minigame_started == false:
+		if minigame_started == false and Global.tutorial_finished == true:
 			minigame_started = true
 	if body.is_in_group("sand"):
 		sand = true
-		if minigame_started == false:
+		if minigame_started == false and Global.tutorial_finished == true:
 			minigame_started = true
 
 var mixer_started = false

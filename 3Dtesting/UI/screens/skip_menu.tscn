@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://dbv2idc48ijaa"]
 
-[ext_resource type="Script" path="res://UI/screens/skip_menu.gd" id="1_8u6j1"]
+[ext_resource type="Script" path="res://ui/screens/skip_menu.gd" id="1_8u6j1"]
+
 
 [node name="SkipMenu" type="Control"]
 visible = false

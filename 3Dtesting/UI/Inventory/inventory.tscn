@@ -1,8 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://djw5gwv30bvm1"]
 
-[ext_resource type="Script" path="res://UI/Inventory/inventory.gd" id="1_2k2bt"]
-[ext_resource type="Texture2D" uid="uid://6iw5ch25qnnj" path="res://UI/Inventory_slot.png" id="2_tecys"]
+[ext_resource type="Script" path="res://ui/Inventory/inventory.gd" id="1_2k2bt"]
+[ext_resource type="Texture2D" uid="uid://6iw5ch25qnnj" path="res://ui/Inventory_slot.png" id="2_tecys"]
 [ext_resource type="FontFile" uid="uid://ccolb6uftch63" path="res://assets/fonts/AldotheApache.ttf" id="3_8anv8"]
+
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tm15q"]
 texture = ExtResource("2_tecys")
