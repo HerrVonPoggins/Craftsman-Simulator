@@ -3,6 +3,8 @@ extends RayCast3D
 signal mixer_highlight
 signal wedge_highlight
 
+signal start_dübel_minigame
+
 var mat1 = load("res://assets/textures/material_white.tres")
 var last = Vector3.ZERO
 var obj = null
@@ -180,6 +182,9 @@ func _process(delta):
 						collider.open = true
 					else:
 						collider.open = false
+
+				if collider.is_in_group("wallguide"):
+					emit_signal("start_dübel_minigame")
 
 	if obj != null:
 		last = obj.global_position

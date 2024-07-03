@@ -28,74 +28,80 @@ func _process(delta):
 		await  animation_player.animation_finished
 		emit_signal("dübel_minigame_finished")
 		dübel_amount_2 = 0
-		$"DübelContainer".visible = false
 
-
+var steps_visible = 0
 func _on_area_3d_body_entered(body):
-	if body.is_in_group("wallguide"):
-		body.queue_free()
-		$Wallguide.visible = true
-		await get_tree().create_timer(1).timeout
-		emit_signal("player_visibility_off")
-		$"CameraStand/CameraDübel".current = true
-		$"DübelContainer".visible = true
-		Global.switch_minigame_on = true
-		Global.stay = true
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-
-	elif body.is_in_group("step1"):
+	if body.is_in_group("step1"):
 		body.queue_free()
 		$Step1.visible = true
+		steps_visible += 1
 	elif body.is_in_group("step2"):
 		body.queue_free()
 		$Step2.visible = true
+		steps_visible += 1
 	elif body.is_in_group("step3"):
 		body.queue_free()
 		$Step3.visible = true
+		steps_visible += 1
 	elif body.is_in_group("step4"):
 		body.queue_free()
 		$Step4.visible = true
+		steps_visible += 1
 	elif body.is_in_group("step5"):
 		body.queue_free()
 		$Step5.visible = true
+		steps_visible += 1
 	elif body.is_in_group("step6"):
 		body.queue_free()
 		$Step6.visible = true
+		steps_visible += 1
 	elif body.is_in_group("step7"):
 		body.queue_free()
 		$Step7.visible = true
+		steps_visible += 1
 	elif body.is_in_group("step8"):
 		body.queue_free()
 		$Step8.visible = true
+		steps_visible += 1
 	elif body.is_in_group("step9"):
 		body.queue_free()
 		$Step9.visible = true
+		steps_visible += 1
 	elif body.is_in_group("step10"):
 		body.queue_free()
 		$Step10.visible = true
+		steps_visible += 1
 	elif body.is_in_group("step11"):
 		body.queue_free()
 		$Step11.visible = true
+		steps_visible += 1
 	elif body.is_in_group("step12"):
 		body.queue_free()
 		$Step12.visible = true
+		steps_visible += 1
 	elif body.is_in_group("step13"):
 		body.queue_free()
 		$Step13.visible = true
+		steps_visible += 1
 	elif body.is_in_group("step14"):
 		body.queue_free()
 		$Step14.visible = true
+		steps_visible += 1
+	if steps_visible == 14:
+		$"DübelContainer".visible = false
 
 var dübel_amount_1 = 0
 func _on_dübel_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.pressed:
-				#await  animation_player.animation_finished
-				animation_player.play("Dübel1")
-				dübel_amount_1 += 1
-				await animation_player.animation_finished
-				$"DübelContainer/Dübel/Outline".visible = false
+				if animation_player.is_playing():
+					await  animation_player.animation_finished
+				if !animation_player.is_playing():
+					animation_player.play("Dübel1")
+					dübel_amount_1 += 1
+					await animation_player.animation_finished
+					$"DübelContainer/Dübel/Outline".visible = false
 
 func _on_dübel_2_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
@@ -441,3 +447,12 @@ func _on_dübel_28_input_event(camera, event, position, normal, shape_idx):
 					dübel_amount_2 += 1
 					await  animation_player.animation_finished
 					$"DübelContainer/Dübel28/Outline28".visible = false
+
+
+func _on_ray_cast_3d_start_dübel_minigame():
+	emit_signal("player_visibility_off")
+	$"CameraStand/CameraDübel".current = true
+	$"DübelContainer".visible = true
+	Global.switch_minigame_on = true
+	Global.stay = true
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
