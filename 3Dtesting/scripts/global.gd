@@ -79,9 +79,9 @@ var mouse_sense = 6
 var player_visibility = true
 
 
-
-
-
+var wall_sawed = false
+var plaster_done = false
+var can_power = 0
 #save and load func
 
 func save():

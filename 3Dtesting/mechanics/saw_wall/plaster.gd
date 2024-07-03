@@ -73,6 +73,7 @@ func _on_area_3d_body_entered(body):
 
 func _on_timer_timeout():
 	#$StaticBody3D/CollisionShape3D.call_deferred("set_disabled", true)
+	Global.plaster_done = true
 	mixed = true
 	played3 = true
 	Global.plaster_mixing = false

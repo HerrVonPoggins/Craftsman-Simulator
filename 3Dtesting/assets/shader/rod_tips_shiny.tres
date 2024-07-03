@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://c0nvdlvrmmkxg"]
+
+[ext_resource type="Shader" path="res://scenes/CorePlayable/CorePlayable.gdshader" id="1_6aigv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y1m11"]
+render_priority = 0
+shader = ExtResource("1_6aigv")
+shader_parameter/shine_color = Color(1, 1, 1, 1)
+shader_parameter/cycle_interval = 1.0
+shader_parameter/shine_speed = 3.0
+shader_parameter/shine_width = 3.0
+
+[resource]
+next_pass = SubResource("ShaderMaterial_y1m11")
+albedo_color = Color(0, 0, 0, 1)

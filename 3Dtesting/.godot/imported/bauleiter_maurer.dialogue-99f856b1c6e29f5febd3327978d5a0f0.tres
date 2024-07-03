@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_x4s3n"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_pss3v"]
 
 [resource]
-script = ExtResource("1_x4s3n")
+script = ExtResource("1_pss3v")
 using_states = PackedStringArray()
 titles = {
 "this_is_a_node_title": "2"
@@ -454,9 +454,9 @@ lines = {
 "notes": "",
 "parent_id": "39",
 "tags": PackedStringArray(),
-"text": "bitte melde dich beim Bär.",
+"text": "Deine Aufgaben für den ersten Tag bekommst du von unserem Maurer (Bär), schau doch mal bei ihm vorbei.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "bitte melde dich beim Bär.",
+"translation_key": "Deine Aufgaben für den ersten Tag bekommst du von unserem Maurer (Bär), schau doch mal bei ihm vorbei.",
 "type": &"dialogue"
 },
 "41": {
@@ -612,7 +612,7 @@ if Global.current_scene == 1:
 		=> END
 
 	if Global.dialogue_played == 2:
-		Bauleiter: bitte melde dich beim Bär.
+		Bauleiter: Deine Aufgaben für den ersten Tag bekommst du von unserem Maurer (Bär), schau doch mal bei ihm vorbei.
 	set Global.dialogue_open = false
 #if Global.current_scene == 2:
 #	set Global.dialogue_open = true

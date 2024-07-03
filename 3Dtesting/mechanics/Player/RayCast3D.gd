@@ -38,9 +38,7 @@ func _process(delta):
 	if Global.brick_is_being_placed == true:
 		_place_brick()
 	
-	if Input.is_action_just_pressed("kamera"):
-		
-		$"../Root Scene3/AnimationPlayer".play("metarig|grab")
+
 	
 	#starts the interactable animation if hovered over the right objects
 	if Global.press_e == true and obj == null and get_collider() != null: 
@@ -168,13 +166,13 @@ func _process(delta):
 					emit_signal("start_saw_minigame")
 				if collider.is_in_group("rod_extend"):
 					collider.scale = Vector3(1,1.35,1)
-				if collider.is_in_group("curcuit_minigame"):
+				if collider.is_in_group("curcuit_minigame") and Global.can_power >= 2:
 					Global.curcuit_minigame_on = true
-				if collider.is_in_group("switch_minigame"):
+				if collider.is_in_group("switch_minigame") and Global.can_power >= 2:
 					Global.switch_minigame_on = true
 				if collider.is_in_group("plaster_mixer"):
 					Global.plaster_mixing = true
-				if collider.is_in_group("power_box"):
+				if collider.is_in_group("power_box") and Global.can_power >= 2:
 					Global.power_box = true
 				if collider.is_in_group("open"):
 					print(collider.open)

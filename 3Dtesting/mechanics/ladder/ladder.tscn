@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpcdmpphhdxv6"]
+
+[ext_resource type="Script" path="res://mechanics/ladder/Ladder.gd" id="1_001ci"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m4uxi"]
+size = Vector3(3.36664, 9.64423, 3.38039)
+
+[node name="Ladder" type="Node3D"]
+script = ExtResource("1_001ci")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0987244, 4.32211, 0.00791168)
+shape = SubResource("BoxShape3D_m4uxi")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

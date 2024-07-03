@@ -1,6 +1,7 @@
 CollisionShape3D
-MeshInstance3D
 StaticBody3D
+Area3D
+MeshInstance3D
 Label
 AnimationPlayer
 Camera3D
@@ -9,6 +10,5 @@ TextureButton
 Button
 Panel
 RigidBody3D
-Area3D
 AudioStreamPlayer3D
 Node3D

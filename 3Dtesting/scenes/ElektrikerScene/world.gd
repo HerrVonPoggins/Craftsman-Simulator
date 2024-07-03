@@ -19,7 +19,8 @@ func _on_control_closed():
 
 func _process(delta):
 	
-	
+	if Global.wall_sawed == true:
+		$Plaster.visible = true
 	
 	if generator_on == 4:
 		$Transition._change_scene("res://UI/screens/endscreen.tscn")

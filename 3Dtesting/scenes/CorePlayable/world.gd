@@ -11,6 +11,8 @@ var played6 = false
 var played7 = false
 var dialogue_played = 0
 var done = false
+var shader1 = load("res://assets/shader/rod_tips.tres")
+var shader2 = load("res://assets/shader/rod_tips_shiny.tres")
 @onready var wedge = $Props/Wedge/Mesh
 @onready var water = $Props/Water/Mesh
 @onready var sand1 = $Props/Sand/Mesh
@@ -32,7 +34,6 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
-		Global.roof_finished = true
 		pass
 		
 	#when the filling minigame is finished the solid roof becomes visible
@@ -93,6 +94,8 @@ func _process(delta):
 	if Global.concrete_mixed == true and $Area3D/Bucket_water2.visible == false and done == false:
 		$Area3D/Bucket_water2.visible = true
 		$Props/ConcreteBucket/CollisionShape3D.call_deferred("set_disabled", false)
+		$Props/Wedge/Mesh.set_surface_override_material(0, load("res://assets/shader/wedges_shiny.tres"))
+		$Props/Wedge2/Mesh.set_surface_override_material(0, load("res://assets/shader/wedges_shiny.tres"))
 		done = true
 
 
@@ -115,6 +118,17 @@ func _process(delta):
 	# once the tutorial is done a dialogue plays and the player can continue 
 	if Global.tutorial_finished == true and counter == 0:
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_1.dialogue"))
+		$Props/Concrete/Mesh.set_surface_override_material(0, load("res://assets/shader/concrete_bag_top_shiny.tres"))
+		$Props/Concrete/Mesh.set_surface_override_material(1, load("res://assets/shader/concrete_bag_body_shiny.tres"))
+		$Props/Sand/Mesh.set_surface_override_material(0, load("res://assets/shader/sand_bag_top_shiny.tres"))
+		$Props/Sand/Mesh.set_surface_override_material(1, load("res://assets/shader/sand_bag_body_shiny.tres"))
+		$Props/Sand2/Mesh.set_surface_override_material(0, load("res://assets/shader/sand_bag_top_shiny.tres"))
+		$Props/Sand2/Mesh.set_surface_override_material(1, load("res://assets/shader/sand_bag_body_shiny.tres"))
+		$Props/Sand3/Mesh.set_surface_override_material(0, load("res://assets/shader/sand_bag_top_shiny.tres"))
+		$Props/Sand3/Mesh.set_surface_override_material(1, load("res://assets/shader/sand_bag_body_shiny.tres"))
+		$Props/Sand4/Mesh.set_surface_override_material(0, load("res://assets/shader/sand_bag_top_shiny.tres"))
+		$Props/Sand4/Mesh.set_surface_override_material(1, load("res://assets/shader/sand_bag_body_shiny.tres"))
+		$Props/Water/Mesh.set_surface_override_material(0, load("res://assets/shader/bucket_body_shiny.tres"))
 		counter = 0.5
 
 
@@ -126,6 +140,9 @@ func _process(delta):
 		$StringWedge/String.visible = true
 		Global.string = true
 		Global.isolation = true
+		$Props/Brick1/Mesh.set_surface_override_material(0, load("res://assets/shader/brick_body_shiny.tres"))
+		$Props/Brick2/Mesh.set_surface_override_material(0, load("res://assets/shader/brick_body_shiny.tres"))
+		$Props/Brick3/Mesh.set_surface_override_material(0, load("res://assets/shader/brick_body_shiny.tres"))
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_3.dialogue"))
 
 
@@ -173,6 +190,10 @@ func _process(delta):
 		$Doortop6.visible = true
 		$Doortop7.visible = true
 		$Doortop8.visible = true
+		$Props/Doorframe/Mesh.set_surface_override_material(0, load("res://assets/shader/door_top_body_shiny.tres"))
+		$Props/Doorframe2/Mesh.set_surface_override_material(0, load("res://assets/shader/door_top_body_shiny.tres"))
+		$Props/Doorframe3/Mesh.set_surface_override_material(0, load("res://assets/shader/door_top_body_shiny.tres"))
+		$Props/Doorframe4/Mesh.set_surface_override_material(0, load("res://assets/shader/door_top_body_shiny.tres"))
 		$"house_base/geruest merged".visible = true
 		played = true
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_4.dialogue"))
@@ -201,10 +222,47 @@ func _process(delta):
 		$Rod17.visible = true
 		$Rod18.visible = true
 		$Rod19.visible = true
-		
-		
-		
-		
+		$Props/Rod/Mesh.set_surface_override_material(0, load("res://assets/shader/rod_tips_shiny.tres"))
+		$Props/Rod/Mesh.set_surface_override_material(2, load("res://assets/shader/rod_metal_shiny.tres"))
+		$Props/Rod2/Mesh.set_surface_override_material(0, load("res://assets/shader/rod_tips_shiny.tres"))
+		$Props/Rod2/Mesh.set_surface_override_material(2, load("res://assets/shader/rod_metal_shiny.tres"))
+		$Props/Rod3/Mesh.set_surface_override_material(0, load("res://assets/shader/rod_tips_shiny.tres"))
+		$Props/Rod3/Mesh.set_surface_override_material(2, load("res://assets/shader/rod_metal_shiny.tres"))
+		$Props/Rod4/Mesh.set_surface_override_material(0, load("res://assets/shader/rod_tips_shiny.tres"))
+		$Props/Rod4/Mesh.set_surface_override_material(2, load("res://assets/shader/rod_metal_shiny.tres"))
+		$Props/Rod5/Mesh.set_surface_override_material(0, load("res://assets/shader/rod_tips_shiny.tres"))
+		$Props/Rod5/Mesh.set_surface_override_material(2, load("res://assets/shader/rod_metal_shiny.tres"))
+		$Props/Rod6/Mesh.set_surface_override_material(0, load("res://assets/shader/rod_tips_shiny.tres"))
+		$Props/Rod6/Mesh.set_surface_override_material(2, load("res://assets/shader/rod_metal_shiny.tres"))
+		$Props/Rod7/Mesh.set_surface_override_material(0, load("res://assets/shader/rod_tips_shiny.tres"))
+		$Props/Rod7/Mesh.set_surface_override_material(2, load("res://assets/shader/rod_metal_shiny.tres"))
+		$Props/Rod8/Mesh.set_surface_override_material(0, load("res://assets/shader/rod_tips_shiny.tres"))
+		$Props/Rod8/Mesh.set_surface_override_material(2, load("res://assets/shader/rod_metal_shiny.tres"))
+		$Props/Rod9/Mesh.set_surface_override_material(0, load("res://assets/shader/rod_tips_shiny.tres"))
+		$Props/Rod9/Mesh.set_surface_override_material(2, load("res://assets/shader/rod_metal_shiny.tres"))
+		$Props/Rod10/Mesh.set_surface_override_material(0, load("res://assets/shader/rod_tips_shiny.tres"))
+		$Props/Rod10/Mesh.set_surface_override_material(2, load("res://assets/shader/rod_metal_shiny.tres"))
+		$Props/Rod11/Mesh.set_surface_override_material(0, load("res://assets/shader/rod_tips_shiny.tres"))
+		$Props/Rod11/Mesh.set_surface_override_material(2, load("res://assets/shader/rod_metal_shiny.tres"))
+		$Props/Rod12/Mesh.set_surface_override_material(0, load("res://assets/shader/rod_tips_shiny.tres"))
+		$Props/Rod12/Mesh.set_surface_override_material(2, load("res://assets/shader/rod_metal_shiny.tres"))
+		$Props/Rod13/Mesh.set_surface_override_material(0, load("res://assets/shader/rod_tips_shiny.tres"))
+		$Props/Rod13/Mesh.set_surface_override_material(2, load("res://assets/shader/rod_metal_shiny.tres"))
+		$Props/Rod14/Mesh.set_surface_override_material(0, load("res://assets/shader/rod_tips_shiny.tres"))
+		$Props/Rod14/Mesh.set_surface_override_material(2, load("res://assets/shader/rod_metal_shiny.tres"))
+		$Props/Rod15/Mesh.set_surface_override_material(0, load("res://assets/shader/rod_tips_shiny.tres"))
+		$Props/Rod15/Mesh.set_surface_override_material(2, load("res://assets/shader/rod_metal_shiny.tres"))
+		$Props/Rod16/Mesh.set_surface_override_material(0, load("res://assets/shader/rod_tips_shiny.tres"))
+		$Props/Rod16/Mesh.set_surface_override_material(2, load("res://assets/shader/rod_metal_shiny.tres"))
+		$Props/Rod17/Mesh.set_surface_override_material(0, load("res://assets/shader/rod_tips_shiny.tres"))
+		$Props/Rod17/Mesh.set_surface_override_material(2, load("res://assets/shader/rod_metal_shiny.tres"))
+		$Props/Rod18/Mesh.set_surface_override_material(0, load("res://assets/shader/rod_tips_shiny.tres"))
+		$Props/Rod18/Mesh.set_surface_override_material(2, load("res://assets/shader/rod_metal_shiny.tres"))
+		$Props/Rod19/Mesh.set_surface_override_material(0, load("res://assets/shader/rod_tips_shiny.tres"))
+		$Props/Rod19/Mesh.set_surface_override_material(2, load("res://assets/shader/rod_metal_shiny.tres"))
+
+
+
 #functions for the info hub to pause the scene
 func _on_control_opened():
 	get_tree().paused = true

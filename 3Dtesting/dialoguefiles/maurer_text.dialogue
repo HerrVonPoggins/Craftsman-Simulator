@@ -24,7 +24,7 @@ if Global.dialogue_count == 2 and Global.dialogue_played == 2:
 	
 if Global.dialogue_played == 3:
 	set Global.dialogue_open = true
-	Maurer: kümmer dich um den Mörtel.
+	Maurer: Erledige zuerst deine Aufgaben, danach bekommst du neue Aufgaben zugeteilt.
 	set Global.dialogue_open = false
 		
 	

@@ -37,7 +37,7 @@ if Global.current_scene == 1:
 		=> END
 
 	if Global.dialogue_played == 2:
-		Bauleiter: bitte melde dich beim Bär.
+		Bauleiter: Deine Aufgaben für den ersten Tag bekommst du von unserem Maurer (Bär), schau doch mal bei ihm vorbei.
 	set Global.dialogue_open = false
 #if Global.current_scene == 2:
 #	set Global.dialogue_open = true

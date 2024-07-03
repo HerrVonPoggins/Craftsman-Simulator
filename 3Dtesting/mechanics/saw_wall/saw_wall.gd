@@ -32,6 +32,8 @@ func _process(delta):
 		Global.crosshair_off = false
 		Global.saw_wall = false
 
+	if saw_line1 >= 2 and saw_line2 >= 2:
+		Global.wall_sawed = true
 	
 	
 #moves the saw with mouse
@@ -56,7 +58,7 @@ func _on_toolinsert_1_body_entered(body):
 		Global.stay = true
 		Global.crosshair_off = true
 		
-	if body.is_in_group("cable"):
+	if body.is_in_group("cable") and Global.wall_sawed == true:
 		body.queue_free()
 		Global.is_holding = false
 		Global.can_extend = false
@@ -71,7 +73,7 @@ func _on_toolinsert_2_body_entered(body):
 		Global.stay = true
 		Global.crosshair_off = true
 		
-	if body.is_in_group("cable"):
+	if body.is_in_group("cable") and Global.wall_sawed == true:
 		body.queue_free()
 		Global.is_holding = false
 		Global.can_extend = false
@@ -83,6 +85,7 @@ func _on_plaster_outlets_body_entered(body):
 		$PlasterOutlets/PlasterPlaced.visible = true
 	if body.is_in_group("outlet") and $PlasterOutlets/PlasterPlaced.visible == true:
 		body.queue_free()
+		Global.can_power += 1
 		$PlasterOutlets/OutletCase.visible = true
 
 func _on_plaster_outlets_2_body_entered(body):
@@ -90,6 +93,7 @@ func _on_plaster_outlets_2_body_entered(body):
 		$PlasterOutlets2/PlasterPlaced.visible = true
 	if body.is_in_group("outlet") and $PlasterOutlets/PlasterPlaced.visible == true:
 		body.queue_free()
+		Global.can_power += 1
 		$PlasterOutlets2/OutletCase.visible = true
 
 
