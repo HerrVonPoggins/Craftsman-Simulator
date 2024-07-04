@@ -2,22 +2,22 @@ extends RayCast3D
 
 signal mixer_highlight
 signal wedge_highlight
-
+signal start_saw_minigame
 signal start_dübel_minigame
 
 var mat1 = load("res://assets/textures/material_white.tres")
 var last = Vector3.ZERO
 var obj = null
-var temp
-@onready var animation_arms = $"../../../../Root Scene/AnimationPlayer"
+var temp = null
+var was_shiny = false
 
 var trowel_collider = null
 var spirit_level_collider = null
 
 
 
-signal start_saw_minigame
 
+@onready var animation_arms = $"../../../../Root Scene/AnimationPlayer"
 @onready var point = $"../Root Scene3/RootNode/metarig/Skeleton3D/BoneAttachment3D/Hold"
 @onready var player = $"../../../.."
 
@@ -187,10 +187,14 @@ func _process(delta):
 					emit_signal("start_dübel_minigame")
 
 	if obj != null:
+
 		last = obj.global_position
 		obj.position = point.global_position
 		if obj.is_class("RigidBody3D"):
-			
+			if obj.get_node("Mesh").material_overlay != null:
+				was_shiny = true
+			obj.get_node("Mesh").set_deferred("material_overlay", null)
+			temp = obj.get_node("Mesh")
 			obj.linear_velocity = Vector3.ZERO
 			obj.look_at($"../VisionCenter".global_position)
 
@@ -200,10 +204,15 @@ func _process(delta):
 			if obj.is_class("RigidBody3D"):
 				var velocity = obj.position - last
 				obj.linear_velocity = velocity * 100
+				
 		obj = null
-
+		
 #rightclick to release object
-	if Input.is_action_pressed("rightclick"):
+	if Input.is_action_just_pressed("rightclick"):
+		if was_shiny == true:
+			temp.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		temp = null
+		was_shiny = false
 		Global.can_extend = false
 		$"../Root Scene3/AnimationPlayer".play("Idle_Walking")
 		Global.is_holding = false

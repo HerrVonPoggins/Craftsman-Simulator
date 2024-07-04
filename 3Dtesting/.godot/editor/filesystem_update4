@@ -1,5 +1,7 @@
-res://scenes/Carpenter/carpenter_world.tscn
+res://ui/screens/titlescreen.tscn
 res://scenes/Carpenter/carpenter_world.gd
+res://scenes/CorePlayable/shine_shader.gdshader
+res://scenes/CorePlayable/CorePlayable.gdshader
 res://assets/shader/brick_body.tres
 res://assets/shader/concrete_bag_top.tres
 res://assets/shader/concrete_bag_body.tres
@@ -9,6 +11,10 @@ res://assets/shader/bucket_body.tres
 res://assets/shader/rod_metal.tres
 res://assets/shader/door_top_body.tres
 res://assets/shader/wedges.tres
-res://ui/screens/titlescreen.tscn
+res://scenes/Carpenter/carpenter_world.tscn
 res://scenes/CorePlayable/CorePlayable.tscn
 res://scenes/ElektrikerScene/Elektriker.tscn
+res://mechanics/Player/node_3d.tscn
+res://mechanics/Player/CharacterFP+WASD.gd
+res://mechanics/Player/player_signals.gd
+res://mechanics/Player/RayCast3D.gd

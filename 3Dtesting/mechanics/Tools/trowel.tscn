@@ -175,7 +175,7 @@ size = Vector3(0.695008, 0.763488, 0.228027)
 [node name="Trowel" type="RigidBody3D" groups=["grab", "trowel"]]
 script = ExtResource("1_eax8e")
 
-[node name="mörtelkelle" type="MeshInstance3D" parent="."]
+[node name="Mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(5.89897, -36.0979, 56.3918, 0.0748594, -30.2888, -68.0145, 53.6949, 4.00797, -6.10044, -0.147597, 0.250235, 0.0200106)
 mesh = SubResource("ArrayMesh_dkvsd")
 skeleton = NodePath("")

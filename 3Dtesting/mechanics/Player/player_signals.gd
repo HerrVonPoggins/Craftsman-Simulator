@@ -4,15 +4,16 @@ signal start_mixer
 signal concrete_bucket_pos_reached
 signal delete_sand_container
 
-@onready var trowel = preload("res://mechanics/Tools/trowel.tscn")
-@onready var hold = $"CharacterBody3D/Neck/Camera3D/Root Scene3/RootNode/metarig/Skeleton3D/BoneAttachment3D/Hold"
-
 var played = false
 
 
 
-@onready var concrete_bucket_spawn = %ConcreteBucketSpawn
+
 @export var pointer = Vector3.ZERO
+@onready var trowel = preload("res://mechanics/Tools/trowel.tscn")
+@onready var hold = $"CharacterBody3D/Neck/Camera3D/Root Scene3/RootNode/metarig/Skeleton3D/BoneAttachment3D/Hold"
+@onready var concrete_bucket_spawn = %ConcreteBucketSpawn
+
 #makes the bucket static when it is put in the right spot
 
 func _process(delta):
@@ -45,10 +46,8 @@ func _process(delta):
 		$"CharacterBody3D/Neck/Camera3D/Root Scene3/AnimationPlayer".play("Idle_Walking")
 		
 
-	$CharacterBody3D/Neck/Camera3D/Arrowhead.look_at(pointer)
+	#$CharacterBody3D/Neck/Camera3D/Arrowhead.look_at(pointer)
 
-	#if Input.is_action_just_pressed("kamera"):
-		#$"CharacterBody3D/Neck/Root Scene/AnimationPlayer".play("GrabAction_001")
 
 	if Global.crosshair_off == true:
 		$CharacterBody3D/Neck/Camera3D/TextureRect.visible = false

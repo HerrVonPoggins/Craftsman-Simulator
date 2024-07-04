@@ -1,6 +1,6 @@
-res://mechanics/ladder
 res://assets/shader
 res://scenes/CorePlayable
+res://mechanics/ladder
 res://UI/screens
 res://assets/carpenter-assets
 res://mechanics/door_placing

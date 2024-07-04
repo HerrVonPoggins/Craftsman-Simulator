@@ -75,7 +75,6 @@ func _physics_process(delta):
 		
 	if not Input.is_action_pressed("interagieren") and is_up == true:
 		is_up = false
-		#await get_tree().create_timer(2).timeout
 		$"../Animation".play_backwards("arm")
 		$"Neck/Camera3D/Root Scene3/AnimationPlayer".play_backwards("metarig|sack in ruehrding")
 
@@ -86,6 +85,7 @@ func _physics_process(delta):
 		is_crouching = true
 	if not Input.is_action_pressed("crouch") and is_crouching == true:
 		$"../Animation".play_backwards("crouch")
+		await $"../Animation".animation_finished
 		is_crouching = false
 
 	# jump
