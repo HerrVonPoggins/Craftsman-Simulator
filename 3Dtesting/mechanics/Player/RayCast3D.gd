@@ -211,7 +211,7 @@ func _process(delta):
 		
 #rightclick to release object
 	if Input.is_action_just_pressed("rightclick"):
-		if was_shiny == true:
+		if was_shiny == true and obj != null:
 			temp.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 		temp = null
 		was_shiny = false

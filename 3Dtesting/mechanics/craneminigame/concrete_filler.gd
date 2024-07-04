@@ -8,9 +8,10 @@ var is_up = false
 
 #starts the game when visible
 func _process(delta):
-	if $".".visible == true:
+	if $".".visible == true and Global.filler_started == true:
 		$Camera3D.current = true
 		Global.stay = true
+		$"Root Scene4/RootNode".visible = true
 		Global.crosshair_off = true
 		Global.player_visibility = false
 

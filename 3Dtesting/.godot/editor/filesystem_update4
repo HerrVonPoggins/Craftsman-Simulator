@@ -27,3 +27,4 @@ res://mechanics/build_wall/wall.gd
 res://mechanics/craneminigame/concrete_filler.tscn
 res://mechanics/Player/RayCast3D.gd
 res://scripts/global.gd
+res://mechanics/craneminigame/concrete_filler.gd

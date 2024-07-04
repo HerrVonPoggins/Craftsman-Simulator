@@ -9,6 +9,7 @@ var played4 = false
 var played5 = false
 var played6 = false
 var played7 = false
+var played8 = false
 var dialogue_played = 0
 var done = false
 
@@ -34,8 +35,15 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
+		#get_tree().reload_current_scene()
+		Global.wall_finished = true
+		Global.roof_finished = true
 		pass
-
+		
+		#unbug yourself by teleporting back to startpoint
+	if Input.is_action_just_pressed("reset"):
+		$Player.get_node("CharacterBody3D").global_position = Vector3(-27.678, -15.318, 594.655)
+		print("reset")
 		
 	#when the filling minigame is finished the solid roof becomes visible
 	if Global.concrete_filled_roof == true and played6 == false:
@@ -50,12 +58,13 @@ func _process(delta):
 	if Global.roof_finished == true and played5 == false:
 		played5 = true
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_8.dialogue"))
-		$ConcreteFiller.visible = true
+		$"Root Scene2".visible = true
 		$FillerPump.visible = true
 		$FillerPump/CollisionShape3D.call_deferred("set_disabled", false)
 
-	if Global.filler_started == true:
-		$"Root Scene2".visible = true
+	if Global.filler_started == true and played8 == false:
+		played8 = true
+		$ConcreteFiller.visible = true
 
 	#make the wall outline invisible while the concrete is put on the bricks
 	if Global.placing_games_open == true:
