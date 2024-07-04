@@ -185,6 +185,8 @@ func _process(delta):
 
 				if collider.is_in_group("wallguide"):
 					emit_signal("start_dübel_minigame")
+				if collider.is_in_group("filler_pump"):
+					Global.filler_started = true
 
 	if obj != null:
 

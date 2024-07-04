@@ -51,6 +51,7 @@ func _on_concrete_body_entered(body):
 func _on_concrete_2_body_entered(body):
 	if concrete_1.visible == true:
 		concrete_2.visible = true
+		$"mörtel".visible = true
 
 func _on_concrete_3_body_entered(body):
 	if concrete_2.visible == true:
@@ -59,6 +60,7 @@ func _on_concrete_3_body_entered(body):
 func _on_concrete_4_body_entered(body):
 	if concrete_3.visible == true:
 		concrete_4.visible = true
+		$"mörtel".scale.x = 10
 
 func _on_concrete_body_exited(body):
 	pass
@@ -72,6 +74,8 @@ func _on_concrete_2_body_exited(body):
 		concrete_4.visible = false
 		concrete_5.visible = false
 		concrete_6.visible = false
+		$"mörtel".scale.x = 20
+		$"mörtel".visible = false
 
 func _on_concrete_3_body_exited(body):
 	if concrete_4.visible == false:
@@ -81,6 +85,8 @@ func _on_concrete_3_body_exited(body):
 		concrete_4.visible = false
 		concrete_5.visible = false
 		concrete_6.visible = false
+		$"mörtel".scale.x = 20
+		$"mörtel".visible = false
 
 #when last concrete is done the minigame ends and scene deletes itself
 func _on_concrete_4_body_exited(body):
@@ -91,6 +97,8 @@ func _on_concrete_4_body_exited(body):
 		concrete_4.visible = false
 		concrete_5.visible = false
 		concrete_6.visible = false
+		$"mörtel".scale.x = 20
+		$"mörtel".visible = false
 
 
 func _on_concrete_5_body_entered(body):
@@ -106,11 +114,14 @@ func _on_concrete_5_body_exited(body):
 		concrete_4.visible = false
 		concrete_5.visible = false
 		concrete_6.visible = false
+		$"mörtel".scale.x = 20
+		$"mörtel".visible = false
 
 
 func _on_concrete_6_body_entered(body):
 	if concrete_5.visible == true:
 		concrete_6.visible = true
+		$"mörtel".scale.x = 1
 
 
 func _on_concrete_6_body_exited(body):

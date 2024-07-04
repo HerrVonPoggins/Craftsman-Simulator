@@ -62,6 +62,8 @@ func _on_concrete_3_body_entered(body):
 func _on_concrete_4_body_entered(body):
 	if concrete_3.visible == true:
 		concrete_4.visible = true
+		$"mörtel".visible = true
+
 
 
 func _on_concrete_5_body_entered(body):
@@ -98,6 +100,8 @@ func _on_concrete_2_body_exited(body):
 		concrete_10.visible = false
 		concrete_11.visible = false
 		concrete_12.visible = false
+		$"mörtel".visible = false
+		$"mörtel".scale.x = 20
 
 func _on_concrete_3_body_exited(body):
 	if concrete_4.visible == false:
@@ -113,6 +117,8 @@ func _on_concrete_3_body_exited(body):
 		concrete_10.visible = false
 		concrete_11.visible = false
 		concrete_12.visible = false
+		$"mörtel".visible = false
+		$"mörtel".scale.x = 20
 
 func _on_concrete_4_body_exited(body):
 	if concrete_5.visible == false:
@@ -128,6 +134,8 @@ func _on_concrete_4_body_exited(body):
 		concrete_10.visible = false
 		concrete_11.visible = false
 		concrete_12.visible = false
+		$"mörtel".visible = false
+		$"mörtel".scale.x = 20
 
 func _on_concrete_5_body_exited(body):
 	if concrete_6.visible == false:
@@ -143,6 +151,8 @@ func _on_concrete_5_body_exited(body):
 		concrete_10.visible = false
 		concrete_11.visible = false
 		concrete_12.visible = false
+		$"mörtel".visible = false
+		$"mörtel".scale.x = 20
 
 func _on_concrete_6_body_exited(body):
 	if concrete_7.visible == false:
@@ -158,6 +168,8 @@ func _on_concrete_6_body_exited(body):
 		concrete_10.visible = false
 		concrete_11.visible = false
 		concrete_12.visible = false
+		$"mörtel".visible = false
+		$"mörtel".scale.x = 20
 
 #when last concrete is done the minigame ends and scene deletes itself
 func _on_concrete_7_body_exited(body):
@@ -174,13 +186,15 @@ func _on_concrete_7_body_exited(body):
 		concrete_10.visible = false
 		concrete_11.visible = false
 		concrete_12.visible = false
+		$"mörtel".visible = false
+		$"mörtel".scale.x = 20
 
 
 
 func _on_concrete_8_body_entered(body):
 	if concrete_7.visible == true:
 		concrete_8.visible = true
-
+		$"mörtel".scale.x = 10
 
 func _on_concrete_8_body_exited(body):
 	if concrete_8.visible == false:
@@ -196,6 +210,8 @@ func _on_concrete_8_body_exited(body):
 		concrete_10.visible = false
 		concrete_11.visible = false
 		concrete_12.visible = false
+		$"mörtel".visible = false
+		$"mörtel".scale.x = 20
 
 
 func _on_concrete_9_body_entered(body):
@@ -217,6 +233,8 @@ func _on_concrete_9_body_exited(body):
 		concrete_10.visible = false
 		concrete_11.visible = false
 		concrete_12.visible = false
+		$"mörtel".visible = false
+		$"mörtel".scale.x = 20
 
 
 func _on_concrete_10_body_entered(body):
@@ -238,6 +256,8 @@ func _on_concrete_10_body_exited(body):
 		concrete_10.visible = false
 		concrete_11.visible = false
 		concrete_12.visible = false
+		$"mörtel".visible = false
+		$"mörtel".scale.x = 20
 
 
 func _on_concrete_11_body_entered(body):
@@ -259,11 +279,13 @@ func _on_concrete_11_body_exited(body):
 		concrete_10.visible = false
 		concrete_11.visible = false
 		concrete_12.visible = false
+		$"mörtel".visible = false
+		$"mörtel".scale.x = 20
 
 func _on_concrete_12_body_entered(body):
 	if concrete_11.visible == true:
 		concrete_12.visible = true
-
+		$"mörtel".scale.x = 1
 
 func _on_concrete_12_body_exited(body):
 	if concrete_12.visible == true:

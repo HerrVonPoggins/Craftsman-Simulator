@@ -51,6 +51,10 @@ func _process(delta):
 		played5 = true
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_8.dialogue"))
 		$ConcreteFiller.visible = true
+		$FillerPump.visible = true
+		$FillerPump/CollisionShape3D.call_deferred("set_disabled", false)
+
+	if Global.filler_started == true:
 		$"Root Scene2".visible = true
 
 	#make the wall outline invisible while the concrete is put on the bricks
@@ -97,6 +101,8 @@ func _process(delta):
 		$Props/ConcreteBucket/CollisionShape3D.call_deferred("set_disabled", false)
 		$Props/Wedge/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 		$Props/Wedge2/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		$StringWedge.visible = true
+		$StringWedge2.visible = true
 		done = true
 
 
@@ -145,6 +151,7 @@ func _process(delta):
 		$Props/Brick2/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 		$Props/Brick3/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_3.dialogue"))
+		$Wall.visible = true
 
 
 
@@ -156,6 +163,10 @@ func _process(delta):
 		await get_tree().create_timer(3).timeout
 		$"house_base/geruest merged".visible = true
 		$"house_base/geruest merged/StaticBody3D/CollisionShape3D".call_deferred("set_disabled", false)
+		$Ladder/Area3D/CollisionShape3D.call_deferred("set_disabled", false)
+		$Ladder/StaticBody3D/CollisionShape3D.call_deferred("set_disabled", false)
+		
+		
 		$"house_anim_1(1)".visible = true
 		$"house_anim_1(1)/AnimationPlayer".play("Scene")
 		await  $"house_anim_1(1)/AnimationPlayer".animation_finished

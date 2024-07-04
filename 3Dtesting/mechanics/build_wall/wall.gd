@@ -36,6 +36,19 @@ func _on_area_3d_body_entered(body):
 		concrete_line_3 = true
 		Global.concrete = false
 
+
+	if Global.placing_games_open == true:
+		$Area3D/Outline1.visible = false
+		$Area3D/Outline2.visible = false
+		$Area3D/Outline3.visible = false
+
+	elif Global.placing_games_open == false and $Brick1.visible == false:
+		$Area3D/Outline1.visible = true
+	elif Global.placing_games_open == false and $Brick2.visible == false and $Brick1.visible == true:
+		$Area3D/Outline2.visible = true
+	elif Global.placing_games_open == false and $Brick3.visible == false and $Brick2.visible == true:
+		$Area3D/Outline3.visible = true
+
 	if body.is_in_group("brick") == true and Global.string == true:
 		
 		if brick_1.visible == false and body.is_in_group("cut") == false and concrete_line_1 == true and counter == 1 :

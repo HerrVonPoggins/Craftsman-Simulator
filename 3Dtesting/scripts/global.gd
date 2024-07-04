@@ -53,6 +53,7 @@ var concrete_filled_roof = false
 var placing_games_open = false
 var crosshair_off = false 
 var brick_is_being_placed = false
+var filler_started = false
 
 var checklist_hide = false
 var dialogue_played = 0
