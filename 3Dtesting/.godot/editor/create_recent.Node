@@ -1,9 +1,9 @@
-CollisionShape3D
+AnimationPlayer
 StaticBody3D
+CollisionShape3D
 Area3D
 MeshInstance3D
 Label
-AnimationPlayer
 Camera3D
 OmniLight3D
 TextureButton
