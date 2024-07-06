@@ -1,5 +1,5 @@
-CollisionShape3D
 StaticBody3D
+CollisionShape3D
 AnimationPlayer
 Area3D
 MeshInstance3D
