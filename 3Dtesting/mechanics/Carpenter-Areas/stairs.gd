@@ -89,6 +89,8 @@ func _on_area_3d_body_entered(body):
 		steps_visible += 1
 	if steps_visible == 14:
 		$"DübelContainer".visible = false
+		$StairsWalk/CollisionShape3D.disabled = false
+		$StairsWalk2/CollisionShape3D.disabled = false
 
 var dübel_amount_1 = 0
 func _on_dübel_input_event(camera, event, position, normal, shape_idx):
