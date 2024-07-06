@@ -40,6 +40,8 @@ func _process(delta):
 				Global.stay = false
 				Global.player_visibility = true
 				Global.power_box = false
+				$StaticBody3D2.remove_from_group("activate")
+				
 
 	
 

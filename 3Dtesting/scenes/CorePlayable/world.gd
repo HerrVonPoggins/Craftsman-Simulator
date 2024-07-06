@@ -36,8 +36,8 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
 		#get_tree().reload_current_scene()
-		Global.wall_finished = true
-		Global.roof_finished = true
+		#Global.wall_finished = true
+		#Global.roof_finished = true
 		pass
 		
 		#unbug yourself by teleporting back to startpoint
@@ -65,6 +65,8 @@ func _process(delta):
 	if Global.filler_started == true and played8 == false:
 		played8 = true
 		$ConcreteFiller.visible = true
+		$FillerPump.remove_from_group("activate")
+		$FillerPump.remove_from_group("filler_pump")
 
 	#make the wall outline invisible while the concrete is put on the bricks
 	if Global.placing_games_open == true:
@@ -91,6 +93,8 @@ func _process(delta):
 	if Global.crane_on == true and played2 == false:
 		$"Root Scene2/AnimationPlayer2".play("Kran teil1|Kran teil1_Go")
 		$"Root Scene2/AnimationPlayer".play("Kran teil1_001|Kran teil1_Los")
+		$"Root Scene2/RootNode/StaticBody3D".remove_from_group("activate")
+		$"Root Scene2/RootNode/StaticBody3D".remove_from_group("truck")
 		played2 = true
 		await get_tree().create_timer(5).timeout
 		$"Root Scene2".visible = false
@@ -359,6 +363,7 @@ func _on_saw_camera_brick_cut_correct():
 	Global.brick_saw_cam = false
 	$Props/Brick3.visible = true
 	Global.stay = false
+	$Saw.remove_from_group("activate")
 	$Player/CharacterBody3D/Neck/Camera3D.current = true
 	$Props/Brick3/CollisionShape3D.call_deferred("set_disabled", false)
 	$Props/Brick3.freeze = false

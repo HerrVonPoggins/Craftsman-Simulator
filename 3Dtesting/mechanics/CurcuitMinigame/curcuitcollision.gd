@@ -26,6 +26,11 @@ func _process(delta):
 		Global.crosshair_off = false
 		Global.stay = false
 		Global.player_visibility = true
+		$"../../../StaticBody3D".remove_from_group("activate")
+		
+		
+		
+		
 #curcuit minigame end condition
 	if $"../../../StaticBody3D2".rotation_degrees.z == 90 and $"../../../StaticBody3D3".rotation_degrees.z == -180 and played2 == false:
 		played2 = true
@@ -35,7 +40,18 @@ func _process(delta):
 		Global.crosshair_off = false
 		Global.stay = false
 		Global.player_visibility = true
-		
+		$"../../../StaticBody3D".remove_from_group("activate")
+		$"../../../StaticBody3D2".remove_from_group("activate")
+		$"../../../StaticBody3D3".remove_from_group("activate")
+		$"../../../StaticBody3D4".remove_from_group("activate")
+		$"../../../StaticBody3D5".remove_from_group("activate")
+		$"../../../StaticBody3D6".remove_from_group("activate")
+		$"../../../StaticBody3D7".remove_from_group("activate")
+		$"../../../StaticBody3D8".remove_from_group("activate")
+		$"../../../StaticBody3D9".remove_from_group("activate")
+		$"../../../StaticBody3D10".remove_from_group("activate")
+
+
 	if $"../../../StaticBody3D2".rotation_degrees.x == -40 and done == false:
 		$"../../../Node3D".rotate_z(deg_to_rad(20))
 

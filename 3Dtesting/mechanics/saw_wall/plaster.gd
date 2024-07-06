@@ -82,4 +82,5 @@ func _on_timer_timeout():
 	Global.crosshair_off = false
 	player.visible = true
 	$Stick.visible = false
+	$StaticBody3D.remove_from_group("activate")
 

@@ -24,6 +24,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("interagieren"):
 		if lock_in_correct == true:
 			emit_signal("brick_cut_correct")
+			$"..".remove_from_group("saw_minigame")
 			Global.stay = false
 			Global.crosshair_off = false
 			Global.player_visibility = true

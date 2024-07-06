@@ -97,7 +97,8 @@ func _on_player_start_mixer():
 			concrete = false
 			sand = false
 			mixer_started = true
-
+			$StaticBody3D.remove_from_group("activate")
+			$StaticBody3D.remove_from_group("cement_mixer")
 			Global.concrete_mixed = true
 			Global.dialogue_count = 3
 			Global.dialogue_replay = null
