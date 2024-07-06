@@ -4,3 +4,4 @@ res://scenes/CorePlayable/shine_shader.gdshader
 res://scenes/CorePlayable/CorePlayable.gdshader
 res://scenes/Carpenter/carpenter_world.tscn
 res://mechanics/Carpenter-Areas/stairs.gd
+res://mechanics/roof-building/roof.tscn
