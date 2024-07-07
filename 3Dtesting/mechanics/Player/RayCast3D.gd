@@ -28,6 +28,11 @@ var activate_is_open = false
 #The Raycast shoots a laser for a fixed range, on collision with something we can get the object  and check if it is in group "grab"
 #a object in group "grab" will then fixed on the hold point of the character until we release it.
 func _process(delta):
+	if obj == null:
+		was_shiny = false
+	
+	#if Input.is_action_just_pressed("kamera"):
+		#print(was_shiny)
 	#if obj == null:
 		#Global.is_holding = false
 		#Global.can_extend = false

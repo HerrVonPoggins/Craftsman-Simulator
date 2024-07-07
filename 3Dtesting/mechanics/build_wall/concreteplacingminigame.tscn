@@ -178,7 +178,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_krd65")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ypojc"]
-radius = 0.134598
+radius = 0.119625
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_x1w3t"]
 radius = 0.051962
@@ -226,7 +226,7 @@ mesh = SubResource("ArrayMesh_tutpo")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.194736, 0.17208, -0.0567241)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.194736, 0.190154, -0.0567241)
 shape = SubResource("SphereShape3D_ypojc")
 
 [node name="concrete" type="Area3D" parent="."]

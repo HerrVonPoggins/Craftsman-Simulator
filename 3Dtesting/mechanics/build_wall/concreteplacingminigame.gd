@@ -17,7 +17,7 @@ extends Node3D
 @onready var concrete_12 = $concrete12/MeshInstance3D2
 #starts the minigame once it becomes visible
 func _process(delta):
-	
+	$RigidBody3D.position.y = 0.145
 	if $".".visible == true:
 		$Camera3D.current = true
 		Global.placing_games_open = true
@@ -28,7 +28,7 @@ func _process(delta):
 
 
 	if Input.is_action_just_pressed("reset"):
-		$RigidBody3D.position = Vector3(-0.189,0.112,0)
+		$RigidBody3D.position = Vector3(-0.189,0.145,0)
 
 
 #moves the trowel with mouse

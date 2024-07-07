@@ -35,6 +35,7 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
+		
 		#get_tree().reload_current_scene()
 		#Global.wall_finished = true
 		#Global.roof_finished = true
@@ -71,7 +72,7 @@ func _process(delta):
 	#make the wall outline invisible while the concrete is put on the bricks
 	if Global.placing_games_open == true:
 		$Wall.visible = false
-	else:
+	elif Global.string == true:
 		$Wall.visible = true
 
 	if Global.rods == 3 and played7 == false:
