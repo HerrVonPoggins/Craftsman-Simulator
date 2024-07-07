@@ -11,6 +11,8 @@ var obj = null
 var temp = null
 var was_shiny = false
 
+var played = false
+
 var trowel_collider = null
 var spirit_level_collider = null
 
@@ -31,11 +33,7 @@ func _process(delta):
 	if obj == null:
 		was_shiny = false
 	
-	#if Input.is_action_just_pressed("kamera"):
-		#print(was_shiny)
-	#if obj == null:
-		#Global.is_holding = false
-		#Global.can_extend = false
+
 	if obj != null:
 		if Global.player_visibility == false:
 			obj.visible = false
@@ -112,6 +110,15 @@ func _process(delta):
 					await $"../Root Scene3/AnimationPlayer".animation_finished
 					await get_tree().create_timer(0.1).timeout
 					
+					#if played == false:
+						#played = true
+						#Checklist._interact_visual()
+						#Checklist._mouse_right_visual()
+						#get_tree().create_timer(5).timeout
+						#Checklist._interact_visual_hide()
+						#Checklist._mouse_right_visual_hide()
+					
+					
 					
 					if collider.is_in_group("can_extend"):
 						Global.can_extend = true
@@ -138,6 +145,11 @@ func _process(delta):
 		if obj == null:
 			var collider = get_collider()
 			if collider != null:
+
+				
+				
+				
+				
 				if collider.is_in_group("npc") and Global.dialogue_open == false:
 					Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/bauleiter_maurer.dialogue"))

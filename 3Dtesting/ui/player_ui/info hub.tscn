@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://ct23mbhdbwecb" path="res://ui/Log-Buch_Open.png" id="13_qmlyq"]
 [ext_resource type="Texture2D" uid="uid://nhi4c87607cc" path="res://ui/Maurer_Logbuch.png" id="14_i5ynq"]
 
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_748e5"]
 texture = ExtResource("2_b7f4i")
 modulate_color = Color(0.631373, 0.631373, 0.631373, 1)

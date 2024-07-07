@@ -1,10 +1,10 @@
+Label
 HScrollBar
 StaticBody3D
 CollisionShape3D
 AnimationPlayer
 Area3D
 MeshInstance3D
-Label
 Camera3D
 OmniLight3D
 TextureButton
@@ -12,4 +12,3 @@ Button
 Panel
 RigidBody3D
 AudioStreamPlayer3D
-Node3D

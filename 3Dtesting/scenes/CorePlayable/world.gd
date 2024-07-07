@@ -23,6 +23,14 @@ var wedges_highlighted = false
 #plays the animation to fade into the scene from the black screen
 #sets the ground for the walk sound
 func _ready():
+	Checklist._movement_visual()
+	Checklist._sprint_visual()
+	Checklist._crouch_visual()
+	
+	
+	
+	
+	
 	Music._play_bricklayer()
 	Global.ground_floor = $house_base/StaticBody3D.get_instance_id()
 	Global.ground_grass = $"Map/map/Boden modified/StaticBody3D".get_instance_id()
@@ -31,7 +39,19 @@ func _ready():
 	$Enter.play("fade_in")
 	$Player.pointer = $Props/Trowel.global_position
 	$WallAnimation.play("Brick_test") 
-	
+	await get_tree().create_timer(5).timeout
+	Checklist._movement_visual_hide()
+	Checklist._sprint_visual_hide()
+	Checklist._crouch_visual_hide()
+
+	Checklist._interact_visual()
+	Checklist._mouse_right_visual()
+	await get_tree().create_timer(5).timeout
+	Checklist._interact_visual_hide()
+	Checklist._mouse_right_visual_hide()
+
+
+
 
 func _process(delta):
 	if Input.is_action_just_pressed("kamera"):

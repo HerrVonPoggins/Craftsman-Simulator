@@ -127,3 +127,48 @@ func _check_5_on(check2state):
 
 func _check_6_on(check2state):
 	check_6.button_pressed = check_state_6
+	
+func _movement_visual():
+	$KeyboardArrowsHorizontal.visible = true
+	$KeyboardArrowsVertical.visible = true
+
+func _crouch_visual():
+	$KeyboardCOutline.visible = true
+
+func _interact_visual():
+	$KeyboardEOutline.visible = true
+
+func _sprint_visual():
+	$KeyboardShift.visible = true
+
+func _reset_visual():
+	$KeyboardUOutline.visible = true
+
+func _mouse_left_visual():
+	$MouseLeft.visible = true
+
+func _mouse_right_visual():
+	$MouseRight.visible = true
+
+
+func _movement_visual_hide():
+	$KeyboardArrowsHorizontal.visible = false
+	$KeyboardArrowsVertical.visible = false
+
+func _crouch_visual_hide():
+	$KeyboardCOutline.visible = false
+
+func _interact_visual_hide():
+	$KeyboardEOutline.visible = false
+
+func _sprint_visual_hide():
+	$KeyboardShift.visible = false
+
+func _reset_visual_hide():
+	$KeyboardUOutline.visible = false
+
+func _mouse_left_visual_hide():
+	$MouseLeft.visible = false
+
+func _mouse_right_visual_hide():
+	$MouseRight.visible = false
