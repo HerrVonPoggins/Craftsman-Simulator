@@ -1,14 +1,14 @@
-CollisionShape3D
 StaticBody3D
+CollisionShape3D
 Label
+ScrollContainer
+MeshInstance3D
 HScrollBar
 AnimationPlayer
 Area3D
-MeshInstance3D
 Camera3D
 OmniLight3D
 TextureButton
 Button
 Panel
 RigidBody3D
-AudioStreamPlayer3D

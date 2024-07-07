@@ -5,7 +5,6 @@ extends Node2D
 func _ready():
 	Global.checklist_hide = true
 	$Enter/Label2.visible = false
-	Global.current_scene = 1
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	$Enter.play("fade_in")
 	await $Enter.animation_finished

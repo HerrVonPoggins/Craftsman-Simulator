@@ -197,6 +197,14 @@ func _process(delta):
 		await get_tree().create_timer(3).timeout
 		$"house_base/geruest merged".visible = true
 		$"house_base/geruest merged/StaticBody3D/CollisionShape3D".call_deferred("set_disabled", false)
+		$"house_base/geruest merged/StaticBody3D2/CollisionShape3D".call_deferred("set_disabled", false)
+		$"house_base/geruest merged/StaticBody3D3/CollisionShape3D".call_deferred("set_disabled", false)
+		$"house_base/geruest merged/StaticBody3D4/CollisionShape3D".call_deferred("set_disabled", false)
+		$"house_base/geruest merged/StaticBody3D5/CollisionShape3D".call_deferred("set_disabled", false)
+		
+		
+		
+		
 		$Ladder/Area3D/CollisionShape3D.call_deferred("set_disabled", false)
 		$Ladder/StaticBody3D/CollisionShape3D.call_deferred("set_disabled", false)
 		

@@ -53,6 +53,7 @@ height = 0.1
 script = ExtResource("1_awrxf")
 
 [node name="Foam" type="Area3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="Foam" type="CollisionShape3D" parent="Foam"]
 shape = SubResource("SphereShape3D_3m7ll")

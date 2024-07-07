@@ -1,14 +1,15 @@
 extends Node3D
 
-
+var window_done = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$AnimationPlayer.play("marker")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if $WindowBoard.visible == true and $Window.visible == true:
+		window_done = true
 
 
 func _on_area_3d_body_entered(body):
@@ -22,7 +23,7 @@ func _on_area_3d_body_entered(body):
 		body.queue_free()
 		Global.is_holding = false
 		Global.can_extend = false
-		$WindowBoard.visible = true
-		$WindowBoardMarker.visible = false
+		$WindowBoard/RootNode/WindowFrame.visible = true
+		$WindowFrameMarker.visible = false
 
 

@@ -56,6 +56,7 @@ func _unhandled_input(event):
 	if event is InputEventMouseMotion and $Camera3D.current == true and Input.is_action_pressed("leftclick"):
 		if $Saw1.visible == true:
 			$Saw1.position.y += (-event.relative.y * 0.001)
+			
 		if $Saw2.visible == true:
 			$Saw2.position.x += (+event.relative.x * 0.001)
 		

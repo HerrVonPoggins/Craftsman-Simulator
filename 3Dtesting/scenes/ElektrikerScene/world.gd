@@ -6,6 +6,7 @@ func _ready():
 	Checklist._movement_visual()
 	Checklist._sprint_visual()
 	Checklist._crouch_visual()
+	$Props/Saw.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 	
 	Global.current_scene = 3
 	Global.walking_on = $"Map/map/Boden modified/StaticBody3D"
@@ -36,11 +37,18 @@ func _on_control_closed():
 
 func _process(delta):
 	
-	#if Input.is_action_just_pressed("kamera"):
-		#Global.can_power = 2
-	
+	if Global.wall_sawed == true:
+		$Props/Outlet.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		$Props/Outlet2.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		$Props/Cable.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		$Props/Cable2.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		
+		
 	
 	if Global.wall_sawed == true:
+		$Props/Plaster.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		$Props/Water.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		$Props/Trowel.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 		$Plaster.visible = true
 	
 	if generator_on == 4:

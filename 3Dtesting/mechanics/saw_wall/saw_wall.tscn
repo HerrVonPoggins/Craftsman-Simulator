@@ -1,24 +1,53 @@
-[gd_scene load_steps=28 format=3 uid="uid://b832ttb3fi0ct"]
+[gd_scene load_steps=34 format=3 uid="uid://b832ttb3fi0ct"]
 
 [ext_resource type="Script" path="res://mechanics/saw_wall/saw_wall.gd" id="1_i2eco"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_clxox"]
 size = Vector3(7, 5, 0.5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1vj8y"]
-albedo_color = Color(1, 0, 0, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i1agf"]
+resource_name = "Material.012"
+albedo_color = Color(1, 0.535245, 0.34112, 1)
+metallic = 0.4
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_736v8"]
-albedo_color = Color(1, 0, 0, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_82k8r"]
+resource_name = "Material.012"
+albedo_color = Color(1, 0.535245, 0.34112, 1)
+metallic = 0.4
 
 [sub_resource type="BoxMesh" id="BoxMesh_ql1r2"]
 size = Vector3(7, 2, 0.5)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kd0sa"]
+resource_name = "Material.012"
+albedo_color = Color(1, 0.535245, 0.34112, 1)
+metallic = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tcwql"]
+resource_name = "Material.012"
+albedo_color = Color(1, 0.535245, 0.34112, 1)
+metallic = 0.4
+
 [sub_resource type="BoxMesh" id="BoxMesh_p2c6n"]
 size = Vector3(1, 1, 0.5)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6m8ad"]
+resource_name = "Material.012"
+albedo_color = Color(1, 0.535245, 0.34112, 1)
+metallic = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jhigg"]
+resource_name = "Material.012"
+albedo_color = Color(1, 0.535245, 0.34112, 1)
+metallic = 0.4
+
 [sub_resource type="BoxMesh" id="BoxMesh_mamun"]
 size = Vector3(3, 1, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gd3mo"]
+resource_name = "Material.012"
+albedo_color = Color(1, 0.535245, 0.34112, 1)
+metallic = 0.4
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g1kn3"]
 resource_name = "Material.002"
@@ -162,6 +191,9 @@ top_radius = 0.02
 bottom_radius = 0.02
 height = 4.0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_68qim"]
+albedo_color = Color(0, 0, 0, 1)
+
 [sub_resource type="SphereShape3D" id="SphereShape3D_lm5ys"]
 radius = 0.230336
 
@@ -172,13 +204,21 @@ size = Vector3(0.25, 0.25, 0.5)
 radius = 0.493578
 
 [sub_resource type="SphereMesh" id="SphereMesh_k8a43"]
+radius = 0.2
+height = 0.5
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_whpff"]
+top_radius = 0.1
+bottom_radius = 0.25
 height = 0.05
 
 [sub_resource type="SphereMesh" id="SphereMesh_rnoe1"]
+radius = 0.2
+height = 0.5
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_4awsg"]
+top_radius = 0.1
+bottom_radius = 0.25
 height = 0.05
 
 [node name="SawWall" type="Node3D"]
@@ -193,37 +233,42 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35788, 0, 4.17867)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.97873, 0.833515, 0)
 mesh = SubResource("BoxMesh_clxox")
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_1vj8y")
+surface_material_override/0 = SubResource("StandardMaterial3D_i1agf")
 
 [node name="Wall2" type="MeshInstance3D" parent="Wall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.12519, 0.833515, 0)
 mesh = SubResource("BoxMesh_clxox")
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_736v8")
+surface_material_override/0 = SubResource("StandardMaterial3D_82k8r")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Wall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.12856, -2.6662, 0)
 mesh = SubResource("BoxMesh_ql1r2")
 skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_kd0sa")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Wall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.88143, -2.8322, 0)
 mesh = SubResource("BoxMesh_ql1r2")
 skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tcwql")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Wall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.59841, 2.83621, 0)
 mesh = SubResource("BoxMesh_p2c6n")
 skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_6m8ad")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="Wall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.59841, -2.40678, 0)
 mesh = SubResource("BoxMesh_p2c6n")
 skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_jhigg")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="Wall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97392, -1.72131, 0)
 mesh = SubResource("BoxMesh_mamun")
+surface_material_override/0 = SubResource("StandardMaterial3D_gd3mo")
 
 [node name="Saw1" type="RigidBody3D" parent="." groups=["wall_saw"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.51649, 3.15532, 0.0457041)
@@ -251,21 +296,24 @@ libraries = {
 }
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Saw1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.3589)
 shape = SubResource("CapsuleShape3D_senjp")
 
 [node name="Saw2" type="RigidBody3D" parent="." groups=["wall_saw2"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.30258, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.30258, 0, 0.468311)
 visible = false
+mass = 0.01
 gravity_scale = 0.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Saw2"]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -1.53518, -1.83748, 0.0556898)
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -1.53518, -1.83748, -0.0502468)
 shape = SubResource("CapsuleShape3D_0ymge")
 
 [node name="Saw2" type="Node3D" parent="Saw2"]
-transform = Transform3D(1.91069e-15, -4.37114e-08, -1, -1, -4.37114e-08, 0, -4.37114e-08, 1, -4.37114e-08, -1.64419, -1.97114, 0)
+transform = Transform3D(1.91069e-15, -4.37114e-08, -1, -1, -4.37114e-08, 0, -4.37114e-08, 1, -4.37114e-08, -1.64419, -1.97114, -0.508809)
 
 [node name="RootNode" type="Node3D" parent="Saw2/Saw2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.52172, 0)
 
 [node name="Schlitzfräse" type="MeshInstance3D" parent="Saw2/Saw2/RootNode"]
 transform = Transform3D(48.3977, 0, 0, 0, -7.26167e-06, 60.9154, 0, -60.9153, -7.26168e-06, 0.308326, 0.152861, 0.0572455)
@@ -293,6 +341,7 @@ shape = SubResource("CapsuleShape3D_usmjd")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0869875, -1.07938, 0.276906)
 visible = false
 mesh = SubResource("CylinderMesh_fp881")
+surface_material_override/0 = SubResource("StandardMaterial3D_68qim")
 
 [node name="Toolinsert2" type="Area3D" parent="."]
 transform = Transform3D(-0.0175222, -0.999846, 0, 0.999846, -0.0175222, 0, 0, 0, 1, -1.05373, -1.73932, 0)
@@ -305,6 +354,7 @@ shape = SubResource("CapsuleShape3D_usmjd")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0818235, -1.37405, 0.276906)
 visible = false
 mesh = SubResource("CylinderMesh_fp881")
+surface_material_override/0 = SubResource("StandardMaterial3D_68qim")
 
 [node name="Node3D" type="Node3D" parent="."]
 
@@ -624,14 +674,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0858934, 0)
 shape = SubResource("SphereShape3D_exejs")
 
 [node name="PlasterPlaced" type="MeshInstance3D" parent="PlasterOutlets"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.135284)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0314295, 0.0231431, 0.110375)
 visible = false
 mesh = SubResource("SphereMesh_k8a43")
 
 [node name="OutletCase" type="MeshInstance3D" parent="PlasterOutlets"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.264233)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.0282646, 0.0191013, 0.28929)
 visible = false
 mesh = SubResource("CylinderMesh_whpff")
+surface_material_override/0 = SubResource("StandardMaterial3D_68qim")
 
 [node name="PlasterOutlets2" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.58852, -1.65823, 0)
@@ -641,13 +692,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0858934, 0)
 shape = SubResource("SphereShape3D_exejs")
 
 [node name="PlasterPlaced" type="MeshInstance3D" parent="PlasterOutlets2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00180781, -0.0472884, 0.144639)
 visible = false
 mesh = SubResource("SphereMesh_rnoe1")
 
 [node name="OutletCase" type="MeshInstance3D" parent="PlasterOutlets2"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.27335)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.309418)
 visible = false
 mesh = SubResource("CylinderMesh_4awsg")
+surface_material_override/0 = SubResource("StandardMaterial3D_68qim")
 
 [connection signal="body_entered" from="Toolinsert1" to="." method="_on_toolinsert_1_body_entered"]
 [connection signal="body_entered" from="Toolinsert2" to="." method="_on_toolinsert_2_body_entered"]

@@ -79,6 +79,7 @@ var mouse_sense = 6
 
 var player_visibility = true
 
+var door_done = 0
 
 var wall_sawed = false
 var plaster_done = false

@@ -45,6 +45,7 @@ func _on_stairs_dübel_minigame_finished():
 	Global.stay = false
 	Global.switch_minigame_on = false
 	$Player.visible = true
+	$Dachbinder.roof_step = 1
 
 
 
@@ -62,11 +63,9 @@ func _on_control_closed():
 
 func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
-		$Dachbinder.roof_step = 1
+		print(Global.current_scene)
 
-	
-	if doors_done == 7:
-		$Transition._change_scene("res://UI/screens/scene_change.tscn")
+
 	if metallbinder_count >= 15:
 		$Dachbinder.roof_step = 2
 	if metallbinder_count >= 26:
@@ -75,51 +74,23 @@ func _process(delta):
 		$Dachbinder.roof_step = 5
 	if metallbinder_count >= 44:
 		$Dachbinder.roof_step = 6
+		$Props/Window.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		$Props/WindowBoard.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		$Props/FoamSpray.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 		
-	#if metallbinder_count >= 6 and played == false:
-		#played = true
-		#$Dachbinder.get_node("RoofAnimations").play("hauptbinder_down")
-		##await $Dachbinder.get_node("RoofAnimations").animation_finished
-#
-	#if metallbinder_count >= 6 and played2 == false:
-		#played2 = true
-		#$Dachbinder.get_node("RoofAnimations").play("eckbinder_down")
-#
-	#if metallbinder_count >= 6 and played3 == false:
-		#played3 = true
-		#$Dachbinder.get_node("RoofAnimations").play("schräg_links_down")
-#
-	#if metallbinder_count >= 6 and played4 == false:
-		#played4 = true
-		#$Dachbinder.get_node("RoofAnimations").play("schräg_rechts_down")
-#
-	#if metallbinder_count >= 6 and played5 == false:
-		#played5 = true
-		#$Dachbinder.get_node("RoofAnimations").play("walmbinder_down")
-#
-	#if metallbinder_count >= 6 and played6 == false:
-		#played6 = true
-		#$Dachbinder.get_node("RoofAnimations").play("dachplane_down")
-#
-	#if metallbinder_count >= 6 and played7 == false:
-		#played7 = true
-		#$Dachbinder.get_node("RoofAnimations").play("konterlattung_katten_down")
-#
-	#if metallbinder_count >= 6 and played8 == false:
-		#played8 = true
-		#$Dachbinder.get_node("RoofAnimations").play("konterlattung_stützen_down")
-#
-	#if metallbinder_count >= 6 and played9 == false:
-		#played9 = true
-		#$Dachbinder.get_node("RoofAnimations").play("vertikale_stützen_down")
-#
-	#if metallbinder_count >= 6 and played10 == false:
-		#played10 = true
-		#$Dachbinder.get_node("RoofAnimations").play("horizontale_stützen_down")
-#
-	#if metallbinder_count >= 6 and played11 == false:
-		#played11 = true
-		#$Dachbinder.get_node("RoofAnimations").play("dachziegel_down")
+	if $WindowPlacing.window_done == true and played == false:
+		played = true
+		$Props/DoorFrame.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		$Props/DoorFrame2.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		$Props/DoorBoard.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		$Props/DoorBoard2.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/zimmermann_step_4.dialogue"))
+
+	if Global.door_done >= 2 and played2 == false:
+		played2 = true
+		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/zimmermann_step_5.dialogue"))
+		await get_tree().create_timer(5).timeout
+		$Transition._change_scene("res://UI/screens/scene_change.tscn")
 
 func _on_ray_cast_3d_metallbinder_clicked():
 	metallbinder_count += 1
