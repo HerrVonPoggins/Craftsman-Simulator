@@ -4,6 +4,7 @@ signal mixer_highlight
 signal wedge_highlight
 signal start_saw_minigame
 signal start_dübel_minigame
+signal metallbinder_clicked
 
 var mat1 = load("res://assets/textures/material_white.tres")
 var last = Vector3.ZERO
@@ -141,8 +142,9 @@ func _process(delta):
 
 				
 				
-				
-				
+				if collider.is_in_group("metallbinder"):
+					emit_signal("metallbinder_clicked")
+
 				if collider.is_in_group("npc") and Global.dialogue_open == false:
 					Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/bauleiter_maurer.dialogue"))

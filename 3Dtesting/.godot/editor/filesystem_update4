@@ -29,3 +29,4 @@ res://mechanics/Player/RayCast3D.gd
 res://mechanics/Carpenter-Areas/stairs.gd
 res://scenes/ElektrikerScene/world.gd
 res://mechanics/cement-mixing/zementmischer.tscn
+res://mechanics/roof-building/roof.gd
