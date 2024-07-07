@@ -41,6 +41,7 @@ func _process(delta):
 				Global.player_visibility = true
 				Global.power_box = false
 				$"Root Scene".visible = true
+				Global.generator_on += 1
 				$StaticBody3D2.remove_from_group("activate")
 				
 

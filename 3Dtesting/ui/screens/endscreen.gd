@@ -4,6 +4,7 @@ extends Node2D
 func _ready():
 	$AnimationPlayer.play("fade_in")
 	Global.checklist_hide = true
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 #change back to titlescreen
 func _on_button_pressed():
 	Music._play_button()

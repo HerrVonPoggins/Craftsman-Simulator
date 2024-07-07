@@ -1,12 +1,14 @@
 extends Node3D
 var generator_on = 0
-
+var played = false
+var played2 = false
+var played3 = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Checklist._movement_visual()
 	Checklist._sprint_visual()
 	Checklist._crouch_visual()
-	$Props/Saw.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+	$Props/Saw/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 	
 	Global.current_scene = 3
 	Global.walking_on = $"Map/map/Boden modified/StaticBody3D"
@@ -37,21 +39,28 @@ func _on_control_closed():
 
 func _process(delta):
 	
-	if Global.wall_sawed == true:
-		$Props/Outlet.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
-		$Props/Outlet2.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
-		$Props/Cable.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
-		$Props/Cable2.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+	if Input.is_action_just_pressed("kamera"):
+		Global.can_power = 2
+	
+	
+	if Global.wall_sawed == true and played2 == false:
+		played2 = true
+		$Props/Outlet/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		$Props/Outlet2/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		$Props/Cable/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		$Props/Cable2/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 		
 		
 	
-	if Global.wall_sawed == true:
-		$Props/Plaster.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
-		$Props/Water.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
-		$Props/Trowel.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+	if Global.wall_sawed == true and played == false:
+		played = true
+		$Props/Plaster/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		$Props/Water/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		
 		$Plaster.visible = true
 	
-	if generator_on == 4:
+	if Global.generator_on == 3 and played3 == false:
+		played3 = true
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/elektriker_step_5.dialogue"))
 		await get_tree().create_timer(5).timeout
 		$Transition._change_scene("res://UI/screens/endscreen.tscn")

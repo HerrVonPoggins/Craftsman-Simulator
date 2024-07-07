@@ -438,13 +438,14 @@ points = PackedVector3Array(0.152381, 0.152381, 0.0297619, -0.139666, -0.139683,
 script = ExtResource("1_5w4f0")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.922937)
+transform = Transform3D(0.957802, 0, 0.287427, 0, 1, 0, -0.287427, 0, 0.957802, -0.506384, 0, 2.39691)
 
 [node name="Node3D" type="Node3D" parent="Camera3D"]
 transform = Transform3D(0.999509, 0, -0.031341, -0.0215566, 0.725891, -0.687472, 0.0227501, 0.68781, 0.725534, 0, 0, -0.00967389)
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D/Node3D"]
-transform = Transform3D(1, 0, 0, 0, -0.0063529, -0.999979, 0, 0.999979, -0.0063529, 0, 0, 0.00393689)
+transform = Transform3D(1, 0, 0, -1.49012e-08, -0.00635296, -0.999979, 1.49012e-08, 0.999979, -0.00635293, 0, -1.19209e-07, 0.00393713)
+target_position = Vector3(0, -3, 0)
 script = ExtResource("2_evyav")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D/Node3D/RayCast3D"]

@@ -34,6 +34,7 @@ func _process(delta):
 					Global.crosshair_off = false
 					Global.stay = false
 					Global.player_visibility = true
+					Global.generator_on += 1
 					$"../../../StaticBody3D".remove_from_group("activate")
 		
 		
@@ -53,6 +54,7 @@ func _process(delta):
 						Global.crosshair_off = false
 						Global.stay = false
 						Global.player_visibility = true
+						Global.generator_on += 1
 						$"../../../StaticBody3D".remove_from_group("activate")
 						$"../../../StaticBody3D2".remove_from_group("activate")
 						$"../../../StaticBody3D3".remove_from_group("activate")

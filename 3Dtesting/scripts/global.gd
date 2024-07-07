@@ -7,6 +7,7 @@ var concrete = false
 var wall_finished = false
 var concrete_mixed = false
 
+var generator_on = 0
 var brick_sawed = false
 var brick_saw_cam = false
 
