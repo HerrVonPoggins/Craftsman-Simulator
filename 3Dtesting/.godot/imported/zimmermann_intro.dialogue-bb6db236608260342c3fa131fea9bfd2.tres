@@ -21,16 +21,28 @@ lines = {
 "character": "Zimmermann",
 "character_replacements": Array[Dictionary]([]),
 "id": "3",
-"next_id": "5",
+"next_id": "4",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Wilkommen zurück heute hilfst du unserem Zimmermann.",
+"text": "Hi! Hier Drueben.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Wilkommen zurück heute hilfst du unserem Zimmermann.",
+"translation_key": "Hi! Hier Drueben.",
 "type": &"dialogue"
 },
-"5": {
-"id": "5",
+"4": {
+"character": "Zimmermann",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "6",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Lass uns deien heutigen Aufgaben durchsprechen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Lass uns deien heutigen Aufgaben durchsprechen.",
+"type": &"dialogue"
+},
+"6": {
+"id": "6",
 "is_snippet": false,
 "next_id": "end",
 "type": &"goto"
@@ -38,7 +50,8 @@ lines = {
 }
 raw_text = "~ this_is_a_node_title
 
-Zimmermann: Wilkommen zurück heute hilfst du unserem Zimmermann.
+Zimmermann: Hi! Hier Drueben.
+Zimmermann: Lass uns deien heutigen Aufgaben durchsprechen.
 
 => END"
 metadata/dialogue_manager_version = "2.38.0"

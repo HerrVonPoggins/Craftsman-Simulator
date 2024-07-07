@@ -23,3 +23,9 @@ res://mechanics/SwitchMinigame/switch.tscn
 res://mechanics/SwitchMinigame/switch.gd
 res://mechanics/CurcuitMinigame/curcuits.tscn
 res://mechanics/Carpenter-Areas/stairs.tscn
+res://scenes/CorePlayable/world.gd
+res://mechanics/CurcuitMinigame/curcuitcollision.gd
+res://mechanics/Player/RayCast3D.gd
+res://mechanics/Carpenter-Areas/stairs.gd
+res://scenes/ElektrikerScene/world.gd
+res://mechanics/cement-mixing/zementmischer.tscn

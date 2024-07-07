@@ -21,16 +21,40 @@ lines = {
 "character": "Zimmermann",
 "character_replacements": Array[Dictionary]([]),
 "id": "3",
-"next_id": "6",
+"next_id": "4",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "als nächstes musst du die Dachkonstruktion bauen.",
+"text": "Als nächstes musst du die Dachkonstruktion bauen.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "als nächstes musst du die Dachkonstruktion bauen.",
+"translation_key": "Als nächstes musst du die Dachkonstruktion bauen.",
 "type": &"dialogue"
 },
-"6": {
-"id": "6",
+"4": {
+"character": "Zimmermann",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Dafür steig über das Gerüst auf das Dach und mach die binder alle nacheinander fest.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Dafür steig über das Gerüst auf das Dach und mach die binder alle nacheinander fest.",
+"type": &"dialogue"
+},
+"5": {
+"character": "Zimmermann",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "8",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Ich lasse dir dann die Teile runter.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ich lasse dir dann die Teile runter.",
+"type": &"dialogue"
+},
+"8": {
+"id": "8",
 "is_snippet": false,
 "next_id": "end",
 "type": &"goto"
@@ -38,7 +62,9 @@ lines = {
 }
 raw_text = "~ this_is_a_node_title
 
-Zimmermann: als nächstes musst du die Dachkonstruktion bauen.
+Zimmermann: Als nächstes musst du die Dachkonstruktion bauen.
+Zimmermann: Dafür steig über das Gerüst auf das Dach und mach die binder alle nacheinander fest.
+Zimmermann: Ich lasse dir dann die Teile runter.
 
 
 => END"

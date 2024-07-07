@@ -36,8 +36,8 @@ func _on_control_closed():
 
 func _process(delta):
 	
-	if Input.is_action_just_pressed("kamera"):
-		Global.can_power = 2
+	#if Input.is_action_just_pressed("kamera"):
+		#Global.can_power = 2
 	
 	
 	if Global.wall_sawed == true:

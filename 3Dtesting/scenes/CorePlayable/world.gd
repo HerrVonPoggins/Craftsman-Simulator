@@ -39,14 +39,14 @@ func _ready():
 	$Enter.play("fade_in")
 	$Player.pointer = $Props/Trowel.global_position
 	$WallAnimation.play("Brick_test") 
-	await get_tree().create_timer(5).timeout
+	await get_tree().create_timer(8).timeout
 	Checklist._movement_visual_hide()
 	Checklist._sprint_visual_hide()
 	Checklist._crouch_visual_hide()
 
 	Checklist._interact_visual()
 	Checklist._mouse_right_visual()
-	await get_tree().create_timer(5).timeout
+	await get_tree().create_timer(8).timeout
 	Checklist._interact_visual_hide()
 	Checklist._mouse_right_visual_hide()
 

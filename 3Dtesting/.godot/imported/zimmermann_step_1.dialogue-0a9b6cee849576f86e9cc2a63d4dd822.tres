@@ -45,7 +45,7 @@ lines = {
 "character": "Zimmermann",
 "character_replacements": Array[Dictionary]([]),
 "id": "5",
-"next_id": "7",
+"next_id": "6",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "deine erste Aufgabe wird das bauen einer Treppe.",
@@ -53,8 +53,20 @@ lines = {
 "translation_key": "deine erste Aufgabe wird das bauen einer Treppe.",
 "type": &"dialogue"
 },
-"7": {
-"id": "7",
+"6": {
+"character": "Zimmermann",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "8",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Zuerst musst du die Dübel rein machen und dann die Stufen einbauen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Zuerst musst du die Dübel rein machen und dann die Stufen einbauen.",
+"type": &"dialogue"
+},
+"8": {
+"id": "8",
 "is_snippet": false,
 "next_id": "end",
 "type": &"goto"
@@ -65,6 +77,7 @@ raw_text = "~ this_is_a_node_title
 Zimmermann: Guten Tag.
 Zimmermann: Du bist also der Praktikant von dem der Bär mir erzählt hat.
 Zimmermann: deine erste Aufgabe wird das bauen einer Treppe.
+Zimmermann: Zuerst musst du die Dübel rein machen und dann die Stufen einbauen.
 
 => END"
 metadata/dialogue_manager_version = "2.38.0"

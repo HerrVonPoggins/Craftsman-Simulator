@@ -6,6 +6,8 @@ signal player_visibility_off
 @onready var animation_player = $AnimationPlayer
 var placed_step_counter = 0
 var camera_rotated = false
+var played = false
+var played2 = false
 
 func _process(delta):
 	if dübel_amount_1 >= 6:
@@ -32,65 +34,82 @@ func _process(delta):
 var steps_visible = 0
 func _on_area_3d_body_entered(body):
 	if body.is_in_group("step1"):
+		Global.is_holding = false
 		body.queue_free()
 		$Step1.visible = true
 		steps_visible += 1
 	elif body.is_in_group("step2"):
 		body.queue_free()
+		Global.is_holding = false
 		$Step2.visible = true
 		steps_visible += 1
 	elif body.is_in_group("step3"):
 		body.queue_free()
+		Global.is_holding = false
 		$Step3.visible = true
 		steps_visible += 1
 	elif body.is_in_group("step4"):
 		body.queue_free()
+		Global.is_holding = false
 		$Step4.visible = true
 		steps_visible += 1
 	elif body.is_in_group("step5"):
 		body.queue_free()
+		Global.is_holding = false
 		$Step5.visible = true
 		steps_visible += 1
 	elif body.is_in_group("step6"):
 		body.queue_free()
+		Global.is_holding = false
 		$Step6.visible = true
 		steps_visible += 1
 	elif body.is_in_group("step7"):
 		body.queue_free()
+		Global.is_holding = false
 		$Step7.visible = true
 		steps_visible += 1
 	elif body.is_in_group("step8"):
 		body.queue_free()
+		Global.is_holding = false
 		$Step8.visible = true
 		steps_visible += 1
 	elif body.is_in_group("step9"):
 		body.queue_free()
+		Global.is_holding = false
 		$Step9.visible = true
 		steps_visible += 1
 	elif body.is_in_group("step10"):
 		body.queue_free()
+		Global.is_holding = false
 		$Step10.visible = true
 		steps_visible += 1
 	elif body.is_in_group("step11"):
 		body.queue_free()
+		Global.is_holding = false
 		$Step11.visible = true
 		steps_visible += 1
 	elif body.is_in_group("step12"):
 		body.queue_free()
+		Global.is_holding = false
 		$Step12.visible = true
 		steps_visible += 1
 	elif body.is_in_group("step13"):
 		body.queue_free()
+		Global.is_holding = false
 		$Step13.visible = true
 		steps_visible += 1
 	elif body.is_in_group("step14"):
 		body.queue_free()
+		Global.is_holding = false
 		$Step14.visible = true
 		steps_visible += 1
 	if steps_visible == 14:
 		$"DübelContainer".visible = false
-		$StairsWalk/CollisionShape3D.disabled = false
-		$StairsWalk2/CollisionShape3D.disabled = false
+		$StairsWalk/CollisionShape3D.call_deferred("set_disabled", false)
+		$StairsWalk2/CollisionShape3D.call_deferred("set_disabled", false)
+		if played2 == false:
+			played2 = true
+			DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/zimmermann_step_2.dialogue"))
 
 var dübel_amount_1 = 0
 func _on_dübel_input_event(camera, event, position, normal, shape_idx):
@@ -452,9 +471,12 @@ func _on_dübel_28_input_event(camera, event, position, normal, shape_idx):
 
 
 func _on_ray_cast_3d_start_dübel_minigame():
-	emit_signal("player_visibility_off")
-	$"CameraStand/CameraDübel".current = true
-	$"DübelContainer".visible = true
-	Global.switch_minigame_on = true
-	Global.stay = true
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	if played == false:
+		played = true
+		emit_signal("player_visibility_off")
+		$"CameraStand/CameraDübel".current = true
+		$"DübelContainer".visible = true
+		Global.switch_minigame_on = true
+		Global.stay = true
+		$"Wallguide/RootNode/wand teil/StaticBody3D".remove_from_group("activate")
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

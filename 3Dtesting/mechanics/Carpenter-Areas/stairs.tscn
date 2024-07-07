@@ -512,7 +512,7 @@ transform = Transform3D(100, 0, 0, 0, -7.49521e-07, 100, 0, -6.28743, -1.19209e-
 mesh = ExtResource("2_q0pua")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Wallguide/RootNode/wand teil" groups=["wallguide"]]
+[node name="StaticBody3D" type="StaticBody3D" parent="Wallguide/RootNode/wand teil" groups=["activate", "wallguide"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Wallguide/RootNode/wand teil/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_aa5uq")

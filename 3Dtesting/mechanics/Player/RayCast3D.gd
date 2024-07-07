@@ -110,13 +110,6 @@ func _process(delta):
 					await $"../Root Scene3/AnimationPlayer".animation_finished
 					await get_tree().create_timer(0.1).timeout
 					
-					#if played == false:
-						#played = true
-						#Checklist._interact_visual()
-						#Checklist._mouse_right_visual()
-						#get_tree().create_timer(5).timeout
-						#Checklist._interact_visual_hide()
-						#Checklist._mouse_right_visual_hide()
 					
 					
 					
@@ -162,6 +155,10 @@ func _process(delta):
 				if collider.is_in_group("electrician") and Global.dialogue_open == false:
 					Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/elektriker_step_1.dialogue"))
+
+				if collider.is_in_group("carpenter") and Global.dialogue_open == false:
+					Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/zimmermann_step_1.dialogue"))
 
 				if collider.is_in_group("cement_mixer") and Global.dialogue_open == false:
 					Music._play_mixer()
