@@ -159,6 +159,10 @@ func _process(delta):
 					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_text.dialogue"))
 					emit_signal("mixer_highlight")
 
+				if collider.is_in_group("electrician") and Global.dialogue_open == false:
+					Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/elektriker_step_1.dialogue"))
+
 				if collider.is_in_group("cement_mixer") and Global.dialogue_open == false:
 					Music._play_mixer()
 					player.emit_signal("start_mixer")

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_w4hpw"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_myobr"]
 
 [resource]
-script = ExtResource("1_w4hpw")
+script = ExtResource("1_myobr")
 using_states = PackedStringArray()
 titles = {
 "this_is_a_node_title": "3"
@@ -17,29 +17,57 @@ lines = {
 "text": "this_is_a_node_title",
 "type": &"title"
 },
-"3": {
-"character": "Elektriker",
-"character_replacements": Array[Dictionary]([]),
-"id": "3",
-"next_id": "4",
-"notes": "",
-"tags": PackedStringArray(),
-"text": "Nun kannst du dich um den Generator kümmern.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Nun kannst du dich um den Generator kümmern.",
-"type": &"dialogue"
+"11": {
+"id": "11",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
 },
-"4": {
-"character": "Elektriker",
-"character_replacements": Array[Dictionary]([]),
-"id": "4",
+"next_id": "13",
+"type": &"mutation"
+},
+"13": {
+"id": "13",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"3": {
+"id": "3",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
 "next_id": "5",
-"notes": "",
-"tags": PackedStringArray(),
-"text": "Es gibt 3 Kästen die du anschalten musst.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Es gibt 3 Kästen die du anschalten musst.",
-"type": &"dialogue"
+"type": &"mutation"
 },
 "5": {
 "character": "Elektriker",
@@ -48,9 +76,9 @@ lines = {
 "next_id": "6",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "der Erste besteht aus einem Schaltkreis den du richtig anordnen musst.",
+"text": "Nun kannst du dich um den Generator kümmern.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "der Erste besteht aus einem Schaltkreis den du richtig anordnen musst.",
+"translation_key": "Nun kannst du dich um den Generator kümmern.",
 "type": &"dialogue"
 },
 "6": {
@@ -60,37 +88,59 @@ lines = {
 "next_id": "7",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "der Zweite besteht aus Hebeln, stelle sie richtig ein.",
+"text": "Es gibt 3 Kästen die du anschalten musst.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "der Zweite besteht aus Hebeln, stelle sie richtig ein.",
+"translation_key": "Es gibt 3 Kästen die du anschalten musst.",
 "type": &"dialogue"
 },
 "7": {
 "character": "Elektriker",
 "character_replacements": Array[Dictionary]([]),
 "id": "7",
+"next_id": "8",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "der Erste besteht aus einem Schaltkreis den du richtig anordnen musst.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "der Erste besteht aus einem Schaltkreis den du richtig anordnen musst.",
+"type": &"dialogue"
+},
+"8": {
+"character": "Elektriker",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
 "next_id": "9",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "der Zweite besteht aus Hebeln, stelle sie richtig ein.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "der Zweite besteht aus Hebeln, stelle sie richtig ein.",
+"type": &"dialogue"
+},
+"9": {
+"character": "Elektriker",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "11",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Für den Letzten Kasten musst du die Sicherungen richtig tauschen.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Für den Letzten Kasten musst du die Sicherungen richtig tauschen.",
 "type": &"dialogue"
-},
-"9": {
-"id": "9",
-"is_snippet": false,
-"next_id": "end",
-"type": &"goto"
 }
 }
 raw_text = "~ this_is_a_node_title
+
+set Global.dialogue_open = true
 
 Elektriker: Nun kannst du dich um den Generator kümmern.
 Elektriker: Es gibt 3 Kästen die du anschalten musst.
 Elektriker: der Erste besteht aus einem Schaltkreis den du richtig anordnen musst.
 Elektriker: der Zweite besteht aus Hebeln, stelle sie richtig ein.
 Elektriker: Für den Letzten Kasten musst du die Sicherungen richtig tauschen.
+
+set Global.dialogue_open = false
 
 => END"
 metadata/dialogue_manager_version = "2.38.0"

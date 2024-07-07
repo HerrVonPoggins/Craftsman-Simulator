@@ -11,6 +11,7 @@ func _ready():
 	Global.walking_on = $"Map/map/Boden modified/StaticBody3D"
 	$Enter.play("fade_in")
 	Global.ground_grass = $"Map/map/Boden modified/StaticBody3D".get_instance_id()
+	DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/elektriker_intro.dialogue"))
 	await get_tree().create_timer(5).timeout
 	Checklist._movement_visual_hide()
 	Checklist._sprint_visual_hide()
@@ -35,10 +36,16 @@ func _on_control_closed():
 
 func _process(delta):
 	
+	if Input.is_action_just_pressed("kamera"):
+		Global.can_power = 2
+	
+	
 	if Global.wall_sawed == true:
 		$Plaster.visible = true
 	
 	if generator_on == 4:
+		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/elektriker_step_5.dialogue"))
+		await get_tree().create_timer(5).timeout
 		$Transition._change_scene("res://UI/screens/endscreen.tscn")
 
 

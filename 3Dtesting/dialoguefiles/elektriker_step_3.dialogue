@@ -1,8 +1,13 @@
 ~ this_is_a_node_title
 
+set Global.dialogue_open = true
+
+
 Elektriker: Nun musst du Elektrikergips mischen hol dafür einen Eimer Wasser und einen Sack Gips.
 Elektriker: Bringe diese zum markierten Ort um einen Eimer Gips herzustellen.
 Elektriker: Wenn du fertig bist tauche deine Kelle in den Eimer und platziere den Gips an der Mauer.
 Elektriker: Danach kannst du die Kappen für die Steckdosen anbrigen.
+
+set Global.dialogue_open = false
 
 => END

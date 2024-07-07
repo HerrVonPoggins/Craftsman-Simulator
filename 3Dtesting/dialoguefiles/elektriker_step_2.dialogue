@@ -1,5 +1,9 @@
 ~ this_is_a_node_title
 
+set Global.dialogue_open = true
+
 Elektriker: Jetzt musst du die Kabel in die Rille einlegen.
+
+set Global.dialogue_open = false
 
 => END

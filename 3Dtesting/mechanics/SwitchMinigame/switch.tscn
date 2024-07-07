@@ -41,10 +41,10 @@ script = ExtResource("1_l8l8j")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.922937)
 
 [node name="Node3D" type="Node3D" parent="Camera3D"]
-transform = Transform3D(0.999509, 0, -0.031341, -0.0215566, 0.725891, -0.687472, 0.0227501, 0.68781, 0.725534, 0, 0, -0.00967389)
+transform = Transform3D(0.999509, 0, -0.031341, -0.0312871, -0.0585745, -0.997792, -0.00183577, 0.998283, -0.0585459, 0, 0, -0.00967389)
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D/Node3D"]
-transform = Transform3D(1, 0, 0, 0, -0.0063529, -0.999979, 0, 0.999979, -0.0063529, 0, 0, 0.00393689)
+transform = Transform3D(1, 1.86265e-09, -3.72529e-09, 1.86265e-09, -0.00635284, -0.999979, -1.86265e-09, 0.999979, -0.00635296, 0, 5.96046e-08, 0.00393695)
 script = ExtResource("2_n523g")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D/Node3D/RayCast3D"]

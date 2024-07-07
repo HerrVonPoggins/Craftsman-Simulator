@@ -5,6 +5,9 @@ var saw_line2 = 0
 var step = 0 
 var played = false
 var played2 = false
+var played3 = false
+var played4 = false
+var played5 = false
 @onready var player = $"../Player"
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -32,8 +35,19 @@ func _process(delta):
 		Global.crosshair_off = false
 		Global.saw_wall = false
 
-	if saw_line1 >= 2 and saw_line2 >= 2:
+	if saw_line1 >= 2 and saw_line2 >= 2 and played3 == false:
+		played3 = true
 		Global.wall_sawed = true
+		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/elektriker_step_2.dialogue"))
+	
+	if $Toolinsert1/Cable.visible == true and $Toolinsert2/Cable.visible == true and played4 == false:
+		played4 = true
+		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/elektriker_step_3.dialogue"))
+	
+	if $PlasterOutlets/OutletCase.visible == true and $PlasterOutlets2/OutletCase.visible == true and played5 == false:
+		played5 = true
+		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/elektriker_step_4.dialogue"))
+	
 	
 	
 #moves the saw with mouse

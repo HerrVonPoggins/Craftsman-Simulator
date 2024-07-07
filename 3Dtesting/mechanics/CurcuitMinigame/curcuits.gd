@@ -25,7 +25,7 @@ func _process(delta):
 
 		
 func _unhandled_input(event):
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and $Camera3D.current == true:
 		var mousePos = get_viewport().get_mouse_position()
 		var raylength = 100
 		var from = camera.project_ray_origin(mousePos)

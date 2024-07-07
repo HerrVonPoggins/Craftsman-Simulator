@@ -1,0 +1,10 @@
+~ this_is_a_node_title
+
+set Global.dialogue_open = true
+
+Elektriker: Super! Du bist ein Naturtalent was die Aufgaben eines Elektrikers angeht
+Elektriker: Das war es allerdings für heute. Elektriker
+
+set Global.dialogue_open = false
+
+=> END

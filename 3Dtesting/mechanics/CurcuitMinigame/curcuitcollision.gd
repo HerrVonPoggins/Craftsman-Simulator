@@ -15,8 +15,6 @@ func _process(delta):
 	var collider = get_collider()
 
 
-
-
 #switch minigame end condition
 	if $"../../../StaticBody3D2".rotation_degrees.x == 20 and $"../../../StaticBody3D3".rotation_degrees.x == 20 and $"../../../StaticBody3D4".rotation_degrees.x == 20 and $"../../../StaticBody3D5".rotation_degrees.x == 20 and played == false:
 		played = true
@@ -32,24 +30,29 @@ func _process(delta):
 		
 		
 #curcuit minigame end condition
-	if $"../../../StaticBody3D2".rotation_degrees.z == 90 and $"../../../StaticBody3D3".rotation_degrees.z == -180 and played2 == false:
-		played2 = true
-		Global.curcuit_minigame_on = false
-		$"../..".current = false
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		Global.crosshair_off = false
-		Global.stay = false
-		Global.player_visibility = true
-		$"../../../StaticBody3D".remove_from_group("activate")
-		$"../../../StaticBody3D2".remove_from_group("activate")
-		$"../../../StaticBody3D3".remove_from_group("activate")
-		$"../../../StaticBody3D4".remove_from_group("activate")
-		$"../../../StaticBody3D5".remove_from_group("activate")
-		$"../../../StaticBody3D6".remove_from_group("activate")
-		$"../../../StaticBody3D7".remove_from_group("activate")
-		$"../../../StaticBody3D8".remove_from_group("activate")
-		$"../../../StaticBody3D9".remove_from_group("activate")
-		$"../../../StaticBody3D10".remove_from_group("activate")
+	if $"../../../StaticBody3D2".rotation_degrees.z == 180 and $"../../../StaticBody3D3".rotation_degrees.z == 270 and played2 == false:
+		if $"../../../StaticBody3D4".rotation_degrees.z == 180 and $"../../../StaticBody3D5".rotation_degrees.z == 180:
+			if $"../../../StaticBody3D6".rotation_degrees.z == 90 and $"../../../StaticBody3D7".rotation_degrees.z == 0:
+				if $"../../../StaticBody3D8".rotation_degrees.z == 270 and $"../../../StaticBody3D9".rotation_degrees.z == 90:
+					if $"../../../StaticBody3D10".rotation_degrees.z == 270:
+						print("done")
+						played2 = true
+						Global.curcuit_minigame_on = false
+						$"../..".current = false
+						Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+						Global.crosshair_off = false
+						Global.stay = false
+						Global.player_visibility = true
+						$"../../../StaticBody3D".remove_from_group("activate")
+						$"../../../StaticBody3D2".remove_from_group("activate")
+						$"../../../StaticBody3D3".remove_from_group("activate")
+						$"../../../StaticBody3D4".remove_from_group("activate")
+						$"../../../StaticBody3D5".remove_from_group("activate")
+						$"../../../StaticBody3D6".remove_from_group("activate")
+						$"../../../StaticBody3D7".remove_from_group("activate")
+						$"../../../StaticBody3D8".remove_from_group("activate")
+						$"../../../StaticBody3D9".remove_from_group("activate")
+						$"../../../StaticBody3D10".remove_from_group("activate")
 
 
 	if $"../../../StaticBody3D2".rotation_degrees.x == -40 and done == false:
@@ -88,8 +91,10 @@ func _process(delta):
 
 
 		if collider != null:
-			if collider.is_in_group("circuit"):
-				collider.rotate_z(deg_to_rad(90.0))
+			if collider.is_in_group("circuit") and $"../..".current == true:
+				collider.rotation.z += deg_to_rad(90) 
+				if collider.rotation.z >= deg_to_rad(360):
+					collider.rotation.z = deg_to_rad(0)
 
 			if collider.is_in_group("switch"):
 				if collider.rotation.x >= 0:

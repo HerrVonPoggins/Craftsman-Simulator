@@ -1,0 +1,7 @@
+~ this_is_a_node_title
+set Global.dialogue_open = true
+
+Elektriker: Hey! Komm rüber zu mir dann können wir reden.
+
+set Global.dialogue_open = false
+=> END

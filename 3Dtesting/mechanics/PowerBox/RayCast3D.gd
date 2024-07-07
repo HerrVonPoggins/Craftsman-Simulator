@@ -22,9 +22,7 @@ func _process(delta):
 	
 	
 	
-	
-	if Input.is_action_just_pressed("kamera"):
-		pass
+
 	if Input.is_action_just_pressed("rightclick"):
 		moveable = null
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
