@@ -53,6 +53,7 @@ func _on_area_3d_body_entered(body):
 		
 		if brick_1.visible == false and body.is_in_group("cut") == false and concrete_line_1 == true and counter == 1 :
 			body.queue_free()
+			Global.is_holding = false
 			
 			Global.brick_is_being_placed = true
 			await get_tree().create_timer(0.5).timeout
@@ -64,6 +65,7 @@ func _on_area_3d_body_entered(body):
 			
 		elif brick_2.visible == false and body.is_in_group("cut") == false and concrete_line_2 == true and counter == 2:
 			body.queue_free()
+			Global.is_holding = false
 			Global.brick_is_being_placed = true
 			await get_tree().create_timer(0.5).timeout
 			Global.brick_is_being_placed = false
@@ -74,6 +76,7 @@ func _on_area_3d_body_entered(body):
 
 		elif brick_3.visible == false and body.is_in_group("cut") and outline_3.visible == true and concrete_line_3 == true:
 			body.queue_free()
+			Global.is_holding = false
 			Music._play_brick_placing()
 			Global.brick_is_being_placed = true
 			await get_tree().create_timer(0.5).timeout
@@ -81,7 +84,7 @@ func _on_area_3d_body_entered(body):
 			brick_3.visible = true
 			outline_3.visible = false
 			DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/spirit_level_needed.dialogue"))
-			Global.wall_finished = true
+
 
 
 

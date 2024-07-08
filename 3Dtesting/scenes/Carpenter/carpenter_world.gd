@@ -62,8 +62,9 @@ func _on_control_closed():
 
 
 func _process(delta):
-	if Input.is_action_just_pressed("kamera"):
-		print(Global.current_scene)
+	#if Input.is_action_just_pressed("kamera"):
+		#metallbinder_count == 44
+		#$Dachbinder.roof_step = 6
 
 
 	if metallbinder_count >= 15:
@@ -72,18 +73,20 @@ func _process(delta):
 		$Dachbinder.roof_step = 4
 	if metallbinder_count >= 37:
 		$Dachbinder.roof_step = 5
-	if metallbinder_count >= 44:
+	if metallbinder_count >= 44 and played3 == false:
+		played3 = true
 		$Dachbinder.roof_step = 6
-		$Props/Window.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
-		$Props/WindowBoard.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
-		$Props/FoamSpray.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		
+		$Props/Window/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		$Props/WindowBoard/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		$Props/FoamSpray/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 		
 	if $WindowPlacing.window_done == true and played == false:
 		played = true
-		$Props/DoorFrame.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
-		$Props/DoorFrame2.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
-		$Props/DoorBoard.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
-		$Props/DoorBoard2.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		$Props/DoorFrame/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		$Props/DoorFrame2/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		$Props/DoorBoard/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		$Props/DoorBoard2/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/zimmermann_step_4.dialogue"))
 
 	if Global.door_done >= 2 and played2 == false:

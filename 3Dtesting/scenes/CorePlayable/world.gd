@@ -57,7 +57,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
 		
 		#get_tree().reload_current_scene()
-		#Global.wall_finished = true
+		Global.wall_finished = true
 		#Global.roof_finished = true
 		pass
 		
@@ -381,6 +381,7 @@ func _on_area_3d_5_body_entered(body):
 	if body.is_in_group("spirit_level"):
 		body.queue_free()
 		Global.is_holding = false
+		Global.is_holding = false
 		Global.can_extend = false
 		$Node3D9.visible = true
 
@@ -403,6 +404,7 @@ func _on_saw_camera_brick_cut_correct():
 func _on_area_3d_body_entered(body):
 	if body.is_in_group("concretebucket"):
 		body.queue_free()
+		
 		Global.is_holding = false
 		Global.can_extend = false
 		$Area3D/ConcreteBucketObj.visible = true
