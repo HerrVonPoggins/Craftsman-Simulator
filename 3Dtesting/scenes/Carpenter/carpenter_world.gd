@@ -62,9 +62,8 @@ func _on_control_closed():
 
 
 func _process(delta):
-	#if Input.is_action_just_pressed("kamera"):
-		#metallbinder_count == 44
-		#$Dachbinder.roof_step = 6
+	if Input.is_action_just_pressed("kamera"):
+		Global.door_done = 2
 
 
 	if metallbinder_count >= 15:
