@@ -17,7 +17,7 @@ var played = false
 var trowel_collider = null
 var spirit_level_collider = null
 
-
+var metallbinder_picked = false
 
 
 @onready var animation_arms = $"../../../../Root Scene/AnimationPlayer"
@@ -122,6 +122,10 @@ func _process(delta):
 						Global.holding_bricks = true
 					if collider.is_in_group("bag"):
 						Global.holding_bag = true
+					if collider.is_in_group("metallbinder_item"):
+						metallbinder_picked = true
+					if !collider.is_in_group("metallbinder_item"):
+						metallbinder_picked = false
 
 
 
@@ -136,14 +140,13 @@ func _process(delta):
 	#The Raycast shoots a laser for a fixed range, on collision with something we can get the object and check if it is in group "npc"
 	#if we press interact(E) while focused on the npc the mouse pointer becomes visible again and a dialogue will bes started
 	if Input.is_action_just_pressed("interagieren"):
-		if obj == null:
+		if obj != null:
 			var collider = get_collider()
 			if collider != null:
-
-				
-				
 				if collider.is_in_group("metallbinder"):
-					emit_signal("metallbinder_clicked")
+					if metallbinder_picked == true:
+						collider.get_parent().visible = true
+						emit_signal("metallbinder_clicked")
 
 				if collider.is_in_group("npc") and Global.dialogue_open == false:
 					Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -212,13 +215,13 @@ func _process(delta):
 
 		last = obj.global_position
 		obj.position = point.global_position
-		if obj.is_class("RigidBody3D"):
-			if obj.get_node("Mesh").material_overlay != null:
-				was_shiny = true
-			obj.get_node("Mesh").set_deferred("material_overlay", null)
-			temp = obj.get_node("Mesh")
-			obj.linear_velocity = Vector3.ZERO
-			obj.look_at($"../VisionCenter".global_position)
+		#if obj.is_class("RigidBody3D"):
+			#if obj.get_node("Mesh").material_overlay != null:
+				#was_shiny = true
+			#obj.get_node("Mesh").set_deferred("material_overlay", null)
+			#temp = obj.get_node("Mesh")
+			#obj.linear_velocity = Vector3.ZERO
+			#obj.look_at($"../VisionCenter".global_position)
 
 
 	else:
