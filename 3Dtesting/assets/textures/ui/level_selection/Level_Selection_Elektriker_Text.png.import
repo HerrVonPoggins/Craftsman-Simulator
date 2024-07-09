@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8ceiuskepxv8"
-path="res://.godot/imported/Level_Selection_Elektriker_Text.png-686d0a107eb4f9b2a64024b96dac54fa.ctex"
+path="res://.godot/imported/Level_Selection_Elektriker_Text.png-7aabd3d60a303b002dec8f59c1398f79.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/ui/level_selection/Level_Selection_Elektriker_Text.png"
-dest_files=["res://.godot/imported/Level_Selection_Elektriker_Text.png-686d0a107eb4f9b2a64024b96dac54fa.ctex"]
+source_file="res://assets/textures/UI/level_selection/Level_Selection_Elektriker_Text.png"
+dest_files=["res://.godot/imported/Level_Selection_Elektriker_Text.png-7aabd3d60a303b002dec8f59c1398f79.ctex"]
 
 [params]
 

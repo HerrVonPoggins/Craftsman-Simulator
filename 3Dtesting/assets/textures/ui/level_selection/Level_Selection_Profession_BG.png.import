@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfmsv0c6p4ipc"
-path="res://.godot/imported/Level_Selection_Profession_BG.png-05d12836b1efd6192a6a7ccbc0c13ba4.ctex"
+path="res://.godot/imported/Level_Selection_Profession_BG.png-a6d870ebe69a8887d6f5872e3fb50ba1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/ui/level_selection/Level_Selection_Profession_BG.png"
-dest_files=["res://.godot/imported/Level_Selection_Profession_BG.png-05d12836b1efd6192a6a7ccbc0c13ba4.ctex"]
+source_file="res://assets/textures/UI/level_selection/Level_Selection_Profession_BG.png"
+dest_files=["res://.godot/imported/Level_Selection_Profession_BG.png-a6d870ebe69a8887d6f5872e3fb50ba1.ctex"]
 
 [params]
 

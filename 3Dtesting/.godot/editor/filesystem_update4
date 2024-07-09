@@ -1,4 +1,4 @@
-res://UI/screens/level_selection.tscn
+res://ui/screens/titlescreen.tscn
 res://scenes/Carpenter/carpenter_world.gd
 res://scenes/CorePlayable/shine_shader.gdshader
 res://scenes/CorePlayable/CorePlayable.gdshader
@@ -14,6 +14,5 @@ res://assets/shader/wedges.tres
 res://scenes/CorePlayable/CorePlayable.tscn
 res://scenes/Carpenter/carpenter_world.tscn
 res://mechanics/Player/node_3d.tscn
-res://mechanics/door_placing/door.tscn
 res://mechanics/saw_wall/saw_wall.tscn
-res://ui/screens/titlescreen.tscn
+res://scenes/ElektrikerScene/Elektriker.tscn

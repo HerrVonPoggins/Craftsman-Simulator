@@ -49,9 +49,10 @@ var dialogue_line: DialogueLine:
 			portrait.texture = load("res://assets/portraits/fuchs portrait.png")
 		elif dialogue_line.character.to_lower() == "maurer":
 			portrait.texture = load("res://assets/portraits/bär portrait.png")
-		#elif dialogue_line.character.to_lower() == "stuckateur":
-			#portrait.texture = load()
-
+		elif dialogue_line.character.to_lower() == "zimmermann":
+			portrait.texture = load("res://assets/portraits/zimmermann.png")
+		elif dialogue_line.character.to_lower() == "elektriker":
+			portrait.texture = load("res://assets/portraits/elektriker.png")
 
 
 

@@ -312,7 +312,8 @@ func _play_grab():
 func _play_stand():
 	animation_arms.play("Idle_Standing_Still_002")
 func _play_walk():
-	animation_arms.play("Idle_Walking")
+	animation_arms.play("metarig|Idle_Walking_New")
+	
 func _play_bucket_out():
 
 

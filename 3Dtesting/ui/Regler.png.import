@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0xfjes5t40nk"
-path="res://.godot/imported/Regler.png-3ae1a88067be01e26661441ada5836d8.ctex"
+path="res://.godot/imported/Regler.png-c5f5087f7c6a4279195a5cc4102782cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/Regler.png"
-dest_files=["res://.godot/imported/Regler.png-3ae1a88067be01e26661441ada5836d8.ctex"]
+source_file="res://ui/Regler.png"
+dest_files=["res://.godot/imported/Regler.png-c5f5087f7c6a4279195a5cc4102782cd.ctex"]
 
 [params]
 

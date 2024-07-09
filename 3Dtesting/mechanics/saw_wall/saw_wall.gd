@@ -40,12 +40,12 @@ func _process(delta):
 		Global.wall_sawed = true
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/elektriker_step_2.dialogue"))
 	
-	if $Toolinsert1/Cable.visible == true and $Toolinsert2/Cable.visible == true and played4 == false:
+	if $Toolinsert1/Cable.visible == true and $Toolinsert1/Cable2.visible == true and played4 == false:
 		played4 = true
 		Global.electric_checkstate += 1
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/elektriker_step_3.dialogue"))
 	
-	if $PlasterOutlets/OutletCase.visible == true and $PlasterOutlets2/OutletCase.visible == true and played5 == false:
+	if $PlasterOutlets2/OutletCase.visible == true and played5 == false:
 		played5 = true
 		Global.electric_checkstate += 1
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/elektriker_step_4.dialogue"))
@@ -77,9 +77,12 @@ func _on_toolinsert_1_body_entered(body):
 		
 	if body.is_in_group("cable") and Global.wall_sawed == true:
 		body.queue_free()
+		if $Toolinsert1/Cable.visible == true:
+			$Toolinsert1/Cable2.visible = true
 		Global.is_holding = false
 		Global.can_extend = false
 		$Toolinsert1/Cable.visible = true
+
 
 func _on_toolinsert_2_body_entered(body):
 	if body.is_in_group("wall_saw_prop") and saw_line2 <= 0:
@@ -90,25 +93,15 @@ func _on_toolinsert_2_body_entered(body):
 		Global.stay = true
 		Global.crosshair_off = true
 		
-	if body.is_in_group("cable") and Global.wall_sawed == true:
-		body.queue_free()
-		Global.is_holding = false
-		Global.can_extend = false
-		$Toolinsert2/Cable.visible = true
 
 
-func _on_plaster_outlets_body_entered(body):
-	if body.is_in_group("trowel") and Global.plaster_on == true:
-		$PlasterOutlets/PlasterPlaced.visible = true
-	if body.is_in_group("outlet") and $PlasterOutlets/PlasterPlaced.visible == true:
-		body.queue_free()
-		Global.can_power += 1
-		$PlasterOutlets/OutletCase.visible = true
+
+
 
 func _on_plaster_outlets_2_body_entered(body):
 	if body.is_in_group("trowel") and Global.plaster_on == true:
 		$PlasterOutlets2/PlasterPlaced.visible = true
-	if body.is_in_group("outlet") and $PlasterOutlets/PlasterPlaced.visible == true:
+	if body.is_in_group("outlet") and $PlasterOutlets2/PlasterPlaced.visible == true:
 		body.queue_free()
 		Global.can_power += 1
 		$PlasterOutlets2/OutletCase.visible = true
