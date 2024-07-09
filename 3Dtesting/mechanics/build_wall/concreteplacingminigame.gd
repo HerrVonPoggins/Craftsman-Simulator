@@ -20,6 +20,7 @@ func _process(delta):
 	$RigidBody3D.position.y = 0.145
 	if $".".visible == true:
 		$Camera3D.current = true
+		Global.crosshair_off = true
 		Global.placing_games_open = true
 		player.visible = false
 		trowel.visible = false
@@ -292,6 +293,7 @@ func _on_concrete_12_body_exited(body):
 	if concrete_12.visible == true:
 		Global.concrete_1 = true
 		Global.stay = false
+		Global.crosshair_off = false
 		player.visible = true
 		trowel.visible = true
 		Global.placing_games_open = false

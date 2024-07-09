@@ -16,6 +16,7 @@ func _process(delta):
 		$Camera3D.current = true
 		Global.placing_games_open = true
 		Global.stay = true
+		Global.crosshair_off = true
 		player.visible = false
 		trowel.visible = false
 
@@ -36,6 +37,7 @@ func _process(delta):
 	if brick_1_done == true and brick_2_done == true and brick_3_done == true:
 		Global.wall_finished = true
 		Global.stay = false
+		Global.crosshair_off = false
 		player.visible = true
 		trowel.visible = true
 		Global.placing_games_open = false

@@ -21,6 +21,7 @@ func _process(delta):
 	if $".".visible == true:
 		$Camera3D.current = true
 		Global.placing_games_open = true
+		Global.crosshair_off = true
 		player.visible = false
 		trowel.visible = false
 		Global.stay = true
@@ -291,6 +292,7 @@ func _on_concrete_12_body_exited(body):
 	if concrete_12.visible == true:
 		Global.concrete_2 = true
 		Global.stay = false
+		Global.crosshair_off = false
 		player.visible = true
 		trowel.visible = true
 		Global.placing_games_open = false

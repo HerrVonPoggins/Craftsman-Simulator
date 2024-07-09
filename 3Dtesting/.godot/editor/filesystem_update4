@@ -1,7 +1,5 @@
 res://ui/screens/titlescreen.tscn
 res://scenes/Carpenter/carpenter_world.gd
-res://scenes/CorePlayable/shine_shader.gdshader
-res://scenes/CorePlayable/CorePlayable.gdshader
 res://assets/shader/brick_body.tres
 res://assets/shader/concrete_bag_top.tres
 res://assets/shader/concrete_bag_body.tres
@@ -16,3 +14,13 @@ res://scenes/Carpenter/carpenter_world.tscn
 res://mechanics/Player/node_3d.tscn
 res://mechanics/saw_wall/saw_wall.tscn
 res://scenes/ElektrikerScene/Elektriker.tscn
+res://mechanics/build_wall/concreteplacingminigame.tscn
+res://scenes/CorePlayable/shine_shader.gdshader
+res://scenes/CorePlayable/CorePlayable.gdshader
+res://mechanics/build_wall/concreteplacingminigame.gd
+res://mechanics/build_wall/concreteplacingminigame2.tscn
+res://mechanics/build_wall/concreteplacingminigame2.gd
+res://mechanics/build_wall/concreteplacingminigam3.tscn
+res://mechanics/build_wall/concreteplacingminigam3.gd
+res://mechanics/build_wall/brickplacingminigame.tscn
+res://mechanics/build_wall/brickplacingminigame.gd
