@@ -55,7 +55,8 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
-		
+		Global.wall_finished = true
+		print("alles Hurensöhne hier")
 		#get_tree().reload_current_scene()
 		#Global.concrete_filled_roof = true
 		#Global.roof_finished = true

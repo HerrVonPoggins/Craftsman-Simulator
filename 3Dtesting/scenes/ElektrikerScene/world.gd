@@ -62,7 +62,7 @@ func _process(delta):
 	
 	if Global.generator_on == 3 and played3 == false:
 		played3 = true
-		$checklist.check_6.visible = false
+		Global.electric_checkstate += 1
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/elektriker_step_5.dialogue"))
 		await get_tree().create_timer(5).timeout
 		$Transition._change_scene("res://UI/screens/endscreen.tscn")
