@@ -304,7 +304,7 @@ func _on_player_delete_sand_container():
 
 #func to play animation
 func _place_brick():
-	$"../../../../Root Scene/AnimationPlayer".play("metarig|place brick")
+	$"../Root Scene2/AnimationPlayer".play("metarig|Idle_Standing_New")
 	
 	#generic animations
 func _play_grab():

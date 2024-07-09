@@ -12,14 +12,17 @@ func _process(delta):
 
 
 func _on_button_pressed():
+	Music._stop_main_menu()
 	$Transition._change_scene("res://scenes/CorePlayable/CorePlayable.tscn")
 
 
 func _on_button_2_pressed():
+	Music._stop_main_menu()
 	$Transition._change_scene("res://scenes/Carpenter/carpenter_world.tscn")
 
 
 func _on_button_3_pressed():
+	Music._stop_main_menu()
 	$Transition._change_scene("res://scenes/ElektrikerScene/Elektriker.tscn")
 
 

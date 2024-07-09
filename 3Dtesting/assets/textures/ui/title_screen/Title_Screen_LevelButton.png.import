@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cy4t5mbu75gj0"
-path="res://.godot/imported/Title_Screen_LevelButton.png-eec77f817bb3af0c490007d625b3813c.ctex"
+path="res://.godot/imported/Title_Screen_LevelButton.png-36bde0bbc71c6cceff37fc23a4738a80.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/ui/title_screen/Title_Screen_LevelButton.png"
-dest_files=["res://.godot/imported/Title_Screen_LevelButton.png-eec77f817bb3af0c490007d625b3813c.ctex"]
+source_file="res://assets/textures/UI/title_screen/Title_Screen_LevelButton.png"
+dest_files=["res://.godot/imported/Title_Screen_LevelButton.png-36bde0bbc71c6cceff37fc23a4738a80.ctex"]
 
 [params]
 

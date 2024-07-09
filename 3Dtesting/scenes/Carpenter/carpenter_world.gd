@@ -18,6 +18,7 @@ var checkstate = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	Checklist._movement_visual()
 	Checklist._sprint_visual()
 	Checklist._crouch_visual()
@@ -65,8 +66,8 @@ func _on_control_closed():
 
 func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
-		$Dachbinder.roof_step = 1
-
+		#$Dachbinder.roof_step = 1
+		Global.door_done = 2
 	if metallbinder_count == 3:
 		Global.skip = 3
 

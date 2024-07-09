@@ -5,6 +5,7 @@ var played2 = false
 var played3 = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	Checklist._movement_visual()
 	Checklist._sprint_visual()
 	Checklist._crouch_visual()
@@ -39,8 +40,8 @@ func _on_control_closed():
 
 func _process(delta):
 	
-	#if Input.is_action_just_pressed("kamera"):
-		#Global.can_power = 2
+	if Input.is_action_just_pressed("kamera"):
+		Global.generator_on = 3
 	
 	
 	if Global.wall_sawed == true and played2 == false:

@@ -49,18 +49,13 @@ func _ready():
 	await get_tree().create_timer(8).timeout
 	Checklist._interact_visual_hide()
 	Checklist._mouse_right_visual_hide()
-
+	
 
 
 
 func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
 		Global.wall_finished = true
-		print("alles Hurensöhne hier")
-		#get_tree().reload_current_scene()
-		#Global.concrete_filled_roof = true
-		#Global.roof_finished = true
-		Global.door_top = 4
 		pass
 		
 		#unbug yourself by teleporting back to startpoint
@@ -74,7 +69,9 @@ func _process(delta):
 		$"Root Scene".visible = true
 		$"Root Scene/RootNode/Cube/StaticBody3D/CollisionShape3D".call_deferred("set_disabled", false)
 		await get_tree().create_timer(5).timeout
+		
 		$Transition._change_scene("res://UI/screens/scene_change.tscn")
+		
 
 
 	#when the roof minigame is finished the filling action starts
@@ -196,13 +193,14 @@ func _process(delta):
 	#the doortops can be placed 
 	if Global.wall_finished == true and played == false:
 		played = true
+		$house_base/House_Bottom_Geruest_Anim.visible = true
+		$house_base/House_Bottom_Geruest_Anim/AnimationPlayer.play("Scene")
 		await get_tree().create_timer(3).timeout
-		$"house_base/geruest merged".visible = true
-		$"house_base/geruest merged/StaticBody3D/CollisionShape3D".call_deferred("set_disabled", false)
-		$"house_base/geruest merged/StaticBody3D2/CollisionShape3D".call_deferred("set_disabled", false)
-		$"house_base/geruest merged/StaticBody3D3/CollisionShape3D".call_deferred("set_disabled", false)
-		$"house_base/geruest merged/StaticBody3D4/CollisionShape3D".call_deferred("set_disabled", false)
-		$"house_base/geruest merged/StaticBody3D5/CollisionShape3D".call_deferred("set_disabled", false)
+		
+		
+		$house_base/House_Bottom_Geruest_Anim/Geruest_klein_001/StaticBody3D/CollisionShape3D.call_deferred("set_disabled", false)
+
+
 		
 		
 		
@@ -250,7 +248,6 @@ func _process(delta):
 		$Props/Doorframe2/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 		$Props/Doorframe3/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 		$Props/Doorframe4/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
-		$"house_base/geruest merged".visible = true
 		played = true
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_4.dialogue"))
 

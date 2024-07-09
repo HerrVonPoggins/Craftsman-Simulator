@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://ccolb6uftch63" path="res://assets/fonts/AldotheApache.ttf" id="3_8anv8"]
 
 
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tm15q"]
 texture = ExtResource("2_tecys")
 region_rect = Rect2(1202.12, 146.3, 2978.64, 2976.04)

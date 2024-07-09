@@ -1,3 +1,4 @@
+res://scenes/CorePlayable/CorePlayable.tscn
 res://scenes/Carpenter/carpenter_world.gd
 res://scenes/CorePlayable/shine_shader.gdshader
 res://scenes/CorePlayable/CorePlayable.gdshader
@@ -10,11 +11,14 @@ res://assets/shader/bucket_body.tres
 res://assets/shader/rod_metal.tres
 res://assets/shader/door_top_body.tres
 res://assets/shader/wedges.tres
+res://scenes/CorePlayable/world.gd
 res://ui/screens/titlescreen.tscn
-res://scenes/CorePlayable/CorePlayable.tscn
 res://scenes/Carpenter/carpenter_world.tscn
 res://scenes/ElektrikerScene/Elektriker.tscn
 res://mechanics/Player/node_3d.tscn
-res://ui/screens/titlescreen.gd
-res://ui/screens/level_selection.gd
+res://mechanics/Player/RayCast3D.gd
 res://UI/screens/level_selection.tscn
+res://ui/screens/endscreen.gd
+res://ui/screens/endscreen.tscn
+res://mechanics/saw_wall/saw_wall.tscn
+res://ui/screens/skip_menu.gd

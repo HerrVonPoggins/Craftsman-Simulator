@@ -1,15 +1,15 @@
 [gd_scene load_steps=48 format=3 uid="uid://pbhx3qg2pdu5"]
 
 [ext_resource type="Script" path="res://ui/screens/level_selection.gd" id="1_ft1rv"]
-[ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://UI/player_ui/transition.tscn" id="2_gd0ne"]
-[ext_resource type="Texture2D" uid="uid://lg4g5vqkmds3" path="res://assets/textures/ui/level_selection/Level_Selection_Background.png" id="2_lueft"]
-[ext_resource type="Texture2D" uid="uid://bdxryqy15bcgy" path="res://assets/textures/ui/level_selection/Level_Selection_BG_Text.png" id="3_bnibg"]
-[ext_resource type="Texture2D" uid="uid://cvmfov30xgcnn" path="res://assets/textures/ui/level_selection/Level_Selection_Maurer_PNG.png" id="4_xobg7"]
-[ext_resource type="Texture2D" uid="uid://cfmsv0c6p4ipc" path="res://assets/textures/ui/level_selection/Level_Selection_Profession_BG.png" id="5_2o4ev"]
-[ext_resource type="Texture2D" uid="uid://k0db0u6cupxf" path="res://assets/textures/ui/level_selection/Level_Selection_Dachdecker_PNG.png" id="6_c5pae"]
-[ext_resource type="Texture2D" uid="uid://5jny57kllhoo" path="res://assets/textures/ui/level_selection/Level_Selection_Maurer_Text.png" id="6_tq2nw"]
-[ext_resource type="Texture2D" uid="uid://dsqydg7pami5i" path="res://assets/textures/ui/level_selection/Level_Selection_Elektriker_PNG.png" id="8_6ssb6"]
-[ext_resource type="Texture2D" uid="uid://chie51y84a453" path="res://assets/textures/ui/level_selection/Level_Selection_BackButton.png" id="9_7ypw6"]
+[ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://ui/player_ui/transition.tscn" id="2_gd0ne"]
+[ext_resource type="Texture2D" uid="uid://lg4g5vqkmds3" path="res://assets/textures/UI/level_selection/Level_Selection_Background.png" id="2_lueft"]
+[ext_resource type="Texture2D" uid="uid://bdxryqy15bcgy" path="res://assets/textures/UI/level_selection/Level_Selection_BG_Text.png" id="3_bnibg"]
+[ext_resource type="Texture2D" uid="uid://cvmfov30xgcnn" path="res://assets/textures/UI/level_selection/Level_Selection_Maurer_PNG.png" id="4_xobg7"]
+[ext_resource type="Texture2D" uid="uid://cfmsv0c6p4ipc" path="res://assets/textures/UI/level_selection/Level_Selection_Profession_BG.png" id="5_2o4ev"]
+[ext_resource type="Texture2D" uid="uid://k0db0u6cupxf" path="res://assets/textures/UI/level_selection/Level_Selection_Dachdecker_PNG.png" id="6_c5pae"]
+[ext_resource type="Texture2D" uid="uid://5jny57kllhoo" path="res://assets/textures/UI/level_selection/Level_Selection_Maurer_Text.png" id="6_tq2nw"]
+[ext_resource type="Texture2D" uid="uid://dsqydg7pami5i" path="res://assets/textures/UI/level_selection/Level_Selection_Elektriker_PNG.png" id="8_6ssb6"]
+[ext_resource type="Texture2D" uid="uid://chie51y84a453" path="res://assets/textures/UI/level_selection/Level_Selection_BackButton.png" id="9_7ypw6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_64c11"]
 
@@ -103,21 +103,6 @@ tracks/0/keys = {
 "values": [Vector2(1, 1), Vector2(1.1, 1.1)]
 }
 
-[sub_resource type="Animation" id="Animation_t8l81"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Button:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_vy2u4"]
 resource_name = "Level_1_Exit"
 tracks/0/type = "value"
@@ -131,6 +116,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_t8l81"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5eix5"]
@@ -155,21 +155,6 @@ tracks/0/keys = {
 "values": [Vector2(1, 1), Vector2(1.1, 1.1)]
 }
 
-[sub_resource type="Animation" id="Animation_uosx6"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Button2:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_kdji4"]
 resource_name = "Level_2_Exit"
 tracks/0/type = "value"
@@ -185,19 +170,12 @@ tracks/0/keys = {
 "values": [Vector2(1.1, 1.1), Vector2(1, 1)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_6kdxx"]
-_data = {
-"Level_2_Enter": SubResource("Animation_rlr0m"),
-"Level_2_Exit": SubResource("Animation_kdji4"),
-"RESET": SubResource("Animation_uosx6")
-}
-
-[sub_resource type="Animation" id="Animation_n4m6n"]
+[sub_resource type="Animation" id="Animation_uosx6"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Button3:scale")
+tracks/0/path = NodePath("Button2:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -206,17 +184,42 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(1, 1)]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Button4:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6kdxx"]
+_data = {
+"Level_2_Enter": SubResource("Animation_rlr0m"),
+"Level_2_Exit": SubResource("Animation_kdji4"),
+"RESET": SubResource("Animation_uosx6")
+}
+
+[sub_resource type="Animation" id="Animation_rpk7b"]
+resource_name = "ExitButton_Enter"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button4:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0.12, 0.12)]
+"values": [Vector2(0.12, 0.12), Vector2(0.13, 0.13)]
+}
+
+[sub_resource type="Animation" id="Animation_t6yfi"]
+resource_name = "ExitButton_Exit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button4:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.12, 0.12), Vector2(0.13, 0.13)]
 }
 
 [sub_resource type="Animation" id="Animation_abj0v"]
@@ -249,34 +252,31 @@ tracks/0/keys = {
 "values": [Vector2(1.1, 1.1), Vector2(1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_t6yfi"]
-resource_name = "ExitButton_Exit"
+[sub_resource type="Animation" id="Animation_n4m6n"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Button4:scale")
-tracks/0/interp = 2
+tracks/0/path = NodePath("Button3:scale")
+tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0.12, 0.12), Vector2(0.13, 0.13)]
+"values": [Vector2(1, 1)]
 }
-
-[sub_resource type="Animation" id="Animation_rpk7b"]
-resource_name = "ExitButton_Enter"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Button4:scale")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Button4:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0.12, 0.12), Vector2(0.13, 0.13)]
+"values": [Vector2(0.12, 0.12)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_makg3"]

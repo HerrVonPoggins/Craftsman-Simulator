@@ -6,7 +6,8 @@ func _ready():
 	Global.checklist_hide = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 #change back to titlescreen
-func _on_button_pressed():
+func _on_button_quit_pressed():
+	get_tree().quit()
 	Music._play_button()
 	Global.checklist_hide = true
 	Global.concrete = false
@@ -95,3 +96,6 @@ func _on_button_pressed():
 
 
 	$transition._change_scene("res://ui/screens/titlescreen.tscn")
+
+
+

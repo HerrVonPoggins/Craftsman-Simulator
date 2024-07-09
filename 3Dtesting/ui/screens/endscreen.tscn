@@ -1,7 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://d4kw51ts71iln"]
+[gd_scene load_steps=10 format=3 uid="uid://d4kw51ts71iln"]
 
 [ext_resource type="Script" path="res://ui/screens/endscreen.gd" id="1_qv50l"]
-[ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://ui/player_ui/transition.tscn" id="2_l025x"]
+[ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://UI/player_ui/transition.tscn" id="2_l025x"]
+[ext_resource type="Texture2D" uid="uid://bkkd6ktc4lqsi" path="res://assets/textures/UI/title_screen/Title_Screen_background.png" id="2_ldagw"]
+[ext_resource type="Texture2D" uid="uid://c3e5xcmm26ih" path="res://assets/textures/UI/title_screen/Title_Screen_QuitButton.png" id="4_461ou"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vp2bl"]
+texture = ExtResource("2_ldagw")
+
+[sub_resource type="Theme" id="Theme_akp31"]
+Panel/styles/panel = SubResource("StyleBoxTexture_vp2bl")
 
 [sub_resource type="Animation" id="Animation_axmk6"]
 length = 0.001
@@ -43,7 +51,21 @@ _data = {
 [node name="Endscreen" type="Node2D"]
 script = ExtResource("1_qv50l")
 
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_akp31")
+
 [node name="Button" type="Button" parent="."]
+visible = false
 offset_left = 1738.0
 offset_top = 41.0
 offset_right = 1842.0
@@ -69,13 +91,14 @@ color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-offset_left = 783.0
-offset_top = 177.0
-offset_right = 1153.0
-offset_bottom = 852.0
+offset_left = 781.0
+offset_top = 211.0
+offset_right = 1068.0
+offset_bottom = 690.0
 size_flags_horizontal = 4
 
 [node name="Label" type="Label" parent="ScrollContainer"]
+custom_minimum_size = Vector2(100, 1000)
 layout_mode = 2
 text = "Craftsman Simulator:
 Yunus Halavart
@@ -95,5 +118,20 @@ Kenney
 Input Symbols:
 Kenney
 "
+horizontal_alignment = 1
+
+[node name="ButtonQuit" type="TextureButton" parent="."]
+offset_left = 744.0
+offset_top = -159.0
+offset_right = 2664.0
+offset_bottom = 335.0
+scale = Vector2(0.205, 0.205)
+pivot_offset = Vector2(936.244, 243.219)
+texture_normal = ExtResource("4_461ou")
+texture_pressed = ExtResource("4_461ou")
+texture_hover = ExtResource("4_461ou")
+texture_disabled = ExtResource("4_461ou")
+texture_focused = ExtResource("4_461ou")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ButtonQuit" to="." method="_on_button_quit_pressed"]
