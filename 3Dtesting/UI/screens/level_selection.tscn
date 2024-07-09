@@ -1,8 +1,55 @@
-[gd_scene load_steps=6 format=3 uid="uid://pbhx3qg2pdu5"]
+[gd_scene load_steps=48 format=3 uid="uid://pbhx3qg2pdu5"]
 
 [ext_resource type="Script" path="res://ui/screens/level_selection.gd" id="1_ft1rv"]
-[ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://ui/player_ui/transition.tscn" id="2_gd0ne"]
+[ext_resource type="PackedScene" uid="uid://cdpolkwg0t10a" path="res://UI/player_ui/transition.tscn" id="2_gd0ne"]
+[ext_resource type="Texture2D" uid="uid://lg4g5vqkmds3" path="res://assets/textures/ui/level_selection/Level_Selection_Background.png" id="2_lueft"]
+[ext_resource type="Texture2D" uid="uid://bdxryqy15bcgy" path="res://assets/textures/ui/level_selection/Level_Selection_BG_Text.png" id="3_bnibg"]
+[ext_resource type="Texture2D" uid="uid://cvmfov30xgcnn" path="res://assets/textures/ui/level_selection/Level_Selection_Maurer_PNG.png" id="4_xobg7"]
+[ext_resource type="Texture2D" uid="uid://cfmsv0c6p4ipc" path="res://assets/textures/ui/level_selection/Level_Selection_Profession_BG.png" id="5_2o4ev"]
+[ext_resource type="Texture2D" uid="uid://k0db0u6cupxf" path="res://assets/textures/ui/level_selection/Level_Selection_Dachdecker_PNG.png" id="6_c5pae"]
+[ext_resource type="Texture2D" uid="uid://5jny57kllhoo" path="res://assets/textures/ui/level_selection/Level_Selection_Maurer_Text.png" id="6_tq2nw"]
+[ext_resource type="Texture2D" uid="uid://dsqydg7pami5i" path="res://assets/textures/ui/level_selection/Level_Selection_Elektriker_PNG.png" id="8_6ssb6"]
+[ext_resource type="Texture2D" uid="uid://chie51y84a453" path="res://assets/textures/ui/level_selection/Level_Selection_BackButton.png" id="9_7ypw6"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_64c11"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g3lme"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_63h5e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yvcg8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gmht3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_010aw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j3f1j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f5s1m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rmr3q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ohj2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_avyvt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_blcrw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_myivk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o1o2n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qlg8t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ert3j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8nhfj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w3oya"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fx18a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hf0ow"]
 
 [sub_resource type="Animation" id="Animation_axmk6"]
 length = 0.001
@@ -41,6 +88,206 @@ _data = {
 "fade_in": SubResource("Animation_23qvj")
 }
 
+[sub_resource type="Animation" id="Animation_7fydf"]
+resource_name = "Level_1_Enter"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1)]
+}
+
+[sub_resource type="Animation" id="Animation_t8l81"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vy2u4"]
+resource_name = "Level_1_Exit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5eix5"]
+_data = {
+"Level_1_Enter": SubResource("Animation_7fydf"),
+"Level_1_Exit": SubResource("Animation_vy2u4"),
+"RESET": SubResource("Animation_t8l81")
+}
+
+[sub_resource type="Animation" id="Animation_rlr0m"]
+resource_name = "Level_2_Enter"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button2:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1)]
+}
+
+[sub_resource type="Animation" id="Animation_uosx6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_kdji4"]
+resource_name = "Level_2_Exit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button2:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6kdxx"]
+_data = {
+"Level_2_Enter": SubResource("Animation_rlr0m"),
+"Level_2_Exit": SubResource("Animation_kdji4"),
+"RESET": SubResource("Animation_uosx6")
+}
+
+[sub_resource type="Animation" id="Animation_n4m6n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button3:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Button4:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.12, 0.12)]
+}
+
+[sub_resource type="Animation" id="Animation_abj0v"]
+resource_name = "Level_3_Enter"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button3:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1)]
+}
+
+[sub_resource type="Animation" id="Animation_crhdy"]
+resource_name = "Level_3_Exit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button3:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_t6yfi"]
+resource_name = "ExitButton_Exit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button4:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.12, 0.12), Vector2(0.13, 0.13)]
+}
+
+[sub_resource type="Animation" id="Animation_rpk7b"]
+resource_name = "ExitButton_Enter"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button4:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.12, 0.12), Vector2(0.13, 0.13)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_makg3"]
+_data = {
+"ExitButton_Enter": SubResource("Animation_rpk7b"),
+"ExitButton_Exit": SubResource("Animation_t6yfi"),
+"Level_3_Enter": SubResource("Animation_abj0v"),
+"Level_3_Exit": SubResource("Animation_crhdy"),
+"RESET": SubResource("Animation_n4m6n")
+}
+
 [node name="LevelSelection" type="Node2D"]
 script = ExtResource("1_ft1rv")
 
@@ -48,33 +295,113 @@ script = ExtResource("1_ft1rv")
 offset_right = 1920.0
 offset_bottom = 1080.0
 
+[node name="LevelSelectionBackground" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_lueft")
+
+[node name="LevelSelectionBgText" type="Sprite2D" parent="."]
+position = Vector2(964.68, 85.375)
+scale = Vector2(0.35026, 0.35026)
+texture = ExtResource("3_bnibg")
+
 [node name="Button" type="Button" parent="."]
-offset_left = 136.0
-offset_top = 193.0
-offset_right = 472.0
-offset_bottom = 276.0
-text = "Level 1"
+offset_left = 235.0
+offset_top = 355.0
+offset_right = 605.0
+offset_bottom = 956.0
+pivot_offset = Vector2(185, 300)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_64c11")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g3lme")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_63h5e")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_yvcg8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gmht3")
+flat = true
+
+[node name="LevelSelectionMaurerPng" type="Sprite2D" parent="Button"]
+position = Vector2(185, 184.5)
+scale = Vector2(0.997118, 1)
+texture = ExtResource("4_xobg7")
+
+[node name="LevelSelectionProfessionBg" type="Sprite2D" parent="Button"]
+position = Vector2(185, 300)
+texture = ExtResource("5_2o4ev")
+
+[node name="LevelSelectionMaurerText" type="Sprite2D" parent="Button"]
+position = Vector2(185.5, 478.5)
+scale = Vector2(0.233, 0.233)
+texture = ExtResource("6_tq2nw")
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 136.0
-offset_top = 334.0
-offset_right = 472.0
-offset_bottom = 417.0
-text = "Level 2"
+offset_left = 778.0
+offset_top = 355.0
+offset_right = 1148.0
+offset_bottom = 956.0
+pivot_offset = Vector2(185, 300)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_010aw")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_j3f1j")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_f5s1m")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rmr3q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8ohj2")
+text = "
+"
+flat = true
+
+[node name="LevelSelectionDachdeckerPng" type="Sprite2D" parent="Button2"]
+position = Vector2(185, 184.5)
+scale = Vector2(0.997118, 1)
+texture = ExtResource("6_c5pae")
+
+[node name="LevelSelectionProfessionBg" type="Sprite2D" parent="Button2"]
+position = Vector2(185, 300)
+texture = ExtResource("5_2o4ev")
+
+[node name="LevelSelectionMaurerText" type="Sprite2D" parent="Button2"]
+position = Vector2(185, 479)
+scale = Vector2(0.233, 0.233)
+texture = ExtResource("6_tq2nw")
 
 [node name="Button3" type="Button" parent="."]
-offset_left = 131.0
-offset_top = 486.0
-offset_right = 467.0
-offset_bottom = 569.0
-text = "Level 3"
+offset_left = 1293.0
+offset_top = 355.0
+offset_right = 1663.0
+offset_bottom = 956.0
+pivot_offset = Vector2(185, 300)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_avyvt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_blcrw")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_myivk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_o1o2n")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qlg8t")
+flat = true
+
+[node name="LevelSelectionElektrikerPng" type="Sprite2D" parent="Button3"]
+position = Vector2(185.5, 185)
+scale = Vector2(1, 1.0029)
+texture = ExtResource("8_6ssb6")
+
+[node name="LevelSelectionProfessionBg" type="Sprite2D" parent="Button3"]
+position = Vector2(185, 301)
+texture = ExtResource("5_2o4ev")
+
+[node name="LevelSelectionMaurerText" type="Sprite2D" parent="Button3"]
+position = Vector2(185, 481)
+scale = Vector2(0.233, 0.233)
+texture = ExtResource("6_tq2nw")
 
 [node name="Button4" type="Button" parent="."]
-offset_left = 1441.0
-offset_top = 64.0
-offset_right = 1830.0
-offset_bottom = 165.0
+offset_left = -477.0
+offset_top = 453.0
+offset_right = 649.0
+offset_bottom = 1541.0
+scale = Vector2(0.12, 0.12)
+pivot_offset = Vector2(580, 543)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ert3j")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8nhfj")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_w3oya")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_fx18a")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hf0ow")
 text = "Back"
+icon = ExtResource("9_7ypw6")
+flat = true
 
 [node name="Enter" type="AnimationPlayer" parent="."]
 libraries = {
@@ -82,6 +409,7 @@ libraries = {
 }
 
 [node name="ColorRect2" type="ColorRect" parent="Enter"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -93,7 +421,30 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Transition" parent="." instance=ExtResource("2_gd0ne")]
 
+[node name="Level_1" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5eix5")
+}
+
+[node name="Level_2" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6kdxx")
+}
+
+[node name="Level_3" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_makg3")
+}
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Button2" to="." method="_on_button_2_mouse_entered"]
+[connection signal="mouse_exited" from="Button2" to="." method="_on_button_2_mouse_exited"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="mouse_entered" from="Button3" to="." method="_on_button_3_mouse_entered"]
+[connection signal="mouse_exited" from="Button3" to="." method="_on_button_3_mouse_exited"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="mouse_entered" from="Button4" to="." method="_on_button_4_mouse_entered"]
+[connection signal="mouse_exited" from="Button4" to="." method="_on_button_4_mouse_exited"]
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]

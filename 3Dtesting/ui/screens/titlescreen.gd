@@ -44,3 +44,9 @@ func _on_button_quit_mouse_exited():
 
 
 
+func _on_level_selection_mouse_entered():
+	$LevelPlayer.play("Level_hover")
+
+
+func _on_level_selection_mouse_exited():
+	$LevelPlayer.play("Level_exit")
