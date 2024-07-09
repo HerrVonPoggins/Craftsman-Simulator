@@ -37,3 +37,4 @@ res://mechanics/saw_wall/saw_wall.gd
 res://ui/player_ui/info hub.tscn
 res://ui/player_ui/checklist.tscn
 res://mechanics/brick_cutting/saw.tscn
+res://ui/screens/skip_menu.gd

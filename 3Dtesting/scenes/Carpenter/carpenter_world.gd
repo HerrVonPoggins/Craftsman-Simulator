@@ -67,6 +67,8 @@ func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
 		$Dachbinder.roof_step = 1
 
+	if metallbinder_count == 3:
+		Global.skip = 3
 
 	if metallbinder_count >= 15:
 		$Dachbinder.roof_step = 2
