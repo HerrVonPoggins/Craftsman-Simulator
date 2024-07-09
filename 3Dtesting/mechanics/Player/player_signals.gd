@@ -26,24 +26,24 @@ func _process(delta):
 		played = true
 		await get_tree().create_timer(1.5).timeout
 		if Global.holding_bucket == false and Global.holding_bricks == false and Global.holding_bag == false:
-			$"CharacterBody3D/Neck/Camera3D/Root Scene3/AnimationPlayer".play("metarig|get sand sack out")
+			$"CharacterBody3D/Neck/Camera3D/Root Scene2/AnimationPlayer".play("metarig|get sand sack out")
 
 	if Global.holding_bucket == true:
 		Global.holding_bucket = false
-		$"CharacterBody3D/Neck/Camera3D/Root Scene3/AnimationPlayer".play("metarig|get bucket out")
+		$"CharacterBody3D/Neck/Camera3D/Root Scene2/AnimationPlayer".play("metarig|get bucket out")
 		
 	if Global.holding_bag == true:
 		Global.holding_bag = false
-		$"CharacterBody3D/Neck/Camera3D/Root Scene3/AnimationPlayer".play("metarig|get sand sack out")
+		$"CharacterBody3D/Neck/Camera3D/Root Scene2/AnimationPlayer".play("metarig|get sand sack out")
 	
 	if Global.holding_bricks == true:
 		Global.holding_bricks = false
-		$"CharacterBody3D/Neck/Camera3D/Root Scene3/AnimationPlayer".play("metarig|get bucket out")
+		$"CharacterBody3D/Neck/Camera3D/Root Scene2/AnimationPlayer".play("metarig|get bucket out")
 	
 	
 	if Global.is_holding == false:
 		played = false
-		$"CharacterBody3D/Neck/Camera3D/Root Scene3/AnimationPlayer".play("Idle_Walking")
+		$"CharacterBody3D/Neck/Camera3D/Root Scene2/AnimationPlayer".play("Idle_Walking")
 		
 
 	#$CharacterBody3D/Neck/Camera3D/Arrowhead.look_at(pointer)

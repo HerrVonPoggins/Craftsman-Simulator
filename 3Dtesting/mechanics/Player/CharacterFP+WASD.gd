@@ -64,7 +64,7 @@ func _physics_process(delta):
 	#arm moves forward on leftclick and if mouse is released the arm goes back
 	if Input.is_action_pressed("interagieren") and is_up == false and Global.dialogue_open == false and Global.stay == false:
 		if Global.holding_bucket == false and Global.holding_bag == false and Global.holding_bucket == false and Global.can_extend == true:
-			$"Neck/Camera3D/Root Scene3/AnimationPlayer".play("metarig|sack in ruehrding")
+			$"Neck/Camera3D/Root Scene2/AnimationPlayer".play("metarig|sack in ruehrding")
 			is_up = true
 		#elif Global.holding_bag == true:
 			#$"../Root Scene/AnimationPlayer".play("metarig|sack in ruehrding")
@@ -76,7 +76,7 @@ func _physics_process(delta):
 	if not Input.is_action_pressed("interagieren") and is_up == true:
 		is_up = false
 		$"../Animation".play_backwards("arm")
-		$"Neck/Camera3D/Root Scene3/AnimationPlayer".play_backwards("metarig|sack in ruehrding")
+		$"Neck/Camera3D/Root Scene2/AnimationPlayer".play_backwards("metarig|sack in ruehrding")
 
 
 	#crouching on C

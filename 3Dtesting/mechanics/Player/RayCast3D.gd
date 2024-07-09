@@ -20,8 +20,8 @@ var spirit_level_collider = null
 var metallbinder_picked = false
 
 
-@onready var animation_arms = $"../../../../Root Scene/AnimationPlayer"
-@onready var point = $"../Root Scene3/RootNode/metarig/Skeleton3D/BoneAttachment3D/Hold"
+@onready var animation_arms = $"../Root Scene2/AnimationPlayer"
+@onready var point = $"../Root Scene2/RootNode/metarig/Skeleton3D/BoneAttachment3D/Hold"
 @onready var player = $"../../../.."
 
 var work_clothes = 0
@@ -105,10 +105,16 @@ func _process(delta):
 		if obj == null:
 			var collider = get_collider()
 			if collider != null:
+
+
+
+
+
+
 				if collider.is_in_group("grab"):
 					Global.is_holding = true
-					$"../Root Scene3/AnimationPlayer".play("metarig|grab")
-					await $"../Root Scene3/AnimationPlayer".animation_finished
+					$"../Root Scene2/AnimationPlayer".play("metarig|grab")
+					await $"../Root Scene2/AnimationPlayer".animation_finished
 					await get_tree().create_timer(0.1).timeout
 					
 					
@@ -124,8 +130,7 @@ func _process(delta):
 						Global.holding_bag = true
 					if collider.is_in_group("metallbinder_item"):
 						metallbinder_picked = true
-					if !collider.is_in_group("metallbinder_item"):
-						metallbinder_picked = false
+
 
 
 
@@ -137,16 +142,42 @@ func _process(delta):
 					spirit_level_collider = collider
 					Global.spirit_level_picked = true
 
-	#The Raycast shoots a laser for a fixed range, on collision with something we can get the object and check if it is in group "npc"
-	#if we press interact(E) while focused on the npc the mouse pointer becomes visible again and a dialogue will bes started
+
+
+
+
+
+
+
+
+
 	if Input.is_action_just_pressed("interagieren"):
 		if obj != null:
 			var collider = get_collider()
 			if collider != null:
+
 				if collider.is_in_group("metallbinder"):
 					if metallbinder_picked == true:
 						collider.get_parent().visible = true
+						collider.get_parent().set_deferred("material_overlay", load("res://assets/shader/metall.tres"))
 						emit_signal("metallbinder_clicked")
+
+
+
+
+
+
+
+
+	#The Raycast shoots a laser for a fixed range, on collision with something we can get the object and check if it is in group "npc"
+	#if we press interact(E) while focused on the npc the mouse pointer becomes visible again and a dialogue will bes started
+	if Input.is_action_just_pressed("interagieren"):
+		if obj == null:
+			var collider = get_collider()
+			if collider != null:
+
+
+
 
 				if collider.is_in_group("npc") and Global.dialogue_open == false:
 					Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -191,6 +222,7 @@ func _process(delta):
 					emit_signal("start_saw_minigame")
 				if collider.is_in_group("rod_extend"):
 					collider.scale = Vector3(1,1.35,1)
+					collider.remove_from_group("activate")
 				if collider.is_in_group("curcuit_minigame") and Global.can_power >= 2:
 					Global.curcuit_minigame_on = true
 				if collider.is_in_group("switch_minigame") and Global.can_power >= 2:
@@ -199,8 +231,8 @@ func _process(delta):
 					Global.plaster_mixing = true
 				if collider.is_in_group("power_box") and Global.can_power >= 2:
 					Global.power_box = true
+					
 				if collider.is_in_group("open"):
-					print(collider.open)
 					if collider.open == false:
 						collider.open = true
 					else:
@@ -215,13 +247,13 @@ func _process(delta):
 
 		last = obj.global_position
 		obj.position = point.global_position
-		#if obj.is_class("RigidBody3D"):
-			#if obj.get_node("Mesh").material_overlay != null:
-				#was_shiny = true
-			#obj.get_node("Mesh").set_deferred("material_overlay", null)
-			#temp = obj.get_node("Mesh")
-			#obj.linear_velocity = Vector3.ZERO
-			#obj.look_at($"../VisionCenter".global_position)
+		if obj.is_class("RigidBody3D"):
+			if obj.get_node("Mesh").material_overlay != null:
+				was_shiny = true
+			obj.get_node("Mesh").set_deferred("material_overlay", null)
+			temp = obj.get_node("Mesh")
+			obj.linear_velocity = Vector3.ZERO
+			obj.look_at($"../VisionCenter".global_position)
 
 
 	else:
@@ -238,8 +270,9 @@ func _process(delta):
 			temp.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 		temp = null
 		was_shiny = false
+		metallbinder_picked = false
 		Global.can_extend = false
-		$"../Root Scene3/AnimationPlayer".play("Idle_Walking")
+		$"../Root Scene2/AnimationPlayer".play("Idle_Walking")
 		Global.is_holding = false
 		obj = null
 

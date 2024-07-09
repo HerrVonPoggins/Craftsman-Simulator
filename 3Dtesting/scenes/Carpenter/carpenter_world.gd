@@ -46,6 +46,7 @@ func _on_stairs_dübel_minigame_finished():
 	Global.switch_minigame_on = false
 	$Player.visible = true
 	$Dachbinder.roof_step = 1
+	$Props/MetallbinderContainer/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 
 
 
@@ -63,7 +64,7 @@ func _on_control_closed():
 
 func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
-		Global.door_done = 2
+		$Dachbinder.roof_step = 1
 
 
 	if metallbinder_count >= 15:
