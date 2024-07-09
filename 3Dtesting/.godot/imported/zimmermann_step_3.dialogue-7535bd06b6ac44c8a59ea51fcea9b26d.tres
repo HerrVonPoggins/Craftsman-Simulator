@@ -6,39 +6,112 @@
 script = ExtResource("1_ai18x")
 using_states = PackedStringArray()
 titles = {
-"this_is_a_node_title": "3"
+"this_is_a_node_title": "2"
 }
 character_names = PackedStringArray("Zimmermann")
-first_title = "3"
+first_title = "2"
 lines = {
 "1": {
 "id": "1",
-"next_id": "3",
+"next_id": "2",
 "text": "this_is_a_node_title",
 "type": &"title"
 },
-"3": {
+"2": {
+"id": "2",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
+"next_id": "4",
+"type": &"mutation"
+},
+"4": {
 "character": "Zimmermann",
 "character_replacements": Array[Dictionary]([]),
-"id": "3",
+"id": "4",
 "next_id": "5",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Als nächstes bau bitte die Fenster ein.",
+"text": "Als nächstes bau bitte ein Fenster ein.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Als nächstes bau bitte die Fenster ein.",
+"translation_key": "Als nächstes bau bitte ein Fenster ein.",
 "type": &"dialogue"
 },
 "5": {
+"character": "Zimmermann",
+"character_replacements": Array[Dictionary]([]),
 "id": "5",
+"next_id": "6",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Da der Fensterbauer heute Krank ist wirst du diese Aufgabe übernehmen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Da der Fensterbauer heute Krank ist wirst du diese Aufgabe übernehmen.",
+"type": &"dialogue"
+},
+"6": {
+"character": "Zimmermann",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Die Teile liegen im Raum gegenüber.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Die Teile liegen im Raum gegenüber.",
+"type": &"dialogue"
+},
+"7": {
+"id": "7",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
+},
+"next_id": "8",
+"type": &"mutation"
+},
+"8": {
+"id": "8",
 "is_snippet": false,
 "next_id": "end",
 "type": &"goto"
 }
 }
 raw_text = "~ this_is_a_node_title
+set Global.dialogue_open = true
 
-Zimmermann: Als nächstes bau bitte die Fenster ein.
-
+Zimmermann: Als nächstes bau bitte ein Fenster ein.
+Zimmermann: Da der Fensterbauer heute Krank ist wirst du diese Aufgabe übernehmen. 
+Zimmermann: Die Teile liegen im Raum gegenüber.
+set Global.dialogue_open = false
 => END"
 metadata/dialogue_manager_version = "2.38.0"

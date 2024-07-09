@@ -2,7 +2,7 @@
 
 set Global.dialogue_open = true
 Maurer: Da du nun die Stützen hast kannst du die Decke mit dem Kran anbringen.
-Maurer: gehe dafür zum LKW und schalte den Kran an(E).
+Maurer: gehe dafür zum LKW und schalte den Kran an.
 set Global.dialogue_open = false
 
 => END

@@ -1,9 +1,15 @@
 extends Node3D
 
+var up = false
+
 func _process(delta):
+	if up == true:
+		$StaticBody3D/Mesh.visible = false
+		$"Root Scene".visible = true
 	if Global.rods == 19:
 		$StaticBody3D/Mesh.visible = true
-		$StaticBody3D.scale = Vector3(1,1.35,1)
+		$StaticBody3D/Mesh.visible = false
+		$"Root Scene".visible = true
 		if $StringWedge/MeshInstance3D2 != null:
 			$StringWedge/MeshInstance3D2.visible = false
 #when rod is put in area the rod is placed

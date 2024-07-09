@@ -49,6 +49,7 @@ func _process(delta):
 		$Props/Outlet2/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 		$Props/Cable/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 		$Props/Cable2/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		Global.electric_checkstate += 1
 		
 		
 	
@@ -61,6 +62,7 @@ func _process(delta):
 	
 	if Global.generator_on == 3 and played3 == false:
 		played3 = true
+		$checklist.check_6.visible = false
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/elektriker_step_5.dialogue"))
 		await get_tree().create_timer(5).timeout
 		$Transition._change_scene("res://UI/screens/endscreen.tscn")

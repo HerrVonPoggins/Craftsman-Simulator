@@ -42,10 +42,12 @@ func _process(delta):
 	
 	if $Toolinsert1/Cable.visible == true and $Toolinsert2/Cable.visible == true and played4 == false:
 		played4 = true
+		Global.electric_checkstate += 1
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/elektriker_step_3.dialogue"))
 	
 	if $PlasterOutlets/OutletCase.visible == true and $PlasterOutlets2/OutletCase.visible == true and played5 == false:
 		played5 = true
+		Global.electric_checkstate += 1
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/elektriker_step_4.dialogue"))
 	
 	

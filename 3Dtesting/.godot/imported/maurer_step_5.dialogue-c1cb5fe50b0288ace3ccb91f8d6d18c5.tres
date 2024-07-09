@@ -71,9 +71,9 @@ lines = {
 "next_id": "7",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Drücke E auf die platzierten Stützen um diese auszufahren.",
+"text": "Vergiss nicht die Stützen auszufahren.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Drücke E auf die platzierten Stützen um diese auszufahren.",
+"translation_key": "Vergiss nicht die Stützen auszufahren.",
 "type": &"dialogue"
 },
 "7": {
@@ -111,7 +111,7 @@ raw_text = "~ this_is_a_node_title
 set Global.dialogue_open = true
 Maurer: Nun musst du die Stützen für die Decke anbringen, damit du die Deckenplatten setzten kannst.
 Maurer: Bringe die Stützen einfach zu den markierten stellen.
-Maurer: Drücke E auf die platzierten Stützen um diese auszufahren.
+Maurer: Vergiss nicht die Stützen auszufahren.
 set Global.dialogue_open = false
 
 => END"

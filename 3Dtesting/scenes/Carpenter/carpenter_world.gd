@@ -13,7 +13,7 @@ var played8 = false
 var played9 = false
 var played10 = false
 var played11 = false
-
+var checkstate = 0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -46,8 +46,9 @@ func _on_stairs_dübel_minigame_finished():
 	Global.switch_minigame_on = false
 	$Player.visible = true
 	$Dachbinder.roof_step = 1
+	Global.carpenter_checkstate +=1
 	$Props/MetallbinderContainer/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
-
+	
 
 
 func _on_stairs_player_visibility_off():
@@ -76,6 +77,7 @@ func _process(delta):
 	if metallbinder_count >= 44 and played3 == false:
 		played3 = true
 		$Dachbinder.roof_step = 6
+		Global.carpenter_checkstate += 1
 		
 		$Props/Window/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 		$Props/WindowBoard/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
@@ -92,6 +94,7 @@ func _process(delta):
 	if Global.door_done >= 2 and played2 == false:
 		played2 = true
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/zimmermann_step_5.dialogue"))
+		Global.carpenter_checkstate += 1
 		await get_tree().create_timer(5).timeout
 		$Transition._change_scene("res://UI/screens/scene_change.tscn")
 

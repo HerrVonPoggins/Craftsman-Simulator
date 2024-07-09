@@ -6,28 +6,131 @@
 script = ExtResource("1_ay64n")
 using_states = PackedStringArray()
 titles = {
-"this_is_a_node_title": "3"
+"this_is_a_node_title": "2"
 }
 character_names = PackedStringArray("Zimmermann")
-first_title = "3"
+first_title = "2"
 lines = {
 "1": {
 "id": "1",
-"next_id": "3",
+"next_id": "2",
 "text": "this_is_a_node_title",
 "type": &"title"
 },
-"3": {
+"10": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_played"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "number",
+"value": 6
+}, {
+"type": "colon"
+}])
+},
+"id": "10",
+"next_conditional_id": "17",
+"next_id": "11",
+"next_id_after": "17",
+"type": &"condition"
+},
+"11": {
 "character": "Zimmermann",
 "character_replacements": Array[Dictionary]([]),
-"id": "3",
-"next_id": "4",
+"id": "11",
+"next_id": "17",
 "notes": "",
+"parent_id": "10",
 "tags": PackedStringArray(),
-"text": "Guten Tag.",
+"text": "bitte arbeite die Tasks deinec Checklist ab.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Guten Tag.",
+"translation_key": "bitte arbeite die Tasks deinec Checklist ab.",
 "type": &"dialogue"
+},
+"17": {
+"id": "17",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
+},
+"next_id": "18",
+"type": &"mutation"
+},
+"18": {
+"id": "18",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"2": {
+"id": "2",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
+"next_id": "3",
+"type": &"mutation"
+},
+"3": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_played"
+}, {
+"type": "comparison",
+"value": "!="
+}, {
+"type": "number",
+"value": 6
+}])
+},
+"id": "3",
+"next_conditional_id": "10",
+"next_id": "4",
+"next_id_after": "10",
+"type": &"condition"
 },
 "4": {
 "character": "Zimmermann",
@@ -35,10 +138,11 @@ lines = {
 "id": "4",
 "next_id": "5",
 "notes": "",
+"parent_id": "3",
 "tags": PackedStringArray(),
-"text": "Du bist also der Praktikant von dem der Bär mir erzählt hat.",
+"text": "Guten Tag.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Du bist also der Praktikant von dem der Bär mir erzählt hat.",
+"translation_key": "Guten Tag.",
 "type": &"dialogue"
 },
 "5": {
@@ -47,37 +151,80 @@ lines = {
 "id": "5",
 "next_id": "6",
 "notes": "",
+"parent_id": "3",
 "tags": PackedStringArray(),
-"text": "deine erste Aufgabe wird das bauen einer Treppe.",
+"text": "Du bist also der Praktikant von dem der Bär mir erzählt hat.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "deine erste Aufgabe wird das bauen einer Treppe.",
+"translation_key": "Du bist also der Praktikant von dem der Bär mir erzählt hat.",
 "type": &"dialogue"
 },
 "6": {
 "character": "Zimmermann",
 "character_replacements": Array[Dictionary]([]),
 "id": "6",
+"next_id": "7",
+"notes": "",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "deine erste Aufgabe wird das bauen einer Treppe.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "deine erste Aufgabe wird das bauen einer Treppe.",
+"type": &"dialogue"
+},
+"7": {
+"character": "Zimmermann",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
 "next_id": "8",
 "notes": "",
+"parent_id": "3",
 "tags": PackedStringArray(),
-"text": "Zuerst musst du die Dübel rein machen und dann die Stufen einbauen.",
+"text": "Zuerst musst du die Dübel rein machen und dann die Stufen einsetzen.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Zuerst musst du die Dübel rein machen und dann die Stufen einbauen.",
+"translation_key": "Zuerst musst du die Dübel rein machen und dann die Stufen einsetzen.",
 "type": &"dialogue"
 },
 "8": {
 "id": "8",
-"is_snippet": false,
-"next_id": "end",
-"type": &"goto"
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_played"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 6
+}]),
+"is_blocking": true
+},
+"next_id": "10",
+"parent_id": "3",
+"type": &"mutation"
 }
 }
 raw_text = "~ this_is_a_node_title
+set Global.dialogue_open = true
+if Global.dialogue_played != 6
+	Zimmermann: Guten Tag.
+	Zimmermann: Du bist also der Praktikant von dem der Bär mir erzählt hat.
+	Zimmermann: deine erste Aufgabe wird das bauen einer Treppe.
+	Zimmermann: Zuerst musst du die Dübel rein machen und dann die Stufen einsetzen.
+	set Global.dialogue_played = 6
 
-Zimmermann: Guten Tag.
-Zimmermann: Du bist also der Praktikant von dem der Bär mir erzählt hat.
-Zimmermann: deine erste Aufgabe wird das bauen einer Treppe.
-Zimmermann: Zuerst musst du die Dübel rein machen und dann die Stufen einbauen.
+if Global.dialogue_played == 6:
+	Zimmermann: bitte arbeite die Tasks deinec Checklist ab.
 
+
+
+
+
+set Global.dialogue_open = false
 => END"
 metadata/dialogue_manager_version = "2.38.0"

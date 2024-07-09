@@ -8,7 +8,7 @@ using_states = PackedStringArray()
 titles = {
 "this_is_a_node_title": "2"
 }
-character_names = PackedStringArray("Bauleiter")
+character_names = PackedStringArray("Maurer", "Bauleiter")
 first_title = "2"
 lines = {
 "1": {
@@ -16,6 +16,12 @@ lines = {
 "next_id": "2",
 "text": "this_is_a_node_title",
 "type": &"title"
+},
+"10": {
+"id": "10",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
 },
 "2": {
 "id": "2",
@@ -41,27 +47,27 @@ lines = {
 "type": &"mutation"
 },
 "3": {
-"character": "Bauleiter",
+"character": "Maurer",
 "character_replacements": Array[Dictionary]([]),
 "id": "3",
 "next_id": "4",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Gute Arbeit!",
+"text": "Das hast du heute sehr gut gemacht!",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Gute Arbeit!",
+"translation_key": "Das hast du heute sehr gut gemacht!",
 "type": &"dialogue"
 },
 "4": {
-"character": "Bauleiter",
+"character": "Maurer",
 "character_replacements": Array[Dictionary]([]),
 "id": "4",
 "next_id": "5",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Nun weißt du was der beruf des Maurers beinhaltet.",
+"text": "Ich werde dich beim Zukunfstfuchs loben.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Nun weißt du was der beruf des Maurers beinhaltet.",
+"translation_key": "Ich werde dich beim Zukunfstfuchs loben.",
 "type": &"dialogue"
 },
 "5": {
@@ -71,9 +77,9 @@ lines = {
 "next_id": "6",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Melde dich jetzt bei deiner Lehrkraft und hole dir das Quizz.",
+"text": "Morgen erwartet dich der Zimmermann. Er wird dir wieder spannende Aufgaben geben.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Melde dich jetzt bei deiner Lehrkraft und hole dir das Quizz.",
+"translation_key": "Morgen erwartet dich der Zimmermann. Er wird dir wieder spannende Aufgaben geben.",
 "type": &"dialogue"
 },
 "6": {
@@ -83,9 +89,9 @@ lines = {
 "next_id": "7",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Falls dir irgendwelche Fragen schwerfallen ließ im Handbuch (ESC) nach.",
+"text": "Vielen Dank für deine Hilfe und weiterhin viel Erfolg bei deinem Praktikum!",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Falls dir irgendwelche Fragen schwerfallen ließ im Handbuch (ESC) nach.",
+"translation_key": "Vielen Dank für deine Hilfe und weiterhin viel Erfolg bei deinem Praktikum!",
 "type": &"dialogue"
 },
 "7": {
@@ -95,13 +101,25 @@ lines = {
 "next_id": "8",
 "notes": "",
 "tags": PackedStringArray(),
+"text": "Melde dich jetzt bei deiner Lehrkraft und hole dir das Quizz.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Melde dich jetzt bei deiner Lehrkraft und hole dir das Quizz.",
+"type": &"dialogue"
+},
+"8": {
+"character": "Bauleiter",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"notes": "",
+"tags": PackedStringArray(),
 "text": "Wenn du Fertig bist gib das Quizz ab.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Wenn du Fertig bist gib das Quizz ab.",
 "type": &"dialogue"
 },
-"8": {
-"id": "8",
+"9": {
+"id": "9",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -120,22 +138,17 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "9",
+"next_id": "10",
 "type": &"mutation"
-},
-"9": {
-"id": "9",
-"is_snippet": false,
-"next_id": "end",
-"type": &"goto"
 }
 }
 raw_text = "~ this_is_a_node_title
 set Global.dialogue_open = true
-Bauleiter: Gute Arbeit!
-Bauleiter: Nun weißt du was der beruf des Maurers beinhaltet.
+Maurer: Das hast du heute sehr gut gemacht!
+Maurer: Ich werde dich beim Zukunfstfuchs loben.
+Bauleiter: Morgen erwartet dich der Zimmermann. Er wird dir wieder spannende Aufgaben geben.
+Bauleiter: Vielen Dank für deine Hilfe und weiterhin viel Erfolg bei deinem Praktikum!
 Bauleiter: Melde dich jetzt bei deiner Lehrkraft und hole dir das Quizz.
-Bauleiter: Falls dir irgendwelche Fragen schwerfallen ließ im Handbuch (ESC) nach.
 Bauleiter: Wenn du Fertig bist gib das Quizz ab.
 set Global.dialogue_open = false
 => END"

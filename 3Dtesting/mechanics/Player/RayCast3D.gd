@@ -221,7 +221,7 @@ func _process(delta):
 				if collider.is_in_group("saw_minigame"):
 					emit_signal("start_saw_minigame")
 				if collider.is_in_group("rod_extend"):
-					collider.scale = Vector3(1,1.35,1)
+					collider.get_parent().up = true
 					collider.remove_from_group("activate")
 				if collider.is_in_group("curcuit_minigame") and Global.can_power >= 2:
 					Global.curcuit_minigame_on = true
@@ -242,6 +242,7 @@ func _process(delta):
 					emit_signal("start_dübel_minigame")
 				if collider.is_in_group("filler_pump"):
 					Global.filler_started = true
+					DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_8.dialogue"))
 
 	if obj != null:
 

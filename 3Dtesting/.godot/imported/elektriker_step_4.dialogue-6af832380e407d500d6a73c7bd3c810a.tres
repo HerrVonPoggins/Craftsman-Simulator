@@ -124,9 +124,9 @@ lines = {
 "next_id": "11",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Für den Letzten Kasten musst du die Sicherungen richtig tauschen.",
+"text": "Für den Letzten Kasten musst du die Sicherungen richtig einstecken.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Für den Letzten Kasten musst du die Sicherungen richtig tauschen.",
+"translation_key": "Für den Letzten Kasten musst du die Sicherungen richtig einstecken.",
 "type": &"dialogue"
 }
 }
@@ -138,7 +138,7 @@ Elektriker: Nun kannst du dich um den Generator kümmern.
 Elektriker: Es gibt 3 Kästen die du anschalten musst.
 Elektriker: der Erste besteht aus einem Schaltkreis den du richtig anordnen musst.
 Elektriker: der Zweite besteht aus Hebeln, stelle sie richtig ein.
-Elektriker: Für den Letzten Kasten musst du die Sicherungen richtig tauschen.
+Elektriker: Für den Letzten Kasten musst du die Sicherungen richtig einstecken.
 
 set Global.dialogue_open = false
 

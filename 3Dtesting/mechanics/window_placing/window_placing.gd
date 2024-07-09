@@ -10,6 +10,7 @@ func _ready():
 func _process(delta):
 	if $WindowBoard.visible == true and $Window.visible == true:
 		window_done = true
+		Global.carpenter_checkstate += 1
 
 
 func _on_area_3d_body_entered(body):

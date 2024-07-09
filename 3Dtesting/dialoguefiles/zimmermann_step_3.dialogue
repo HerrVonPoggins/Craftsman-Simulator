@@ -1,5 +1,8 @@
 ~ this_is_a_node_title
+set Global.dialogue_open = true
 
-Zimmermann: Als nächstes bau bitte die Fenster ein.
-
+Zimmermann: Als nächstes bau bitte ein Fenster ein.
+Zimmermann: Da der Fensterbauer heute Krank ist wirst du diese Aufgabe übernehmen. 
+Zimmermann: Die Teile liegen im Raum gegenüber.
+set Global.dialogue_open = false
 => END

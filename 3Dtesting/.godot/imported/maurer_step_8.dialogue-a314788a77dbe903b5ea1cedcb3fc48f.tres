@@ -47,9 +47,9 @@ lines = {
 "next_id": "5",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Zuletzt musst du also den Beton einfüllen(linke Maustaste gedrückt halten).",
+"text": "Zuletzt musst du also den Beton einfüllen (linke Maustaste gedrückt halten).",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Zuletzt musst du also den Beton einfüllen(linke Maustaste gedrückt halten).",
+"translation_key": "Zuletzt musst du also den Beton einfüllen (linke Maustaste gedrückt halten).",
 "type": &"dialogue"
 },
 "5": {
@@ -97,7 +97,7 @@ lines = {
 raw_text = "~ this_is_a_node_title
 
 set Global.dialogue_open = true
-Maurer: Zuletzt musst du also den Beton einfüllen(linke Maustaste gedrückt halten). 
+Maurer: Zuletzt musst du also den Beton einfüllen (linke Maustaste gedrückt halten). 
 Maurer: Wenn du das geschafft hast bist du für heute Fertig.
 set Global.dialogue_open = false
 

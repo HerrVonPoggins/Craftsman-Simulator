@@ -1,8 +1,10 @@
 ~ this_is_a_node_title
 
+set Global.dialogue_open = true
 Zimmermann: Als nächstes musst du die Dachkonstruktion bauen.
 Zimmermann: Dafür steig über das Gerüst auf das Dach und mach die binder alle nacheinander fest.
+Zimmermann: nimm dafür die Box mit metallbindern und platzier sie an den weißen stellen.
 Zimmermann: Ich lasse dir dann die Teile runter.
-
+set Global.dialogue_open = false
 
 => END

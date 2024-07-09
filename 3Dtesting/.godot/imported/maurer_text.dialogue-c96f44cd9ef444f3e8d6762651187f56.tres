@@ -116,36 +116,58 @@ lines = {
 "notes": "",
 "parent_id": "2",
 "tags": PackedStringArray(),
-"text": "Sobald der Mörtel fertig ist, füllst du ihn in den Eimer und bringst ihn zur Wand, die wir bearbeiten (E auf Mischer).",
+"text": "Und denk daran, manche Ziegel musst du an der Tischkreissäge zuschneiden",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Sobald der Mörtel fertig ist, füllst du ihn in den Eimer und bringst ihn zur Wand, die wir bearbeiten (E auf Mischer).",
+"translation_key": "Und denk daran, manche Ziegel musst du an der Tischkreissäge zuschneiden",
 "type": &"dialogue"
 },
 "18": {
-"character": "Maurer",
-"character_replacements": Array[Dictionary]([]),
 "id": "18",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_played"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 3
+}]),
+"is_blocking": true
+},
 "next_id": "19",
-"notes": "",
 "parent_id": "2",
-"tags": PackedStringArray(),
-"text": "Stell sicher, dass du den Mörtel gleichmäßig aufträgst, damit alles gut hält.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Stell sicher, dass du den Mörtel gleichmäßig aufträgst, damit alles gut hält.",
-"type": &"dialogue"
+"type": &"mutation"
 },
 "19": {
-"character": "Maurer",
-"character_replacements": Array[Dictionary]([]),
 "id": "19",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
+},
 "next_id": "20",
-"notes": "",
 "parent_id": "2",
-"tags": PackedStringArray(),
-"text": "Verstanden?",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Verstanden?",
-"type": &"dialogue"
+"type": &"mutation"
 },
 "2": {
 "condition": {
@@ -185,61 +207,13 @@ lines = {
 }])
 },
 "id": "2",
-"next_conditional_id": "25",
+"next_conditional_id": "23",
 "next_id": "3",
-"next_id_after": "25",
+"next_id_after": "23",
 "type": &"condition"
 },
 "20": {
 "id": "20",
-"mutation": {
-"expression": Array[Dictionary]([{
-"type": "variable",
-"value": "Global"
-}, {
-"type": "dot"
-}, {
-"type": "variable",
-"value": "dialogue_played"
-}, {
-"type": "assignment",
-"value": "="
-}, {
-"type": "number",
-"value": 3
-}]),
-"is_blocking": true
-},
-"next_id": "21",
-"parent_id": "2",
-"type": &"mutation"
-},
-"21": {
-"id": "21",
-"mutation": {
-"expression": Array[Dictionary]([{
-"type": "variable",
-"value": "Global"
-}, {
-"type": "dot"
-}, {
-"type": "variable",
-"value": "dialogue_open"
-}, {
-"type": "assignment",
-"value": "="
-}, {
-"type": "variable",
-"value": "false"
-}]),
-"is_blocking": true
-},
-"next_id": "22",
-"parent_id": "2",
-"type": &"mutation"
-},
-"22": {
-"id": "22",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -258,18 +232,18 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "23",
+"next_id": "21",
 "parent_id": "2",
 "type": &"mutation"
 },
-"23": {
-"id": "23",
+"21": {
+"id": "21",
 "is_snippet": false,
 "next_id": "end",
 "parent_id": "2",
 "type": &"goto"
 },
-"25": {
+"23": {
 "condition": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -289,14 +263,14 @@ lines = {
 "type": "colon"
 }])
 },
-"id": "25",
-"next_conditional_id": "32",
-"next_id": "26",
-"next_id_after": "32",
+"id": "23",
+"next_conditional_id": "30",
+"next_id": "24",
+"next_id_after": "30",
 "type": &"condition"
 },
-"26": {
-"id": "26",
+"24": {
+"id": "24",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -315,25 +289,25 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "27",
-"parent_id": "25",
+"next_id": "25",
+"parent_id": "23",
 "type": &"mutation"
 },
-"27": {
+"25": {
 "character": "Maurer",
 "character_replacements": Array[Dictionary]([]),
-"id": "27",
-"next_id": "28",
+"id": "25",
+"next_id": "26",
 "notes": "",
-"parent_id": "25",
+"parent_id": "23",
 "tags": PackedStringArray(),
 "text": "Erledige zuerst deine Aufgaben, danach bekommst du neue Aufgaben zugeteilt.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Erledige zuerst deine Aufgaben, danach bekommst du neue Aufgaben zugeteilt.",
 "type": &"dialogue"
 },
-"28": {
-"id": "28",
+"26": {
+"id": "26",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -352,8 +326,8 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "32",
-"parent_id": "25",
+"next_id": "30",
+"parent_id": "23",
 "type": &"mutation"
 },
 "3": {
@@ -380,8 +354,8 @@ lines = {
 "parent_id": "2",
 "type": &"mutation"
 },
-"32": {
-"id": "32",
+"30": {
+"id": "30",
 "is_snippet": false,
 "next_id": "end",
 "type": &"goto"
@@ -446,9 +420,9 @@ lines = {
 "notes": "",
 "parent_id": "2",
 "tags": PackedStringArray(),
-"text": "Na, wie war dein Gespräch mit dem Bauleiter?",
+"text": "Na, ich hoffe dein Gespräch mit dem Bauleiter lief gut.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Na, wie war dein Gespräch mit dem Bauleiter?",
+"translation_key": "Na, ich hoffe dein Gespräch mit dem Bauleiter lief gut.",
 "type": &"dialogue"
 }
 }
@@ -460,7 +434,7 @@ if Global.dialogue_count == 2 and Global.dialogue_played == 2:
 	Maurer: Ich bin der Maurer hier auf der Baustelle.
 	Maurer: Mein Name ist Bruno, aber die meisten nennen mich einfach Bär.
 
-	Maurer: Na, wie war dein Gespräch mit dem Bauleiter?
+	Maurer: Na, ich hoffe dein Gespräch mit dem Bauleiter lief gut.
 	Maurer: Er hat bestimmt eine Menge erzählt, oder?
 	Maurer: Keine Sorge, ich werde dir zeigen, was du hier machen musst.
 	Maurer: Also, als erstes müssen wir Mörtel mischen.
@@ -468,9 +442,7 @@ if Global.dialogue_count == 2 and Global.dialogue_played == 2:
 	Maurer: Das ist ganz einfach. Sieh mal, hier ist ein Eimer une eine Kelle.
 	Maurer: Wir nehmen etwas Sand, fügen Wasser und Zement hinzu und rühren kräftig um. (Fülle Wasser, Sand und Zement in den Mischer und schalte ihn mit E an)
 	Maurer: Aber pass auf, dass der Mörtel nicht zu flüssig wird!
-	Maurer: Sobald der Mörtel fertig ist, füllst du ihn in den Eimer und bringst ihn zur Wand, die wir bearbeiten (E auf Mischer).
-	Maurer: Stell sicher, dass du den Mörtel gleichmäßig aufträgst, damit alles gut hält.
-	Maurer: Verstanden?
+	Maurer: Und denk daran, manche Ziegel musst du an der Tischkreissäge zuschneiden
 	set Global.dialogue_played = 3
 	set Global.dialogue_open = false
 	set Global.dialogue_count = 2

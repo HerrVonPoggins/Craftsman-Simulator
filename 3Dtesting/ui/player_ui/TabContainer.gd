@@ -44,11 +44,16 @@ func _process(delta):
 	
 	if Global.current_scene == 2 and played == false:
 		played = true
-		$checklist.label_text_1 = "Treppe duebeln"
-		$checklist.label_text_2 = "Treppenstufen platzieren"
-		$checklist.label_text_3 = "Dachkonstruktion fest machen"
-		$checklist.label_text_4 = "Fenster einbauen"
-		$checklist.label_text_5 = "Tueren einbauen"
+		$checklist.label_text_1 = "Treppe duebeln
+		"
+		$checklist.label_text_2 = "Treppenstufen platzieren
+		"
+		$checklist.label_text_3 = "Dachkonstruktion fest machen
+		"
+		$checklist.label_text_4 = "Fenster einbauen
+		"
+		$checklist.label_text_5 = "Tueren einbauen
+		"
 		$checklist.label_text_6 = ""
 		
 		$checklist.check_state_1 = false
@@ -57,29 +62,55 @@ func _process(delta):
 		$checklist.check_state_4 = false
 		$checklist.check_state_5 = false
 		$checklist.check_state_6 = false
+		$checklist.check_6.visible = false
 	
-	
-	
-	
-	
+	if Global.carpenter_checkstate >= 1:
+		$checklist.check_state_1 = true
+	if Global.carpenter_checkstate >= 2:
+		$checklist.check_state_2 = true
+	if Global.carpenter_checkstate >= 3:
+		$checklist.check_state_3 = true
+	if Global.carpenter_checkstate >= 4:
+		$checklist.check_state_4 = true
+	if Global.carpenter_checkstate >= 5:
+		$checklist.check_state_5 = true
 	
 	
 	if Global.current_scene == 3 and played2 == false:
 		played2 = true
-		$checklist.label_text_1 = "Wand saegen"
-		$checklist.label_text_2 = "Kabel verlegen"
-		$checklist.label_text_3 = "Gips mischen"
-		$checklist.label_text_4 = "Steckdosenkappen einsetzen"
-		$checklist.label_text_5 = "Schaltplan umsetzen"
-		$checklist.label_text_6 = "Verteilerkasten anschalten"
+		$checklist.label_text_1 = "Wand saegen
+		"
+		$checklist.label_text_2 = "Kabel verlegen
+		"
+		$checklist.label_text_3 = "Gips mischen
+		"
+		$checklist.label_text_4 = "Steckdosenkappen einsetzen
+		"
+		$checklist.label_text_5 = "Verteilerkasten anschalten
+		"
+		$checklist.label_text_6 = ""
+		
 		$checklist.check_state_1 = false
 		$checklist.check_state_2 = false
 		$checklist.check_state_3 = false
 		$checklist.check_state_4 = false
 		$checklist.check_state_5 = false
 		$checklist.check_state_6 = false
-		
-		
+		$checklist.check_6.visible = false
+
+	if Global.electric_checkstate >= 1:
+		$checklist.check_state_1 = true
+	if Global.electric_checkstate >= 2:
+		$checklist.check_state_2 = true
+	if Global.electric_checkstate >= 3:
+		$checklist.check_state_3 = true
+	if Global.electric_checkstate >= 4:
+		$checklist.check_state_4 = true
+	if Global.electric_checkstate >= 5:
+		$checklist.check_state_5 = true
+	if Global.electric_checkstate >= 6:
+		$checklist.check_state_6 = true
+
 
 	
 	#sets the open/closemechanic on the escape button

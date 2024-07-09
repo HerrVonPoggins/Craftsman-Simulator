@@ -57,8 +57,9 @@ func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
 		
 		#get_tree().reload_current_scene()
-		Global.concrete_filled_roof = true
+		#Global.concrete_filled_roof = true
 		#Global.roof_finished = true
+		Global.door_top = 4
 		pass
 		
 		#unbug yourself by teleporting back to startpoint
@@ -78,7 +79,7 @@ func _process(delta):
 	#when the roof minigame is finished the filling action starts
 	if Global.roof_finished == true and played5 == false:
 		played5 = true
-		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/maurer_step_8.dialogue"))
+		
 		$"Root Scene2".visible = true
 		$FillerPump.visible = true
 		$FillerPump/CollisionShape3D.call_deferred("set_disabled", false)

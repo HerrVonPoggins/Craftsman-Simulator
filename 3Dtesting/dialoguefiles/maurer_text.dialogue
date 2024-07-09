@@ -6,7 +6,7 @@ if Global.dialogue_count == 2 and Global.dialogue_played == 2:
 	Maurer: Ich bin der Maurer hier auf der Baustelle.
 	Maurer: Mein Name ist Bruno, aber die meisten nennen mich einfach Bär.
 
-	Maurer: Na, wie war dein Gespräch mit dem Bauleiter?
+	Maurer: Na, ich hoffe dein Gespräch mit dem Bauleiter lief gut.
 	Maurer: Er hat bestimmt eine Menge erzählt, oder?
 	Maurer: Keine Sorge, ich werde dir zeigen, was du hier machen musst.
 	Maurer: Also, als erstes müssen wir Mörtel mischen.
@@ -14,9 +14,7 @@ if Global.dialogue_count == 2 and Global.dialogue_played == 2:
 	Maurer: Das ist ganz einfach. Sieh mal, hier ist ein Eimer une eine Kelle.
 	Maurer: Wir nehmen etwas Sand, fügen Wasser und Zement hinzu und rühren kräftig um. (Fülle Wasser, Sand und Zement in den Mischer und schalte ihn mit E an)
 	Maurer: Aber pass auf, dass der Mörtel nicht zu flüssig wird!
-	Maurer: Sobald der Mörtel fertig ist, füllst du ihn in den Eimer und bringst ihn zur Wand, die wir bearbeiten (E auf Mischer).
-	Maurer: Stell sicher, dass du den Mörtel gleichmäßig aufträgst, damit alles gut hält.
-	Maurer: Verstanden?
+	Maurer: Und denk daran, manche Ziegel musst du an der Tischkreissäge zuschneiden
 	set Global.dialogue_played = 3
 	set Global.dialogue_open = false
 	set Global.dialogue_count = 2

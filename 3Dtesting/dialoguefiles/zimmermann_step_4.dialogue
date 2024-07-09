@@ -1,5 +1,7 @@
 ~ this_is_a_node_title
-
-Zimmermann: Und zuletzt bau bitte die Türen noch ein.
+set Global.dialogue_open = true
+Zimmermann: Und zuletzt bau bitte noch zwei Türen ein.
+Zimmermann: Danach kannst du für heute schluss machen.
+set Global.dialogue_open = false
 
 => END

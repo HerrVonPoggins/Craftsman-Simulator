@@ -6,16 +6,39 @@
 script = ExtResource("1_ppcn1")
 using_states = PackedStringArray()
 titles = {
-"this_is_a_node_title": "3"
+"this_is_a_node_title": "2"
 }
 character_names = PackedStringArray("Zimmermann")
-first_title = "3"
+first_title = "2"
 lines = {
 "1": {
 "id": "1",
-"next_id": "3",
+"next_id": "2",
 "text": "this_is_a_node_title",
 "type": &"title"
+},
+"2": {
+"id": "2",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
+"next_id": "3",
+"type": &"mutation"
 },
 "3": {
 "character": "Zimmermann",
@@ -24,16 +47,16 @@ lines = {
 "next_id": "4",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Fabelhaft! Du hast uns es geschafft.",
+"text": "Fabelhaft! Du hast es geschafft.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Fabelhaft! Du hast uns es geschafft.",
+"translation_key": "Fabelhaft! Du hast es geschafft.",
 "type": &"dialogue"
 },
 "4": {
 "character": "Zimmermann",
 "character_replacements": Array[Dictionary]([]),
 "id": "4",
-"next_id": "7",
+"next_id": "5",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Du solltest dich für heute ausruhen wir erldigen den Rest.",
@@ -41,18 +64,67 @@ lines = {
 "translation_key": "Du solltest dich für heute ausruhen wir erldigen den Rest.",
 "type": &"dialogue"
 },
+"5": {
+"character": "Zimmermann",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Melde dich jetzt bei deiner Lehrkraft und hole dir das Quizz.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Melde dich jetzt bei deiner Lehrkraft und hole dir das Quizz.",
+"type": &"dialogue"
+},
+"6": {
+"character": "Zimmermann",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Wenn du Fertig bist gib das Quizz ab.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wenn du Fertig bist gib das Quizz ab.",
+"type": &"dialogue"
+},
 "7": {
 "id": "7",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
+},
+"next_id": "9",
+"type": &"mutation"
+},
+"9": {
+"id": "9",
 "is_snippet": false,
 "next_id": "end",
 "type": &"goto"
 }
 }
 raw_text = "~ this_is_a_node_title
-
-Zimmermann: Fabelhaft! Du hast uns es geschafft.
+set Global.dialogue_open = true
+Zimmermann: Fabelhaft! Du hast es geschafft.
 Zimmermann: Du solltest dich für heute ausruhen wir erldigen den Rest.
-
+Zimmermann: Melde dich jetzt bei deiner Lehrkraft und hole dir das Quizz.
+Zimmermann: Wenn du Fertig bist gib das Quizz ab.
+set Global.dialogue_open = false
  
 => END"
 metadata/dialogue_manager_version = "2.38.0"

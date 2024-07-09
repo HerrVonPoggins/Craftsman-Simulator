@@ -25,15 +25,17 @@ bottom_radius = 0.1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hlagi"]
 resource_name = "Arms"
-albedo_color = Color(0.857558, 0.646931, 0.376154, 1)
+albedo_color = Color(0.858824, 0.647059, 0.376471, 1)
 metallic = 0.4
 roughness = 0.272166
+disable_receive_shadows = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qa2vi"]
 resource_name = "bär shirt"
 albedo_color = Color(1, 0, 0.0810392, 1)
 metallic = 0.4
 roughness = 0.366187
+disable_receive_shadows = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_q24cy"]
 resource_name = "Root Scene_High poly fps arms"

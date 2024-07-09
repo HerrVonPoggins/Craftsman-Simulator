@@ -117,8 +117,8 @@ func _process(delta):
 		await $RoofAnimations.animation_finished
 		
 		$Dachziegel.visible = true
-		$RoofAnimations.play("dachziegel_down")
-		await $RoofAnimations.animation_finished
+		$Dachziegel/AnimationPlayer.play("Scene")
+		await $Dachziegel/AnimationPlayer.animation_finished
 		
 		DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/zimmermann_step_3.dialogue"))
 		

@@ -17,8 +17,70 @@ lines = {
 "text": "this_is_a_node_title",
 "type": &"title"
 },
+"10": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_played"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "number",
+"value": 7
+}, {
+"type": "colon"
+}])
+},
+"id": "10",
+"next_conditional_id": "13",
+"next_id": "11",
+"next_id_after": "13",
+"type": &"condition"
+},
 "11": {
+"character": "Elektriker",
+"character_replacements": Array[Dictionary]([]),
 "id": "11",
+"next_id": "13",
+"notes": "",
+"parent_id": "10",
+"tags": PackedStringArray(),
+"text": "Bitte arbeite deine Tasks ab.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Bitte arbeite deine Tasks ab.",
+"type": &"dialogue"
+},
+"13": {
+"id": "13",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
+},
+"next_id": "15",
+"type": &"mutation"
+},
+"15": {
+"id": "15",
 "is_snippet": false,
 "next_id": "end",
 "type": &"goto"
@@ -43,8 +105,34 @@ lines = {
 }]),
 "is_blocking": true
 },
-"next_id": "5",
+"next_id": "4",
 "type": &"mutation"
+},
+"4": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_played"
+}, {
+"type": "comparison",
+"value": "!="
+}, {
+"type": "number",
+"value": 7
+}, {
+"type": "colon"
+}])
+},
+"id": "4",
+"next_conditional_id": "10",
+"next_id": "5",
+"next_id_after": "10",
+"type": &"condition"
 },
 "5": {
 "character": "Elektriker",
@@ -52,6 +140,7 @@ lines = {
 "id": "5",
 "next_id": "6",
 "notes": "",
+"parent_id": "4",
 "tags": PackedStringArray(),
 "text": "Endlich treffen wir uns auch mal Praktikant.",
 "text_replacements": Array[Dictionary]([]),
@@ -64,6 +153,7 @@ lines = {
 "id": "6",
 "next_id": "7",
 "notes": "",
+"parent_id": "4",
 "tags": PackedStringArray(),
 "text": "Ich habe heute das Vergnügen die meinen Beruf zu zeigen.",
 "text_replacements": Array[Dictionary]([]),
@@ -74,16 +164,17 @@ lines = {
 "character": "Elektriker",
 "character_replacements": Array[Dictionary]([]),
 "id": "7",
-"next_id": "9",
+"next_id": "8",
 "notes": "",
+"parent_id": "4",
 "tags": PackedStringArray(),
 "text": "Zuerst musst du eine Rille in die Wand sägen damit du die Leitungen anbringen kannst.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Zuerst musst du eine Rille in die Wand sägen damit du die Leitungen anbringen kannst.",
 "type": &"dialogue"
 },
-"9": {
-"id": "9",
+"8": {
+"id": "8",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -92,27 +183,32 @@ lines = {
 "type": "dot"
 }, {
 "type": "variable",
-"value": "dialogue_open"
+"value": "dialogue_played"
 }, {
 "type": "assignment",
 "value": "="
 }, {
-"type": "variable",
-"value": "false"
+"type": "number",
+"value": 7
 }]),
 "is_blocking": true
 },
-"next_id": "11",
+"next_id": "10",
+"parent_id": "4",
 "type": &"mutation"
 }
 }
 raw_text = "~ this_is_a_node_title
 
 set Global.dialogue_open = true
+if Global.dialogue_played != 7:
+	Elektriker: Endlich treffen wir uns auch mal Praktikant.
+	Elektriker: Ich habe heute das Vergnügen die meinen Beruf zu zeigen.
+	Elektriker: Zuerst musst du eine Rille in die Wand sägen damit du die Leitungen anbringen kannst.
+	set Global.dialogue_played = 7
 
-Elektriker: Endlich treffen wir uns auch mal Praktikant.
-Elektriker: Ich habe heute das Vergnügen die meinen Beruf zu zeigen.
-Elektriker: Zuerst musst du eine Rille in die Wand sägen damit du die Leitungen anbringen kannst.
+if Global.dialogue_played == 7:
+	Elektriker: Bitte arbeite deine Tasks ab.
 
 set Global.dialogue_open = false
 

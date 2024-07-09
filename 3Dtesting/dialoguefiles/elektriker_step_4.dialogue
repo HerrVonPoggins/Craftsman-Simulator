@@ -6,7 +6,7 @@ Elektriker: Nun kannst du dich um den Generator kümmern.
 Elektriker: Es gibt 3 Kästen die du anschalten musst.
 Elektriker: der Erste besteht aus einem Schaltkreis den du richtig anordnen musst.
 Elektriker: der Zweite besteht aus Hebeln, stelle sie richtig ein.
-Elektriker: Für den Letzten Kasten musst du die Sicherungen richtig tauschen.
+Elektriker: Für den Letzten Kasten musst du die Sicherungen richtig einstecken.
 
 set Global.dialogue_open = false
 

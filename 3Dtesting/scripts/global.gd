@@ -14,7 +14,8 @@ var brick_saw_cam = false
 var isolation = false
 var current_scene = 0
 var dialogue_open = false
-
+var carpenter_checkstate = 0
+var electric_checkstate = 0
 var trowel_picked = false
 var spirit_level_picked = false
 
@@ -35,9 +36,13 @@ var walk_sound_started = false
 var dialogue_count = 0
 var dialogue_replay = 0
 
+
+
 var press_e = false
 var talkable = false
 var activateable = false
+
+
 
 var rods = 0
 var crane_on = false
@@ -56,11 +61,13 @@ var crosshair_off = false
 var brick_is_being_placed = false
 var filler_started = false
 
+
 var checklist_hide = false
 var dialogue_played = 0
 var book_ready = false
 var skip = 0
 #for animations
+
 var holding_bricks = false
 var holding_bucket = false
 var holding_bag = false

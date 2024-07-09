@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://b8bxr3vceyac2"]
+[gd_scene load_steps=17 format=3 uid="uid://b8bxr3vceyac2"]
 
 [ext_resource type="Script" path="res://mechanics/metal_rod/rod.gd" id="1_guwtp"]
+[ext_resource type="PackedScene" uid="uid://crd5kkqd13ilu" path="res://assets/models/deckenstuetze_groß.fbx" id="2_gbjxo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b7tue"]
 resource_name = "Material.002"
@@ -272,5 +273,9 @@ skeleton = NodePath("")
 transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0.124212, 0, -0.153888)
 shape = SubResource("ConvexPolygonShape3D_2gjnh")
 disabled = true
+
+[node name="Root Scene" parent="." instance=ExtResource("2_gbjxo")]
+transform = Transform3D(3, 0, 0, 0, 3.5, 0, 0, 0, 3, 0.105306, 0.141817, -0.158665)
+visible = false
 
 [connection signal="body_entered" from="StringWedge" to="." method="_on_string_wedge_body_entered"]

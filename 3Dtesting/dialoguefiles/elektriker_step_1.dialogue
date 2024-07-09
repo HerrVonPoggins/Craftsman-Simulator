@@ -1,10 +1,14 @@
 ~ this_is_a_node_title
 
 set Global.dialogue_open = true
+if Global.dialogue_played != 7:
+	Elektriker: Endlich treffen wir uns auch mal Praktikant.
+	Elektriker: Ich habe heute das Vergnügen die meinen Beruf zu zeigen.
+	Elektriker: Zuerst musst du eine Rille in die Wand sägen damit du die Leitungen anbringen kannst.
+	set Global.dialogue_played = 7
 
-Elektriker: Endlich treffen wir uns auch mal Praktikant.
-Elektriker: Ich habe heute das Vergnügen die meinen Beruf zu zeigen.
-Elektriker: Zuerst musst du eine Rille in die Wand sägen damit du die Leitungen anbringen kannst.
+if Global.dialogue_played == 7:
+	Elektriker: Bitte arbeite deine Tasks ab.
 
 set Global.dialogue_open = false
 

@@ -47,9 +47,9 @@ lines = {
 "next_id": "5",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Als nächstes musst du noch die Tür- und Fensterstürze einbauen.",
+"text": "Als nächstes musst du noch die Türstürze.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Als nächstes musst du noch die Tür- und Fensterstürze einbauen.",
+"translation_key": "Als nächstes musst du noch die Türstürze.",
 "type": &"dialogue"
 },
 "5": {
@@ -97,7 +97,7 @@ lines = {
 raw_text = "~ this_is_a_node_title
 
 set Global.dialogue_open = true
-Maurer: Als nächstes musst du noch die Tür- und Fensterstürze einbauen.
+Maurer: Als nächstes musst du noch die Türstürze.
 Maurer: Dafür setzte die Stürze an die markierten Stellen in den Türen und Fenstern an.
 set Global.dialogue_open = false
 => END"

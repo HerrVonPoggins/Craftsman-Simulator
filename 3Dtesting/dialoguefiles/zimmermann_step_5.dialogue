@@ -1,7 +1,9 @@
 ~ this_is_a_node_title
-
-Zimmermann: Fabelhaft! Du hast uns es geschafft.
+set Global.dialogue_open = true
+Zimmermann: Fabelhaft! Du hast es geschafft.
 Zimmermann: Du solltest dich für heute ausruhen wir erldigen den Rest.
-
+Zimmermann: Melde dich jetzt bei deiner Lehrkraft und hole dir das Quizz.
+Zimmermann: Wenn du Fertig bist gib das Quizz ab.
+set Global.dialogue_open = false
  
 => END

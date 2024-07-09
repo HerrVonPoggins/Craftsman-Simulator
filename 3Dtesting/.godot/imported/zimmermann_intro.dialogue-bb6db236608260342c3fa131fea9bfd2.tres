@@ -18,10 +18,33 @@ lines = {
 "type": &"title"
 },
 "3": {
+"id": "3",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}]),
+"is_blocking": true
+},
+"next_id": "4",
+"type": &"mutation"
+},
+"4": {
 "character": "Zimmermann",
 "character_replacements": Array[Dictionary]([]),
-"id": "3",
-"next_id": "4",
+"id": "4",
+"next_id": "5",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "Hi! Hier Drueben.",
@@ -29,10 +52,10 @@ lines = {
 "translation_key": "Hi! Hier Drueben.",
 "type": &"dialogue"
 },
-"4": {
+"5": {
 "character": "Zimmermann",
 "character_replacements": Array[Dictionary]([]),
-"id": "4",
+"id": "5",
 "next_id": "6",
 "notes": "",
 "tags": PackedStringArray(),
@@ -43,6 +66,29 @@ lines = {
 },
 "6": {
 "id": "6",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dialogue_open"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
+},
+"next_id": "7",
+"type": &"mutation"
+},
+"7": {
+"id": "7",
 "is_snippet": false,
 "next_id": "end",
 "type": &"goto"
@@ -50,8 +96,9 @@ lines = {
 }
 raw_text = "~ this_is_a_node_title
 
+set Global.dialogue_open = true
 Zimmermann: Hi! Hier Drueben.
 Zimmermann: Lass uns deien heutigen Aufgaben durchsprechen.
-
+set Global.dialogue_open = false
 => END"
 metadata/dialogue_manager_version = "2.38.0"

@@ -1,9 +1,10 @@
 ~ this_is_a_node_title
 set Global.dialogue_open = true
-Bauleiter: Gute Arbeit!
-Bauleiter: Nun weißt du was der beruf des Maurers beinhaltet.
+Maurer: Das hast du heute sehr gut gemacht!
+Maurer: Ich werde dich beim Zukunfstfuchs loben.
+Bauleiter: Morgen erwartet dich der Zimmermann. Er wird dir wieder spannende Aufgaben geben.
+Bauleiter: Vielen Dank für deine Hilfe und weiterhin viel Erfolg bei deinem Praktikum!
 Bauleiter: Melde dich jetzt bei deiner Lehrkraft und hole dir das Quizz.
-Bauleiter: Falls dir irgendwelche Fragen schwerfallen ließ im Handbuch (ESC) nach.
 Bauleiter: Wenn du Fertig bist gib das Quizz ab.
 set Global.dialogue_open = false
 => END
