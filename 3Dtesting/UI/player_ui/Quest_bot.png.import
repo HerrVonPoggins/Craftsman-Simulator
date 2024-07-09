@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgeq1mu8y083p"
-path="res://.godot/imported/Quest_bot.png-54c441553ad97a8e9468cfee46d880ef.ctex"
+path="res://.godot/imported/Quest_bot.png-d65b83de1f578cbf7a5d16424c008127.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/player_ui/Quest_bot.png"
-dest_files=["res://.godot/imported/Quest_bot.png-54c441553ad97a8e9468cfee46d880ef.ctex"]
+source_file="res://ui/player_ui/Quest_bot.png"
+dest_files=["res://.godot/imported/Quest_bot.png-d65b83de1f578cbf7a5d16424c008127.ctex"]
 
 [params]
 

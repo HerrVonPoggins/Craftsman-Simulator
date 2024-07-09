@@ -50,6 +50,42 @@ func _process(delta):
 		$Props/Outlet2/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 		$Props/Cable/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 		$Props/Cable2/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+		$House/RootNode/MeshInstance3D.visible = false
+		$House/RootNode/MeshInstance3D2.visible = false
+		$House/RootNode/MeshInstance3D3.visible = false
+		$House/RootNode/MeshInstance3D4.visible = false
+		$House/RootNode/MeshInstance3D5.visible = false
+		$House/RootNode/MeshInstance3D6.visible = false
+		$House/RootNode/MeshInstance3D7.visible = false
+		$House/RootNode/MeshInstance3D8.visible = false
+		$House/RootNode/MeshInstance3D9.visible = false
+		$House/RootNode/MeshInstance3D10.visible = false
+		$House/RootNode/MeshInstance3D11.visible = false
+		$House/RootNode/MeshInstance3D12.visible = false
+		$House/RootNode/MeshInstance3D13.visible = false
+		$House/RootNode/MeshInstance3D14.visible = false
+		$House/RootNode/MeshInstance3D15.visible = false
+		$House/RootNode/MeshInstance3D16.visible = false
+		$House/RootNode/MeshInstance3D17.visible = false
+		$House/RootNode/MeshInstance3D18.visible = false
+		$House/RootNode/MeshInstance3D19.visible = false
+		$House/RootNode/MeshInstance3D20.visible = false
+		$Wand_cutout2.visible = false
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		Global.electric_checkstate += 1
 		
 		
