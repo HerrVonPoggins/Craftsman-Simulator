@@ -107,9 +107,10 @@ func _on_area_3d_body_entered(body):
 		$"DübelContainer".visible = false
 		$StairsWalk/CollisionShape3D.call_deferred("set_disabled", false)
 		$StairsWalk2/CollisionShape3D.call_deferred("set_disabled", false)
-		Global.carpenter_checkstate +=2
+		
 		if played2 == false:
 			played2 = true
+			Global.carpenter_checkstate +=1
 			DialogueManager.show_example_dialogue_balloon(load("res://dialoguefiles/zimmermann_step_2.dialogue"))
 
 var dübel_amount_1 = 0

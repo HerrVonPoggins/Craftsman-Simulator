@@ -56,6 +56,7 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
 		Global.wall_finished = true
+		Global.filler_started = true
 		pass
 		
 		#unbug yourself by teleporting back to startpoint

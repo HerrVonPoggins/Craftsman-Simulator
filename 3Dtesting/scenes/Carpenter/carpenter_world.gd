@@ -47,9 +47,11 @@ func _on_stairs_dübel_minigame_finished():
 	Global.switch_minigame_on = false
 	$Player.visible = true
 	$Dachbinder.roof_step = 1
-	Global.carpenter_checkstate +=1
-	$Props/MetallbinderContainer/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 	
+	$Props/MetallbinderContainer/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
+	if played4 == false:
+		played4 = true
+		Global.carpenter_checkstate +=1
 
 
 func _on_stairs_player_visibility_off():
@@ -66,8 +68,11 @@ func _on_control_closed():
 
 func _process(delta):
 	if Input.is_action_just_pressed("kamera"):
-		#$Dachbinder.roof_step = 1
-		Global.door_done = 2
+		$Dachbinder.roof_step = 6
+		metallbinder_count = 44
+		print($WindowPlacing.window_done)
+		#Global.door_done = 2
+		
 	if metallbinder_count == 3:
 		Global.skip = 3
 
@@ -81,6 +86,7 @@ func _process(delta):
 		played3 = true
 		$Dachbinder.roof_step = 6
 		Global.carpenter_checkstate += 1
+		$WindowPlacing.visible = true
 		
 		$Props/Window/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 		$Props/WindowBoard/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
@@ -88,6 +94,8 @@ func _process(delta):
 		
 	if $WindowPlacing.window_done == true and played == false:
 		played = true
+		$Door.visible = true
+		$Door2.visible = true
 		$Props/DoorFrame/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 		$Props/DoorFrame2/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))
 		$Props/DoorBoard/Mesh.set_deferred("material_overlay", load("res://assets/shader/shiniy_shader_material.tres"))

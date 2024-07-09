@@ -390,7 +390,7 @@ visible = false
 script = ExtResource("1_q7spn")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47196, 2.0685)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.504594, 3.3304, 2.0685)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -434,10 +434,9 @@ transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 
 transform = Transform3D(-2.57897e-07, 0, -4.2, 0, 4.7, 0, 5.9, 0, -1.83588e-07, 0.750166, -16.7769, -30.8184)
 
 [node name="Root Scene4" type="Node3D" parent="."]
-transform = Transform3D(-1.85087e-08, 0.423429, -2.96997, -3, -1.31134e-07, 1.20044e-15, -1.29821e-07, 2.96997, 0.423429, 1.40393, 0, -1.62075)
+transform = Transform3D(-1.85087e-08, 0.423429, -2.96997, -3, -1.31134e-07, 1.20044e-15, -1.29821e-07, 2.96997, 0.423429, 1.90852, 2.02902, -1.62075)
 
 [node name="RootNode" type="Node3D" parent="Root Scene4"]
-visible = false
 
 [node name="Cylinder" type="MeshInstance3D" parent="Root Scene4/RootNode"]
 transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 0, 0, 0)

@@ -22,3 +22,10 @@ res://ui/screens/endscreen.gd
 res://ui/screens/endscreen.tscn
 res://mechanics/saw_wall/saw_wall.tscn
 res://ui/screens/skip_menu.gd
+res://mechanics/Carpenter-Areas/stairs.gd
+res://mechanics/Carpenter-Areas/stairs.tscn
+res://mechanics/roof-building/roof.tscn
+res://mechanics/window_placing/window_placing.gd
+res://mechanics/window_placing/window_placing.tscn
+res://mechanics/window_placing/foam.tscn
+res://mechanics/craneminigame/concrete_filler.tscn

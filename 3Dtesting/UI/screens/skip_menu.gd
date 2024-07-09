@@ -32,15 +32,17 @@ func _process(delta):
 
 func _on_button_pressed():
 	if played == false:
-		Global.skip = 0
+		
 		$".".visible = false
 		Global.stay = false
 		Global.crosshair_off = false
 		Global.dialogue_open = false
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		if Global.skip == 2 and Global.current_scene == 1:
+		if Global.skip == 2:
 			Global.rods = 19
-		if Global.skip == 3 and Global.current_scene == 2:
+			Global.skip = 0
+
+		if Global.skip == 3:
 			$"../..".metallbinder_count = 15
 			await get_tree().create_timer(5).timeout
 			$"../..".metallbinder_count = 26
@@ -48,6 +50,8 @@ func _on_button_pressed():
 			$"../..".metallbinder_count = 37
 			await get_tree().create_timer(5).timeout
 			$"../..".metallbinder_count = 44
+			Global.skip = 0
+
 func _on_button_2_pressed():
 	if played == false:
 		Global.skip = 0
